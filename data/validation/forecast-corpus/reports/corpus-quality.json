@@ -1,0 +1,509 @@
+{
+  "schemaVersion": "vigia.forecast-corpus-quality-report.v1",
+  "decision": "CORPUS_NOT_READY",
+  "sourceReadiness": [
+    {
+      "source": "nifc-wfigs-daily",
+      "status": "READY",
+      "period": "2025-present",
+      "regions": [
+        "western-us"
+      ],
+      "products": [
+        "captured perimeter geometry changes",
+        "incident attributes"
+      ],
+      "accessMethod": "public ArcGIS FeatureServer",
+      "knowledgeTimeQuality": "DOCUMENTED_LATENCY_MODEL",
+      "perimeterSequenceCapability": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+      "objectsRetrieved": 2,
+      "bytesRetrieved": 18802881,
+      "licence": "NIFC-OPEN-DATA",
+      "licenceStatus": "REGISTERED",
+      "limitation": "NIFC says the automated geometry-change history is not an official progression."
+    },
+    {
+      "source": "nifc-wfigs-history",
+      "status": "FINAL_ONLY",
+      "period": "current decade plus historical integrations",
+      "regions": [
+        "western-us"
+      ],
+      "products": [
+        "best available perimeter",
+        "incident history"
+      ],
+      "accessMethod": "public ArcGIS FeatureServer",
+      "knowledgeTimeQuality": "RETROSPECTIVE",
+      "perimeterSequenceCapability": "FINAL_ONLY",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "NIFC-OPEN-DATA",
+      "licenceStatus": "REGISTERED",
+      "limitation": "One best available geometry does not reconstruct historical knowledge time."
+    },
+    {
+      "source": "nasa-feds-history",
+      "status": "READY",
+      "period": "2025-03-present service extent",
+      "regions": [
+        "western-us"
+      ],
+      "products": [
+        "VIIRS-derived event perimeters"
+      ],
+      "accessMethod": "public NASA ArcGIS MapServer",
+      "knowledgeTimeQuality": "DERIVED_OBSERVATION_TIME_WITH_SIMULATED_ARRIVAL",
+      "perimeterSequenceCapability": "DERIVED_PROGRESS_SEQUENCE",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "NASA-FEDS-TERMS",
+      "licenceStatus": "REGISTERED",
+      "limitation": "FEDS is VIIRS-derived and cannot add an independent physical family."
+    },
+    {
+      "source": "noaa-hrrr-archive",
+      "status": "READY",
+      "period": "2014-present",
+      "regions": [
+        "western-us"
+      ],
+      "products": [
+        "issue-time HRRR GRIB2",
+        "message indexes"
+      ],
+      "accessMethod": "anonymous HTTPS/S3",
+      "knowledgeTimeQuality": "ISSUE_TIME_RUN_IDENTITY",
+      "perimeterSequenceCapability": "NONE",
+      "objectsRetrieved": 6,
+      "bytesRetrieved": 7764623,
+      "licence": "NOAA-HRRR-PUBLIC-DATA",
+      "licenceStatus": "REGISTERED",
+      "limitation": "Selected GRIB messages must be decoded and missing-value checked before Gold use."
+    },
+    {
+      "source": "nasa-firms-archive",
+      "status": "READY",
+      "period": "MODIS 2000-present; VIIRS 2012-present",
+      "regions": [
+        "western-us",
+        "portugal"
+      ],
+      "products": [
+        "MODIS/VIIRS standard active fire"
+      ],
+      "accessMethod": "MAP_KEY area API and Earthdata archives",
+      "knowledgeTimeQuality": "OBSERVATION_PLUS_ARCHIVE_DISCOVERY",
+      "perimeterSequenceCapability": "NONE",
+      "objectsRetrieved": 2,
+      "bytesRetrieved": 982,
+      "licence": "NASA-FIRMS-TERMS",
+      "licenceStatus": "REGISTERED",
+      "limitation": "CSV point presence alone does not prove swath opportunity or a negative."
+    },
+    {
+      "source": "usfs-landfire",
+      "status": "READY",
+      "period": "versioned historical releases",
+      "regions": [
+        "western-us"
+      ],
+      "products": [
+        "fuel model",
+        "canopy",
+        "elevation",
+        "slope",
+        "aspect"
+      ],
+      "accessMethod": "public ArcGIS ImageServer",
+      "knowledgeTimeQuality": "VERSION_AND_REFERENCE_DATE",
+      "perimeterSequenceCapability": "NONE",
+      "objectsRetrieved": 8,
+      "bytesRetrieved": 268672,
+      "licence": "USFS-LANDFIRE-PUBLIC-DATA",
+      "licenceStatus": "REGISTERED",
+      "limitation": "Release availability and landscape-reference dates must precede each forecast cutoff."
+    },
+    {
+      "source": "mtbs-final",
+      "status": "FINAL_ONLY",
+      "period": "1984-present programme period",
+      "regions": [
+        "western-us"
+      ],
+      "products": [
+        "final burn perimeter",
+        "burn severity"
+      ],
+      "accessMethod": "official download services",
+      "knowledgeTimeQuality": "RETROSPECTIVE_LABEL_ONLY",
+      "perimeterSequenceCapability": "FINAL_ONLY",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "US-FEDERAL-PUBLIC-DATA",
+      "licenceStatus": "NOT_REGISTERED",
+      "limitation": "MTBS products are labels, never issue-time features."
+    },
+    {
+      "source": "icnf-burned-area",
+      "status": "FINAL_ONLY",
+      "period": "1975-2024 published annual layers",
+      "regions": [
+        "portugal"
+      ],
+      "products": [
+        "official annual burned-area geography",
+        "occurrence records"
+      ],
+      "accessMethod": "public ArcGIS/download layers",
+      "knowledgeTimeQuality": "RETROSPECTIVE_LABEL_ONLY",
+      "perimeterSequenceCapability": "FINAL_ONLY",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "ICNF-ATTRIBUTION",
+      "licenceStatus": "REGISTERED",
+      "limitation": "No historical issue-time geometry revision timestamps are exposed."
+    },
+    {
+      "source": "effis-history",
+      "status": "INSUFFICIENT_TIMESTAMPS",
+      "period": "multi-year European fire database",
+      "regions": [
+        "portugal"
+      ],
+      "products": [
+        "European fire perimeters and attributes"
+      ],
+      "accessMethod": "official portal and registered downloads",
+      "knowledgeTimeQuality": "PRODUCT_DEPENDENT",
+      "perimeterSequenceCapability": "TIMESTAMP_UNTRUSTWORTHY",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "EFFIS-TERMS-REVIEW",
+      "licenceStatus": "NOT_REGISTERED",
+      "limitation": "Publication/revision timing and satellite lineage require product-level confirmation."
+    },
+    {
+      "source": "cems-rapid-mapping",
+      "status": "READY",
+      "period": "activation-specific",
+      "regions": [
+        "portugal"
+      ],
+      "products": [
+        "activation delineation/grading revisions"
+      ],
+      "accessMethod": "public activation downloads",
+      "knowledgeTimeQuality": "ACTIVATION_DELIVERY_TIME",
+      "perimeterSequenceCapability": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "COPERNICUS-EMS-TERMS",
+      "licenceStatus": "NOT_REGISTERED",
+      "limitation": "Not a systematic national incident sample and revisions are activation-specific."
+    },
+    {
+      "source": "ecmwf-operational-archive",
+      "status": "PARTNER_REQUIRED",
+      "period": "archive catalogue",
+      "regions": [
+        "portugal"
+      ],
+      "products": [
+        "IFS deterministic and ensemble forecasts"
+      ],
+      "accessMethod": "archive/service agreement or eligible research access",
+      "knowledgeTimeQuality": "ISSUE_TIME_RUN_IDENTITY",
+      "perimeterSequenceCapability": "NONE",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "CC-BY-4.0-ECMWF",
+      "licenceStatus": "REGISTERED",
+      "limitation": "Historical delivery access is not configured; rolling Open Data cannot reconstruct old incidents."
+    },
+    {
+      "source": "copernicus-dem",
+      "status": "CREDENTIALS_REQUIRED",
+      "period": "static reference DEM",
+      "regions": [
+        "portugal"
+      ],
+      "products": [
+        "GLO-30/GLO-90 DEM"
+      ],
+      "accessMethod": "CDSE OData/S3 with licence acceptance",
+      "knowledgeTimeQuality": "STATIC_REFERENCE_INSTANCE",
+      "perimeterSequenceCapability": "NONE",
+      "objectsRetrieved": 0,
+      "bytesRetrieved": 0,
+      "licence": "COPERNICUS-DEM-CCM",
+      "licenceStatus": "REGISTERED",
+      "limitation": "The 30 m service requires current licence acceptance/user-category access."
+    }
+  ],
+  "regions": {
+    "portugal": 35,
+    "western-us": 1
+  },
+  "seasons": {
+    "2024": 35,
+    "2025": 1
+  },
+  "incidentsDiscovered": 36,
+  "incidentsEligible": 0,
+  "examplesEligible": 0,
+  "eligibilityRate": 0,
+  "progressionStateCounts": {
+    "total": 40,
+    "incidentsWithAtLeastThree": 1,
+    "distribution": {
+      "0": 35,
+      "40": 1
+    }
+  },
+  "weatherCompleteness": {
+    "incidentsWithRuns": 1,
+    "decodedOperationalRuns": 0
+  },
+  "fuelTerrainCompleteness": {
+    "fuelPacks": 1,
+    "terrainPacks": 1
+  },
+  "labelCompleteness": {
+    "futureLabelsInEligibleExamples": 0,
+    "rejectedForNoFutureLabel": 340
+  },
+  "negativeControls": {
+    "discoveredCandidates": 100,
+    "valid": 0,
+    "excluded": 100
+  },
+  "hardNegatives": 0,
+  "knowledgeTimeViolations": 0,
+  "leakageViolations": 0,
+  "splitSizes": {
+    "development": 0,
+    "calibration": 0,
+    "held-out-test": 0,
+    "geographic-stress-test": 0,
+    "seasonal-stress-test": 0
+  },
+  "horizonCounts": {
+    "1": 0,
+    "3": 0,
+    "6": 0,
+    "12": 0,
+    "24": 0
+  },
+  "licensingState": {
+    "exportAllowed": true,
+    "blockers": [],
+    "attributions": 6
+  },
+  "downloadedVolume": 56223710,
+  "storedVolume": 26837158,
+  "duplicateSavings": 29386552,
+  "rawObjectCount": 18,
+  "baselineEvaluation": {
+    "schemaVersion": "vigia.corpus-baseline-evaluation.v1",
+    "state": "UNMEASURED",
+    "caseCount": 0,
+    "models": {}
+  },
+  "replay": {
+    "schemaVersion": "vigia.forecast-corpus-replay-verification.v1",
+    "valid": true,
+    "identical": true,
+    "expected": "forecast-corpus:sha256:9487027ff16bc7a6abc3b8ef8fff2fdbc4503dd6abc75a4bd94804a77c7e6be5",
+    "actual": "forecast-corpus:sha256:9487027ff16bc7a6abc3b8ef8fff2fdbc4503dd6abc75a4bd94804a77c7e6be5",
+    "reversedOrderingStable": true
+  },
+  "crosswalk": {
+    "incidents": 36,
+    "ambiguous": 0
+  },
+  "selection": {
+    "allDiscovered": 36,
+    "progressionCandidates": 1,
+    "eligibleIncidents": 0,
+    "retainedExamples": 0,
+    "heldOutExamples": 0
+  },
+  "knownBiases": [
+    "Only the Western US source currently supplies captured multi-revision perimeters.",
+    "Large well-mapped WFIGS incidents are overrepresented in the acquired pilot.",
+    "Portugal records are official occurrence/final context without operational progression.",
+    "FIRMS standard archive observations are retrospective and not issue-time features."
+  ],
+  "unresolvedBlockers": [
+    "BRONZE_SILVER_LINEAGE_COMPLETENESS",
+    "FUEL_COMPLETENESS",
+    "FUTURE_IMPACT_LABELS_NOT_ACQUIRED",
+    "FUTURE_LABEL_COMPLETENESS",
+    "HORIZON_12H",
+    "HORIZON_1H",
+    "HORIZON_24H",
+    "HORIZON_3H",
+    "HORIZON_6H",
+    "HRRR_GRIB_VALUES_NOT_DECODED_OR_MISSING_VALUE_CERTIFIED",
+    "ICNF_FINAL_GEOMETRY_HAS_NO_ISSUE_TIME_SEQUENCE",
+    "NO_VALID_NEGATIVE_OBSERVATION_OPPORTUNITIES",
+    "ONE_HUNDRED_INCIDENTS",
+    "ONE_HUNDRED_NEGATIVES",
+    "PORTUGAL_ISSUE_TIME_PROGRESSION_NOT_ACQUIRED",
+    "PROGRESSION_COMPLETENESS",
+    "PROMOTION_MINIMUM_NEGATIVES",
+    "TERRAIN_COMPLETENESS",
+    "TWO_REGIONS",
+    "TWO_SEASONS",
+    "VERSIONED_ASSET_CONTEXT_NOT_ACQUIRED",
+    "WEATHER_COMPLETENESS",
+    "cems-rapid-mapping:LICENCE_NOT_REGISTERED:COPERNICUS-EMS-TERMS",
+    "copernicus-dem:CREDENTIALS_REQUIRED:The 30 m service requires current licence acceptance/user-category access.",
+    "ecmwf-operational-archive:PARTNER_REQUIRED:Historical delivery access is not configured; rolling Open Data cannot reconstruct old incidents.",
+    "effis-history:INSUFFICIENT_TIMESTAMPS:Publication/revision timing and satellite lineage require product-level confirmation.",
+    "effis-history:LICENCE_NOT_REGISTERED:EFFIS-TERMS-REVIEW",
+    "icnf-burned-area:FINAL_ONLY:No historical issue-time geometry revision timestamps are exposed.",
+    "mtbs-final:FINAL_ONLY:MTBS products are labels, never issue-time features.",
+    "mtbs-final:LICENCE_NOT_REGISTERED:US-FEDERAL-PUBLIC-DATA",
+    "nifc-wfigs-history:FINAL_ONLY:One best available geometry does not reconstruct historical knowledge time."
+  ],
+  "failedGates": [
+    "TWO_REGIONS",
+    "TWO_SEASONS",
+    "ONE_HUNDRED_INCIDENTS",
+    "ONE_HUNDRED_NEGATIVES",
+    "PROMOTION_MINIMUM_NEGATIVES",
+    "PROGRESSION_COMPLETENESS",
+    "WEATHER_COMPLETENESS",
+    "FUEL_COMPLETENESS",
+    "TERRAIN_COMPLETENESS",
+    "FUTURE_LABEL_COMPLETENESS",
+    "BRONZE_SILVER_LINEAGE_COMPLETENESS",
+    "HORIZON_1H",
+    "HORIZON_3H",
+    "HORIZON_6H",
+    "HORIZON_12H",
+    "HORIZON_24H"
+  ],
+  "readinessDimensions": [
+    {
+      "id": "TWO_REGIONS",
+      "value": 0,
+      "required": 2,
+      "pass": false
+    },
+    {
+      "id": "TWO_SEASONS",
+      "value": 0,
+      "required": 2,
+      "pass": false
+    },
+    {
+      "id": "ONE_HUNDRED_INCIDENTS",
+      "value": 0,
+      "required": 100,
+      "pass": false
+    },
+    {
+      "id": "ONE_HUNDRED_NEGATIVES",
+      "value": 0,
+      "required": 100,
+      "pass": false
+    },
+    {
+      "id": "PROMOTION_MINIMUM_NEGATIVES",
+      "value": 0,
+      "required": 20,
+      "pass": false
+    },
+    {
+      "id": "PROGRESSION_COMPLETENESS",
+      "value": 0,
+      "required": 100,
+      "pass": false
+    },
+    {
+      "id": "WEATHER_COMPLETENESS",
+      "value": 0,
+      "required": "ALL_ELIGIBLE_EXAMPLES",
+      "pass": false
+    },
+    {
+      "id": "FUEL_COMPLETENESS",
+      "value": 0,
+      "required": "ALL_ELIGIBLE_EXAMPLES",
+      "pass": false
+    },
+    {
+      "id": "TERRAIN_COMPLETENESS",
+      "value": 0,
+      "required": "ALL_ELIGIBLE_EXAMPLES",
+      "pass": false
+    },
+    {
+      "id": "FUTURE_LABEL_COMPLETENESS",
+      "value": 0,
+      "required": "ALL_ELIGIBLE_EXAMPLES",
+      "pass": false
+    },
+    {
+      "id": "BRONZE_SILVER_LINEAGE_COMPLETENESS",
+      "value": 0,
+      "required": "ALL_ELIGIBLE_EXAMPLES",
+      "pass": false
+    },
+    {
+      "id": "HORIZON_1H",
+      "value": 0,
+      "required": 1,
+      "pass": false
+    },
+    {
+      "id": "HORIZON_3H",
+      "value": 0,
+      "required": 1,
+      "pass": false
+    },
+    {
+      "id": "HORIZON_6H",
+      "value": 0,
+      "required": 1,
+      "pass": false
+    },
+    {
+      "id": "HORIZON_12H",
+      "value": 0,
+      "required": 1,
+      "pass": false
+    },
+    {
+      "id": "HORIZON_24H",
+      "value": 0,
+      "required": 1,
+      "pass": false
+    },
+    {
+      "id": "KNOWLEDGE_TIME_LEAKAGE_ZERO",
+      "value": 0,
+      "required": 0,
+      "pass": true
+    },
+    {
+      "id": "DATA_RIGHTS_EXPORTABLE",
+      "value": true,
+      "required": true,
+      "pass": true
+    },
+    {
+      "id": "REPLAY_IDENTICAL",
+      "value": true,
+      "required": true,
+      "pass": true
+    }
+  ],
+  "dataCards": {
+    "providerCards": 12,
+    "combinedCard": true
+  }
+}

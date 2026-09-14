@@ -1,0 +1,492 @@
+{
+  "capturedAt": "2026-09-13T09:50:32.139Z",
+  "releaseId": "vigia-intelligence-fabric-72114bc137e142a7",
+  "codeStateHash": "sha256:9944a77a35a2de7641d56bc5287d7d28b514dbbe76b569705a1288a7db921088",
+  "readiness": {
+    "status": 503,
+    "data": {
+      "schemaVersion": "vigia.public-operational-readiness.v1",
+      "ready": false,
+      "status": "not_ready",
+      "checkedAt": "2026-09-13T09:50:31.319Z",
+      "checks": [
+        {
+          "id": "production_synthetic_observations",
+          "ok": true,
+          "state": "zero",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "demo_identities",
+          "ok": true,
+          "state": "zero",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "authenticated_operator_boundary",
+          "ok": true,
+          "state": "operator_proxy_assertion_configured",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "operator_state_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "event_state_persistence",
+          "ok": false,
+          "state": "memory_only",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "postgres_physical_truth",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "postgres_live_operations",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "audit_chain",
+          "ok": false,
+          "state": "invalid",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "operational_source_families",
+          "ok": true,
+          "state": "multiple_accepted_operational_families",
+          "blocking": false,
+          "evidencePresent": true
+        },
+        {
+          "id": "unknown_to_work_invariant",
+          "ok": true,
+          "state": "holding",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "physical_source_families",
+          "ok": false,
+          "state": "insufficient",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "scientific_runtime",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "geo_proof_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "external_validation",
+          "ok": true,
+          "state": "official_archive_report_reference_measured",
+          "blocking": false,
+          "evidencePresent": true
+        }
+      ],
+      "capabilities": {
+        "productionReality": {
+          "state": "fixture_free",
+          "syntheticObservations": 0,
+          "demoIdentities": 0
+        },
+        "evidenceAcquisition": {
+          "state": "engineering_loop_holding",
+          "unresolved": 2
+        },
+        "currentPhysicalCoverage": {
+          "state": "explicit_per_event",
+          "physicallyCurrentEvents": 0,
+          "activeEvents": 2
+        },
+        "observationOpportunities": {
+          "state": "current",
+          "confirmedFutureRecords": 0
+        },
+        "fusion": {
+          "state": "engineering_ready_unvalidated",
+          "probability": "disabled_without_approved_calibration_evidence"
+        },
+        "thermalGeometry": {
+          "state": "support_geometry_only_unvalidated",
+          "perimeterAuthority": false
+        },
+        "nativePixels": {
+          "state": "engineering_runtime_ready",
+          "persistedProofs": 0
+        },
+        "portugalValidation": {
+          "state": "official_archive_report_reference_measured",
+          "cases": 35
+        }
+      }
+    }
+  },
+  "model": {
+    "state": "disabled",
+    "model": "qwen3:0.6b"
+  },
+  "sourceFamilies": {
+    "families": [
+      {
+        "family": "health",
+        "evidence": [
+          {
+            "factId": "fact:a593c82a567f3cd2b0c3eff16268d096bd8bda1f34503cf89a4b711194b57fe1",
+            "entityId": "entity:659882fae0897cb89c15cdd8",
+            "provider": "ULS Alentejo Central",
+            "url": "https://www.ulsac.min-saude.pt/2025/11/28/areas-clinicas/",
+            "publishedAt": "2025-11-28T00:00:00Z",
+            "checkedAt": "2026-09-12T21:35:15.229Z"
+          }
+        ],
+        "acceptedFacts": 1
+      },
+      {
+        "family": "fire_civil_protection",
+        "evidence": [
+          {
+            "factId": "fact:5e2e282cc2da06b3305b4d6ac653366cad1de4a86e94eb68960c9cd796f6a91b",
+            "entityId": "entity:482e79003d29f1bfab2f25de",
+            "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+            "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+            "publishedAt": null,
+            "checkedAt": "2026-09-12T21:35:19.106Z"
+          }
+        ],
+        "acceptedFacts": 1
+      },
+      {
+        "family": "reception_designation",
+        "evidence": [
+          {
+            "factId": "fact:65160192ddccdce0ecdcb73f9d929c0fa8b9171a26ae873a87bc13a35314b287",
+            "entityId": "entity:02a1fbfb4a8172104cf83ff9",
+            "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+            "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+            "publishedAt": null,
+            "checkedAt": "2026-09-12T21:35:19.106Z"
+          },
+          {
+            "factId": "fact:b30fce8573eeb60c00a8051c499d37b8f7d1597abd232712509974039ddceef2",
+            "entityId": "entity:f726f126cbd77a40cb30abe4",
+            "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+            "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+            "publishedAt": null,
+            "checkedAt": "2026-09-12T21:35:19.106Z"
+          },
+          {
+            "factId": "fact:4ac64c5997d8ed124436d989efc99885a3903a18e28be90cec66433ca7e1941b",
+            "entityId": "entity:fe9a4268b5201843aa937540",
+            "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+            "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+            "publishedAt": null,
+            "checkedAt": "2026-09-12T21:35:19.106Z"
+          }
+        ],
+        "acceptedFacts": 18
+      },
+      {
+        "family": "road_restrictions",
+        "evidence": [
+          {
+            "url": "https://servicos.infraestruturasdeportugal.pt/viajar-na-estrada/transito-em-tempo-real",
+            "provider": "Infraestruturas de Portugal",
+            "checkedAt": "2026-09-13T09:45:36.306Z",
+            "accepted": 188
+          }
+        ],
+        "acceptedFacts": 1
+      }
+    ],
+    "count": 4,
+    "criterion": "Accepted non-scenario authoritative capability/designation facts or current official road observations; source refresh remains distinct from observation time.",
+    "sensingSubstitution": false
+  },
+  "sources": {
+    "firms": {
+      "id": "firms",
+      "label": "VIIRS active-fire detections",
+      "origin": "NASA FIRMS",
+      "cadence": "near-real-time; service updated frequently",
+      "staleAfterSeconds": 21600,
+      "authority": "satellite thermal detection",
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/",
+      "provider": "NASA FIRMS",
+      "configured": true,
+      "configurationState": "configured",
+      "accessClassification": "LIVE_ACCESSIBLE",
+      "evidenceRole": "independent physical point evidence",
+      "state": "stale",
+      "fetchedAt": "2026-09-12T20:58:36.140Z",
+      "upstreamAt": "2026-09-12T15:26:00.000Z",
+      "lastPollAt": "2026-09-12T20:58:36.140Z",
+      "lastAcquisitionAttemptAt": "2026-09-12T21:21:45.560Z",
+      "lastSuccessAt": "2026-09-12T20:58:36.140Z",
+      "latestSourceObservation": "2026-09-12T15:26:00.000Z",
+      "ingestLagSeconds": 19956,
+      "accepted": 121,
+      "rejected": 0,
+      "currentCoverage": "Portugal mainland · 4/4 thermal feeds",
+      "nextPollAt": "2026-09-12T21:03:42.170Z",
+      "nextExpectedOpportunity": null,
+      "pollIntervalMs": 300000,
+      "consecutiveFailures": 0,
+      "error": "provider_refresh_deadline_exceeded",
+      "feeds": [
+        "VIIRS_NOAA20_NRT",
+        "VIIRS_NOAA21_NRT",
+        "VIIRS_SNPP_NRT",
+        "MODIS_NRT"
+      ],
+      "healthyFeeds": [
+        "VIIRS_NOAA20_NRT",
+        "VIIRS_NOAA21_NRT",
+        "VIIRS_SNPP_NRT",
+        "MODIS_NRT"
+      ],
+      "rawSourceProductIds": [
+        "raw:nasa-firms:firms_VIIRS_NOAA20_NRT:aa0429e989618e9a25c3624b78c92843ac466e556c6ef39c3b34eeffec4fb951",
+        "raw:nasa-firms:firms_VIIRS_NOAA21_NRT:e105b4899c507667a9537d50ada9082d9bc1b1cb392b8a7f3a4e6ef4f6013b6e",
+        "raw:nasa-firms:firms_VIIRS_SNPP_NRT:b4a426a0f2d2c907988b1c359f6812982e678872d4e35c4f747eabfd05923a92",
+        "raw:nasa-firms:firms_MODIS_NRT:77ea34a3100d0b4d095b151caf40d48adddc0d73e195b6ea9c6e4530ce387b0a"
+      ],
+      "failurePolicy": {
+        "deadlineMs": 45000,
+        "openAfterFailures": 3,
+        "cooldownMs": 120000,
+        "retry": "Next scheduled acquisition after cooldown; no retries on the console read path",
+        "lastKnownValid": "Retain dated last-good data with failed/stale state; successful empty responses clear old data"
+      },
+      "circuit": "CLOSED",
+      "consecutiveProviderFailures": 0,
+      "quarantine": [],
+      "ageSeconds": 21349,
+      "timeConflict": false,
+      "currentStateSince": "2026-09-12T21:08:48.590Z",
+      "transitionHistory": [
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T11:44:18.720Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T11:52:38.990Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T11:59:51.087Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T12:09:59.443Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T13:52:11.567Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T14:01:12.352Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T14:51:23.830Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T15:08:05.070Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T15:25:11.956Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T15:30:00.805Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T17:14:51.057Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T17:18:17.721Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T17:21:31.811Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T17:23:02.557Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T18:02:52.550Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T18:08:56.879Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T20:52:51.752Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T21:00:03.865Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T21:08:48.590Z"
+        }
+      ],
+      "lastRecoveryAt": "2026-09-12T21:00:03.865Z",
+      "lastStaleDurationMs": 432113,
+      "retainedLastGood": true,
+      "latestPhysicalObservation": "2026-09-12T15:26:00.000Z",
+      "sourceLagSeconds": 21349,
+      "cumulativeAcceptedObservations": 1054
+    },
+    "mtgPixels": {
+      "id": "mtgPixels",
+      "label": "MTG FCI FRP Pixel",
+      "provider": "EUMETSAT / LSA SAF",
+      "state": "not_configured",
+      "fetchedAt": "2026-09-12T21:21:48.859Z",
+      "upstreamAt": null,
+      "error": "Set VIGIA_MTG_FRP_DIR to an EUMETCast/LSA SAF MTFRPPIXEL directory, or VIGIA_MTG_FRP_JSON_URL.",
+      "origin": "EUMETSAT / LSA SAF MTFRPPIXEL",
+      "mode": "netcdf_drop",
+      "pointLevel": true,
+      "evidenceRole": "independent physical point evidence",
+      "cadenceMinutes": 10,
+      "nominalResolutionKm": 1,
+      "productStatus": "demonstration_nrt",
+      "configurationState": "registered_data_drop_or_gateway_required",
+      "accessClassification": "CREDENTIAL_BLOCKED",
+      "parserState": "ready",
+      "accepted": 0,
+      "rejected": 0,
+      "nextExpectedOpportunity": null
+    },
+    "sentinel3Pixels": {
+      "id": "sentinel3Pixels",
+      "label": "Sentinel-3 SLSTR L2 FRP",
+      "provider": "Copernicus Data Space Ecosystem",
+      "configured": true,
+      "authenticated": false,
+      "state": "unavailable",
+      "fetchedAt": "2026-09-12T21:20:55.027Z",
+      "upstreamAt": null,
+      "error": "cdse_auth_http_401",
+      "origin": "Copernicus Sentinel-3 SLSTR",
+      "mode": "cdse_stac_download",
+      "pointLevel": true,
+      "evidenceRole": "independent physical point evidence",
+      "nominalResolutionKm": 1,
+      "productStatus": "operational_nrt",
+      "configurationState": "configured",
+      "accessClassification": "CREDENTIAL_BLOCKED",
+      "parserState": "ready",
+      "latestPollAt": "2026-09-12T21:20:55.027Z",
+      "lastPollAt": "2026-09-12T21:20:55.027Z",
+      "latestSuccessAt": null,
+      "latestProduct": {
+        "id": "S3B_SL_2_FRP____20260912T105959_20260912T110259_20260912T125643_0180_124_265______MAR_O_NR_003",
+        "platform": "sentinel-3b",
+        "observedAt": "2026-09-12T10:59:59.023270Z",
+        "startAt": "2026-09-12T10:59:59.023270Z",
+        "endAt": "2026-09-12T11:02:59.023270Z",
+        "bbox": [
+          -20.7571,
+          28.6747,
+          -1.75267,
+          41.9869
+        ],
+        "collection": "sentinel-3-sl-2-frp-nrt",
+        "asset": {
+          "name": "FRP_MWIR1km_STANDARD",
+          "format": "netcdf",
+          "mediaType": "application/netcdf",
+          "size": 916518,
+          "checksum": "d501102589ef7f6edc0f4785c6dbd3bfc56a14",
+          "checksumIntegrity": {
+            "algorithm": "md5",
+            "digest": "2589ef7f6edc0f4785c6dbd3bfc56a14",
+            "encoding": "multihash",
+            "strength": "legacy_provider_integrity"
+          }
+        },
+        "officialItemUrl": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-3-sl-2-frp-nrt/items/S3B_SL_2_FRP____20260912T105959_20260912T110259_20260912T125643_0180_124_265______MAR_O_NR_003"
+      },
+      "latestPhysicalObservation": null,
+      "sourceLagSeconds": null,
+      "acquisitionLagSeconds": null,
+      "accepted": 0,
+      "rejected": 0,
+      "cumulativeAcceptedObservations": 0,
+      "cumulativeRejectedProducts": 0,
+      "cumulativeProductsAcquired": 0,
+      "cumulativeProductsCatalogued": 195,
+      "cumulativeKnownProductsSkipped": 0,
+      "checkpoint": [],
+      "nextPollAt": "2026-09-12T21:13:05.925Z",
+      "nextExpectedOpportunity": null,
+      "authenticationState": "rejected_or_missing",
+      "acceptedThisPoll": 0
+    }
+  },
+  "sensorAssets": {
+    "state": "not_configured",
+    "loadedAt": "2026-09-13T09:49:59.551Z",
+    "count": 0,
+    "assets": [],
+    "error": "No connected observation assets are configured."
+  }
+}

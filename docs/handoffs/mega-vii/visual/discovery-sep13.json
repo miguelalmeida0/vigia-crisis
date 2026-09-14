@@ -1,0 +1,35 @@
+{
+  "lane": "REAL_RETAINED_HISTORICAL_AND_SCENARIO_BROWSER",
+  "screens": [
+    {
+      "name": "fresh-road-consequence",
+      "width": 1672,
+      "overflow": false,
+      "mode": "SCENARIO",
+      "text": "Operational support\nOperational Picture\n\nRetained at 13 Sept, 11:09 UTC \u00b7 evaluated 13 Sept, 11:09 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nScenario \u2014 not observed reality\n\nEM527 unavailable\n\nAdd failure\nExit scenario\nAll support\nHealthcare\nFire response\nReception\nWhat changes under this assumption\nSupport and access changes\n\u00c9vora \u00b7 Emergency healthcare\nPrimary\nHospital do Esp\u00edrito Santo de \u00c9vora \u2192 None retained\nCalculated minutes\n11.2 \u2192 \u2014\nRetained options\n1 \u2192 0\n\u00c9vora \u00b7 Fire response\nPrimary\nBombeiros Volunt\u00e1rios de \u00c9vora \u2192 None retained\nCalculated minutes\n10.8 \u2192 \u2014\nRetained options\n1 \u2192 0\n\u00c9vora \u00b7 Designated reception\nPrimary\nEscola B\u00e1sica de Canaviais \u2192 None retained\nCalculated minutes\n6.9 \u2192 \u2014\nRetained options\n6 \u2192 0\nLouredo \u00b7 Emergency healthcare\nPrimary\nHospital do Esp\u00edrito Santo de \u00c9vora \u2192 None retained\nCalculated minutes\n10.1 \u2192 \u2014\nRetained options\n1 \u2192 0\nLouredo \u00b7 Fire response\nPrimary\nBombeiros Volunt\u00e1rios de \u00c9vora \u2192 None retained\nCalculated minutes\n9.7 \u2192 \u2014\nRetained options\n1 \u2192 0\nSource freshness changed\n\nMeteorological warnings\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 11:09 UTC\nSource freshness changed\n\nActive civil-protection occurrences\n\nBefore\nSTALE\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 11:09 UTC\nSource freshness changed\n\nMeteorological station observations\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 11:09 UTC\nSource freshness changed\n\nMunicipal rural-fire danger \u00b7 today\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 11:09 UTC\nSource freshness changed\n\nHistorical rural-fire records\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 11:09 UTC\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "fresh-session-discovery",
+      "width": 1672,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "text": "Community intelligence\nOperational Picture\n\nRetained at 13 Sept, 11:09 UTC \u00b7 evaluated 13 Sept, 11:10 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\nShow support network\nTest access loss\nShow coverage\nLouredo\nFrom reported incident point\n0.7 km\nMunicipality\n\u00c9vora\nPopulation context\n112 residents \u00b7 Census 2021\n\nCensus population is not the number of people currently present.\n\nSupport for this community\nEmergency healthcare\n\nHospital do Esp\u00edrito Santo de \u00c9vora \u00b7 10 min calculated\n\nRoute and source\nFire response\n\nBombeiros Volunt\u00e1rios de \u00c9vora \u00b7 10 min calculated\n\nRoute and source\n\nFacility-to-community calculated routes. No evacuation need is inferred from proximity.\n\nDesignated reception within 8 km\nEscola B\u00e1sica de Canaviais\n\n2.2 km straight line \u00b7 No current activation confirmed\n\nEscola B\u00e1sica Conde de Vilalva\n\n4.0 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Gabriel Pereira\n\n5.4 km straight line \u00b7 No current activation confirmed\n\nEscola B\u00e1sica Andr\u00e9 de Resende\n\n5.7 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Andr\u00e9 de Gouveia\n\n5.7 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Severim de Faria\n\n6.0 km straight line \u00b7 No current activation confirmed\n\nLocation and population sources\nSupport resilience\nOnly one retained qualified emergency hospital\nOnly one retained qualified fire-response option\nPrimary hospital and fire routes share EM527\nNearby reception activation is unconfirmed\nAsk the map\nAsk"
+    }
+  ],
+  "errors": [],
+  "checks": [],
+  "discovery": {
+    "secondsFromNavigation": 33.34,
+    "checks": {
+      "qualifiedHospital": true,
+      "qualifiedFireResponse": true,
+      "sharedRoad": true,
+      "scenarioConsequence": true,
+      "communitySupport": true
+    },
+    "allFive": true,
+    "independentHumanTest": false,
+    "method": "Fresh session; visible primary controls only; scripted discoverability, not human comprehension",
+    "within30Seconds": false
+  }
+}

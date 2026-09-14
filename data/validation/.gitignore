@@ -1,0 +1,29 @@
+# Explicit existing local validation outputs; retained, not certified anew.
+# No wildcard excludes future source, governed inputs or new evidence.
+/command-survival/accountability-roster.txt
+/command-survival/assignments.txt
+/command-survival/command-transfer.txt
+/command-survival/controlled-exercise-proof.json
+/command-survival/crew-passport.txt
+/command-survival/critical-orders.txt
+/command-survival/mayday-rescue.txt
+/command-survival/par-sheet.txt
+/command-survival/resource-status.txt
+/command-survival/runtime-verification.json
+/final-gap-closure/changed-files.json
+/final-gap-closure/final-scorecard.json
+/final-gap-closure/per-incident-source-coverage.json
+/final-gap-closure/provider-coverage-matrix.json
+/frontend-visual-contract/executive-ux/interaction-certification.json
+/frontend-visual-contract/executive-ux/task-tests.json
+/frontend-visual-contract/map-engine-hardening/chrome-trace-after.json
+/frontend-visual-contract/map-engine-hardening/chrome-trace-before.json
+/frontend-visual-contract/vigia-visual-contract.json
+/local-runtime/runtime-artifact-bound-recovery.json
+/operational-proof/information-requirement-baseline.json
+/operations/postgis-loss-recovery-proof.json
+/operations/postgis-recovery-preservation.json
+/release/7e-to-402-transition.json
+/world-leader-gap-closure/category-remediation-matrix.json
+/world-leader-gap-closure/final-scorecard.json
+/world-leader-gap-closure/verification-promotion-funnel.json

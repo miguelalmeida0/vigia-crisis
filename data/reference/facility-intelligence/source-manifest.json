@@ -1,0 +1,153 @@
+{
+  "sources": [
+    {
+      "id": "https://www.openstreetmap.org/",
+      "url": "https://www.openstreetmap.org/",
+      "watch": false,
+      "format": "JSON",
+      "status": "AVAILABLE",
+      "adapter": "OSM_BASELINE",
+      "provider": "OpenStreetMap contributors",
+      "authority": "OSM",
+      "lastFetch": "2026-09-12T13:58:12.571Z",
+      "nextFetch": "2026-09-13T13:58:12.571Z",
+      "observedAt": "2026-09-04T19:22:24.963Z",
+      "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+      "contentHash": "cc2caf5af20561974c1c18b457925131eacc32cb2f16e0676237ae8268e74dba",
+      "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+    },
+    {
+      "id": "https://www.ministeriopublico.pt/contactos",
+      "url": "https://www.ministeriopublico.pt/contactos",
+      "watch": true,
+      "format": "HTML",
+      "status": "AVAILABLE",
+      "adapter": "MP_CONTACT_DIRECTORY",
+      "provider": "Ministério Público",
+      "authority": "OWNER",
+      "lastFetch": "2026-09-12T13:58:15.527Z",
+      "nextFetch": "2026-09-13T13:58:15.527Z",
+      "contentHash": "451da42fb5a2ac0f0eb38e2d8ee2c288e2d1fbccb71a90908128489b98f19855",
+      "pollIntervalMs": 86400000
+    }
+  ],
+  "documents": [
+    {
+      "id": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+      "source": {
+        "url": "https://www.openstreetmap.org/",
+        "watch": false,
+        "format": "JSON",
+        "adapter": "OSM_BASELINE",
+        "provider": "OpenStreetMap contributors",
+        "authority": "OSM",
+        "observedAt": "2026-09-04T19:22:24.963Z",
+        "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+        "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+      },
+      "contentHash": "b7bdc9e60a53c41654dce737b11d9aa08dc4b5e3093fa0a738f8fdd28a09c072",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:03:25.854Z"
+    },
+    {
+      "id": "doc:734529a9bf47f9e570e212b42873537cfe8037d375bf73b30df42fcb5bdbfb47",
+      "source": {
+        "url": "https://www.ministeriopublico.pt/contactos",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "MP_CONTACT_DIRECTORY",
+        "provider": "Ministério Público",
+        "authority": "OWNER",
+        "pollIntervalMs": 86400000
+      },
+      "contentHash": "451da42fb5a2ac0f0eb38e2d8ee2c288e2d1fbccb71a90908128489b98f19855",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:03:29.980Z"
+    },
+    {
+      "id": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+      "source": {
+        "url": "https://www.openstreetmap.org/",
+        "watch": false,
+        "format": "JSON",
+        "adapter": "OSM_BASELINE",
+        "provider": "OpenStreetMap contributors",
+        "authority": "OSM",
+        "observedAt": "2026-09-04T19:22:24.963Z",
+        "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+        "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+      },
+      "contentHash": "cc2caf5af20561974c1c18b457925131eacc32cb2f16e0676237ae8268e74dba",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:06:01.788Z"
+    },
+    {
+      "id": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+      "source": {
+        "url": "https://www.openstreetmap.org/",
+        "watch": false,
+        "format": "JSON",
+        "adapter": "OSM_BASELINE",
+        "provider": "OpenStreetMap contributors",
+        "authority": "OSM",
+        "observedAt": "2026-09-04T19:22:24.963Z",
+        "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+        "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+      },
+      "contentHash": "cc2caf5af20561974c1c18b457925131eacc32cb2f16e0676237ae8268e74dba",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:08:19.304Z",
+      "pipelineVersion": "world-knowledge-extraction-v1"
+    },
+    {
+      "id": "doc:a568a7635159f8e5f078d9c33476d41dbeee5cb91ffd27bb107354fab06b3d1c",
+      "source": {
+        "url": "https://www.ministeriopublico.pt/contactos",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "MP_CONTACT_DIRECTORY",
+        "provider": "Ministério Público",
+        "authority": "OWNER",
+        "pollIntervalMs": 86400000
+      },
+      "contentHash": "451da42fb5a2ac0f0eb38e2d8ee2c288e2d1fbccb71a90908128489b98f19855",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:08:27.065Z",
+      "pipelineVersion": "world-knowledge-extraction-v1"
+    },
+    {
+      "id": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+      "source": {
+        "url": "https://www.openstreetmap.org/",
+        "watch": false,
+        "format": "JSON",
+        "adapter": "OSM_BASELINE",
+        "provider": "OpenStreetMap contributors",
+        "authority": "OSM",
+        "observedAt": "2026-09-04T19:22:24.963Z",
+        "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+        "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+      },
+      "contentHash": "cc2caf5af20561974c1c18b457925131eacc32cb2f16e0676237ae8268e74dba",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:20:23.657Z",
+      "pipelineVersion": "world-knowledge-extraction-v2"
+    },
+    {
+      "id": "doc:a142ab8ea6e3e5234bd986a4ada5c197839bea6957088d023f70eee20f54d05d",
+      "source": {
+        "url": "https://www.ministeriopublico.pt/contactos",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "MP_CONTACT_DIRECTORY",
+        "provider": "Ministério Público",
+        "authority": "OWNER",
+        "pollIntervalMs": 86400000
+      },
+      "contentHash": "451da42fb5a2ac0f0eb38e2d8ee2c288e2d1fbccb71a90908128489b98f19855",
+      "publishedAt": null,
+      "retrievedAt": "2026-09-12T13:20:25.360Z",
+      "pipelineVersion": "world-knowledge-extraction-v2"
+    }
+  ]
+}

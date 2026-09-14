@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "vigia.release-signature.v1",
+  "algorithm": "Ed25519",
+  "keyId": "sha256:daa993fd0fdd9a92b46cbe527",
+  "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAs/Fs5Qh40SlNBMRAxajpBXuPo/szxlwDg7ugAXFzX7k=\n-----END PUBLIC KEY-----\n",
+  "signature": "s8QFFLL9B4pc31agvnaeETUSn_Vb3EIm5ZZNpo52yirUdoEzejfJ0luE_JU-NAB70xKeIgHZIBQBea7EB8s3Cg",
+  "verified": true,
+  "qualification": "Implementation-key integrity signature; not independent reviewer attestation.",
+  "fingerprint": "release-signature:sha256:b283c47adc00952927c58b2a95a67e6318f4eb0e03fc660f08901f8ff615e4f0"
+}

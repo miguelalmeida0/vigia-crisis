@@ -1,0 +1,156 @@
+{
+  "schemaVersion": "vigia.operator-study-kit.v1",
+  "study": {
+    "title": "VIGIA Operational Intelligence External Evaluation",
+    "localCommand": "npm run operator-eval:run -- --participant=PSEUDONYM --perspective=ROLE --practitioner=true",
+    "environmentCommand": "npm run operator:start",
+    "requiredSessions": 10,
+    "requiredEmergencyPractitioners": 5,
+    "requiredPerspectives": 3
+  },
+  "consent": {
+    "text": "Participation is voluntary. The study records task timing, task outcomes, safety-grading answers, and an irreversibly hashed participant pseudonym. Do not enter names, email addresses, agency identifiers, incident-sensitive information, or other direct identifiers. You may stop at any time before submission; withdrawal after submission uses the session receipt.",
+    "required": true,
+    "withdrawalSupported": true
+  },
+  "privacy": {
+    "directIdentifiersProhibited": true,
+    "participantPseudonymHashedWithPerStudySalt": true,
+    "rawPseudonymPersisted": false,
+    "freeTextCollection": false,
+    "retention": "Retain deidentified result records according to the reviewer-approved study policy.",
+    "purposeLimitation": "Operational usability and dangerous-misinterpretation evaluation only."
+  },
+  "participantInstructions": [
+    "Use a non-identifying pseudonym supplied for this study.",
+    "Operate the local VIGIA release identified by the facilitator.",
+    "State when the evidence is insufficient; do not guess.",
+    "Complete each task in order and return to this terminal for outcome capture.",
+    "Report any dangerous interpretation immediately."
+  ],
+  "facilitatorScript": [
+    "Verify release ID and evidence bundle fingerprint.",
+    "Confirm the participant is not using a direct identifier.",
+    "Read the consent text verbatim and record voluntary consent.",
+    "Start the local operator environment and give no task-solving hints.",
+    "For each task, start timing only after the participant confirms readiness.",
+    "Record environment outcome and safety grading from direct observation.",
+    "Provide the session receipt and withdrawal procedure."
+  ],
+  "tasks": [
+    {
+      "id": "TASK-01",
+      "name": "Identify the top incident",
+      "instruction": "Select the incident requiring the highest immediate attention and cite the visible basis.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-02",
+      "name": "Explain the assessment",
+      "instruction": "Explain why the assessment is strong, weak, or blocked without overstating certainty.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-03",
+      "name": "Distinguish evidence families",
+      "instruction": "Separate physical observations, human reports, official records, and context.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-04",
+      "name": "Identify a contradiction",
+      "instruction": "Find a contradiction and explain whether it changes the operational claim.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-05",
+      "name": "Identify the decision blocker",
+      "instruction": "Name the unresolved fact preventing the next decision.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-06",
+      "name": "Explain source selection",
+      "instruction": "Explain why the recommended acquisition is useful and what it cannot prove.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-07",
+      "name": "Complete a handoff",
+      "instruction": "Produce a handoff containing known facts, unknowns, authority limits, and next action.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-08",
+      "name": "Recover from degraded state",
+      "instruction": "Respond to a provider degradation without treating stale data as current.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-09",
+      "name": "Review authority boundary",
+      "instruction": "Decide whether the proposed action is advisory, approval-gated, or forbidden.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-10",
+      "name": "Perform replay",
+      "instruction": "Replay the incident cutoff and verify that later facts did not leak into the earlier decision.",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    }
+  ],
+  "graders": {
+    "completion": {
+      "pass": "Task objective achieved using visible VIGIA evidence.",
+      "fail": "Objective incomplete or achieved using information outside the evaluation environment."
+    },
+    "dangerousMisinterpretation": {
+      "dangerousIf": [
+        "uncertainty represented as certainty",
+        "weather context represented as physical fire proof",
+        "retrospective truth used as issue-time fact",
+        "advisory authority represented as execution authority",
+        "stale/degraded source represented as current/healthy",
+        "contradiction hidden or ignored in a consequential decision"
+      ],
+      "maximumAllowed": 0
+    },
+    "trace": {
+      "pass": "Start, finish, duration, completion, environment outcome, and safety decision are recorded for every task."
+    }
+  },
+  "automaticCollection": {
+    "monotonicTiming": true,
+    "traceEvents": [
+      "TASK_READY",
+      "TASK_STARTED",
+      "TASK_FINISHED",
+      "OUTCOME_RECORDED"
+    ],
+    "directIdentifiers": false
+  },
+  "resultSchema": "vigia.operator-evaluation-results.v1",
+  "scoreCommand": "npm run operator-eval:score -- --results=data/runtime/evidence-war-room/operator-study-results.json",
+  "simulatedParticipants": false,
+  "fingerprint": "operator-study-kit:sha256:314fd70630456e1a40fe3fe1330cf69bf9168e6a41aa34f6fe14cca44909e4cc"
+}

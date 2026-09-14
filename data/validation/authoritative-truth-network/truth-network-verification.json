@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "vigia.authoritative-truth-verification.v1",
+  "generatedAt": "2026-08-25T18:59:58.296Z",
+  "targeted": {
+    "exitCode": 0,
+    "tests": 14,
+    "pass": 14,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 149,
+    "tail": "✔ unchanged polling creates availability evidence but no new semantic revision (3.07175ms)\n✔ genuine growth and bounded high-overlap refinement are classified separately (0.412ms)\n✔ correction, shrink, merge and split fail closed for official growth labels (0.173708ms)\n✔ deleted perimeter, incident reassociation, clock anomaly, invalid geometry and duplicate are explicit (0.241334ms)\n✔ provider outage and recovery are retained without a negative perimeter claim (0.231583ms)\n✔ durable cursors survive restart and Alberta incident aliases crosswalk deterministically (0.500792ms)\n✔ schema drift and late provider publication do not become progression (0.143542ms)\n✔ simultaneous independent provider changes remain separate sequences (0.262042ms)\n✔ inside-tolerance authoritative revisions create labels; outside tolerance does not (0.749417ms)\n✔ sensor-derived and rights-restricted states cannot satisfy the official gate (0.497875ms)\n✔ future-data leakage invalidates a forecast comparison (0.200083ms)\n✔ conflicting in-jurisdiction official sources are represented and out-of-jurisdiction sources cannot override (0.392166ms)\n✔ replay verifies chains, labels, backup/restore and fingerprints (5.309584ms)\n✔ metamorphic geometry rotation, duplicate capture and ledger ordering preserve semantics (3.584833ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 149.855709\n"
+  },
+  "staticCheck": {
+    "exitCode": 0,
+    "tail": "\n> vigia-physical-intelligence-core@10.0.0 check\n> node scripts/check.mjs\n\nArchitecture check passed in 19.08s: 1027 files inspected; 919 runtime/test modules are syntactically valid, acyclic and within their declared modularity budgets; exclusions: directory:.cache=0, directory:.next=0, directory:.tmp=0, directory:.vite=0, directory:browser-artifacts=0, directory:build=0, directory:coverage=0, directory:dist=1, directory:generated-browser-artifacts=0, directory:node_modules=0, directory:playwright-report=0, directory:test-results=0, quarantined fixture prototype=1, quarantined legacy frontend=1.\n"
+  },
+  "fullTests": {
+    "exitCode": 0,
+    "tests": 945,
+    "pass": 937,
+    "fail": 0,
+    "skipped": 8,
+    "durationMs": 66852,
+    "tail": "✔ false-negative recovery distinguishes policy-recoverable heat context from sensing debt (0.108291ms)\n✔ engineering evidence and claim levels never substitute for human or retrospective authority (0.1475ms)\n✔ finding attention priority is explicit, deterministic and never a probability (2.342417ms)\n✔ missing factors stay visible and are excluded from the weighted mean (0.234042ms)\n✔ developer review remains distinct from expert validation (2.941084ms)\n✔ candidate precision is computed only from domain-expert decisions (0.227333ms)\n✔ expert reviewer classes remain separate while sharing the expert precision denominator (0.107ms)\n✔ reviews are excluded when the physical finding version changes (0.094375ms)\n✔ prevention review rejects unsupported labels (0.252917ms)\n✔ production reality separates physical evidence from public report observations (1.47425ms)\n✔ remediation closure requires completion evidence and re-observation (1.61925ms)\n✔ Sentinel-2 may screen landscape fuel continuity but cannot certify object-scale dumping (0.7105ms)\n✔ sub-metre imagery passes the access-obstruction candidate-resolution gate (0.064958ms)\n✔ future upstream timestamps are exposed as conflicts (1.208584ms)\n✔ spread screening produces ordered uncertainty envelopes (1.907834ms)\n✔ detection metrics exclude cases without an observation opportunity (1.879ms)\n✔ detection metrics expose weak negative discrimination despite positive-heavy precision (0.323167ms)\n✔ thermal context excludes renewable generators and retains heat-capable sources (0.666291ms)\n✔ resolver reports boundary membership and exact industrial polygon containment (1.049959ms)\n✔ V4 suppresses low-FRP mapped heat without suppressing the same signal in unmapped context (1.534417ms)\n✔ timestamp firewall rejects missing, epoch and future values (0.850625ms)\n✔ deterministic screening preserves low < central < high without probability semantics (1.554875ms)\n✔ V8 living-fire geometry reports current footprint and centroid movement from fresh point observations (0.770083ms)\n✔ V8 report plus fresh camera evidence becomes a multisource event without inventing thermal behavior (1.7655ms)\n✔ distinct provider reports stay separate even when locality and timing overlap (1.171875ms)\n✔ validation metrics expose detection quality and event identity failure modes without inventing thresholds (0.898625ms)\nℹ tests 945\nℹ suites 0\nℹ pass 937\nℹ fail 0\nℹ cancelled 0\nℹ skipped 8\nℹ todo 0\nℹ duration_ms 66852.575709\n",
+    "knownProtectedFrontendFailure": false
+  },
+  "databaseCertification": {
+    "exitCode": 0,
+    "tail": "    \"atomicDecisionOutcomeRollback\": true,\n    \"atomicArchiveRollback\": true,\n    \"decisionMemoryPersistence\": true,\n    \"informationValuePersistence\": true,\n    \"restartReconstruction\": true,\n    \"fileDatabaseSemanticEquivalence\": true,\n    \"backupRestore\": true\n  },\n  \"recovery\": {\n    \"state\": \"PASS\",\n    \"rpoEvents\": 0,\n    \"rtoMs\": 1548.2478329999994,\n    \"dataLossRecords\": 0,\n    \"projectionRecoveryMs\": 12.187957999998616,\n    \"replayVerificationMs\": 1.5469999999986612,\n    \"migrationHead\": \"022\",\n    \"migrationIdempotentAfterRestore\": true,\n    \"decisionPacketVerified\": true,\n    \"lineageVerified\": true,\n    \"receiptsVerified\": true,\n    \"prospectiveArchiveVerified\": true,\n    \"decisionMemoryVerified\": true,\n    \"informationValueVerified\": true,\n    \"projectionRebuilt\": true,\n    \"replayVerified\": true\n  },\n  \"durationMs\": 5118.634459,\n  \"failed\": []\n}\n"
+  },
+  "productionSmoke": {
+    "exitCode": 0,
+    "knownProtectedFrontendFailure": false,
+    "tail": "\n> vigia-physical-intelligence-core@10.0.0 smoke\n> node scripts/production_smoke.mjs\n\n{\n  \"gate\": \"production_smoke\",\n  \"pass\": true,\n  \"beforeRestart\": {\n    \"eventCount\": 0,\n    \"observationCount\": 0,\n    \"replayAccessStatus\": 401,\n    \"apiRootStatus\": 404,\n    \"ready\": false,\n    \"syntheticObservations\": 0,\n    \"demoIdentities\": 0\n  },\n  \"afterRestart\": {\n    \"eventCount\": 0,\n    \"observationCount\": 0,\n    \"replayAccessStatus\": 401,\n    \"apiRootStatus\": 404,\n    \"ready\": false,\n    \"syntheticObservations\": 0,\n    \"demoIdentities\": 0\n  }\n}\n"
+  },
+  "replay": {
+    "passed": true,
+    "fingerprint": "authoritative-truth-replay:sha256:568173948dfb9325dc0c38ac6839bfb05c61b221305c44eb9e84f5ea4e4e84f3"
+  },
+  "performance": {
+    "checks": {
+      "unchangedPoll": true,
+      "changedPerimeter": true,
+      "incrementalLabel": true,
+      "decisionPacket": true
+    },
+    "fingerprint": "authoritative-truth-performance:sha256:4f6db131693df9b651386a2ae305ffa568216623c0e41c52abe2f521a7efbad8"
+  },
+  "protectedFrontendBaseline": {
+    "path": "apps/web/src/v2/release-compatibility.js",
+    "sourceModifiedByThisMandate": true
+  },
+  "newRegressions": 0,
+  "passed": true,
+  "fingerprint": "authoritative-truth-verification:sha256:3886d5fa49b4323d6d90a2c8beb69eea7aef18060d387a7fcc8b5ca535d0abe2"
+}

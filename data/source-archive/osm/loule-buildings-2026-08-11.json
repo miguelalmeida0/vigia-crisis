@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "source": "OpenStreetMap via Overpass API",
+  "license": "ODbL",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "acquiredAt": "2026-08-11T11:31:52Z",
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "query": "[out:json][timeout:12];nwr[\"building\"](around:3200,37.1397,-8.0202);out center 1200;",
+  "coordinate": [-8.0202, 37.1397],
+  "coverageBbox": [-8.05400644, 37.11275066, -7.98639356, 37.16664934],
+  "rawSourceRecordCount": 1200,
+  "rawSourceSha256": "35c0e73c37ba6eef1332e288bf55f58fa0355185756385f41159603b6fb65e8d",
+  "selection": "Source records within the two detector-candidate boundary contexts. The selected records reproduce the structure-distance result of the full 1,200-record source response.",
+  "records": [
+    {"type": "way", "id": 182674346, "coordinate": [-8.0214227, 37.1129148], "tags": {"building": "yes"}},
+    {"type": "way", "id": 182674353, "coordinate": [-8.0214938, 37.1124110], "tags": {"building": "yes"}},
+    {"type": "way", "id": 1028431142, "coordinate": [-8.0262631, 37.1159132], "tags": {"building": "yes"}},
+    {"type": "way", "id": 1028431143, "coordinate": [-8.0263080, 37.1159633], "tags": {"building": "yes"}}
+  ]
+}

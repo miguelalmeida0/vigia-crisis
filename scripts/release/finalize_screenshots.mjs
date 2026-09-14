@@ -1,0 +1,1 @@
+throw new Error('standalone_screenshot_promotion_disabled_use_npm_run_operator_certify');

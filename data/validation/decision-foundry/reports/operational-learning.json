@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "vigia.operational-learning-report.v1",
+  "decisionOutcomes": 0,
+  "shadowRecords": 1,
+  "prospectiveSnapshots": 2,
+  "calibration": {
+    "schemaVersion": "vigia.information-value-calibration.v1",
+    "qualification": "INSUFFICIENT_OUTCOMES",
+    "overall": {
+      "examples": 0,
+      "unlockPrecision": null,
+      "unlockRecall": null,
+      "decisionImpactAgreement": null,
+      "hypothesisDiscriminationAgreement": null,
+      "meanAbsoluteLatencyErrorMs": null,
+      "meanAbsoluteByteError": null,
+      "sourceSuccessRate": null
+    },
+    "stratified": {
+      "providerId": {},
+      "acquisitionType": {},
+      "incidentType": {},
+      "region": {},
+      "sourceHealth": {}
+    },
+    "automaticDoctrineMutation": false,
+    "recommendationRequiresReview": true,
+    "fingerprint": "information-value-calibration:sha256:4861045c18c29aae38cce730ff0a2d783a5c2ce229dcb1a73d19c979544b3939"
+  },
+  "fingerprint": "operational-learning-report:sha256:036583d9c67f573196e7762fe7add11514dd69df4b34fa0c3303ab1501d4d8cb"
+}

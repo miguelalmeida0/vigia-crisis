@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "vigia.unknown-path-report.v1",
+  "generatedAt": "2026-09-14T07:35:10.975Z",
+  "releaseId": "vigia-intelligence-fabric-14b343443ea8c494",
+  "unknownCount": 0,
+  "entries": [],
+  "ruleCoverage": {
+    "dirtyPaths": 962,
+    "classifications": {
+      "DEPLOYMENT DATA": 84,
+      "GOVERNED EVIDENCE": 456,
+      "REFERENCE DATA": 17,
+      "SOURCE — release code": 362,
+      "TEST": 43
+    },
+    "qualification": "Every dirty path is deterministically classified; the fallback class is REFERENCE DATA, never silent UNKNOWN."
+  }
+}

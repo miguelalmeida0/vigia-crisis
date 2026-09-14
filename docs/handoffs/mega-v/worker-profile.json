@@ -1,0 +1,15 @@
+{
+  "at": "2026-09-12T21:40:19.135Z",
+  "counts": {
+    "entities": 1912,
+    "documents": 1570,
+    "facts": 14738,
+    "jobs": 1973,
+    "relations": 1058,
+    "sources": 58
+  },
+  "canonicalHash": 238.465375,
+  "serialization": 76.70724999999993,
+  "materializeScanMs": 886.6333749999999,
+  "materializeIndexMs": 45.35124999999971
+}

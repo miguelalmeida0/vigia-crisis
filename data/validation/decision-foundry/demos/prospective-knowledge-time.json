@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "vigia.prospective-knowledge-time-demo.v1",
+  "sourceRunId": "bf5d8b3c-c164-4b05-8a50-205c72cf34fe",
+  "sourceRunHash": "global-wildfire-reality-run:sha256:59d886b27c82553de630c54f63a68cf7f55ee67ff6ab5f06b83a4a2508dcf7f4",
+  "incidentId": "2026-WAOWF-260420",
+  "manifest": {
+    "schemaVersion": "vigia.prospective-capture-manifest.v1",
+    "id": "prospective-demo:bf5d8b3c-c164-4b05-8a50-205c72cf34fe",
+    "mode": "ONCE",
+    "providers": [
+      "nifc-wfigs",
+      "noaa-goes-abi"
+    ],
+    "products": [
+      "ABI-L2-FDCC/2026/236/12/OR_ABI-L2-FDCC-M6_G18_s20262361201181_e20262361203554_c20262361204049.nc",
+      "WFIGS_CURRENT:2026-08-24T11:38:10.630Z:window:0:25:global:4bbaee11c1636a95"
+    ],
+    "regions": [
+      "western-us"
+    ],
+    "incidentIds": [
+      "2026-WAOWF-260420"
+    ],
+    "cadenceSeconds": 300,
+    "retentionDays": 365,
+    "startedAt": "2026-08-24T12:07:07.299Z",
+    "endsAt": null,
+    "rights": {
+      "state": "READY",
+      "licenceId": "MIXED_APPROVED_PROVIDER_RIGHTS",
+      "attribution": [
+        {
+          "licenceId": "CC-BY-4.0-ECMWF",
+          "attribution": "© ECMWF; data licensed under CC BY 4.0 and subject to ECMWF terms.",
+          "termsVersion": "Cycle 50r1"
+        },
+        {
+          "licenceId": "NASA-FEDS-TERMS",
+          "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+          "termsVersion": "2026-08-24"
+        },
+        {
+          "licenceId": "NASA-FIRMS-TERMS",
+          "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+          "termsVersion": "2026-08-24"
+        },
+        {
+          "licenceId": "NIFC-OPEN-DATA",
+          "attribution": "National Interagency Fire Center, WFIGS.",
+          "termsVersion": "2026-08-24"
+        },
+        {
+          "licenceId": "NOAA-PUBLIC-DATA",
+          "attribution": "NOAA GOES-R Program and NCEI/NESDIS.",
+          "termsVersion": "2026-08-24"
+        },
+        {
+          "licenceId": "NWS-PUBLIC-DATA",
+          "attribution": "NOAA National Weather Service.",
+          "termsVersion": "2026-08-24"
+        },
+        {
+          "licenceId": "ODBL-1.0",
+          "attribution": "© OpenStreetMap contributors.",
+          "termsVersion": "1.0"
+        }
+      ]
+    },
+    "externalConsequentialActions": false,
+    "fingerprint": "prospective-capture-manifest:sha256:36f2a0d4f97a9b1e4f1a5061b684f39eb6c9758ab530a09ca1d769804677f37d"
+  },
+  "snapshots": [
+    {
+      "schemaVersion": "vigia.prospective-knowledge-time-snapshot.v1",
+      "manifestId": "prospective-demo:bf5d8b3c-c164-4b05-8a50-205c72cf34fe",
+      "manifestFingerprint": "prospective-capture-manifest:sha256:36f2a0d4f97a9b1e4f1a5061b684f39eb6c9758ab530a09ca1d769804677f37d",
+      "sequence": 1,
+      "incidentId": "2026-WAOWF-260420",
+      "providerId": "nifc-wfigs",
+      "productId": "WFIGS_CURRENT:2026-08-24T11:38:10.630Z:window:0:25:global:4bbaee11c1636a95",
+      "providerPublishedAt": "2026-08-24T11:38:10.630Z",
+      "vigiaReceivedAt": "2026-08-24T12:07:07.960Z",
+      "rawObjectReference": "raw:nifc-wfigs:wfigs_current-perimeters:4bbaee11c1636a9547933d125f035d68d91e0c0bd55087c52e56fffe75cb7166",
+      "rawObjectHash": "4bbaee11c1636a9547933d125f035d68d91e0c0bd55087c52e56fffe75cb7166",
+      "sourceHealth": {
+        "state": "LIVE",
+        "latencyMs": 308.941
+      },
+      "perimeterRevision": {
+        "sourceTimestamp": "2026-08-24T11:38:10.630Z"
+      },
+      "physicalObservations": [],
+      "weatherRun": null,
+      "assetContext": null,
+      "evidenceState": null,
+      "evidenceDebt": null,
+      "hypotheses": null,
+      "decisionPacketFingerprint": null,
+      "shadowActions": [],
+      "rights": {
+        "state": "READY",
+        "licenceId": "MIXED_APPROVED_PROVIDER_RIGHTS",
+        "attribution": [
+          {
+            "licenceId": "CC-BY-4.0-ECMWF",
+            "attribution": "© ECMWF; data licensed under CC BY 4.0 and subject to ECMWF terms.",
+            "termsVersion": "Cycle 50r1"
+          },
+          {
+            "licenceId": "NASA-FEDS-TERMS",
+            "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NASA-FIRMS-TERMS",
+            "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NIFC-OPEN-DATA",
+            "attribution": "National Interagency Fire Center, WFIGS.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NOAA-PUBLIC-DATA",
+            "attribution": "NOAA GOES-R Program and NCEI/NESDIS.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NWS-PUBLIC-DATA",
+            "attribution": "NOAA National Weather Service.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "ODBL-1.0",
+            "attribution": "© OpenStreetMap contributors.",
+            "termsVersion": "1.0"
+          }
+        ]
+      },
+      "lineage": {
+        "runHash": "global-wildfire-reality-run:sha256:59d886b27c82553de630c54f63a68cf7f55ee67ff6ab5f06b83a4a2508dcf7f4",
+        "rawProductId": "raw:nifc-wfigs:wfigs_current-perimeters:4bbaee11c1636a9547933d125f035d68d91e0c0bd55087c52e56fffe75cb7166"
+      },
+      "previousSnapshotFingerprint": null,
+      "externalConsequentialActions": 0,
+      "fingerprint": "prospective-knowledge-time-snapshot:sha256:7f67c40f9b2b9b1698d9054df9991c411a3206220caac914c4cabf102405a7c2"
+    },
+    {
+      "schemaVersion": "vigia.prospective-knowledge-time-snapshot.v1",
+      "manifestId": "prospective-demo:bf5d8b3c-c164-4b05-8a50-205c72cf34fe",
+      "manifestFingerprint": "prospective-capture-manifest:sha256:36f2a0d4f97a9b1e4f1a5061b684f39eb6c9758ab530a09ca1d769804677f37d",
+      "sequence": 2,
+      "incidentId": "2026-WAOWF-260420",
+      "providerId": "noaa-goes-abi",
+      "productId": "ABI-L2-FDCC/2026/236/12/OR_ABI-L2-FDCC-M6_G18_s20262361201181_e20262361203554_c20262361204049.nc",
+      "providerPublishedAt": "2026-08-24T12:01:18.000Z",
+      "vigiaReceivedAt": "2026-08-24T12:07:10.856Z",
+      "rawObjectReference": "raw:noaa-goes-abi:goes_G18_FDCC:0acf6f3dbce98692db3c1aacc46f0870ca3851cd40d3dbeebacd563bb22e4985",
+      "rawObjectHash": "0acf6f3dbce98692db3c1aacc46f0870ca3851cd40d3dbeebacd563bb22e4985",
+      "sourceHealth": {
+        "state": "LIVE",
+        "latencyMs": null
+      },
+      "perimeterRevision": null,
+      "physicalObservations": [
+        "ABI"
+      ],
+      "weatherRun": null,
+      "assetContext": null,
+      "evidenceState": null,
+      "evidenceDebt": null,
+      "hypotheses": null,
+      "decisionPacketFingerprint": null,
+      "shadowActions": [],
+      "rights": {
+        "state": "READY",
+        "licenceId": "MIXED_APPROVED_PROVIDER_RIGHTS",
+        "attribution": [
+          {
+            "licenceId": "CC-BY-4.0-ECMWF",
+            "attribution": "© ECMWF; data licensed under CC BY 4.0 and subject to ECMWF terms.",
+            "termsVersion": "Cycle 50r1"
+          },
+          {
+            "licenceId": "NASA-FEDS-TERMS",
+            "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NASA-FIRMS-TERMS",
+            "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NIFC-OPEN-DATA",
+            "attribution": "National Interagency Fire Center, WFIGS.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NOAA-PUBLIC-DATA",
+            "attribution": "NOAA GOES-R Program and NCEI/NESDIS.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "NWS-PUBLIC-DATA",
+            "attribution": "NOAA National Weather Service.",
+            "termsVersion": "2026-08-24"
+          },
+          {
+            "licenceId": "ODBL-1.0",
+            "attribution": "© OpenStreetMap contributors.",
+            "termsVersion": "1.0"
+          }
+        ]
+      },
+      "lineage": {
+        "runHash": "global-wildfire-reality-run:sha256:59d886b27c82553de630c54f63a68cf7f55ee67ff6ab5f06b83a4a2508dcf7f4",
+        "rawProductId": "raw:noaa-goes-abi:goes_G18_FDCC:0acf6f3dbce98692db3c1aacc46f0870ca3851cd40d3dbeebacd563bb22e4985"
+      },
+      "previousSnapshotFingerprint": "prospective-knowledge-time-snapshot:sha256:7f67c40f9b2b9b1698d9054df9991c411a3206220caac914c4cabf102405a7c2",
+      "externalConsequentialActions": 0,
+      "fingerprint": "prospective-knowledge-time-snapshot:sha256:11d28a5154961aa40bae5a06786efce598f15116f846feecc95fc447427b5dd3"
+    }
+  ],
+  "firstSnapshotImmutable": true,
+  "rawBytes": 3424537,
+  "providers": [
+    "nifc-wfigs",
+    "noaa-goes-abi"
+  ],
+  "consequentialActionsExecuted": 0,
+  "fingerprint": "prospective-knowledge-time-demo:sha256:1669f6318a1b9fa3ca47f29b3df8e11d74a945c3e44401fb8c8a186c0ad34ea0"
+}

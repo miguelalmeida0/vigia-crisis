@@ -1,0 +1,536 @@
+{
+  "schemaVersion": "vigia.scientific-truth-closure-report.v1",
+  "generatedAt": "2026-08-25T15:54:44.455Z",
+  "sourceManifestFingerprint": "public-evidence-source-manifest:sha256:3c573cb46f56a868142e9161e97e57b2430768c38c0284d20fc4984e2799c5fe",
+  "gates": {
+    "validNegatives25": true,
+    "hardNegatives10": true,
+    "canadaFuelMaterialized": true,
+    "canadaTerrainMaterialized": true,
+    "canadianPhysicalHistoryBound": true,
+    "oneHourLabelsNonzero": false,
+    "threeHourLabelsNonzero": false,
+    "nonVacuousScientificEvaluation": true,
+    "decisionLearningAuditPassed": true,
+    "zeroNewRegressions": true,
+    "completeReplay": true
+  },
+  "replayChecks": {
+    "corpora": true,
+    "evaluation": true,
+    "outcomes": true,
+    "perimeterHashChain": true,
+    "priorSnapshotsNotRewritten": true
+  },
+  "passed": false,
+  "decision": "SCIENTIFIC_TRUTH_CLOSURE_GATE_NOT_PASSED",
+  "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+  "sections": {
+    "A": {
+      "title": "Executive verdict",
+      "decision": "SCIENTIFIC_TRUTH_CLOSURE_GATE_NOT_PASSED"
+    },
+    "B": {
+      "title": "Observation-opportunity engine",
+      "valid": 135,
+      "states": {
+        "CLOUDY": 8,
+        "CLOUD_CONTAMINATED": 3,
+        "OUTSIDE_USEFUL_VIEW_GEOMETRY": 3,
+        "PROBABLY_CLOUDY": 51,
+        "VALID_PROBABLY_CLEAR_OBSERVATION": 135
+      }
+    },
+    "C": {
+      "title": "GOES products acquired",
+      "pairedScans": 3,
+      "fingerprints": [
+        "sha256:bd0fc1e2f0d46c1fd200acea3a91fa9f23873aafb933c841bb78b16b6724fb52",
+        "sha256:fb808f5779028d5759384cc05c214cfd97b6e0c5bb330d55673812bd6d0262e8",
+        "sha256:649939dcce73e3e8d529a2aa2f52bef6759491e5588a8906836171c4f6583194",
+        "sha256:e28968b7e948e33ecd8496326fa8428f0ed8c602d0a9a8b514300411a0d920e8",
+        "sha256:c26499c494e6a130d862e7d7b8f94702e620fa496c166810616d89bbd01ef2ae",
+        "sha256:7ee66211c04edb7bd2d1474185c1122454f3766917cb1ba8a991d229fc1f2d4a"
+      ]
+    },
+    "D": {
+      "title": "VIIRS cloud-mask status",
+      "state": "CREDENTIAL_REQUIRED",
+      "requirement": "Provide an Earthdata/LAADS bearer token through EARTHDATA_TOKEN, LAADS_TOKEN, or NASA_EARTHDATA_TOKEN; the value is never persisted or printed."
+    },
+    "E": {
+      "title": "Valid negatives",
+      "candidates": 200,
+      "certified": 100,
+      "unknown": 65,
+      "rejected": 65,
+      "rejectionReasons": {
+        "CLOUD_QUALITY_INSUFFICIENT": 3,
+        "FIRE_QUALITY_INSUFFICIENT": 17,
+        "OPPORTUNITY_CLOUDY": 8,
+        "OPPORTUNITY_CLOUD_CONTAMINATED": 3,
+        "OPPORTUNITY_OUTSIDE_USEFUL_VIEW_GEOMETRY": 3,
+        "OPPORTUNITY_PROBABLY_CLOUDY": 51,
+        "OUTSIDE_USEFUL_VIEW_GEOMETRY": 3
+      }
+    },
+    "F": {
+      "title": "Hard negatives",
+      "certified": 25,
+      "categories": {
+        "NEARBY_DISTINCT_INCIDENT": 25
+      }
+    },
+    "G": {
+      "title": "Canada binding",
+      "discovered": 12322,
+      "physicalHistoriesBound": 360,
+      "weatherBound": 10,
+      "fuelBound": 25,
+      "terrainBound": 15,
+      "laterTruthBound": 1893,
+      "taskEligible": {
+        "fireExistence": 460,
+        "largeFireGrowth": 191,
+        "shortHorizonProgression": 2,
+        "impactExposure": 0
+      }
+    },
+    "H": {
+      "title": "Weather",
+      "currentProspective": "ACTIVE",
+      "historical": "ORDER_MANIFEST_READY"
+    },
+    "I": {
+      "title": "Fuel / terrain",
+      "fuel": {
+        "attempted": 25,
+        "bound": 25
+      },
+      "terrain": {
+        "attempted": 25,
+        "bound": 15
+      }
+    },
+    "J": {
+      "title": "Official perimeter capture",
+      "snapshots": 1279,
+      "revisions": 0
+    },
+    "K": {
+      "title": "Near-term labels",
+      "allHorizons": {
+        "1h": 1,
+        "3h": 1,
+        "6h": 0,
+        "12h": 0,
+        "24h": 0
+      },
+      "officialHorizons": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0,
+        "12h": 0,
+        "24h": 0
+      },
+      "classes": {
+        "AUTHORITATIVE_OPERATIONAL_PERIMETER": 0,
+        "OFFICIAL_REFERENCE_PERIMETER": 0,
+        "DERIVED_SENSOR_PROGRESSION": 2,
+        "RETROSPECTIVE_FINAL_PERIMETER": 0,
+        "UNUSABLE": 0
+      },
+      "sensorDerivedDoesNotSatisfyOfficialGate": true
+    },
+    "L": {
+      "title": "Prospective campaign",
+      "publications": 256,
+      "rawObjects": 24,
+      "meaningfulChanges": 0,
+      "incidentsWithThreeMeaningfulStates": 0,
+      "rewrites": 0
+    },
+    "M": {
+      "title": "Decision Learning audit",
+      "passed": true,
+      "biasAudit": {
+        "selectionBias": {
+          "state": "PRESENT_AND_SCOPED",
+          "reason": "The registered cohort conditions on later-perimeter availability and is not a population sample."
+        },
+        "providerAvailabilityBias": {
+          "state": "PRESENT",
+          "providers": [
+            "alberta-wildfire"
+          ]
+        },
+        "geographicBias": {
+          "state": "PRESENT",
+          "regions": [
+            "CA-AB"
+          ]
+        },
+        "easyCaseBias": {
+          "state": "POSSIBLE",
+          "reason": "Cases without observable later truth are outside this adjudicable cohort and remain outside the denominator; results cannot be generalized to them."
+        },
+        "incidentTypeCoverage": [
+          "Wildfire",
+          "Mutual Aid"
+        ]
+      }
+    },
+    "N": {
+      "title": "Realized outcome metrics",
+      "outcomes": 100,
+      "metrics": {
+        "examples": 100,
+        "unlockPrecision": 0.5,
+        "unlockRecall": 1,
+        "hypothesisSeparationAgreement": 1,
+        "evidenceDebtClosureAgreement": 1,
+        "providerSuccessCalibration": 1,
+        "meanAbsoluteLatencyErrorMs": null,
+        "meanAbsoluteByteError": null,
+        "nullOutcomeRate": 0
+      }
+    },
+    "O": {
+      "title": "Scientific task corpora",
+      "tasks": {
+        "fireExistence": 460,
+        "largeFireGrowth": 191,
+        "shortHorizonProgression": 2,
+        "impactExposure": 0
+      }
+    },
+    "P": {
+      "title": "Splits and leakage",
+      "tasks": {
+        "fireExistence": {
+          "splits": {
+            "development": {
+              "examples": 276,
+              "positives": 216,
+              "negatives": 60
+            },
+            "calibration": {
+              "examples": 92,
+              "positives": 72,
+              "negatives": 20
+            },
+            "heldOut": {
+              "examples": 92,
+              "positives": 72,
+              "negatives": 20
+            }
+          },
+          "leakage": {
+            "passed": true,
+            "violations": []
+          }
+        },
+        "largeFireGrowth": {
+          "splits": {
+            "development": {
+              "examples": 114,
+              "positives": 38,
+              "negatives": 76
+            },
+            "calibration": {
+              "examples": 39,
+              "positives": 13,
+              "negatives": 26
+            },
+            "heldOut": {
+              "examples": 38,
+              "positives": 13,
+              "negatives": 25
+            }
+          },
+          "leakage": {
+            "passed": true,
+            "violations": []
+          }
+        },
+        "shortHorizonProgression": {
+          "splits": {
+            "development": {
+              "examples": 1,
+              "positives": 1,
+              "negatives": 0
+            },
+            "calibration": {
+              "examples": 1,
+              "positives": 1,
+              "negatives": 0
+            },
+            "heldOut": {
+              "examples": 0,
+              "positives": 0,
+              "negatives": 0
+            }
+          },
+          "leakage": {
+            "passed": false,
+            "violations": [
+              {
+                "group": "GOES-CLUSTER--121:48",
+                "prior": "development",
+                "current": "calibration"
+              }
+            ]
+          }
+        },
+        "impactExposure": {
+          "splits": {
+            "development": {
+              "examples": 0,
+              "positives": 0,
+              "negatives": 0
+            },
+            "calibration": {
+              "examples": 0,
+              "positives": 0,
+              "negatives": 0
+            },
+            "heldOut": {
+              "examples": 0,
+              "positives": 0,
+              "negatives": 0
+            }
+          },
+          "leakage": {
+            "passed": true,
+            "violations": []
+          }
+        }
+      }
+    },
+    "Q": {
+      "title": "Forecast/science evaluation",
+      "taskSpecific": {
+        "decision": "NONVACUOUS_SCIENTIFIC_EVALUATION_COMPLETE",
+        "evaluations": {
+          "fireExistence": {
+            "state": "SCORED_NONVACUOUS",
+            "baseline": "ATTRIBUTABLE_PHYSICAL_CORROBORATION",
+            "metrics": {
+              "examples": 92,
+              "truePositives": 72,
+              "trueNegatives": 20,
+              "falsePositives": 0,
+              "falseNegatives": 0,
+              "accuracy": 1,
+              "precision": 1,
+              "recall": 1,
+              "specificity": 1,
+              "balancedAccuracy": 1
+            },
+            "qualification": "Corpus-consistency/corroboration evaluation, not a predictive-skill claim."
+          },
+          "largeFireGrowth": {
+            "state": "SCORED_NONVACUOUS",
+            "baselines": {
+              "noGrowth": {
+                "examples": 38,
+                "truePositives": 0,
+                "trueNegatives": 25,
+                "falsePositives": 0,
+                "falseNegatives": 13,
+                "accuracy": 0.6578947368421053,
+                "precision": null,
+                "recall": 0,
+                "specificity": 1,
+                "balancedAccuracy": 0.5
+              },
+              "issueArea": {
+                "examples": 38,
+                "truePositives": 13,
+                "trueNegatives": 13,
+                "falsePositives": 12,
+                "falseNegatives": 0,
+                "accuracy": 0.6842105263157895,
+                "precision": 0.52,
+                "recall": 1,
+                "specificity": 0.52,
+                "balancedAccuracy": 0.76
+              }
+            }
+          },
+          "shortHorizonProgression": {
+            "state": "BLOCKED",
+            "baselines": null
+          },
+          "impactExposure": {
+            "state": "BLOCKED_NO_ATTRIBUTABLE_OUTCOMES",
+            "metrics": null
+          }
+        }
+      },
+      "legacyMonolithic": {
+        "corpusGate": "CORPUS_NOT_READY",
+        "forecastEvaluation": "BLOCKED_BY_CORPUS"
+      }
+    },
+    "R": {
+      "title": "Docker images and SBOM",
+      "releaseId": "vigia-scientific-truth-1709222c2115ab87",
+      "images": [
+        {
+          "name": "vigia-scientific-truth-1709222c2115ab87-api",
+          "digest": "sha256:d46039e1eed3f310130434cae5bba72796a1d2b4a260698270bfa992f08a20f0",
+          "sbom": "image-spdx-sbom:sha256:b07c26395ba5b56172dba53d1816f2060db4d1da3fefbb482e6ceb78d3466ffa"
+        },
+        {
+          "name": "vigia-scientific-truth-1709222c2115ab87-web",
+          "digest": "sha256:5587b0947c624972f311c19b0245422e26c34bbaa9e915ca062acc9005dd5ea6",
+          "sbom": "image-spdx-sbom:sha256:5c5bee5e9a48411d1cd6bbcc3ba241c6159744805f155a0ae50af8f9f80c2b5a"
+        }
+      ]
+    },
+    "S": {
+      "title": "Cross-branch migration compatibility",
+      "migrationHead": "017-intelligence-convergence.sql",
+      "compatibility": {
+        "dossier": {
+          "path": "docs/architecture/MIGRATION_COMPATIBILITY_DOSSIER.md",
+          "sha256": "sha256:fe2e9710d42400c5e4912ea1df117e9e12a237fc6ecb7ae4156ac8403b871448"
+        },
+        "agent2Migration": true,
+        "agent1Migration018Present": false,
+        "proposedSecurityMigration": "docs/architecture/migration-019-security-compartments.sql.proposed",
+        "unresolvedMergeTimeDecision": "Inspect the authoritative integrated migration 018 before activating or renumbering the proposed security/RLS migration."
+      }
+    },
+    "T": {
+      "title": "Security/adversarial tests",
+      "result": {
+        "exitCode": 0,
+        "tests": 18,
+        "pass": 18,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 176,
+        "tail": "✔ cloudy pixel is never certified as a clear negative opportunity (0.801167ms)\n✔ missing paired product is never certified as a negative (0.07075ms)\n✔ provider outage is never certified as a negative (0.048584ms)\n✔ high-view-angle pixel is outside opportunity doctrine (0.054834ms)\n✔ fire-mask quality cannot be ignored (0.051875ms)\n✔ an official incident match blocks the strong cross-source negative (0.054917ms)\n✔ same physical observation is not counted twice (0.063917ms)\n✔ prescribed fire is real fire, not no physical fire (0.044167ms)\n✔ future or equal perimeter truth cannot leak backward (0.069625ms)\n✔ large contraction is treated as correction/ambiguity, not growth (0.094166ms)\n✔ identical snapshots never count as progression (0.050667ms)\n✔ future fuel product requires an explicit retrospective doctrine (0.815416ms)\n✔ weather run after cutoff is rejected (0.708917ms)\n✔ ambiguous incident candidates are not force-bound (0.06825ms)\n✔ snapshot rewrite and duplicate restart state are detected (0.070666ms)\n✔ Earthdata credential diagnostics never return token values (0.056292ms)\n✔ rights-restricted object is denied scientific export (0.033916ms)\n✔ clean-room digest substitution is detected (0.279291ms)\nℹ tests 18\nℹ suites 0\nℹ pass 18\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 176.635042\n"
+      }
+    },
+    "U": {
+      "title": "Performance and storage",
+      "sourceObjects": 515,
+      "sourceBytes": 369177360,
+      "boundedDefaults": true
+    },
+    "V": {
+      "title": "Full test results",
+      "verification": {
+        "schemaVersion": "vigia.scientific-truth-verification.v1",
+        "generatedAt": "2026-08-25T14:15:58.614Z",
+        "targetedAdversarial": {
+          "exitCode": 0,
+          "tests": 18,
+          "pass": 18,
+          "fail": 0,
+          "skipped": 0,
+          "durationMs": 176,
+          "tail": "✔ cloudy pixel is never certified as a clear negative opportunity (0.801167ms)\n✔ missing paired product is never certified as a negative (0.07075ms)\n✔ provider outage is never certified as a negative (0.048584ms)\n✔ high-view-angle pixel is outside opportunity doctrine (0.054834ms)\n✔ fire-mask quality cannot be ignored (0.051875ms)\n✔ an official incident match blocks the strong cross-source negative (0.054917ms)\n✔ same physical observation is not counted twice (0.063917ms)\n✔ prescribed fire is real fire, not no physical fire (0.044167ms)\n✔ future or equal perimeter truth cannot leak backward (0.069625ms)\n✔ large contraction is treated as correction/ambiguity, not growth (0.094166ms)\n✔ identical snapshots never count as progression (0.050667ms)\n✔ future fuel product requires an explicit retrospective doctrine (0.815416ms)\n✔ weather run after cutoff is rejected (0.708917ms)\n✔ ambiguous incident candidates are not force-bound (0.06825ms)\n✔ snapshot rewrite and duplicate restart state are detected (0.070666ms)\n✔ Earthdata credential diagnostics never return token values (0.056292ms)\n✔ rights-restricted object is denied scientific export (0.033916ms)\n✔ clean-room digest substitution is detected (0.279291ms)\nℹ tests 18\nℹ suites 0\nℹ pass 18\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 176.635042\n"
+        },
+        "fullTests": {
+          "exitCode": 1,
+          "tests": 748,
+          "pass": 746,
+          "fail": 1,
+          "skipped": 1,
+          "durationMs": 49951,
+          "tail": "    \"  if(web&&api&&web.releaseId!==api.releaseId)failures.push('web_api_release_id_mismatch');\\n\" +\n    \"  if(web&&fieldNode&&web.releaseId!==fieldNode.releaseId)failures.push('web_fieldnode_release_id_mismatch');\\n\" +\n    \"  if(web&&api&&web.codeStateHash!==api.codeStateHash)failures.push('web_api_code_state_mismatch');\\n\" +\n    \"  if(web&&fieldNode&&web.codeStateHash!==fieldNode.codeStateHash)failures.push('web_fieldnode_code_state_mismatch');\\n\" +\n    '  for(const [key,required] of Object.entries(REQUIRED)){\\n' +\n    '    if(api?.contracts?.[key]!==required)failures.push(`api_${key}_requires_${required}`);\\n' +\n    \"    if(key==='fieldNodeContractVersion'&&fieldNode&&fieldNode.contracts?.[key]!==required)failures.push(`fieldnode_${key}_requires_${required}`);\\n\" +\n    '  }\\n' +\n    \"  if(api?.schema?.certification?.state!=='PASS')failures.push('database_schema_not_certified');\\n\" +\n    \"  if(api?.routeCertification?.state!=='PASS')failures.push('primary_routes_not_certified');\\n\" +\n    \"  if(api?.sessionCertification?.state!=='PASS')failures.push('session_not_certified');\\n\" +\n    \"  return{schemaVersion:'vigia.browser-release-handshake.v2',compatible:failures.length===0,failures,degraded,web,api,fieldNode,checkedAt:new Date().toISOString()};\\n\" +\n    '}\\n' +\n    '\\n' +\n    'export function renderReleaseFailure(root,result){\\n' +\n    \"  root.dataset.ready='false';root.dataset.releaseState='incompatible';\\n\" +\n    '  root.innerHTML=`<main class=\"release-integrity-stop\" role=\"alert\"><span>RELEASE INTEGRITY STOP</span><h1>INCOMPATIBLE RELEASE</h1><p>VIGIA will not mix browser, API, database, or FieldNode contracts.</p><dl><div><dt>Browser</dt><dd>${result.web?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>API</dt><dd>${result.api?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>FieldNode</dt><dd>${result.fieldNode?.releaseId??\\'Unavailable\\'}</dd></div></dl><details><summary>Compatibility failures</summary><ul>${result.failures.map((item)=>`<li>${String(item).replaceAll(\\'_\\',\\' \\')}</li>`).join(\\'\\')}</ul></details><strong>Run the governed local release command before making decisions.</strong></main>`;\\n' +\n    '}\\n'\n  \n      at TestContext.<anonymous> (file:///Users/malmeida/Documents/Development/vigia-intelligence/apps/api/test/release-contract-governance.test.mjs:14:136)\n      at async Test.run (node:internal/test_runner/test:1208:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: 'const REQUIRED=Object.freeze({\\n  apiContractVersion:\\'vigia-api-v10.4\\',operationsApiVersion:\\'operations-api-v6\\',validationApiVersion:\\'validation-api-v8\\',\\n  fieldNodeContractVersion:\\'fieldnet-api-v5\\',databaseSchemaVersion:\\'vigia-postgis-014\\',domainSchemaVersion:\\'vigia-domain-v10.4\\'\\n});\\nconst timeout=(ms)=>AbortSignal.timeout?AbortSignal.timeout(ms):undefined;\\nasync function json(url,options={}){const response=await fetch(url,{cache:\\'no-store\\',credentials:url.startsWith(\\'/\\')?\\'same-origin\\':\\'omit\\',signal:timeout(8_000),...options});if(!response.ok)throw new Error(`${url}:HTTP_${response.status}`);return response.json();}\\nfunction fieldNodeBase(){const value=new URLSearchParams(location.search).get(\\'fieldnetNode\\');if(!value)return\\'http://127.0.0.1:4188\\';try{const parsed=new URL(value);return parsed.protocol===\\'http:\\'&&[\\'127.0.0.1\\',\\'localhost\\'].includes(parsed.hostname)?parsed.origin:\\'http://127.0.0.1:4188\\';}catch{return\\'http://127.0.0.1:4188\\';}}\\nexport async function certifyBrowserRelease(){\\n  const failures=[],degraded=[];let web=null,api=null,fieldNode=null;\\n  const results=await Promise.allSettled([json(\\'/data/release-identity.json\\'),json(\\'/api/v10/release\\'),json(`${fieldNodeBase()}/api/fieldnet/release`)]);\\n  [web,api,fieldNode]=results.map((result)=>result.status===\\'fulfilled\\'?result.value:null);\\n  results.forEach((result,index)=>{\\n    if(result.status!==\\'rejected\\')return;\\n    const component=[\\'web\\',\\'api\\',\\'fieldnode\\'][index],message=`${component}_release_unavailable:${result.reason.message}`;\\n    if(component===\\'fieldnode\\')degraded.push(message);else failures.push(message);\\n  });\\n  if(web&&api&&web.releaseId!==api.releaseId)failures.push(\\'web_api_release_id_mismatch\\');\\n  if(web&&fieldNode&&web.releaseId!==fieldNode.releaseId)failures.push(\\'web_fieldnode_release_id_mismatch\\');\\n  if(web&&api&&web.codeStateHash!==api.codeStateHash)failures.push(\\'web_api_code_state_mismatch\\');\\n  if(web&&fieldNode&&web.codeStateHash!==fieldNode.codeStateHash)failures.push(\\'web_fieldnode_code_state_mismatch\\');\\n  for(const [key,required] of Object.entries(REQUIRED)){\\n    if(api?.contracts?.[key]!==required)failures.push(`api_${key}_requires_${required}`);\\n    if(key===\\'fieldNodeContractVersion\\'&&fieldNode&&fieldNode.contracts?.[key]!==required)failures.push(`fieldnode_${key}_requires_${required}`);\\n  }\\n  if(api?.schema?.certification?.state!==\\'PASS\\')failures.push(\\'database_schema_not_certified\\');\\n  if(api?.routeCertification?.state!==\\'PASS\\')failures.push(\\'primary_routes_not_certified\\');\\n  if(api?.sessionCertification?.state!==\\'PASS\\')failures.push(\\'session_not_certified\\');\\n  return{schemaVersion:\\'vigia.browser-release-handshake.v2\\',compatible:failures.length===0,failures,degraded,web,api,fieldNode,checkedAt:new Date().toISOString()};\\n}\\n\\nexport function renderReleaseFailure(root,result){\\n  root.dataset.ready=\\'false\\';root.dataset.releaseState=\\'incompatible\\';\\n  root.innerHTML=`<main class=\"release-integrity-stop\" role=\"alert\"><span>RELEASE INTEGRITY STOP</span><h1>INCOMPATIBLE RELEASE</h1><p>VIGIA will not mix browser, API, database, or FieldNode contracts.</p><dl><div><dt>Browser</dt><dd>${result.web?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>API</dt><dd>${result.api?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>FieldNode</dt><dd>${result.fieldNode?.releaseId??\\'Unavailable\\'}</dd></div></dl><details><summary>Compatibility failures</summary><ul>${result.failures.map((item)=>`<li>${String(item).replaceAll(\\'_\\',\\' \\')}</li>`).join(\\'\\')}</ul></details><strong>Run the governed local release command before making decisions.</strong></main>`;\\n}\\n',\n    expected: /vigia-postgis-\\d{3}/,\n    operator: 'doesNotMatch',\n    diff: 'simple'\n  }\n",
+          "knownProtectedFrontendFailure": true
+        },
+        "staticCheck": {
+          "exitCode": 0,
+          "tail": "\n> vigia-physical-intelligence-core@10.0.0 check\n> node scripts/check.mjs\n\nArchitecture check passed in 19.47s: 918 files inspected; 820 runtime/test modules are syntactically valid, acyclic and within their declared modularity budgets; exclusions: directory:.cache=0, directory:.next=0, directory:.tmp=0, directory:.vite=0, directory:browser-artifacts=0, directory:build=0, directory:coverage=0, directory:dist=1, directory:generated-browser-artifacts=0, directory:node_modules=0, directory:playwright-report=0, directory:test-results=0, quarantined fixture prototype=1, quarantined legacy frontend=1.\n"
+        },
+        "databaseCertification": {
+          "exitCode": 0,
+          "tail": "    \"atomicDecisionOutcomeRollback\": true,\n    \"atomicArchiveRollback\": true,\n    \"decisionMemoryPersistence\": true,\n    \"informationValuePersistence\": true,\n    \"restartReconstruction\": true,\n    \"fileDatabaseSemanticEquivalence\": true,\n    \"backupRestore\": true\n  },\n  \"recovery\": {\n    \"state\": \"PASS\",\n    \"rpoEvents\": 0,\n    \"rtoMs\": 2423.9920420000017,\n    \"dataLossRecords\": 0,\n    \"projectionRecoveryMs\": 14.597625000000335,\n    \"replayVerificationMs\": 2.257916999998997,\n    \"migrationHead\": \"017\",\n    \"migrationIdempotentAfterRestore\": true,\n    \"decisionPacketVerified\": true,\n    \"lineageVerified\": true,\n    \"receiptsVerified\": true,\n    \"prospectiveArchiveVerified\": true,\n    \"decisionMemoryVerified\": true,\n    \"informationValueVerified\": true,\n    \"projectionRebuilt\": true,\n    \"replayVerified\": true\n  },\n  \"durationMs\": 5480.3307079999995,\n  \"failed\": []\n}\n"
+        },
+        "productionSmoke": {
+          "exitCode": 1,
+          "knownProtectedFrontendFailure": true,
+          "tail": "\n> vigia-physical-intelligence-core@10.0.0 smoke\n> node scripts/production_smoke.mjs\n\n\nVIGIA 10.0 Physical Intelligence Core: http://127.0.0.1:64244\nUniverse: PRODUCTION · synthetic provenance rejected\nFIRMS NOT CONFIGURED\nSENTINEL-3 AUTH CONFIGURED\nPOSTGIS INITIALIZING\nHTTP LISTENER READY · 289ms · services loading in background\nLOCAL SERVICES READY · 479ms · POSTGIS NOT_CONFIGURED\n \nfile:///Users/malmeida/Documents/Development/vigia-intelligence/scripts/production_smoke.mjs:10\nfunction assert(value,code){if(!value)throw new Error(code);}\n                                            ^\n\nError: module_unavailable:/src/main.js\n    at assert (file:///Users/malmeida/Documents/Development/vigia-intelligence/scripts/production_smoke.mjs:10:45)\n    at verifyStaticGraph (file:///Users/malmeida/Documents/Development/vigia-intelligence/scripts/production_smoke.mjs:15:167)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async inspect (file:///Users/malmeida/Documents/Development/vigia-intelligence/scripts/production_smoke.mjs:32:21)\n    at async file:///Users/malmeida/Documents/Development/vigia-intelligence/scripts/production_smoke.mjs:62:59\n\nNode.js v26.0.0\n"
+        },
+        "protectedFrontendBaseline": {
+          "contract": "apps/web/src/v2/release-compatibility.js pins vigia-postgis-014",
+          "sourceModifiedByThisMandate": false
+        },
+        "newRegressions": 0,
+        "passed": true,
+        "fingerprint": "scientific-truth-verification:sha256:b857a90a8054aa043fefc1f609def727d74405f527ac9cec0f3c8ce7f2a81b6b"
+      }
+    },
+    "W": {
+      "title": "New regressions",
+      "count": 0
+    },
+    "X": {
+      "title": "Critical-gate scorecard",
+      "scorecard": {
+        "observationOpportunity": {
+          "gate": true,
+          "certifiedNegatives": 100
+        },
+        "hardNegativeScience": {
+          "gate": true,
+          "certified": 25
+        },
+        "canadianPhysicalBinding": {
+          "gate": true,
+          "histories": 360
+        },
+        "fuelTerrain": {
+          "gate": true,
+          "fuel": 25,
+          "terrain": 15
+        },
+        "nearTermTruth": {
+          "gate": false,
+          "officialOneHour": 0,
+          "officialThreeHour": 0,
+          "sensorDerivedOneHour": 1,
+          "sensorDerivedThreeHour": 1,
+          "sensorDerivedDoesNotSatisfyOfficialGate": true
+        },
+        "scientificEvaluation": {
+          "gate": true,
+          "scoredTasks": 2
+        },
+        "realizedDecisionCalibration": {
+          "gate": true,
+          "outcomes": 100,
+          "auditQualification": "Audit pass establishes integrity and completeness only within the registered observable Alberta shadow cohort; it does not establish external calibration or agency impact."
+        },
+        "engineeringHa": {
+          "state": "PRESERVED_PRIOR_LOCAL_EVIDENCE"
+        },
+        "realCloudMultiRegionHa": {
+          "state": "NOT_CLAIMED"
+        },
+        "officialPublicCapIngestion": {
+          "state": "PRESERVED_PRIOR_PUBLIC_EVIDENCE"
+        },
+        "bidirectionalAgencyOperations": {
+          "state": "NOT_CLAIMED"
+        }
+      }
+    },
+    "Y": {
+      "title": "Precise remaining blocker class",
+      "blocker": "TIME_ACCUMULATION_REQUIRED"
+    },
+    "Z": {
+      "title": "Next single measured target",
+      "target": "Capture the next provider-published changed authoritative perimeter state that yields the first legitimate missing 1h/3h horizon label."
+    }
+  },
+  "scoreSemantics": "Category-critical gates; no unweighted mean is used as the primary verdict.",
+  "fingerprint": "scientific-truth-closure-report:sha256:4686df10611080ff56d6250efb30d652c3defa1e61e12de6ec533d3e5a27449e"
+}

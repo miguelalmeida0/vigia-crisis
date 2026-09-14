@@ -1,0 +1,12 @@
+{
+  "name": "VIGIA FieldNet Lite",
+  "short_name": "FieldNet",
+  "description": "Incident-scoped offline field reporting and verification tasking",
+  "start_url": "/fieldnet-lite/",
+  "scope": "/fieldnet-lite/",
+  "display": "standalone",
+  "background_color": "#f4f4f1",
+  "theme_color": "#f8f8f6",
+  "orientation": "portrait-primary",
+  "categories": ["productivity", "utilities"]
+}

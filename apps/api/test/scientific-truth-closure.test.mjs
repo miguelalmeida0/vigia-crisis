@@ -1,0 +1,26 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { GOES_NEGATIVE_DOCTRINE } from '../src/modules/scientific-truth/contracts.mjs';
+import { admitFuelContext, admitPerimeterPair, admitWeatherRecord, assessGoesNegativeCandidate, assessStrongCrossSourceNegative, authorizeScientificExport, chooseUnambiguousIncident, classifyPerimeterRevision, deduplicatePhysicalObservations, hardNegativeLabel, safeCredentialDiagnostic, verifyDigest, verifySnapshotAppendOnly } from '../src/modules/scientific-truth/adversarial-policy.mjs';
+
+const observation = (overrides = {}) => ({ state: 'VALID_CLEAR_OBSERVATION', localZenithDegrees: 40, fireDqf: 1, cloudDqf: 0, qualifyingFire: false, ...overrides });
+const goes = (overrides = {}) => ({ providerHealth: 'LIVE', productAvailability: 'AVAILABLE', observations: [observation(), observation(), observation()], qualifyingFire: false, knowledgeTimeValid: true, ...overrides });
+
+test('cloudy pixel is never certified as a clear negative opportunity', () => assert.equal(assessGoesNegativeCandidate(goes({ observations: [observation(), observation({ state: 'CLOUDY' }), observation()] }), GOES_NEGATIVE_DOCTRINE).certified, false));
+test('missing paired product is never certified as a negative', () => assert.equal(assessGoesNegativeCandidate(goes({ productAvailability: 'UNAVAILABLE' }), GOES_NEGATIVE_DOCTRINE).certified, false));
+test('provider outage is never certified as a negative', () => assert.equal(assessGoesNegativeCandidate(goes({ providerHealth: 'UNAVAILABLE' }), GOES_NEGATIVE_DOCTRINE).certified, false));
+test('high-view-angle pixel is outside opportunity doctrine', () => assert.equal(assessGoesNegativeCandidate(goes({ observations: [observation({ localZenithDegrees: 71 }), observation(), observation()] }), GOES_NEGATIVE_DOCTRINE).certified, false));
+test('fire-mask quality cannot be ignored', () => assert.equal(assessGoesNegativeCandidate(goes({ observations: [observation({ fireDqf: 4 }), observation(), observation()] }), GOES_NEGATIVE_DOCTRINE).certified, false));
+test('an official incident match blocks the strong cross-source negative', () => assert.equal(assessStrongCrossSourceNegative({ goesCertified: true, officialIncidentMatch: true, otherPhysicalMatch: false, prescribedOrManagedMatch: false, persistentAnomalyMatch: false }).certified, false));
+test('same physical observation is not counted twice', () => assert.equal(deduplicatePhysicalObservations([{ id: 'a', originalObservationIdentity: 'same' }, { id: 'b', originalObservationIdentity: 'same' }]).length, 1));
+test('prescribed fire is real fire, not no physical fire', () => assert.equal(hardNegativeLabel('PRESCRIBED_OR_MANAGED_FIRE'), 'REAL_FIRE_NOT_WILDFIRE'));
+test('future or equal perimeter truth cannot leak backward', () => assert.equal(admitPerimeterPair({ providerPublishedAt: '2026-08-25T02:00:00Z', stateHash: 'a', state: {} }, { providerPublishedAt: '2026-08-25T01:00:00Z', stateHash: 'b', state: { geometry: {} } }).admitted, false));
+test('large contraction is treated as correction/ambiguity, not growth', () => assert.equal(classifyPerimeterRevision({ stateHash: 'a', state: { areaHectares: 100 } }, { stateHash: 'b', state: { areaHectares: 20, geometry: {} } }), 'CORRECTION_OR_CONTRACTION_UNRESOLVED'));
+test('identical snapshots never count as progression', () => assert.equal(classifyPerimeterRevision({ stateHash: 'same', state: {} }, { stateHash: 'same', state: { geometry: {} } }), 'IDENTICAL'));
+test('future fuel product requires an explicit retrospective doctrine', () => { assert.equal(admitFuelContext({ productYear: 2026, incidentTime: '2024-01-01T00:00:00Z' }).admitted, false); assert.equal(admitFuelContext({ productYear: 2026, incidentTime: '2024-01-01T00:00:00Z', retrospectiveDoctrine: true }).mode, 'RETROSPECTIVE_ONLY'); });
+test('weather run after cutoff is rejected', () => assert.deepEqual(admitWeatherRecord({ issueTime: '2026-08-25T04:00:00Z', validTime: '2026-08-25T05:00:00Z' }, '2026-08-25T03:00:00Z'), { admitted: false, reason: 'FUTURE_RUN_LEAKAGE' }));
+test('ambiguous incident candidates are not force-bound', () => assert.deepEqual(chooseUnambiguousIncident([{ incidentId: 'a', distanceKm: 2 }, { incidentId: 'b', distanceKm: 3 }]), { state: 'AMBIGUOUS', incidentId: null }));
+test('snapshot rewrite and duplicate restart state are detected', () => { const prior = [{ snapshotHash: 'a', observationId: '1' }], next = [{ snapshotHash: 'b', observationId: '1' }, { snapshotHash: 'c', observationId: '1' }], result = verifySnapshotAppendOnly(prior, next); assert.equal(result.passed, false); assert.equal(result.duplicateObservationIds, 1); });
+test('Earthdata credential diagnostics never return token values', () => { const diagnostic = safeCredentialDiagnostic({ EARTHDATA_TOKEN: 'secret-token' }); assert.equal(diagnostic.earthdataConfigured, true); assert.equal(JSON.stringify(diagnostic).includes('secret-token'), false); });
+test('rights-restricted object is denied scientific export', () => assert.equal(authorizeScientificExport({ permitScientificRetention: true, licenceId: 'x', restricted: true }), false));
+test('clean-room digest substitution is detected', () => assert.equal(verifyDigest('sha256:not-real', Buffer.from('release')).passed, false));

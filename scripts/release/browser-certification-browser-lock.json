@@ -1,0 +1,21 @@
+{
+  "schemaVersion": "vigia.browser-certification-browser.v1",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "product": "Chromium Headless Shell",
+  "version": "139.0.7258.5",
+  "executable": "/Users/malmeida/Documents/ChatGPT/VIGIA Integration/.tmp/ms-playwright/chromium_headless_shell-1181/chrome-mac/headless_shell",
+  "bytes": 146052592,
+  "sha256": "sha256:4f6a03129fd8b304568f4c86b64826a5506f680143b7e12980b3ea62054b7e21",
+  "assets": [
+    {"name": "headless_command_resources.pak", "bytes": 2923, "sha256": "sha256:0e93bf297a466b78f86a36513cc8fad2631314c7b9f807edf9efb5fe34a70145"},
+    {"name": "headless_lib_data.pak", "bytes": 738805, "sha256": "sha256:c15e518215999cd489a57310ce64d3acfab691daa086effde9906a9cb0b15f25"},
+    {"name": "headless_lib_strings.pak", "bytes": 3720033, "sha256": "sha256:ef22dbe38f24f8506e9ce0b1cf5a47c3576ec9fc9b26ef00de801774b9493441"},
+    {"name": "icudtl.dat", "bytes": 10467680, "sha256": "sha256:5070de99fbd8a48378543511fb7a072f85bf36f94b4f4e1d420d54be1435d6f1"},
+    {"name": "libEGL.dylib", "bytes": 108624, "sha256": "sha256:6b0d9423ed0587395ceaf44ec0a5904916d2aa5b24ed809035579c1051920dab"},
+    {"name": "libGLESv2.dylib", "bytes": 7051472, "sha256": "sha256:6a23da37c2b2e12c9348672968672e55cec8c4c235574c9d86a9fa2fee006051"},
+    {"name": "libvk_swiftshader.dylib", "bytes": 16590728, "sha256": "sha256:c962092c1591e1423a9167d905f18ee1283d3094f131b99b38ace430aae5c36b"},
+    {"name": "v8_context_snapshot.arm64.bin", "bytes": 709009, "sha256": "sha256:ea0c66bb9fc5d363665e858b628b85196928f7e95b946711e95bd455f5522b82"},
+    {"name": "vk_swiftshader_icd.json", "bytes": 110, "sha256": "sha256:d717d915e31e7c27948b80b36ab34e2d897888114c5c7d0af835f93eb53e58f5"}
+  ]
+}

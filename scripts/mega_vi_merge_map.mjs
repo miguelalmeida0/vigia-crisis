@@ -1,0 +1,10 @@
+import {readFile,writeFile,stat} from 'node:fs/promises';
+const root='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vi';
+const read=async name=>JSON.parse(await readFile(`${root}/${name}-map.json`,'utf8'));
+const [before,a,b,c]=await Promise.all(['before','after-batch-a','after-batch-b','after-batch-c'].map(read));
+const offset=1+Math.max(...a.results.map(r=>r.sample));
+const nextOffset=offset+1+Math.max(...b.results.map(r=>r.sample));
+const after={...a,results:[...a.results.map(r=>({...r,batch:'A'})),...b.results.map(r=>({...r,batch:'B',sample:r.sample+offset})),...c.results.map(r=>({...r,batch:'C',sample:r.sample+nextOffset}))],errors:[...a.errors,...b.errors,...c.errors],failedRequests:[...a.failedRequests,...b.failedRequests,...c.failedRequests],interruptedAttempts:[{batch:'A',context:10,stage:'cold navigation',timeoutMs:30000,error:'DOM content navigation timeout; no fabricated frame recorded'},{batch:'B',context:7,stage:'cold navigation',timeoutMs:30000,error:'DOM content navigation timeout; no fabricated frame recorded'}],methodNote:'Sequential browser processes, fresh context/cache per sample. Batches A and B completed ten and seven samples before the next cold navigation timed out; batch C supplied three additional samples. Interrupted attempts remain failures outside the complete journey sequences.'};
+await writeFile(`${root}/after-map.json`,JSON.stringify(after,null,2));
+await writeFile('docs/handoffs/mega-vi/performance-raw.json',JSON.stringify({before,after},null,2));
+console.log(JSON.stringify({before:before.results.length,after:after.results.length,interruptedAttempts:after.interruptedAttempts.length,bytes:(await stat('docs/handoffs/mega-vi/performance-raw.json')).size}));

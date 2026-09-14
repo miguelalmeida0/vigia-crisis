@@ -1,0 +1,20 @@
+{
+  "at": "2026-09-12T14:24:08.912Z",
+  "relations": [
+    {
+      "kind": "NEAR_FACILITY",
+      "state": "CURRENT",
+      "count": 190
+    },
+    {
+      "kind": "NEAR_REFERENCE",
+      "state": "CURRENT",
+      "count": 54
+    },
+    {
+      "kind": "WEATHER_CONTEXT",
+      "state": "CURRENT",
+      "count": 2
+    }
+  ]
+}

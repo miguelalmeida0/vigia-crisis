@@ -1,0 +1,632 @@
+{
+  "schema": "vigia.prevention.prospective-campaign.v1",
+  "campaignId": "prevention-campaign:94dbd4395e4665ac",
+  "executionType": "GOVERNED_PROSPECTIVE_SCREENING",
+  "generatedAt": "2026-08-12T08:53:34.394Z",
+  "dataset": {
+    "region": "Portugal mainland",
+    "policy": "ALL_CURRENT_INSPECTION_CANDIDATES",
+    "sourceEndpoint": "/api/v2/bootstrap",
+    "candidateCount": 8,
+    "datasetHash": "sha256:94dbd4395e4665ac82e78345ff3e36aab72f7fb92382d4be8b9a135b2c531b72",
+    "candidates": [
+      {
+        "id": "inspection:0808",
+        "municipality": "37.1397°N, 8.0202°W",
+        "coordinate": [
+          -8.0202,
+          37.1397
+        ]
+      },
+      {
+        "id": "inspection:0909",
+        "municipality": "Mêda",
+        "coordinate": [
+          -7.26,
+          40.97
+        ]
+      },
+      {
+        "id": "inspection:0912",
+        "municipality": "Seia",
+        "coordinate": [
+          -7.71,
+          40.4143
+        ]
+      },
+      {
+        "id": "inspection:1205",
+        "municipality": "Castelo de Vide",
+        "coordinate": [
+          -7.4552,
+          39.4151
+        ]
+      },
+      {
+        "id": "inspection:1210",
+        "municipality": "Marvão",
+        "coordinate": [
+          -7.3768,
+          39.394
+        ]
+      },
+      {
+        "id": "inspection:1214",
+        "municipality": "Portalegre",
+        "coordinate": [
+          -7.42,
+          39.29
+        ]
+      },
+      {
+        "id": "inspection:1822",
+        "municipality": "Vila Nova de Paiva",
+        "coordinate": [
+          -7.73,
+          40.85
+        ]
+      },
+      {
+        "id": "inspection:1823",
+        "municipality": "Viseu",
+        "coordinate": [
+          -7.912,
+          40.6585
+        ]
+      }
+    ],
+    "exclusions": []
+  },
+  "reproducibility": {
+    "repositoryCommit": "956474ae7283f7715e645dfbebeb502ce6d57dc8",
+    "evidenceInputHash": "sha256:d71ade0320d7fe34e48d3157f047c83256f9af2589e38a2a8074be24a3846be1",
+    "baseUrlRedacted": "local-vigia-runtime",
+    "detectorVersion": "fuel_continuity_change_screen_v1",
+    "radiusKm": 3,
+    "concurrency": 2,
+    "requestTimeoutMs": 120000,
+    "command": "VIGIA_OPERATOR_TOKEN=<redacted> npm run prevention:campaign"
+  },
+  "integrity": {
+    "manualCandidateSelection": false,
+    "syntheticLabels": false,
+    "expertGroundTruthAvailable": false,
+    "operationalClaimAllowed": false,
+    "failedCandidates": 0
+  },
+  "summary": {
+    "completed": 8,
+    "failed": 0,
+    "screened": 2,
+    "screenedNoCandidate": 1,
+    "abstained": 6,
+    "findings": 2,
+    "negativeComponentsRejected": 26,
+    "negativeSamples": 26
+  },
+  "results": [
+    {
+      "candidate": {
+        "id": "inspection:0808",
+        "municipality": "37.1397°N, 8.0202°W",
+        "coordinate": [
+          -8.0202,
+          37.1397
+        ]
+      },
+      "state": "screened",
+      "runId": "detector-run:d4ecca3c4eddf03ab8c57abe",
+      "currentObservationId": "S2B_29SNB_20260811_0_L2A",
+      "comparisonObservationId": "S2C_29SNB_20250811_0_L2A",
+      "outputCount": 2,
+      "abstentionReason": null,
+      "noCandidateReason": null,
+      "sourceQuality": {
+        "validPixelFraction": 1,
+        "integrity": {
+          "primary": "826f3cc38b4ec181a84e7f5becdd571c6bda745841acb00ecfd44c3d732bfb8f",
+          "comparable": "fd50797e1d0ee68bfd19397bd95f1f948ed858bafd1967a780cfc76dae6abf83"
+        }
+      },
+      "negativeMining": {
+        "candidateComponents": 20,
+        "rejectedComponents": 18,
+        "reasonCounts": {
+          "PERSISTENT_FUEL_NOT_NEW": 3,
+          "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY": 12,
+          "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY": 3
+        },
+        "samples": [
+          {
+            "reason": "PERSISTENT_FUEL_NOT_NEW",
+            "areaM2": 23464838.4,
+            "corridorLengthM": 8562,
+            "newFuelFraction": 0.078
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 22371.4,
+            "corridorLengthM": 267.6,
+            "newFuelFraction": 0.15
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 13982.1,
+            "corridorLengthM": 236.6,
+            "newFuelFraction": 0.24
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 21252.9,
+            "corridorLengthM": 317.7,
+            "newFuelFraction": 0.263
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 104586.5,
+            "corridorLengthM": 780.2,
+            "newFuelFraction": 0.128
+          },
+          {
+            "reason": "PERSISTENT_FUEL_NOT_NEW",
+            "areaM2": 13982.1,
+            "corridorLengthM": 296.7,
+            "newFuelFraction": 0
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 39709.3,
+            "corridorLengthM": 479.3,
+            "newFuelFraction": 0.282
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 22930.7,
+            "corridorLengthM": 328.2,
+            "newFuelFraction": 0.244
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 46420.7,
+            "corridorLengthM": 585.6,
+            "newFuelFraction": 0.229
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 32438.6,
+            "corridorLengthM": 354.5,
+            "newFuelFraction": 0.155
+          },
+          {
+            "reason": "PERSISTENT_FUEL_NOT_NEW",
+            "areaM2": 11745,
+            "corridorLengthM": 222.9,
+            "newFuelFraction": 0
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY",
+            "areaM2": 52013.6,
+            "corridorLengthM": 518.6,
+            "newFuelFraction": 0.204
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 116890.7,
+            "corridorLengthM": 932.6,
+            "newFuelFraction": 0.268
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 16219.3,
+            "corridorLengthM": 236.6,
+            "newFuelFraction": 0.172
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 12863.6,
+            "corridorLengthM": 243.2,
+            "newFuelFraction": 0.478
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY",
+            "areaM2": 377518,
+            "corridorLengthM": 1445.3,
+            "newFuelFraction": 0.119
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 21252.9,
+            "corridorLengthM": 340.8,
+            "newFuelFraction": 0.237
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY",
+            "areaM2": 16219.3,
+            "corridorLengthM": 236.6,
+            "newFuelFraction": 0.103
+          }
+        ],
+        "limitations": [
+          "Agriculture, forestry operations and clearing are not labelled without authoritative land-cover/activity data.",
+          "Cloud and shadow are masked by SCL; residual edge artifacts still require review."
+        ]
+      },
+      "screeningDiagnostics": {
+        "validPixelFraction": 1,
+        "fuelPixelFraction": 0.677,
+        "mappedStructurePoints": 4,
+        "acceptedComponents": 2
+      },
+      "findings": [
+        {
+          "findingId": "fuel-continuity:856475624ad4d90959f07eef1c17",
+          "affectedAreaHa": 1.34229,
+          "corridorLengthM": 234.1,
+          "newFuelFraction": 0.417,
+          "nearestStructureM": 15.8,
+          "structuresWithinPolicyRadius": 2,
+          "attentionPriority": {
+            "score": 56,
+            "band": "elevated",
+            "scoreKind": "ATTENTION_PRIORITY_NOT_PROBABILITY",
+            "factors": {
+              "affectedArea": 0.268,
+              "corridorSpan": 0.312,
+              "structureProximity": 0.895,
+              "structuresInRadius": 0.25,
+              "roadCrossings": null,
+              "criticalAssetProximity": null,
+              "changeRecency": 0.98,
+              "sourceQuality": 0.996
+            },
+            "weights": {
+              "affectedArea": 0.14,
+              "corridorSpan": 0.18,
+              "structureProximity": 0.2,
+              "structuresInRadius": 0.15,
+              "roadCrossings": 0.08,
+              "criticalAssetProximity": 0.1,
+              "changeRecency": 0.08,
+              "sourceQuality": 0.07
+            },
+            "measuredWeight": 0.82,
+            "unmeasured": [
+              "roadCrossings",
+              "criticalAssetProximity"
+            ],
+            "basis": "Explicit physical-change, exposure, recency and source-quality factors. This is not ignition or fire probability."
+          },
+          "unmeasured": [
+            "roadCrossings",
+            "criticalAssetProximity"
+          ],
+          "sourceQuality": {
+            "state": "PIXEL_VERIFIED",
+            "validPixelFraction": 1,
+            "currentCloudCover": 0.004313,
+            "comparisonCloudCover": 0.394584,
+            "resolutionMeters": 10,
+            "exposureState": "archived"
+          },
+          "landCoverContext": {
+            "state": "UNMEASURED",
+            "reason": "No authoritative land-cover label is bound to this candidate."
+          },
+          "calibrationState": "SCREENING_CANDIDATE"
+        },
+        {
+          "findingId": "fuel-continuity:2998aeded33098e94c07b2f48612",
+          "affectedAreaHa": 2.68457,
+          "corridorLengthM": 302.7,
+          "newFuelFraction": 0.229,
+          "nearestStructureM": 140.6,
+          "structuresWithinPolicyRadius": 2,
+          "attentionPriority": {
+            "score": 42,
+            "band": "elevated",
+            "scoreKind": "ATTENTION_PRIORITY_NOT_PROBABILITY",
+            "factors": {
+              "affectedArea": 0.537,
+              "corridorSpan": 0.404,
+              "structureProximity": 0.063,
+              "structuresInRadius": 0.25,
+              "roadCrossings": null,
+              "criticalAssetProximity": null,
+              "changeRecency": 0.98,
+              "sourceQuality": 0.996
+            },
+            "weights": {
+              "affectedArea": 0.14,
+              "corridorSpan": 0.18,
+              "structureProximity": 0.2,
+              "structuresInRadius": 0.15,
+              "roadCrossings": 0.08,
+              "criticalAssetProximity": 0.1,
+              "changeRecency": 0.08,
+              "sourceQuality": 0.07
+            },
+            "measuredWeight": 0.82,
+            "unmeasured": [
+              "roadCrossings",
+              "criticalAssetProximity"
+            ],
+            "basis": "Explicit physical-change, exposure, recency and source-quality factors. This is not ignition or fire probability."
+          },
+          "unmeasured": [
+            "roadCrossings",
+            "criticalAssetProximity"
+          ],
+          "sourceQuality": {
+            "state": "PIXEL_VERIFIED",
+            "validPixelFraction": 1,
+            "currentCloudCover": 0.004313,
+            "comparisonCloudCover": 0.394584,
+            "resolutionMeters": 10,
+            "exposureState": "archived"
+          },
+          "landCoverContext": {
+            "state": "UNMEASURED",
+            "reason": "No authoritative land-cover label is bound to this candidate."
+          },
+          "calibrationState": "SCREENING_CANDIDATE"
+        }
+      ]
+    },
+    {
+      "candidate": {
+        "id": "inspection:0909",
+        "municipality": "Mêda",
+        "coordinate": [
+          -7.26,
+          40.97
+        ]
+      },
+      "state": "abstained",
+      "runId": "detector-run:b5630de8ccfb8559537722e7",
+      "currentObservationId": "S2B_29TPF_20260811_1_L2A",
+      "comparisonObservationId": "S2C_29TPF_20250811_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": "mapped_structure_points_required",
+      "noCandidateReason": "mapped_structure_points_required",
+      "sourceQuality": {
+        "validPixelFraction": 0.9656,
+        "integrity": {
+          "primary": "ed5b83d99c88c72e76240645c2844aa992b4784d80438432d0b2dc5a4c1b5962",
+          "comparable": "acc4ad1f0962ee64a40e5ea81f50656389895cdd74452fd620ecc9c8bb6efd5c"
+        }
+      },
+      "negativeMining": null,
+      "screeningDiagnostics": null,
+      "findings": []
+    },
+    {
+      "candidate": {
+        "id": "inspection:0912",
+        "municipality": "Seia",
+        "coordinate": [
+          -7.71,
+          40.4143
+        ]
+      },
+      "state": "abstained",
+      "runId": "detector-run:90e27a2432057900b1b14526",
+      "currentObservationId": "S2B_29TPE_20260811_0_L2A",
+      "comparisonObservationId": "S2C_29TPE_20250811_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": "insufficient_clear_registered_pixels",
+      "noCandidateReason": "insufficient_clear_registered_pixels",
+      "sourceQuality": {
+        "validPixelFraction": 0.2475,
+        "integrity": {
+          "primary": "2e4a414949054bcd93c6d9d4ced751065b47d5fd5b90877833f2e133dcbb04a1",
+          "comparable": "2501046abf4555eec3f500e65d8248ebe1c3a6b7d2fbe3b57a05b64ce14dd092"
+        }
+      },
+      "negativeMining": null,
+      "screeningDiagnostics": null,
+      "findings": []
+    },
+    {
+      "candidate": {
+        "id": "inspection:1205",
+        "municipality": "Castelo de Vide",
+        "coordinate": [
+          -7.4552,
+          39.4151
+        ]
+      },
+      "state": "abstained",
+      "runId": "detector-run:df37ceb496d2190c140aea84",
+      "currentObservationId": "S2B_29SPD_20260811_0_L2A",
+      "comparisonObservationId": "S2C_29SPD_20250811_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": "mapped_structure_points_required",
+      "noCandidateReason": "mapped_structure_points_required",
+      "sourceQuality": {
+        "validPixelFraction": 1,
+        "integrity": {
+          "primary": "1a5ca4375a63d09806d57d603eeb0a23b7096b3f50546fdf725b2c98babaec79",
+          "comparable": "41147d2c038d2e064c8d70b5486355a1ff23bd4b9fd2f824291def3325326b8d"
+        }
+      },
+      "negativeMining": null,
+      "screeningDiagnostics": null,
+      "findings": []
+    },
+    {
+      "candidate": {
+        "id": "inspection:1210",
+        "municipality": "Marvão",
+        "coordinate": [
+          -7.3768,
+          39.394
+        ]
+      },
+      "state": "screened_no_candidate",
+      "runId": "detector-run:72c1f91105358c6fbd551bbc",
+      "currentObservationId": "S2B_29SPD_20260811_0_L2A",
+      "comparisonObservationId": "S2C_29SPD_20250811_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": null,
+      "noCandidateReason": "no_fuel_continuity_candidate",
+      "sourceQuality": {
+        "validPixelFraction": 0.9369,
+        "integrity": {
+          "primary": "99802035930cfed6b0e5a66b99b55662a949ecd7cc90862f440cf95f06517d93",
+          "comparable": "5245942e4eddcb9c18384d42940d3d9e663046376abe46f3a402dd9818c71af5"
+        }
+      },
+      "negativeMining": {
+        "candidateComponents": 8,
+        "rejectedComponents": 8,
+        "reasonCounts": {
+          "PERSISTENT_FUEL_NOT_NEW": 3,
+          "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY": 2,
+          "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY": 3
+        },
+        "samples": [
+          {
+            "reason": "PERSISTENT_FUEL_NOT_NEW",
+            "areaM2": 25311758.1,
+            "corridorLengthM": 8629.4,
+            "newFuelFraction": 0.03
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY",
+            "areaM2": 13067.1,
+            "corridorLengthM": 266.2,
+            "newFuelFraction": 0.087
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_STRUCTURE_CONNECTIVITY",
+            "areaM2": 47155.1,
+            "corridorLengthM": 516,
+            "newFuelFraction": 0.349
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 23293.5,
+            "corridorLengthM": 324,
+            "newFuelFraction": 0.537
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 23293.5,
+            "corridorLengthM": 324,
+            "newFuelFraction": 0.122
+          },
+          {
+            "reason": "HIGH_CHANGE_WITHOUT_CORRIDOR_CONTINUITY",
+            "areaM2": 10226.4,
+            "corridorLengthM": 202.3,
+            "newFuelFraction": 0.278
+          },
+          {
+            "reason": "PERSISTENT_FUEL_NOT_NEW",
+            "areaM2": 11930.8,
+            "corridorLengthM": 202.3,
+            "newFuelFraction": 0
+          },
+          {
+            "reason": "PERSISTENT_FUEL_NOT_NEW",
+            "areaM2": 26702.3,
+            "corridorLengthM": 303.4,
+            "newFuelFraction": 0
+          }
+        ],
+        "limitations": [
+          "Agriculture, forestry operations and clearing are not labelled without authoritative land-cover/activity data.",
+          "Cloud and shadow are masked by SCL; residual edge artifacts still require review."
+        ]
+      },
+      "screeningDiagnostics": {
+        "validPixelFraction": 0.9369,
+        "fuelPixelFraction": 0.6903,
+        "mappedStructurePoints": 1200,
+        "acceptedComponents": 0
+      },
+      "findings": []
+    },
+    {
+      "candidate": {
+        "id": "inspection:1214",
+        "municipality": "Portalegre",
+        "coordinate": [
+          -7.42,
+          39.29
+        ]
+      },
+      "state": "abstained",
+      "runId": "detector-run:99d8cf08441cdc8fa380cf61",
+      "currentObservationId": "S2B_29SPD_20260811_0_L2A",
+      "comparisonObservationId": "S2C_29SPD_20250811_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": "mapped_structure_points_required",
+      "noCandidateReason": "mapped_structure_points_required",
+      "sourceQuality": {
+        "validPixelFraction": 0.9348,
+        "integrity": {
+          "primary": "b9d3bd885c2303748f32d446e90052fafe9b642bcd453275320708e144f0dd41",
+          "comparable": "b3f79afda1f2c8ff882da6154d9a82190e39f302e7186c9a92ae89a42e686380"
+        }
+      },
+      "negativeMining": null,
+      "screeningDiagnostics": null,
+      "findings": []
+    },
+    {
+      "candidate": {
+        "id": "inspection:1822",
+        "municipality": "Vila Nova de Paiva",
+        "coordinate": [
+          -7.73,
+          40.85
+        ]
+      },
+      "state": "abstained",
+      "runId": "detector-run:3a7574efe57cf266b472b465",
+      "currentObservationId": "S2B_29TPF_20260811_1_L2A",
+      "comparisonObservationId": "S2C_29TPF_20250811_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": "insufficient_clear_registered_pixels",
+      "noCandidateReason": "insufficient_clear_registered_pixels",
+      "sourceQuality": {
+        "validPixelFraction": 0,
+        "integrity": {
+          "primary": "a8edb9fdd8c940d41a315285bfd09da292037ba8e7f7dfeb4fe8c8a2c9cd55d4",
+          "comparable": "9a065915570d447eb4d6501f6d43b10e1af23112d2943b3493759654c5d81b46"
+        }
+      },
+      "negativeMining": null,
+      "screeningDiagnostics": null,
+      "findings": []
+    },
+    {
+      "candidate": {
+        "id": "inspection:1823",
+        "municipality": "Viseu",
+        "coordinate": [
+          -7.912,
+          40.6585
+        ]
+      },
+      "state": "abstained",
+      "runId": "detector-run:933dfe51bdf35211764ad29d",
+      "currentObservationId": "S2B_29TNF_20260811_0_L2A",
+      "comparisonObservationId": "S2A_29TNF_20250813_0_L2A",
+      "outputCount": 0,
+      "abstentionReason": "mapped_structure_points_required",
+      "noCandidateReason": "mapped_structure_points_required",
+      "sourceQuality": {
+        "validPixelFraction": 1,
+        "integrity": {
+          "primary": "22b1d2043d04e4744ea2a286cd9a0af80df199ee438dbd13697f1691f00a3b6c",
+          "comparable": "90263f28454d75df83588f40bb55180664e117204a17ad56732219e5e4c61bcc"
+        }
+      },
+      "negativeMining": null,
+      "screeningDiagnostics": null,
+      "findings": []
+    }
+  ]
+}

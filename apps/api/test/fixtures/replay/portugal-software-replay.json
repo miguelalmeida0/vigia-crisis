@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "id": "pt-software-replay-late-arrival-v1",
+    "countryCode": "PT",
+    "evidenceClass": "synthetic_software_fixture",
+    "notice": "This dataset proves replay mechanics only. It is not operational validation or calibration evidence."
+  },
+  "records": [
+    {
+      "id": "arrival-report",
+      "arrivalAt": "2026-08-09T12:00:00.000Z",
+      "kind": "report",
+      "payload": { "id": "pt-replay-report-1", "coordinate": [-8.145, 39.92], "municipality": "Pedrógão Grande", "district": "Leiria", "parish": "", "status": "active", "startedAt": "2026-08-09T11:55:00.000Z", "updatedAt": "2026-08-09T11:55:00.000Z", "operatives": 12, "ground": 4, "aerial": 0 }
+    },
+    {
+      "id": "arrival-late-thermal",
+      "arrivalAt": "2026-08-09T12:04:00.000Z",
+      "kind": "thermal",
+      "payload": { "id": "pt-replay-thermal-early", "coordinate": [-8.144, 39.921], "observedAt": "2026-08-09T11:52:00.000Z", "receivedAt": "2026-08-09T12:04:00.000Z", "confidence": "nominal", "frpMw": 14.2, "satellite": "NOAA-21", "instrument": "VIIRS", "source": "Synthetic replay fixture", "scanKm": 0.4, "trackKm": 0.4 }
+    },
+    {
+      "id": "arrival-field",
+      "arrivalAt": "2026-08-09T12:12:00.000Z",
+      "kind": "field",
+      "payload": { "id": "pt-replay-field-1", "source": "Synthetic attributable field fixture", "sourceFamily": "field_evidence", "independenceGroup": "field_observer:fixture", "at": "2026-08-09T12:10:00.000Z", "coordinate": [-8.1452, 39.9203], "geolocationUncertaintyM": 9, "classification": "smoke_observed", "qualityFlags": [] }
+    }
+  ]
+}

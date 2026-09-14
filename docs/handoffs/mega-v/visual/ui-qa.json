@@ -1,0 +1,301 @@
+{
+  "lane": "CANONICAL_RENDERED_UI",
+  "screens": [
+    {
+      "name": "command-overview-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "incidents-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "incident-detail-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "fire-activity-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "response-access-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "national-awareness-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "history-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "compare-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "historical-map-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "scenario-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "document-entry-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "hospital-answer-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "facility-route-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "command-overview-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "incidents-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "incident-detail-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "fire-activity-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "response-access-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "national-awareness-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "history-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "compare-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "historical-map-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "scenario-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "document-entry-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "hospital-answer-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "facility-route-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-1600",
+      "width": 1600,
+      "height": 1000,
+      "overflow": false,
+      "dialog": 1600,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-1440",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "dialog": 1440,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-1280",
+      "width": 1280,
+      "height": 800,
+      "overflow": false,
+      "dialog": 1280,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-1024",
+      "width": 1024,
+      "height": 768,
+      "overflow": false,
+      "dialog": 1024,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-768",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "dialog": 768,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-430",
+      "width": 430,
+      "height": 932,
+      "overflow": false,
+      "dialog": 430,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "brief-320",
+      "width": 320,
+      "height": 568,
+      "overflow": false,
+      "dialog": 320,
+      "map": "vigia-map-1"
+    }
+  ],
+  "errors": [],
+  "checks": [
+    {
+      "viewport": 1672,
+      "escapeClosed": true
+    },
+    {
+      "viewport": 390,
+      "escapeClosed": true
+    }
+  ],
+  "graphics": {
+    "vendor": "Google Inc. (Google)",
+    "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)"
+  },
+  "browser": "139.0.7258.5"
+}

@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "vigia.backend-postgis-scale-benchmark.v1",
+  "generatedAt": "2026-08-25T08:52:06.852Z",
+  "state": "PASS",
+  "engineeringOnlySyntheticFixture": true,
+  "prohibitedAsOperationalEvidence": true,
+  "isolatedDisposableDatabase": true,
+  "loopbackOnly": true,
+  "image": "postgis/postgis:17-3.5",
+  "platform": "linux/amd64",
+  "credentialsGenerated": true,
+  "credentialValuesRecorded": false,
+  "scale": {
+    "incidents": 10000,
+    "canonicalEvents": 1000000,
+    "evidenceObjects": 100000,
+    "dataProducts": 100000,
+    "decisionPackets": 10000,
+    "decisionOutcomes": 10000,
+    "informationValueOutcomes": 10000,
+    "indexedProjectionRows": 110000,
+    "lineageEdges": 100000
+  },
+  "ingestion": {
+    "elapsedMs": 49491.636083,
+    "rows": 1440000,
+    "rowsPerSecond": 29095.825354915458
+  },
+  "projection": {
+    "indexedRows": 110000
+  },
+  "queries": {
+    "coldObjectSet": {
+      "iterations": 1,
+      "p50Ms": 5.109792000002926,
+      "p95Ms": 5.109792000002926,
+      "maxMs": 5.109792000002926
+    },
+    "commonObjectSet": {
+      "iterations": 500,
+      "p50Ms": 0.3072089999986929,
+      "p95Ms": 0.5916670000005979,
+      "maxMs": 2.0100000000020373
+    },
+    "complexGraph": {
+      "iterations": 200,
+      "p50Ms": 11.250041999999667,
+      "p95Ms": 13.47899999999936,
+      "maxMs": 35.57395800000086
+    },
+    "incidentSnapshot": {
+      "iterations": 500,
+      "p50Ms": 0.41583299999911105,
+      "p95Ms": 0.6344590000007884,
+      "maxMs": 3.4412500000034925
+    },
+    "decisionPacket": {
+      "iterations": 500,
+      "p50Ms": 0.2599999999947613,
+      "p95Ms": 0.5637499999938882,
+      "maxMs": 2.589917000004789
+    },
+    "decisionDelta": {
+      "iterations": 500,
+      "p50Ms": 0.2737920000072336,
+      "p95Ms": 0.3492079999996349,
+      "maxMs": 1.5658750000002328
+    },
+    "incrementalProjection": {
+      "iterations": 100,
+      "p50Ms": 0.7483750000028522,
+      "p95Ms": 1.6213340000031167,
+      "maxMs": 4.500040999999328
+    },
+    "lineageTraversal": {
+      "iterations": 200,
+      "p50Ms": 20.115499999999884,
+      "p95Ms": 25.325042000004032,
+      "maxMs": 44.46120900000096
+    },
+    "replay": {
+      "iterations": 200,
+      "p50Ms": 0.4075840000004973,
+      "p95Ms": 0.6226660000029369,
+      "maxMs": 17.80475000000297
+    }
+  },
+  "database": {
+    "baselineSizeBytes": 21900435,
+    "finalSizeBytes": 830022159,
+    "growthBytes": 808121724,
+    "backendMemoryBytes": 3806528
+  },
+  "memory": {
+    "baselineRssBytes": 54149120,
+    "peakRssBytes": 56213504,
+    "steadyStateRssBytes": 53329920,
+    "sustainedGrowthBytes": -819200
+  },
+  "gates": {
+    "commonObjectSet": true,
+    "complexGraph": true,
+    "incidentSnapshot": true,
+    "decisionPacket": true,
+    "decisionDelta": true,
+    "incrementalProjection": true,
+    "boundedNodeMemory": true
+  }
+}

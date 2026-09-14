@@ -1,0 +1,76 @@
+.DS_Store
+.env
+node_modules/
+.c/
+data/runtime/
+*.log
+.venv/
+.vigia-portugal-replay-*/
+.tmp/
+.artifacts/
+.forge-colima/
+.forge-tmp/
+__pycache__/
+*.pyc
+
+# Canonical build/runtime products are reproducible and never release source.
+apps/operator-console/dist/
+data/validation/release/history/
+
+# Local recovery/reference surfaces are preserved on disk but excluded from the
+# canonical product commit. Mission Dark is a quarantined fixture prototype;
+# apps/operator-console is the only release operator application.
+_RECOVERY_SNAPSHOTS/
+apps/mission-dark/
+
+# Superseded screenshot sets. Fresh release evidence is retained under the
+# ignored .artifacts tree and bound through the current certification index.
+data/validation/release/operator-console-screenshots/in-app-browser-final-316x685/
+data/validation/release/operator-console-screenshots/phase-b/
+data/validation/release/operator-console-screenshots/pixel-parity/
+
+# Superseded frontend handoffs, design experiments, and prior integration
+# staging aids are retained locally for archaeology only. The locked white
+# handoff below remains release input and is intentionally not ignored.
+DESIGN_SOURCE_OF_TRUTH/
+VIGIA_CODEX_FINALIZATION_HANDOFF_2026-08-27/
+VIGIA_FINAL_LOCKED_FRONTEND_HANDOFF_2026-08-26/
+VIGIA_FRONTEND_PROCESS_RESET_2026-08-31/
+VIGIA_MASTER_DETAIL_MAP_RECOVERY_2026-08-31/
+INSTALL_FREE_COMMUNITY_SKILLS.md
+NEVER_STAGE_INTEGRATION_PHASE_B.txt
+SAFE_STAGE_AND_COMMIT_INTEGRATION_PHASE_B.command
+SAFE_TO_STAGE_INTEGRATION_PHASE_B.txt
+VIGIA_EXECUTIVE_UX_AND_DECISION_FLOW_CONVERGENCE_2026-09-02.md
+VIGIA_FINAL_PRODUCT_INTELLIGENCE_HARDENING_PROMPT_2026-09-02.md
+VIGIA_FINAL_UNDER_7_ELIMINATION_AUDIT.md
+VIGIA_MAP_ENGINE_AND_PRODUCT_ACTIVATION_MANDATE_2026-09-02.md
+VIGIA_OPERATIONAL_UX_AND_MAP_RUNTIME_HARDENING_MANDATE_2026-09-02.md
+VIGIA_PHASE_B_ACCESSIBILITY_AUDIT.md
+VIGIA_PHASE_B_BACKEND_CONTRACT_USAGE.md
+VIGIA_PHASE_B_BROWSER_ACCEPTANCE.md
+VIGIA_PHASE_B_COMPONENT_INVENTORY.md
+VIGIA_PHASE_B_FRONTEND_REPORT.md
+VIGIA_PHASE_B_INTERACTION_AUDIT.md
+VIGIA_PHASE_B_RESPONSIVE_AUDIT.md
+VIGIA_PHASE_B_ROUTE_MATRIX.md
+VIGIA_PHASE_B_VISUAL_DIFF_REPORT.md
+
+# Local/runtime secrets
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.tmp/
+.cache/
+.artifacts/
+*.pem
+*.key
+*.p12
+*.pfx
+*.sqlite-wal
+*.sqlite-shm
+node_modules/
+dist/
+coverage/

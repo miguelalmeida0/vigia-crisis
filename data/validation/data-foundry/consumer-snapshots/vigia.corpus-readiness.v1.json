@@ -1,0 +1,263 @@
+{
+  "schemaVersion": "vigia.corpus-readiness.v1",
+  "generatedFrom": "data-foundry-report:sha256:c8287a3cff1eb45693facb4c7b6751b182e5c262b228438379dc91bb9755514b",
+  "rights": {
+    "schemaVersion": "vigia.export-rights-assessment.v1",
+    "allowed": true,
+    "blockers": [],
+    "attributions": [
+      {
+        "licenceId": "ICNF-ATTRIBUTION",
+        "attribution": "Instituto da Conservação da Natureza e das Florestas (ICNF).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FEDS-TERMS",
+        "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FIRMS-TERMS",
+        "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NIFC-OPEN-DATA",
+        "attribution": "National Interagency Fire Center, WFIGS.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NOAA-HRRR-PUBLIC-DATA",
+        "attribution": "NOAA HRRR; identify access date and do not imply NOAA endorsement.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "ODBL-1.0",
+        "attribution": "© OpenStreetMap contributors.",
+        "termsVersion": "1.0"
+      },
+      {
+        "licenceId": "USFS-LANDFIRE-PUBLIC-DATA",
+        "attribution": "LANDFIRE, U.S. Department of the Interior and U.S. Department of Agriculture, Forest Service.",
+        "termsVersion": "2026-08-24"
+      }
+    ]
+  },
+  "quality": {
+    "lineage": {
+      "schemaVersion": "vigia.lineage-verification.v1",
+      "nodeCount": 100,
+      "edgeCount": 148,
+      "failures": [],
+      "passed": true,
+      "fingerprint": "lineage-verification:sha256:ae03a0cc327a90e1296f73d30f5372f851fd84bfe63d5172133f5407503ff439"
+    },
+    "leakage": {
+      "schemaVersion": "vigia.corpus-leakage-audit.v1",
+      "passed": true,
+      "rowsInspected": 11,
+      "negativesInspected": 100,
+      "violations": [],
+      "fingerprint": "corpus-leakage-audit:sha256:20152c207bb4cc63376eca4767d96b1063e213d8e07d3e8c41f50d92d5cf9f9a"
+    }
+  },
+  "materializationStatus": {
+    "forecastInputPackages": 11
+  },
+  "readinessDecision": {
+    "schemaVersion": "vigia.forecast-corpus-readiness.v1",
+    "decision": "CORPUS_NOT_READY",
+    "counts": {
+      "discoveredIncidents": 37,
+      "eligibleIncidents": 2,
+      "examples": 11,
+      "validNegatives": 0,
+      "hardNegatives": 0,
+      "regions": 1,
+      "seasons": 2,
+      "horizonCounts": {
+        "1": 0,
+        "3": 0,
+        "6": 1,
+        "12": 3,
+        "24": 7
+      },
+      "splitCounts": {
+        "development": 1,
+        "calibration": 0,
+        "held-out-test": 10,
+        "geographic-stress-test": 0,
+        "seasonal-stress-test": 0
+      }
+    },
+    "gates": [
+      {
+        "id": "TWO_REGIONS",
+        "value": 1,
+        "required": 2,
+        "pass": false
+      },
+      {
+        "id": "TWO_SEASONS",
+        "value": 2,
+        "required": 2,
+        "pass": true
+      },
+      {
+        "id": "ONE_HUNDRED_INCIDENTS",
+        "value": 2,
+        "required": 100,
+        "pass": false
+      },
+      {
+        "id": "ONE_HUNDRED_NEGATIVES",
+        "value": 0,
+        "required": 100,
+        "pass": false
+      },
+      {
+        "id": "PROMOTION_MINIMUM_NEGATIVES",
+        "value": 0,
+        "required": 20,
+        "pass": false
+      },
+      {
+        "id": "TWENTY_FIVE_HARD_NEGATIVES",
+        "value": 0,
+        "required": 25,
+        "pass": false
+      },
+      {
+        "id": "PROGRESSION_COMPLETENESS",
+        "value": 2,
+        "required": 100,
+        "pass": false
+      },
+      {
+        "id": "WEATHER_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "FUEL_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "TERRAIN_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "FUTURE_LABEL_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "BRONZE_SILVER_LINEAGE_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "DEVELOPMENT_SPLIT_NONEMPTY",
+        "value": 1,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "CALIBRATION_SPLIT_NONEMPTY",
+        "value": 0,
+        "required": 1,
+        "pass": false
+      },
+      {
+        "id": "HELD_OUT_TEST_SPLIT_NONEMPTY",
+        "value": 10,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "INCIDENT_SPLIT_ISOLATION",
+        "value": true,
+        "required": true,
+        "pass": true
+      },
+      {
+        "id": "HORIZON_1H",
+        "value": 0,
+        "required": 1,
+        "pass": false
+      },
+      {
+        "id": "HORIZON_3H",
+        "value": 0,
+        "required": 1,
+        "pass": false
+      },
+      {
+        "id": "HORIZON_6H",
+        "value": 1,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "HORIZON_12H",
+        "value": 3,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "HORIZON_24H",
+        "value": 7,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "KNOWLEDGE_TIME_LEAKAGE_ZERO",
+        "value": 0,
+        "required": 0,
+        "pass": true
+      },
+      {
+        "id": "DATA_RIGHTS_EXPORTABLE",
+        "value": true,
+        "required": true,
+        "pass": true
+      },
+      {
+        "id": "REPLAY_IDENTICAL",
+        "value": true,
+        "required": true,
+        "pass": true
+      }
+    ],
+    "failedGates": [
+      "TWO_REGIONS",
+      "ONE_HUNDRED_INCIDENTS",
+      "ONE_HUNDRED_NEGATIVES",
+      "PROMOTION_MINIMUM_NEGATIVES",
+      "TWENTY_FIVE_HARD_NEGATIVES",
+      "PROGRESSION_COMPLETENESS",
+      "CALIBRATION_SPLIT_NONEMPTY",
+      "HORIZON_1H",
+      "HORIZON_3H"
+    ],
+    "decisionHash": "forecast-corpus-readiness:sha256:e8953744922cd58a97ee8c8b092351c65eb737583ea3f377e20d58d2f44b1e48"
+  },
+  "splits": {
+    "development": 1,
+    "calibration": 0,
+    "held-out-test": 10,
+    "geographic-stress-test": 0,
+    "seasonal-stress-test": 0
+  },
+  "forecastExampleEligibility": {
+    "eligible": 11,
+    "rejected": 564
+  }
+}

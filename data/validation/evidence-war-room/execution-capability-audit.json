@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "vigia.execution-capability-audit.v1",
+  "checkedAt": "2026-08-25T12:03:51.279Z",
+  "tools": {
+    "docker": {
+      "installed": true,
+      "pathFingerprint": "sha256:4d568c112018d7fc2008a351c4252ca71b7c6839cffdfcb64ec2e5aae502403c"
+    },
+    "aws": {
+      "installed": false,
+      "pathFingerprint": null
+    },
+    "gcloud": {
+      "installed": true,
+      "pathFingerprint": "sha256:5f7aeed521b61eba1dff6df9148d848431d55e6a4e5eb7710b5a563526c54c22"
+    },
+    "az": {
+      "installed": false,
+      "pathFingerprint": null
+    },
+    "kubectl": {
+      "installed": true,
+      "pathFingerprint": "sha256:ffe2e31b3f5f45e612b407d64a2ff078bfd2b490111955d793820fa49e2035b4"
+    },
+    "softhsm2-util": {
+      "installed": false,
+      "pathFingerprint": null
+    }
+  },
+  "discovery": {
+    "docker": {
+      "reachable": true,
+      "serverVersion": "29.4.1",
+      "error": null
+    },
+    "gcloud": {
+      "authenticated": false,
+      "identityFingerprint": null,
+      "projectConfigured": true,
+      "projectFingerprint": "sha256:daad9a4e867e180c3c8001cf49b3e1b891f337d794da8b28aa914981ff905cfd",
+      "repositoryScopeVerified": false,
+      "secretValuesRecorded": false
+    },
+    "kubernetes": {
+      "contextAvailable": false,
+      "contextFingerprint": null,
+      "repositoryScopeVerified": false
+    }
+  },
+  "cloud": {
+    "authorizedRepositoryScopedCredentialFound": false,
+    "deploymentExecuted": false,
+    "reason": "No authenticated, repository-scoped cloud identity/context was proven; no cloud state was changed.",
+    "evidenceClass": "NO_REAL_CLOUD_EVIDENCE"
+  },
+  "localHa": {
+    "state": "ENGINEERING_CERTIFIED",
+    "evidenceClass": "ENGINEERING_ONLY_LOCAL_DOCKER",
+    "cycles": 100,
+    "passed": true,
+    "fingerprint": "local-ha-certification:sha256:e1ed197528f1319e9df6d2acd734eb85b5eeeb5a70279f36c6f684a787bd8e8d"
+  },
+  "kms": {
+    "cloudKmsDiscovered": false,
+    "cloudCertificationExecuted": false,
+    "localSoftHsmInstalled": false,
+    "localCertificationExecuted": true,
+    "localEvidenceClass": "ENGINEERING_ONLY_LOCAL_HSM_BOUNDARY",
+    "localFingerprint": "local-softhsm-certification:sha256:42203137b051b4e16abd999086855453bd3bb5b03ec32842bbc98b0cfa920f9e",
+    "localPassed": true
+  },
+  "secretsPrintedOrRecorded": false,
+  "fingerprint": "execution-capability-audit:sha256:c2d53b5697319edefb9531c2d5d2f123c258b5d25860961aec4a2468c08b253c"
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "nasa-feds-history",
+  "purpose": "VIIRS-derived event perimeters",
+  "coverage": [
+    "western-us"
+  ],
+  "period": "2025-03-present service extent",
+  "resolution": "bounded server query",
+  "collectionProcess": "public NASA ArcGIS MapServer",
+  "knowledgeTimeSemantics": "DERIVED_OBSERVATION_TIME_WITH_SIMULATED_ARRIVAL",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "FEDS is VIIRS-derived and cannot add an independent physical family."
+  ],
+  "knownMissingness": [
+    "FEDS is VIIRS-derived and cannot add an independent physical family."
+  ],
+  "licence": "NASA-FEDS-TERMS",
+  "appropriateUse": "DERIVED_PROGRESS_SEQUENCE",
+  "inappropriateUse": "Independent truth without lineage."
+}

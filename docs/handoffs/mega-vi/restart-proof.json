@@ -1,0 +1,10 @@
+{
+  "capturedAt": "2026-09-13T09:54:31.604Z",
+  "anchorAt": "2026-09-13T08:58:01.133Z",
+  "expected": 30,
+  "retainedUnchanged": 30,
+  "missing": [],
+  "relationships": 16294,
+  "scenarioRows": 0,
+  "passed": true
+}

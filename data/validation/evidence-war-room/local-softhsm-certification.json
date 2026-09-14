@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "vigia.local-softhsm-certification.v1",
+  "startedAt": "2026-08-25T11:45:36.977Z",
+  "completedAt": "2026-08-25T11:45:46.993Z",
+  "evidenceClass": "ENGINEERING_ONLY_LOCAL_HSM_BOUNDARY",
+  "actualCloudKmsEvidence": false,
+  "implementation": {
+    "boundary": "SoftHSM2 PKCS#11 inside ephemeral Docker container",
+    "image": "debian:bookworm-slim",
+    "imageIdentity": "debian@sha256:88200866dfff7ea7f5cbcb6ec7c8a701889efe6fe859fe64d6990e4b07ea4171",
+    "keyAlgorithm": "RSA-2048",
+    "signingMechanism": "RSA-PKCS over SHA-256 digest",
+    "pinOrKeyMaterialRecorded": false
+  },
+  "steps": {
+    "initial_sign_verify": "PASS",
+    "rotated_key_sign_verify": "PASS",
+    "historical_signature_after_rotation": "PASS",
+    "revoked_key_sign_rejected": "PASS",
+    "historical_signature_after_revocation": "PASS",
+    "key_objects_destroyed": "PASS"
+  },
+  "required": [
+    "initial_sign_verify",
+    "rotated_key_sign_verify",
+    "historical_signature_after_rotation",
+    "revoked_key_sign_rejected",
+    "historical_signature_after_revocation",
+    "key_objects_destroyed"
+  ],
+  "error": null,
+  "cleanup": {
+    "container": "AUTO_REMOVED_BY_DOCKER_RM",
+    "tokenDirectory": "EPHEMERAL_CONTAINER_FILESYSTEM_DESTROYED",
+    "keyObjectsExplicitlyDeletedBeforeContainer_EXIT": true,
+    "recoverability": "TEST_KEYS_INTENTIONALLY_DESTROYED"
+  },
+  "qualification": "This proves the VIGIA key-management lifecycle against a local PKCS#11 HSM boundary; it is not live AWS/GCP/Azure KMS evidence.",
+  "passed": true,
+  "fingerprint": "local-softhsm-certification:sha256:42203137b051b4e16abd999086855453bd3bb5b03ec32842bbc98b0cfa920f9e"
+}

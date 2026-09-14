@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "vigia.near-term-perimeter-label-product.v1",
+  "generatedAt": "2026-08-25T14:14:28.558Z",
+  "doctrine": {
+    "version": "vigia.perimeter-horizon-tolerance.v1",
+    "hours": {
+      "1h": [
+        45,
+        90
+      ],
+      "3h": [
+        150,
+        240
+      ],
+      "6h": [
+        300,
+        450
+      ],
+      "12h": [
+        600,
+        900
+      ],
+      "24h": [
+        1200,
+        1800
+      ]
+    },
+    "interpolationAllowed": false,
+    "identicalStateAllowed": false,
+    "correctionOnlyAllowed": false
+  },
+  "candidates": 912,
+  "labels": [
+    {
+      "schemaVersion": "vigia.near-term-perimeter-label.v1",
+      "id": "sensor-label:-121:48:2026-08-25T10:50:21.7Z:3h:2026-08-25T13:50:21.7Z",
+      "incidentId": "GOES-CLUSTER--121:48",
+      "providerId": "noaa-goes-public",
+      "labelClass": "DERIVED_SENSOR_PROGRESSION",
+      "horizon": "3h",
+      "targetMinutes": 180,
+      "actualOffsetMinutes": 180,
+      "toleranceMinutes": {
+        "minimum": 150,
+        "maximum": 240
+      },
+      "issueTime": "2026-08-25T10:50:21.7Z",
+      "laterTruthTime": "2026-08-25T13:50:21.7Z",
+      "issueObservationId": "goes-sensor-progression-state:sha256:b76a252388bcfe209046647d94fd91ddca3a8c4b8ea0cb3202e49077f358488a",
+      "laterObservationId": "goes-sensor-progression-state:sha256:bafe44871f76e8bf6353caed4eb3d4d3236ceaaaf578acd2aeb532d12751e121",
+      "issueStateHash": "goes-sensor-progression-state:sha256:b76a252388bcfe209046647d94fd91ddca3a8c4b8ea0cb3202e49077f358488a",
+      "laterStateHash": "goes-sensor-progression-state:sha256:bafe44871f76e8bf6353caed4eb3d4d3236ceaaaf578acd2aeb532d12751e121",
+      "issueRawObjectHash": "sha256:1f0f3d8be89bcd36ddc2696bdbb3c296c532dd5e2397cfa07ba5187cd870bfea",
+      "laterRawObjectHash": "sha256:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+      "revisionType": "SENSOR_DERIVED_FIRE_PIXEL_CHANGE",
+      "interpolationUsed": false,
+      "futureEvidenceInFeatures": false,
+      "knowledgeTimeSeparated": true,
+      "authorityClaim": "NOT_AN_OFFICIAL_PERIMETER",
+      "fingerprint": "near-term-perimeter-label:sha256:c2b30f468064fe15cef68358d1c2c60c1f3a2b5b22d21a734632550df23af043"
+    },
+    {
+      "schemaVersion": "vigia.near-term-perimeter-label.v1",
+      "id": "sensor-label:-121:48:2026-08-25T12:50:21.7Z:1h:2026-08-25T13:50:21.7Z",
+      "incidentId": "GOES-CLUSTER--121:48",
+      "providerId": "noaa-goes-public",
+      "labelClass": "DERIVED_SENSOR_PROGRESSION",
+      "horizon": "1h",
+      "targetMinutes": 60,
+      "actualOffsetMinutes": 60,
+      "toleranceMinutes": {
+        "minimum": 45,
+        "maximum": 90
+      },
+      "issueTime": "2026-08-25T12:50:21.7Z",
+      "laterTruthTime": "2026-08-25T13:50:21.7Z",
+      "issueObservationId": "goes-sensor-progression-state:sha256:7828837dce75c7db702333dbcab8c17ae154aadfe328af84e422a8cef04ebcc2",
+      "laterObservationId": "goes-sensor-progression-state:sha256:bafe44871f76e8bf6353caed4eb3d4d3236ceaaaf578acd2aeb532d12751e121",
+      "issueStateHash": "goes-sensor-progression-state:sha256:7828837dce75c7db702333dbcab8c17ae154aadfe328af84e422a8cef04ebcc2",
+      "laterStateHash": "goes-sensor-progression-state:sha256:bafe44871f76e8bf6353caed4eb3d4d3236ceaaaf578acd2aeb532d12751e121",
+      "issueRawObjectHash": "sha256:ec6cae9057a44002d0a38467d447b168bdcd274bdda422074dc19bf91dbecc47",
+      "laterRawObjectHash": "sha256:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+      "revisionType": "SENSOR_DERIVED_FIRE_PIXEL_CHANGE",
+      "interpolationUsed": false,
+      "futureEvidenceInFeatures": false,
+      "knowledgeTimeSeparated": true,
+      "authorityClaim": "NOT_AN_OFFICIAL_PERIMETER",
+      "fingerprint": "near-term-perimeter-label:sha256:10665d7548f1e0fbcd434cbec094db6eaedc59765d19394a8d8c4a7781ddd36a"
+    }
+  ],
+  "horizonCounts": {
+    "1h": 1,
+    "3h": 1,
+    "6h": 0,
+    "12h": 0,
+    "24h": 0
+  },
+  "officialHorizonCounts": {
+    "1h": 0,
+    "3h": 0,
+    "6h": 0,
+    "12h": 0,
+    "24h": 0
+  },
+  "classCounts": {
+    "AUTHORITATIVE_OPERATIONAL_PERIMETER": 0,
+    "OFFICIAL_REFERENCE_PERIMETER": 0,
+    "DERIVED_SENSOR_PROGRESSION": 2,
+    "RETROSPECTIVE_FINAL_PERIMETER": 0,
+    "UNUSABLE": 0
+  },
+  "rejected": 4560,
+  "rejectionReasons": {
+    "IDENTICAL": 0,
+    "OUTSIDE_TOLERANCE": 4560,
+    "CORRECTION_OR_CONTRACTION_UNRESOLVED": 0,
+    "NON_GEOMETRY_CHANGE": 0,
+    "PUBLICATION_CHRONOLOGY_INVALID": 0
+  },
+  "authoritativeOneHour": 0,
+  "authoritativeThreeHour": 0,
+  "sensorDerivedDoesNotSatisfyOfficialGate": true,
+  "leakageViolations": 0,
+  "fingerprint": "near-term-perimeter-labels:sha256:6742d9092f111ca9eb9aa95c62efe033b6f72cc2c566d7a3cb902efaa60170b8"
+}

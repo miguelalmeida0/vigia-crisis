@@ -1,0 +1,597 @@
+{
+  "schemaVersion": "vigia.data-foundry-readiness.v1",
+  "generatedFrom": "data-foundry-report:sha256:c8287a3cff1eb45693facb4c7b6751b182e5c262b228438379dc91bb9755514b",
+  "rights": {
+    "schemaVersion": "vigia.export-rights-assessment.v1",
+    "allowed": true,
+    "blockers": [],
+    "attributions": [
+      {
+        "licenceId": "ICNF-ATTRIBUTION",
+        "attribution": "Instituto da Conservação da Natureza e das Florestas (ICNF).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FEDS-TERMS",
+        "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FIRMS-TERMS",
+        "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NIFC-OPEN-DATA",
+        "attribution": "National Interagency Fire Center, WFIGS.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NOAA-HRRR-PUBLIC-DATA",
+        "attribution": "NOAA HRRR; identify access date and do not imply NOAA endorsement.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "ODBL-1.0",
+        "attribution": "© OpenStreetMap contributors.",
+        "termsVersion": "1.0"
+      },
+      {
+        "licenceId": "USFS-LANDFIRE-PUBLIC-DATA",
+        "attribution": "LANDFIRE, U.S. Department of the Interior and U.S. Department of Agriculture, Forest Service.",
+        "termsVersion": "2026-08-24"
+      }
+    ]
+  },
+  "quality": {
+    "lineage": {
+      "schemaVersion": "vigia.lineage-verification.v1",
+      "nodeCount": 100,
+      "edgeCount": 148,
+      "failures": [],
+      "passed": true,
+      "fingerprint": "lineage-verification:sha256:ae03a0cc327a90e1296f73d30f5372f851fd84bfe63d5172133f5407503ff439"
+    },
+    "leakage": {
+      "schemaVersion": "vigia.corpus-leakage-audit.v1",
+      "passed": true,
+      "rowsInspected": 11,
+      "negativesInspected": 100,
+      "violations": [],
+      "fingerprint": "corpus-leakage-audit:sha256:20152c207bb4cc63376eca4767d96b1063e213d8e07d3e8c41f50d92d5cf9f9a"
+    }
+  },
+  "materializationStatus": {
+    "forecastInputPackages": 11
+  },
+  "availableDataProducts": 55,
+  "missingProducts": 881,
+  "gapResolutionPlan": [
+    {
+      "id": "gap-resolution-action:sha256:0900e7aaf45e707a8255771102551816f4943523841c774dc64e469967063954",
+      "gapId": "data-gap:sha256:2093e9319086069e3e0cd32151bc16bf2a2ccc223c02b1626115af9433b96acb",
+      "incidentId": "2025-AZGCP-000597",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nifc-wfigs-daily",
+      "eligible": true,
+      "score": 1236,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 1,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000
+      },
+      "blocker": null
+    },
+    {
+      "id": "gap-resolution-action:sha256:18d0224f7ab6d584f6e2404ffc10844875ce38e4e771e0e07a8244648893770b",
+      "gapId": "data-gap:sha256:3f4b3d8d787bfc87da617b635bf89f8cbd09456f536610cc1b69141188f8fadf",
+      "incidentId": "2026-WACOA-260140",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nifc-wfigs-daily",
+      "eligible": true,
+      "score": 1236,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 1,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000
+      },
+      "blocker": null
+    },
+    {
+      "id": "gap-resolution-action:sha256:58e8f49c80c01f81a16034a1333b4864189618f34fc10c3108f58b22848fdee5",
+      "gapId": "data-gap:sha256:b1a0bd2fa779a6e1eb37b77433db05b3b6e7dad595a1a990ff3ab9b585e915b6",
+      "incidentId": "2026-WACOA-260140",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nifc-wfigs-daily",
+      "eligible": true,
+      "score": 1236,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 1,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000
+      },
+      "blocker": null
+    },
+    {
+      "id": "gap-resolution-action:sha256:630e3109ab38b6c21420ab8fd39e3222cf7adcb7e26f3e092295b3da1d28b81a",
+      "gapId": "data-gap:sha256:4efc40d55cebd99ecc715b96a44cedece7a2768c1ce1cbf271b675e8e75ca283",
+      "incidentId": "2025-AZGCP-000597",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nifc-wfigs-daily",
+      "eligible": true,
+      "score": 1236,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 1,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000
+      },
+      "blocker": null
+    },
+    {
+      "id": "gap-resolution-action:sha256:99b63b33416f5a490f75755168ded55a0012f69f7bedead4b4d5c2ee1dec4d78",
+      "gapId": "data-gap:sha256:5b8ae200c643b1d11615f9ddd066fb4dd36795858dc5983b2335f2b94a83bbd2",
+      "incidentId": "2026-WACOA-260140",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nifc-wfigs-daily",
+      "eligible": true,
+      "score": 1236,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 1,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000
+      },
+      "blocker": null
+    },
+    {
+      "id": "gap-resolution-action:sha256:eabeddce5997929befbeb3acc18118f7bf768c95631acd7b1de9e65b0f4853b6",
+      "gapId": "data-gap:sha256:b0300d7b69ecfd7edc4040aca1d7d34ccb91f28b5369d1df6169e258e4cfa05f",
+      "incidentId": "2026-WACOA-260140",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nifc-wfigs-daily",
+      "eligible": true,
+      "score": 1236,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 1,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000
+      },
+      "blocker": null
+    },
+    {
+      "id": "gap-resolution-action:sha256:0116bc155ecd112143547042436538a47dff76619dcd51e6491264e6e940b786",
+      "gapId": "data-gap:sha256:ad6bfe7a9d6d65dbe765bf41f57f095daa32ffa5b7ea032643b2200c79b24d6e",
+      "incidentId": "PT-2024-ICNF-109",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0335f6647785cbca45e303b3db9b1e931a99b46c21cf2ca131f3bbbedf9787cc",
+      "gapId": "data-gap:sha256:9a4bf53927d2b8e047e8add0947fc1477ddc19d71a667add03bd7f9f3a6919dd",
+      "incidentId": "PT-2024-ICNF-59193",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:056e20d4da6cca1e20bb65f595d0e779cdb0eedb8795db1ea3667bec3ac419ef",
+      "gapId": "data-gap:sha256:a624e4edc67fdfef7d3302e68e4d7b43a7d7437207dcb1c58f01c504f08dea1a",
+      "incidentId": "PT-2024-ICNF-58715",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:05964d46beab94324f955e81465edaa9534d6c70e676cffdbe3d3a33fae5eb88",
+      "gapId": "data-gap:sha256:45a1664e54e89d11437c3f9d2c23d0badaf563f5edafe20e92add08024628665",
+      "incidentId": "PT-2024-ICNF-59127",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:061aba973a6edd3352d4e371bde266695d0d92af56173d4906276949fe283388",
+      "gapId": "data-gap:sha256:70a3e5bebf4f0fd989cb91dd16f4674ee7ff38316b0d25dc2b0b772281016fde",
+      "incidentId": "PT-2024-ICNF-59191",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:062c0ae317564492877d3415ddbd439f6357a2837c9f5831ece40576388ad6c3",
+      "gapId": "data-gap:sha256:2a71f1bb9f2f1e454f157877e1f5a91faba81a32f25da82b288aac55267dea51",
+      "incidentId": "PT-2024-ICNF-59191",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:06fda3734049be73b5b7cb50c12001c7bd65d72b1f7edfb46ebe59ba3460453d",
+      "gapId": "data-gap:sha256:1b6c6f86999c9edb16d3b1eca8182fdd6f98cdd0a1598efc1c58391b8f1f3bf3",
+      "incidentId": "PT-2024-ICNF-59108",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:073b4abe953abb25c064c603db0a6f38853ec92fe92a3e830b32dc938074037c",
+      "gapId": "data-gap:sha256:0a38a95481b739131e60cd3d49c045cb03cfcf9f12deda262e1b2b2a3d534ac6",
+      "incidentId": "PT-2024-ICNF-59194",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:07efa770ab510f588c9f3e3a3acf780483210895026c9cd85b2d928643e079da",
+      "gapId": "data-gap:sha256:be28291acc94820eb45d2021120e5d809d033228cadf1460da98c0e292b0a259",
+      "incidentId": "PT-2024-ICNF-59304",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:08039e7bcfd4ab51c87860cf4fee34c4709de51862822194827f6f8a4d5edd45",
+      "gapId": "data-gap:sha256:18c4419819f2e084eeed1b4286c03b2f35fdaae83e4bf695c1c4702613113bc7",
+      "incidentId": "PT-2024-ICNF-59135",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0818a4ce3f139ebd7b63b5ae86458fd1d7bf81634fd7b43ba617dd1dcaa323f7",
+      "gapId": "data-gap:sha256:a288b6325d79030c63603de9331df3fd43feae04649fa73907c4b3135f4eed51",
+      "incidentId": "PT-2024-ICNF-58921",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:096c6144bcbc4abb910b6f3a2978a26f24f422e8ec1ad44388538261395e4bd0",
+      "gapId": "data-gap:sha256:3eae695302818c15fc63ad2fe77c432e002adba5c0ac6b6eef67532e9020c269",
+      "incidentId": "PT-2024-ICNF-59259",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0ad3a6d78ec4e8321caddee92605f17c1fca3cef844edd846782e56cf86a2156",
+      "gapId": "data-gap:sha256:c300319b23c73b64291fc49e1730fd5932070432f089a057ec35c4b2292c5a4a",
+      "incidentId": "PT-2024-ICNF-59200",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0bcd01e8a0d965c3a256c27273831f4e3becbcdbc27be4a5d1303ed856a6f34a",
+      "gapId": "data-gap:sha256:c49f153fc811d8b371876d5b8e1ae63019a3550d882b3ee59eafdfb199269969",
+      "incidentId": "PT-2024-ICNF-59158",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0d47355061b54ce76a106931b937a17128ecef1ccb05f5fcd84d6168bf6bec84",
+      "gapId": "data-gap:sha256:86e50295cec966a36ecb75386a0d9374f864450be9543087781f8fa8309e75ea",
+      "incidentId": "PT-2024-ICNF-109",
+      "requirement": "FUTURE_LABEL",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0e85a59191ad5f86c9e1914286e4d8379c14a7de18df73061e885a41221a0754",
+      "gapId": "data-gap:sha256:e900c5086863c890f2c23b0a2c651bab6855ad8a01092837f3d20475a40f62f2",
+      "incidentId": "PT-2024-ICNF-59265",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:0fc25b4e651b70d8e2b508faef80934a41c5afc038eff16e0c9839edda93192d",
+      "gapId": "data-gap:sha256:b787a7d9571251bcb3687a3d9a1580ff0f35e75afc6f4fa459ac84ecc0342023",
+      "incidentId": "PT-2024-ICNF-59191",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:11aa98a96e5938bafb0a2960836daad12581f76ac294c7fd856ae06eea7cb4fc",
+      "gapId": "data-gap:sha256:3e88ad9db4bcb9b502954c499d5957bd6ee0a2c78aebd956a5b0e890ed1fdee8",
+      "incidentId": "PT-2024-ICNF-58977",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    },
+    {
+      "id": "gap-resolution-action:sha256:11e2c5bf69ca3e27101476b5b555f4e0e9069d8fe97e33b90b5f78f821624bbd",
+      "gapId": "data-gap:sha256:dd9eb7f557d660307b467e6bb9fa26fb95a36595d73f7393f402b1e01f452e76",
+      "incidentId": "PT-2024-ICNF-59194",
+      "requirement": "PROGRESSION_SEQUENCE",
+      "provider": "nasa-feds",
+      "eligible": false,
+      "score": 1210,
+      "factors": {
+        "gapsClosed": 1,
+        "horizonsUnlocked": 1,
+        "providerAvailable": 1,
+        "coverage": 0,
+        "rightsReady": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0
+      },
+      "blocker": "OUTSIDE_PROVIDER_COVERAGE"
+    }
+  ],
+  "readinessDecision": "CORPUS_NOT_READY"
+}

@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "vigia.decision-foundry-benchmark.v1",
+  "results": {
+    "hypothesisEvaluations": {
+      "iterations": 10000,
+      "elapsedMs": 1368.6559579999998,
+      "throughputPerSecond": 7306.438072730037,
+      "p50Ms": 0.13049999999998363,
+      "p95Ms": 0.1496669999999085
+    },
+    "decisionGraphEvaluations": {
+      "iterations": 10000,
+      "elapsedMs": 546.9765829999999,
+      "throughputPerSecond": 18282.318312701886,
+      "p50Ms": 0.052124999999705324,
+      "p95Ms": 0.0595829999997477
+    },
+    "decisionDeltaCalculations": {
+      "iterations": 10000,
+      "elapsedMs": 135.4903330000002,
+      "throughputPerSecond": 73806.00356189239,
+      "p50Ms": 0.012749999999869033,
+      "p95Ms": 0.0152909999997064
+    },
+    "acquisitionRankings": {
+      "iterations": 10000,
+      "elapsedMs": 1747.6362919999997,
+      "throughputPerSecond": 5722.014383528264,
+      "p50Ms": 0.17000000000007276,
+      "p95Ms": 0.19083299999965675
+    },
+    "counterfactualAnalyses": {
+      "iterations": 1000,
+      "elapsedMs": 10.123874999999316,
+      "throughputPerSecond": 98776.40725513379,
+      "p50Ms": 0.009250000000065484,
+      "p95Ms": 0.0126669999999649
+    },
+    "progressionSequenceMaterialization": {
+      "iterations": 100,
+      "elapsedMs": 39.893833000000086,
+      "throughputPerSecond": 2506.6530959810198,
+      "p50Ms": 0.3749579999994239,
+      "p95Ms": 0.520832999999584
+    },
+    "futureLabelGeneration": {
+      "iterations": 100,
+      "elapsedMs": 82.80499999999938,
+      "throughputPerSecond": 1207.656542479328,
+      "p50Ms": 0.7930420000002414,
+      "p95Ms": 0.9416659999997137
+    },
+    "negativeAtlasCertification": {
+      "iterations": 1000,
+      "elapsedMs": 943.2886669999998,
+      "throughputPerSecond": 1060.1208675392686,
+      "p50Ms": 0.9281670000000304,
+      "p95Ms": 1.0339589999994132
+    },
+    "fullPacketCompilation": {
+      "iterations": 100,
+      "elapsedMs": 137.90412500000002,
+      "throughputPerSecond": 725.1414705687737,
+      "p50Ms": 1.3458749999999782,
+      "p95Ms": 1.6340419999996811
+    },
+    "fullDecisionReplay": {
+      "iterations": 100,
+      "elapsedMs": 154.24162500000057,
+      "throughputPerSecond": 648.333418427092,
+      "p50Ms": 1.513875000000553,
+      "p95Ms": 1.792583000000377
+    },
+    "largeObjectSetQueries": {
+      "iterations": 100,
+      "elapsedMs": 8028.696832999999,
+      "throughputPerSecond": 12.455321464994716,
+      "p50Ms": 78.66449999999986,
+      "p95Ms": 92.62908299999981
+    },
+    "hrrrIncidentLocalExtraction": {
+      "iterations": 1,
+      "elapsedMs": 1123.1403329999994,
+      "throughputPerSecond": 0.8903606883468591,
+      "p50Ms": 1123.1319170000006,
+      "p95Ms": 1123.1319170000006
+    }
+  },
+  "peakMemoryBytes": 582909952,
+  "incrementalRecomputationCostMs": 0.25041599999940445,
+  "fullRebuildCostMs": 1.6340419999996811,
+  "explanationsAndProvenanceRetained": true
+}

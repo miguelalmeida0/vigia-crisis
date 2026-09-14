@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-14",
+  "files": [
+    {
+      "path": "map-performance.json",
+      "sha256": "7b79b4bad4efbe82dd38decec905a5fd60517ada14d68244bf446cb1a7e9fc4d"
+    },
+    {
+      "path": "performance-observations.json",
+      "sha256": "e63819e9a904b2041eb809350ee23502355d2c0d39e64e211ce0dbc7ead2cf68"
+    },
+    {
+      "path": "mlx-device-recheck.json",
+      "sha256": "072240908be82768b8433d780eb252b6077aee7a8b3f2c7509a37b8a6212bc5c"
+    },
+    {
+      "path": "restart-proof.json",
+      "sha256": "5f5cd4a63c0c2a039b1da84c9f4acff27b997775965b6b7731b531425a4337ca"
+    },
+    {
+      "path": "model-corpus.json",
+      "sha256": "455d72292f50e865af47d49850b51e6ce8362e807ccf935850cf42d4da0fb916"
+    },
+    {
+      "path": "mlx-startup.json",
+      "sha256": "594d582acd3fa2ff69678f178dd28821c97590dd44bab1e1f2afc7997379c0fe"
+    }
+  ],
+  "originalBenchmark": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vii/after-map-interrupted.json",
+  "combinedBenchmark": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vii/after-map.json",
+  "classification": "Acceptance evidence; failed gates are preserved"
+}

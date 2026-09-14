@@ -1,0 +1,9 @@
+{
+  "capturedAt": "2026-09-14T07:38:57.967Z",
+  "anchorAt": "2026-09-13T11:00:43.404Z",
+  "expected": 5,
+  "retainedUnchanged": 5,
+  "missing": [],
+  "scenarioRows": 0,
+  "passed": true
+}

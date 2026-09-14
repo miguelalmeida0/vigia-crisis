@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "cems-rapid-mapping",
+  "purpose": "activation delineation/grading revisions",
+  "coverage": [
+    "portugal"
+  ],
+  "period": "activation-specific",
+  "resolution": "sparse activation products",
+  "collectionProcess": "public activation downloads",
+  "knowledgeTimeSemantics": "ACTIVATION_DELIVERY_TIME",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "Not a systematic national incident sample and revisions are activation-specific."
+  ],
+  "knownMissingness": [
+    "Not a systematic national incident sample and revisions are activation-specific."
+  ],
+  "licence": "COPERNICUS-EMS-TERMS",
+  "appropriateUse": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+  "inappropriateUse": "Independent truth without lineage."
+}

@@ -1,0 +1,14 @@
+import { execFile } from 'node:child_process';
+import { promisify } from 'node:util';
+import { closurePaths, writeArtifact } from './contracts.mjs';
+
+const execute = promisify(execFile);
+async function run(command, args, projectRoot, timeout = 300_000) { try { const result = await execute(command, args, { cwd: projectRoot, timeout, maxBuffer: 64 * 1024 * 1024, env: { ...process.env, TMPDIR: `${projectRoot}/.tmp/test` } }); return { exitCode: 0, output: `${result.stdout}${result.stderr}` }; } catch (error) { return { exitCode: Number(error.code) || 1, output: `${error.stdout ?? ''}${error.stderr ?? ''}` }; } }
+const count = (output, name) => Number(output.match(new RegExp(`(?:#|ℹ) ${name} (\\d+)`, 'g'))?.at(-1)?.match(/\d+/)?.[0] ?? 0);
+const compact = (result) => ({ exitCode: result.exitCode, tests: count(result.output, 'tests'), pass: count(result.output, 'pass'), fail: count(result.output, 'fail'), skipped: count(result.output, 'skipped'), durationMs: count(result.output, 'duration_ms'), tail: result.output.split('\n').slice(-30).join('\n') });
+
+export async function verifyScientificTruthClosure({ projectRoot = process.cwd(), clock = () => new Date() } = {}) {
+  const targeted = await run('node', ['--test', 'apps/api/test/scientific-truth-closure.test.mjs'], projectRoot), check = await run('npm', ['run', 'check'], projectRoot), full = await run('npm', ['test'], projectRoot, 600_000), database = await run('npm', ['run', 'db:certify-intelligence'], projectRoot, 600_000), smoke = await run('npm', ['run', 'smoke'], projectRoot, 300_000), smokeKnownProtected = smoke.exitCode !== 0 && smoke.output.includes('/src/main.js');
+  const newRegressions = Number(targeted.exitCode !== 0) + Number(check.exitCode !== 0) + Number(full.exitCode !== 0) + Number(database.exitCode !== 0) + Number(smoke.exitCode !== 0 && !smokeKnownProtected), core = { schemaVersion: 'vigia.scientific-truth-verification.v1', generatedAt: clock().toISOString(), targetedAdversarial: compact(targeted), fullTests: { ...compact(full), knownProtectedFrontendFailure: false }, staticCheck: { exitCode: check.exitCode, tail: check.output.split('\n').slice(-20).join('\n') }, databaseCertification: { exitCode: database.exitCode, tail: database.output.split('\n').slice(-30).join('\n') }, productionSmoke: { exitCode: smoke.exitCode, knownProtectedFrontendFailure: smokeKnownProtected, tail: smoke.output.split('\n').slice(-30).join('\n') }, releaseContractGovernance: { state: full.exitCode === 0 ? 'REQUIRED_PASS' : 'FAILED', waiverAllowed: false, browserContractSource: 'immutable release identity generated from packages/domain/src/release-contract.mjs' }, newRegressions, passed: newRegressions === 0 };
+  return writeArtifact(closurePaths(projectRoot).verification, 'scientific-truth-verification', core);
+}

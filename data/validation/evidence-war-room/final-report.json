@@ -1,0 +1,669 @@
+{
+  "schemaVersion": "vigia.active-evidence-war-room-final-report.v1",
+  "generatedAt": "2026-08-25T12:11:10.558Z",
+  "A": {
+    "title": "Evidence-acquisition executive verdict",
+    "verdict": "MATERIAL_PUBLIC_EVIDENCE_ACQUIRED_WORLD_CLASS_GATE_NOT_YET_PASSED",
+    "summary": "499 content-addressed raw public objects (351253592 bytes), 12322 real Canadian incidents, 287 official CAP messages, 100 shadow decisions, and 100 local HA cycles are now evidenced."
+  },
+  "B": {
+    "title": "Public sources discovered and acquired",
+    "manifestFingerprint": "public-evidence-source-manifest:sha256:d9c4277de588aadfbcef7a2b1f6c421e2259cce45cf2e14aa787fd02ce6ec092",
+    "rawObjects": 499,
+    "bytes": 351253592,
+    "sources": [
+      {
+        "providerId": "cwfis-nrcan",
+        "authority": "Natural Resources Canada — Canadian Forest Service",
+        "access": "AUTHORITATIVE_PUBLIC",
+        "rights": "OPEN_GOVERNMENT_LICENCE_CANADA",
+        "licenceUrl": "https://cwfis.cfs.nrcan.gc.ca/downloads/licence.txt",
+        "licenceFingerprint": "sha256:708ce86f3279715b9f2b1559e744b4774246f3775bd162fae62738415efaf772",
+        "attribution": "Canadian Forest Service, Canadian Wildland Fire Information System, Natural Resources Canada",
+        "rawObjects": 30,
+        "bytes": 315642681,
+        "sourceFamily": "OFFICIAL_WILDFIRE_AND_PHYSICAL_DERIVED",
+        "acquiredRange": "2018-2026 (perimeter products 2018-2025; hotspots 2024-2026)",
+        "incidentsOrProducts": "8 annual perimeter archives, 2 annual hotspot archives, 7 dated daily hotspot products, and current perimeter/progression components",
+        "evidenceKind": "DERIVED_PUBLIC_OBSERVATION_WITH_CAUSAL_LINEAGE"
+      },
+      {
+        "providerId": "alberta-wildfire",
+        "authority": "Government of Alberta — Alberta Wildfire",
+        "access": "AUTHORITATIVE_PUBLIC",
+        "rights": "OPEN_GOVERNMENT_LICENCE_ALBERTA",
+        "licenceUrl": "https://www.alberta.ca/wildfire-maps-and-data",
+        "licenceFingerprint": "sha256:1119fb1588ca535651c7e7bc6557607018584b7af1678692b8c02394c9b71e5d",
+        "attribution": "Government of Alberta",
+        "rawObjects": 74,
+        "bytes": 13538313,
+        "sourceFamily": "OFFICIAL_PROVINCIAL_WILDFIRE",
+        "acquiredRange": "previous ten years through current 2026 service state",
+        "incidentsOrProducts": "12322 official incident locations; 18764 perimeter records",
+        "evidenceKind": "OFFICIAL_REPORT"
+      },
+      {
+        "providerId": "bc-wildfire-service",
+        "authority": "Government of British Columbia — BC Wildfire Service",
+        "access": "AUTHORITATIVE_PUBLIC",
+        "rights": "OPEN_GOVERNMENT_LICENCE_BC",
+        "licenceUrl": "https://open.canada.ca/data/en/dataset/cdfc2d7b-c046-4bf0-90ac-4897232619e1",
+        "licenceFingerprint": "sha256:3c24f036588bf0f01bcd7af18427ac75b8807ffc1d71bd060bbd0c08f001a88b",
+        "attribution": "Government of British Columbia",
+        "rawObjects": 19,
+        "bytes": 14267192,
+        "sourceFamily": "OFFICIAL_PROVINCIAL_WILDFIRE",
+        "acquiredRange": "current 2026 public operational state",
+        "incidentsOrProducts": "200 current perimeter features",
+        "evidenceKind": "OFFICIAL_REPORT"
+      },
+      {
+        "providerId": "noaa-nws-cap",
+        "authority": "NOAA National Weather Service",
+        "access": "AUTHORITATIVE_PUBLIC",
+        "rights": "US_FEDERAL_PUBLIC_DATA",
+        "licenceUrl": "https://www.weather.gov/documentation/services-web-api",
+        "licenceFingerprint": "sha256:cc5783adc90b0ebe4336f7d7c34c28698b3def9589fa5b4f296692f6d93b1410",
+        "attribution": "NOAA/National Weather Service",
+        "rawObjects": 139,
+        "bytes": 1815401,
+        "sourceFamily": "OFFICIAL_GOVERNMENT_CAP",
+        "acquiredRange": "public rolling alert history available at acquisition time",
+        "incidentsOrProducts": "137 CAP messages; 11 Twin incidents",
+        "evidenceKind": "OFFICIAL_REPORT"
+      },
+      {
+        "providerId": "eccc-msc-cap",
+        "authority": "Environment and Climate Change Canada — Meteorological Service of Canada",
+        "access": "AUTHORITATIVE_PUBLIC",
+        "rights": "OPEN_GOVERNMENT_LICENCE_CANADA",
+        "licenceUrl": "https://eccc-msc.github.io/open-data/msc-data/alerts/readme_alerts-datamart_en/",
+        "licenceFingerprint": "sha256:00a7374a96558becd542244f68801e484c7acf855b5596467f41a16eada32a75",
+        "attribution": "Environment and Climate Change Canada",
+        "rawObjects": 237,
+        "bytes": 5990005,
+        "sourceFamily": "OFFICIAL_GOVERNMENT_CAP",
+        "acquiredRange": "2026-08-24 through 2026-08-25 retained Datamart sample",
+        "incidentsOrProducts": "150 CAP messages; 22 Twin incidents",
+        "evidenceKind": "OFFICIAL_REPORT"
+      }
+    ]
+  },
+  "C": {
+    "title": "Canada corpus results",
+    "discovered": 12322,
+    "withOfficialFinalPerimeter": 1893,
+    "forecastEligible": 0,
+    "officialLocations": 12322,
+    "officialPerimeterRecords": 18764,
+    "issueTimeCandidates": 12322,
+    "eligibilityFailureCounts": {
+      "MISSING_PHYSICAL_HOTSPOT_HISTORY": 12322,
+      "MISSING_WEATHER_HISTORY": 12322,
+      "MISSING_FUEL": 12322,
+      "MISSING_TERRAIN": 12322,
+      "MISSING_OFFICIAL_FINAL_PERIMETER": 10429,
+      "MISSING_LATER_TRUTH": 10429
+    },
+    "acquisitionFailures": [],
+    "cwfisQualification": {
+      "perimeterArchivesComplete": true,
+      "hotspotArchivesComplete": true,
+      "rawCwfisArchivesAcquired": true,
+      "requestedLargeArchivesThisRun": false,
+      "spatialBindingCompleted": false,
+      "independentWitnessQualification": "NOT_ASSUMED"
+    },
+    "fingerprint": "canadian-evidence-catalogue:sha256:9620a31eb5da254304aa824019042986fc356be059c3f045a88df4982b829f5d"
+  },
+  "D": {
+    "title": "Valid negatives acquired",
+    "count": 0,
+    "unknownPromotedToNegative": 0,
+    "blocker": {
+      "class": "CREDENTIAL_REQUIRED",
+      "requirement": "Historical sensor coverage/cloud-mask products or an equivalent authoritative observation-opportunity product must be acquired and bound before UNKNOWN controls can become negatives.",
+      "autoDiscovery": "No reusable historical cloud/opportunity credential was found in the current evidence stores; public detection-only archives were acquired instead."
+    },
+    "fingerprint": "public-evidence-negative-report:sha256:3f8ed82c944fbe15e5444a3cec31ca3748d022f2225a6d906321a3b9f7ae3f7f"
+  },
+  "E": {
+    "title": "Hard negatives acquired",
+    "count": 0,
+    "target": 25
+  },
+  "F": {
+    "title": "Near-term label results",
+    "labels": 0,
+    "horizonCounts": {
+      "1h": 0,
+      "3h": 0,
+      "6h": 0,
+      "12h": 0,
+      "24h": 0
+    },
+    "changedProviderStates": 18,
+    "toleranceDoctrine": {
+      "version": "vigia.authoritative-horizon-tolerance.v1",
+      "horizons": {
+        "1h": {
+          "targetMinutes": 60,
+          "toleranceMinutes": 30
+        },
+        "3h": {
+          "targetMinutes": 180,
+          "toleranceMinutes": 60
+        },
+        "6h": {
+          "targetMinutes": 360,
+          "toleranceMinutes": 90
+        },
+        "12h": {
+          "targetMinutes": 720,
+          "toleranceMinutes": 180
+        },
+        "24h": {
+          "targetMinutes": 1440,
+          "toleranceMinutes": 360
+        }
+      },
+      "interpolation": "FORBIDDEN"
+    },
+    "blocker": {
+      "class": "TIME_ACCUMULATION_REQUIRED",
+      "campaign": "RUNNING_BOUNDED_ON_DEMAND",
+      "accumulatedSnapshots": 227,
+      "accumulatedIncidents": 108,
+      "exactRequirement": "A later changed authoritative perimeter state must land within a versioned horizon tolerance."
+    },
+    "fingerprint": "near-term-label-factory-report:sha256:eb932beb71af7d00a470c5e1bf01a554a0418c2b7ed88fab05f22c57fb39a844"
+  },
+  "G": {
+    "title": "Historical shadow Decision Memory",
+    "episodes": 100,
+    "acquisitionOpportunities": 100,
+    "passed": true,
+    "fingerprint": "historical-shadow-decision-memory:sha256:1928b92c68ff9db8c74f03c015e2030226cd695ec4e7524673fc9bf00a29d05f"
+  },
+  "H": {
+    "title": "Realized Information Value",
+    "adjudicableOutcomes": 25,
+    "qualification": "External later evidence adjudicates what VIGIA would have requested; no claim is made that an agency acted on VIGIA advice."
+  },
+  "I": {
+    "title": "CAP government integration",
+    "NWS": {
+      "messages": 137,
+      "parsed": 137,
+      "normalizedEvents": 41,
+      "creates": 19,
+      "updates": 10,
+      "cancellations": 12,
+      "lifecycleChains": 48,
+      "twinIncidents": 11
+    },
+    "ECCC": {
+      "messages": 150,
+      "parsed": 150,
+      "normalizedEvents": 85,
+      "creates": 27,
+      "updates": 58,
+      "cancellations": 0,
+      "lifecycleChains": 103,
+      "twinIncidents": 22
+    },
+    "totals": {
+      "rawMessages": 287,
+      "schemaParsedAlerts": 287,
+      "normalizedEvents": 126,
+      "lifecycleChains": 151,
+      "creates": 46,
+      "updates": 68,
+      "cancellations": 12
+    },
+    "twin": {
+      "projectionHash": "operational-twin:sha256:66a5243e5c11ec6bd8b745e783352bfc8c4dd319c946b2035608acef7c9f7ffb",
+      "incidents": 42,
+      "failures": [
+        {
+          "code": "COMPETING_AMENDMENTS",
+          "targetEventId": "operational-event:sha256:af581513db91b955654851dc3705b8ddbe3411d6c45ac293c70a81a504072580",
+          "amendmentEventIds": [
+            "operational-event:sha256:35c29448527d84b822f0ba46ebda53d0719f4ab03074c8e7b60df02f8ca9ef0b",
+            "operational-event:sha256:3957640ffc9e65616dd3bf9ae43d3e63b47ab6cb6c09baf1c59c54c22f5e8f29"
+          ]
+        },
+        {
+          "code": "COMPETING_AMENDMENTS",
+          "targetEventId": "operational-event:sha256:fad2b97c08829747005c777d02147fa4f10fcffa0f08a41dd0bbfc4ffe427546",
+          "amendmentEventIds": [
+            "operational-event:sha256:8b735b0fd4d42756b93f873aa4e45e86ac8af03edf915281b0b2d77168985411",
+            "operational-event:sha256:f4c9a0a82cbe61c2bb0158572cdbef72d00f32d0cf629998540ff2fe0fbb90f8"
+          ]
+        }
+      ],
+      "consumerState": "TWIN_PROJECTION_UPDATED"
+    },
+    "replay": {
+      "projectionHash": "operational-twin:sha256:66a5243e5c11ec6bd8b745e783352bfc8c4dd319c946b2035608acef7c9f7ffb",
+      "verified": true
+    },
+    "transportRecovery": {
+      "classification": "ENGINEERING_ONLY_LOCAL_SYNTHETIC_OUTAGE",
+      "attempts": 2,
+      "boundedAttempts": 2,
+      "recovered": true,
+      "actualGovernmentOutage": false,
+      "mixedWithGovernmentEvidence": false
+    },
+    "passed": true,
+    "fingerprint": "government-cap-integration:sha256:3ff466c0d0a14c213d41106be2b9f4fe47be3cc3d7f578c85998bffed8edf751"
+  },
+  "J": {
+    "title": "Prospective archive",
+    "startedAt": "2026-08-25T11:29:16.828Z",
+    "lastCapturedAt": "2026-08-25T12:09:07.798Z",
+    "snapshots": 227,
+    "incidents": 108,
+    "sourceClasses": 3,
+    "unchanged": 101,
+    "changed": 18,
+    "rewritten": 0,
+    "state": "RUNNING_BOUNDED_ON_DEMAND",
+    "fingerprint": "public-evidence-prospective-campaign:sha256:68718c9cef747afd3f079d6a0407f29f2d7311d834ad29c5081e5f353e961624"
+  },
+  "K": {
+    "title": "HA evidence",
+    "local": {
+      "passed": true,
+      "evidenceClass": "ENGINEERING_ONLY_LOCAL_DOCKER",
+      "cycles": 100,
+      "summary": {
+        "cycles": 100,
+        "failedDomainRejections": 100,
+        "staleWritesRejected": 100,
+        "splitBrainWrites": 0,
+        "acknowledgedActionsLost": 0,
+        "duplicateActions": 0,
+        "rtoMs": {
+          "p50": 620.388,
+          "p95": 1232.818,
+          "maximum": 1388.105
+        },
+        "nodeCounts": [
+          {
+            "site": "zone-a",
+            "count": 100,
+            "minimum": 1,
+            "maximum": 100,
+            "hashes": 100
+          },
+          {
+            "site": "zone-b",
+            "count": 100,
+            "minimum": 1,
+            "maximum": 100,
+            "hashes": 100
+          },
+          {
+            "site": "region-b",
+            "count": 100,
+            "minimum": 1,
+            "maximum": 100,
+            "hashes": 100
+          }
+        ]
+      },
+      "rollingUpgrade": {
+        "strategy": "ONE_NODE_AT_A_TIME_SCHEMA_DEFAULT_REVISION",
+        "nodes": [
+          {
+            "site": "zone-a",
+            "peerHealth": [
+              100,
+              100
+            ],
+            "schemaRevision": 2,
+            "serviceMaintained": true
+          },
+          {
+            "site": "zone-b",
+            "peerHealth": [
+              100,
+              100
+            ],
+            "schemaRevision": 2,
+            "serviceMaintained": true
+          },
+          {
+            "site": "region-b",
+            "peerHealth": [
+              100,
+              100
+            ],
+            "schemaRevision": 2,
+            "serviceMaintained": true
+          }
+        ],
+        "serviceMaintained": true
+      },
+      "backupRestore": {
+        "method": "pg_dump_plain_to_fresh_database",
+        "restoredActions": 100,
+        "passed": true
+      },
+      "cleanup": {
+        "containers": [
+          "EPHEMERAL_PREFIX-zone-a-db",
+          "EPHEMERAL_PREFIX-zone-b-db",
+          "EPHEMERAL_PREFIX-region-b-db"
+        ],
+        "networks": [
+          "EPHEMERAL_PREFIX-zone-a-net",
+          "EPHEMERAL_PREFIX-zone-b-net",
+          "EPHEMERAL_PREFIX-region-b-net"
+        ],
+        "recoverability": "EPHEMERAL_TEST_OBJECTS_INTENTIONALLY_DESTROYED"
+      },
+      "fingerprint": "local-ha-certification:sha256:e1ed197528f1319e9df6d2acd734eb85b5eeeb5a70279f36c6f684a787bd8e8d"
+    },
+    "actualCloud": {
+      "executed": false,
+      "blockerClass": "CREDENTIAL_REQUIRED",
+      "audit": {
+        "authorizedRepositoryScopedCredentialFound": false,
+        "deploymentExecuted": false,
+        "reason": "No authenticated, repository-scoped cloud identity/context was proven; no cloud state was changed.",
+        "evidenceClass": "NO_REAL_CLOUD_EVIDENCE"
+      }
+    }
+  },
+  "L": {
+    "title": "KMS/HSM evidence",
+    "local": {
+      "passed": true,
+      "evidenceClass": "ENGINEERING_ONLY_LOCAL_HSM_BOUNDARY",
+      "implementation": {
+        "boundary": "SoftHSM2 PKCS#11 inside ephemeral Docker container",
+        "image": "debian:bookworm-slim",
+        "imageIdentity": "debian@sha256:88200866dfff7ea7f5cbcb6ec7c8a701889efe6fe859fe64d6990e4b07ea4171",
+        "keyAlgorithm": "RSA-2048",
+        "signingMechanism": "RSA-PKCS over SHA-256 digest",
+        "pinOrKeyMaterialRecorded": false
+      },
+      "steps": {
+        "initial_sign_verify": "PASS",
+        "rotated_key_sign_verify": "PASS",
+        "historical_signature_after_rotation": "PASS",
+        "revoked_key_sign_rejected": "PASS",
+        "historical_signature_after_revocation": "PASS",
+        "key_objects_destroyed": "PASS"
+      },
+      "cleanup": {
+        "container": "AUTO_REMOVED_BY_DOCKER_RM",
+        "tokenDirectory": "EPHEMERAL_CONTAINER_FILESYSTEM_DESTROYED",
+        "keyObjectsExplicitlyDeletedBeforeContainer_EXIT": true,
+        "recoverability": "TEST_KEYS_INTENTIONALLY_DESTROYED"
+      },
+      "fingerprint": "local-softhsm-certification:sha256:42203137b051b4e16abd999086855453bd3bb5b03ec32842bbc98b0cfa920f9e"
+    },
+    "actualCloud": {
+      "executed": false,
+      "blockerClass": "CREDENTIAL_REQUIRED",
+      "audit": {
+        "cloudKmsDiscovered": false,
+        "cloudCertificationExecuted": false,
+        "localSoftHsmInstalled": false,
+        "localCertificationExecuted": true,
+        "localEvidenceClass": "ENGINEERING_ONLY_LOCAL_HSM_BOUNDARY",
+        "localFingerprint": "local-softhsm-certification:sha256:42203137b051b4e16abd999086855453bd3bb5b03ec32842bbc98b0cfa920f9e",
+        "localPassed": true
+      }
+    }
+  },
+  "M": {
+    "title": "Forecast re-evaluation",
+    "corpusGate": {
+      "state": "CORPUS_NOT_READY",
+      "passed": false,
+      "fingerprint": "corpus-worldclass-gate:sha256:bcecf2c22354ef694c75f86d0fd268168dc95c48ed6acfa6afebbcaee551af96"
+    },
+    "forecast": {
+      "state": "BLOCKED_BY_CORPUS",
+      "passed": false,
+      "metrics": null,
+      "fingerprint": "forecast-evaluation:sha256:1a9ac6e37f697bebff160364eca96cf626d9a12fc9c0a09244fc50658fa73fa2"
+    },
+    "noSyntheticMetrics": true
+  },
+  "N": {
+    "title": "Release status",
+    "state": "BLOCKED",
+    "passed": false,
+    "releaseId": "vigia-decision-os-bd82bd7ff251e7cf",
+    "blockers": [
+      "DOCKER_IMAGE_DIGESTS_MISSING",
+      "INDEPENDENT_REVIEWER_ATTESTATION_MISSING_OR_INVALID"
+    ],
+    "fingerprint": "clean-room-certification:sha256:6c5ec6fc81a3133814a9e68dad7c1e52b9194609195a63235ceb55534f86f28a",
+    "protectedFrontendUnchanged": true
+  },
+  "O": {
+    "title": "Independent-review bundle",
+    "releaseId": "vigia-decision-os-bd82bd7ff251e7cf",
+    "fingerprint": "independent-review-bundle:sha256:9fa50e84247765e5bb6ef02f2e7cea7a97dc82ab9fd0c13557eac6e8ea506260",
+    "sourceFingerprint": "public-evidence-source-manifest:sha256:d9c4277de588aadfbcef7a2b1f6c421e2259cce45cf2e14aa787fd02ce6ec092",
+    "reviewerMustBeDifferentAgent": true,
+    "prompt": "docs/intelligence/INDEPENDENT_REVIEWER_PROMPT.md"
+  },
+  "P": {
+    "title": "Human-study readiness",
+    "engineeringReady": true,
+    "tasks": 10,
+    "simulatedParticipants": false,
+    "runner": "npm run operator-eval:run",
+    "score": "npm run operator-eval:score",
+    "fingerprint": "operator-study-kit:sha256:314fd70630456e1a40fe3fe1330cf69bf9168e6a41aa34f6fe14cca44909e4cc",
+    "blockerClass": "REAL_HUMAN_REQUIRED"
+  },
+  "Q": {
+    "title": "Revised scorecard",
+    "passed": false,
+    "meanFinalDefensibleScore": 4.458,
+    "categories": [
+      {
+        "category": "scientific corpus",
+        "finalDefensibleScore": 4.5,
+        "remainingBlockerClass": "CREDENTIAL_REQUIRED",
+        "evidenceFingerprint": "canadian-evidence-catalogue:sha256:9620a31eb5da254304aa824019042986fc356be059c3f045a88df4982b829f5d"
+      },
+      {
+        "category": "predictive validity",
+        "finalDefensibleScore": 2,
+        "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+        "evidenceFingerprint": "near-term-label-factory-report:sha256:eb932beb71af7d00a470c5e1bf01a554a0418c2b7ed88fab05f22c57fb39a844"
+      },
+      {
+        "category": "decision learning",
+        "finalDefensibleScore": 7.5,
+        "remainingBlockerClass": null,
+        "evidenceFingerprint": "historical-shadow-decision-memory:sha256:1928b92c68ff9db8c74f03c015e2030226cd695ec4e7524673fc9bf00a29d05f"
+      },
+      {
+        "category": "prospective history",
+        "finalDefensibleScore": 4.5,
+        "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+        "evidenceFingerprint": "public-evidence-prospective-campaign:sha256:68718c9cef747afd3f079d6a0407f29f2d7311d834ad29c5081e5f353e961624"
+      },
+      {
+        "category": "multi-region resilience",
+        "finalDefensibleScore": 2.5,
+        "remainingBlockerClass": "CREDENTIAL_REQUIRED",
+        "evidenceFingerprint": "local-ha-certification:sha256:e1ed197528f1319e9df6d2acd734eb85b5eeeb5a70279f36c6f684a787bd8e8d"
+      },
+      {
+        "category": "security compartmentation",
+        "finalDefensibleScore": 4.5,
+        "remainingBlockerClass": "CROSS_BRANCH_INTEGRATION_REQUIRED",
+        "evidenceFingerprint": "local-softhsm-certification:sha256:42203137b051b4e16abd999086855453bd3bb5b03ec32842bbc98b0cfa920f9e"
+      },
+      {
+        "category": "release cleanliness",
+        "finalDefensibleScore": 5,
+        "remainingBlockerClass": "CROSS_BRANCH_INTEGRATION_REQUIRED",
+        "evidenceFingerprint": "clean-room-certification:sha256:6c5ec6fc81a3133814a9e68dad7c1e52b9194609195a63235ceb55534f86f28a"
+      },
+      {
+        "category": "doctrine coverage",
+        "finalDefensibleScore": 6.5,
+        "remainingBlockerClass": "REAL_HUMAN_REQUIRED",
+        "evidenceFingerprint": null
+      },
+      {
+        "category": "Data Foundry efficiency",
+        "finalDefensibleScore": 6.5,
+        "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+        "evidenceFingerprint": null
+      },
+      {
+        "category": "operator validation",
+        "finalDefensibleScore": 0,
+        "remainingBlockerClass": "REAL_HUMAN_REQUIRED",
+        "evidenceFingerprint": "operator-evaluation-package:sha256:161c80b45b3de7793955085a24dfdf9a38b8564f16b5675fe539f01381c14bc2"
+      },
+      {
+        "category": "agency integration",
+        "finalDefensibleScore": 7.5,
+        "remainingBlockerClass": null,
+        "evidenceFingerprint": "government-cap-integration:sha256:3ff466c0d0a14c213d41106be2b9f4fe47be3cc3d7f578c85998bffed8edf751"
+      },
+      {
+        "category": "independent assurance",
+        "finalDefensibleScore": 2.5,
+        "remainingBlockerClass": "REAL_HUMAN_REQUIRED",
+        "evidenceFingerprint": "clean-room-certification:sha256:6c5ec6fc81a3133814a9e68dad7c1e52b9194609195a63235ceb55534f86f28a"
+      }
+    ],
+    "fingerprint": "sub-75-scorecard:sha256:bad95ed08204a3ef5e210abf3adb093fefeaab8fe1b03769106473a9d59b31ec"
+  },
+  "R": {
+    "title": "Remaining evidence by precise blocker class",
+    "blockers": [
+      {
+        "class": "CREDENTIAL_REQUIRED",
+        "gap": "Negative-opportunity certification",
+        "discovery": "No reusable historical cloud/opportunity credential was found in the current evidence stores; public detection-only archives were acquired instead.",
+        "exactRequirement": "Historical sensor coverage/cloud-mask products or an equivalent authoritative observation-opportunity product must be acquired and bound before UNKNOWN controls can become negatives."
+      },
+      {
+        "class": "TIME_ACCUMULATION_REQUIRED",
+        "gap": "Near-term authoritative perimeter labels and seven-day prospective history",
+        "accumulated": {
+          "snapshots": 227,
+          "incidents": 108,
+          "sourceClasses": 3,
+          "changedStates": 18
+        },
+        "campaign": "RUNNING_BOUNDED_ON_DEMAND",
+        "command": "npm run evidence:prospective:capture"
+      },
+      {
+        "class": "CREDENTIAL_REQUIRED",
+        "gap": "Actual multi-region cloud HA and cloud KMS certification",
+        "discovery": {
+          "docker": {
+            "reachable": true,
+            "serverVersion": "29.4.1",
+            "error": null
+          },
+          "gcloud": {
+            "authenticated": false,
+            "identityFingerprint": null,
+            "projectConfigured": true,
+            "projectFingerprint": "sha256:daad9a4e867e180c3c8001cf49b3e1b891f337d794da8b28aa914981ff905cfd",
+            "repositoryScopeVerified": false,
+            "secretValuesRecorded": false
+          },
+          "kubernetes": {
+            "contextAvailable": false,
+            "contextFingerprint": null,
+            "repositoryScopeVerified": false
+          }
+        },
+        "secretValuesRecorded": false,
+        "exactRequirement": "An authenticated, repository-scoped cloud identity/context approved for an ephemeral deployment."
+      },
+      {
+        "class": "REAL_HUMAN_REQUIRED",
+        "gap": "Operator and doctrine validation",
+        "accumulated": {
+          "realSessions": 0,
+          "engineeringTasksReady": 10
+        },
+        "command": "npm run operator-eval:run"
+      },
+      {
+        "class": "REAL_HUMAN_REQUIRED",
+        "gap": "Independent assurance",
+        "accumulated": {
+          "reviewerBundleFingerprint": "independent-review-bundle:sha256:9fa50e84247765e5bb6ef02f2e7cea7a97dc82ab9fd0c13557eac6e8ea506260"
+        },
+        "exactRequirement": "A different reviewer executes the immutable bundle and emits the required attestation."
+      },
+      {
+        "class": "CROSS_BRANCH_INTEGRATION_REQUIRED",
+        "gap": "Merged migration DAG and protected frontend release contract",
+        "dossier": "docs/architecture/MIGRATION_COMPATIBILITY_DOSSIER.md"
+      },
+      {
+        "class": "PRIVILEGED_PARTNER_REQUIRED",
+        "gap": "Agency-specific operational pilot beyond public CAP",
+        "exactRequirement": "A partner-authorized bidirectional operational endpoint and pilot operators; public NWS/ECCC CAP acceptance is already proven."
+      }
+    ]
+  },
+  "S": {
+    "title": "Exact commands",
+    "commands": [
+      "npm run evidence:canada:acquire",
+      "npm run evidence:cap:acquire",
+      "npm run evidence:shadow:adjudicate",
+      "npm run evidence:prospective:capture",
+      "npm run evidence:science:report",
+      "npm run evidence:capability:audit",
+      "npm run ha:certify:local",
+      "npm run kms:certify:local",
+      "npm run corpus:worldclass-gate",
+      "npm run forecast:evaluate",
+      "npm run operator-eval:run",
+      "npm run operator-eval:score",
+      "npm run certify:clean-room",
+      "npm run review:bundle",
+      "npm run report:sub-75",
+      "npm run report:evidence-war-room"
+    ]
+  },
+  "T": {
+    "title": "Next measured acquisition target",
+    "target": "Reach the first 25 scientifically valid negative packets and the first authoritative 1h/3h perimeter label without promoting UNKNOWN or interpolating truth.",
+    "measurement": {
+      "validNegatives": {
+        "current": 0,
+        "next": 25
+      },
+      "oneHourLabels": {
+        "current": 0,
+        "next": 1
+      },
+      "threeHourLabels": {
+        "current": 0,
+        "next": 1
+      },
+      "prospectiveSnapshots": {
+        "current": 227,
+        "next": 1000
+      }
+    }
+  },
+  "fingerprint": "active-evidence-war-room-final-report:sha256:2e808eb4d6925fd70f1d3e2d58561c5d79e27a5f06cb7160eefb8cf80e056466"
+}

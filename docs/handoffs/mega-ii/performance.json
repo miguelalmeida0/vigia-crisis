@@ -1,0 +1,295 @@
+{
+  "capturedAt": "2026-09-12T17:31:22.759Z",
+  "state": "PERFORMANCE_GATE_OPEN",
+  "method": "Pinned Docker Chromium, 1728x966 CSS pixels, one transparent local proxy, real backend, browser cache enabled. First useful frame is the first observed tile/render or retained loaded-renderer frame after navigation. Two cold sessions per lane. Shared 16 GB workstation; background source work remains active.",
+  "cases": {
+    "cold": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 5586.800000000745,
+        "p95Ms": 6941.800000000745
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 12431.800000000745,
+        "p95Ms": 16786.800000000745
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 5000.89999999851,
+        "p95Ms": 5824.89999999851
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 8336.89999999851,
+        "p95Ms": 8336.89999999851
+      }
+    },
+    "detail-to-fire": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 5202.9000000003725,
+        "p95Ms": 7314.800000000745
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 3786.0999999996275,
+        "p95Ms": 6776
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 7891.5,
+        "p95Ms": 9534.79999999702
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 9542.199999999255,
+        "p95Ms": 9542.199999999255
+      }
+    },
+    "fire-to-response": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 8855.64999999851,
+        "p95Ms": 14507.099999997765
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 5871.950000001118,
+        "p95Ms": 9525.70000000298
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 10052.099999999627,
+        "p95Ms": 12073.89999999851
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 10898.800000000745,
+        "p95Ms": 10898.800000000745
+      }
+    },
+    "response-to-detail": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 338,
+        "p95Ms": 517.6000000014901
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 1268.75,
+        "p95Ms": 2224.89999999851
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 925.2000000011176,
+        "p95Ms": 1133.6000000014901
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 1529.300000000745,
+        "p95Ms": 1529.300000000745
+      }
+    },
+    "cached-revisit": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 296.05000000074506,
+        "p95Ms": 537.6000000014901
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 939.25,
+        "p95Ms": 1519.699999999255
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 382.69999999925494,
+        "p95Ms": 704.8999999985099
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 853.2000000029802,
+        "p95Ms": 853.2000000029802
+      }
+    },
+    "incident-switch": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 11432.700000001118,
+        "p95Ms": 20224.900000002235
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 6115.6500000003725,
+        "p95Ms": 9004.10000000149
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 3104.349999997765,
+        "p95Ms": 4357.79999999702
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 3231.2000000029802,
+        "p95Ms": 3231.2000000029802
+      }
+    },
+    "overview": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 2075.550000000745,
+        "p95Ms": 2096.699999999255
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 8681.400000000373,
+        "p95Ms": 14992.699999999255
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 1891.4000000003725,
+        "p95Ms": 1997.3999999985099
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 1300.2000000029802,
+        "p95Ms": 1300.2000000029802
+      }
+    },
+    "national": {
+      "before": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 2576.10000000149,
+        "p95Ms": 2979.10000000149
+      },
+      "after": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 1316.8499999996275,
+        "p95Ms": 1648.8999999985099
+      },
+      "optimized": {
+        "samples": 2,
+        "completed": 2,
+        "timeouts": 0,
+        "p50Ms": 2511.050000000745,
+        "p95Ms": 2706
+      },
+      "compact": {
+        "samples": 1,
+        "completed": 1,
+        "timeouts": 0,
+        "p50Ms": 2736.10000000149,
+        "p95Ms": 2736.10000000149
+      }
+    }
+  },
+  "overall": {
+    "before": {
+      "samples": 16,
+      "completed": 16,
+      "timeouts": 0,
+      "p50Ms": 2809.800000000745,
+      "p95Ms": 20224.900000002235
+    },
+    "after": {
+      "samples": 16,
+      "completed": 16,
+      "timeouts": 0,
+      "p50Ms": 2297.5,
+      "p95Ms": 16786.800000000745
+    },
+    "optimized": {
+      "samples": 16,
+      "completed": 16,
+      "timeouts": 0,
+      "p50Ms": 2511.050000000745,
+      "p95Ms": 12073.89999999851
+    },
+    "compact": {
+      "samples": 8,
+      "completed": 8,
+      "timeouts": 0,
+      "p50Ms": 2983.650000002235,
+      "p95Ms": 10898.800000000745
+    }
+  },
+  "consoleErrors": {
+    "before": [],
+    "after": [],
+    "optimized": [],
+    "compact": []
+  },
+  "limitation": "Two samples per route do not establish a statistical no-regression guarantee. PostGIS calls are not attributed per browser navigation. No results are omitted.",
+  "navigationFailures": [
+    {
+      "lane": "compact",
+      "case": "cold",
+      "sample": 1,
+      "stage": "DOMContentLoaded",
+      "timeoutMs": 30000,
+      "remainingUnexecutedCases": 7
+    }
+  ],
+  "recordedResultsExcludeAbortedNavigation": true
+}

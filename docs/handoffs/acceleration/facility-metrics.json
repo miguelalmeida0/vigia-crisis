@@ -1,0 +1,401 @@
+{
+  "total": 299,
+  "originalRetained": 113,
+  "coverage": {
+    "canonicalType": {
+      "count": 299,
+      "total": 299,
+      "percent": 100
+    },
+    "address.street": {
+      "count": 239,
+      "total": 299,
+      "percent": 79.93
+    },
+    "contact.phone": {
+      "count": 228,
+      "total": 299,
+      "percent": 76.25
+    },
+    "contact.website": {
+      "count": 222,
+      "total": 299,
+      "percent": 74.25
+    },
+    "operator": {
+      "count": 204,
+      "total": 299,
+      "percent": 68.23
+    }
+  },
+  "byType": {
+    "water_point": {
+      "total": 19,
+      "coverage": {
+        "canonicalType": {
+          "count": 19,
+          "total": 19,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 0,
+          "total": 19,
+          "percent": 0
+        },
+        "contact.phone": {
+          "count": 0,
+          "total": 19,
+          "percent": 0
+        },
+        "contact.website": {
+          "count": 0,
+          "total": 19,
+          "percent": 0
+        },
+        "operator": {
+          "count": 0,
+          "total": 19,
+          "percent": 0
+        }
+      }
+    },
+    "health_center": {
+      "total": 170,
+      "coverage": {
+        "canonicalType": {
+          "count": 170,
+          "total": 170,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 168,
+          "total": 170,
+          "percent": 98.82
+        },
+        "contact.phone": {
+          "count": 163,
+          "total": 170,
+          "percent": 95.88
+        },
+        "contact.website": {
+          "count": 161,
+          "total": 170,
+          "percent": 94.71
+        },
+        "operator": {
+          "count": 157,
+          "total": 170,
+          "percent": 92.35
+        }
+      }
+    },
+    "police_station": {
+      "total": 16,
+      "coverage": {
+        "canonicalType": {
+          "count": 16,
+          "total": 16,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 12,
+          "total": 16,
+          "percent": 75
+        },
+        "contact.phone": {
+          "count": 5,
+          "total": 16,
+          "percent": 31.25
+        },
+        "contact.website": {
+          "count": 2,
+          "total": 16,
+          "percent": 12.5
+        },
+        "operator": {
+          "count": 11,
+          "total": 16,
+          "percent": 68.75
+        }
+      }
+    },
+    "hospital": {
+      "total": 22,
+      "coverage": {
+        "canonicalType": {
+          "count": 22,
+          "total": 22,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 16,
+          "total": 22,
+          "percent": 72.73
+        },
+        "contact.phone": {
+          "count": 19,
+          "total": 22,
+          "percent": 86.36
+        },
+        "contact.website": {
+          "count": 16,
+          "total": 22,
+          "percent": 72.73
+        },
+        "operator": {
+          "count": 14,
+          "total": 22,
+          "percent": 63.64
+        }
+      }
+    },
+    "fire_station": {
+      "total": 35,
+      "coverage": {
+        "canonicalType": {
+          "count": 35,
+          "total": 35,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 28,
+          "total": 35,
+          "percent": 80
+        },
+        "contact.phone": {
+          "count": 26,
+          "total": 35,
+          "percent": 74.29
+        },
+        "contact.website": {
+          "count": 24,
+          "total": 35,
+          "percent": 68.57
+        },
+        "operator": {
+          "count": 21,
+          "total": 35,
+          "percent": 60
+        }
+      }
+    },
+    "shelter_generic": {
+      "total": 17,
+      "coverage": {
+        "canonicalType": {
+          "count": 17,
+          "total": 17,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 0,
+          "total": 17,
+          "percent": 0
+        },
+        "contact.phone": {
+          "count": 0,
+          "total": 17,
+          "percent": 0
+        },
+        "contact.website": {
+          "count": 0,
+          "total": 17,
+          "percent": 0
+        },
+        "operator": {
+          "count": 0,
+          "total": 17,
+          "percent": 0
+        }
+      }
+    },
+    "public_prosecutor": {
+      "total": 10,
+      "coverage": {
+        "canonicalType": {
+          "count": 10,
+          "total": 10,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 10,
+          "total": 10,
+          "percent": 100
+        },
+        "contact.phone": {
+          "count": 10,
+          "total": 10,
+          "percent": 100
+        },
+        "contact.website": {
+          "count": 10,
+          "total": 10,
+          "percent": 100
+        },
+        "operator": {
+          "count": 0,
+          "total": 10,
+          "percent": 0
+        }
+      }
+    },
+    "other_public_facility": {
+      "total": 5,
+      "coverage": {
+        "canonicalType": {
+          "count": 5,
+          "total": 5,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 4,
+          "total": 5,
+          "percent": 80
+        },
+        "contact.phone": {
+          "count": 4,
+          "total": 5,
+          "percent": 80
+        },
+        "contact.website": {
+          "count": 4,
+          "total": 5,
+          "percent": 80
+        },
+        "operator": {
+          "count": 0,
+          "total": 5,
+          "percent": 0
+        }
+      }
+    },
+    "civil_protection": {
+      "total": 1,
+      "coverage": {
+        "canonicalType": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "contact.phone": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "contact.website": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "operator": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        }
+      }
+    },
+    "school": {
+      "total": 2,
+      "coverage": {
+        "canonicalType": {
+          "count": 2,
+          "total": 2,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 0,
+          "total": 2,
+          "percent": 0
+        },
+        "contact.phone": {
+          "count": 0,
+          "total": 2,
+          "percent": 0
+        },
+        "contact.website": {
+          "count": 2,
+          "total": 2,
+          "percent": 100
+        },
+        "operator": {
+          "count": 0,
+          "total": 2,
+          "percent": 0
+        }
+      }
+    },
+    "municipal_building": {
+      "total": 1,
+      "coverage": {
+        "canonicalType": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 0,
+          "total": 1,
+          "percent": 0
+        },
+        "contact.phone": {
+          "count": 0,
+          "total": 1,
+          "percent": 0
+        },
+        "contact.website": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "operator": {
+          "count": 0,
+          "total": 1,
+          "percent": 0
+        }
+      }
+    },
+    "temporary_reception_center": {
+      "total": 1,
+      "coverage": {
+        "canonicalType": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "address.street": {
+          "count": 0,
+          "total": 1,
+          "percent": 0
+        },
+        "contact.phone": {
+          "count": 0,
+          "total": 1,
+          "percent": 0
+        },
+        "contact.website": {
+          "count": 1,
+          "total": 1,
+          "percent": 100
+        },
+        "operator": {
+          "count": 0,
+          "total": 1,
+          "percent": 0
+        }
+      }
+    }
+  },
+  "hasMappedCoordinate": 113,
+  "reviewLimit": "Source consistency review, not independent field verification. No geometry is inferred from an address.",
+  "resolution": {
+    "unresolved": 36,
+    "probable": 86,
+    "resolved": 177
+  },
+  "incorrect": "Not independently established"
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "vigia.osm-thermal-context-archive.v1",
+  "acquiredAt": "2026-08-13T07:58:12.838Z",
+  "provider": "OpenStreetMap contributors via Overpass API and Nominatim",
+  "license": "ODbL 1.0 attribution required",
+  "selection": "All returned Portugal-bbox OSM features matching the frozen heat-context tag query; no detector outcomes entered selection.",
+  "referenceQualification": "Collaboratively mapped land-use/site context. It is an input feature, not fire/non-fire ground truth and may be incomplete or stale.",
+  "query": "[out:json][timeout:180];(\n  nwr[\"landuse\"~\"^(industrial|quarry|landfill)$\"](36.7,-9.75,42.3,-6);\n  nwr[\"power\"~\"^(plant|generator)$\"](36.7,-9.75,42.3,-6);\n  nwr[\"man_made\"~\"^(works|kiln|flare|wastewater_plant)$\"](36.7,-9.75,42.3,-6);\n  nwr[\"industrial\"](36.7,-9.75,42.3,-6);\n  nwr[\"amenity\"~\"^(waste_transfer_station|waste_disposal)$\"](36.7,-9.75,42.3,-6);\n);out tags center geom;",
+  "files": [
+    {
+      "role": "thermal_context_features",
+      "file": "data/replay/raw/openstreetmap/portugal-thermal-context-v1/thermal-context-features.json",
+      "checksumSha256": "0875aa90aff3b22a604d48602fcd9c570603a3e0f8f76e796da79b18f11435c3",
+      "bytes": 77824688,
+      "elements": 122552,
+      "resumed": false
+    },
+    {
+      "role": "country_boundary",
+      "file": "data/replay/raw/openstreetmap/portugal-thermal-context-v1/portugal-boundary.json",
+      "checksumSha256": "15f12c4a090e31951cf245120c7e71d282d1a0dc9ab52c1668901d6731e09437",
+      "bytes": 402937,
+      "results": 1,
+      "resumed": false
+    }
+  ]
+}

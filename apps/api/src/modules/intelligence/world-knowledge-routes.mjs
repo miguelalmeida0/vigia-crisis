@@ -1,0 +1,8 @@
+import { json,problem } from '../../http/responses.mjs';
+import { assertCan,assertIncidentScope } from '../../../../../packages/domain/src/authorization.mjs';
+
+export function registerWorldKnowledgeRoutes(router,{worldKnowledgeService}){
+ router.get('/api/v10/operator/world-knowledge/facilities/:entityId',async({res,params,context})=>{assertCan(context.actor,'read:incident_command');const entity=await worldKnowledgeService.entity(params.entityId);if(!entity)return problem(res,404,'entity_not_found','Facility not found.');json(res,200,entity);});
+ router.get('/api/v10/operator/world-knowledge/query',async({res,url,req,context})=>{assertCan(context.actor,'read:incident_command');const query=(url instanceof URL?url:new URL(req.url,'http://localhost')).searchParams,incidentId=query.get('incidentId');if(query.get('question')==='relationships'&&!incidentId)return problem(res,400,'incident_required','Select an incident to query relationships.');if(incidentId)assertIncidentScope(context.actor,incidentId);if(query.has('longitude')!==query.has('latitude')||(query.has('longitude')&&(!query.get('longitude')?.trim()||!query.get('latitude')?.trim())))return problem(res,400,'coordinate_required','Supply both longitude and latitude.');const coordinate=query.has('longitude')?[Number(query.get('longitude')),Number(query.get('latitude'))]:null;json(res,200,{results:await worldKnowledgeService.query({question:query.get('question')??'findFacilities',type:query.get('type'),coordinate,incidentId,limit:Number(query.get('limit')??50)})});});
+ router.get('/api/v10/operator/world-knowledge/health',async({res,context})=>{assertCan(context.actor,'read:incident_command');json(res,200,await worldKnowledgeService.status());});
+}

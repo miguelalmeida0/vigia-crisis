@@ -1,0 +1,223 @@
+{
+  "lane": "CANONICAL_RENDERED_UI",
+  "screens": [
+    {
+      "name": "support-entry",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": null,
+      "body": "Operational support\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "operational-picture",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "communities",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Causal timeline\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nShow communities with limited redundancy\nLouredo\n\n112 residents \u00b7 Census 2021 \u00b7 0.7 km from incident point\n\nOnly one retained qualified emergency hospital\n\nPatacas\n\n50 residents \u00b7 Census 2021 \u00b7 1.3 km from incident point\n\nOnly one retained qualified emergency hospital\n\nPio\n\n31 residents \u00b7 Census 2021 \u00b7 2.4 km from incident point\n\nOnly one retained qualified emergency hospital\n\nLagarto\n\n47 residents \u00b7 Census 2021 \u00b7 2.5 km from incident point\n\nOnly one retained qualified emergency hospital\n\nBairro dos Canaviais\n\n2313 residents \u00b7 Census 2021 \u00b7 2.8 km from incident point\n\nOnly one retained qualified emergency hospital\n\nPachola\n\n26 residents \u00b7 Census 2021 \u00b7 3.1 km from incident point\n\nOnly one retained qualified emergency hospital\n\nCanaviais\n\n3.2 km from incident point\n\nNearby reception activation is unconfirmed\n\nHorta do Peres\n\n31 residents \u00b7 Census 2021 \u00b7 3.3 km from incident point\n\nNearby reception activation is unconfirmed\n\nBacelo\n\n3.4 km from incident point\n\nNearby reception activation is unconfirmed\n\nPat\u00e3o\n\n103 residents \u00b7 Census 2021 \u00b7 3.9 km from incident point\n\nNearby reception activation is unconfirmed\n\nEspinheiro\n\n50 residents \u00b7 Census 2021 \u00b7 4.2 km from incident point\n\nNearby reception activation is unconfirmed\n\nNossa Senhora da Gra\u00e7a de Divor\n\n374 residents \u00b7 Census 2021 \u00b7 5.8 km from incident point\n\nNo current qualified healthcare route retained\n\nGarraia\n\n95 residents \u00b7 Census 2021 \u00b7 5.9 km from incident point\n\nNearby reception activation is unconfirmed\n\nNossa Senhora da Gra\u00e7a do Divor\n\n5.9 km from incident point\n\nNo current qualified healthcare route retained\n\nVale Vazio\n\n26 residents \u00b7 Census 2021 \u00b7 6.0 km from"
+    },
+    {
+      "name": "louredo",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Community intelligence\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nShow support network\nTest access loss\nShow coverage\nLouredo\nFrom reported incident point\n0.7 km\nMunicipality\n\u00c9vora\nPopulation context\n112 residents \u00b7 Census 2021\n\nCensus population is not the number of people currently present.\n\nSupport for this community\nEmergency healthcare\n\nHospital do Esp\u00edrito Santo de \u00c9vora \u00b7 10 min calculated\n\nRoute and source\nFire response\n\nBombeiros Volunt\u00e1rios de \u00c9vora \u00b7 10 min calculated\n\nRoute and source\n\nFacility-to-community calculated routes. No evacuation need is inferred from proximity.\n\nDesignated reception within 8 km\nEscola B\u00e1sica de Canaviais\n\n2.2 km straight line \u00b7 No current activation confirmed\n\nEscola B\u00e1sica Conde de Vilalva\n\n4.0 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Gabriel Pereira\n\n5.4 km straight line \u00b7 No current activation confirmed\n\nEscola B\u00e1sica Andr\u00e9 de Resende\n\n5.7 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Andr\u00e9 de Gouveia\n\n5.7 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Severim de Faria\n\n6.0 km straight line \u00b7 No current activation confirmed\n\nLocation and population sources\nSupport resilience\nOnly one retained qualified emergency hospital\nOnly one retained qualified fire-response option\nPrimary hospital and fire routes share EM527\nNearby reception activation is unconfirmed\nAsk the map\nAsk"
+    },
+    {
+      "name": "healthcare-coverage",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Community intelligence\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\n\n\u226415 / 15\u201330 / >30 min or no retained route. Points and calculated paths only.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "limited-redundancy",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Causal timeline\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\n\n\u226415 / 15\u201330 / >30 min or no retained route. Points and calculated paths only.\n\nShow communities with limited redundancy\nLouredo\n\n112 residents \u00b7 Census 2021 \u00b7 0.7 km from incident point\n\nOnly one retained qualified emergency hospital\n\nPatacas\n\n50 residents \u00b7 Census 2021 \u00b7 1.3 km from incident point\n\nOnly one retained qualified emergency hospital\n\nPio\n\n31 residents \u00b7 Census 2021 \u00b7 2.4 km from incident point\n\nNearby reception activation is unconfirmed\n\nLagarto\n\n47 residents \u00b7 Census 2021 \u00b7 2.5 km from incident point\n\nNearby reception activation is unconfirmed\n\nBairro dos Canaviais\n\n2313 residents \u00b7 Census 2021 \u00b7 2.8 km from incident point\n\nOnly one retained qualified emergency hospital\n\nPachola\n\n26 residents \u00b7 Census 2021 \u00b7 3.1 km from incident point\n\nOnly one retained qualified emergency hospital\n\nCanaviais\n\n3.2 km from incident point\n\nNearby reception activation is unconfirmed\n\nHorta do Peres\n\n31 residents \u00b7 Census 2021 \u00b7 3.3 km from incident point\n\nNearby reception activation is unconfirmed\n\nBacelo\n\n3.4 km from incident point\n\nNearby reception activation is unconfirmed\n\nPat\u00e3o\n\n103 residents \u00b7 Census 2021 \u00b7 3.9 km from incident point\n\nNearby reception activation is unconfirmed\n\nEspinheiro\n\n50 residents \u00b7 Census 2021 \u00b7 4.2 km from incident point\n\nNearby reception activation is unconfirmed\n\nNossa Senhora da Gra\u00e7a de Divor\n\n374 residents \u00b7 Census 2021 \u00b7 5.8 km from incident point\n\nNo current qualified healthcare route retained\n\nGarraia\n\n95 residents \u00b7 Census 2021 \u00b7 5.9 km from incident point\n\nNearby reception activation is unconfirmed\n\nNossa Senhora da Gra\u00e7a do Divor\n\n5.9 km from incident point\n\nNo current qualified healthc"
+    },
+    {
+      "name": "gaps",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Intelligence gaps\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\n\n\u226415 / 15\u201330 / >30 min or no retained route. Points and calculated paths only.\n\nVerified emergency hospital\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nVerified fire-response facility\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nCivil protection\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nDesignated reception location\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nReception\n\nNo current activation confirmed\n\nNot retained in this incident context\n\nSource coverage\n\n14 retained sources are stale or unavailable\n\nSource unavailable\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "causal-timeline",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Intelligence gaps\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\n\n\u226415 / 15\u201330 / >30 min or no retained route. Points and calculated paths only.\n\nVerified emergency hospital\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nVerified fire-response facility\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nCivil protection\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nDesignated reception location\n\nNo current qualified facility route retained\n\nNot retained in this incident context\n\nReception\n\nNo current activation confirmed\n\nNot retained in this incident context\n\nSource coverage\n\n14 retained sources are stale or unavailable\n\nSource unavailable\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "replay-controls",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Mission Replay\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\n\n\u226415 / 15\u201330 / >30 min or no retained route. Points and calculated paths only.\n\nHistorical replay \u00b7 retained captures only. Gaps between captures are unknown.\n\nRetained time\n13 Sept, 08:33 UTC\nPlay\nStep\nCompare with now\nReturn to now\nAsk the map\nAsk"
+    },
+    {
+      "name": "replay-frame",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "HISTORICAL",
+      "body": "Mission Replay\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nHistorical replay \u00b7 retained captures only. Gaps between captures are unknown.\n\nRetained time\n13 Sept, 08:33 UTC\nPlay\nStep\nCompare with now\nReturn to now\n\nShowing 13 Sept, 08:33 UTC\n\nTemperature: 17.9 \u00b0C \u00b7 measured 13 Sept, 07:00 UTC\n\nWind: 4 km/h \u00b7 measured 13 Sept, 07:00 UTC\n\nSource freshness changed\n\nActive civil-protection occurrences\n\nBefore\nCURRENT\nNow\nSTALE\nRecorded\n13 Sept, 08:33 UTC\nEmergency healthcare\nHospital do Esp\u00edrito Santo de \u00c9vora\n11 min\n\nVerified emergency department\n\nOnly retained qualified option\n\nEM527\nCM1081-1\n\nCalculated 13 Sept, 08:29 UTC \u00b7 facility to incident\n\nFire response\nBombeiros Volunt\u00e1rios de \u00c9vora\n11 min\n\nVerified fire-response capability\n\nOnly retained qualified option\n\nEM527\nCM1081-1\n\nCalculated 13 Sept, 08:29 UTC \u00b7 facility to incident\n\nReception\nEscola B\u00e1sica de Canaviais\n7 min\n\nOfficially designated \u00b7 activation separately verified\n\nAlternative: Escola B\u00e1sica Conde de Vilalva \u00b7 10 min\n\nCM1087\nEM527\nCM1081-1\n\nCalculated 13 Sept, 08:29 UTC \u00b7 facility to incident\n\nShared access\nCM1081-1\n8 retained support relationships\nTest unavailable\nEM527\n8 retained support relationships\nTest unavailable\nCM1087\n1 retained support relationships\nTest unavailable\n\nShared primary access\nHospital do Esp\u00edrito Santo de \u00c9vora and Bombeiros Volunt\u00e1rios de \u00c9vora use EM527 in their primary calculated routes.\n\nShared primary access\nHospital do Esp\u00edrito Santo de \u00c9vora and Bombeiros Volunt\u00e1rios de \u00c9vora use CM1081-1 in their primary calculated routes.\n\nNo retained alternative\nHospital do Esp\u00edrito Santo de \u00c9vora is the only verified emergency hospital with a current calculated route in this retained set.\n\nPartial ro"
+    },
+    {
+      "name": "replay-compare",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "HISTORICAL",
+      "body": "Mission Replay\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nHistorical replay \u00b7 retained captures only. Gaps between captures are unknown.\n\nRetained time\n13 Sept, 08:34 UTC\nPlay\nStep\nCompare with now\nReturn to now\nQualified facility changed\n\nLowest calculated hospital route\n\nBefore\nNot retained\nNow\nRetained operational relationship\nRecorded\n13 Sept, 10:41 UTC\nWeather changed\n\nTemperature\n\nBefore\n17.9 \u00b0C \u00b7 13 Sept, 07:00 UTC\nNow\n25.9 \u00b0C \u00b7 13 Sept, 09:00 UTC\nRecorded\n13 Sept, 10:41 UTC\nSource freshness changed\n\nMeteorological station observations\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 10:41 UTC\nSource freshness changed\n\nActive civil-protection occurrences\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 10:41 UTC\nSource freshness changed\n\nHistorical rural-fire records\n\nBefore\nCURRENT\nNow\nLAST_KNOWN\nRecorded\n13 Sept, 10:41 UTC\nSupport and access changes\n\u00c9vora \u00b7 Emergency healthcare\nPrimary\nNone retained \u2192 Hospital do Esp\u00edrito Santo de \u00c9vora\nCalculated minutes\n\u2014 \u2192 11.2\nRetained options\n0 \u2192 1\n\u00c9vora \u00b7 Fire response\nPrimary\nNone retained \u2192 Bombeiros Volunt\u00e1rios de \u00c9vora\nCalculated minutes\n\u2014 \u2192 10.8\nRetained options\n0 \u2192 1\n\u00c9vora \u00b7 Designated reception\nPrimary\nNone retained \u2192 Escola B\u00e1sica de Canaviais\nCalculated minutes\n\u2014 \u2192 6.9\nRetained options\n0 \u2192 6\nLouredo \u00b7 Emergency healthcare\nPrimary\nNone retained \u2192 Hospital do Esp\u00edrito Santo de \u00c9vora\nCalculated minutes\n\u2014 \u2192 10.1\nRetained options\n0 \u2192 1\nLouredo \u00b7 Fire response\nPrimary\nNone retained \u2192 Bombeiros Volunt\u00e1rios de \u00c9vora\nCalculated minutes\n\u2014 \u2192 9.7\nRetained options\n0 \u2192 1\nPatacas \u00b7 Emergency healthcare\nPrimary\nNone retained \u2192 Hospital do Esp\u00edrito Santo de \u00c9vora\nCalculated minutes\n\u2014 \u2192 11.9\nRetained options\n0 \u2192 1\nPatacas \u00b7 Fire response\nP"
+    },
+    {
+      "name": "stress-test",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\nTesting bounded failure assumptions\u2026\nAsk the map\nAsk"
+    },
+    {
+      "name": "ask-map",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-1440",
+      "width": 1440,
+      "height": 900,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-1280",
+      "width": 1280,
+      "height": 800,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-1024",
+      "width": 1024,
+      "height": 768,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-768",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-430",
+      "width": 430,
+      "height": 932,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "operational-320",
+      "width": 320,
+      "height": 568,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "mobile-support",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational Stress Test\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\n\nScenario analysis \u00b7 12 bounded cases \u00b7 no operational writes.\n\nMost consequential retained dependency\n\nEM527 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nEM527 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n28 affected relationships \u00b7 10 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Hospital do Esp\u00edrito Santo de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nCombined failure\n\nCM1081-1 + Bombeiros Volunt\u00e1rios de \u00c9vora\n\n27 affected relationships \u00b7 9 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nEM527\n\n21 affected relationships \u00b7 5 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1081-1\n\n19 affected relationships \u00b7 3 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nHospital do Esp\u00edrito Santo de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nBombeiros Volunt\u00e1rios de \u00c9vora\n\n10 affected relationships \u00b7 7 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087\n\n9 affected relationships \u00b7 6 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1087-1\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nCM1088\n\n8 affected relationships \u00b7 4 support groups lose their retained option\n\nInspect consequences\nSingle failure\n\nN254\n\n3 affected relationships \u00b7 0"
+    },
+    {
+      "name": "command-overview-mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "incidents-mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "incident-detail-mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\nHospital do Esp\u00edrito Santo de \u00c9vora\n11 min\n\nVerified emergency department\n\nOnly retained qualified option\n\nEM527\nCM1081-1\n\nCalculated 13 Sept, 10:41 UTC \u00b7 facility to incident\n\nFire response\nBombeiros Volunt\u00e1rios de \u00c9vora\n11 min\n\nVerified fire-response capability\n\nOnly retained qualified option\n\nEM527\nCM1081-1\n\nCalculated 13 Sept, 10:41 UTC \u00b7 facility to incident\n\nReception\nEscola B\u00e1sica de Canaviais\n7 min\n\nOfficially designated \u00b7 activation separately verified\n\nAlternative: Escola B\u00e1sica Conde de Vilalva \u00b7 10 min\n\nCM1087\nEM527\nCM1081-1\n\nCalculated 13 Sept, 10:41 UTC \u00b7 facility to incident\n\nShared access\nEM527\n10 retained support relationships\nTest unavailable\nCM1081-1\n8 retained support relationships\nTest unavailable\nCM1087\n7 retained support relationships\nTest unavailable\n\nShared primary access\nHospital do Esp\u00edrito Santo de \u00c9vora and Bombeiros Volunt\u00e1rios de \u00c9vora use EM527 in their primary calculated routes.\n\nShared primary access\nHospital do Esp\u00edrito Santo de \u00c9vora and Bombeiros Volunt\u00e1rios de \u00c9vora use CM1081-1 in their primary calculated routes.\n\nNo retained alternative\nHospital do Esp\u00edrito Santo de \u00c9vora is the only verified emergency hospital with a current calculated route in this retained set.\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "fire-activity-mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "national-awareness-mobile",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    }
+  ],
+  "errors": [],
+  "checks": []
+}

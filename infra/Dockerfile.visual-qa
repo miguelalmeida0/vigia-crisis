@@ -1,0 +1,29 @@
+FROM mcr.microsoft.com/playwright:v1.54.0-noble@sha256:497b39d156007a502137473087635da73485103075de63dfd0a5208e6f5528b6
+
+ENV DEBIAN_FRONTEND=noninteractive \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    OPENCV_OPENCL_RUNTIME=disabled
+
+WORKDIR /opt/vigia-visual-qa
+
+RUN apt-get update \
+    && apt-get install --yes --no-install-recommends python3-venv fonts-roboto \
+    && fc-cache -f \
+    && rm -rf /var/lib/apt/lists/*
+
+ENV VIRTUAL_ENV=/opt/vigia-visual-qa/.venv \
+    PATH=/opt/vigia-visual-qa/.venv/bin:${PATH}
+
+RUN python3 -m venv "${VIRTUAL_ENV}"
+
+COPY scripts/visual-qa/package.json scripts/visual-qa/package-lock.json ./
+RUN npm ci --omit=dev --ignore-scripts=false
+
+COPY scripts/visual-qa/requirements.txt ./requirements.txt
+RUN python -m pip install --no-cache-dir -r requirements.txt
+
+COPY scripts/visual-qa/capture.py scripts/visual-qa/compare.mjs scripts/visual-qa/extract_contract.py scripts/visual-qa/golden-fixture.json ./
+
+ENTRYPOINT ["python", "/opt/vigia-visual-qa/capture.py"]

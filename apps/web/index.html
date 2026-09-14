@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#080b09">
+  <meta name="description" content="VIGIA is a territory-first wildfire physical intelligence system for pre-ignition screening, independent thermal detection, living fire evidence and accountable action.">
+  <title>VIGIA — Territory Physical Intelligence</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23080b09'/><path d='M15 43V27m11 16V17m11 26V23m11 20V12' stroke='%23ede6d5' stroke-width='5'/><circle cx='48' cy='12' r='4' fill='%23e1aa43'/></svg>">
+  <link rel="stylesheet" href="/styles/v2/tokens.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/base.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/shell.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/map.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/components.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/observation.css?v=10.0.0-avoidance-r11">
+  <link rel="stylesheet" href="/styles/v2/responsive.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/live.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/replay.css?v=10.0.0-command-r4">
+  <link rel="stylesheet" href="/styles/v2/category.css?v=10.0.0-category-r11">
+  <link rel="stylesheet" href="/styles/v2/fieldnet.css?v=10.0.0-fieldnet-r1">
+  <link rel="stylesheet" href="/styles/v2/fireground.css?v=10.0.0-fireground-r3">
+  <link rel="stylesheet" href="/styles/v2/fireground-responsive.css?v=10.0.0-fireground-r3">
+  <link rel="stylesheet" href="/styles/v2/mission-dark.css?v=mission-dark-r3">
+  <link rel="stylesheet" href="/styles/v2/overview-golden.css?v=overview-golden-r1">
+</head>
+<body>
+  <a class="skip-link" href="#main-workspace">Skip to operational workspace</a>
+  <div id="app" class="gt-app" data-view="live" data-ready="false">
+    <aside class="md-rail" aria-label="VIGIA mission navigation">
+      <button type="button" class="gt-brand" data-action="home" aria-label="Open Territory Command">
+        <span class="gt-brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span><strong>VIGIA</strong><small>MISSION DARK</small></span>
+      </button>
+      <nav class="gt-nav" aria-label="Product area">
+        <button type="button" class="is-active" data-view-button="live" aria-label="Overview"><span>01</span><b>Overview</b></button>
+        <button type="button" data-view-button="incidents" aria-label="Detect"><span>02</span><b>Detect</b></button>
+        <button type="button" data-view-button="observe" aria-label="Prevent"><span>03</span><b>Prevent</b></button>
+        <a href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=INCIDENT_COMMAND&amp;panel=overview&amp;exercise=1" aria-label="Respond"><span>04</span><b>Respond</b></a>
+        <a href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=INCIDENT_COMMAND&amp;panel=resources&amp;exercise=1" aria-label="Resources"><span>05</span><b>Resources</b></a>
+        <button type="button" data-view-button="validation" aria-label="Evidence"><span>06</span><b>Evidence</b></button>
+      </nav>
+      <nav class="md-utility-nav" aria-label="System utilities">
+        <span>OPERATIONS</span>
+        <button type="button" data-action="sources">Source health</button>
+        <a href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=INCIDENT_COMMAND&amp;panel=fieldnet&amp;exercise=1" data-action="open-fieldnet">FieldNet</a>
+        <a class="md-overview-omit" href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=ACCOUNTABILITY&amp;panel=people&amp;exercise=1">Accountability</a>
+        <a class="md-overview-omit" href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=DISPATCH_EOC&amp;panel=overview&amp;exercise=1">Dispatch / EOC</a>
+        <button type="button" data-view-button="system">System proof</button>
+        <button type="button" data-action="settings">Settings</button>
+        <a class="md-overview-omit" href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=INCIDENT_COMMAND&amp;panel=fallback&amp;exercise=1">Fallback</a>
+      </nav>
+      <div class="md-rail-foot"><i></i><span>Portugal cell</span><strong>V10.0</strong></div>
+    </aside>
+
+    <section class="md-shell">
+    <header class="gt-topbar">
+      <div class="md-mission-heading"><span>PORTUGAL / MISSION CONTROL</span><strong data-mission-title>Wildfire physical intelligence</strong></div>
+      <div class="gt-top-actions">
+        <span class="release-badge" data-release-badge>VERIFYING RELEASE</span>
+        <button type="button" class="source-state" data-action="sources" aria-label="Open source health" aria-haspopup="dialog"><i></i><span data-source-state>Connecting</span></button>
+        <button type="button" class="system-route" data-view-button="system">System proof</button>
+        <button type="button" class="secondary-route" data-view-button="replay">Replay</button>
+        <button type="button" class="secondary-route" data-action="settings">Settings</button>
+        <button type="button" class="alert-route" data-action="alerts" aria-haspopup="dialog"><span>Alerts</span><b data-alert-count>—</b></button>
+        <button type="button" class="work-route" data-action="work" aria-haspopup="dialog"><span>Work</span><b data-work-count>0</b></button>
+        <div class="actor-switch" data-actor-switch><span data-actor-caption>Session identity</span><button type="button" data-actor-static data-action="authenticate">Read-only viewer</button></div>
+      </div>
+    </header>
+    <main id="main-workspace" class="gt-workspace" tabindex="-1">
+      <aside class="gt-queue" data-queue>
+        <header class="queue-head"><div><span data-queue-kicker>ATTENTION QUEUE</span><h1 data-queue-title>What requires attention now?</h1></div><button type="button" class="command-session-identity" data-command-identity><strong>Resolving identity</strong><small>Server-authoritative session</small></button><button type="button" data-action="toggle-queue" aria-label="Collapse queue">‹</button></header>
+        <div class="queue-summary" data-queue-summary></div>
+        <div class="queue-tools"><label class="search-box"><span aria-hidden="true">⌕</span><input data-search aria-label="Search place, report, or task" placeholder="Search place, report or task" autocomplete="off"></label><div class="filter-strip" data-filters></div></div>
+        <div class="queue-list" data-queue-list></div>
+        <footer class="queue-footer"><span data-mode-label>PUBLIC-SOURCE INTELLIGENCE</span><button type="button" data-action="refresh">Refresh</button></footer>
+      </aside>
+
+      <button type="button" class="panel-edge-handle queue-edge-handle" data-action="toggle-queue" aria-label="Open work queue">Work queue ›</button>
+
+      <section class="gt-stage" data-stage>
+        <div id="map" class="gt-map" aria-label="Portugal operational map"></div>
+        <section class="stage-intro" data-stage-intro></section>
+        <section class="live-overlay" data-live-overlay hidden></section>
+        <section class="observation-workbench" data-observation-workbench hidden></section>
+        <section class="content-workbench" data-content-workbench hidden></section>
+        <div class="map-controls" data-map-controls>
+          <button type="button" data-map-action="home" aria-label="Frame Portugal">PT</button>
+          <button type="button" data-map-action="zoom-in" aria-label="Zoom in">+</button>
+          <button type="button" data-map-action="zoom-out" aria-label="Zoom out">−</button>
+        </div>
+        <div class="mobile-sheet-actions" aria-label="Mobile workspace panels">
+          <button type="button" data-action="mobile-queue">Work queue</button>
+          <button type="button" data-action="mobile-inspector">Details</button>
+        </div>
+        <div class="map-legend" data-map-legend></div>
+        <div class="map-source-note">CARTO / OPENSTREETMAP REFERENCE BASEMAP · CURRENT OBSERVATION METADATA · HUMAN-GATED TRUTH</div>
+        <div class="stage-loading" data-loading><span></span><p>Resolving the territory state</p></div>
+      </section>
+
+      <button type="button" class="panel-edge-handle inspector-edge-handle" data-action="toggle-inspector" aria-label="Open details">‹ Details</button>
+
+      <aside class="gt-inspector" data-inspector>
+        <header class="inspector-head"><span data-inspector-kicker>SELECTED PLACE</span><button type="button" data-action="toggle-inspector" aria-label="Collapse details">›</button></header>
+        <div class="inspector-scroll" data-inspector-content></div>
+        <div class="inspector-actions" data-inspector-actions></div>
+      </aside>
+    </main>
+    </section>
+
+    <nav class="gt-mobile-nav" aria-label="Product area">
+      <button type="button" class="is-active" data-view-button="live">Overview</button>
+      <button type="button" data-view-button="incidents">Detect</button>
+      <button type="button" data-view-button="observe">Prevent</button>
+      <a href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=INCIDENT_COMMAND&amp;panel=overview&amp;exercise=1">Respond</a>
+      <a href="#active-incident=CSX-20260814174314-PT-2026-5C3C5DE25E&amp;role=INCIDENT_COMMAND&amp;panel=resources&amp;exercise=1">Resources</a>
+      <button type="button" data-view-button="validation">Evidence</button>
+      <button type="button" data-action="sources">Source health</button>
+      <button type="button" data-view-button="system">System proof</button>
+      <button type="button" data-action="settings">Settings</button>
+    </nav>
+
+    <dialog class="gt-modal" data-modal><div class="gt-modal-card" data-modal-card></div></dialog>
+    <aside class="gt-drawer" data-drawer role="dialog" aria-modal="true" aria-labelledby="drawer-title" aria-hidden="true"><header><div><span data-drawer-kicker>SYSTEM</span><h2 id="drawer-title" data-drawer-title>System detail</h2></div><button type="button" data-action="close-drawer" aria-label="Close">×</button></header><div data-drawer-content></div></aside>
+    <div class="drawer-scrim" data-action="close-drawer" hidden></div>
+    <div class="toast-region" aria-live="polite" data-toasts></div>
+  </div>
+  <section class="fieldnet-workspace" data-fieldnet-shell hidden aria-label="FieldNet incident workspace"></section>
+  <section class="fireground-workspace" data-fireground-shell hidden aria-label="Active incident command"></section>
+  <script type="module" src="/src/main.js?v=mission-dark-r3-overview-r2"></script>
+</body>
+</html>

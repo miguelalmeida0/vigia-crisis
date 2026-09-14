@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "vigia.intelligence-evaluation-cohorts.v1",
+  "qualification": "Development and held-out deterministic intelligence cases. Controlled cases are rehearsal-only and never enter canonical production truth.",
+  "realHistoricalReferences": [
+    {
+      "caseId": "v4:2023:fire:ICNF-SGIF:64585",
+      "authority": "ICNF SGIF official rural-fire record with retained NASA FIRMS provenance",
+      "use": "Historical replay and later-report boundary"
+    },
+    {
+      "caseId": "v4:2023:fire:ICNF-SGIF:65913",
+      "authority": "ICNF SGIF official rural-fire record with retained NASA FIRMS provenance",
+      "use": "Physical-source chronology and TDT boundary"
+    }
+  ],
+  "development": [
+    "report-only-incident",
+    "single-family-physical-signal",
+    "provider-degraded",
+    "resolved-evidence-need",
+    "association-correction",
+    "fieldnet-degraded",
+    "prevent-measurement-required"
+  ],
+  "heldOut": [
+    "multi-family-physical-event",
+    "stale-physical-event",
+    "contradictory-evidence",
+    "provider-healthy-zero-qualifying-observation",
+    "unresolved-material-unknown",
+    "historical-incident-later-public-report",
+    "determinism-and-explanation-stability"
+  ],
+  "promotionLaw": "No rule may be tuned after inspection of the held-out outcomes without a new rule-set version and a newly frozen held-out cohort."
+}

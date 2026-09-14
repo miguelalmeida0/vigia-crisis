@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "ecmwf-operational-archive",
+  "purpose": "IFS deterministic and ensemble forecasts",
+  "coverage": [
+    "portugal"
+  ],
+  "period": "archive catalogue",
+  "resolution": "high-volume archive",
+  "collectionProcess": "archive/service agreement or eligible research access",
+  "knowledgeTimeSemantics": "ISSUE_TIME_RUN_IDENTITY",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "Historical delivery access is not configured; rolling Open Data cannot reconstruct old incidents."
+  ],
+  "knownMissingness": [
+    "Historical delivery access is not configured; rolling Open Data cannot reconstruct old incidents."
+  ],
+  "licence": "CC-BY-4.0-ECMWF",
+  "appropriateUse": "NONE",
+  "inappropriateUse": "Independent truth without lineage."
+}

@@ -1,0 +1,80 @@
+-- Proposed only. Do not register this migration until Agent 1 migration 018 is merged,
+-- checksummed, and the joint 018 -> 019 ordering test passes.
+-- This file is executable SQL, but it deliberately fails before enabling RLS when
+-- existing canonical rows do not yet carry mandatory compartment markings.
+
+CREATE OR REPLACE FUNCTION vigia_compartment_allows(
+  row_incident_id text,
+  row_rights jsonb,
+  requested_operation text
+) RETURNS boolean
+LANGUAGE sql
+STABLE
+SECURITY INVOKER
+SET search_path = pg_catalog, public
+AS $$
+  SELECT
+    nullif(current_setting('vigia.principal_id', true), '') IS NOT NULL
+    AND nullif(current_setting('vigia.device_id', true), '') IS NOT NULL
+    AND nullif(current_setting('vigia.session_id', true), '') IS NOT NULL
+    AND coalesce(current_setting('vigia.session_state', true), '') = 'ACTIVE'
+    AND coalesce(current_setting('vigia.device_state', true), '') = 'ATTESTED'
+    AND (row_rights #>> '{compartment,organizationId}') = current_setting('vigia.organization_id', true)
+    AND coalesce((current_setting('vigia.region_ids', true)::jsonb) ? (row_rights #>> '{compartment,regionId}'), false)
+    AND coalesce((current_setting('vigia.incident_ids', true)::jsonb) ? row_incident_id, false)
+    AND coalesce((current_setting('vigia.resource_ids', true)::jsonb) ? (row_rights #>> '{compartment,resourceId}'), false)
+    AND CASE row_rights #>> '{compartment,classification}'
+      WHEN 'PUBLIC' THEN 0 WHEN 'PARTNER' THEN 1 WHEN 'SENSITIVE' THEN 2 WHEN 'RESTRICTED' THEN 3 ELSE 99 END
+      <= CASE current_setting('vigia.clearance', true)
+      WHEN 'PUBLIC' THEN 0 WHEN 'PARTNER' THEN 1 WHEN 'SENSITIVE' THEN 2 WHEN 'RESTRICTED' THEN 3 ELSE -1 END
+    AND coalesce(
+      (row_rights #> ARRAY['compartment','rights',lower(requested_operation)])
+        ? current_setting('vigia.principal_id', true),
+      false
+    );
+$$;
+
+ALTER TABLE intelligence_projection_row ADD COLUMN IF NOT EXISTS rights jsonb NOT NULL DEFAULT '{}';
+ALTER TABLE crisis_decision_packet ADD COLUMN IF NOT EXISTS rights jsonb NOT NULL DEFAULT '{}';
+ALTER TABLE intelligence_receipt ADD COLUMN IF NOT EXISTS rights jsonb NOT NULL DEFAULT '{}';
+ALTER TABLE decision_outcome_ledger ADD COLUMN IF NOT EXISTS rights jsonb NOT NULL DEFAULT '{}';
+ALTER TABLE information_value_outcome ADD COLUMN IF NOT EXISTS rights jsonb NOT NULL DEFAULT '{}';
+
+DO $$
+DECLARE
+  unmarked bigint;
+BEGIN
+  SELECT sum(value) INTO unmarked FROM (
+    SELECT count(*) value FROM intelligence_event WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM intelligence_object WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM intelligence_lineage_edge WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM intelligence_projection_row WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM crisis_decision_packet WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM intelligence_receipt WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM prospective_archive_snapshot WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM decision_outcome_ledger WHERE rights #> '{compartment}' IS NULL UNION ALL
+    SELECT count(*) FROM information_value_outcome WHERE rights #> '{compartment}' IS NULL
+  ) rows;
+  IF unmarked > 0 THEN
+    RAISE EXCEPTION 'security_compartment_backfill_required:%', unmarked;
+  END IF;
+END $$;
+
+ALTER TABLE intelligence_event ENABLE ROW LEVEL SECURITY;
+ALTER TABLE intelligence_event FORCE ROW LEVEL SECURITY;
+CREATE POLICY intelligence_event_compartment_select ON intelligence_event FOR SELECT USING (vigia_compartment_allows(incident_id, rights, 'view'));
+CREATE POLICY intelligence_event_compartment_write ON intelligence_event FOR ALL USING (vigia_compartment_allows(incident_id, rights, 'execute')) WITH CHECK (vigia_compartment_allows(incident_id, rights, 'execute'));
+
+ALTER TABLE intelligence_object ENABLE ROW LEVEL SECURITY;
+ALTER TABLE intelligence_object FORCE ROW LEVEL SECURITY;
+CREATE POLICY intelligence_object_compartment_select ON intelligence_object FOR SELECT USING (vigia_compartment_allows(incident_id, rights, 'view'));
+CREATE POLICY intelligence_object_compartment_write ON intelligence_object FOR ALL USING (vigia_compartment_allows(incident_id, rights, 'execute')) WITH CHECK (vigia_compartment_allows(incident_id, rights, 'execute'));
+
+ALTER TABLE intelligence_lineage_edge ENABLE ROW LEVEL SECURITY;
+ALTER TABLE intelligence_lineage_edge FORCE ROW LEVEL SECURITY;
+CREATE POLICY intelligence_lineage_compartment_select ON intelligence_lineage_edge FOR SELECT USING (vigia_compartment_allows(coalesce(rights #>> '{compartment,incidentId}', ''), rights, 'lineage'));
+CREATE POLICY intelligence_lineage_compartment_write ON intelligence_lineage_edge FOR ALL USING (vigia_compartment_allows(coalesce(rights #>> '{compartment,incidentId}', ''), rights, 'execute')) WITH CHECK (vigia_compartment_allows(coalesce(rights #>> '{compartment,incidentId}', ''), rights, 'execute'));
+
+-- The registered migration 019 must apply the same fail-closed policy pattern to
+-- projection rows, packets, receipts, archive snapshots, decision outcomes, and
+-- information-value outcomes after their mandatory marking backfill is reviewed.

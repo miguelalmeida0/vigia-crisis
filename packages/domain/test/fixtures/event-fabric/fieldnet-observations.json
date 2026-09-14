@@ -1,0 +1,60 @@
+[
+  {
+    "observationId": "PUBLIC-REPORT-001",
+    "reporterId": "citizen-report-channel",
+    "kind": "human_report",
+    "observedAt": "2026-08-24T12:00:00Z",
+    "coordinate": [-8.0002, 40.0001],
+    "correlationKeys": ["incident:wildfire-demo"],
+    "confidence": "attributed",
+    "signatureId": "report-signature-001",
+    "signatureVerified": true
+  },
+  {
+    "observationId": "CAMERA-NEGATIVE-001",
+    "deviceId": "camera-17",
+    "kind": "sensor",
+    "sensorClass": "optical",
+    "sourceFamilyId": "physical.fieldnet-optical",
+    "observedAt": "2026-08-24T12:18:00Z",
+    "coordinate": [-8.0001, 40.0002],
+    "correlationKeys": ["incident:wildfire-demo"],
+    "observationState": "OBSERVED_NEGATIVE",
+    "stance": "CONTRADICTING",
+    "provenanceStrength": "VERIFIED",
+    "materiality": "MATERIAL",
+    "opportunity": { "state": "VALID", "reason": "Camera had an unobscured line of sight." },
+    "measurement": { "type": "optical_fire_classifier", "fireProbability": 0.02 },
+    "signatureId": "camera-signature-negative",
+    "signatureVerified": true
+  },
+  {
+    "observationId": "CAMERA-POSITIVE-002",
+    "deviceId": "camera-17",
+    "kind": "sensor",
+    "sensorClass": "optical",
+    "sourceFamilyId": "physical.fieldnet-optical",
+    "observedAt": "2026-08-24T12:24:00Z",
+    "coordinate": [-8.0001, 40.0002],
+    "correlationKeys": ["incident:wildfire-demo"],
+    "observationState": "OBSERVED_POSITIVE",
+    "stance": "SUPPORTING",
+    "provenanceStrength": "CHAIN_OF_CUSTODY",
+    "resolvesEventIds": [],
+    "opportunity": { "state": "VALID", "reason": "Second capture passed obstruction and integrity checks." },
+    "measurement": { "type": "optical_fire_classifier", "fireProbability": 0.96 },
+    "signatureId": "camera-signature-positive",
+    "signatureVerified": true
+  },
+  {
+    "observationId": "LATE-PUBLIC-REPORT-002",
+    "reporterId": "municipal-hotline",
+    "kind": "human_report",
+    "observedAt": "2026-08-24T12:03:00Z",
+    "publishedAt": "2026-08-24T12:04:00Z",
+    "coordinate": [-8.0003, 40.0002],
+    "correlationKeys": ["incident:wildfire-demo"],
+    "signatureId": "late-report-signature",
+    "signatureVerified": true
+  }
+]

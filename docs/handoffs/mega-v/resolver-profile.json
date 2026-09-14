@@ -1,0 +1,10 @@
+{
+  "lane": "READ_ONLY_REAL_RETAINED_ENTITY_RESOLUTION_CPU",
+  "operationalWrites": 0,
+  "rawEntities": 1566,
+  "authorityCandidates": 288,
+  "wholeMs": 3968.6818340000004,
+  "singleMs": 1.0497079999995549,
+  "singleMatchesFullResult": true,
+  "note": "Profiles the current per-enrichment global entity-resolution path versus exactly the selected entity. Excludes database write time."
+}

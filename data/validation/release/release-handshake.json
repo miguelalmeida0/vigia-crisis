@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "vigia.release-handshake.v1",
+  "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+  "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+  "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+  "certifiedRuntimeReleaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+  "targets": {
+    "central": "http://127.0.0.1:4177",
+    "fieldNode": "http://127.0.0.1:4188"
+  },
+  "completedAt": "2026-08-25T15:03:42.291Z",
+  "state": "PASS",
+  "components": {
+    "web": {
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+      "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+      "releaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+      "contracts": {
+        "apiContractVersion": "vigia-api-v10.5",
+        "operationsApiVersion": "operations-api-v6",
+        "validationApiVersion": "validation-api-v8",
+        "fieldNodeContractVersion": "fieldnet-api-v5",
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "migrationHead": "021",
+        "domainSchemaVersion": "vigia-domain-v10.5",
+        "webContractVersion": "decision-os-web-v1",
+        "ontologyContractVersion": "vigia.crisis-ontology.v1",
+        "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+      }
+    },
+    "api": {
+      "schemaVersion": "vigia.release-identity.v1",
+      "state": "CURRENT_RELEASE",
+      "component": "api",
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+      "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+      "releaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+      "buildTimestamp": "2026-08-25T15:02:13.554Z",
+      "contracts": {
+        "apiContractVersion": "vigia-api-v10.5",
+        "operationsApiVersion": "operations-api-v6",
+        "validationApiVersion": "validation-api-v8",
+        "fieldNodeContractVersion": "fieldnet-api-v5",
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "migrationHead": "021",
+        "domainSchemaVersion": "vigia-domain-v10.5",
+        "webContractVersion": "decision-os-web-v1",
+        "ontologyContractVersion": "vigia.crisis-ontology.v1",
+        "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+      },
+      "webBuildVersion": "decision-os-web-v1+26a6a59b",
+      "databaseSchemaVersion": "vigia-postgis-021",
+      "migrationHead": "021",
+      "domainSchemaVersion": "vigia-domain-v10.5",
+      "ontologyContractVersion": "vigia.crisis-ontology.v1",
+      "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d",
+      "runtimeProfile": "remote_shadow",
+      "requiredContracts": {
+        "apiContractVersion": "vigia-api-v10.5",
+        "operationsApiVersion": "operations-api-v6",
+        "validationApiVersion": "validation-api-v8",
+        "fieldNodeContractVersion": "fieldnet-api-v5",
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "domainSchemaVersion": "vigia-domain-v10.5",
+        "ontologyContractVersion": "vigia.crisis-ontology.v1",
+        "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+      },
+      "process": {
+        "startedAt": "2026-08-25T15:02:46.509Z",
+        "servicesReady": true
+      },
+      "schema": {
+        "certification": {
+          "state": "PENDING"
+        },
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "migrationHead": "021",
+        "deploymentIdentity": {
+          "state": "ready",
+          "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+          "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+          "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+          "releaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+          "migrationHead": "021",
+          "recordedAt": "2026-08-25T15:02:44.472Z"
+        }
+      },
+      "routeCertification": {
+        "state": "PENDING"
+      },
+      "sessionCertification": {
+        "state": "PENDING",
+        "checkedAt": null,
+        "reloadPersistent": false,
+        "contradictions": 0,
+        "evidence": null
+      },
+      "manifestEvidenceHash": "sha256:49c5b507ca426f8ece8b0b92b0c44ec2f7f862ba7a64ce87c169d76d91a37313"
+    },
+    "fieldNode": {
+      "schemaVersion": "vigia.release-identity.v1",
+      "state": "CURRENT_RELEASE",
+      "component": "fieldnode",
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+      "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+      "releaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+      "buildTimestamp": "2026-08-25T15:02:13.554Z",
+      "contracts": {
+        "apiContractVersion": "vigia-api-v10.5",
+        "operationsApiVersion": "operations-api-v6",
+        "validationApiVersion": "validation-api-v8",
+        "fieldNodeContractVersion": "fieldnet-api-v5",
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "migrationHead": "021",
+        "domainSchemaVersion": "vigia-domain-v10.5",
+        "webContractVersion": "decision-os-web-v1",
+        "ontologyContractVersion": "vigia.crisis-ontology.v1",
+        "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+      },
+      "webBuildVersion": "decision-os-web-v1+26a6a59b",
+      "databaseSchemaVersion": "vigia-postgis-021",
+      "migrationHead": "021",
+      "domainSchemaVersion": "vigia-domain-v10.5",
+      "ontologyContractVersion": "vigia.crisis-ontology.v1",
+      "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d",
+      "runtimeProfile": "remote_shadow",
+      "requiredContracts": {
+        "apiContractVersion": "vigia-api-v10.5",
+        "operationsApiVersion": "operations-api-v6",
+        "validationApiVersion": "validation-api-v8",
+        "fieldNodeContractVersion": "fieldnet-api-v5",
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "domainSchemaVersion": "vigia-domain-v10.5",
+        "ontologyContractVersion": "vigia.crisis-ontology.v1",
+        "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+      },
+      "process": {
+        "startedAt": null,
+        "servicesReady": false
+      },
+      "schema": {
+        "certification": {
+          "state": "PENDING"
+        },
+        "databaseSchemaVersion": "vigia-postgis-021",
+        "migrationHead": "021",
+        "deploymentIdentity": {
+          "state": "unavailable"
+        }
+      },
+      "routeCertification": {
+        "state": "PENDING"
+      },
+      "sessionCertification": {
+        "state": "PENDING",
+        "checkedAt": null,
+        "reloadPersistent": false,
+        "contradictions": 0,
+        "evidence": null
+      },
+      "manifestEvidenceHash": "sha256:49c5b507ca426f8ece8b0b92b0c44ec2f7f862ba7a64ce87c169d76d91a37313"
+    }
+  },
+  "failures": []
+}

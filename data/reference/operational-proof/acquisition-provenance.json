@@ -1,0 +1,508 @@
+{
+  "schemaVersion": "vigia.local-acquisition-provenance.v1",
+  "preservation": "All listed files retained locally; excluded from Git by exact path, not deleted.",
+  "reacquisition": {
+    "commands": [
+      "node scripts/operational-proof/acquire_governed_context.mjs",
+      "node scripts/operational-proof/acquire_response_facilities.mjs",
+      "node scripts/operational-proof/build_information_requirement_ledger.mjs"
+    ],
+    "prerequisites": [
+      "Canonical authenticated runtime and release manifest",
+      "Governed provider access",
+      "Existing seed archives referenced by the acquisition script"
+    ],
+    "limitations": "These scripts prove a reacquisition/derivation path, not byte-identical historical regeneration. Providers, clocks and coverage may change. Preserve archived bytes to reproduce historical claims. No command was executed during cleanup."
+  },
+  "runtimeConsumers": [
+    "apps/api/src/modules/operator/operational-proof-service.mjs",
+    "apps/api/src/modules/response-capability/governed-facility-repository.mjs"
+  ],
+  "files": [
+    {
+      "path": "data/reference/operational-proof/governed-incident-context.json",
+      "bytes": 2000514,
+      "sha256": "04aa46c39fd7340f4a2cb4853b4fd806dd80976e44f782c65dfdc7cab9f10db2"
+    },
+    {
+      "path": "data/reference/operational-proof/information-requirement-ledger.json",
+      "bytes": 14608194,
+      "sha256": "327fb041d91bdb3889ed543bd13754ac574a73a74fa5923c0d693b53ef90ca61"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/closure-cohort-eudem25m-1788530983603.json",
+      "bytes": 4255,
+      "sha256": "a36939462c5c102ea38ce4fe7b40b76a5ec8dfa0e9d648df58ef9f0729a9b6bf"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/closure-cohort-eudem25m-1788531717047.json",
+      "bytes": 4251,
+      "sha256": "afbec9dbcaf1c774f2b0b86ece21dee1bc81daa5fbb2021da86f9f6757290e44"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-001-896a6ef4ada338d1.json",
+      "bytes": 16056,
+      "sha256": "bc3e86c39b36b070705a3768d3363dc20f2f752f8b7fe2c83c8e880cfcf996f3"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-001.json",
+      "bytes": 16056,
+      "sha256": "bc3e86c39b36b070705a3768d3363dc20f2f752f8b7fe2c83c8e880cfcf996f3"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-002-6511112e4bf0bf6f.json",
+      "bytes": 16049,
+      "sha256": "79f4451c1b61db932f65ef91bb74d6afd5ecac0fa83d95a16df9b078dedeef2c"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-002.json",
+      "bytes": 16049,
+      "sha256": "79f4451c1b61db932f65ef91bb74d6afd5ecac0fa83d95a16df9b078dedeef2c"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-003-0c8f39a585894fd0.json",
+      "bytes": 16058,
+      "sha256": "536609470cf48d450bd9cc4632abbb489955aa2d808f0b78ff2efa368a78fb29"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-003.json",
+      "bytes": 16058,
+      "sha256": "536609470cf48d450bd9cc4632abbb489955aa2d808f0b78ff2efa368a78fb29"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-004-50721b15afb2df2e.json",
+      "bytes": 16069,
+      "sha256": "2208820d037d31e2ea299a5fe1b4b83a68fd824f1804da8df56f30660365e833"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-004.json",
+      "bytes": 16069,
+      "sha256": "2208820d037d31e2ea299a5fe1b4b83a68fd824f1804da8df56f30660365e833"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-005-669c78d7604213da.json",
+      "bytes": 16046,
+      "sha256": "3530bfcfae11543cf0e91d048554bcbbd50da22808ba104789fd62bbf36e55e9"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-005.json",
+      "bytes": 16046,
+      "sha256": "3530bfcfae11543cf0e91d048554bcbbd50da22808ba104789fd62bbf36e55e9"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-006-8d039c58db90b1ed.json",
+      "bytes": 15923,
+      "sha256": "4f2da17716d5abf55530841b72a72e953f0f68752ed8fde979a3d4028d7a7f13"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-006.json",
+      "bytes": 15923,
+      "sha256": "4f2da17716d5abf55530841b72a72e953f0f68752ed8fde979a3d4028d7a7f13"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-007-702b01c9d89596e7.json",
+      "bytes": 16046,
+      "sha256": "6d41563e116bcc10388e1be9388e5280f0f14daf65128f52a6a0d9ae14c466fb"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-007.json",
+      "bytes": 16046,
+      "sha256": "6d41563e116bcc10388e1be9388e5280f0f14daf65128f52a6a0d9ae14c466fb"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-008-e6559d963fe43c9a.json",
+      "bytes": 16086,
+      "sha256": "086e7810beaed920ac41b62af585c138e8d5b08cf5b8003b18bba94466251a98"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-008.json",
+      "bytes": 16086,
+      "sha256": "086e7810beaed920ac41b62af585c138e8d5b08cf5b8003b18bba94466251a98"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-009-9a7cdad0f2faaf65.json",
+      "bytes": 16046,
+      "sha256": "fae1adc2525627af5056927e0ff9d614603e81b5dd647b96d86c05a78435d271"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-009.json",
+      "bytes": 16046,
+      "sha256": "fae1adc2525627af5056927e0ff9d614603e81b5dd647b96d86c05a78435d271"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-010-cc4e120a01266080.json",
+      "bytes": 16040,
+      "sha256": "739534f32ece1fa1d0d2a44ee54b398265bc92810e0fc666ce0188a5964724d1"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-010.json",
+      "bytes": 16040,
+      "sha256": "739534f32ece1fa1d0d2a44ee54b398265bc92810e0fc666ce0188a5964724d1"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-011-2985f303ebf690ca.json",
+      "bytes": 16048,
+      "sha256": "f554e7e9dd9b57bcb0473e7e3b6f8b419d5fda74b1cfc0ad4bb7115834ba9939"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-011.json",
+      "bytes": 16048,
+      "sha256": "f554e7e9dd9b57bcb0473e7e3b6f8b419d5fda74b1cfc0ad4bb7115834ba9939"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-012-4615bdb84934bd2e.json",
+      "bytes": 16044,
+      "sha256": "88434d7cdb07dc02f5b68a3e88c0aeaada47002a5eeb44271e6fb3d780e069b4"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-012-82d4d7eae74eecf5.json",
+      "bytes": 16064,
+      "sha256": "c8e8b061e9d94e12b010c559756d026de918a1721cb4f9b09ade98264e20d17d"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-012.json",
+      "bytes": 16056,
+      "sha256": "04e409ee77938cc2daf70fe16fd9545dea0501852c3f5ab08510f8d1430a186e"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-013-024dfa3b623a8d31.json",
+      "bytes": 16063,
+      "sha256": "c4c7f9dbae5e0dbc5757e9ec36f27095fcbbcf892a28bea8a86da90691a144dd"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-013-57cdc825dbaac79c.json",
+      "bytes": 16072,
+      "sha256": "a696a3c9c05be4715f4c475ac143f07287f9f748639cc4b16344acf3ff9f22ea"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-013-cd5bde13918396ad.json",
+      "bytes": 16039,
+      "sha256": "ddac61e1be580c0623b6d5a4dbaaa6cf802adbfc4dc1e66a9272f8cb2ca9b959"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-013.json",
+      "bytes": 16028,
+      "sha256": "46af8aa746be4fc1481f72754b7aeef311d5213931f860ac1eab0a036615eee7"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-014-3eb55e1a9b49079b.json",
+      "bytes": 16061,
+      "sha256": "b893b92f1c31f052e48c68b7e1f2dcca07ec881daa57554c416f202f35a54052"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-014-6b9c60a901248091.json",
+      "bytes": 16059,
+      "sha256": "1da6f7009894eed31e521e19a62fd3480f0363875dbc8058be84dbfb622883cc"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-014-715c83df6a21ccab.json",
+      "bytes": 16016,
+      "sha256": "d5e057e840f4af1826b4464356fe7895adc50a04f10d5f13346bd589bb3c6f66"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-014-ce98949e7f774b82.json",
+      "bytes": 16058,
+      "sha256": "825f50b0e6ed32167f77f2024b863366caf59588b861450bfe0b187e6255d086"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-014-f127aab5fc5fe554.json",
+      "bytes": 16035,
+      "sha256": "c618d780ea1e29a7453f4853526698a129563e0d775a254eb6fb78ba4aae1bfd"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-014.json",
+      "bytes": 16043,
+      "sha256": "a9f4fe6e03b05354e4256937ef934209e250c9f5ad1887ccc244081aac6576ed"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-015-0cba80552edbccef.json",
+      "bytes": 16017,
+      "sha256": "87b2ea633ca086d47e3a5e1c6b91f1a29eb98b3a135aaddea8249b36ce58658c"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-015-4251460e2d3c7c27.json",
+      "bytes": 16029,
+      "sha256": "d6e4415ed8eb153a2c22e9cbfe884b42a8a268fe5ca8ea9c9ca9ef32c6681005"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-015-526ee96c23bff108.json",
+      "bytes": 16030,
+      "sha256": "2480d2e0a6727a5c7abaa4adb1eb067f2b30596898eebd817f7263893dbf7be6"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-015-a6fed2f0f7cad591.json",
+      "bytes": 16039,
+      "sha256": "d8069a21ea08f8a7a27868391e74f15d8534bcb2ca9ddd8e49f0191ef75e7f61"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-015-c2ff587bee803e2a.json",
+      "bytes": 16039,
+      "sha256": "f17cbc1b041657a925b401471e68f1cd284db5e10fb58bfc5a5f272c46b515ca"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-015.json",
+      "bytes": 16028,
+      "sha256": "276cfdb1e786bc97f6914c873e06df60b19d002642f7e84d0a2e432dbdfd1ed3"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-016-1c6a4eae598190a7.json",
+      "bytes": 16036,
+      "sha256": "c3ed15b7e69b699c7d0cd2ed09ccb0df9161c59c3ad96e44cfa817afb489c353"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-016-310b39e80aee2972.json",
+      "bytes": 16032,
+      "sha256": "34b62456f031ca0b8946298e3d84fab96c83f2553352800ab18163848284e818"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-016-470d1d0293a93588.json",
+      "bytes": 16032,
+      "sha256": "a4580cda03f54cc33e180af71eb1ec45db8069ff4f59156f07b62f3921812c76"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-016-696da06a22d82cd3.json",
+      "bytes": 16038,
+      "sha256": "79f6ddfcb206396c4ce8e5ea1071566e2b278ecc55062605757e3ea1246dca57"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-016-e66df0e1a4f206a7.json",
+      "bytes": 16039,
+      "sha256": "a0d5eef15440e61e2d051934786c0854e90bac934daeab704c5b4ddf29a26dc5"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-016.json",
+      "bytes": 16061,
+      "sha256": "25b62b5b71404c2beac23bdf83c977cad2cad31b4119a62efc872f8ee1d3cf82"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-017-080950430b4e52f2.json",
+      "bytes": 16013,
+      "sha256": "777d58e164981a95a7ccd09d02b0dbf16402bcb9ca8f99a9d55b146c2496f7fb"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-017-70ecb9b2bd585978.json",
+      "bytes": 16068,
+      "sha256": "c0aa717d68937f651bdb9d808f6fea95a1c0fd98331d6471540a67141d46fc70"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-017-7da7e62287a801ca.json",
+      "bytes": 16021,
+      "sha256": "91815be653d1edcd6f70009f029f9f97f8e012fc516977826d834aa6b34975ed"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-017-d3ffa666450e3e97.json",
+      "bytes": 16030,
+      "sha256": "ccb68bbf07f2ca8b8e7ca1d1ecfbdf07685702373f2556ff2cf002296119f8e0"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-017-f832fb60564aed8c.json",
+      "bytes": 16037,
+      "sha256": "f2954abce4349680dba15624ace51c77d9b5d1c66b5fa51fc0ad4a3e9ed33ef8"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-017.json",
+      "bytes": 16055,
+      "sha256": "c462baccb892c6479cd459dbd46588f1fd6ba250bd3c61d408f42337d10477bb"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018-0276bea7468ef90e.json",
+      "bytes": 16071,
+      "sha256": "806f4af008b8af6f31bcab8f387323694bca72dfc22e08b6af23376b41921fae"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018-37e359044d2784a4.json",
+      "bytes": 16066,
+      "sha256": "f9a866470997055c162084df00c58f5abc8e91ff237ab9062ba068401928f0f6"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018-4950a0df95da48ec.json",
+      "bytes": 16073,
+      "sha256": "9c3f2c211ee524cc7ecc3b2ad5fd63a083a090bbc468e4293c18c7a24eebb61e"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018-6fb1a9cf7878161d.json",
+      "bytes": 16047,
+      "sha256": "a4372afbaba744a49189a519c76afefc7cb31dcedee0f0236b36a381ca9a9540"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018-a36e291c35b33545.json",
+      "bytes": 16038,
+      "sha256": "889798ac57669c56505dc812852744644eb14ce574fc99eee485f970a06672ed"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018-f86555da9f13ec2f.json",
+      "bytes": 16073,
+      "sha256": "83cf15f78f857aa83ba1b8ee6816e4c44e00deeb4af0d74be8b7e7db7065f7ff"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-018.json",
+      "bytes": 16062,
+      "sha256": "4def6faf4b9b30350f3bb5e2f3a6f615f582815be6d50ca4b5729f3723fb0c50"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019-4f5dfac823e57cd5.json",
+      "bytes": 16068,
+      "sha256": "b6e52e49e01cfcbcfa6512f259968930e9305b744bd250b6251792ac7fd079f7"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019-540c9cdc5aac2785.json",
+      "bytes": 16070,
+      "sha256": "986dd2ecd977bc559a708d765575828959e69033b1361999b19f4ce775627a47"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019-8343fbcee40e0f29.json",
+      "bytes": 16075,
+      "sha256": "6e4bf26c4c229cd04b6b6f69cd8fb559a1ae775c34c6350690c3e6bd7704091c"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019-8c3eaa86e3bbb1b4.json",
+      "bytes": 16048,
+      "sha256": "b06b6aa172d62f88f9ac611f25db0baaf851db9036ccb53226d22963773168b9"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019-b90167e111fb21d7.json",
+      "bytes": 16068,
+      "sha256": "961d508abfadadb87226202dfa164bca1eed1847483e595761c7ac59a6ffdfb5"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019-de29069954b4cc7b.json",
+      "bytes": 15907,
+      "sha256": "9b1b9aa48492e6d7d435f431a7b304b4085324d52a5c8d2a5c99d19ad6845960"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-019.json",
+      "bytes": 10144,
+      "sha256": "5ec55cd28280b9bf1282dcc4b4ff9f194814be3db12d5077ba32ab297ff97a32"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-020-0c3da0e214400998.json",
+      "bytes": 16057,
+      "sha256": "9c0f6dc861b15a66d0ae3bfcaccb87ef6b3255a58c9cfc4f817b41289990e240"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-020-126f4a3f3f0bcb08.json",
+      "bytes": 16079,
+      "sha256": "a546d22a410549ae0bde5b03be5674910719b82af55bbfc57412cfeb0b3c3b9e"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-020-4e6c7eec71fbb469.json",
+      "bytes": 16073,
+      "sha256": "743ce361bf0afd26e8e82733da0af65242c3c2fa87e0c35a1d36f189088b391d"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-020-c5a497633220599c.json",
+      "bytes": 16080,
+      "sha256": "e1c0b69432acd46c4046edfec2745057c811d011fd421d577cd8ed47d86660d2"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-020-db76300235ac1031.json",
+      "bytes": 15745,
+      "sha256": "82ba40dbd8075436035b13b7f05ed4e967e1fcd00c4f9e3d7a7a138db520db58"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-021-6697db1f09e14a49.json",
+      "bytes": 1170,
+      "sha256": "b62098fb0017ddc97617ad627e1302a806a2b71b6fda4c4c42eaf499874588b5"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-021-9999b40384fda6ee.json",
+      "bytes": 16055,
+      "sha256": "8ce449d9212454c6d81371d6c27cc758a06de2881d74311eb2aea9cb22946af0"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-021-9f7731a4dfec2ee3.json",
+      "bytes": 12700,
+      "sha256": "26d1bbdd0d3ec0a245623f5d0ff7c051f88784fc1a4ea5e3f820a7097a8d6fb8"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-021-bc079b5d16a36ab7.json",
+      "bytes": 16051,
+      "sha256": "1b2fb2e282932d4798fa53b910e82d7d6bae0844841388a7b6bec3e0626f6fbf"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-022-8e2d4eae9939de59.json",
+      "bytes": 5338,
+      "sha256": "704a4ca6f6d260ec91155d49740a818dcb67fae5c171d3dd4ebd9d7c0fd45069"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/eudem25m-022-cd2d41b6e4241b45.json",
+      "bytes": 8224,
+      "sha256": "f5507cf4d22c138a92fbd653bfe018938cb31c79d82c1b3613b3a68a23b2426c"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-community-medical-fire-protected.json",
+      "bytes": 3114402,
+      "sha256": "48b8e7c0cac2d386d64cd516ee47edbe22c78d48e9d11070e0fe6580d485fe75"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-1.json",
+      "bytes": 5407296,
+      "sha256": "859e64c37cc33f509118a9ddc631e7161985eb254331711d168c1b51e2532474"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-10.json",
+      "bytes": 7806909,
+      "sha256": "f2d4fcbc97c2d1f68fdd36f571e417d1dbc0f40564698b730a779fecb36a0ebf"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-11.json",
+      "bytes": 1721815,
+      "sha256": "e608f207eb3d27087a638d731e1f41af27344efa48bd3072e64c2a042159b328"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-12.json",
+      "bytes": 2358675,
+      "sha256": "b8d7879234e2549ab7afbc428eb2ccd55a4eda0893b4e22c99799747d2810d22"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-13.json",
+      "bytes": 1038681,
+      "sha256": "a3abf6a6614af330e85422f66dab3c6436a3e71d40ec4db65b9f4da9b579602f"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-2.json",
+      "bytes": 6086553,
+      "sha256": "c7783cf24e5a511dce6a1cf8a66471d66c1c6712acf75098e6782d0077360b04"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-3.json",
+      "bytes": 689891,
+      "sha256": "064cb85050f6d00b8aa610c0745b10410bbff9f27eca12dfdfdef3120e14f745"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-4.json",
+      "bytes": 2829174,
+      "sha256": "321d3b19fa4e5a492d83af88fb8e5c88754d89e5f5a4079a09aff5da052e3778"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-5.json",
+      "bytes": 1706049,
+      "sha256": "a7a2d401944fdbb852f428685e217983144cdb573444951629ce7232c7fd912a"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-6.json",
+      "bytes": 3571295,
+      "sha256": "4b939d4db0c904398acd2abc657274946585bbda4e3a4b342a1ebd6f2d7739c3"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-7.json",
+      "bytes": 1045446,
+      "sha256": "3fc975180cc61fd6bf8b0a0fbcdc4d543931b8d6565a3030fd8891c9198a9b76"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-8.json",
+      "bytes": 3792952,
+      "sha256": "076197ee5f385dbc669955749a4a747192ed5e0595a3591ef1982c44df4f160c"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-9.json",
+      "bytes": 1699966,
+      "sha256": "2abdeba623fe26eff3d8f8a9c15c524cc9e333d2bf4038720213ec85025ffe73"
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+      "bytes": 5152293,
+      "sha256": "153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+    }
+  ]
+}

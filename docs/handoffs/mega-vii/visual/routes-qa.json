@@ -1,0 +1,111 @@
+{
+  "lane": "CANONICAL_RENDERED_UI",
+  "screens": [
+    {
+      "name": "command-overview-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "incidents-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "incident-detail-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": null,
+      "body": "Operational support\n\nReading retained support\u2026"
+    },
+    {
+      "name": "detail-operational-picture",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\n\nRetained at 13 Sept, 11:12 UTC \u00b7 evaluated 13 Sept, 11:13 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "fire-activity-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "response-access-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\n\nRetained at 13 Sept, 11:12 UTC \u00b7 evaluated 13 Sept, 11:13 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "national-awareness-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "command-overview-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "incidents-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "incident-detail-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\n\nRetained at 13 Sept, 11:12 UTC \u00b7 evaluated 13 Sept, 11:13 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "fire-activity-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    },
+    {
+      "name": "response-access-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "body": "Operational support\nOperational Picture\n\nRetained at 13 Sept, 11:12 UTC \u00b7 evaluated 13 Sept, 11:13 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n6 gaps\nAll support\nHealthcare\nFire response\nReception\nEmergency healthcare\n\nNo current qualified route retained.\n\nFire response\n\nNo current qualified route retained.\n\nReception\n\nNo current qualified route retained.\n\nShared access\nCM1087\n6 retained support relationships\nTest unavailable\nCM1087-1\n4 retained support relationships\nTest unavailable\nCM1088\n4 retained support relationships\nTest unavailable\n\nPartial road coverage. Calculated routes do not establish safe access.\n\nAsk the map\nAsk"
+    },
+    {
+      "name": "national-awareness-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "mode": null,
+      "body": null
+    }
+  ],
+  "errors": [],
+  "checks": []
+}

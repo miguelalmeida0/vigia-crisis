@@ -1,0 +1,41 @@
+import assert from 'node:assert/strict';
+import { mkdir, mkdtemp, readFile, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
+import path from 'node:path';
+import test from 'node:test';
+import { createAccessContext, createResourceMarking } from '../../../packages/domain/src/worldclass/index.mjs';
+import { OperationalIntelligenceQueryServiceV2 } from '../src/modules/decision-foundry/operational-query-service.mjs';
+import { PartnerCapGateway, parseCapXml } from '../src/modules/worldclass/partner-cap-gateway.mjs';
+import { loadMergedSilverIncidents } from '../src/modules/forecast-corpus/silver-loader.mjs';
+import { prepareOperatorEvaluation, regionalShadowArchive, releaseCanary, releaseRollback } from '../src/modules/worldclass/certification-service.mjs';
+
+const alert = ({ id, sent, type = 'Alert', references = '' }) => `<alert><identifier>${id}</identifier><sender>agency.example</sender><sent>${sent}</sent><status>Actual</status><msgType>${type}</msgType><scope>Public</scope>${references ? `<references>${references}</references>` : ''}<info><category>Fire</category><event>Wildfire</event><effective>${sent}</effective><severity>Severe</severity><certainty>Likely</certainty><area><circle>37.0,-8.0 10</circle></area></info></alert>`;
+const cap = `<?xml version="1.0"?><feed>${alert({ id: 'alert-1', sent: '2026-01-01T00:00:00Z' })}${alert({ id: 'alert-2', sent: '2026-01-01T00:01:00Z', type: 'Update', references: 'agency.example,alert-1,2026-01-01T00:00:00Z' })}${alert({ id: 'alert-3', sent: '2026-01-01T00:02:00Z', type: 'Cancel', references: 'agency.example,alert-2,2026-01-01T00:01:00Z' })}</feed>`;
+
+test('CAP parser and gateway preserve raw provenance and project a real-adapter event', async () => {
+  const parsed = parseCapXml(cap); assert.equal(parsed[0].identifier, 'alert-1'); assert.equal(parsed[2].references[0].identifier, 'alert-2'); assert.equal(parsed[2].targetReferenceIdentifier, 'alert-2'); const root = await mkdtemp(path.join(tmpdir(), 'vigia-cap-')); let attempts = 0; const fetchImpl = async () => { attempts += 1; if (attempts === 1) throw new Error('controlled-outage'); return new Response(cap, { status: 200, headers: { 'content-type': 'application/cap+xml' } }); }, report = await new PartnerCapGateway({ endpoint: 'https://agency.example/cap', token: 'test-only', allowedHosts: ['agency.example'], projectRoot: root, fetchImpl, clock: () => new Date('2026-01-01T00:03:00Z'), attempts: 2 }).poll();
+  assert.equal(attempts, 2); assert.equal(report.committedEvents, 3); assert.equal(report.secretsRecorded, false); assert.match(report.rawObject.reference, /\.cap\.xml$/); assert.equal((await readFile(path.join(root, report.rawObject.reference))).toString(), cap); assert.deepEqual(report.lifecycle, { creates: 1, updates: 1, cancellations: 1 }); assert.throws(() => new PartnerCapGateway({ endpoint: 'http://agency.example/cap', allowedHosts: ['agency.example'] }), /https_required/); assert.throws(() => new PartnerCapGateway({ endpoint: 'https://other.example/cap', allowedHosts: ['agency.example'] }), /not_allowlisted/);
+});
+
+test('operational query service enforces compartment markings before returning objects', async () => {
+  const marking = createResourceMarking({ organizationId: 'org-a', regionId: 'west', incidentId: 'fire-1', resourceId: 'obj-1', classification: 'SENSITIVE', rights: { view: ['read'], export: ['export'], lineage: ['lineage'], execute: ['execute'] }, actionClasses: ['READ'] }), row = { kind: 'TEST', objectId: 'obj-1', payload: { secret: true }, payloadHash: 'hash', rights: { compartment: marking } }, repository = { initialize: async () => ({}), listObjects: async () => ({ results: [row], nextCursor: null, partial: false, projectionVersion: 1, consistencyToken: 'projection:1' }) }, service = new OperationalIntelligenceQueryServiceV2({ repository, clock: () => new Date('2026-01-01T00:00:00Z') }), access = (organizations) => createAccessContext({ principalId: 'p1', deviceId: 'd1', sessionId: 's1', organizations, regions: ['west'], incidents: ['fire-1'], resources: ['obj-1'], rights: ['read'], actionClasses: ['READ'], clearance: 'SENSITIVE', validFrom: '2025-01-01T00:00:00Z', validUntil: '2027-01-01T00:00:00Z' });
+  assert.equal((await service.incidentSnapshot('fire-1', { authority: { compartment: access(['org-a']) } })).objects.TEST.length, 1); const denied = await service.incidentSnapshot('fire-1', { authority: { compartment: access(['org-b']) } }); assert.deepEqual(denied.objects, {}); assert.equal(denied.rightsRestrictions.excludedObjects, 1); assert.equal(denied.rightsRestrictions.compartmentAware, true);
+});
+
+test('external packages remain blocked without fabricated campaign or practitioner evidence', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'vigia-worldclass-')), operator = await prepareOperatorEvaluation({ projectRoot: root }), archive = await regionalShadowArchive({ projectRoot: root });
+  assert.equal(operator.tasks.length, 10); assert.equal(operator.simulatedParticipants, false); assert.equal(operator.passed, false); assert.equal(archive.passed, false); assert.equal(archive.currentEvidence.snapshots, 0);
+});
+
+test('regional archive validator accepts only complete imported environmental outcomes', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'vigia-archive-')), evidence = { durationHours: 168, incidents: 25, providerSourceClasses: 3, immutableSnapshots: 1000, restartRecovery: true, backupRestore: true, rightsEnforcement: true, replayVerified: true, priorSnapshotsRewritten: 0 }; await writeFile(path.join(root, 'campaign.json'), JSON.stringify(evidence)); const report = await regionalShadowArchive({ projectRoot: root, evidenceFile: 'campaign.json' }); assert.equal(report.passed, true); evidence.priorSnapshotsRewritten = 1; await writeFile(path.join(root, 'campaign.json'), JSON.stringify(evidence)); assert.equal((await regionalShadowArchive({ projectRoot: root, evidenceFile: 'campaign.json' })).passed, false);
+});
+
+test('canary and rollback use bounded authenticated control receipts without exposing credentials', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'vigia-release-')), environment = { VIGIA_RELEASE_CONTROL_URL: 'https://release.example/control', VIGIA_RELEASE_CONTROL_TOKEN: 'test-only-secret' }, calls = [], fetchImpl = async (url, options) => { calls.push({ url: String(url), options }); return new Response(JSON.stringify({ state: String(url).endsWith('/canary') ? 'PROMOTED' : 'ROLLED_BACK', receiptId: 'receipt-1' }), { status: 200, headers: { 'content-type': 'application/json' } }); }, canary = await releaseCanary({ projectRoot: root, environment, releaseId: 'release-1', fetchImpl }), rollback = await releaseRollback({ projectRoot: root, environment, releaseId: 'release-1', fetchImpl });
+  assert.equal(canary.passed, true); assert.equal(rollback.passed, true); assert.equal(calls.length, 2); assert.equal(canary.credential, 'PRESENT_REDACTED'); assert.equal(JSON.stringify(canary).includes('test-only-secret'), false); assert.match(calls[0].options.headers['Idempotency-Key'], /^sha256:/);
+});
+
+test('Silver loading is sequential, deduplicating, and guarded by memory circuit breakers', async () => {
+  const root = await mkdtemp(path.join(tmpdir(), 'vigia-silver-')), directory = path.join(root, 'silver'); await mkdir(directory); const base = { schemaVersion: 'vigia.forecast-corpus-silver.v1', providers: ['p1'], incidents: [{ id: 'incident-1', perimeterStates: [], weatherRuns: [], physicalObservations: [] }] }; await writeFile(path.join(directory, 'a.json'), JSON.stringify(base)); await writeFile(path.join(directory, 'b.json'), JSON.stringify({ ...base, providers: ['p2'], incidents: [{ ...base.incidents[0], terrainPack: { verticalDatum: 'EGM96', solverCompatibility: 'CERTIFIED_CONTEXT_INPUT' } }] })); const loaded = await loadMergedSilverIncidents(directory, { maximumPartitionBytes: 1024, maximumRssBytes: 1024 * 1024 * 1024 }); assert.equal(loaded.incidents.length, 1); assert.equal(loaded.files.length, 2); assert.equal(loaded.backpressure.maximumConcurrentPartitions, 1); await assert.rejects(loadMergedSilverIncidents(directory, { maximumPartitionBytes: 1 }), (error) => error.code === 'MEMORY_CIRCUIT_BREAKER');
+});

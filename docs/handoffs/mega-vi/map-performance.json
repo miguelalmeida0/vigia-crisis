@@ -1,0 +1,306 @@
+{
+  "capturedAt": "2026-09-13T09:49:49.705Z",
+  "lanes": {
+    "before": {
+      "browser": "139.0.7258.5",
+      "viewport": [
+        1728,
+        966
+      ],
+      "cache": "enabled; transparent forwarding hop",
+      "cases": [
+        {
+          "case": "cold",
+          "n": 20,
+          "failed": 1,
+          "navigationFailures": 0,
+          "projectionFailures": 1,
+          "medianMs": 3122,
+          "p95Ms": 21981,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 25524,
+          "requestsP95": 52,
+          "bytesP95": 10257559,
+          "mainThreadBlockingP95Ms": 5943
+        },
+        {
+          "case": "detail-to-fire",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 1607,
+          "p95Ms": 19029,
+          "limitMs": 1000,
+          "passed": false,
+          "interactiveP95Ms": 23480,
+          "requestsP95": 25,
+          "bytesP95": 5037899,
+          "mainThreadBlockingP95Ms": 3989
+        },
+        {
+          "case": "fire-to-response",
+          "n": 20,
+          "failed": 4,
+          "navigationFailures": 0,
+          "projectionFailures": 5,
+          "medianMs": 1780,
+          "p95Ms": 7258,
+          "limitMs": 1000,
+          "passed": false,
+          "interactiveP95Ms": 7550,
+          "requestsP95": 37,
+          "bytesP95": 8398394,
+          "mainThreadBlockingP95Ms": 2451
+        },
+        {
+          "case": "cached-revisit",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 106,
+          "p95Ms": 558,
+          "limitMs": 400,
+          "passed": false,
+          "interactiveP95Ms": 914,
+          "requestsP95": 1,
+          "bytesP95": 2768,
+          "mainThreadBlockingP95Ms": 845
+        },
+        {
+          "case": "incident-switch",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 2840,
+          "p95Ms": 8317,
+          "limitMs": 1500,
+          "passed": false,
+          "interactiveP95Ms": 8756,
+          "requestsP95": 27,
+          "bytesP95": 6877712,
+          "mainThreadBlockingP95Ms": 1414
+        },
+        {
+          "case": "overview",
+          "n": 20,
+          "failed": 3,
+          "navigationFailures": 0,
+          "projectionFailures": 3,
+          "medianMs": 8642,
+          "p95Ms": 14785,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 23637,
+          "requestsP95": 16,
+          "bytesP95": 6514155,
+          "mainThreadBlockingP95Ms": 1013
+        },
+        {
+          "case": "national",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 1,
+          "medianMs": 7296,
+          "p95Ms": 28133,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 31869,
+          "requestsP95": 31,
+          "bytesP95": 5836497,
+          "mainThreadBlockingP95Ms": 2488
+        }
+      ],
+      "passed": false,
+      "pageErrors": [],
+      "failedRequests": 34,
+      "waterfall": {
+        "other": {
+          "requests": 401,
+          "p95Ms": 660,
+          "ttfbP95Ms": 317,
+          "downloadP95Ms": 17
+        },
+        "javascript": {
+          "requests": 100,
+          "p95Ms": 749,
+          "ttfbP95Ms": 186,
+          "downloadP95Ms": 15
+        },
+        "api": {
+          "requests": 427,
+          "p95Ms": 5854,
+          "ttfbP95Ms": 5364,
+          "downloadP95Ms": 180
+        },
+        "imagery": {
+          "requests": 1147,
+          "p95Ms": 8077,
+          "ttfbP95Ms": 7278,
+          "downloadP95Ms": 29
+        },
+        "labels": {
+          "requests": 1141,
+          "p95Ms": 8205,
+          "ttfbP95Ms": 6830,
+          "downloadP95Ms": 23
+        }
+      }
+    },
+    "after": {
+      "browser": "139.0.7258.5",
+      "viewport": [
+        1728,
+        966
+      ],
+      "cache": "enabled; transparent forwarding hop",
+      "cases": [
+        {
+          "case": "cold",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 2,
+          "projectionFailures": 1,
+          "medianMs": 2000,
+          "p95Ms": 4039,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 20686,
+          "requestsP95": 52,
+          "bytesP95": 10346328,
+          "mainThreadBlockingP95Ms": 2717
+        },
+        {
+          "case": "detail-to-fire",
+          "n": 20,
+          "failed": 3,
+          "navigationFailures": 0,
+          "projectionFailures": 3,
+          "medianMs": 380,
+          "p95Ms": 1721,
+          "limitMs": 1000,
+          "passed": false,
+          "interactiveP95Ms": 2387,
+          "requestsP95": 18,
+          "bytesP95": 5096923,
+          "mainThreadBlockingP95Ms": 1943
+        },
+        {
+          "case": "fire-to-response",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 1,
+          "medianMs": 908,
+          "p95Ms": 3267,
+          "limitMs": 1000,
+          "passed": false,
+          "interactiveP95Ms": 4043,
+          "requestsP95": 33,
+          "bytesP95": 1900796,
+          "mainThreadBlockingP95Ms": 3053
+        },
+        {
+          "case": "cached-revisit",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 159,
+          "p95Ms": 579,
+          "limitMs": 400,
+          "passed": false,
+          "interactiveP95Ms": 670,
+          "requestsP95": 3,
+          "bytesP95": 23634,
+          "mainThreadBlockingP95Ms": 599
+        },
+        {
+          "case": "incident-switch",
+          "n": 20,
+          "failed": 2,
+          "navigationFailures": 0,
+          "projectionFailures": 2,
+          "medianMs": 998,
+          "p95Ms": 5051,
+          "limitMs": 1500,
+          "passed": false,
+          "interactiveP95Ms": 7402,
+          "requestsP95": 31,
+          "bytesP95": 8927870,
+          "mainThreadBlockingP95Ms": 1019
+        },
+        {
+          "case": "overview",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 587,
+          "p95Ms": 3113,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 10548,
+          "requestsP95": 17,
+          "bytesP95": 4244727,
+          "mainThreadBlockingP95Ms": 841
+        },
+        {
+          "case": "national",
+          "n": 20,
+          "failed": 1,
+          "navigationFailures": 0,
+          "projectionFailures": 1,
+          "medianMs": 6226,
+          "p95Ms": 18278,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 18420,
+          "requestsP95": 46,
+          "bytesP95": 5973577,
+          "mainThreadBlockingP95Ms": 918
+        }
+      ],
+      "passed": false,
+      "pageErrors": [],
+      "failedRequests": 28,
+      "waterfall": {
+        "other": {
+          "requests": 389,
+          "p95Ms": 440,
+          "ttfbP95Ms": 178,
+          "downloadP95Ms": 6
+        },
+        "javascript": {
+          "requests": 100,
+          "p95Ms": 428,
+          "ttfbP95Ms": 128,
+          "downloadP95Ms": 12
+        },
+        "api": {
+          "requests": 365,
+          "p95Ms": 8849,
+          "ttfbP95Ms": 8263,
+          "downloadP95Ms": 155
+        },
+        "imagery": {
+          "requests": 1196,
+          "p95Ms": 263,
+          "ttfbP95Ms": 188,
+          "downloadP95Ms": 12
+        },
+        "labels": {
+          "requests": 1191,
+          "p95Ms": 266,
+          "ttfbP95Ms": 186,
+          "downloadP95Ms": 9
+        }
+      }
+    }
+  },
+  "definition": "Same 20-context harness in each lane; fresh browser HTTP cache for each context, retained renderer for route transitions. Timeouts are failures, never zero. p95 is reported among measured useful frames; any missing frame fails the gate."
+}

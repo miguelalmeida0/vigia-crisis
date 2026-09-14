@@ -1,0 +1,1 @@
+throw new Error('standalone_operator_certification_disabled_use_npm_run_operator_certify');

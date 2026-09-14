@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "mtbs-final",
+  "purpose": "final burn perimeter; burn severity",
+  "coverage": [
+    "western-us"
+  ],
+  "period": "1984-present programme period",
+  "resolution": "national",
+  "collectionProcess": "official download services",
+  "knowledgeTimeSemantics": "RETROSPECTIVE_LABEL_ONLY",
+  "labelConstruction": "Retrospective label only.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "MTBS products are labels, never issue-time features."
+  ],
+  "knownMissingness": [
+    "MTBS products are labels, never issue-time features."
+  ],
+  "licence": "US-FEDERAL-PUBLIC-DATA",
+  "appropriateUse": "FINAL_ONLY",
+  "inappropriateUse": "Issue-time progression feature."
+}

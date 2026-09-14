@@ -1,0 +1,111 @@
+{
+  "schemaVersion": "vigia.forecast-benchmark.v2",
+  "generatedAt": "2026-08-25T07:14:51.713Z",
+  "scope": "REAL_INPUT_PACKAGING_AND_TRANSPARENT_IN_PROCESS_FORECAST",
+  "domain": {
+    "areaKm2": 67.108,
+    "representation": "vector polygon",
+    "contourVertices": 72
+  },
+  "horizonsHours": [
+    1,
+    3,
+    6,
+    12,
+    24
+  ],
+  "probabilityThresholds": [
+    0.1,
+    0.3,
+    0.5,
+    0.7,
+    0.9
+  ],
+  "stages": {
+    "inputPackageConstruction": {
+      "state": "MEASURED_REAL_RETAINED_INPUT",
+      "latencyMs": {
+        "iterations": 10,
+        "p50": 54.813,
+        "p95": 86.673,
+        "max": 86.673
+      }
+    },
+    "weatherExtraction": {
+      "state": "MEASURED_RETAINED_CONTROL_MEMBER",
+      "latencyMs": {
+        "iterations": 100,
+        "p50": 0.002,
+        "p95": 0.005,
+        "max": 0.059
+      }
+    },
+    "terrainFuelExtraction": {
+      "state": "NOT_MEASURED",
+      "reason": "No issue-time content-addressed fuel/terrain pack is configured."
+    },
+    "baselineForecast": {
+      "state": "MEASURED",
+      "latencyMs": {
+        "iterations": 100,
+        "p50": 2.296,
+        "p95": 2.713,
+        "max": 4.755
+      }
+    },
+    "physicalModelRuntime": {
+      "state": "NOT_MEASURED",
+      "reason": "No allowlisted executable with a verified artifact hash is configured."
+    },
+    "ensembleRuntime": {
+      "state": "MEASURED",
+      "latencyMs": {
+        "iterations": 100,
+        "p50": 2.16,
+        "p95": 3.236,
+        "max": 5.144
+      }
+    },
+    "probabilityRasterGeneration": {
+      "state": "NOT_MEASURED",
+      "reason": "V1 emits vector probability-threshold contours; no raster generator is implemented."
+    },
+    "impactIntersection": {
+      "state": "MEASURED",
+      "latencyMs": {
+        "iterations": 100,
+        "p50": 0.149,
+        "p95": 0.345,
+        "max": 0.783
+      }
+    },
+    "historicalReplay": {
+      "state": "NOT_MEASURED",
+      "reason": "No issue-time future-perimeter labels exist."
+    },
+    "fullForecastReplay": {
+      "state": "MEASURED",
+      "latencyMs": {
+        "iterations": 100,
+        "p50": 7.445,
+        "p95": 7.766,
+        "max": 8.223
+      },
+      "valid": true
+    }
+  },
+  "memory": {
+    "rssBeforeBytes": 55083008,
+    "peakRssBytes": 310689792,
+    "peakDeltaBytes": 255606784
+  },
+  "volume": {
+    "realInputPackageBytes": 538841,
+    "forecastInputBytes": 993,
+    "forecastOutputBytes": 95049
+  },
+  "limitations": [
+    "Performance does not establish scientific forecast skill.",
+    "Unavailable stages are not replaced by synthetic timing."
+  ]
+}

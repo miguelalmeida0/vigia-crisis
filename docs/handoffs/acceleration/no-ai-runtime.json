@@ -1,0 +1,17 @@
+{
+  "endpoint": "http://127.0.0.1:11434",
+  "health": {
+    "state": "offline",
+    "model": "qwen3.5:4b",
+    "installed": false,
+    "inferenceVerified": false,
+    "lastInferenceState": null,
+    "metrics": {
+      "calls": 0,
+      "success": 0,
+      "rejected": 0,
+      "failures": 0
+    },
+    "reason": "MODEL_NOT_INSTALLED"
+  }
+}

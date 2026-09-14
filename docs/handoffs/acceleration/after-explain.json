@@ -1,0 +1,141 @@
+[
+  {
+    "QUERY PLAN": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 488.62,
+          "Total Cost": 488.63,
+          "Plan Rows": 1,
+          "Plan Width": 58,
+          "Actual Startup Time": 73.961,
+          "Actual Total Time": 73.999,
+          "Actual Rows": 20,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 254,
+          "Shared Read Blocks": 12,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Sort",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 488.62,
+              "Total Cost": 488.63,
+              "Plan Rows": 1,
+              "Plan Width": 58,
+              "Actual Startup Time": 73.884,
+              "Actual Total Time": 73.887,
+              "Actual Rows": 20,
+              "Actual Loops": 1,
+              "Sort Key": [
+                "(st_distance((geometry)::geography, '0101000020E61000006F1283C0CAA11FC00C022B8716494340'::geography, true))",
+                "id"
+              ],
+              "Sort Method": "quicksort",
+              "Sort Space Used": 29,
+              "Sort Space Type": "Memory",
+              "Shared Hit Blocks": 254,
+              "Shared Read Blocks": 12,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Bitmap Heap Scan",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Relation Name": "world_knowledge_entity",
+                  "Alias": "world_knowledge_entity",
+                  "Startup Cost": 4.5,
+                  "Total Cost": 488.61,
+                  "Plan Rows": 1,
+                  "Plan Width": 58,
+                  "Actual Startup Time": 70.827,
+                  "Actual Total Time": 72.747,
+                  "Actual Rows": 36,
+                  "Actual Loops": 1,
+                  "Recheck Cond": "((geometry IS NOT NULL) AND (geometry && '0103000020E6100000010000000500000007577BD3BA6520C0AF8D5941FF2B434007577BD3BA6520C06976FCCC2D664340D0760FDA1F781EC06976FCCC2D664340D0760FDA1F781EC0AF8D5941FF2B434007577BD3BA6520C0AF8D5941FF2B4340'::geometry))",
+                  "Rows Removed by Index Recheck": 0,
+                  "Filter": "(((payload ->> 'redirectTo'::text) IS NULL) AND st_dwithin((geometry)::geography, '0101000020E61000006F1283C0CAA11FC00C022B8716494340'::geography, '25000'::double precision, true))",
+                  "Rows Removed by Filter": 1,
+                  "Exact Heap Blocks": 8,
+                  "Lossy Heap Blocks": 0,
+                  "Shared Hit Blocks": 248,
+                  "Shared Read Blocks": 12,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Plans": [
+                    {
+                      "Node Type": "Bitmap Index Scan",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Index Name": "world_knowledge_entity_geo",
+                      "Startup Cost": 0,
+                      "Total Cost": 4.49,
+                      "Plan Rows": 35,
+                      "Plan Width": 0,
+                      "Actual Startup Time": 0.977,
+                      "Actual Total Time": 0.978,
+                      "Actual Rows": 47,
+                      "Actual Loops": 1,
+                      "Index Cond": "((geometry IS NOT NULL) AND (geometry && '0103000020E6100000010000000500000007577BD3BA6520C0AF8D5941FF2B434007577BD3BA6520C06976FCCC2D664340D0760FDA1F781EC06976FCCC2D664340D0760FDA1F781EC0AF8D5941FF2B434007577BD3BA6520C0AF8D5941FF2B4340'::geometry))",
+                      "Shared Hit Blocks": 2,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 244,
+          "Shared Read Blocks": 9,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 41.119,
+        "Triggers": [],
+        "Execution Time": 76.034
+      }
+    ]
+  }
+]

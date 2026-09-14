@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "vigia.forecast-corpus-audit.v1",
+  "generatedAt": "2026-08-24T14:16:31.040Z",
+  "filters": {
+    "region": "Portugal",
+    "from": "2024-01-01",
+    "to": "2024-12-31"
+  },
+  "sourceCandidateIncidentCount": 35,
+  "sourceMaterial": {
+    "regions": [
+      "Portugal",
+      "Western US current shadow only"
+    ],
+    "seasons": [
+      "2024",
+      "2026 current shadow only"
+    ],
+    "officialIncidentCount": 35,
+    "forecastEligibleHistoricalCases": 0,
+    "forecastLabelCount": 0,
+    "thermalContextCandidates": 12677,
+    "qualification": "Current US state is not a historical label; Portugal incidents have no issue-time perimeter progression labels."
+  },
+  "corpus": {
+    "schemaVersion": "vigia.forecast-corpus-summary.v1",
+    "incidents": 0,
+    "positiveCases": 0,
+    "negativeControls": 0,
+    "excludedControls": 100,
+    "hardNegatives": 0,
+    "regions": [],
+    "seasons": [],
+    "splits": {},
+    "semanticHash": "forecast-corpus-summary:sha256:78bee4febce4143b9bdbaa786740f3e7f53ff5b4506cbaade9474b61548c9472"
+  },
+  "negativeControls": {
+    "valid": 0,
+    "excluded": 100,
+    "diagnosticCandidates": 100,
+    "reason": "Context locations lack a pinned physical observation opportunity and authoritative no-incident doctrine."
+  },
+  "leakage": {
+    "schemaVersion": "vigia.forecast-leakage-report.v1",
+    "passed": true,
+    "rowsInspected": 0,
+    "incidentsInspected": 0,
+    "upstreamObservationsInspected": 0,
+    "violations": [],
+    "reportHash": "forecast-leakage-report:sha256:5659c8cd34f350845db53e504c681526d773c3cbb08471667876c45bc5957837"
+  },
+  "forecastEligible": false
+}

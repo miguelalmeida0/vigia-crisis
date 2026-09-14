@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f8f6">
+  <meta name="description" content="VIGIA FieldNet Lite incident-scoped offline field reporting">
+  <link rel="manifest" href="/fieldnet-lite/manifest.webmanifest">
+  <link rel="stylesheet" href="/fieldnet-lite/app.css">
+  <title>VIGIA FieldNet Lite</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to field actions</a>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">VIGIA / FIELDNET LITE</p>
+      <h1>Field reporting</h1>
+    </div>
+    <div class="connectivity" id="connectivity" role="status" aria-live="polite">
+      <span class="connectivity__dot" aria-hidden="true"></span>
+      <span id="connectivity-label">Checking connection</span>
+    </div>
+  </header>
+
+  <section class="session-strip" id="session-strip" aria-labelledby="session-heading">
+    <div>
+      <p class="label" id="session-heading">Protected field session</p>
+      <p id="session-summary">Waiting for an authorized launcher. The control key is never entered or stored in this browser.</p>
+    </div>
+    <span class="status-chip status-chip--neutral" id="session-status">Not connected</span>
+  </section>
+
+  <nav class="tabs" aria-label="FieldNet Lite views">
+    <button class="tab is-active" type="button" data-view="report" aria-controls="view-report" aria-selected="true">Report</button>
+    <button class="tab" type="button" data-view="tasks" aria-controls="view-tasks" aria-selected="false">Tasks <span id="task-count">0</span></button>
+    <button class="tab" type="button" data-view="queue" aria-controls="view-queue" aria-selected="false">Queue <span id="queue-count">0</span></button>
+  </nav>
+
+  <main id="main">
+    <section class="view is-active" id="view-report" data-view-panel="report" aria-labelledby="report-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MAIN ACTION</p>
+          <h2 id="report-heading">Report from field</h2>
+        </div>
+        <button class="button button--secondary" type="button" id="capture-location">Update GPS</button>
+      </div>
+
+      <div class="location-card" id="location-card" aria-live="polite">
+        <div><span class="label">Location</span><strong id="location-value">Not captured</strong></div>
+        <div><span class="label">Accuracy</span><strong id="accuracy-value">—</strong></div>
+        <div><span class="label">Captured</span><strong id="location-time">—</strong></div>
+      </div>
+
+      <form id="report-form" novalidate>
+        <label class="field field--full">
+          <span>Report type</span>
+          <select id="report-type" name="reportType" required>
+            <option value="FIRE_SMOKE">Fire / smoke</option>
+            <option value="ROAD_ACCESS">Road / access</option>
+            <option value="COMMUNITY_STATUS">Community status</option>
+            <option value="RESOURCE_STATUS">Resource status</option>
+            <option value="INFRASTRUCTURE">Infrastructure</option>
+            <option value="FIELD_BOUNDARY_POINT">Field boundary point</option>
+            <option value="PROTECTION_ACK">Protection acknowledgement</option>
+            <option value="OTHER">Other observation</option>
+            <option value="HOSPITAL_CAPACITY_UPDATE">Hospital capacity update</option>
+            <option value="FIRE_STATION_CAPACITY_UPDATE">Fire-station capacity update</option>
+          </select>
+        </label>
+
+        <div id="structured-fields" class="form-grid" aria-live="polite"></div>
+
+        <label class="field">
+          <span>Bearing <span class="optional">optional</span></span>
+          <input id="bearing" name="bearing" type="number" inputmode="decimal" min="0" max="359.99" step="0.01" placeholder="0–359°">
+        </label>
+        <label class="field">
+          <span>Linked task <span class="optional">optional</span></span>
+          <select id="linked-task" name="linkedTask"><option value="">No linked task</option></select>
+        </label>
+        <label class="field field--full">
+          <span>Short note <span class="optional">optional; no personal details</span></span>
+          <textarea id="note" name="note" maxlength="500" rows="3" placeholder="Operational observation only. Do not enter names, personal phone numbers, or individual schedules."></textarea>
+        </label>
+        <label class="field file-field">
+          <span>Photo or video <span class="optional">optional</span></span>
+          <input id="media" name="media" type="file" accept="image/*,video/*" capture="environment">
+          <small>Media remains on this device; its evidence hash and metadata join the report queue.</small>
+        </label>
+        <label class="field file-field">
+          <span>Voice note <span class="optional">optional; no personal details</span></span>
+          <input id="audio" name="audio" type="file" accept="audio/*" capture>
+          <small>Audio remains on this device; its evidence hash and metadata join the report queue.</small>
+        </label>
+
+        <aside class="truth-note">
+          <strong>Observation boundary</strong>
+          <p>A submitted field report remains an attributable observation. It does not become official incident truth, perimeter geometry, dispatch, authority, or an outcome without separate admission.</p>
+        </aside>
+        <p class="form-error" id="form-error" role="alert"></p>
+        <button class="button button--primary button--block" type="submit" id="submit-report">Save report to queue</button>
+      </form>
+    </section>
+
+    <section class="view" id="view-tasks" data-view-panel="tasks" aria-labelledby="tasks-heading" hidden>
+      <div class="section-heading">
+        <div><p class="eyebrow">TWO-WAY VERIFICATION</p><h2 id="tasks-heading">Field tasks</h2></div>
+        <button class="button button--secondary" type="button" id="refresh-tasks">Refresh</button>
+      </div>
+      <p class="section-intro">Accept only when the task can be completed within its safe-zone constraint. Unsafe refusal is a valid, persisted acknowledgement.</p>
+      <div id="task-list" class="stack" aria-live="polite"><p class="empty">No cached tasks.</p></div>
+    </section>
+
+    <section class="view" id="view-queue" data-view-panel="queue" aria-labelledby="queue-heading" hidden>
+      <div class="section-heading">
+        <div><p class="eyebrow">OFFLINE-FIRST</p><h2 id="queue-heading">Local queue</h2></div>
+        <button class="button button--secondary" type="button" id="sync-now">Sync now</button>
+      </div>
+      <p class="section-intro">Items stay on this device until the protected FieldNet node acknowledges them. Conflicts are preserved for operator review.</p>
+      <div id="queue-list" class="stack" aria-live="polite"><p class="empty">Queue is empty.</p></div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="/fieldnet-lite/app.js"></script>
+</body>
+</html>

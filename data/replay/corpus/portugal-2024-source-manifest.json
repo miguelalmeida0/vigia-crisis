@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "vigia-replay-source-manifest.v1",
+  "id": "portugal-2024-official-evidence",
+  "countryCode": "PT",
+  "period": {
+    "start": "2024-01-01T00:00:00.000Z",
+    "end": "2024-12-31T23:59:59.999Z"
+  },
+  "products": [
+    {
+      "id": "nasa-firms:viirs-snpp:portugal:2024",
+      "provider": "NASA FIRMS",
+      "platform": "Suomi NPP",
+      "instrument": "VIIRS",
+      "kind": "thermal_active_fire_archive",
+      "file": "data/replay/raw/nasa-firms/viirs-snpp_2024_Portugal.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-snpp_2024_Portugal.csv",
+      "sourceKey": "VIIRS_SNPP_ARCHIVE",
+      "providerUpdatedAt": "2025-06-19T13:27:57Z",
+      "bytes": 946487,
+      "checksumSha256": "1f1524c8f621c234ab216098988a6f2bbfbef62aa482be27684e74fa0103e0a5",
+      "responseGeneratedAt": null
+    },
+    {
+      "id": "nasa-firms:viirs-noaa20:portugal:2024",
+      "provider": "NASA FIRMS",
+      "platform": "NOAA-20 (JPSS-1)",
+      "instrument": "VIIRS",
+      "kind": "thermal_active_fire_archive",
+      "file": "data/replay/raw/nasa-firms/viirs-jpss1_2024_Portugal.csv",
+      "url": "https://firms.modaps.eosdis.nasa.gov/data/country/viirs-jpss1_2024_Portugal.csv",
+      "sourceKey": "VIIRS_NOAA20_ARCHIVE",
+      "providerUpdatedAt": "2025-06-20T16:06:59Z",
+      "bytes": 966085,
+      "checksumSha256": "03d4d578a1d955255c13975af563c5d2364c2bf0105d94c320d8d17ae628482f",
+      "responseGeneratedAt": null
+    },
+    {
+      "id": "ptdata:icnf-sgif:portugal:2024:min500:offset0",
+      "provider": "api.ptdata.org",
+      "authority": "ICNF SGIF",
+      "kind": "official_fire_report_archive",
+      "file": "data/replay/raw/ptdata/fires_2024_min500_offset000.json",
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=500&limit=20&offset=0",
+      "bytes": 16695,
+      "checksumSha256": "b8d17e7aac2bddd471bee7b72623c99a991b573e4fc3a24c009b0e7ae6c2bedf",
+      "responseGeneratedAt": "2026-08-10T17:45:28.000Z"
+    },
+    {
+      "id": "ptdata:icnf-sgif:portugal:2024:min500:offset20",
+      "provider": "api.ptdata.org",
+      "authority": "ICNF SGIF",
+      "kind": "official_fire_report_archive",
+      "file": "data/replay/raw/ptdata/fires_2024_min500_offset020.json",
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=500&limit=20&offset=20",
+      "bytes": 12401,
+      "checksumSha256": "d9cbfa51b2da39994a85846e601b4ddf8a3c816ce444fffdc83551daf9456133",
+      "responseGeneratedAt": "2026-08-10T17:45:28.000Z"
+    }
+  ],
+  "licencesAndTerms": [
+    {
+      "provider": "NASA FIRMS",
+      "state": "provider_terms_apply",
+      "url": "https://firms.modaps.eosdis.nasa.gov/content/acknowledgements"
+    },
+    {
+      "provider": "api.ptdata.org / ICNF SGIF",
+      "state": "provider_terms_apply",
+      "url": "https://api.ptdata.org/docs"
+    }
+  ],
+  "limitations": [
+    "The annual FIRMS country files retain observation time but not the exact time each row became available to an operator.",
+    "The ICNF SGIF archive is an official fire-report reference; alert coordinates and times are not pixel-level ignition truth.",
+    "Corpus selection requires burned area >=500 ha, at least three assigned VIIRS observations, and one observation within 2.8 km of the report coordinate.",
+    "Each thermal detection is assigned to at most one official report using distance first and time separation second.",
+    "Derived replay records retain up to 12 points per satellite pass for the baseline split and a minimum representative set (normally 6 spatial/FRP extrema) for added splits; unchanged source files remain archived."
+  ]
+}

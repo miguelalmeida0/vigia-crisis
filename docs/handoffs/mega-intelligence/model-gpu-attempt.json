@@ -1,0 +1,54 @@
+{
+  "model": "qwen3.5:4b",
+  "runtime": "Ollama",
+  "configuration": "default GPU attempt",
+  "evidence": ".tmp/mega-intelligence/model-eval.log",
+  "note": "Reconstructed from the original per-case execution log; replaces an accidentally duplicated CPU report. No successful output or accepted candidates.",
+  "results": [
+    {
+      "name": "address",
+      "state": "offline",
+      "latencyMs": 7997
+    },
+    {
+      "name": "accents",
+      "state": "offline",
+      "latencyMs": 5945
+    },
+    {
+      "name": "abbreviation",
+      "state": "offline",
+      "latencyMs": 5254
+    },
+    {
+      "name": "negation",
+      "state": "offline",
+      "latencyMs": 5212
+    },
+    {
+      "name": "history",
+      "state": "offline",
+      "latencyMs": 7315
+    },
+    {
+      "name": "multiple",
+      "state": "offline",
+      "latencyMs": 5216
+    },
+    {
+      "name": "dates",
+      "state": "offline",
+      "latencyMs": 5118
+    },
+    {
+      "name": "injection",
+      "state": "offline",
+      "latencyMs": 4263
+    }
+  ],
+  "metrics": {
+    "calls": 8,
+    "success": 0,
+    "failures": 8
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "vigia.goes-sensor-derived-progression.v1",
+  "generatedAt": "2026-08-25T14:02:03.127Z",
+  "labelClass": "DERIVED_SENSOR_PROGRESSION",
+  "authorityClaim": "NOT_AN_OFFICIAL_PERIMETER",
+  "doctrine": {
+    "version": "vigia.goes-sensor-progression.v1",
+    "sector": "F",
+    "platform": "GOES-18",
+    "fireDqf": [
+      0,
+      1
+    ],
+    "boundingBox": [
+      -125,
+      48,
+      -105,
+      61
+    ],
+    "hourlySampling": true
+  },
+  "scans": [
+    {
+      "scanStart": "2026-08-25T10:50:21.7Z",
+      "scanEnd": "2026-08-25T10:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:1f0f3d8be89bcd36ddc2696bdbb3c296c532dd5e2397cfa07ba5187cd870bfea",
+        "sha256": "sha256:1f0f3d8be89bcd36ddc2696bdbb3c296c532dd5e2397cfa07ba5187cd870bfea",
+        "receivedAt": "2026-08-25T14:01:38.399Z"
+      },
+      "firePixels": 1
+    },
+    {
+      "scanStart": "2026-08-25T11:50:21.7Z",
+      "scanEnd": "2026-08-25T11:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:bba942a3a26d01051c89e5612164bc25af4d88ea121fd0533c6a7716ebf80a60",
+        "sha256": "sha256:bba942a3a26d01051c89e5612164bc25af4d88ea121fd0533c6a7716ebf80a60",
+        "receivedAt": "2026-08-25T14:01:52.687Z"
+      },
+      "firePixels": 0
+    },
+    {
+      "scanStart": "2026-08-25T12:50:21.7Z",
+      "scanEnd": "2026-08-25T12:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:ec6cae9057a44002d0a38467d447b168bdcd274bdda422074dc19bf91dbecc47",
+        "sha256": "sha256:ec6cae9057a44002d0a38467d447b168bdcd274bdda422074dc19bf91dbecc47",
+        "receivedAt": "2026-08-25T14:01:54.950Z"
+      },
+      "firePixels": 1
+    },
+    {
+      "scanStart": "2026-08-25T13:50:21.7Z",
+      "scanEnd": "2026-08-25T13:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+        "sha256": "sha256:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+        "receivedAt": "2026-08-25T14:02:00.581Z"
+      },
+      "firePixels": 2
+    }
+  ],
+  "states": [
+    {
+      "clusterId": "-121:48",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            -120.79252216079723,
+            48.08560233671978
+          ]
+        ]
+      },
+      "pixelCount": 1,
+      "maskClasses": [
+        "TEMPORAL_GOOD"
+      ],
+      "maximumFrpMw": 90.32530212402344,
+      "scanStart": "2026-08-25T10:50:21.7Z",
+      "scanEnd": "2026-08-25T10:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:1f0f3d8be89bcd36ddc2696bdbb3c296c532dd5e2397cfa07ba5187cd870bfea",
+        "sha256": "sha256:1f0f3d8be89bcd36ddc2696bdbb3c296c532dd5e2397cfa07ba5187cd870bfea",
+        "receivedAt": "2026-08-25T14:01:38.399Z"
+      },
+      "stateHash": "goes-sensor-progression-state:sha256:b76a252388bcfe209046647d94fd91ddca3a8c4b8ea0cb3202e49077f358488a"
+    },
+    {
+      "clusterId": "-121:48",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            -120.79252216079723,
+            48.08560233671978
+          ]
+        ]
+      },
+      "pixelCount": 1,
+      "maskClasses": [
+        "TEMPORAL_GOOD"
+      ],
+      "maximumFrpMw": 66.4857177734375,
+      "scanStart": "2026-08-25T12:50:21.7Z",
+      "scanEnd": "2026-08-25T12:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:ec6cae9057a44002d0a38467d447b168bdcd274bdda422074dc19bf91dbecc47",
+        "sha256": "sha256:ec6cae9057a44002d0a38467d447b168bdcd274bdda422074dc19bf91dbecc47",
+        "receivedAt": "2026-08-25T14:01:54.950Z"
+      },
+      "stateHash": "goes-sensor-progression-state:sha256:7828837dce75c7db702333dbcab8c17ae154aadfe328af84e422a8cef04ebcc2"
+    },
+    {
+      "clusterId": "-105:50",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            -105.25279400042227,
+            49.99032454904782
+          ]
+        ]
+      },
+      "pixelCount": 1,
+      "maskClasses": [
+        "TEMPORAL_LOW"
+      ],
+      "maximumFrpMw": 0,
+      "scanStart": "2026-08-25T13:50:21.7Z",
+      "scanEnd": "2026-08-25T13:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+        "sha256": "sha256:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+        "receivedAt": "2026-08-25T14:02:00.581Z"
+      },
+      "stateHash": "goes-sensor-progression-state:sha256:cdf1a08cb5c83ce521026eb2f7787996bb46afa20b9d308a64105464fff7e80f"
+    },
+    {
+      "clusterId": "-121:48",
+      "geometry": {
+        "type": "MultiPoint",
+        "coordinates": [
+          [
+            -120.79252216079723,
+            48.08560233671978
+          ]
+        ]
+      },
+      "pixelCount": 1,
+      "maskClasses": [
+        "TEMPORAL_LOW"
+      ],
+      "maximumFrpMw": 0,
+      "scanStart": "2026-08-25T13:50:21.7Z",
+      "scanEnd": "2026-08-25T13:59:52.5Z",
+      "rawProduct": {
+        "id": "raw:noaa-goes-public:goes_G18_ABI-L2-FDCF_progression:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+        "sha256": "sha256:827e99e29521375a49ed01857c40d88659553e8308d2d6af42d2cca8ff6b153e",
+        "receivedAt": "2026-08-25T14:02:00.581Z"
+      },
+      "stateHash": "goes-sensor-progression-state:sha256:bafe44871f76e8bf6353caed4eb3d4d3236ceaaaf578acd2aeb532d12751e121"
+    }
+  ],
+  "clusters": 2,
+  "physicalObservations": 4,
+  "fingerprint": "goes-sensor-progression:sha256:534a1a364b9c54a30017c5b67afb39ef470a8bcefa99fb3b1fe56cfe1085970d"
+}

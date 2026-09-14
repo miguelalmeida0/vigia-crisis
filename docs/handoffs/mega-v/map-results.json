@@ -1,0 +1,1397 @@
+{
+  "capturedAt": "2026-09-12T22:43:55.616Z",
+  "lanes": {
+    "before": {
+      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-before-map.json",
+      "cases": {
+        "cold": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 1634.3999999985099,
+            "p95": 5301,
+            "max": 16554.29999999702
+          },
+          "interactiveMs": {
+            "p50": 4331.80000000447,
+            "p95": 18878.5,
+            "max": 18878.5
+          },
+          "requests": {
+            "p50": 52,
+            "p95": 52,
+            "max": 52
+          },
+          "bytes": {
+            "p50": 12604576,
+            "p95": 12788873,
+            "max": 12790532
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 8,
+            "p95": 8,
+            "max": 8
+          },
+          "repeatedUrls": {
+            "p50": 1,
+            "p95": 1,
+            "max": 2
+          },
+          "gate": "FAIL"
+        },
+        "detail-to-fire": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 1110.5,
+            "p95": 6654.89999999851,
+            "max": 8073.60000000149
+          },
+          "interactiveMs": {
+            "p50": 1562,
+            "p95": 7615.5999999940395,
+            "max": 8431.69999999553
+          },
+          "requests": {
+            "p50": 16,
+            "p95": 21,
+            "max": 22
+          },
+          "bytes": {
+            "p50": 190613,
+            "p95": 5614681,
+            "max": 5665075
+          },
+          "tiles": {
+            "p50": 16,
+            "p95": 16,
+            "max": 16
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 3,
+            "max": 4
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "FAIL"
+        },
+        "fire-to-response": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 2045.8000000044703,
+            "p95": 5084.29999999702,
+            "max": 5668
+          },
+          "interactiveMs": {
+            "p50": 2489,
+            "p95": 24316.5,
+            "max": 24316.5
+          },
+          "requests": {
+            "p50": 24,
+            "p95": 33,
+            "max": 34
+          },
+          "bytes": {
+            "p50": 351534,
+            "p95": 10394758,
+            "max": 15996539
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 8,
+            "max": 9
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "gate": "FAIL"
+        },
+        "response-to-detail": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": null,
+          "usefulMs": {
+            "p50": 724,
+            "p95": 1766.8000000044703,
+            "max": 1927.0999999940395
+          },
+          "interactiveMs": {
+            "p50": 797.6999999955297,
+            "p95": 1856,
+            "max": 2074.5
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 0,
+            "max": 1
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 0,
+            "max": 5702
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 0,
+            "max": 1
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "NOT_SPECIFIED"
+        },
+        "cached-revisit": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 400,
+          "usefulMs": {
+            "p50": 484.09999999403954,
+            "p95": 1278.8000000044703,
+            "max": 1302.5
+          },
+          "interactiveMs": {
+            "p50": 565.5999999940395,
+            "p95": 1427.6000000014901,
+            "max": 1446.5
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "incident-switch": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1500,
+          "usefulMs": {
+            "p50": 3607.4000000059605,
+            "p95": 11017.30000000447,
+            "max": 23306.60000000149
+          },
+          "interactiveMs": {
+            "p50": 3846.7000000029802,
+            "p95": 11098.90000000596,
+            "max": 23742
+          },
+          "requests": {
+            "p50": 25,
+            "p95": 25,
+            "max": 25
+          },
+          "bytes": {
+            "p50": 3954891,
+            "p95": 3960001,
+            "max": 4611990
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 5,
+            "p95": 5,
+            "max": 5
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "overview": {
+          "samples": 20,
+          "successfulUsefulFrames": 18,
+          "timeouts": 2,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 7624.70000000298,
+            "p95": 10845.19999999553,
+            "max": 10845.19999999553
+          },
+          "interactiveMs": {
+            "p50": 7825.39999999851,
+            "p95": 26206.5,
+            "max": 26206.5
+          },
+          "requests": {
+            "p50": 13,
+            "p95": 14,
+            "max": 19
+          },
+          "bytes": {
+            "p50": 5097922,
+            "p95": 5487432,
+            "max": 15475950
+          },
+          "tiles": {
+            "p50": 12,
+            "p95": 12,
+            "max": 12
+          },
+          "apiCalls": {
+            "p50": 1,
+            "p95": 3,
+            "max": 5
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "gate": "FAIL"
+        },
+        "national": {
+          "samples": 20,
+          "successfulUsefulFrames": 17,
+          "timeouts": 3,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 8978,
+            "p95": 21640.10000000149,
+            "max": 21640.10000000149
+          },
+          "interactiveMs": {
+            "p50": 9579.5,
+            "p95": 26376.89999999851,
+            "max": 26376.89999999851
+          },
+          "requests": {
+            "p50": 43,
+            "p95": 50,
+            "max": 55
+          },
+          "bytes": {
+            "p50": 5509168,
+            "p95": 21311700,
+            "max": 21360771
+          },
+          "tiles": {
+            "p50": 42,
+            "p95": 42,
+            "max": 50
+          },
+          "apiCalls": {
+            "p50": 1,
+            "p95": 5,
+            "max": 6
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 2,
+            "max": 2
+          },
+          "gate": "FAIL"
+        }
+      },
+      "pageErrors": [],
+      "instances": [
+        "vigia-map-1"
+      ],
+      "maxStyleReloads": 0,
+      "maxSourceUpdates": 8
+    },
+    "after": {
+      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-after-map.json",
+      "cases": {
+        "cold": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 2039.7000000029802,
+            "p95": 2928.5,
+            "max": 6695.60000000149
+          },
+          "interactiveMs": {
+            "p50": 5385.5,
+            "p95": 15271.20000000298,
+            "max": 22940.70000000298
+          },
+          "requests": {
+            "p50": 52,
+            "p95": 52,
+            "max": 52
+          },
+          "bytes": {
+            "p50": 10336132,
+            "p95": 10625068,
+            "max": 10627143
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 8,
+            "p95": 8,
+            "max": 8
+          },
+          "repeatedUrls": {
+            "p50": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "FAIL"
+        },
+        "detail-to-fire": {
+          "samples": 20,
+          "successfulUsefulFrames": 17,
+          "timeouts": 3,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 1539.2999999970198,
+            "p95": 8250.79999999702,
+            "max": 8250.79999999702
+          },
+          "interactiveMs": {
+            "p50": 1857.2999999970198,
+            "p95": 8448.69999999553,
+            "max": 8448.69999999553
+          },
+          "requests": {
+            "p50": 16,
+            "p95": 21,
+            "max": 23
+          },
+          "bytes": {
+            "p50": 190613,
+            "p95": 3415962,
+            "max": 10913534
+          },
+          "tiles": {
+            "p50": 16,
+            "p95": 16,
+            "max": 16
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 3,
+            "max": 9
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "gate": "FAIL"
+        },
+        "fire-to-response": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 1772.3000000044703,
+            "p95": 3060.0999999940395,
+            "max": 3618.5
+          },
+          "interactiveMs": {
+            "p50": 2313.2999999970198,
+            "p95": 4410.39999999851,
+            "max": 4410.39999999851
+          },
+          "requests": {
+            "p50": 24,
+            "p95": 33,
+            "max": 34
+          },
+          "bytes": {
+            "p50": 351534,
+            "p95": 8124163,
+            "max": 8140944
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 24,
+            "max": 26
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 7,
+            "max": 8
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "FAIL"
+        },
+        "response-to-detail": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": null,
+          "usefulMs": {
+            "p50": 364,
+            "p95": 748.0999999940395,
+            "max": 1070.1000000014901
+          },
+          "interactiveMs": {
+            "p50": 452.40000000596046,
+            "p95": 856.5,
+            "max": 1240.2000000029802
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 0,
+            "max": 1
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 0,
+            "max": 3225349
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 1
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "NOT_SPECIFIED"
+        },
+        "cached-revisit": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 400,
+          "usefulMs": {
+            "p50": 311,
+            "p95": 903.1999999955297,
+            "max": 1129.5999999940395
+          },
+          "interactiveMs": {
+            "p50": 388,
+            "p95": 957.6999999955297,
+            "max": 1143.0999999940395
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 1,
+            "max": 3
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 16795,
+            "max": 24867
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 1,
+            "max": 3
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "incident-switch": {
+          "samples": 20,
+          "successfulUsefulFrames": 19,
+          "timeouts": 1,
+          "targetMs": 1500,
+          "usefulMs": {
+            "p50": 2512.10000000149,
+            "p95": 9339.20000000298,
+            "max": 9339.20000000298
+          },
+          "interactiveMs": {
+            "p50": 2664,
+            "p95": 11963.20000000298,
+            "max": 11963.20000000298
+          },
+          "requests": {
+            "p50": 25,
+            "p95": 26,
+            "max": 26
+          },
+          "bytes": {
+            "p50": 3961746,
+            "p95": 6924981,
+            "max": 6928731
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 5,
+            "p95": 6,
+            "max": 6
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "overview": {
+          "samples": 20,
+          "successfulUsefulFrames": 18,
+          "timeouts": 2,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 6010.89999999851,
+            "p95": 12375.5,
+            "max": 12375.5
+          },
+          "interactiveMs": {
+            "p50": 6617.80000000447,
+            "p95": 18631,
+            "max": 18631
+          },
+          "requests": {
+            "p50": 14,
+            "p95": 19,
+            "max": 19
+          },
+          "bytes": {
+            "p50": 2671622,
+            "p95": 5635375,
+            "max": 8074471
+          },
+          "tiles": {
+            "p50": 12,
+            "p95": 12,
+            "max": 12
+          },
+          "apiCalls": {
+            "p50": 2,
+            "p95": 5,
+            "max": 6
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 2,
+            "max": 3
+          },
+          "gate": "FAIL"
+        },
+        "national": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 6665.89999999851,
+            "p95": 14403.89999999851,
+            "max": 19081.5
+          },
+          "interactiveMs": {
+            "p50": 6800.0999999940395,
+            "p95": 18415.89999999851,
+            "max": 21393.10000000149
+          },
+          "requests": {
+            "p50": 26,
+            "p95": 32,
+            "max": 49
+          },
+          "bytes": {
+            "p50": 3074388,
+            "p95": 8785530,
+            "max": 8966707
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 24,
+            "max": 43
+          },
+          "apiCalls": {
+            "p50": 2,
+            "p95": 6,
+            "max": 6
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 2,
+            "max": 2
+          },
+          "gate": "FAIL"
+        }
+      },
+      "pageErrors": [],
+      "instances": [
+        "vigia-map-1"
+      ],
+      "maxStyleReloads": 0,
+      "maxSourceUpdates": 8
+    },
+    "pre-resolver": {
+      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-pre-resolver-map.json",
+      "cases": {
+        "cold": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 2323.60000000149,
+            "p95": 3815.10000000149,
+            "max": 4370
+          },
+          "interactiveMs": {
+            "p50": 4687.79999999702,
+            "p95": 13317.60000000149,
+            "max": 13317.60000000149
+          },
+          "requests": {
+            "p50": 51,
+            "p95": 52,
+            "max": 60
+          },
+          "bytes": {
+            "p50": 7365266,
+            "p95": 10321732,
+            "max": 18079131
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 7,
+            "p95": 8,
+            "max": 16
+          },
+          "repeatedUrls": {
+            "p50": 1,
+            "p95": 1,
+            "max": 11
+          },
+          "gate": "FAIL"
+        },
+        "detail-to-fire": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 1471.5,
+            "p95": 7810.39999999851,
+            "max": 8958.5
+          },
+          "interactiveMs": {
+            "p50": 2054.10000000149,
+            "p95": 8977.70000000298,
+            "max": 9144.59999999404
+          },
+          "requests": {
+            "p50": 17,
+            "p95": 18,
+            "max": 20
+          },
+          "bytes": {
+            "p50": 3144941,
+            "p95": 3148888,
+            "max": 4603931
+          },
+          "tiles": {
+            "p50": 16,
+            "p95": 16,
+            "max": 16
+          },
+          "apiCalls": {
+            "p50": 1,
+            "p95": 2,
+            "max": 2
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "fire-to-response": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 2160.10000000149,
+            "p95": 4174.10000000149,
+            "max": 8678.29999999702
+          },
+          "interactiveMs": {
+            "p50": 2833.39999999851,
+            "p95": 5834.89999999851,
+            "max": 9521.79999999702
+          },
+          "requests": {
+            "p50": 24,
+            "p95": 43,
+            "max": 44
+          },
+          "bytes": {
+            "p50": 351534,
+            "p95": 4627306,
+            "max": 6018138
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 36,
+            "max": 36
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 7,
+            "max": 7
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "FAIL"
+        },
+        "response-to-detail": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": null,
+          "usefulMs": {
+            "p50": 282.20000000298023,
+            "p95": 593,
+            "max": 595.2000000029802
+          },
+          "interactiveMs": {
+            "p50": 433.6000000014901,
+            "p95": 731.2000000029802,
+            "max": 2467.10000000149
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 2,
+            "max": 4
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 4408165,
+            "max": 4795977
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 0,
+            "max": 2
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 2,
+            "max": 4
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "NOT_SPECIFIED"
+        },
+        "cached-revisit": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 400,
+          "usefulMs": {
+            "p50": 290.40000000596046,
+            "p95": 669.0999999940395,
+            "max": 733.7999999970198
+          },
+          "interactiveMs": {
+            "p50": 384.80000000447035,
+            "p95": 823.1000000014901,
+            "max": 832.5
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 1,
+            "max": 3
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 2954372,
+            "max": 3340033
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 3
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "incident-switch": {
+          "samples": 20,
+          "successfulUsefulFrames": 20,
+          "timeouts": 0,
+          "targetMs": 1500,
+          "usefulMs": {
+            "p50": 2959.10000000149,
+            "p95": 6118.9000000059605,
+            "max": 8323.09999999404
+          },
+          "interactiveMs": {
+            "p50": 3543.1999999955297,
+            "p95": 8935.39999999851,
+            "max": 10076.10000000149
+          },
+          "requests": {
+            "p50": 25,
+            "p95": 26,
+            "max": 26
+          },
+          "bytes": {
+            "p50": 3957552,
+            "p95": 6912797,
+            "max": 6914460
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 5,
+            "p95": 6,
+            "max": 6
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "overview": {
+          "samples": 20,
+          "successfulUsefulFrames": 19,
+          "timeouts": 1,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 7278.30000000447,
+            "p95": 9682.69999999553,
+            "max": 9682.69999999553
+          },
+          "interactiveMs": {
+            "p50": 7566.30000000447,
+            "p95": 10516.19999999553,
+            "max": 10516.19999999553
+          },
+          "requests": {
+            "p50": 14,
+            "p95": 14,
+            "max": 16
+          },
+          "bytes": {
+            "p50": 2658950,
+            "p95": 2663594,
+            "max": 4186595
+          },
+          "tiles": {
+            "p50": 12,
+            "p95": 12,
+            "max": 12
+          },
+          "apiCalls": {
+            "p50": 2,
+            "p95": 2,
+            "max": 4
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "FAIL"
+        },
+        "national": {
+          "samples": 20,
+          "successfulUsefulFrames": 19,
+          "timeouts": 1,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 7564.70000000298,
+            "p95": 11734.20000000298,
+            "max": 11734.20000000298
+          },
+          "interactiveMs": {
+            "p50": 8398.20000000298,
+            "p95": 19150.59999999404,
+            "max": 19150.59999999404
+          },
+          "requests": {
+            "p50": 26,
+            "p95": 30,
+            "max": 43
+          },
+          "bytes": {
+            "p50": 3061708,
+            "p95": 8678130,
+            "max": 8678138
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 24,
+            "max": 42
+          },
+          "apiCalls": {
+            "p50": 2,
+            "p95": 4,
+            "max": 6
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 2
+          },
+          "gate": "FAIL"
+        }
+      },
+      "pageErrors": [],
+      "instances": [
+        "vigia-map-1"
+      ],
+      "maxStyleReloads": 0,
+      "maxSourceUpdates": 8
+    },
+    "final": {
+      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-final-map.json",
+      "cases": {
+        "cold": {
+          "samples": 11,
+          "successfulUsefulFrames": 11,
+          "timeouts": 0,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 1709.5,
+            "p95": null,
+            "max": 36843.80000000447
+          },
+          "interactiveMs": {
+            "p50": 3262.3000000044703,
+            "p95": null,
+            "max": 9071.09999999404
+          },
+          "requests": {
+            "p50": 51,
+            "p95": 52,
+            "max": 52
+          },
+          "bytes": {
+            "p50": 10338493,
+            "p95": 10340029,
+            "max": 10340029
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 7,
+            "p95": 8,
+            "max": 8
+          },
+          "repeatedUrls": {
+            "p50": 1,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "detail-to-fire": {
+          "samples": 11,
+          "successfulUsefulFrames": 9,
+          "timeouts": 2,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 998.1999999955297,
+            "p95": null,
+            "max": 6722.89999999851
+          },
+          "interactiveMs": {
+            "p50": 1883.7000000029802,
+            "p95": null,
+            "max": 7206.29999999702
+          },
+          "requests": {
+            "p50": 16,
+            "p95": 18,
+            "max": 18
+          },
+          "bytes": {
+            "p50": 190613,
+            "p95": 3874254,
+            "max": 3874254
+          },
+          "tiles": {
+            "p50": 16,
+            "p95": 16,
+            "max": 16
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 3,
+            "max": 3
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "fire-to-response": {
+          "samples": 11,
+          "successfulUsefulFrames": 10,
+          "timeouts": 1,
+          "targetMs": 1000,
+          "usefulMs": {
+            "p50": 1679.4000000059605,
+            "p95": null,
+            "max": 6489.9000000059605
+          },
+          "interactiveMs": {
+            "p50": 1917.4000000059605,
+            "p95": null,
+            "max": 6738.60000000149
+          },
+          "requests": {
+            "p50": 24,
+            "p95": 33,
+            "max": 33
+          },
+          "bytes": {
+            "p50": 351534,
+            "p95": 5183286,
+            "max": 5183286
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 7,
+            "max": 7
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "response-to-detail": {
+          "samples": 11,
+          "successfulUsefulFrames": 11,
+          "timeouts": 0,
+          "targetMs": null,
+          "usefulMs": {
+            "p50": 112.70000000298023,
+            "p95": null,
+            "max": 6829.60000000149
+          },
+          "interactiveMs": {
+            "p50": 213.89999999850988,
+            "p95": null,
+            "max": 583.5
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 46,
+            "max": 46
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 2956471,
+            "max": 2956471
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 41,
+            "max": 41
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 2,
+            "max": 2
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 16,
+            "max": 16
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "cached-revisit": {
+          "samples": 11,
+          "successfulUsefulFrames": 11,
+          "timeouts": 0,
+          "targetMs": 400,
+          "usefulMs": {
+            "p50": 96.10000000149012,
+            "p95": null,
+            "max": 16142.10000000149
+          },
+          "interactiveMs": {
+            "p50": 218.59999999403954,
+            "p95": null,
+            "max": 769.1999999955297
+          },
+          "requests": {
+            "p50": 0,
+            "p95": 15,
+            "max": 15
+          },
+          "bytes": {
+            "p50": 0,
+            "p95": 2651040,
+            "max": 2651040
+          },
+          "tiles": {
+            "p50": 0,
+            "p95": 10,
+            "max": 10
+          },
+          "apiCalls": {
+            "p50": 0,
+            "p95": 5,
+            "max": 5
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 1,
+            "max": 1
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "incident-switch": {
+          "samples": 10,
+          "successfulUsefulFrames": 10,
+          "timeouts": 0,
+          "targetMs": 1500,
+          "usefulMs": {
+            "p50": 1569.1000000014901,
+            "p95": null,
+            "max": 2761.6999999955297
+          },
+          "interactiveMs": {
+            "p50": 1901.6000000014901,
+            "p95": null,
+            "max": 3485.60000000149
+          },
+          "requests": {
+            "p50": 25,
+            "p95": 28,
+            "max": 28
+          },
+          "bytes": {
+            "p50": 4407964,
+            "p95": 9746047,
+            "max": 9746047
+          },
+          "tiles": {
+            "p50": 20,
+            "p95": 20,
+            "max": 20
+          },
+          "apiCalls": {
+            "p50": 5,
+            "p95": 8,
+            "max": 8
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "overview": {
+          "samples": 10,
+          "successfulUsefulFrames": 9,
+          "timeouts": 1,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 5739.69999999553,
+            "p95": null,
+            "max": 7331.30000000447
+          },
+          "interactiveMs": {
+            "p50": 6007.30000000447,
+            "p95": null,
+            "max": 8355.30000000447
+          },
+          "requests": {
+            "p50": 14,
+            "p95": 16,
+            "max": 16
+          },
+          "bytes": {
+            "p50": 2660664,
+            "p95": 4187913,
+            "max": 4187913
+          },
+          "tiles": {
+            "p50": 12,
+            "p95": 12,
+            "max": 12
+          },
+          "apiCalls": {
+            "p50": 2,
+            "p95": 4,
+            "max": 4
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 0,
+            "max": 0
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        },
+        "national": {
+          "samples": 10,
+          "successfulUsefulFrames": 10,
+          "timeouts": 0,
+          "targetMs": 2500,
+          "usefulMs": {
+            "p50": 5682.80000000447,
+            "p95": null,
+            "max": 24323.10000000149
+          },
+          "interactiveMs": {
+            "p50": 2465.3000000044703,
+            "p95": null,
+            "max": 9156.70000000298
+          },
+          "requests": {
+            "p50": 26,
+            "p95": 31,
+            "max": 31
+          },
+          "bytes": {
+            "p50": 3063422,
+            "p95": 5975921,
+            "max": 5975921
+          },
+          "tiles": {
+            "p50": 24,
+            "p95": 24,
+            "max": 24
+          },
+          "apiCalls": {
+            "p50": 2,
+            "p95": 5,
+            "max": 5
+          },
+          "repeatedUrls": {
+            "p50": 0,
+            "p95": 2,
+            "max": 2
+          },
+          "gate": "INCOMPLETE_CONTENDED_RUN"
+        }
+      },
+      "pageErrors": [],
+      "instances": [
+        "vigia-map-1",
+        null,
+        "vigia-map-2",
+        "vigia-map-3"
+      ],
+      "maxStyleReloads": 0,
+      "maxSourceUpdates": 8
+    }
+  },
+  "method": "20 independent browser contexts per lane; eight sequential routes in each context. Chromium 139 / Playwright 1.54; 1728x966; browser HTTP cache enabled through transparent local proxy. Cold uses first tile-backed render. Transitions conservatively require a post-navigation render with the imagery source loaded. No per-navigation SQL tracing; external tile and label work remains part of measured latency. Network totals attribute responses that finish during each case; a request can start in the preceding case. Repeat URL counts do not establish erroneous duplication."
+}

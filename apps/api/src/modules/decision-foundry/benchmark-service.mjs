@@ -1,0 +1,27 @@
+import path from 'node:path';
+import { performance } from 'node:perf_hooks';
+import { calculateDecisionDelta, certifyNegativeAtlas, compileCrisisDecisionState, createDecisionReplayRecord, createWildfireDecisionDefinitions, createWildfireHypothesisDefinitions, evaluateContractCounterfactual, evaluateDecisionDependencies, evaluateHypotheses, materializeProgressionSequence, buildHorizonLabels, rankCandidateAcquisitions, verifyDecisionReplay } from '../../../../../packages/domain/src/decision-foundry/index.mjs';
+import { readJson, writeJsonAtomic } from '../../shared/json-file.mjs';
+import { corpusPaths } from '../forecast-corpus/corpus-paths.mjs';
+import { materializeRetainedHrrr } from '../data-foundry/weather-materializer.mjs';
+import { loadDecisionCompilerInput } from './compiler-service.mjs';
+import { decisionFoundryPaths } from './decision-foundry-paths.mjs';
+import { queryDecisionObjectSet } from './query-service.mjs';
+
+function percentile(values, p) { const sorted = [...values].sort((a, b) => a - b); return sorted[Math.min(sorted.length - 1, Math.floor(sorted.length * p))] ?? 0; }
+function measure(iterations, operation) { const samples = new Array(iterations), start = performance.now(); for (let i = 0; i < iterations; i += 1) { const at = performance.now(); operation(i); samples[i] = performance.now() - at; } const elapsedMs = performance.now() - start; return { iterations, elapsedMs, throughputPerSecond: iterations / (elapsedMs / 1000), p50Ms: percentile(samples, .5), p95Ms: percentile(samples, .95) }; }
+async function measureAsync(iterations, operation) { const samples = new Array(iterations), start = performance.now(); for (let i = 0; i < iterations; i += 1) { const at = performance.now(); await operation(i); samples[i] = performance.now() - at; } const elapsedMs = performance.now() - start; return { iterations, elapsedMs, throughputPerSecond: iterations / (elapsedMs / 1000), p50Ms: percentile(samples, .5), p95Ms: percentile(samples, .95) }; }
+export async function benchmarkDecisionFoundry({ projectRoot = process.cwd() } = {}) {
+  const rssBefore = process.memoryUsage().rss, input = await loadDecisionCompilerInput({ projectRoot }), definitions = createWildfireHypothesisDefinitions(), hypothesis = evaluateHypotheses({ incidentId: input.incident.id, hypotheses: definitions, evidenceFacts: input.evidenceFacts, knowledgeTime: input.knowledgeTime }), decisions = createWildfireDecisionDefinitions(), packet = compileCrisisDecisionState(input), corpus = await readJson(path.join(corpusPaths(projectRoot).gold, 'forecast-corpus.json'), { incidents: [] }), incident = corpus.incidents.find((item) => item.id === input.incident.id), progressionArtifact = await readJson(path.join(decisionFoundryPaths(projectRoot).progressions, `${input.incident.id}.json`), { geometryResults: [] });
+  const results = {
+    hypothesisEvaluations: measure(10_000, () => evaluateHypotheses({ incidentId: input.incident.id, hypotheses: definitions, evidenceFacts: input.evidenceFacts, knowledgeTime: input.knowledgeTime })),
+    decisionGraphEvaluations: measure(10_000, () => evaluateDecisionDependencies({ definitions: decisions, facts: input.facts, hypotheses: hypothesis.results, dataProducts: input.dataProducts, authority: input.authorityContext })),
+    decisionDeltaCalculations: measure(10_000, () => calculateDecisionDelta({ before: packet, after: packet, knowledgeTime: input.knowledgeTime })),
+    acquisitionRankings: measure(10_000, () => rankCandidateAcquisitions(input.candidateAcquisitions, { knowledgeTime: input.knowledgeTime })),
+    counterfactualAnalyses: measure(1_000, () => evaluateContractCounterfactual({ decisionPacket: packet, assumption: { type: 'SATISFY_DATA_GAP', gapId: packet.openDataGaps[0].id } })),
+    progressionSequenceMaterialization: measure(100, () => materializeProgressionSequence({ incident, geometryResults: progressionArtifact.geometryResults })),
+  };
+  const sequence = materializeProgressionSequence({ incident, geometryResults: progressionArtifact.geometryResults }), atlas = await readJson(decisionFoundryPaths(projectRoot).atlas, { entries: [] }), replayRecord = createDecisionReplayRecord({ compilerInput: input, packet }); results.futureLabelGeneration = measure(100, () => buildHorizonLabels({ incident, sequence })); results.negativeAtlasCertification = measure(1_000, () => certifyNegativeAtlas(atlas.entries)); results.fullPacketCompilation = measure(100, () => compileCrisisDecisionState(input)); results.fullDecisionReplay = measure(100, () => { const rebuilt = compileCrisisDecisionState(structuredClone(input)); verifyDecisionReplay(replayRecord, rebuilt); }); results.largeObjectSetQueries = await measureAsync(100, () => queryDecisionObjectSet({ projectRoot, name: 'ACQUISITIONS_RANKED_BY_DECISION_VALUE' })); results.hrrrIncidentLocalExtraction = await measureAsync(1, () => materializeRetainedHrrr({ projectRoot, incidentId: input.incident.id }));
+  const output = { schemaVersion: 'vigia.decision-foundry-benchmark.v1', results, peakMemoryBytes: Math.max(rssBefore, process.memoryUsage().rss), incrementalRecomputationCostMs: results.decisionGraphEvaluations.p95Ms + results.acquisitionRankings.p95Ms, fullRebuildCostMs: results.fullPacketCompilation.p95Ms, explanationsAndProvenanceRetained: true };
+  await writeJsonAtomic(path.join(decisionFoundryPaths(projectRoot).benchmarks, 'decision-foundry.json'), output); return output;
+}

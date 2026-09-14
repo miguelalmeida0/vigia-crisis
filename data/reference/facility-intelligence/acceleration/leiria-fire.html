@@ -1,0 +1,1173 @@
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="https://bvleiria.pt/xmlrpc.php">
+
+	<style type="text/css">
+
+    div.jslm_main-up-wrapper .jslm_input_field .tmce-active .switch-tmce ,
+    div.jslm_main-up-wrapper .jslm_input_field .tmce-active .switch-html {background: #f0f0f0 !important;color: #797b7e !important;border-bottom-color: #f0f0f0 !important;}
+    div.jslm_main-up-wrapper .jslm_input_field button:not(:hover):not(:active):not(.has-background) {background: #f0f0f0 !important;color: #797b7e !important;}
+    div.jslm_main-up-wrapper div.jslm_dropdown_wrp select.jslm_input_field{border: 1px solid #d4d4d5;background-color: #ffffff;color: #797b7e;}
+    /* plugin color */
+    .border-top{border-top: 1px solid #d4d4d5;}
+    .jslm_border_bottom{border-bottom: 1px solid #d4d4d5;}
+    li a.headerlinks.active,
+    .jslm_section_title.active,
+    a.active{background-color: #e43039 ;color: #ffffff ;}
+    div.jslm_content_wrapper div.jslm_content_data a.button{background-color: #f0f0f0;color: #4d4d4d;border: 1px solid #d4d4d5;}
+    div.jslm_content_wrapper div.js-form-wrapper-newlogin div.js-imagearea img{background-color: #e43039}
+    div.jslm_content_wrapper div.page_heading{color: #4d4d4d}
+    div.jslm_content_wrapper div.js-form-wrapper-newlogin div.js-dataarea input.button.jslms-newsubmit{color: #ffffff;background-color: #e43039;}
+    /*div.jslm-panel-heading.active{background-color: #e43039;}*/
+    /* venobox */
+    a.vbox-next,a.vbox-prev{background-color: #ffffff;}
+    /* Modal */
+    .modal-header{background-color: #e43039;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field input.jslm_field_style{border: 1px solid #d4d4d5;background: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field input.jslm_field_style::-webkit-input-placeholder{color: #797b7e;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field input.jslm_field_style::-moz-placeholder{color: #797b7e;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field input.jslm_field_style::-ms-input-placeholder{color: #797b7e;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field input.jslm_field_style::-moz-placeholder {color: #797b7e;}
+    div.jslm_content_data div#selectpaymentmethod div.jslm_modal_header button.jslm_close_button_style{color: #e43039}
+    div.jslm_content_data div.jslm_modal_body div.jslm-payment-wrp a{border: 1px solid #d4d4d5}
+    div.jslm_content_data div.jslm_modal_body div.jslm-payment-wrp a:hover{border-color: #e43039;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field span.jslm_save_button {border-top: 1px solid #e43039;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field span.jslm_save_button input.jslm_save_button_style{background-color: #fafafa;font-weight: 600;border:1px solid #d4d4d5;color: #797b7e;}
+    div.jslm_content_data div.jslm_modal_body span.jslm_search_field span.jslm_save_button input.jslm_save_button_style.jslm_saveNclose{border-color: #e43039;background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_modal_body div.jslm_payment_plan_description h5.jslm_payment_plan_desc{border: 1px solid #e43039;color: #797b7e;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_modal_body div.jslm_payment_plan_description h5.jslm_payment_plan_desc span.jslm_payment_plan_percentage{color: #e43039;}
+    div.jslm_content_data div.jslm_error_message_wrapper a.error_btn{border: 1px solid #e43039;background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_error_message_wrapper a.error_btn.err_register_btn{border: 1px solid #d4d4d5;background-color: #fafafa;color: #797b7e !important;}
+    /* Login form placeholder */
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left div.jslm_input_field input::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left div.jslm_input_field input::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left div.jslm_input_field input::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left div.jslm_input_field input::placeholder {color:#797b7e;}
+    /*header */
+    div#jslearnmanager-header-main-wrapper nav{background-color: #4d4d4d;}
+    div#jslearnmanager-header-main-wrapper nav ul li{}
+    div#jslearnmanager-header-main-wrapper nav ul li a{color:#fff;border-right: 1px solid #252525;}
+    div#jslearnmanager-header-main-wrapper nav ul li:hover{background-color: #e43039;border-color: #e43039;}
+    div#jslearnmanager-header-main-wrapper nav ul li a.active,
+    div#jslearnmanager-header-main-wrapper nav ul li:hover a{border-color: #e43039;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title div.jslm_left_data h3.jslm_title_heading{color: #4d4d4d}
+    /* course list 2 coulmns */
+    div#jslearnmanager-header-main-wrapper nav{border-bottom: 5px solid #e43039;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title{border-bottom: 2px solid #e43039;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title div.jslm_right_data span.jslm_sorting select{border: 1px solid #d4d4d5;color: #797b7e;background: #fafafa;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title div.jslm_right_data span.jslm_sorting a.jslm_sort_img{background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right{border-left: 1px solid #d4d4d5;}
+    /*div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_right_middle{border-top: 1px solid #d4d4d5;}*/
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right_bottom{border-top: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_right_top{border-bottom:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_right_top div.jslm_right_top_left h4.jslm_heading_style a.jslm_course_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper:hover div.jslm_right div.jslm_right_top div.jslm_right_top_left h4.jslm_heading_style a.jslm_course_title{color: #e43039}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_right_middle div.jslm_middle_description{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right_bottom div.jslm_right_bottom_left span.jslm_logos span.jslm_logo_wrp{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_links span.jslm_link_icon a:hover{background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_left{}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_input_search_left input.jslm_input_search{border: 1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_input_search_left input.jslm_input_search::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_input_search_left input.jslm_input_search::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_input_search_left input.jslm_input_search::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_input_search_left input.jslm_input_search::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_input_search_left i.fa-calendar{color: #797b7e}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_dropdown_wrp .select2-container--default .select2-selection--single {border-color: #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_left div.jslm_dropdown_wrp .select2-container--default .select2-selection--single .select2-selection__rendered {color: #797b7e;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_right div.jslm_search_btn_wrap button.jslm_search_button_style.jslm_search{background-color: #e43039;border: 1px solid #e43039}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search div.jslm_search_box div.jslm_search_box_right div.jslm_search_btn_wrap button.jslm_search_button_style.jslm_refresh{border: 1px solid #d4d4d5;color: #797b7e;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title div.jslm_right_data span.jslm_sorting a.jslm_link,
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title div.jslm_right_data span.jslm_sorting span.jslm_link{background-color: #f0f0f0;color: #4d4d4d !important;border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_title div.jslm_right_data span.jslm_sorting a.jslm_link:hover{border-color: #e43039;}
+    div.jslm_content_data div.jslm_search_content div.jslm_top_search{border-bottom: 1px solid #d4d4d5}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper:hover{border-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_overlay_bottom div.jslm_overlay_bottom_name span.jslm_overlay_bottom_instructor a.jslm_instructor_link{color:#ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_overlay_bottom div.jslm_overlay_bottom_name span.jslm_overlay_bottom_instructor a.jslm_instructor_link:hover{color:#e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right_bottom div.jslm_right_bottom_right div.jslm_right_bottom_price h3.jslm_heading_style{color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_right_top div.jslm_right_top_stars div.jslm_top_stars span.jslm_rating_number{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_right div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_overlay_bottom div.jslm_overlay_bottom_img{border:1px solid #ffffff;}
+    /*course detail*/
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_bottom{border-top: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul.nav-tabs{border-bottom: 1px solid #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul li.jslm_li_border{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul li.jslm_li_border.active{background-color: #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul li.jslm_li_border a.jslm_li_anchor_styling{border: 1px solid #d4d4d5;color: #797b7e}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul li.jslm_li_border a.jslm_li_anchor_styling.jslm_left_border{border-left: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul li.jslm_li_border.active a.jslm_li_anchor_styling{color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_row_body_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_row_heading h3.jslm_row_heading_style,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_members_wrapper div.jslm_home_data_row div.jslm_row_heading h3.jslm_row_heading_style,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_title div.jslm_row_heading h3.jslm_row_heading_style,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_curriculum_title div.jslm_row_heading h3.jslm_row_heading_style{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content span.jslm_social_links{border:1px solid transparent;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_custom_fields_wrapper{border-top: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field{border-bottom: 1px solid #d4d4d5;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_heading {color: #4d4d4d;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_text {color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_social_wrapper span.jslm_text{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_row_heading span.jslm_row_body_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_members_wrapper div.jslm_member_data{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_members_wrapper div.jslm_member_data div.jslm_left_side div.jslm_img_wrapper img{}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_top_wrapper{border:1px solid #d4d4d5;background: #fafafa;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_top_wrapper div.jslm_reviews_left div.jslm_square_box span.jslm_bold_text{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_top_wrapper div.jslm_reviews_left div.jslm_square_box{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_top_wrapper div.jslm_reviews_right div.jslm_reviews_right_data span.jslm_progress_bar{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_top_wrapper div.jslm_reviews_right div.jslm_reviews_right_data span.jslm_progress_bar span.jslm_progress_bar_percent{background-color: #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_reviews_title div.jslm_review_desc{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_comments_wrapper{border:1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_comments_wrapper div.jslm_left_side div.jslm_img_wrapper img{}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_comments_wrapper div.jslm_right_side div.jslm_top span.jslm_top_left{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_comments_wrapper div.jslm_right_side div.jslm_bottom{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper a.jslm_show_more{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper a.jslm_show_more:hover{border-color: #e43039}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm-panel-heading{background-color: #fafafa;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm-panel-heading:hover{border-color:#e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm-panel-heading div.jslm_edit_section_left h6.jslm_section_heading a i{border:1px solid #d4d4d5;color: #4d4d4d;background-color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm-panel-heading div.jslm_edit_section_left h6.jslm_section_heading a{color: #4d4d4d}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_container_style{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_container_style div.jslm_edit_row_style{border:1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_container_style div.jslm_edit_row_style:hover{border-color: #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading.active div.jslm_edit_section_left h6.jslm_section_heading a,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading.active div.jslm_edit_section_left h6.jslm_section_heading a i{background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm_container_style div.jslm_edit_row_style a.jslm_edit_lec_anchor{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm_container_style div.jslm_edit_row_style span.jslm_edit_section_action i{border:1px solid #d4d4d5;color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm_container_style div.jslm_edit_row_style span.jslm_edit_section_action a:hover{color: #ffffff; background-color: #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm_container_style div.jslm_edit_row_style span.jslm_edit_section_action a:hover i{color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_leave_comments h3{color: #4d4d4d}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_leave_comments span.jslm_warning_msg{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_leave_comments div.jslm_form_wrapper span.jslm_title{color: #4d4d4d}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_leave_comments div.jslm_form_wrapper span.jslm_button button.jslm_post_comment_btn{background-color: #e43039;color: #ffffff}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.alert{border: 1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left h2.jslm_login_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left div.jslm_input_field input{border-color: #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left a.jslm_forgot_password{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_left div.jslm_login_button input{background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_right{border-left: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_right div.jslm_social_login_top div.jslm_social_title h2.jslm_or_text{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_right div.jslm_social_login_bottom div.jslm_social_login_icons{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_right div.jslm_social_login_bottom div.jslm_social_login_icons a div.jslm_login_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_btn_row{border-top:2px solid #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_left_wrap div.jslm_title span.jslm_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_top div.jslm_logo_wrp,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_top span.jslm_logo_wrp{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_top div.jslm_logo_wrp div.jslm_detail_title a{color: #e43039;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_append_border {background: #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_price_btn h2{color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_price_btn h3.jslm_discountclass{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_price_btn h3.jslm_free{color:#ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_img_wrapper{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_left_wrap div.jslm_title h2{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_members_wrapper div.jslm_home_data_row{color: #797b7e}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_members_wrapper div.jslm_member_data div.jslm_right_side span.jslm_text2.jslm_text1{color: #4d4d4d}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_members_wrapper div.jslm_member_data div.jslm_right_side span.jslm_text2{color: #797b7e}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_enroll_course_btn a,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_price_btn a{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_price_btn h3.jslm_discount_color{color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_top div.jslm_logo_wrp div.jslm_detail_img_wrap{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_modal_body div.jslm_payment_heading span.jslm_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_modal_body div.jslm_payment_heading span.jslm_sub_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_enroll_course_btn h3.jslm-drop{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_top_wrapper div.jslm_right_wrap div.jslm_enroll_btn_wrap div.jslm_top_enrolled h3.jslm_take_course{background: #e43039;}
+    /* Course search */
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_button_wrp{border-top: 2px solid #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_button_wrp input.jslm_save_button{background-color: #f0f0f0;color: #4d4d4d;border: 1px solid #d4d4d5;}
+    /* Add course*/
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_upload_image div.jslm_file_upload label.jslm_file_upload_label{background-color: #e43039;border: 1px solid #d4d4d5;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_upload_image span.jslm_image_name{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_upload_image span.jslm_image_name a.jslm_delete_image{color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_upload_image span.jslm_file_extension{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field input,
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input input{border-color: #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field input::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field input::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field input::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field input::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field select,
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input select{background-color: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_btn_row button.jslm_btn_style{background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_btn_row a.jslm_btn_style.jslm_btn_cancel{background-color: #fafafa;border:1px solid #d4d4d5;color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field div.jslm_price_field.jslm_checkbox_style{border:1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field a.jslm_delete_file{color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field input.jslm_padding_upl_file{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field div.jslm_checkbox_cf label,
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field div.jslm_checkbox_cf div.jslm_checkbox_label,
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field div.jslm_checkbox_cf label{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addcourse_wrapper div.jslm_form_wrapper div.jslm_row div.jslm_input_field div#jslms_cust_file_ext{color: #797b7e;}
+    div.jslm_row div.jslm_input_field .select2.select2-container.select2-container--default .selection .select2-selection.select2-selection--multiple{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_has-success label{color: #e43039;}
+    /* Dashboard */
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_profile_heading,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profile_heading{border:1px solid #d4d4d5;background-color: #E6E7E8;color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_probileleft_middle{background-color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_profileleft_middle,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle{background-color: #fff;border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_myprofile_image div.jslm_image_wrapper {border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_profileleft_middle span.jslm_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_profileleft_middle span.jslm_title.jslm_name{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_links_list ul.jslm_usefullinks{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_links_list ul.jslm_usefullinks li.jslm_links{border-bottom: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_links_list ul.jslm_usefullinks li.jslm_links a {color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_links_list ul.jslm_usefullinks li.jslm_links a:hover{color: #e43039}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle ul.nav-tabs li.jslm_li_styling{border: 1px solid #d4d4d5}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle ul.nav-tabs li.jslm_li_styling a.jslm_anchor_style{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle ul.nav-tabs{border-bottom: 2px solid  #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_top_heading,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_top_heading{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_top_heading span.jslm_heading_left_name,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_top_heading span.jslm_heading_right_category,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_top_heading span.jslm_list_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_bottom_list span.jslm_heading_right_category,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_bottom_list span.jslm_reward_data,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row span.jslm_quiz_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_bottom_list{border-top: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_earning_graph{border: 1px solid #d4d4d5}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper div.jslm_earning_top{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper div.jslm_earning_top div.jslm_grap_top_content span.jslm_content_data:first-child i{color: #FFC300;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper div.jslm_earning_top div.jslm_grap_top_content span.jslm_content_data i{color: #038edd;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper div.jslm_earning_bottom div.jslm_earning_bottom_content_data{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper div.jslm_earning_bottom div.jslm_earning_bottom_content_data span.jslm_revenue_data{border-right: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_earning_graph_warpper div.jslm_earning_bottom div.jslm_earning_bottom_content_data span.jslm_text{color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_top_heading span.jslm_list_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_top_heading{border-bottom: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row{border-bottom: 1px solid #d4d4d5;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row div.jslm_date_name_wrp span.jslm_date{border: 1px solid #d4d4d5;background-color: #fafafa;color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row div.jslm_course_approve_wrp span.jslm_status{border: 1px solid #d4d4d5;color: #797b7e;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row div.jslm_course_approve_wrp span.jslm_course_name a{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row div.jslm_course_approve_wrp span.jslm_course_name a:hover{color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row div.jslm_price{color: #4d4d4d}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_curriculum_title div.jslm_add_new_btn button{border: 1px solid #e43039;background-color: #fafafa;color: #4d4d4d}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_curriculum_title div.jslm_add_new_btn button:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle ul.nav-tabs li.jslm_li_styling.active{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_bottom_list span.jslm_heading_left_name a,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_bottom_list span.jslm_list_title a{color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle ul.nav-tabs a.jslm_view_all{background-color: #f0f0f0;border:1px solid #d4d4d5;color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle ul.nav-tabs a.jslm_view_all:hover{color: #ffffff;background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_left_wrp div.jslm_myprofile div.jslm_profileleft_middle span.jslm_edit a{color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list div.jslm_bottom_list span.jslm_list_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row span.jslm_student_name{color: #797b7e;}
+
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tr.jslm-table-row,
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list table.jslm-table tr.jslm-table-row{border-bottom: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list table.jslm-table tbody tr.jslm-table-row:last-child{border-bottom: none;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tr.jslm-table-row th.jslm-table-row-heading,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tbody tr.jslm-table-row:last-child {border-bottom: none;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tr.jslm-table-row th.jslm-table-row-heading{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list table.jslm-table tr.jslm-table-row th.jslm-table-row-heading{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tbody.jslm-table-body td.jslm-table-data,
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list table.jslm-table tbody.jslm-table-body tr.jslm-table-row td.jslm-table-data{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tbody.jslm-table-body td.jslm-table-data a,
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_payout_container div.jslm_payout_data_list div.jslm_row div.jslm_date_name_wrp span.jslm_student_name a{color:#e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list table.jslm-table tbody.jslm-table-body  tr.jslm-table-row td.jslm-table-data a{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_dashboard_wrapper div.jslm_dashboard_right_wrp div.jslm_myprofile div.jslm_profileleft_middle div.jslm_dashboard_course_list table.jslm-table tbody.jslm-table-body td.jslm-table-data::before {color: #4d4d4d;}
+    /*profile/register*/
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_left_data{background-color:#fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_left_data div.jslm_file_upload label.jslm_file_upload_label{border: 1px solid #d4d4d5;background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_left_data div.jslm_img_wrapper{background-color: #ffffff;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_left_data span.jslm_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_left_data span.jslm_text a.jslm_delete_image_user{color: #e43039}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field input.jslm_input_style,
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field_select select.jslm_input_style{background-color: #fafafa;border: 1px solid #d4d4d5;color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field input.jslm_input_style::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field input.jslm_input_style::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field input.jslm_input_style::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field input.jslm_input_style::placeholder {color:#797b7e;}
+
+
+
+
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field select.jslm_select_style::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field select.jslm_select_style::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field select.jslm_select_style::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field select.jslm_select_style::placeholder {color:#797b7e;}
+
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field div.jslm_checkbox_cf div.jslm_checkbox_label{color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_right_data div.jslm_input_wrapper div.jslm_input_field select{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_bottom_button{border-top: 3px solid #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_bottom_button input.jslm_button{background-color: #e43039;border:1px solid #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_bottom_button input.jslm_button.jslm_cancel,
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_bottom_button a.jslm_button.jslm_cancel{background-color: #f0f0f0;color: #4d4d4d;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_register_wrapper div.jslm_bottom_button a input.jslm_button.jslm_cancel{border:1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    /* profile detail */
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_left_data div.jslm_img_wrapper,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_left_data div.jslm_img_wrapper{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_left_data a.jslm_send_message_anchor,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_left_data a.jslm_send_message_anchor,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_left_data div.jslm_send_message_wrapper span.jslm_approve_status,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_left_data div.jslm_send_message_wrapper span.jslm_approve_status{background-color: #e43039;color: #fff;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_left_data div.jslm_social_icons a.jslm_social.jslm_facebook,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_left_data div.jslm_social_icons a.jslm_social.jslm_facebook{background-color: #3b5998;box-shadow: 0 4px 0 #2f4a84 !important;color: #fff;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_left_data div.jslm_social_icons a.jslm_social.jslm_twitter,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_left_data div.jslm_social_icons a.jslm_social.jslm_twitter{background-color: #29c5f6;box-shadow: 0 3px 0 #0ca2d1 !important;color: #fff;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_left_data div.jslm_social_icons a.jslm_social.jslm_linkedin,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_left_data div.jslm_social_icons a.jslm_social.jslm_linkedin{background-color: #006cbf;box-shadow: 0 3px 0 #1a5aa4 !important;color: #fff;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_heading .jslm_heading_title,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_heading .jslm_heading_title{color: #4d4d4d;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_heading span.jslm_label,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_heading span.jslm_label{background-color: #3E4095;color: #fff;border: 1px solid #d4d4d5;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_info .jslm_icons,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_info .jslm_icons{color: #797b7e;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_info .jslm_icons:first-child{color: #e43039;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_info .jslm_icons:first-child {color: #e43039;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_info .jslm_icons:first-child i,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_top_heading div.jslm_info .jslm_icons:first-child i{color: #797b7e;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_middle_content span.jslm_text,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_middle_content span.jslm_text{color: #797b7e;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_bottom_content span.jslm_logo,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_bottom_content span.jslm_logo{background-color: #fafafa;border:1px solid #d4d4d5;color: #4d4d4d}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_bottom_content span.jslm_logo span.jslm_right span.jslm_bc_text,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_bottom_content span.jslm_logo span.jslm_right span.jslm_bc_text,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_instructor_wrapper div.jslm_right_data div.jslm_bottom_content span.jslm_logo span.jslm_right span.jslm_number,
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_bottom_content span.jslm_logo span.jslm_right span.jslm_number{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earn_bottom_revenue div.jslm_revenue_wrapper span.jslm_number.jslm_payout_yellow{color: #808000;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_heading{color: #4d4d4d;}
+    div.jslm_content_wrapper div.jslm_content_data div.jslm_student_wrapper div.jslm_right_data div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_text{color: #797b7e;}
+    /* Earning */
+    div.jslm_content_data div.jslm_data_container div.jslm_graph_view div.jslm_graph_wrap{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_graph_view div.jslm_graph_wrap div.jslm_graph_view_top{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earn_bottom_revenue div.jslm_revenue_wrapper,
+    div.jslm_content_data div.jslm_data_container div.jslm_earn_bottom_revenue div.jslm_payout_wrapper{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earn_bottom_revenue div.jslm_revenue_wrapper span.jslm_gross,
+    div.jslm_content_data div.jslm_data_container div.jslm_earn_bottom_revenue div.jslm_payout_wrapper span.jslm_gross{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list div.jslm_earning_list_top_heading{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list div.jslm_earning_list_top_heading span.jslm_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list div.jslm_earning_list_bottom_data div.jslm_payout_row span.jslm_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list div.jslm_earning_list_bottom_data div.jslm_payout_row span.jslm_title a{color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_earning_list div.jslm_earning_list_bottom_data div.jslm_payout_row{border-top: 1px solid #d4d4d5;}
+    /* Add lecture */
+    div.jslm_content_data div.jslm_data_container div.jslm_top_content_data{border:1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_top_content_data div.jslm_title_content h4.jslm_title_heading a.jslm_course_title{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_top_content_data div.jslm_title_content span.jslm_title_category{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input_title {color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper h6.jslm_heading{color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper div.jslm_file_upload label.jslm_file_upload_label{background-color: #fafafa;border:1px solid #d4d4d5;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper span.jslm_file_extension{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_heading_wrp h6.jslm_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_files_wrapper input.jslm_input_field_style{border: 1px solid #d4d4d5;background: #fafafa}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list{/*border-bottom: 1px solid #d4d4d5;*/}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_heading_wrp h6.jslm_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_row{border:1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_row span.jslm_right span.jslm_logo{border: 1px solid #d4d4d5;background: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_row span.jslm_right span.jslm_logo:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_row span.jslm_right span.jslm_logo:hover a.jslm_logos i{color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_files_wrapper button.jslm_delete_button{background-color: #ffffff;color: #797b7e;border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_files_wrapper button.jslm_delete_button:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_title,
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_url{border: 1px solid #d4d4d5;background-color: #fafafa;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper div.jslm_save_button button.jslm_btn_style{border: 1px solid #e43039;color: #fff;background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_row span.jslm_video_left span.jslm_right_data span.jslm_video_url a.jslm_video_url_link{color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_video_files_wrapper button.jslm_delete_button{background-color: #ffffff;color: red;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_video_files_wrapper button.jslm_delete_button:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_video_files_wrapper input.jslm_input_video_title,
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_append_files div.jslm_upload_video_files_wrapper input.jslm_input_video_url,
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_heading input.jslm_ques_input_style,
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper input.jslm_input_style{border-color: #d4d4d5;background-color: #fafafa;color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_body div.jslm_add_more_button button.jslm_add_more_button_styling{border: 1px solid #d4d4d5;color: #797b7e;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_body div.jslm_button_style button{border:1px solid #e43039;background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_quiz_wrapper div.jslm_heading span.jslm_right_option span.jslm_logo{border: 1px solid #d4d4d5;color: #797b7e;background: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_quiz_wrapper div.jslm_heading span.jslm_right_option span.jslm_logo:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_quiz_wrapper div.jslm_heading span.jslm_right_option span.jslm_logo:hover a i{color: #ffffff}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_quiz_wrapper{border:1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_img_list div.jslm_quiz_wrapper div.jslm_heading div.jslm_left_heading h5{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_save_button{border-top: 2px solid #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_save_button button.jslm_btn_style{background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_save_button button.jslm_btn_style.jslm_save_new{background-color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_save_button button.jslm_btn_style.jslm_cancel{background-color: #fafafa;color: #797b7e;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_heading_wrp{border-top: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper span.jslm_delete a.jslm_delete_button i{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_body div.jslm_row_data div.jslm_choice{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper + span.jslm_delete {border-left: 1px solid #d4d4d5 !important;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_heading input {border: 1px solid #d4d4d5;background: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div#new_upload_questions div.jslm_quiz_wrapper div.jslm_heading_width + span.jslm_delete a.jslm_delete_button {border: 1px solid #d4d4d5;border-left: none;background: #ffffff;color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input input.jslm_input_field_style::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input input.jslm_input_field_style::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input input.jslm_input_field_style::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_input_field div.jslm_input input.jslm_input_field_style::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_url::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_url::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_url::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_url::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_title::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_title::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_title::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_file_wrapper input.jslm_video_title::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_heading input.jslm_ques_input_style::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_heading input.jslm_ques_input_style::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_heading input.jslm_ques_input_style::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_heading input.jslm_ques_input_style::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper div.jslm_input_wrp input.jslm_input_style::-webkit-input-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper div.jslm_input_wrp input.jslm_input_style::-moz-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper div.jslm_input_wrp input.jslm_input_style::-ms-placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper div.jslm_input_wrp input.jslm_input_style::placeholder {color:#797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_addlecture_wrapper div.jslm_form_wrapper div.jslm_file_wrapper div.jslm_quiz_wrapper div.jslm_quiz_content div.jslm_quiz_body div.jslm_row_data div.jslm_choice div.jslm_quiz_input_wrapper div.jslm_checkbox_wrp{border-right: 1px solid #00a659;}
+    /* Message */
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top{border-bottom: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_left span.jslm_text{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_right span.jslm_box_alert{border: 1px solid #fafafa;background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_right span.jslm_msg_box{border:1px solid #d4d4d5;color: #4d4d4d;background-color: #ffffff;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_right span.jslm_date{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_right span.jslm_msg_box:hover{background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_right span.jslm_msg_box:hover span.jslm_msg_box_inner a{color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_right span.jslm_msg_box span.jslm_msg_box_inner a{color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_left div.jslm_img_wrapper {border:1px solid #d4d4d5;background: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_bottom span.jslm_bottom_text{color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_form_container div.jslm_button_container button{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row{border:1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row div.jslm_left_side div.jslm_img_wrapper{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row div.jslm_right_side div.jslm_bottom_row span.jslm_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row div.jslm_right_side div.jslm_top_row span.jslm_sender_label.jslm_green{background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row div.jslm_right_side div.jslm_top_row span.jslm_sender_label.jslm_white{background-color: #ffffff;color: #797b7e;border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row div.jslm_right_side div.jslm_top_row span.jslm_date{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_bottom_message{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row.jslm_gray_bg{background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row.jslm_white_bg{background-color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_history_container div.jslm_history_wrapper div.jslm_row:last-child{border-bottom: 1px solid #d4d4d5;}
+
+    /* register */
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_student div.jslm_register_as_a_student div.jslm_title .jslm_title_heading,
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_instructor div.jslm_register_as_a_instructor div.jslm_title .jslm_title_heading{color: #e43039}
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_student div.jslm_register_as_a_student div.jslm_text,
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_instructor div.jslm_register_as_a_instructor div.jslm_text{color: #797b7e}
+    div.jslm_content_data div.jslm_top_heading h1.jslm_heading_styling{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_top_heading span.jslm_intructor_register_text{color:#797b7e;}
+    div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling{border:1px solid #d4d4d5;background-color: #fafafa;color: #797b7e}
+    div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling li.jslm_li_styling_reg{border-right: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling li.jslm_li_styling_reg:last-child{border-right: unset;}
+    div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling li.jslm_li_styling_reg a.jslm_anchor_style{color: #797b7e}
+    div.jslm_content_data div.jslm_tab_content_reg span.jslm_text{color: #797b7e;}
+    div.jslm_content_data div.jslm_nav_tab_wrapper{border-bottom: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_student div.jslm_register_as_a_student,
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_instructor div.jslm_register_as_a_instructor{background-color: #fafafa;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_student a.jslm_register_anchor:hover ,
+    div.jslm_content_data div.jslm_register_wrapper div.jslm_register_instructor a.jslm_register_anchor:hover {border-color: #e43039;}
+    /* Lecture View */
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style div.panel-heading div.jslm_panel_title div.jslm_edit_section_wrapper h5.jslm_section_heading{color: #4d4d4d;border-bottom: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style div.panel-collapse div.jslm_lecture_panel_style div.jslm_panel_body_wrapper div.jslm_row_data{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style div.panel-collapse div.jslm_lecture_panel_style div.jslm_panel_body_wrapper div.jslm_row_data a.jslm_view_section_anchor span.jslm_title{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style div.panel-collapse div.jslm_lecture_panel_style div.jslm_panel_body_wrapper div.jslm_row_data:hover{border-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style div.panel-collapse div.jslm_lecture_panel_style div.jslm_panel_body_wrapper div.jslm_row_data.jslm_border_color_primary{border-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_lecture_heading{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul{border-bottom: 2px solid #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li{border: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li.active{background-color: #e43039; color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li.active a.jslm_modal_anchor{color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li:first-child{border-left: 1px solid #d4d4d5}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_middle_content div.jslm_heading h4.jslm_heading_style,
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_custom_fields_wrapper div.jslm_custom_fields_heading h4.jslm_heading_style{color: #4d4d4d;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_middle_content div.jslm_description{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm-iframe{border: 1px solid #d4d4d5;background-color: #fafafa;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm-iframe a i{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_download_all a{background-color: #f0f0f0;color: #4d4d4d;border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_download_all a:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_bottom_actions_button {border-top: 1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_bottom_actions_button div.jslm_left_button a.jslm_back,
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_bottom_actions_button div.jslm_right_button a.jslm_next{border:1px solid #d4d4d5;background-color: #fafafa;color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_files_content_data{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_files_content_data span.jslm_left_data i,
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_files_content_data span.jslm_left_data a{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_files_content_data span.jslm_right_anchor a.jslm_actions{border:1px solid #d4d4d5;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_files_content_data span.jslm_right_anchor a.jslm_actions:hover{background-color: #e43039;color: #ffffff}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_top_content h2.jslm_heading_style{color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_top_content h2.jslm_heading_style span.jslm_color{color: #e43039}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer{border:1px solid #e43039;color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer:nth-child(2){border-color: #f00;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer:nth-child(3){border-color: #789;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer:nth-child(4){border-color: #038edd;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer span.jslm_marks{color: #797b7e;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer:nth-child(2) span.jslm_marks{color: #f00;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer:nth-child(3) span.jslm_marks{color: #789;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_answer span.jslm_cirle_answer:nth-child(4) span.jslm_marks{color: #038edd;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_middle_content div.jslm_remarks{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_custom_fields_wrapper{border-top:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_heading{color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_custom_fields_wrapper div.jslm_custom_field span.jslm_text{color: #797b7e}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_result_content div.jslm_result_bottom_content div.jslm_retake_button_wrapper a.jslm_retake_button{border: 1px solid #d4d4d5;background-color: #e43039;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li a.jslm_modal_anchor{color: #4d4d4d}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_container div.jslm_question_top_content{border:1px solid #d4d4d5;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_container div.jslm_question_bottom_content div.jslm_mscq_wrapper{border:1px solid #d4d4d5;background-color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_container div.jslm_question_bottom_content div.jslm_button a.jslm_next_button_anchor{border:1px solid #d4d4d5;background-color: #e43039;color: #fff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_container div.jslm_question_bottom_content div.jslm_button a.jslm_previous_button_anchor,
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper div.tab-content div.jslm_lecture_content_wrapper div.jslm_quiz_container div.jslm_question_bottom_content div.jslm_button button.jslm_next_button_anchor{border:1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading div.jslm_edit_section_right span.jslm_section_action a.jslm_delete_sec,
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading div.jslm_edit_section_right span.jslm_section_action i.more-less{border:1px solid #d4d4d5;background-color: #ffffff;color: #797b7e;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading div.jslm_edit_section_right span.jslm_section_action a.jslm_delete_sec:hover{background-color: #e43039;color: #ffffff}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading div.jslm_edit_section_right span.jslm_section_action a.jslm_new_sec{border:1px solid #d4d4d5;background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_curriculum_wrapper div.jslm_panel_group div.jslm_panel_single_group div.jslm-panel-heading div.jslm_edit_section_right span.jslm_section_action a.jslm_new_sec:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_left_section_list div.jslm_accordian_wrp div.jslm-panel-group div.jslm_panel_style div.panel-heading div.jslm_panel_title div.jslm_edit_section_wrapper h5.jslm_section_heading a.jslm_section_title:hover{background-color: #e43039;color: #ffffff;}
+    div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_close_btn button.jslm-section-panel-btn{background-color: #fafafa;color: red;border: 1px solid #d4d4d5;}
+    /* vbox */
+    .vbox-close{color: #e43039 !important;background-color: #ffffff !important;}
+    /* paginatnion */
+    div#jslearnmanager-pagination span.jslm_page-numbers.jslm_current{color:#4d4d4d;}
+    div#jslearnmanager-pagination a.page-numbers.next{background:#4d4d4d;color:#ffffff;}
+    div#jslearnmanager-pagination a.page-numbers.prev{background:#4d4d4d;color:#ffffff;}
+
+    /* breadcrumbs */
+    div#jslms_breadcrumbs_parent div.home{background-color:#e43039;}
+    div#jslms-header-main-wrapper{background:#4d4d4d;border-bottom:5px solid #e43039;box-shadow: 0px 4px 1px #d4d4d5;}
+    div#jslms-header-main-wrapper a.headerlinks{color:#ffffff;}
+    div#jslms-header-main-wrapper a.headerlinks:hover{background:#e43039;color:#ffffff;}
+
+    /* Theme css */
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper div.big-upper-upper{border-bottom:1px solid #d4d4d5;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper span.title {color:#3c3435;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper div.big-upper-upper a{color: #4d4d4d;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper div.big-upper-upper div.headingtext{color:#e43039;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper span.bigupper-jobtotal {color:#797b7e;background-color:#fafafa;border:1px solid #d4d4d5;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-big-lower {background-color:#fafafa;border-top:1px solid #d4d4d5;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-big-lower img.big-lower-img {background-color:#fafafa;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper a{color:#4d4d4d;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper div.big-upper-upper span.title{color:#3c3435;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-big-lower div.big-lower-data-icons img.icon-img {border:1px solid #d4d4d5;background-color:#f0f0f0;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-big-lower div.big-lower-data-icons span.icon-text-box{border:1px solid #d4d4d5;background-color:#f0f0f0;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-big-lower div.big-lower-data-icons span.icons-resume{color:#ffffff; background-color:#4d4d4d; border:1px solid #d4d4d5;}
+    div#jslearnmanagers-wrapper div.my-course-data div.data-bigupper div.big-upper-upper span.buttonu {color:#797b7e;background-color:#fafafa;border:1px solid #d4d4d5;}
+
+    div.jslm_content_wrapper div.tablenav span.page-numbers.current{color:#4d4d4d;}
+    div.jslm_content_wrapper div.tablenav a.page-numbers.next{background:#4d4d4d;color:#ffffff;}
+    div.jslm_content_wrapper div.tablenav a.page-numbers.prev{background:#4d4d4d;color:#ffffff;}
+
+   /* widgets / search course widget */
+   div.jslearnmanager_search_courses_widget_wrapper #jslms-mod-heading {color: #4d4d4d;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.js-form-mod-title {color: #4d4d4d;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.js-form-mod-value input[type="text"] {border: 1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.js-form-mod-value select {border: 1px solid #d4d4d5;background-color: #fafafa;color: #797b7e;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.bottombutton .jslm_save_button {background-color: #e43039;color: #fff;border: 1px solid #e43039;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.bottombutton .jslm_save_button:hover {background-color: #fff;color: #e43039;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.bottombutton .anchor {background-color: #f0f0f0;color: #4d4d4d;border: 1px solid #d4d4d5;}
+    div.jslearnmanager_search_courses_widget_wrapper form.learnmanager_form div.js-mod-valwrapper div.bottombutton .anchor:hover {background-color: #fff;}
+  
+   /* widgets / featured course widget */
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_top div.jslearnmanager_courses_widget_title {color: #4d4d4d;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_top div.jslearnmanager_courses_widget_desc {color: #797b7e;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper {border:1px solid #d4d4d5;}   
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper:hover {border-color:#e43039;}   
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_links span.jslm_link_icon a:hover {background: #e43039;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_overlay_bottom div.jslm_overlay_bottom_img {border: 1px solid #fff;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_overlay_bottom div.jslm_overlay_bottom_name span.jslm_overlay_bottom_instructor a.jslm_instructor_link {color:#fff;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_left div.jslm_left_img_wrp div.overlay div.jslm_overlay_bottom div.jslm_overlay_bottom_name span.jslm_overlay_bottom_instructor a.jslm_instructor_link:hover {color:#e43039;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_right div.jslm_right_top div.jslm_right_top_left .jslm_heading_style .jslm_course_title {color:#4d4d4d;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper:hover div.jslm_data_wrapper div.jslm_right div.jslm_right_top div.jslm_right_top_left .jslm_heading_style .jslm_course_title {color:#e43039;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_right_bottom{border-top: 1px solid #d4d4d5;background-color: #fafafa;}
+   div.jslearnmanager_courses_widget_wrapper div.jslearnmanager_courses_widget_data_wrapper div.jslm_data_wrapper div.jslm_right_bottom div.jslm_right_bottom_right div.jslm_right_bottom_price .jslm_heading_style {color: #fff;background: #3E4095;}
+    
+
+
+    @media(min-width: 661px) and (max-width: 782px){
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_comments_wrapper div.jslm_right_side div.jslm_top{border-bottom: 1px solid #d4d4d5;}
+    }
+    @media(min-width: 481px) and (max-width: 660px) {
+        /* Course List */
+        div.jslm_content_data div.jslm_data_container div.jslm_data_wrapper div.jslm_left{border-bottom: 1px solid #d4d4d5;}
+        /* Course detail */
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_top div.jslm_logo_wrp{border-bottom: 1px solid #d4d4d5;}
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field div.jslm_heading_right{border-bottom: 1px solid #d4d4d5;}
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_reviews_wrapper div.jslm_comments_wrapper div.jslm_right_side div.jslm_top{border-bottom: 1px solid #d4d4d5;}
+        /* Login */
+        div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_right{border-top: 1px solid #d4d4d5;}
+        /* Register */
+        div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling li.jslm_li_styling_reg{border-bottom: 1px solid #d4d4d5;border-right: none;}
+
+    }
+    @media (max-width: 480px) {
+        /* Course detail */
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul.nav-tabs{border:1px solid #d4d4d5;border-bottom: unset;}
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper ul li.jslm_li_border a.jslm_li_anchor_styling{border-bottom: 1px solid #d4d4d5 !important;}
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_middle_potion div.jslm_middle_top div.jslm_logo_wrp{border-bottom: 1px solid #d4d4d5;}
+        div.jslm_content_data div.jslm_detail_wrapper div.jslm_tabs_wrapper div.jslm_my_content div.jslm_home_data_wrapper div.jslm_home_data_row div.jslm_custom_fields_wrapper div.jslm_custom_field div.jslm_heading_right{border-bottom: 1px solid #d4d4d5;}
+        /* Messages */
+        div.jslm_content_data div.jslm_data_container div.jslm_message_wrapper div.jslm_top div.jslm_top_left div.jslm_img_wrapper {border:1px solid #d4d4d5;background: #fff;}
+        /* responsive table */
+        table.jslm-table thead a {color: #e43039;text-decoration: none;}
+        /* Lecture view */
+        div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul{border:1px solid #d4d4d5;}
+        div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li{border-bottom: 1px solid #d4d4d5 !important;}
+        div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li:nth-child(2),
+        div.jslm_content_data div.jslm_data_container div.jslm_lecture_curriculum_wrp div.jslm_curriculum_right_wrp div.jslm_right_content_wrapper ul.jslm_modal_ul li.jslm_modal_li:nth-child(4){border-left:1px solid #d4d4d5;}
+        /* Login */
+        div.jslm_content_data div.jslm_data_container div.jslm_login_wrapper div.jslm_login_right{border-top: 1px solid #d4d4d5;}
+        div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling li.jslm_li_styling_reg{border-bottom: 1px solid #d4d4d5;}
+        div#jslearnmanager-wrapper div#jslearnmanager-messages-wrap div#jslearnmanager-msg-content-wrap div#jslearnmanager-msg-det-left {border-bottom: 1px solid #d4d4d5;}
+        div#jslearnmanager-wrapper div#jslearnmanager-credit-pack-wrap div#jslearnmanager-credit-pack-wrapper div.jslearnmanager-credit-pack-data div.jslearnmanager-credit-pack-data-top span.jslearnmanager-credit-pack-top-left{border-bottom: 1px solid #d4d4d5;}
+        div#jslearnmanager-wrapper div#jslearnmanager-purchase-history-wrap div.jslearnmanager-purchase-history-wrapper div.jslearnmanager-purchase-history-data span.jslearnmanager-data-parts span.jslearnmanager-data-title {border-bottom: 1px solid #d4d4d5;}
+
+        /* register */
+        div.jslm_content_data div.jslm_nav_tab_wrapper ul.nav-tabs.jslm_ul_styling li.jslm_li_styling_reg{border-right: none;}
+   }
+
+    </style>
+
+	<!-- This site is optimized with the Yoast SEO plugin v15.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Contactos - BV Leiria</title>
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="http://bvleiria.pt/contactos/" />
+	<meta property="og:locale" content="pt_PT" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Contactos - BV Leiria" />
+	<meta property="og:url" content="http://bvleiria.pt/contactos/" />
+	<meta property="og:site_name" content="BV Leiria" />
+	<meta property="article:publisher" content="https://www.facebook.com/BombeirosVoluntariosdeLeiria/" />
+	<meta property="article:modified_time" content="2022-11-08T15:43:53+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://bvleiria.pt/#organization","name":"Associa\u00e7\u00e3o Humanit\u00e1ria dos Bombeiros Volunt\u00e1rios de Leiria","url":"https://bvleiria.pt/","sameAs":["https://www.facebook.com/BombeirosVoluntariosdeLeiria/","https://www.instagram.com/bombeiros_v_leiria/"],"logo":{"@type":"ImageObject","@id":"https://bvleiria.pt/#logo","inLanguage":"pt-PT","url":"https://bvleiria.pt/wp-content/uploads/2018/10/logo.png","width":300,"height":100,"caption":"Associa\u00e7\u00e3o Humanit\u00e1ria dos Bombeiros Volunt\u00e1rios de Leiria"},"image":{"@id":"https://bvleiria.pt/#logo"}},{"@type":"WebSite","@id":"https://bvleiria.pt/#website","url":"https://bvleiria.pt/","name":"BV Leiria","description":"Bombeiros Volunt\u00e1rios de Leiria","publisher":{"@id":"https://bvleiria.pt/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://bvleiria.pt/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"pt-PT"},{"@type":"WebPage","@id":"http://bvleiria.pt/contactos/#webpage","url":"http://bvleiria.pt/contactos/","name":"Contactos - BV Leiria","isPartOf":{"@id":"https://bvleiria.pt/#website"},"datePublished":"2018-10-10T10:32:35+00:00","dateModified":"2022-11-08T15:43:53+00:00","inLanguage":"pt-PT","potentialAction":[{"@type":"ReadAction","target":["http://bvleiria.pt/contactos/"]}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="BV Leiria &raquo; Feed" href="https://bvleiria.pt/feed/" />
+<link rel="alternate" type="application/rss+xml" title="BV Leiria &raquo; Feed de comentários" href="https://bvleiria.pt/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="BV Leiria &raquo; Feed iCal" href="https://bvleiria.pt/eventos/?ical=1" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/bvleiria.pt\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.21"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='tribe-common-skeleton-style-css'  href='https://bvleiria.pt/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.15.1'  media='all' />
+<link rel='stylesheet' id='tribe-tooltip-css'  href='https://bvleiria.pt/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.15.1'  media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://bvleiria.pt/wp-includes/css/dist/block-library/style.min.css?ver=5.4.21'  media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='wp-block-library-theme-css'  href='https://bvleiria.pt/wp-includes/css/dist/block-library/theme.min.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='https://bvleiria.pt/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.3.2'  media='all' />
+<link rel='stylesheet' id='jslms-site-css'  href='https://bvleiria.pt/wp-content/plugins/learn-manager/includes/css/site.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='jslms-site-tablet-css'  href='https://bvleiria.pt/wp-content/plugins/learn-manager/includes/css/site_tablet.css?ver=5.4.21'  media='(min-width: 661px) and (max-width: 782px)' />
+<link rel='stylesheet' id='jslms-site-mobile-landscape-css'  href='https://bvleiria.pt/wp-content/plugins/learn-manager/includes/css/site_mobile_landscape.css?ver=5.4.21'  media='(min-width: 481px) and (max-width: 660px)' />
+<link rel='stylesheet' id='jslms-site-mobile-css'  href='https://bvleiria.pt/wp-content/plugins/learn-manager/includes/css/site_mobile.css?ver=5.4.21'  media='(max-width: 480px)' />
+<link rel='stylesheet' id='jslms-chosen-site-css'  href='https://bvleiria.pt/wp-content/plugins/learn-manager/includes/js/chosen/chosen.min.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='jslms-venobox-css-css'  href='https://bvleiria.pt/wp-content/plugins/learn-manager/includes/css/venobox.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css'  href='https://bvleiria.pt/wp-content/plugins/revslider/public/assets/css/settings.css?ver=5.4.8'  media='all' />
+<style id='rs-plugin-settings-inline-css' type='text/css'>
+#rs-demo-id {}
+</style>
+<link rel='stylesheet' id='wp-event-manager-frontend-css'  href='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/css/frontend.min.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='wp-event-manager-jquery-ui-css-css'  href='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/js/jquery-ui/jquery-ui.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='wp-event-manager-jquery-timepicker-css-css'  href='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/js/jquery-timepicker/jquery.timepicker.min.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='wp-event-manager-grid-style-css'  href='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/css/wpem-grid.min.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='wp-event-manager-font-style-css'  href='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/fonts/style.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='wp-sponsors-css'  href='https://bvleiria.pt/wp-content/plugins/wp-sponsors/assets/dist/css/public.css?ver=3.4.0'  media='all' />
+<link rel='stylesheet' id='cff-css'  href='https://bvleiria.pt/wp-content/plugins/custom-facebook-feed/assets/css/cff-style.min.css?ver=4.2.4'  media='all' />
+<link rel='stylesheet' id='sb-font-awesome-css'  href='https://bvleiria.pt/wp-content/plugins/custom-facebook-feed/assets/css/font-awesome.min.css?ver=4.7.0'  media='all' />
+<link rel='stylesheet' id='argenta-style-css'  href='https://bvleiria.pt/wp-content/themes/argenta/style.css?ver=2.0.28'  media='all' />
+<style id='argenta-style-inline-css' type='text/css'>
+.subheader, .subheader .subheader-contacts .icon,.subheader a, .subheader .social-bar li a{background-color:#ff0000;font-size:30pt;line-height:35pt;}.subheader,.subheader .content,.subheader .social-bar li a{height:50px;max-height:50px;line-height:50px;}#masthead.site-header a,.site-header.header-1,.site-header.header-2,.site-header.header-4,.site-header.header-5,.site-header.header-6,#masthead.site-header.header-3 .header-wrap,.menu-other > li .submenu,#mega-menu-wrap > ul ul.sub-menu, #mega-menu-wrap > ul ul.sub-sub-menu{font-family:'Roboto', sans-serif;font-style:normal;color:#ffffff;}.site-header.header-fixed.header-1,.site-header.header-fixed.header-2,.site-header.header-fixed.header-3,.site-header.header-fixed.header-4,.site-header.header-fixed.header-5,.site-header.header-fixed.header-6,#masthead.header-fixed .header-wrap,.header-fixed .menu-other > li .submenu, .header-fixed #mega-menu-wrap >  ul.sub-sub-menu,.hamburger-menu .btn-toggle{font-family:'Roboto', sans-serif;font-style:normal;color:#ffffff;}@media screen and (max-width: 1024px) { #masthead .header-wrap{background-color:#ff0000;font-family:'Roboto', sans-serif;font-style:normal;color:#ffffff;}}.hamburger-menu .btn-lines::after,.hamburger-menu .btn-lines::before,#masthead .hamburger-menu .btn-lines{background-color:#ffffff;}.site-header.header-2,.site-header.header-4,.site-header.header-5,.site-header.header-6,#masthead.site-header.header-3 .header-wrap,.menu-other > li .submenu,#mega-menu-wrap > ul ul.sub-menu,.site-header.header-fixed.header-2,.site-header.header-fixed.header-3,.site-header.header-fixed.header-4,.site-header.header-fixed.header-5,.site-header.header-fixed.header-6,#masthead.header-fixed .header-wrap,.header-fixed .menu-other > li .submenu,#mega-menu-wrap > ul ul.sub-menu, #mega-menu-wrap > ul ul.sub-sub-menu,.header-fixed #mega-menu-wrap > ul ul.sub-menu,.header-fixed #mega-menu-wrap > ul ul.sub-sub-menu{background-color:#ff0000;}.site-header{border:none;}#masthead.site-header,#masthead.site-header .header-wrap{height:100px;max-height:100px;line-height:100px;}.header-title{background-image:url('https://bvleiria.pt/wp-content/uploads/2018/11/IMG_7808-e1547739795885.jpg');background-size:cover;height:300px;min-height:300px;}.header-title h1.page-title{color:rgba(2,2,2,0.02);}.header-title .subtitle{color:#ffffff;}body .site-content{background-size:auto;background-position:center center;background-repeat: repeat;}.page-preloader{background-color:#ff0000;}footer.site-footer{background-color:#000000;background-size:cover;color:#000000;}.site-footer .widget_text,.site-footer .widgettitle,.site-footer .widgets .list-box-icon,.site-footer .widgets .list-box-icon span.icon,.site-footer .widgets a,.site-footer .widget_argenta_widget_recent_posts ul.recent-posts-list .content-wrap p,.site-footer .widget_argenta_widget_recent_posts ul.recent-posts-list .content-wrap .date,.site-footer .widgets .socialbar a.social.outline span,.site-footer .widgets .socialbar a.social.outline:hover span,.site-footer .widget_argenta_widget_subscribe input,.site-footer .widget_argenta_widget_subscribe input::placeholder{color:#000000;}footer.site-footer .site-info,footer.site-footer .site-info a{background-color:#ff0000;color:#ffffff;}body,p{font-family:'Open Sans', sans-serif;color:#000000;}button,.btn,a.btn,input,select,textarea,.accordion-box .buttons h5.title,.woocommerce div.product accordion-box.outline h5{font-family:'Open Sans', sans-serif;}h1,h2,h3,h3.second-title,h4,h5,.counter-box .count,.counter-box .counter-box-count,h1 a,h2 a,h3 a,h4 a,h5 a{font-family:'Titillium Web', sans-serif;font-size:34px;letter-spacing:-0.5px;color:#4a5560;}.countdown-box .box-time .box-count,.chart-box-pie-content{font-family:'Titillium Web', sans-serif;font-size:34px;letter-spacing:-0.5px;color:#4a5560;}.socialbar.boxed-fullwidth a .social-text{font-family:'Titillium Web', sans-serif;}.portfolio-item h4,.portfolio-item h4.title,.portfolio-item h4 a,.portfolio-item-2 h4,.portfolio-item-2 h4.title,.portfolio-item-2 h4 a,.widget h4 a,.woocommerce #content .product .price ins .amount,.woocommerce #content .product .price del span.amount,.woocommerce ul.products li.product a,.woocommerce .price span.amount{font-family:'Titillium Web', sans-serif;letter-spacing:-0.5px;color:#4a5560;font-size:initial;line-height:initial;}.blog-item h3.title{font-family:'Titillium Web', sans-serif;letter-spacing:-0.5px;color:#4a5560;line-height:initial;}.blog-item h3.title a{font-size: initial;}.portfolio-item-2 h4 {font-family:'Titillium Web', sans-serif;letter-spacing:-0.5px;}p.subtitle,blockquote,blockquote p,.subtitle-font,a.category{font-family:'Titillium Web', sans-serif;font-style:normal;color:#808c98;}span.category > a,div.category > a{font-family:'Titillium Web', sans-serif;font-style:normal;color:#808c98;}.portfolio-item .subtitle-font,.woocommerce ul.products li.product .subtitle-font.category,.woocommerce ul.products li.product .subtitle-font.category > a{font-family:'Titillium Web', sans-serif;font-style:normal;color:#808c98;font-size:inherit;line-height:inherit;}input.classic::-webkit-input-placeholder,.contact-form.classic input::-webkit-input-placeholder,.contact-form.classic textarea::-webkit-input-placeholder,input.classic::-moz-placeholder{font-family:'Titillium Web', sans-serif;font-style:normal;color:#808c98;}.contact-form.classic input::-moz-placeholder,.contact-form.classic textarea::-moz-placeholder{font-family:'Titillium Web', sans-serif;font-style:normal;color:#808c98;}input.classic:-ms-input-placeholder,.contact-form.classic input:-ms-input-placeholder,.contact-form.classic textarea:-ms-input-placeholder{font-family:'Titillium Web', sans-serif;font-style:normal;color:#808c98;}a:hover,input.brand-color,input[type="submit"].brand-color,button.brand-color,a.brand-color,div.brand-color,span.brand-color,.brand-color,input.brand-color-hover:hover,input[type="submit"].brand-color-hover:hover,button.brand-color-hover:hover,a.brand-color-hover:hover,div.brand-color-hover:hover,span.brand-color-hover:hover,.brand-color-hover:hover, .has-brand-color-color, .is-style-outline .has-brand-color-color{color:#ffffff;}input.brand-border-color,input[type="submit"].brand-border-color,button.brand-border-color,a.brand-border-color,div.brand-border-color,span.brand-border-color,.brand-border-color,input.brand-border-color-hover:hover,input[type="submit"].brand-border-color-hover:hover,button.brand-border-color-hover:hover,a.brand-border-color-hover:hover,div.brand-border-color-hover:hover,span.brand-border-color-hover:hover,.brand-border-color-hover:hover,.widget_calendar tbody tr td#today, .has-brand-color-background-color, .is-style-outline .has-brand-color-color{border-color:#ffffff;}input.brand-bg-color,input[type="submit"].brand-bg-color,button.brand-bg-color,a.brand-bg-color,div.brand-bg-color,span.brand-bg-color,.brand-bg-color,input.brand-bg-color-hover:hover,input[type="submit"].brand-bg-color-hover:hover,button.brand-bg-color-hover:hover,a.brand-bg-color-hover:hover,div.brand-bg-color-hover:hover,span.brand-bg-color-hover:hover,.brand-bg-color-hover:hover,.list-box li:after, .widget-list-box li:after, .widget_categories ul li:after, .widget_recent_comments ul li:after, .widget_recent_entries ul li:after, .widget_meta ul li:after, .widget_archive ul li:after, .widget_nav_menu li:after, .widget_pages li:after, .widget_product_categories ul.product-categories li:after,.widget_calendar caption,.list-box-icon li:after, .list-box-clear li:after,.team-member-cover-list .team-member-content .socialbar .social:hover,.woocommerce .widget_rating_filter ul li:after, .woocommerce .widget_layered_nav ul li:after, .woocommerce .widget_price_filter .price_slider_wrapper .price_slider .ui-slider-handle:after,.woocommerce .widget_price_filter .price_slider_wrapper .price_slider .ui-slider-range,.woocommerce span.onsale,.single-product.woocommerce #content div.product .price del:after,.woocommerce #content div.product div.summary .yith-wcwl-add-to-wishlist a.add_to_wishlist:hover span:before, .has-brand-color-background-color{background-color:#ffffff;}.site-footer .widget_argenta_widget_subscribe button.btn,.widget.widget_shopping_cart .buttons > a.button.checkout{background-color:#ffffff;border-color:#ffffff;}.tab-box-material .tab-box-btn-active,.tab-box-left.tab-box-material .tab-box-btn-active,.site-footer .widget_argenta_widget_subscribe button.btn:hover,.woocommerce #content .product .price ins span.woocommerce-Price-amount.amount,.woocommerce #content div.product .product_meta span span,.woocommerce #content div.product .product_meta span a,.woocommerce #content div.product .product_meta span a:hover,#content .woocommerce .cart-collaterals table.shop_table a.shipping-calculator-button,#content .woocommerce #payment li.wc_payment_method a.about_paypal,.woocommerce #content div.product div.summary .yith-wcwl-add-to-wishlist a.add_to_wishlist:hover,.woocommerce #content div.product div.summary .yith-wcwl-add-to-wishlist a.add_to_wishlist:hover i,.single-product.woocommerce #content div.product .price del span.woocommerce-Price-amount.amount,#content .woocommerce .product .wc-product-title-wrap .price ins .amount,.single-product.woocommerce #content div.product a.woocommerce-review-link:hover,.widget.widget_shopping_cart .buttons > a.button.checkout:hover,.widget.woocommerce.widget_shopping_cart_content .buttons a.button.checkout:hover,.woocommerce #content .star-rating, #content .woocommerce .star-rating,.woocommerce #content .star-rating:before, #content .woocommerce .star-rating:before,.woocommerce #content #reviews #comments ol.commentlist li.comment .star-rating,.woocommerce #content #reviews #comments ol.commentlist li.comment .star-rating:before,.star-rating,.woocommerce .star-rating:before,.portfolio-sorting ul li a:hover,.widget_recent_comments ul a,.widget_rss ul a,.header-6 #mega-menu-wrap #primary-menu > li.current-menu-item > a,.header-6 #mega-menu-wrap #primary-menu > li.current-menu-ancestor > a,.post .entry-content a:not(.wp-block-button__link){color:#ffffff;}.portfolio-sorting ul li a.active{border-color:#ffffff;color:#ffffff;}#mega-menu-wrap ul li.current-menu-item > a,#mega-menu-wrap ul li.current-menu-ancestor > a{box-shadow:0 2px 0px #ffffff inset;}.header-6 #mega-menu-wrap ul#primary-menu li.current-menu-item > a,.header-6 #mega-menu-wrap ul#primary-menu li.current-menu-ancestor > a{box-shadow:none;}header.site-header.header-2{background:rgb(255, 0, 0);}.header-search { background: rgba(222, 14, 14, 0.82);}.subheader .content{display:flex;align-items:center;justify-content:flex-end}.subheader,.subheader .content,.subheader .social-bar li a{background:#333}.subheader .social-bar{margin-left:15px}.subheader .social-bar li a,.subheader .subheader-contacts .icon,.subheader a{font-size:20pt;line-height:35pt;background-color:transparent}.subheader .subheader-contacts li a{font-size:16px}.subheader a{color:#bbb;font-weight:700}.subheader .subheader-contacts .icon-email{vertical-align:middle}.subheader .subheader-contacts .icon{color:#bbb;vertical-align:middle;font-size:20px;margin-right:10px}.grayscale .vc_item img {transition: filter 0.45s cubic-bezier(0.3, 0.4, 0.1, 1), opacity 0.45s cubic-bezier(0.3, 0.4, 0.1, 1);-webkit-filter: grayscale(100%);filter: grayscale(100%);opacity: 0.55}.grayscale .vc_item:hover img {-webkit-filter: grayscale(0%);filter: grayscale(0%);opacity: 1}a:hover, a:hover {color: #333;}
+</style>
+<link rel='stylesheet' id='argenta-grid-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/css/grid.min.css?ver=5.4.21'  media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='vc_lte_ie9-css'  href='https://bvleiria.pt/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css?ver=6.0.5'  media='screen' />
+<![endif]-->
+<link rel='stylesheet' id='js_composer_front-css'  href='https://bvleiria.pt/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.0.5'  media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://bvleiria.pt/wp-content/plugins/jetpack/css/jetpack.css?ver=9.0.5'  media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _ckyConfig = {"_ipData":[],"_assetsURL":"https:\/\/bvleiria.pt\/wp-content\/plugins\/cookie-law-info\/lite\/frontend\/images\/","_publicURL":"https:\/\/bvleiria.pt","_expiry":"365","_categories":[{"name":"Necessary","slug":"necessary","isNecessary":true,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":true,"ccpa":true}},{"name":"Functional","slug":"functional","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}},{"name":"Analytics","slug":"analytics","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}},{"name":"Performance","slug":"performance","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}},{"name":"Advertisement","slug":"advertisement","isNecessary":false,"ccpaDoNotSell":true,"cookies":[],"active":true,"defaultConsent":{"gdpr":false,"ccpa":false}}],"_activeLaw":"gdpr","_rootDomain":"","_block":"1","_showBanner":"1","_bannerConfig":{"settings":{"type":"box","preferenceCenterType":"popup","position":"bottom-left","applicableLaw":"gdpr"},"behaviours":{"reloadBannerOnAccept":false,"loadAnalyticsByDefault":false,"animations":{"onLoad":"animate","onHide":"sticky"}},"config":{"revisitConsent":{"status":true,"tag":"revisit-consent","position":"bottom-left","meta":{"url":"#"},"styles":{"background-color":"#0056A7"},"elements":{"title":{"type":"text","tag":"revisit-consent-title","status":true,"styles":{"color":"#0056a7"}}}},"preferenceCenter":{"toggle":{"status":true,"tag":"detail-category-toggle","type":"toggle","states":{"active":{"styles":{"background-color":"#1863DC"}},"inactive":{"styles":{"background-color":"#D0D5D2"}}}}},"categoryPreview":{"status":false,"toggle":{"status":true,"tag":"detail-category-preview-toggle","type":"toggle","states":{"active":{"styles":{"background-color":"#1863DC"}},"inactive":{"styles":{"background-color":"#D0D5D2"}}}}},"videoPlaceholder":{"status":true,"styles":{"background-color":"#000000","border-color":"#000000","color":"#ffffff"}},"readMore":{"status":false,"tag":"readmore-button","type":"link","meta":{"noFollow":true,"newTab":true},"styles":{"color":"#1863DC","background-color":"transparent","border-color":"transparent"}},"auditTable":{"status":true},"optOption":{"status":true,"toggle":{"status":true,"tag":"optout-option-toggle","type":"toggle","states":{"active":{"styles":{"background-color":"#1863dc"}},"inactive":{"styles":{"background-color":"#FFFFFF"}}}}}}},"_version":"3.2.4","_logConsent":"1","_tags":[{"tag":"accept-button","styles":{"color":"#FFFFFF","background-color":"#1863DC","border-color":"#1863DC"}},{"tag":"reject-button","styles":{"color":"#1863DC","background-color":"transparent","border-color":"#1863DC"}},{"tag":"settings-button","styles":{"color":"#1863DC","background-color":"transparent","border-color":"#1863DC"}},{"tag":"readmore-button","styles":{"color":"#1863DC","background-color":"transparent","border-color":"transparent"}},{"tag":"donotsell-button","styles":{"color":"#1863DC","background-color":"transparent","border-color":"transparent"}},{"tag":"accept-button","styles":{"color":"#FFFFFF","background-color":"#1863DC","border-color":"#1863DC"}},{"tag":"revisit-consent","styles":{"background-color":"#0056A7"}}],"_shortCodes":[{"key":"cky_readmore","content":"<a href=\"#\" class=\"cky-policy\" aria-label=\"Cookie Policy\" target=\"_blank\" rel=\"noopener\" data-cky-tag=\"readmore-button\">Cookie Policy<\/a>","tag":"readmore-button","status":false,"attributes":{"rel":"nofollow","target":"_blank"}},{"key":"cky_show_desc","content":"<button class=\"cky-show-desc-btn\" data-cky-tag=\"show-desc-button\" aria-label=\"Show more\">Show more<\/button>","tag":"show-desc-button","status":true,"attributes":[]},{"key":"cky_hide_desc","content":"<button class=\"cky-show-desc-btn\" data-cky-tag=\"hide-desc-button\" aria-label=\"Show less\">Show less<\/button>","tag":"hide-desc-button","status":true,"attributes":[]},{"key":"cky_category_toggle_label","content":"[cky_{{status}}_category_label] [cky_preference_{{category_slug}}_title]","tag":"","status":true,"attributes":[]},{"key":"cky_enable_category_label","content":"Enable","tag":"","status":true,"attributes":[]},{"key":"cky_disable_category_label","content":"Disable","tag":"","status":true,"attributes":[]},{"key":"cky_video_placeholder","content":"<div class=\"video-placeholder-normal\" data-cky-tag=\"video-placeholder\" id=\"[UNIQUEID]\"><p class=\"video-placeholder-text-normal\" data-cky-tag=\"placeholder-title\">Please accept cookies to access this content<\/p><\/div>","tag":"","status":true,"attributes":[]},{"key":"cky_enable_optout_label","content":"Enable","tag":"","status":true,"attributes":[]},{"key":"cky_disable_optout_label","content":"Disable","tag":"","status":true,"attributes":[]},{"key":"cky_optout_toggle_label","content":"[cky_{{status}}_optout_label] [cky_optout_option_title]","tag":"","status":true,"attributes":[]},{"key":"cky_optout_option_title","content":"Do Not Sell or Share My Personal Information","tag":"","status":true,"attributes":[]},{"key":"cky_optout_close_label","content":"Close","tag":"","status":true,"attributes":[]}],"_rtl":"","_providersToBlock":[]};
+var _ckyStyles = {"css":".cky-overlay{background: #000000; opacity: 0.4; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999999;}.cky-hide{display: none;}.cky-btn-revisit-wrapper{display: flex; align-items: center; justify-content: center; background: #0056a7; width: 45px; height: 45px; border-radius: 50%; position: fixed; z-index: 999999; cursor: pointer;}.cky-revisit-bottom-left{bottom: 15px; left: 15px;}.cky-revisit-bottom-right{bottom: 15px; right: 15px;}.cky-btn-revisit-wrapper .cky-btn-revisit{display: flex; align-items: center; justify-content: center; background: none; border: none; cursor: pointer; position: relative; margin: 0; padding: 0;}.cky-btn-revisit-wrapper .cky-btn-revisit img{max-width: fit-content; margin: 0; height: 30px; width: 30px;}.cky-revisit-bottom-left:hover::before{content: attr(data-tooltip); position: absolute; background: #4e4b66; color: #ffffff; left: calc(100% + 7px); font-size: 12px; line-height: 16px; width: max-content; padding: 4px 8px; border-radius: 4px;}.cky-revisit-bottom-left:hover::after{position: absolute; content: \"\"; border: 5px solid transparent; left: calc(100% + 2px); border-left-width: 0; border-right-color: #4e4b66;}.cky-revisit-bottom-right:hover::before{content: attr(data-tooltip); position: absolute; background: #4e4b66; color: #ffffff; right: calc(100% + 7px); font-size: 12px; line-height: 16px; width: max-content; padding: 4px 8px; border-radius: 4px;}.cky-revisit-bottom-right:hover::after{position: absolute; content: \"\"; border: 5px solid transparent; right: calc(100% + 2px); border-right-width: 0; border-left-color: #4e4b66;}.cky-revisit-hide{display: none;}.cky-consent-container{position: fixed; width: 440px; box-sizing: border-box; z-index: 9999999; border-radius: 6px;}.cky-consent-container .cky-consent-bar{background: #ffffff; border: 1px solid; padding: 20px 26px; box-shadow: 0 -1px 10px 0 #acabab4d; border-radius: 6px;}.cky-box-bottom-left{bottom: 40px; left: 40px;}.cky-box-bottom-right{bottom: 40px; right: 40px;}.cky-box-top-left{top: 40px; left: 40px;}.cky-box-top-right{top: 40px; right: 40px;}.cky-custom-brand-logo-wrapper .cky-custom-brand-logo{width: 100px; height: auto; margin: 0 0 12px 0;}.cky-notice .cky-title{color: #212121; font-weight: 700; font-size: 18px; line-height: 24px; margin: 0 0 12px 0;}.cky-notice-des *,.cky-preference-content-wrapper *,.cky-accordion-header-des *,.cky-gpc-wrapper .cky-gpc-desc *{font-size: 14px;}.cky-notice-des{color: #212121; font-size: 14px; line-height: 24px; font-weight: 400;}.cky-notice-des img{height: 25px; width: 25px;}.cky-consent-bar .cky-notice-des p,.cky-gpc-wrapper .cky-gpc-desc p,.cky-preference-body-wrapper .cky-preference-content-wrapper p,.cky-accordion-header-wrapper .cky-accordion-header-des p,.cky-cookie-des-table li div:last-child p{color: inherit; margin-top: 0; overflow-wrap: break-word;}.cky-notice-des P:last-child,.cky-preference-content-wrapper p:last-child,.cky-cookie-des-table li div:last-child p:last-child,.cky-gpc-wrapper .cky-gpc-desc p:last-child{margin-bottom: 0;}.cky-notice-des a.cky-policy,.cky-notice-des button.cky-policy{font-size: 14px; color: #1863dc; white-space: nowrap; cursor: pointer; background: transparent; border: 1px solid; text-decoration: underline;}.cky-notice-des button.cky-policy{padding: 0;}.cky-notice-des a.cky-policy:focus-visible,.cky-notice-des button.cky-policy:focus-visible,.cky-preference-content-wrapper .cky-show-desc-btn:focus-visible,.cky-accordion-header .cky-accordion-btn:focus-visible,.cky-preference-header .cky-btn-close:focus-visible,.cky-switch input[type=\"checkbox\"]:focus-visible,.cky-footer-wrapper a:focus-visible,.cky-btn:focus-visible{outline: 2px solid #1863dc; outline-offset: 2px;}.cky-btn:focus:not(:focus-visible),.cky-accordion-header .cky-accordion-btn:focus:not(:focus-visible),.cky-preference-content-wrapper .cky-show-desc-btn:focus:not(:focus-visible),.cky-btn-revisit-wrapper .cky-btn-revisit:focus:not(:focus-visible),.cky-preference-header .cky-btn-close:focus:not(:focus-visible),.cky-consent-bar .cky-banner-btn-close:focus:not(:focus-visible){outline: 0;}button.cky-show-desc-btn:not(:hover):not(:active){color: #1863dc; background: transparent;}button.cky-accordion-btn:not(:hover):not(:active),button.cky-banner-btn-close:not(:hover):not(:active),button.cky-btn-revisit:not(:hover):not(:active),button.cky-btn-close:not(:hover):not(:active){background: transparent;}.cky-consent-bar button:hover,.cky-modal.cky-modal-open button:hover,.cky-consent-bar button:focus,.cky-modal.cky-modal-open button:focus{text-decoration: none;}.cky-notice-btn-wrapper{display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; margin-top: 16px;}.cky-notice-btn-wrapper .cky-btn{text-shadow: none; box-shadow: none;}.cky-btn{flex: auto; max-width: 100%; font-size: 14px; font-family: inherit; line-height: 24px; padding: 8px; font-weight: 500; margin: 0 8px 0 0; border-radius: 2px; cursor: pointer; text-align: center; text-transform: none; min-height: 0;}.cky-btn:hover{opacity: 0.8;}.cky-btn-customize{color: #1863dc; background: transparent; border: 2px solid #1863dc;}.cky-btn-reject{color: #1863dc; background: transparent; border: 2px solid #1863dc;}.cky-btn-accept{background: #1863dc; color: #ffffff; border: 2px solid #1863dc;}.cky-btn:last-child{margin-right: 0;}@media (max-width: 576px){.cky-box-bottom-left{bottom: 0; left: 0;}.cky-box-bottom-right{bottom: 0; right: 0;}.cky-box-top-left{top: 0; left: 0;}.cky-box-top-right{top: 0; right: 0;}}@media (max-width: 440px){.cky-box-bottom-left, .cky-box-bottom-right, .cky-box-top-left, .cky-box-top-right{width: 100%; max-width: 100%;}.cky-consent-container .cky-consent-bar{padding: 20px 0;}.cky-custom-brand-logo-wrapper, .cky-notice .cky-title, .cky-notice-des, .cky-notice-btn-wrapper{padding: 0 24px;}.cky-notice-des{max-height: 40vh; overflow-y: scroll;}.cky-notice-btn-wrapper{flex-direction: column; margin-top: 0;}.cky-btn{width: 100%; margin: 10px 0 0 0;}.cky-notice-btn-wrapper .cky-btn-customize{order: 2;}.cky-notice-btn-wrapper .cky-btn-reject{order: 3;}.cky-notice-btn-wrapper .cky-btn-accept{order: 1; margin-top: 16px;}}@media (max-width: 352px){.cky-notice .cky-title{font-size: 16px;}.cky-notice-des *{font-size: 12px;}.cky-notice-des, .cky-btn{font-size: 12px;}}.cky-modal.cky-modal-open{display: flex; visibility: visible; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); top: 50%; left: 50%; transition: all 1s ease;}.cky-modal{box-shadow: 0 32px 68px rgba(0, 0, 0, 0.3); margin: 0 auto; position: fixed; max-width: 100%; background: #ffffff; top: 50%; box-sizing: border-box; border-radius: 6px; z-index: 999999999; color: #212121; -webkit-transform: translate(-50%, 100%); -moz-transform: translate(-50%, 100%); -ms-transform: translate(-50%, 100%); -o-transform: translate(-50%, 100%); transform: translate(-50%, 100%); visibility: hidden; transition: all 0s ease;}.cky-preference-center{max-height: 79vh; overflow: hidden; width: 845px; overflow: hidden; flex: 1 1 0; display: flex; flex-direction: column; border-radius: 6px;}.cky-preference-header{display: flex; align-items: center; justify-content: space-between; padding: 22px 24px; border-bottom: 1px solid;}.cky-preference-header .cky-preference-title{font-size: 18px; font-weight: 700; line-height: 24px;}.cky-preference-header .cky-btn-close{margin: 0; cursor: pointer; vertical-align: middle; padding: 0; background: none; border: none; width: auto; height: auto; min-height: 0; line-height: 0; text-shadow: none; box-shadow: none;}.cky-preference-header .cky-btn-close img{margin: 0; height: 10px; width: 10px;}.cky-preference-body-wrapper{padding: 0 24px; flex: 1; overflow: auto; box-sizing: border-box;}.cky-preference-content-wrapper,.cky-gpc-wrapper .cky-gpc-desc{font-size: 14px; line-height: 24px; font-weight: 400; padding: 12px 0;}.cky-preference-content-wrapper{border-bottom: 1px solid;}.cky-preference-content-wrapper img{height: 25px; width: 25px;}.cky-preference-content-wrapper .cky-show-desc-btn{font-size: 14px; font-family: inherit; color: #1863dc; text-decoration: none; line-height: 24px; padding: 0; margin: 0; white-space: nowrap; cursor: pointer; background: transparent; border-color: transparent; text-transform: none; min-height: 0; text-shadow: none; box-shadow: none;}.cky-accordion-wrapper{margin-bottom: 10px;}.cky-accordion{border-bottom: 1px solid;}.cky-accordion:last-child{border-bottom: none;}.cky-accordion .cky-accordion-item{display: flex; margin-top: 10px;}.cky-accordion .cky-accordion-body{display: none;}.cky-accordion.cky-accordion-active .cky-accordion-body{display: block; padding: 0 22px; margin-bottom: 16px;}.cky-accordion-header-wrapper{cursor: pointer; width: 100%;}.cky-accordion-item .cky-accordion-header{display: flex; justify-content: space-between; align-items: center;}.cky-accordion-header .cky-accordion-btn{font-size: 16px; font-family: inherit; color: #212121; line-height: 24px; background: none; border: none; font-weight: 700; padding: 0; margin: 0; cursor: pointer; text-transform: none; min-height: 0; text-shadow: none; box-shadow: none;}.cky-accordion-header .cky-always-active{color: #008000; font-weight: 600; line-height: 24px; font-size: 14px;}.cky-accordion-header-des{font-size: 14px; line-height: 24px; margin: 10px 0 16px 0;}.cky-accordion-chevron{margin-right: 22px; position: relative; cursor: pointer;}.cky-accordion-chevron-hide{display: none;}.cky-accordion .cky-accordion-chevron i::before{content: \"\"; position: absolute; border-right: 1.4px solid; border-bottom: 1.4px solid; border-color: inherit; height: 6px; width: 6px; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -ms-transform: rotate(-45deg); -o-transform: rotate(-45deg); transform: rotate(-45deg); transition: all 0.2s ease-in-out; top: 8px;}.cky-accordion.cky-accordion-active .cky-accordion-chevron i::before{-webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);}.cky-audit-table{background: #f4f4f4; border-radius: 6px;}.cky-audit-table .cky-empty-cookies-text{color: inherit; font-size: 12px; line-height: 24px; margin: 0; padding: 10px;}.cky-audit-table .cky-cookie-des-table{font-size: 12px; line-height: 24px; font-weight: normal; padding: 15px 10px; border-bottom: 1px solid; border-bottom-color: inherit; margin: 0;}.cky-audit-table .cky-cookie-des-table:last-child{border-bottom: none;}.cky-audit-table .cky-cookie-des-table li{list-style-type: none; display: flex; padding: 3px 0;}.cky-audit-table .cky-cookie-des-table li:first-child{padding-top: 0;}.cky-cookie-des-table li div:first-child{width: 100px; font-weight: 600; word-break: break-word; word-wrap: break-word;}.cky-cookie-des-table li div:last-child{flex: 1; word-break: break-word; word-wrap: break-word; margin-left: 8px;}.cky-footer-shadow{display: block; width: 100%; height: 40px; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%); position: absolute; bottom: calc(100% - 1px);}.cky-footer-wrapper{position: relative;}.cky-prefrence-btn-wrapper{display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 22px 24px; border-top: 1px solid;}.cky-prefrence-btn-wrapper .cky-btn{flex: auto; max-width: 100%; text-shadow: none; box-shadow: none;}.cky-btn-preferences{color: #1863dc; background: transparent; border: 2px solid #1863dc;}.cky-preference-header,.cky-preference-body-wrapper,.cky-preference-content-wrapper,.cky-accordion-wrapper,.cky-accordion,.cky-accordion-wrapper,.cky-footer-wrapper,.cky-prefrence-btn-wrapper{border-color: inherit;}@media (max-width: 845px){.cky-modal{max-width: calc(100% - 16px);}}@media (max-width: 576px){.cky-modal{max-width: 100%;}.cky-preference-center{max-height: 100vh;}.cky-prefrence-btn-wrapper{flex-direction: column;}.cky-accordion.cky-accordion-active .cky-accordion-body{padding-right: 0;}.cky-prefrence-btn-wrapper .cky-btn{width: 100%; margin: 10px 0 0 0;}.cky-prefrence-btn-wrapper .cky-btn-reject{order: 3;}.cky-prefrence-btn-wrapper .cky-btn-accept{order: 1; margin-top: 0;}.cky-prefrence-btn-wrapper .cky-btn-preferences{order: 2;}}@media (max-width: 425px){.cky-accordion-chevron{margin-right: 15px;}.cky-notice-btn-wrapper{margin-top: 0;}.cky-accordion.cky-accordion-active .cky-accordion-body{padding: 0 15px;}}@media (max-width: 352px){.cky-preference-header .cky-preference-title{font-size: 16px;}.cky-preference-header{padding: 16px 24px;}.cky-preference-content-wrapper *, .cky-accordion-header-des *{font-size: 12px;}.cky-preference-content-wrapper, .cky-preference-content-wrapper .cky-show-more, .cky-accordion-header .cky-always-active, .cky-accordion-header-des, .cky-preference-content-wrapper .cky-show-desc-btn, .cky-notice-des a.cky-policy{font-size: 12px;}.cky-accordion-header .cky-accordion-btn{font-size: 14px;}}.cky-switch{display: flex;}.cky-switch input[type=\"checkbox\"]{position: relative; width: 44px; height: 24px; margin: 0; background: #d0d5d2; -webkit-appearance: none; border-radius: 50px; cursor: pointer; outline: 0; border: none; top: 0;}.cky-switch input[type=\"checkbox\"]:checked{background: #1863dc;}.cky-switch input[type=\"checkbox\"]:before{position: absolute; content: \"\"; height: 20px; width: 20px; left: 2px; bottom: 2px; border-radius: 50%; background-color: white; -webkit-transition: 0.4s; transition: 0.4s; margin: 0;}.cky-switch input[type=\"checkbox\"]:after{display: none;}.cky-switch input[type=\"checkbox\"]:checked:before{-webkit-transform: translateX(20px); -ms-transform: translateX(20px); transform: translateX(20px);}@media (max-width: 425px){.cky-switch input[type=\"checkbox\"]{width: 38px; height: 21px;}.cky-switch input[type=\"checkbox\"]:before{height: 17px; width: 17px;}.cky-switch input[type=\"checkbox\"]:checked:before{-webkit-transform: translateX(17px); -ms-transform: translateX(17px); transform: translateX(17px);}}.cky-consent-bar .cky-banner-btn-close{position: absolute; right: 9px; top: 5px; background: none; border: none; cursor: pointer; padding: 0; margin: 0; min-height: 0; line-height: 0; height: auto; width: auto; text-shadow: none; box-shadow: none;}.cky-consent-bar .cky-banner-btn-close img{height: 9px; width: 9px; margin: 0;}.cky-notice-group{font-size: 14px; line-height: 24px; font-weight: 400; color: #212121;}.cky-notice-btn-wrapper .cky-btn-do-not-sell{font-size: 14px; line-height: 24px; padding: 6px 0; margin: 0; font-weight: 500; background: none; border-radius: 2px; border: none; cursor: pointer; text-align: left; color: #1863dc; background: transparent; border-color: transparent; box-shadow: none; text-shadow: none;}.cky-consent-bar .cky-banner-btn-close:focus-visible,.cky-notice-btn-wrapper .cky-btn-do-not-sell:focus-visible,.cky-opt-out-btn-wrapper .cky-btn:focus-visible,.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:focus-visible{outline: 2px solid #1863dc; outline-offset: 2px;}@media (max-width: 440px){.cky-consent-container{width: 100%;}}@media (max-width: 352px){.cky-notice-des a.cky-policy, .cky-notice-btn-wrapper .cky-btn-do-not-sell{font-size: 12px;}}.cky-opt-out-wrapper{padding: 12px 0;}.cky-opt-out-wrapper .cky-opt-out-checkbox-wrapper{display: flex; align-items: center;}.cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label{font-size: 16px; font-weight: 700; line-height: 24px; margin: 0 0 0 12px; cursor: pointer;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox{background-color: #ffffff; border: 1px solid black; width: 20px; height: 18.5px; margin: 0; -webkit-appearance: none; position: relative; display: flex; align-items: center; justify-content: center; border-radius: 2px; cursor: pointer;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:checked{background-color: #1863dc; border: none;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:checked::after{left: 6px; bottom: 4px; width: 7px; height: 13px; border: solid #ffffff; border-width: 0 3px 3px 0; border-radius: 2px; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); content: \"\"; position: absolute; box-sizing: border-box;}.cky-opt-out-checkbox-wrapper.cky-disabled .cky-opt-out-checkbox-label,.cky-opt-out-checkbox-wrapper.cky-disabled input[type=\"checkbox\"].cky-opt-out-checkbox{cursor: no-drop;}.cky-gpc-wrapper{margin: 0 0 0 32px;}.cky-footer-wrapper .cky-opt-out-btn-wrapper{display: flex; flex-wrap: wrap; align-items: center; justify-content: center; padding: 22px 24px;}.cky-opt-out-btn-wrapper .cky-btn{flex: auto; max-width: 100%; text-shadow: none; box-shadow: none;}.cky-opt-out-btn-wrapper .cky-btn-cancel{border: 1px solid #dedfe0; background: transparent; color: #858585;}.cky-opt-out-btn-wrapper .cky-btn-confirm{background: #1863dc; color: #ffffff; border: 1px solid #1863dc;}@media (max-width: 352px){.cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label{font-size: 14px;}.cky-gpc-wrapper .cky-gpc-desc, .cky-gpc-wrapper .cky-gpc-desc *{font-size: 12px;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox{width: 16px; height: 16px;}.cky-opt-out-checkbox-wrapper input[type=\"checkbox\"].cky-opt-out-checkbox:checked::after{left: 5px; bottom: 4px; width: 3px; height: 9px;}.cky-gpc-wrapper{margin: 0 0 0 28px;}}.video-placeholder-youtube{background-size: 100% 100%; background-position: center; background-repeat: no-repeat; background-color: #b2b0b059; position: relative; display: flex; align-items: center; justify-content: center; max-width: 100%;}.video-placeholder-text-youtube{text-align: center; align-items: center; padding: 10px 16px; background-color: #000000cc; color: #ffffff; border: 1px solid; border-radius: 2px; cursor: pointer;}.video-placeholder-normal{background-image: url(\"\/wp-content\/plugins\/cookie-law-info\/lite\/frontend\/images\/placeholder.svg\"); background-size: 80px; background-position: center; background-repeat: no-repeat; background-color: #b2b0b059; position: relative; display: flex; align-items: flex-end; justify-content: center; max-width: 100%;}.video-placeholder-text-normal{align-items: center; padding: 10px 16px; text-align: center; border: 1px solid; border-radius: 2px; cursor: pointer;}.cky-rtl{direction: rtl; text-align: right;}.cky-rtl .cky-banner-btn-close{left: 9px; right: auto;}.cky-rtl .cky-notice-btn-wrapper .cky-btn:last-child{margin-right: 8px;}.cky-rtl .cky-notice-btn-wrapper .cky-btn:first-child{margin-right: 0;}.cky-rtl .cky-notice-btn-wrapper{margin-left: 0; margin-right: 15px;}.cky-rtl .cky-prefrence-btn-wrapper .cky-btn{margin-right: 8px;}.cky-rtl .cky-prefrence-btn-wrapper .cky-btn:first-child{margin-right: 0;}.cky-rtl .cky-accordion .cky-accordion-chevron i::before{border: none; border-left: 1.4px solid; border-top: 1.4px solid; left: 12px;}.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-chevron i::before{-webkit-transform: rotate(-135deg); -moz-transform: rotate(-135deg); -ms-transform: rotate(-135deg); -o-transform: rotate(-135deg); transform: rotate(-135deg);}@media (max-width: 768px){.cky-rtl .cky-notice-btn-wrapper{margin-right: 0;}}@media (max-width: 576px){.cky-rtl .cky-notice-btn-wrapper .cky-btn:last-child{margin-right: 0;}.cky-rtl .cky-prefrence-btn-wrapper .cky-btn{margin-right: 0;}.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-body{padding: 0 22px 0 0;}}@media (max-width: 425px){.cky-rtl .cky-accordion.cky-accordion-active .cky-accordion-body{padding: 0 15px 0 0;}}.cky-rtl .cky-opt-out-btn-wrapper .cky-btn{margin-right: 12px;}.cky-rtl .cky-opt-out-btn-wrapper .cky-btn:first-child{margin-right: 0;}.cky-rtl .cky-opt-out-checkbox-wrapper .cky-opt-out-checkbox-label{margin: 0 12px 0 0;}"};
+/* ]]> */
+</script>
+<script  src='https://bvleiria.pt/wp-content/plugins/cookie-law-info/lite/frontend/js/script.min.js?ver=3.2.4'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js?ver=5.4.8'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js?ver=5.4.8'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/wp-sponsors/assets/dist/js/public.js?ver=3.4.0'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://bvleiria.pt/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://bvleiria.pt/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4.21" />
+<link rel='shortlink' href='https://bvleiria.pt/?p=106' />
+<link rel="alternate" type="application/json+oembed" href="https://bvleiria.pt/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbvleiria.pt%2Fcontactos%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://bvleiria.pt/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fbvleiria.pt%2Fcontactos%2F&#038;format=xml" />
+<style id="cky-style-inline">[data-cky-tag]{visibility:hidden;}</style><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://bvleiria.pt"><link rel="https://theeventscalendar.com/" href="https://bvleiria.pt/wp-json/tribe/events/v1/" /><style type='text/css'>img#wpstats{display:none}</style><style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="Powered by Slider Revolution 5.4.8 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<script type="text/javascript">function setREVStartSize(e){									
+						try{ e.c=jQuery(e.c);var i=jQuery(window).width(),t=9999,r=0,n=0,l=0,f=0,s=0,h=0;
+							if(e.responsiveLevels&&(jQuery.each(e.responsiveLevels,function(e,f){f>i&&(t=r=f,l=e),i>f&&f>r&&(r=f,n=e)}),t>r&&(l=n)),f=e.gridheight[l]||e.gridheight[0]||e.gridheight,s=e.gridwidth[l]||e.gridwidth[0]||e.gridwidth,h=i/s,h=h>1?1:h,f=Math.round(h*f),"fullscreen"==e.sliderLayout){var u=(e.c.width(),jQuery(window).height());if(void 0!=e.fullScreenOffsetContainer){var c=e.fullScreenOffsetContainer.split(",");if (c) jQuery.each(c,function(e,i){u=jQuery(i).length>0?u-jQuery(i).outerHeight(!0):u}),e.fullScreenOffset.split("%").length>1&&void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0?u-=jQuery(window).height()*parseInt(e.fullScreenOffset,0)/100:void 0!=e.fullScreenOffset&&e.fullScreenOffset.length>0&&(u-=parseInt(e.fullScreenOffset,0))}f=u}else void 0!=e.minHeight&&f<e.minHeight&&(f=e.minHeight);e.c.closest(".rev_slider_wrapper").css({height:f})					
+						}catch(d){console.log("Failure at Presize of Slider:"+d)}						
+					};</script>
+		<style type="text/css" id="wp-custom-css">
+			.single-te_announcements .header-title{display:none !important}
+.single-te_announcements .site-main {
+    margin-top: 3%;
+}
+
+.subheader a:hover {
+     color: #bbb;
+}
+
+/*  PAra activar luto, basta retirar . da linha abaixo */
+.html{
+	filter:grayscale(1);
+	-webkit-filter:grayscale(1);
+}		</style>
+		<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+</head>
+
+<body class="page-template page-template-page-templates page-template-page_without-sidebar page-template-page-templatespage_without-sidebar-php page page-id-106 wp-embed-responsive tribe-no-js theme-argenta-2-0-6 argenta wpb-js-composer js-comp-ver-6.0.5 vc_responsive">
+
+	
+<div class="page-preloader" id="page-preloader">
+	<div class="loader"></div>
+</div>
+
+
+	
+<a class="scroll-top" id="page-scroll-top">
+	<img src="https://bvleiria.pt/wp-content/themes/argenta/assets/images/scroll-top.svg" alt="Scroll to top">
+</a>
+
+
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	
+			
+		
+
+<div class="subheader">
+	<div class="content">
+
+		
+				<ul class="subheader-contacts unstyled">
+						<li>
+				<span class="icon icon-phone ion-iphone"></span>
+											<a href="tel:244882015">244 882 015</a>
+										</li>
+			
+						<li>
+				<span class="icon icon-email ion-ios-email-outline"></span>
+											<a href="mailto:geral@bvleiria.pt">geral@bvleiria.pt</a>
+										</li>
+			
+					</ul>
+		
+				<div class="socialbar small">
+							<a target="_blank" href="https://www.facebook.com/BombeirosVoluntariosdeLeiria" class="facebook flat default"><i class="fa-brands fa-facebook-f"></i></a>							<a target="_blank" href="https://www.instagram.com/bombeiros_v_leiria" class="instagram flat default"><i class="fa-brands fa-instagram"></i></a>					</div>
+		
+		
+	</div>
+</div><!-- .subheader -->
+
+
+		
+<header id="masthead" class="site-header dark-text header-2">
+	<div class="header-wrap">
+		
+<div class="site-branding">
+	<p class="site-title">
+		<a href="https://bvleiria.pt/" rel="home">
+			<span class="first-logo">
+																														<img src="https://bvleiria.pt/wp-content/uploads/2018/10/logo_bvl_white.png" class="logo-hidden-sm " alt="BV Leiria">
+														<img src="https://bvleiria.pt/wp-content/uploads/2018/10/logo_bvl_mobile.png" class="logo-visible-sm" alt="BV Leiria">
+																		</span>
+			
+			<span class="second-logo">
+																														<img src="https://bvleiria.pt/wp-content/uploads/2018/10/logo_bvl_white.png" class="logo-hidden-sm " alt="BV Leiria">
+														<img src="https://bvleiria.pt/wp-content/uploads/2018/10/logo_bvl_mobile.png" class="logo-visible-sm" alt="BV Leiria">
+																		</span>
+		</a>
+	</p>
+</div><!-- .site-branding -->		<div class="right">
+			
+<nav id="site-navigation" class="main-nav">
+	<div id="mega-menu-wrap">
+		<ul id="primary-menu" class="menu"><li id="nav-menu-item-6765-6aa5671e094e3" class="mega-menu-item nav-item menu-item-depth-0 "><a href="http://bvleiria.pt" class="menu-link main-menu-link item-title">Início</a></li>
+<li id="nav-menu-item-6766-6aa5671e0956f" class="mega-menu-item nav-item menu-item-depth-0 has-submenu "><a href="#" class="menu-link main-menu-link item-title">Institucional</a>
+<div class="sub-nav"><ul class="menu-depth-1 sub-menu sub-nav-group" >
+	<li id="nav-menu-item-6759-6aa5671e095d3" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/historial/" class="menu-link sub-menu-link">Historial</a></li>
+	<li id="nav-menu-item-6758-6aa5671e0965a" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/estatutos/" class="menu-link sub-menu-link">Estatutos</a></li>
+	<li id="nav-menu-item-7098-6aa5671e096b2" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/regulamento-interno/" class="menu-link sub-menu-link">Regulamento Interno</a></li>
+	<li id="nav-menu-item-6926-6aa5671e096ff" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/orgaos-sociais/" class="menu-link sub-menu-link">Órgãos Sociais</a></li>
+	<li id="nav-menu-item-6912-6aa5671e09749" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/legislacao/" class="menu-link sub-menu-link">Legislação</a></li>
+</ul></div>
+</li>
+<li id="nav-menu-item-6762-6aa5671e09798" class="mega-menu-item nav-item menu-item-depth-0 "><a href="https://bvleiria.pt/noticias/" class="menu-link main-menu-link item-title">Noticias</a></li>
+<li id="nav-menu-item-6767-6aa5671e097e4" class="mega-menu-item nav-item menu-item-depth-0 has-submenu "><a href="#" class="menu-link main-menu-link item-title">Formação</a>
+<div class="sub-nav"><ul class="menu-depth-1 sub-menu sub-nav-group" >
+	<li id="nav-menu-item-6764-6aa5671e09858" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/recrutamento/" class="menu-link sub-menu-link">Recrutamento</a></li>
+	<li id="nav-menu-item-6942-6aa5671e098ce" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/formacao-externa/" class="menu-link sub-menu-link">Formação Externa</a></li>
+</ul></div>
+</li>
+<li id="nav-menu-item-6757-6aa5671e09934" class="mega-menu-item nav-item menu-item-depth-0 current-menu-item "><a href="https://bvleiria.pt/contactos/" class="menu-link main-menu-link item-title">Contactos</a></li>
+</ul>	</div>
+	<div class="close">
+		<span class="icon ion-ios-close-empty"></span>
+	</div>
+
+	<!-- Mobile elements -->
+	<form class="form-search" role="search" method="get" action="https://bvleiria.pt/">
+		<span class="ion-ios-search"></span>
+		<input type="text" placeholder="Pesquisar" name="s">
+	</form>
+
+	</nav>	
+			
+
+<ul class="menu-other">
+		<li>
+		<a class="search" data-nav-search="true">
+			<span class="icon ion-ios-search"></span>
+					</a>
+	</li>
+	
+	
+	
+</ul>
+
+			
+<div class="hamburger-menu" id="hamburger-menu">
+	<a class="btn-toggle" aria-controls="site-navigation" aria-expanded="false">
+		<span class="btn-lines"></span>
+	</a>
+</div>
+			<div class="close-menu"></div>
+		</div>
+	</div><!-- .header-wrap -->
+</header><!-- #masthead -->
+
+
+<div class="fullscreen-navigation" id="fullscreen-mega-menu">
+	<div class="site-branding">
+		<p class="site-title">
+			<a href="https://bvleiria.pt/" rel="home">
+												<span class="first-logo">
+						<img src="https://bvleiria.pt/wp-content/uploads/2018/10/logo_bvl_white.png"  alt="BV Leiria">
+					</span>
+										</a>
+		</p>
+	</div>
+	<div class="fullscreen-menu-wrap">
+		<div id="fullscreen-mega-menu-wrap">
+			<ul id="secondary-menu" class="menu"><li id="nav-menu-item-6765-6aa5671e0b44a" class="mega-menu-item nav-item menu-item-depth-0 "><a href="http://bvleiria.pt" class="menu-link main-menu-link item-title">Início</a></li>
+<li id="nav-menu-item-6766-6aa5671e0b50d" class="mega-menu-item nav-item menu-item-depth-0 has-submenu "><a href="#" class="menu-link main-menu-link item-title">Institucional</a>
+<div class="sub-nav"><ul class="menu-depth-1 sub-menu sub-nav-group" >
+	<li id="nav-menu-item-6759-6aa5671e0b5dd" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/historial/" class="menu-link sub-menu-link">Historial</a></li>
+	<li id="nav-menu-item-6758-6aa5671e0b65e" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/estatutos/" class="menu-link sub-menu-link">Estatutos</a></li>
+	<li id="nav-menu-item-7098-6aa5671e0b6b4" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/regulamento-interno/" class="menu-link sub-menu-link">Regulamento Interno</a></li>
+	<li id="nav-menu-item-6926-6aa5671e0b702" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/orgaos-sociais/" class="menu-link sub-menu-link">Órgãos Sociais</a></li>
+	<li id="nav-menu-item-6912-6aa5671e0b74e" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/legislacao/" class="menu-link sub-menu-link">Legislação</a></li>
+</ul></div>
+</li>
+<li id="nav-menu-item-6762-6aa5671e0b79d" class="mega-menu-item nav-item menu-item-depth-0 "><a href="https://bvleiria.pt/noticias/" class="menu-link main-menu-link item-title">Noticias</a></li>
+<li id="nav-menu-item-6767-6aa5671e0b7e9" class="mega-menu-item nav-item menu-item-depth-0 has-submenu "><a href="#" class="menu-link main-menu-link item-title">Formação</a>
+<div class="sub-nav"><ul class="menu-depth-1 sub-menu sub-nav-group" >
+	<li id="nav-menu-item-6764-6aa5671e0b845" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/recrutamento/" class="menu-link sub-menu-link">Recrutamento</a></li>
+	<li id="nav-menu-item-6942-6aa5671e0b895" class="mega-menu-item sub-nav-item menu-item-depth-1 "><a href="https://bvleiria.pt/formacao-externa/" class="menu-link sub-menu-link">Formação Externa</a></li>
+</ul></div>
+</li>
+<li id="nav-menu-item-6757-6aa5671e0b8e0" class="mega-menu-item nav-item menu-item-depth-0 current-menu-item "><a href="https://bvleiria.pt/contactos/" class="menu-link main-menu-link item-title">Contactos</a></li>
+</ul>		</div>
+	</div>
+	<div class="copyright">
+		©2024 <a href="http://bvleiria.pt" target="_blank">Bombeiros Voluntários de Leiria. </a> Todos os direitos reservados.	</div>
+	<div class="close" id="fullscreen-menu-close">
+		<span class="ion-ios-close-empty"></span>
+	</div>
+</div>
+				<div class="header-search">
+			<div class="search-wrap">
+				<form role="search" class="search search-form" action="https://bvleiria.pt/" method="POST">
+	<label>
+		<span class="screen-reader-text">Procurar por:</span>
+		<input type="text" class="search-field" name="s" placeholder="Pesquisar..." value="">
+	</label>
+	<button type="submit" class="search search-submit">
+		<span class="ion-ios-search"></span>
+	</button>
+</form>			</div>
+		</div>
+		
+		
+		<div id="content" class="site-content">
+
+						<div class="header-cap with-subheader"></div>
+			
+
+<div class="header-title text-center">
+	<div class="title-wrap">
+		<div class="content">
+		
+			<div class="full-width-container">
+				<h1 class="page-title">Contactos</h1>
+							</div>
+
+		</div>
+	</div>
+</div> <!-- .header-title -->
+
+
+
+<div class="full-width-container">
+	<div class="vc_col-sm-12">
+		<div id="primary" class="content-area">
+			<main id="main" class="site-main">
+				<article id="post-106" class="post-106 page type-page status-publish hentry">
+	<div class="entry-content">
+		<div class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey" ><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="argenta-custom-6aa5671e169c5"  >
+	<p style="text-align: center;"><strong>Quartel Sede</strong></p>
+</div>
+
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_gmaps_widget wpb_content_element"><div class="wpb_wrapper"><div class="wpb_map_wraper"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3219.2276083051574!2d-8.816619167704339!3d39.767557430832596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2273205c510649%3A0x9725eed1aee868c7!2sBombeiros+Volunt%C3%A1rios+de+Leiria!5e0!3m2!1spt-PT!2spt!4v1548356273887" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">	<ul class="list-box-icon contact-module">
+	
+		<li>
+
+	<span class="icon my-icon-loc-signpost-2"></span>
+		<h4 class="title">Morada</h4>
+		<address>Rua da Liberdade<br />
+Outeiros da Gândara<br />
+2400-560 Leiria</address>	
+
+</li>
+
+<li>
+
+	<span class="icon my-icon-tel-fixed-handset"></span>
+		<h4 class="title">Telefone</h4>
+		<address>244 882 015</address>	
+
+</li>
+
+<li>
+
+	<span class="icon my-icon-ema-email"></span>
+		<h4 class="title">Email</h4>
+		<address>geral@bvleiria.pt</address>	
+
+</li>
+
+<li>
+
+	<span class="icon ion-social-facebook"></span>
+		<h4 class="title">Facebook</h4>
+		<address>facebook.com/BombeirosVoluntariosDeLeiria</address>	
+
+</li>
+
+
+	</ul></div></div></div></div><div class="vc_row wpb_row vc_row-fluid vc_row-o-content-middle vc_row-flex"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="argenta-custom-6aa5671e1800f"  >
+	<p style="text-align: center;"><strong>Quartel 5.ª Companhia &#8211; Monte Redondo</strong></p>
+</div>
+
+</div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_gmaps_widget wpb_content_element"><div class="wpb_wrapper"><div class="wpb_map_wraper"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4710.839799062111!2d-8.838906621011962!3d39.88178349963052!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2213532281d4f9%3A0x4c46edaa1119b6c!2sAssocia%C3%A7%C3%A3o+Humanit%C3%A1ria+dos+Bombeiros+Volunt%C3%A1rios+de+Leiria+-+5%C2%AA+Companhia+de+Monte+Redondo!5e0!3m2!1spt-PT!2spt!4v1548357060473" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">	<ul class="list-box-icon contact-module">
+	
+		<li>
+
+	<span class="icon my-icon-loc-signpost-2"></span>
+		<h4 class="title">Morada</h4>
+		<address>EN 109 n.º 63<br />
+Montijos<br />
+2425-623 Monte Redondo</address>	
+
+</li>
+
+<li>
+
+	<span class="icon my-icon-tel-fixed-handset"></span>
+		<h4 class="title">Telefone</h4>
+		<address>244 685 800</address>	
+
+</li>
+
+<li>
+
+	<span class="icon my-icon-ema-email"></span>
+		<h4 class="title">Email</h4>
+		<address>5companhia@bvleiria.pt</address>	
+
+</li>
+
+<li>
+
+	<span class="icon ion-social-facebook"></span>
+		<h4 class="title">Facebook</h4>
+		<address>facebook.com/5CompanhiaMonteRedondo</address>	
+
+</li>
+
+
+	</ul></div></div></div></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="argenta-custom-6aa5671e195c9"  >
+	</div>
+
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="argenta-custom-6aa5671e19934"  >
+	<p>Entre em contacto connosco, preenchendo o formulário abaixo</p>
+</div>
+
+<div class="vc_separator wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_sep_color_grey" ><span class="vc_sep_holder vc_sep_holder_l"><span  class="vc_sep_line"></span></span><span class="vc_sep_holder vc_sep_holder_r"><span  class="vc_sep_line"></span></span>
+</div><div role="form" class="wpcf7" id="wpcf7-f6518-p106-o1" lang="pt-PT" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/contactos/#wpcf7-f6518-p106-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="6518" />
+<input type="hidden" name="_wpcf7_version" value="5.3.2" />
+<input type="hidden" name="_wpcf7_locale" value="pt_PT" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6518-p106-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="106" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+</div>
+<p><label> O seu nome (obrigatório)<br />
+    <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" /></span> </label></p>
+<p><label> O seu email (obrigatório)<br />
+    <span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" /></span> </label></p>
+<p><label> Assunto<br />
+    <span class="wpcf7-form-control-wrap your-subject"><input type="text" name="your-subject" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" /></span> </label></p>
+<p><label> A sua mensagem<br />
+    <span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false"></textarea></span> </label></p>
+<p><input type="submit" value="Enviar" class="wpcf7-form-control wpcf7-submit" /></p>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div id="argenta-custom-6aa5671e1a832"  >
+	</div>
+
+</div></div></div></div>
+	</div>
+</article>			</main><!-- #main -->
+		</div><!-- #primary -->
+	</div><!-- vc_col-sm-12 -->
+</div><!-- wrapper -->
+	
+	</div><!-- #content -->
+	
+		<footer id="colophon" class="site-footer">
+
+				<div class="wrapped-container">
+					</div><!-- wrapper -->
+		
+				<div class="site-info">
+			©2024 <a href="http://bvleiria.pt" target="_blank">Bombeiros Voluntários de Leiria. </a> Todos os direitos reservados.		</div><!-- .site-info -->
+		
+	</footer><!-- #colophon -->
+	
+</div><!-- #page -->
+
+
+
+
+<style>#argenta-custom-6aa5671e169c5,#argenta-custom-6aa5671e169c5 > *{font-size: 25px; }#argenta-custom-6aa5671e1800f,#argenta-custom-6aa5671e1800f > *{font-size: 25px; }#argenta-custom-6aa5671e19934,#argenta-custom-6aa5671e19934 > *{font-size: 20px; line-height: 28px; font-style: normal; }</style>
+
+
+<script id="ckyBannerTemplate" type="text/template">
+<div class="cky-overlay cky-hide"></div>
+<div class="cky-btn-revisit-wrapper cky-revisit-hide" data-cky-tag="revisit-consent" data-tooltip="Consent Preferences" style="background-color:#0056a7"> <button class="cky-btn-revisit" aria-label="Consent Preferences"> <img src="http://bvleiria.pt/wp-content/plugins/cookie-law-info/lite/frontend/images/revisit.svg" alt="Revisit consent button"> </button>
+</div>
+<div class="cky-consent-container cky-hide" tabindex="0"> <div class="cky-consent-bar" data-cky-tag="notice" style="background-color:#FFFFFF;border-color:#f4f4f4;color:#212121">  <div class="cky-notice"> <p class="cky-title" role="heading" aria-level="1" data-cky-tag="title" style="color:#212121">We value your privacy</p>
+<div class="cky-notice-group"> <div class="cky-notice-des" data-cky-tag="description" style="color:#212121"> <p>We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.</p> </div>
+<div class="cky-notice-btn-wrapper" data-cky-tag="notice-buttons"> <button class="cky-btn cky-btn-customize" aria-label="Customize" data-cky-tag="settings-button" style="color:#1863dc;background-color:transparent;border-color:#1863dc">Customize</button> <button class="cky-btn cky-btn-reject" aria-label="Reject All" data-cky-tag="reject-button" style="color:#1863dc;background-color:transparent;border-color:#1863dc">Reject All</button> <button class="cky-btn cky-btn-accept" aria-label="Accept All" data-cky-tag="accept-button" style="color:#FFFFFF;background-color:#1863dc;border-color:#1863dc">Accept All</button>  </div>
+</div>
+</div>
+</div>
+</div>
+<div class="cky-modal" tabindex="0"> <div class="cky-preference-center" data-cky-tag="detail" style="color:#212121;background-color:#FFFFFF;border-color:#F4F4F4"> <div class="cky-preference-header"> <span class="cky-preference-title" role="heading" aria-level="1" data-cky-tag="detail-title" style="color:#212121">Customize Consent Preferences</span> <button class="cky-btn-close" aria-label="[cky_preference_close_label]" data-cky-tag="detail-close"> <img src="http://bvleiria.pt/wp-content/plugins/cookie-law-info/lite/frontend/images/close.svg" alt="Close"> </button> </div>
+<div class="cky-preference-body-wrapper"> <div class="cky-preference-content-wrapper" data-cky-tag="detail-description" style="color:#212121"> <p>We use cookies to help you navigate efficiently and perform certain functions. You will find detailed information about all cookies under each consent category below.</p>
+<p>The cookies that are categorized as "Necessary" are stored on your browser as they are essential for enabling the basic functionalities of the site. </p>
+<p>We also use third-party cookies that help us analyze how you use this website, store your preferences, and provide the content and advertisements that are relevant to you. These cookies will only be stored in your browser with your prior consent.</p>
+<p>You can choose to enable or disable some or all of these cookies but disabling some of them may affect your browsing experience.</p> </div>
+<div class="cky-accordion-wrapper" data-cky-tag="detail-categories"> <div class="cky-accordion" id="ckyDetailCategorynecessary"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header">
+<button class="cky-accordion-btn" aria-label="Necessary" data-cky-tag="detail-category-title" style="color:#212121">Necessary</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchnecessary"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.</p>
+</div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div>
+<div class="cky-accordion" id="ckyDetailCategoryfunctional"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header">
+<button class="cky-accordion-btn" aria-label="Functional" data-cky-tag="detail-category-title" style="color:#212121">Functional</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchfunctional"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Functional cookies help perform certain functionalities like sharing the content of the website on social media platforms, collecting feedback, and other third-party features.</p>
+</div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div>
+<div class="cky-accordion" id="ckyDetailCategoryanalytics"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header">
+<button class="cky-accordion-btn" aria-label="Analytics" data-cky-tag="detail-category-title" style="color:#212121">Analytics</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchanalytics"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.</p>
+</div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div>
+<div class="cky-accordion" id="ckyDetailCategoryperformance"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header">
+<button class="cky-accordion-btn" aria-label="Performance" data-cky-tag="detail-category-title" style="color:#212121">Performance</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchperformance"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Performance cookies are used to understand and analyze the key performance indexes of the website which helps in delivering a better user experience for the visitors.</p>
+</div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div>
+<div class="cky-accordion" id="ckyDetailCategoryadvertisement"> <div class="cky-accordion-item"> <div class="cky-accordion-chevron"><i class="cky-chevron-right"></i></div> <div class="cky-accordion-header-wrapper"> <div class="cky-accordion-header">
+<button class="cky-accordion-btn" aria-label="Advertisement" data-cky-tag="detail-category-title" style="color:#212121">Advertisement</button><span class="cky-always-active">Always Active</span> <div class="cky-switch" data-cky-tag="detail-category-toggle"><input type="checkbox" id="ckySwitchadvertisement"></div> </div> <div class="cky-accordion-header-des" data-cky-tag="detail-category-description" style="color:#212121"> <p>Advertisement cookies are used to provide visitors with customized advertisements based on the pages you visited previously and to analyze the effectiveness of the ad campaigns.</p>
+</div> </div> </div> <div class="cky-accordion-body"> <div class="cky-audit-table" data-cky-tag="audit-table" style="color:#212121;background-color:#f4f4f4;border-color:#ebebeb"><p class="cky-empty-cookies-text">No cookies to display.</p></div> </div> </div> </div>
+</div>
+<div class="cky-footer-wrapper"> <span class="cky-footer-shadow"></span> <div class="cky-prefrence-btn-wrapper" data-cky-tag="detail-buttons"> <button class="cky-btn cky-btn-reject" aria-label="Reject All" data-cky-tag="detail-reject-button" style="color:#1863dc;background-color:transparent;border-color:#1863dc"> Reject All </button> <button class="cky-btn cky-btn-preferences" aria-label="Save My Preferences" data-cky-tag="detail-save-button" style="color:#1863dc;background-color:transparent;border-color:#1863dc"> Save My Preferences </button> <button class="cky-btn cky-btn-accept" aria-label="Accept All" data-cky-tag="detail-accept-button" style="color:#ffffff;background-color:#1863dc;border-color:#1863dc"> Accept All </button> </div>
+</div>
+</div>
+</div>
+</script><!-- Custom Facebook Feed JS -->
+<script type="text/javascript">var cffajaxurl = "https://bvleiria.pt/wp-admin/admin-ajax.php";
+var cfflinkhashtags = "true";
+</script>
+		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activar para ordena\u00e7\u00e3o ascendente da coluna","sort_descending":": activar para ordena\u00e7\u00e3o descendente da coluna"},"length_menu":"Mostrar entradas de _MENU_","empty_table":"Nenhum dado dispon\u00edvel na tabela","info":"A mostrar _START_ a _END_ do total de _TOTAL_ entradas","info_empty":"A mostrar 0 a 0 do total de 0 entradas","info_filtered":"(filtrado do total _MAX_ entradas)","zero_records":"N\u00e3o foram encontrados registos correspondentes","search":"Pesquisar:","all_selected_text":"Todos os itens nesta p\u00e1gina foram seleccionados","select_all_link":"Seleccionar todas as p\u00e1ginas","clear_selection":"Limpar selec\u00e7\u00e3o","pagination":{"all":"Todos","next":"Seguinte","previous":"Anterior"},"select":{"rows":{"0":"","_":": %d linhas seleccionadas","1":": 1 linha seleccionada"}},"datepicker":{"dayNames":["Domingo","Segunda-feira","Ter\u00e7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00e1bado"],"dayNamesShort":["Dom","Seg","Ter","Qua","Qui","Sex","S\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"monthNames":["Janeiro","Fevereiro","Mar\u00e7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],"monthNamesShort":["Janeiro","Fevereiro","Mar\u00e7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],"monthNamesMin":["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],"nextText":"Seguinte","prevText":"Anterior","currentText":"Hoje","closeText":"Conclu\u00eddo","today":"Hoje","clear":"Limpar"}};/* ]]> */ </script><link rel='stylesheet' id='aos-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/css/aos.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='ionicons-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/css/ionicons.min.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='fontawesome-font-css-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/fonts/fa/css/all.css?ver=5.4.21'  media='all' />
+<link rel='stylesheet' id='argenta-global-fonts-css'  href='//fonts.googleapis.com/css?family=Roboto%3A900i%2C900%2C700i%2C700%2C500i%2C500%2C400i%2C400%2C300i%2C300%2C100i%2C100%7COpen+Sans%3A300i%2C400%2C400i%2C700%2C700i%7CTitillium+Web%3A200%2C200i%2C300%2C300i%2C400%2C400i%2C600%2C600i%2C700%2C700i%2C900%26subset%3Dgreek-ext%2Ccyrillic%2Clatin-ext%2Cgreek%2Cvietnamese%2Ccyrillic-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext%2Clatin-ext&#038;ver=1.0.0'  media='all' />
+<link rel='stylesheet' id='fonts_pack_loc-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/fonts/Location/style.css?ver=2.0.0'  media='all' />
+<link rel='stylesheet' id='fonts_pack_tel-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/fonts/Telephony/style.css?ver=2.0.0'  media='all' />
+<link rel='stylesheet' id='fonts_pack_ema-css'  href='https://bvleiria.pt/wp-content/themes/argenta/assets/fonts/Email/style.css?ver=2.0.0'  media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcf7 = {"apiSettings":{"root":"https:\/\/bvleiria.pt\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+/* ]]> */
+</script>
+<script  src='https://bvleiria.pt/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.3.2'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/jquery/ui/core.min.js?ver=1.11.4'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/js/common.min.js?ver=3.1.43'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/wp-event-manager/assets/js/jquery-timepicker/jquery.timepicker.min.js?ver=3.1.43'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/custom-facebook-feed/assets/js/cff-scripts.min.js?ver=4.2.4'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/woocommerce-hack.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/wp-embed.min.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.0.5'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/masonry.min.js?ver=3.3.2'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/libs/aos.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/plugins/js_composer/assets/lib/bower/isotope/dist/isotope.pkgd.min.js?ver=6.0.5'></script>
+<script src='https://bvleiria.pt/wp-content/plugins/the-events-calendar/common/src/resources/js/underscore-before.js'></script>
+<script  src='https://bvleiria.pt/wp-includes/js/underscore.min.js?ver=1.8.3'></script>
+<script src='https://bvleiria.pt/wp-content/plugins/the-events-calendar/common/src/resources/js/underscore-after.js'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/libs/jquery.mega-menu.min.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/navigation.js?ver=1.0.0'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/skip-link-focus-fix.js?ver=1.0.0'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/select.js?ver=1.0.0'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/social-share.js?ver=1.0.0'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/libs/owl.carousel.min.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/gallery.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/portfolio-gallery.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/libs/scroll-smooth.min.js?ver=5.4.21'></script>
+<script  src='https://bvleiria.pt/wp-content/themes/argenta/assets/js/main.js?ver=5.4.21'></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202637.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:9.0.5',blog:'129680758',post:'106',tz:'1',srv:'bvleiria.pt'} ]);
+	_stq.push([ 'clickTrackerInit', '129680758', '106' ]);
+</script>
+</body>
+</html>

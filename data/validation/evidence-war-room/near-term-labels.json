@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "vigia.near-term-label-factory-report.v1",
+  "generatedAt": "2026-08-25T12:09:19.707Z",
+  "campaignFingerprint": "public-evidence-prospective-campaign:sha256:68718c9cef747afd3f079d6a0407f29f2d7311d834ad29c5081e5f353e961624",
+  "snapshots": 227,
+  "incidents": 108,
+  "providerSourceClasses": 3,
+  "changedProviderStates": 18,
+  "labelCandidates": [],
+  "horizonCounts": {
+    "1h": 0,
+    "3h": 0,
+    "6h": 0,
+    "12h": 0,
+    "24h": 0
+  },
+  "tolerances": {
+    "version": "vigia.authoritative-horizon-tolerance.v1",
+    "horizons": {
+      "1h": {
+        "targetMinutes": 60,
+        "toleranceMinutes": 30
+      },
+      "3h": {
+        "targetMinutes": 180,
+        "toleranceMinutes": 60
+      },
+      "6h": {
+        "targetMinutes": 360,
+        "toleranceMinutes": 90
+      },
+      "12h": {
+        "targetMinutes": 720,
+        "toleranceMinutes": 180
+      },
+      "24h": {
+        "targetMinutes": 1440,
+        "toleranceMinutes": 360
+      }
+    },
+    "interpolation": "FORBIDDEN"
+  },
+  "blocker": {
+    "class": "TIME_ACCUMULATION_REQUIRED",
+    "campaign": "RUNNING_BOUNDED_ON_DEMAND",
+    "accumulatedSnapshots": 227,
+    "accumulatedIncidents": 108,
+    "exactRequirement": "A later changed authoritative perimeter state must land within a versioned horizon tolerance."
+  },
+  "fingerprint": "near-term-label-factory-report:sha256:eb932beb71af7d00a470c5e1bf01a554a0418c2b7ed88fab05f22c57fb39a844"
+}

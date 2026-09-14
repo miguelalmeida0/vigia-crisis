@@ -1,0 +1,3276 @@
+{
+  "capturedAt": "2026-09-12T17:30:38.003Z",
+  "incidents": [
+    {
+      "id": "incident:PT-2026-03CFDC147C",
+      "operationsStatus": 200,
+      "thermalCount": 0,
+      "situationStatus": 200,
+      "state": "AVAILABLE",
+      "snapshotId": "situation:678b0a6501caca89616ae8b5758efb116798394ec6126b57f6094d72fc4092d1",
+      "knownAt": "2026-09-12T17:25:20.188Z",
+      "relationships": {
+        "NEAR_FACILITY": 33,
+        "HAS_ROUTE_TO_FACILITY": 33,
+        "ROUTE_USES_ROAD": 200,
+        "NEAR_SETTLEMENT": 3,
+        "NEAR_ROAD": 3,
+        "NEAR_REFERENCE": 15,
+        "WEATHER_CONTEXT": 1,
+        "SOURCE_HEALTH": 22
+      },
+      "facilities": 33,
+      "routes": 33,
+      "rankings": {
+        "basis": {
+          "nearest": "STRAIGHT_LINE_FROM_REPORTED_INCIDENT_POINT",
+          "limitation": "Nearest is not best, available or safe. Calculated options do not imply live road clearance.",
+          "calculatedOption": "LOWEST_RETURNED_QUALIFIED_ROUTE_ETA"
+        },
+        "activeReception": [],
+        "nearestHospital": null,
+        "nearestReception": null,
+        "nearestMapShelter": "entity:a0e4d9cb64d0c3b77bf2b182",
+        "nearestFireStation": "entity:97596f42d5c7fb710ac5f445",
+        "nearestOfficialRefuge": null,
+        "nearestEmergencyHospital": null,
+        "nearestVerifiedFireStation": null,
+        "nearestCalculatedEmergencyOption": null
+      },
+      "hospitalExample": [],
+      "ask": {
+        "status": 200,
+        "latencyMs": 678.3817920000001,
+        "data": {
+          "state": "ANSWERED",
+          "intent": "getQualifiedFacilities",
+          "answer": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+          "primaryAnswer": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+          "claims": [
+            {
+              "id": "claim:c9bbc27a955284b869648fb48766ec647a4d61ffd5c44237a0084b118b4b7d49",
+              "text": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+              "grounding": {
+                "snapshotId": "situation:678b0a6501caca89616ae8b5758efb116798394ec6126b57f6094d72fc4092d1",
+                "tool": "getQualifiedFacilities",
+                "knownAt": "2026-09-12T17:25:20.188Z",
+                "resultPath": "facilities"
+              }
+            }
+          ],
+          "results": [
+            {
+              "facilities": [],
+              "rankings": {
+                "basis": {
+                  "nearest": "STRAIGHT_LINE_FROM_REPORTED_INCIDENT_POINT",
+                  "limitation": "Nearest is not best, available or safe. Calculated options do not imply live road clearance.",
+                  "calculatedOption": "LOWEST_RETURNED_QUALIFIED_ROUTE_ETA"
+                },
+                "activeReception": [],
+                "nearestHospital": null,
+                "nearestReception": null,
+                "nearestMapShelter": "entity:a0e4d9cb64d0c3b77bf2b182",
+                "nearestFireStation": "entity:97596f42d5c7fb710ac5f445",
+                "nearestOfficialRefuge": null,
+                "nearestEmergencyHospital": null,
+                "nearestVerifiedFireStation": null,
+                "nearestCalculatedEmergencyOption": null
+              }
+            }
+          ],
+          "toolCalls": [
+            {
+              "name": "getQualifiedFacilities",
+              "args": {
+                "incidentId": "PT-2026-03CFDC147C",
+                "at": null,
+                "type": "hospital",
+                "capability": "emergency_department"
+              },
+              "snapshotId": "situation:678b0a6501caca89616ae8b5758efb116798394ec6126b57f6094d72fc4092d1"
+            }
+          ],
+          "asOf": "2026-09-12T17:25:20.188Z",
+          "mode": "CURRENT_RETAINED",
+          "limitations": [
+            "Retained knowledge; nearest is not safest or confirmed available. "
+          ]
+        }
+      }
+    },
+    {
+      "id": "incident:PT-2026-01F7E2E21A",
+      "operationsStatus": 200,
+      "thermalCount": 0,
+      "situationStatus": 200,
+      "state": "AVAILABLE",
+      "snapshotId": "situation:a8f11ae7ac20b81cf8671757c0e76c6a99c828d2d1d573884b840f5e2cb21c65",
+      "knownAt": "2026-09-12T17:27:55.885Z",
+      "relationships": {
+        "NEAR_FACILITY": 39,
+        "HAS_ROUTE_TO_FACILITY": 39,
+        "ROUTE_USES_ROAD": 412,
+        "NEAR_ROAD": 3,
+        "NEAR_SETTLEMENT": 3,
+        "NEAR_REFERENCE": 18,
+        "WEATHER_CONTEXT": 1,
+        "SOURCE_HEALTH": 23
+      },
+      "facilities": 39,
+      "routes": 39,
+      "rankings": {
+        "basis": {
+          "nearest": "STRAIGHT_LINE_FROM_REPORTED_INCIDENT_POINT",
+          "limitation": "Nearest is not best, available or safe. Calculated options do not imply live road clearance.",
+          "calculatedOption": "LOWEST_RETURNED_QUALIFIED_ROUTE_ETA"
+        },
+        "activeReception": [],
+        "nearestHospital": "entity:659882fae0897cb89c15cdd8",
+        "nearestReception": null,
+        "nearestMapShelter": "entity:7a28ebe99c762b2f4cfa54e8",
+        "nearestFireStation": "entity:482e79003d29f1bfab2f25de",
+        "nearestOfficialRefuge": null,
+        "nearestEmergencyHospital": null,
+        "nearestVerifiedFireStation": null,
+        "nearestCalculatedEmergencyOption": null
+      },
+      "hospitalExample": [
+        {
+          "facility": {
+            "id": "entity:659882fae0897cb89c15cdd8",
+            "rawId": "entity:659882fae0897cb89c15cdd8",
+            "fields": {
+              "operator": {
+                "state": "PROBABLE",
+                "value": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+                "authority": "OSM",
+                "provenance": [
+                  "fact:621165c68c42cdb2db804d8812233dc9b5824e3f8db6772e145952063cf33b4a"
+                ]
+              },
+              "authority": {
+                "state": "RESOLVED",
+                "value": "Câmara Municipal de Évora",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:cc9db025e7fc9cb6251a0efed4152c7ecf11c2adb35bd3a52acf00d7031501b6"
+                ]
+              },
+              "canonicalName": {
+                "state": "RESOLVED",
+                "value": "Hospital do Espírito Santo",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:b8fe573b1ada8648edf5d40ca8945145bd44e3b4969f8854570dfe7dc53f8150"
+                ]
+              },
+              "canonicalType": {
+                "state": "RESOLVED",
+                "value": "hospital",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:4ec68ec72bfd179767d5ec6aa309d79f38cc7f1799b98cfe2299f7cefbd14221"
+                ]
+              },
+              "contact.email": {
+                "state": "NOT_RESOLVED_YET",
+                "value": null,
+                "provenance": []
+              },
+              "contact.phone": {
+                "state": "RESOLVED",
+                "value": "+351266740100",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:77d2c440d91b476d04171d02f82dec36837428468a5fd32ecba25f5d65f25fb3"
+                ]
+              },
+              "address.street": {
+                "state": "RESOLVED",
+                "value": "Largo Senhor da Pobreza, Évora",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:306dd3af3cea0244210ff687e68e90190c98fbbc2b78eacd90ae91c2d812dccb"
+                ]
+              },
+              "contact.website": {
+                "state": "RESOLVED",
+                "value": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:75225be0f20ba83816f83eb4e3def0507d6a3b682f2286f473a5a20b5fba0c95"
+                ]
+              },
+              "address.locality": {
+                "state": "PROBABLE",
+                "value": "Évora",
+                "authority": "OSM",
+                "provenance": [
+                  "fact:04d38a9903091c1051d00109fed76e16922363e72f1a04829842deff423ece34"
+                ]
+              },
+              "address.postcode": {
+                "state": "PROBABLE",
+                "value": "7000-811",
+                "authority": "OSM",
+                "provenance": [
+                  "fact:8a26730d6bc882196e05bff153b45ea6dae141ba7637421e4664b1b829de582f"
+                ]
+              },
+              "location.geometry": {
+                "state": "RESOLVED",
+                "value": {
+                  "type": "Point",
+                  "coordinates": [
+                    -7.903127,
+                    38.568567
+                  ]
+                },
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:c97ab8886fb4a539817693ca21dbd0599228fcd763ef2f4440aae9dacd78e591"
+                ]
+              },
+              "address.municipality": {
+                "state": "RESOLVED",
+                "value": "Évora",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:1b46816ca57fddcda3a4460d2180a5885769e3dce27ccc4cc3a431e84cb97090"
+                ]
+              },
+              "location.locationQuality": {
+                "state": "RESOLVED",
+                "value": "VERIFIED_FACILITY_LOCATION",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:322a966f1ebcdd17c4b31c5543adf517bab4ca138428109bb2bf5b66cb228299"
+                ]
+              }
+            },
+            "address": {
+              "street": "Largo Senhor da Pobreza, Évora",
+              "locality": "Évora",
+              "postcode": "7000-811",
+              "municipality": "Évora"
+            },
+            "contact": {
+              "phone": "+351266740100",
+              "website": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/"
+            },
+            "evidence": [
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:b8fe573b1ada8648edf5d40ca8945145bd44e3b4969f8854570dfe7dc53f8150",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.openstreetmap.org/",
+                "factId": "fact:621165c68c42cdb2db804d8812233dc9b5824e3f8db6772e145952063cf33b4a",
+                "source": "OpenStreetMap contributors",
+                "validFrom": null,
+                "observedAt": "2026-09-04T19:22:24.963Z",
+                "receivedAt": "2026-09-12T13:20:23.657Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:c97ab8886fb4a539817693ca21dbd0599228fcd763ef2f4440aae9dacd78e591",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:322a966f1ebcdd17c4b31c5543adf517bab4ca138428109bb2bf5b66cb228299",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:4ec68ec72bfd179767d5ec6aa309d79f38cc7f1799b98cfe2299f7cefbd14221",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:306dd3af3cea0244210ff687e68e90190c98fbbc2b78eacd90ae91c2d812dccb",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.openstreetmap.org/",
+                "factId": "fact:8a26730d6bc882196e05bff153b45ea6dae141ba7637421e4664b1b829de582f",
+                "source": "OpenStreetMap contributors",
+                "validFrom": null,
+                "observedAt": "2026-09-04T19:22:24.963Z",
+                "receivedAt": "2026-09-12T13:20:23.657Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.openstreetmap.org/",
+                "factId": "fact:04d38a9903091c1051d00109fed76e16922363e72f1a04829842deff423ece34",
+                "source": "OpenStreetMap contributors",
+                "validFrom": null,
+                "observedAt": "2026-09-04T19:22:24.963Z",
+                "receivedAt": "2026-09-12T13:20:23.657Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:cc9db025e7fc9cb6251a0efed4152c7ecf11c2adb35bd3a52acf00d7031501b6",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:77d2c440d91b476d04171d02f82dec36837428468a5fd32ecba25f5d65f25fb3",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:75225be0f20ba83816f83eb4e3def0507d6a3b682f2286f473a5a20b5fba0c95",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:1b46816ca57fddcda3a4460d2180a5885769e3dce27ccc4cc3a431e84cb97090",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              }
+            ],
+            "location": {
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -7.903127,
+                  38.568567
+                ]
+              },
+              "locationQuality": "VERIFIED_FACILITY_LOCATION"
+            },
+            "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+            "authority": "Câmara Municipal de Évora",
+            "coordinate": [
+              -7.903127,
+              38.568567
+            ],
+            "distanceKm": 6.439345310533522,
+            "provenance": {
+              "operator": [
+                {
+                  "url": "https://www.openstreetmap.org/",
+                  "factId": "fact:621165c68c42cdb2db804d8812233dc9b5824e3f8db6772e145952063cf33b4a",
+                  "provider": "OpenStreetMap contributors",
+                  "authority": "OSM",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T13:20:23.657Z",
+                  "sourceLocator": "osm:relation:13478475",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "authority": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:cc9db025e7fc9cb6251a0efed4152c7ecf11c2adb35bd3a52acf00d7031501b6",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "canonicalName": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:b8fe573b1ada8648edf5d40ca8945145bd44e3b4969f8854570dfe7dc53f8150",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "canonicalType": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:4ec68ec72bfd179767d5ec6aa309d79f38cc7f1799b98cfe2299f7cefbd14221",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "contact.email": [],
+              "contact.phone": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:77d2c440d91b476d04171d02f82dec36837428468a5fd32ecba25f5d65f25fb3",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.street": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:306dd3af3cea0244210ff687e68e90190c98fbbc2b78eacd90ae91c2d812dccb",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "contact.website": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:75225be0f20ba83816f83eb4e3def0507d6a3b682f2286f473a5a20b5fba0c95",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.locality": [
+                {
+                  "url": "https://www.openstreetmap.org/",
+                  "factId": "fact:04d38a9903091c1051d00109fed76e16922363e72f1a04829842deff423ece34",
+                  "provider": "OpenStreetMap contributors",
+                  "authority": "OSM",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T13:20:23.657Z",
+                  "sourceLocator": "osm:relation:13478475",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.postcode": [
+                {
+                  "url": "https://www.openstreetmap.org/",
+                  "factId": "fact:8a26730d6bc882196e05bff153b45ea6dae141ba7637421e4664b1b829de582f",
+                  "provider": "OpenStreetMap contributors",
+                  "authority": "OSM",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T13:20:23.657Z",
+                  "sourceLocator": "osm:relation:13478475",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "location.geometry": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:c97ab8886fb4a539817693ca21dbd0599228fcd763ef2f4440aae9dacd78e591",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.municipality": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:1b46816ca57fddcda3a4460d2180a5885769e3dce27ccc4cc3a431e84cb97090",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "location.locationQuality": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:322a966f1ebcdd17c4b31c5543adf517bab4ca138428109bb2bf5b66cb228299",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:1",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ]
+            },
+            "evaluatedAt": "2026-09-12T17:27:55.885Z",
+            "capabilities": {},
+            "canonicalName": "Hospital do Espírito Santo",
+            "canonicalType": "hospital",
+            "resolutionState": "probable",
+            "distanceReference": "REPORTED_INCIDENT_POINT"
+          },
+          "route": {
+            "id": "facility-route:a379747bb572b50581d10cc8f9232676",
+            "roads": [
+              {
+                "ref": null,
+                "name": "Largo do Senhor da Pobreza"
+              },
+              {
+                "ref": null,
+                "name": "Rua do Valasco"
+              },
+              {
+                "ref": null,
+                "name": "Largo de Machede Velho"
+              },
+              {
+                "ref": null,
+                "name": "Avenida São João de Deus"
+              },
+              {
+                "ref": null,
+                "name": "Avenida da Universidade"
+              },
+              {
+                "ref": null,
+                "name": "Avenida Dom Manuel Trindade Salgueiro"
+              },
+              {
+                "ref": null,
+                "name": "Avenida dos Quadrilheiros"
+              },
+              {
+                "ref": null,
+                "name": "Estrada Penedo do Ouro"
+              },
+              {
+                "ref": null,
+                "name": "Estrada da Igrejinha"
+              },
+              {
+                "ref": "EM 527",
+                "name": "Estrada da Igrejinha"
+              },
+              {
+                "ref": "CM 1081-1",
+                "name": ""
+              }
+            ],
+            "state": "CALCULATED",
+            "source": {
+              "endpoint": "https://router.project-osrm.org",
+              "provider": "OSRM public routing service",
+              "roadData": "OpenStreetMap"
+            },
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  -7.903267,
+                  38.568531
+                ],
+                [
+                  -7.903356,
+                  38.568698
+                ],
+                [
+                  -7.903395,
+                  38.568746
+                ],
+                [
+                  -7.903604,
+                  38.568946
+                ],
+                [
+                  -7.903614,
+                  38.568983
+                ],
+                [
+                  -7.903619,
+                  38.569018
+                ],
+                [
+                  -7.903615,
+                  38.569052
+                ],
+                [
+                  -7.903607,
+                  38.569088
+                ],
+                [
+                  -7.903517,
+                  38.569254
+                ],
+                [
+                  -7.903122,
+                  38.569809
+                ],
+                [
+                  -7.902966,
+                  38.570056
+                ],
+                [
+                  -7.902924,
+                  38.570112
+                ],
+                [
+                  -7.902873,
+                  38.570164
+                ],
+                [
+                  -7.90237,
+                  38.570615
+                ],
+                [
+                  -7.902314,
+                  38.570684
+                ],
+                [
+                  -7.902181,
+                  38.570815
+                ],
+                [
+                  -7.9021,
+                  38.570973
+                ],
+                [
+                  -7.901954,
+                  38.571287
+                ],
+                [
+                  -7.901983,
+                  38.571436
+                ],
+                [
+                  -7.902013,
+                  38.571561
+                ],
+                [
+                  -7.902047,
+                  38.57167
+                ],
+                [
+                  -7.90206,
+                  38.571753
+                ],
+                [
+                  -7.901861,
+                  38.571765
+                ],
+                [
+                  -7.90171,
+                  38.57174
+                ],
+                [
+                  -7.901645,
+                  38.571729
+                ],
+                [
+                  -7.901452,
+                  38.571697
+                ],
+                [
+                  -7.901454,
+                  38.571672
+                ],
+                [
+                  -7.901446,
+                  38.571648
+                ],
+                [
+                  -7.90143,
+                  38.571627
+                ],
+                [
+                  -7.901407,
+                  38.57161
+                ],
+                [
+                  -7.901376,
+                  38.571602
+                ],
+                [
+                  -7.901347,
+                  38.571597
+                ],
+                [
+                  -7.901316,
+                  38.5716
+                ],
+                [
+                  -7.901288,
+                  38.571611
+                ],
+                [
+                  -7.901265,
+                  38.571628
+                ],
+                [
+                  -7.901249,
+                  38.571649
+                ],
+                [
+                  -7.901242,
+                  38.571677
+                ],
+                [
+                  -7.901247,
+                  38.571706
+                ],
+                [
+                  -7.901265,
+                  38.571731
+                ],
+                [
+                  -7.901292,
+                  38.57175
+                ],
+                [
+                  -7.901326,
+                  38.571761
+                ],
+                [
+                  -7.901273,
+                  38.571936
+                ],
+                [
+                  -7.901152,
+                  38.572334
+                ],
+                [
+                  -7.901072,
+                  38.572601
+                ],
+                [
+                  -7.901045,
+                  38.572701
+                ],
+                [
+                  -7.90104,
+                  38.57272
+                ],
+                [
+                  -7.900955,
+                  38.573092
+                ],
+                [
+                  -7.900934,
+                  38.57322
+                ],
+                [
+                  -7.900897,
+                  38.573439
+                ],
+                [
+                  -7.900871,
+                  38.573498
+                ],
+                [
+                  -7.900868,
+                  38.573507
+                ],
+                [
+                  -7.900837,
+                  38.573544
+                ],
+                [
+                  -7.900807,
+                  38.573569
+                ],
+                [
+                  -7.900767,
+                  38.573593
+                ],
+                [
+                  -7.900723,
+                  38.573616
+                ],
+                [
+                  -7.900684,
+                  38.573651
+                ],
+                [
+                  -7.900661,
+                  38.573692
+                ],
+                [
+                  -7.900653,
+                  38.573738
+                ],
+                [
+                  -7.900663,
+                  38.573783
+                ],
+                [
+                  -7.900686,
+                  38.57382
+                ],
+                [
+                  -7.90072,
+                  38.573851
+                ],
+                [
+                  -7.900763,
+                  38.573874
+                ],
+                [
+                  -7.9008,
+                  38.573885
+                ],
+                [
+                  -7.900838,
+                  38.573891
+                ],
+                [
+                  -7.900891,
+                  38.573889
+                ],
+                [
+                  -7.900941,
+                  38.573876
+                ],
+                [
+                  -7.900984,
+                  38.573853
+                ],
+                [
+                  -7.901019,
+                  38.573823
+                ],
+                [
+                  -7.901043,
+                  38.573786
+                ],
+                [
+                  -7.901053,
+                  38.573746
+                ],
+                [
+                  -7.901166,
+                  38.573749
+                ],
+                [
+                  -7.902997,
+                  38.573887
+                ],
+                [
+                  -7.903304,
+                  38.573936
+                ],
+                [
+                  -7.903599,
+                  38.574015
+                ],
+                [
+                  -7.903875,
+                  38.574107
+                ],
+                [
+                  -7.904144,
+                  38.574251
+                ],
+                [
+                  -7.905009,
+                  38.574784
+                ],
+                [
+                  -7.905148,
+                  38.574876
+                ],
+                [
+                  -7.905269,
+                  38.574968
+                ],
+                [
+                  -7.905262,
+                  38.57501
+                ],
+                [
+                  -7.905268,
+                  38.575052
+                ],
+                [
+                  -7.905289,
+                  38.575091
+                ],
+                [
+                  -7.905325,
+                  38.575127
+                ],
+                [
+                  -7.905373,
+                  38.575153
+                ],
+                [
+                  -7.905429,
+                  38.575167
+                ],
+                [
+                  -7.905487,
+                  38.575169
+                ],
+                [
+                  -7.905526,
+                  38.575162
+                ],
+                [
+                  -7.905563,
+                  38.57515
+                ],
+                [
+                  -7.905679,
+                  38.575192
+                ],
+                [
+                  -7.90576,
+                  38.575242
+                ],
+                [
+                  -7.907975,
+                  38.576609
+                ],
+                [
+                  -7.908465,
+                  38.576808
+                ],
+                [
+                  -7.90891,
+                  38.576921
+                ],
+                [
+                  -7.909696,
+                  38.57703
+                ],
+                [
+                  -7.909989,
+                  38.577069
+                ],
+                [
+                  -7.910069,
+                  38.577098
+                ],
+                [
+                  -7.910149,
+                  38.577136
+                ],
+                [
+                  -7.910197,
+                  38.577266
+                ],
+                [
+                  -7.910258,
+                  38.577326
+                ],
+                [
+                  -7.910345,
+                  38.577363
+                ],
+                [
+                  -7.910442,
+                  38.577371
+                ],
+                [
+                  -7.910495,
+                  38.577424
+                ],
+                [
+                  -7.910534,
+                  38.577485
+                ],
+                [
+                  -7.910581,
+                  38.577604
+                ],
+                [
+                  -7.911257,
+                  38.579442
+                ],
+                [
+                  -7.911331,
+                  38.579648
+                ],
+                [
+                  -7.911502,
+                  38.580112
+                ],
+                [
+                  -7.911556,
+                  38.580261
+                ],
+                [
+                  -7.911564,
+                  38.580295
+                ],
+                [
+                  -7.911561,
+                  38.580335
+                ],
+                [
+                  -7.911547,
+                  38.580369
+                ],
+                [
+                  -7.911527,
+                  38.580395
+                ],
+                [
+                  -7.911503,
+                  38.580417
+                ],
+                [
+                  -7.911292,
+                  38.580541
+                ],
+                [
+                  -7.911268,
+                  38.58056
+                ],
+                [
+                  -7.91124,
+                  38.580589
+                ],
+                [
+                  -7.911227,
+                  38.580615
+                ],
+                [
+                  -7.911221,
+                  38.580648
+                ],
+                [
+                  -7.911225,
+                  38.58068
+                ],
+                [
+                  -7.911234,
+                  38.580708
+                ],
+                [
+                  -7.911246,
+                  38.580726
+                ],
+                [
+                  -7.9113,
+                  38.58078
+                ],
+                [
+                  -7.911561,
+                  38.581046
+                ],
+                [
+                  -7.911625,
+                  38.58111
+                ],
+                [
+                  -7.911823,
+                  38.581311
+                ],
+                [
+                  -7.912046,
+                  38.581544
+                ],
+                [
+                  -7.912063,
+                  38.581571
+                ],
+                [
+                  -7.91207,
+                  38.581594
+                ],
+                [
+                  -7.912071,
+                  38.581621
+                ],
+                [
+                  -7.912067,
+                  38.581641
+                ],
+                [
+                  -7.91206,
+                  38.581656
+                ],
+                [
+                  -7.912049,
+                  38.581673
+                ],
+                [
+                  -7.912034,
+                  38.581685
+                ],
+                [
+                  -7.912007,
+                  38.581704
+                ],
+                [
+                  -7.911758,
+                  38.581857
+                ],
+                [
+                  -7.911738,
+                  38.581874
+                ],
+                [
+                  -7.911719,
+                  38.581898
+                ],
+                [
+                  -7.911707,
+                  38.581918
+                ],
+                [
+                  -7.911691,
+                  38.581959
+                ],
+                [
+                  -7.91169,
+                  38.58198
+                ],
+                [
+                  -7.911689,
+                  38.581996
+                ],
+                [
+                  -7.911691,
+                  38.582015
+                ],
+                [
+                  -7.911709,
+                  38.582076
+                ],
+                [
+                  -7.91172,
+                  38.582108
+                ],
+                [
+                  -7.911728,
+                  38.582129
+                ],
+                [
+                  -7.911745,
+                  38.582171
+                ],
+                [
+                  -7.911755,
+                  38.582192
+                ],
+                [
+                  -7.911764,
+                  38.582228
+                ],
+                [
+                  -7.912034,
+                  38.583116
+                ],
+                [
+                  -7.912059,
+                  38.583198
+                ],
+                [
+                  -7.912089,
+                  38.583297
+                ],
+                [
+                  -7.912174,
+                  38.583578
+                ],
+                [
+                  -7.912184,
+                  38.583725
+                ],
+                [
+                  -7.912181,
+                  38.583802
+                ],
+                [
+                  -7.912179,
+                  38.583845
+                ],
+                [
+                  -7.912164,
+                  38.583885
+                ],
+                [
+                  -7.912161,
+                  38.583927
+                ],
+                [
+                  -7.912174,
+                  38.58395
+                ],
+                [
+                  -7.91219,
+                  38.583979
+                ],
+                [
+                  -7.912217,
+                  38.583992
+                ],
+                [
+                  -7.912245,
+                  38.583998
+                ],
+                [
+                  -7.912267,
+                  38.583994
+                ],
+                [
+                  -7.912331,
+                  38.584067
+                ],
+                [
+                  -7.912428,
+                  38.584173
+                ],
+                [
+                  -7.912508,
+                  38.584351
+                ],
+                [
+                  -7.912584,
+                  38.584576
+                ],
+                [
+                  -7.912655,
+                  38.584861
+                ],
+                [
+                  -7.912765,
+                  38.585302
+                ],
+                [
+                  -7.912922,
+                  38.586011
+                ],
+                [
+                  -7.912943,
+                  38.586105
+                ],
+                [
+                  -7.913138,
+                  38.586977
+                ],
+                [
+                  -7.913155,
+                  38.587055
+                ],
+                [
+                  -7.91319,
+                  38.587175
+                ],
+                [
+                  -7.91323,
+                  38.587295
+                ],
+                [
+                  -7.913276,
+                  38.587404
+                ],
+                [
+                  -7.913735,
+                  38.588322
+                ],
+                [
+                  -7.913784,
+                  38.588442
+                ],
+                [
+                  -7.91389,
+                  38.588791
+                ],
+                [
+                  -7.914029,
+                  38.589458
+                ],
+                [
+                  -7.914062,
+                  38.589581
+                ],
+                [
+                  -7.914096,
+                  38.589678
+                ],
+                [
+                  -7.914134,
+                  38.589742
+                ],
+                [
+                  -7.914393,
+                  38.590152
+                ],
+                [
+                  -7.91444,
+                  38.590224
+                ],
+                [
+                  -7.914896,
+                  38.590926
+                ],
+                [
+                  -7.915016,
+                  38.591099
+                ],
+                [
+                  -7.915446,
+                  38.591783
+                ],
+                [
+                  -7.915649,
+                  38.59216
+                ],
+                [
+                  -7.916086,
+                  38.593181
+                ],
+                [
+                  -7.916136,
+                  38.593321
+                ],
+                [
+                  -7.916115,
+                  38.593526
+                ],
+                [
+                  -7.916125,
+                  38.593741
+                ],
+                [
+                  -7.916129,
+                  38.593771
+                ],
+                [
+                  -7.916143,
+                  38.593812
+                ],
+                [
+                  -7.916387,
+                  38.594398
+                ],
+                [
+                  -7.916571,
+                  38.59484
+                ],
+                [
+                  -7.916762,
+                  38.595301
+                ],
+                [
+                  -7.917186,
+                  38.596303
+                ],
+                [
+                  -7.917305,
+                  38.596572
+                ],
+                [
+                  -7.91765,
+                  38.597197
+                ],
+                [
+                  -7.917864,
+                  38.597544
+                ],
+                [
+                  -7.918096,
+                  38.59791
+                ],
+                [
+                  -7.919083,
+                  38.599498
+                ],
+                [
+                  -7.919344,
+                  38.599913
+                ],
+                [
+                  -7.919405,
+                  38.600004
+                ],
+                [
+                  -7.9195,
+                  38.600129
+                ],
+                [
+                  -7.920258,
+                  38.601129
+                ],
+                [
+                  -7.920692,
+                  38.601794
+                ],
+                [
+                  -7.921548,
+                  38.603173
+                ],
+                [
+                  -7.921613,
+                  38.603311
+                ],
+                [
+                  -7.921662,
+                  38.60347
+                ],
+                [
+                  -7.921698,
+                  38.603625
+                ],
+                [
+                  -7.921715,
+                  38.603772
+                ],
+                [
+                  -7.921721,
+                  38.605659
+                ],
+                [
+                  -7.921722,
+                  38.605978
+                ],
+                [
+                  -7.922043,
+                  38.606993
+                ],
+                [
+                  -7.922852,
+                  38.609549
+                ],
+                [
+                  -7.922924,
+                  38.609776
+                ],
+                [
+                  -7.923004,
+                  38.610105
+                ],
+                [
+                  -7.923046,
+                  38.61036
+                ],
+                [
+                  -7.923038,
+                  38.610487
+                ],
+                [
+                  -7.923005,
+                  38.610716
+                ],
+                [
+                  -7.922975,
+                  38.610893
+                ],
+                [
+                  -7.922904,
+                  38.611419
+                ],
+                [
+                  -7.922902,
+                  38.611559
+                ],
+                [
+                  -7.922917,
+                  38.611699
+                ],
+                [
+                  -7.923021,
+                  38.612416
+                ],
+                [
+                  -7.923031,
+                  38.61248
+                ],
+                [
+                  -7.923417,
+                  38.613939
+                ],
+                [
+                  -7.923511,
+                  38.614252
+                ],
+                [
+                  -7.923782,
+                  38.614883
+                ],
+                [
+                  -7.923997,
+                  38.615362
+                ],
+                [
+                  -7.924061,
+                  38.615506
+                ],
+                [
+                  -7.924251,
+                  38.615863
+                ],
+                [
+                  -7.924655,
+                  38.616658
+                ],
+                [
+                  -7.924745,
+                  38.616824
+                ],
+                [
+                  -7.925043,
+                  38.617335
+                ],
+                [
+                  -7.925284,
+                  38.617652
+                ],
+                [
+                  -7.925463,
+                  38.617889
+                ],
+                [
+                  -7.926036,
+                  38.618647
+                ],
+                [
+                  -7.926271,
+                  38.61896
+                ],
+                [
+                  -7.926979,
+                  38.619797
+                ],
+                [
+                  -7.927116,
+                  38.619963
+                ],
+                [
+                  -7.92729,
+                  38.6202
+                ],
+                [
+                  -7.92743,
+                  38.620505
+                ],
+                [
+                  -7.927474,
+                  38.620624
+                ],
+                [
+                  -7.927613,
+                  38.620967
+                ],
+                [
+                  -7.927708,
+                  38.621253
+                ],
+                [
+                  -7.929791,
+                  38.621179
+                ],
+                [
+                  -7.931198,
+                  38.621085
+                ],
+                [
+                  -7.931672,
+                  38.621075
+                ],
+                [
+                  -7.931772,
+                  38.621075
+                ],
+                [
+                  -7.93187,
+                  38.621082
+                ],
+                [
+                  -7.931968,
+                  38.621095
+                ],
+                [
+                  -7.933094,
+                  38.621275
+                ],
+                [
+                  -7.934375,
+                  38.621489
+                ]
+              ]
+            },
+            "direction": "FACILITY_TO_INCIDENT",
+            "distanceKm": 7.55,
+            "facilityId": "entity:659882fae0897cb89c15cdd8",
+            "validUntil": "2026-09-12T17:31:30.577Z",
+            "alternatives": [],
+            "assumedRoads": [],
+            "calculatedAt": "2026-09-12T17:26:30.577Z",
+            "restrictionIds": [],
+            "roadInformation": {
+              "state": "NOT_CONNECTED",
+              "source": null,
+              "checkedAt": null,
+              "limitation": "Current road information is incomplete. A calculated route is not proof of reachability or safety.",
+              "observedAt": null
+            },
+            "facilityRevision": "b45762d6ebb9e2d05e7d73c7fd5db8018c9733c5aab00299fa7f67125e40df5e",
+            "travelTimeMinutes": 11.2,
+            "facilityCoordinate": [
+              -7.903127,
+              38.568567
+            ],
+            "incidentCoordinate": [
+              -7.9345,
+              38.62103
+            ]
+          }
+        },
+        {
+          "facility": {
+            "id": "entity:a6d3b92de9d5c34681571234",
+            "rawId": "entity:a6d3b92de9d5c34681571234",
+            "fields": {
+              "operator": {
+                "state": "NOT_RESOLVED_YET",
+                "value": null,
+                "provenance": []
+              },
+              "authority": {
+                "state": "RESOLVED",
+                "value": "Câmara Municipal de Évora",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:454a8f4a523014a3dffb54ccfde41cc0aea87f6b5703a2ec024209ffb97a81c7"
+                ]
+              },
+              "canonicalName": {
+                "state": "RESOLVED",
+                "value": "Hospital do Patrocínio",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:d8051f606235a2f16c6bdad2568b93fde39b8391a74b87c8804871cf98c4bbd0"
+                ]
+              },
+              "canonicalType": {
+                "state": "RESOLVED",
+                "value": "hospital",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:d7dc7cf80c7fbda1dd36e8a35d92ef5c9de5401edb11a9735d793cf7c141cb3c"
+                ]
+              },
+              "contact.email": {
+                "state": "NOT_RESOLVED_YET",
+                "value": null,
+                "provenance": []
+              },
+              "contact.phone": {
+                "state": "RESOLVED",
+                "value": "+351266740120",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:b8d717c51f6a80d21462c5e395fc97a73093e0c72ad8c68093c9007cdd0e8d5c"
+                ]
+              },
+              "address.street": {
+                "state": "RESOLVED",
+                "value": "Av. Infante D. Henrique, Évora",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:a2d738df2f9b13787bf709f8bd8e13450b7b56e26def7068dc1089c2816755d6"
+                ]
+              },
+              "contact.website": {
+                "state": "RESOLVED",
+                "value": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:cd90c23f20f4449f0c33a2f6abe4c76d6cdcb41cdc7275e5998c025a018931a8"
+                ]
+              },
+              "address.locality": {
+                "state": "NOT_RESOLVED_YET",
+                "value": null,
+                "provenance": []
+              },
+              "address.postcode": {
+                "state": "NOT_RESOLVED_YET",
+                "value": null,
+                "provenance": []
+              },
+              "location.geometry": {
+                "state": "RESOLVED",
+                "value": {
+                  "type": "Point",
+                  "coordinates": [
+                    -7.900736,
+                    38.567816
+                  ]
+                },
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:d244b2ac5623d7a902816091ee7916dcb6250e46d479f3fc6610d0331e2a7cd6"
+                ]
+              },
+              "address.municipality": {
+                "state": "RESOLVED",
+                "value": "Évora",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:37f313f74b81bd7bdd26c7b20832bc0639c61ae2e1ca4b8a2a8ed534aafd4bda"
+                ]
+              },
+              "location.locationQuality": {
+                "state": "RESOLVED",
+                "value": "VERIFIED_FACILITY_LOCATION",
+                "authority": "MUNICIPAL",
+                "provenance": [
+                  "fact:234c5a4e8570a0dadb617c3eb4de1cf0691993eb432c04745cfdf94e51365148"
+                ]
+              }
+            },
+            "address": {
+              "street": "Av. Infante D. Henrique, Évora",
+              "municipality": "Évora"
+            },
+            "contact": {
+              "phone": "+351266740120",
+              "website": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/"
+            },
+            "evidence": [
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:d8051f606235a2f16c6bdad2568b93fde39b8391a74b87c8804871cf98c4bbd0",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:d7dc7cf80c7fbda1dd36e8a35d92ef5c9de5401edb11a9735d793cf7c141cb3c",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:454a8f4a523014a3dffb54ccfde41cc0aea87f6b5703a2ec024209ffb97a81c7",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:b8d717c51f6a80d21462c5e395fc97a73093e0c72ad8c68093c9007cdd0e8d5c",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:cd90c23f20f4449f0c33a2f6abe4c76d6cdcb41cdc7275e5998c025a018931a8",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:d244b2ac5623d7a902816091ee7916dcb6250e46d479f3fc6610d0331e2a7cd6",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:234c5a4e8570a0dadb617c3eb4de1cf0691993eb432c04745cfdf94e51365148",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:a2d738df2f9b13787bf709f8bd8e13450b7b56e26def7068dc1089c2816755d6",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              },
+              {
+                "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                "factId": "fact:37f313f74b81bd7bdd26c7b20832bc0639c61ae2e1ca4b8a2a8ed534aafd4bda",
+                "source": "Câmara Municipal de Évora",
+                "validFrom": null,
+                "observedAt": null,
+                "receivedAt": "2026-09-12T16:06:42.571Z",
+                "validUntil": null
+              }
+            ],
+            "location": {
+              "geometry": {
+                "type": "Point",
+                "coordinates": [
+                  -7.900736,
+                  38.567816
+                ]
+              },
+              "locationQuality": "VERIFIED_FACILITY_LOCATION"
+            },
+            "authority": "Câmara Municipal de Évora",
+            "coordinate": [
+              -7.900736,
+              38.567816
+            ],
+            "distanceKm": 6.604758862065943,
+            "provenance": {
+              "operator": [],
+              "authority": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:454a8f4a523014a3dffb54ccfde41cc0aea87f6b5703a2ec024209ffb97a81c7",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "canonicalName": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:d8051f606235a2f16c6bdad2568b93fde39b8391a74b87c8804871cf98c4bbd0",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "canonicalType": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:d7dc7cf80c7fbda1dd36e8a35d92ef5c9de5401edb11a9735d793cf7c141cb3c",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "contact.email": [],
+              "contact.phone": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:b8d717c51f6a80d21462c5e395fc97a73093e0c72ad8c68093c9007cdd0e8d5c",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.street": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:a2d738df2f9b13787bf709f8bd8e13450b7b56e26def7068dc1089c2816755d6",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "contact.website": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:cd90c23f20f4449f0c33a2f6abe4c76d6cdcb41cdc7275e5998c025a018931a8",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.locality": [],
+              "address.postcode": [],
+              "location.geometry": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:d244b2ac5623d7a902816091ee7916dcb6250e46d479f3fc6610d0331e2a7cd6",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "address.municipality": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:37f313f74b81bd7bdd26c7b20832bc0639c61ae2e1ca4b8a2a8ed534aafd4bda",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ],
+              "location.locationQuality": [
+                {
+                  "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+                  "factId": "fact:234c5a4e8570a0dadb617c3eb4de1cf0691993eb432c04745cfdf94e51365148",
+                  "provider": "Câmara Municipal de Évora",
+                  "authority": "MUNICIPAL",
+                  "validFrom": null,
+                  "validUntil": null,
+                  "publishedAt": null,
+                  "retrievedAt": "2026-09-12T16:06:42.571Z",
+                  "sourceLocator": "contact-section:2",
+                  "resolutionMethod": "DETERMINISTIC_ADAPTER"
+                }
+              ]
+            },
+            "evaluatedAt": "2026-09-12T17:27:55.885Z",
+            "capabilities": {},
+            "canonicalName": "Hospital do Patrocínio",
+            "canonicalType": "hospital",
+            "resolutionState": "resolved",
+            "distanceReference": "REPORTED_INCIDENT_POINT"
+          },
+          "route": {
+            "id": "facility-route:914460147112779a5f4366f3dd0e15e4",
+            "roads": [
+              {
+                "ref": null,
+                "name": "Avenida Infante Dom Henrique"
+              },
+              {
+                "ref": null,
+                "name": "Avenida São João de Deus"
+              },
+              {
+                "ref": null,
+                "name": "Avenida da Universidade"
+              },
+              {
+                "ref": null,
+                "name": "Avenida Dom Manuel Trindade Salgueiro"
+              },
+              {
+                "ref": null,
+                "name": "Avenida dos Quadrilheiros"
+              },
+              {
+                "ref": null,
+                "name": "Estrada Penedo do Ouro"
+              },
+              {
+                "ref": null,
+                "name": "Estrada da Igrejinha"
+              },
+              {
+                "ref": "EM 527",
+                "name": "Estrada da Igrejinha"
+              },
+              {
+                "ref": "CM 1081-1",
+                "name": ""
+              }
+            ],
+            "state": "CALCULATED",
+            "source": {
+              "endpoint": "https://router.project-osrm.org",
+              "provider": "OSRM public routing service",
+              "roadData": "OpenStreetMap"
+            },
+            "geometry": {
+              "type": "LineString",
+              "coordinates": [
+                [
+                  -7.900735,
+                  38.567808
+                ],
+                [
+                  -7.90107,
+                  38.56779
+                ],
+                [
+                  -7.901232,
+                  38.567781
+                ],
+                [
+                  -7.901394,
+                  38.56777
+                ],
+                [
+                  -7.901404,
+                  38.567801
+                ],
+                [
+                  -7.901427,
+                  38.567827
+                ],
+                [
+                  -7.90146,
+                  38.567844
+                ],
+                [
+                  -7.901499,
+                  38.567852
+                ],
+                [
+                  -7.901539,
+                  38.567849
+                ],
+                [
+                  -7.901603,
+                  38.567998
+                ],
+                [
+                  -7.901685,
+                  38.56834
+                ],
+                [
+                  -7.901748,
+                  38.568601
+                ],
+                [
+                  -7.901895,
+                  38.56921
+                ],
+                [
+                  -7.901908,
+                  38.569274
+                ],
+                [
+                  -7.901914,
+                  38.569335
+                ],
+                [
+                  -7.901906,
+                  38.56941
+                ],
+                [
+                  -7.901894,
+                  38.569489
+                ],
+                [
+                  -7.90164,
+                  38.570534
+                ],
+                [
+                  -7.901404,
+                  38.571495
+                ],
+                [
+                  -7.901376,
+                  38.571602
+                ],
+                [
+                  -7.901347,
+                  38.571597
+                ],
+                [
+                  -7.901316,
+                  38.5716
+                ],
+                [
+                  -7.901288,
+                  38.571611
+                ],
+                [
+                  -7.901265,
+                  38.571628
+                ],
+                [
+                  -7.901249,
+                  38.571649
+                ],
+                [
+                  -7.901242,
+                  38.571677
+                ],
+                [
+                  -7.901247,
+                  38.571706
+                ],
+                [
+                  -7.901265,
+                  38.571731
+                ],
+                [
+                  -7.901292,
+                  38.57175
+                ],
+                [
+                  -7.901326,
+                  38.571761
+                ],
+                [
+                  -7.901273,
+                  38.571936
+                ],
+                [
+                  -7.901152,
+                  38.572334
+                ],
+                [
+                  -7.901072,
+                  38.572601
+                ],
+                [
+                  -7.901045,
+                  38.572701
+                ],
+                [
+                  -7.90104,
+                  38.57272
+                ],
+                [
+                  -7.900955,
+                  38.573092
+                ],
+                [
+                  -7.900934,
+                  38.57322
+                ],
+                [
+                  -7.900897,
+                  38.573439
+                ],
+                [
+                  -7.900871,
+                  38.573498
+                ],
+                [
+                  -7.900868,
+                  38.573507
+                ],
+                [
+                  -7.900837,
+                  38.573544
+                ],
+                [
+                  -7.900807,
+                  38.573569
+                ],
+                [
+                  -7.900767,
+                  38.573593
+                ],
+                [
+                  -7.900723,
+                  38.573616
+                ],
+                [
+                  -7.900684,
+                  38.573651
+                ],
+                [
+                  -7.900661,
+                  38.573692
+                ],
+                [
+                  -7.900653,
+                  38.573738
+                ],
+                [
+                  -7.900663,
+                  38.573783
+                ],
+                [
+                  -7.900686,
+                  38.57382
+                ],
+                [
+                  -7.90072,
+                  38.573851
+                ],
+                [
+                  -7.900763,
+                  38.573874
+                ],
+                [
+                  -7.9008,
+                  38.573885
+                ],
+                [
+                  -7.900838,
+                  38.573891
+                ],
+                [
+                  -7.900891,
+                  38.573889
+                ],
+                [
+                  -7.900941,
+                  38.573876
+                ],
+                [
+                  -7.900984,
+                  38.573853
+                ],
+                [
+                  -7.901019,
+                  38.573823
+                ],
+                [
+                  -7.901043,
+                  38.573786
+                ],
+                [
+                  -7.901053,
+                  38.573746
+                ],
+                [
+                  -7.901166,
+                  38.573749
+                ],
+                [
+                  -7.902997,
+                  38.573887
+                ],
+                [
+                  -7.903304,
+                  38.573936
+                ],
+                [
+                  -7.903599,
+                  38.574015
+                ],
+                [
+                  -7.903875,
+                  38.574107
+                ],
+                [
+                  -7.904144,
+                  38.574251
+                ],
+                [
+                  -7.905009,
+                  38.574784
+                ],
+                [
+                  -7.905148,
+                  38.574876
+                ],
+                [
+                  -7.905269,
+                  38.574968
+                ],
+                [
+                  -7.905262,
+                  38.57501
+                ],
+                [
+                  -7.905268,
+                  38.575052
+                ],
+                [
+                  -7.905289,
+                  38.575091
+                ],
+                [
+                  -7.905325,
+                  38.575127
+                ],
+                [
+                  -7.905373,
+                  38.575153
+                ],
+                [
+                  -7.905429,
+                  38.575167
+                ],
+                [
+                  -7.905487,
+                  38.575169
+                ],
+                [
+                  -7.905526,
+                  38.575162
+                ],
+                [
+                  -7.905563,
+                  38.57515
+                ],
+                [
+                  -7.905679,
+                  38.575192
+                ],
+                [
+                  -7.90576,
+                  38.575242
+                ],
+                [
+                  -7.907975,
+                  38.576609
+                ],
+                [
+                  -7.908465,
+                  38.576808
+                ],
+                [
+                  -7.90891,
+                  38.576921
+                ],
+                [
+                  -7.909696,
+                  38.57703
+                ],
+                [
+                  -7.909989,
+                  38.577069
+                ],
+                [
+                  -7.910069,
+                  38.577098
+                ],
+                [
+                  -7.910149,
+                  38.577136
+                ],
+                [
+                  -7.910197,
+                  38.577266
+                ],
+                [
+                  -7.910258,
+                  38.577326
+                ],
+                [
+                  -7.910345,
+                  38.577363
+                ],
+                [
+                  -7.910442,
+                  38.577371
+                ],
+                [
+                  -7.910495,
+                  38.577424
+                ],
+                [
+                  -7.910534,
+                  38.577485
+                ],
+                [
+                  -7.910581,
+                  38.577604
+                ],
+                [
+                  -7.911257,
+                  38.579442
+                ],
+                [
+                  -7.911331,
+                  38.579648
+                ],
+                [
+                  -7.911502,
+                  38.580112
+                ],
+                [
+                  -7.911556,
+                  38.580261
+                ],
+                [
+                  -7.911564,
+                  38.580295
+                ],
+                [
+                  -7.911561,
+                  38.580335
+                ],
+                [
+                  -7.911547,
+                  38.580369
+                ],
+                [
+                  -7.911527,
+                  38.580395
+                ],
+                [
+                  -7.911503,
+                  38.580417
+                ],
+                [
+                  -7.911292,
+                  38.580541
+                ],
+                [
+                  -7.911268,
+                  38.58056
+                ],
+                [
+                  -7.91124,
+                  38.580589
+                ],
+                [
+                  -7.911227,
+                  38.580615
+                ],
+                [
+                  -7.911221,
+                  38.580648
+                ],
+                [
+                  -7.911225,
+                  38.58068
+                ],
+                [
+                  -7.911234,
+                  38.580708
+                ],
+                [
+                  -7.911246,
+                  38.580726
+                ],
+                [
+                  -7.9113,
+                  38.58078
+                ],
+                [
+                  -7.911561,
+                  38.581046
+                ],
+                [
+                  -7.911625,
+                  38.58111
+                ],
+                [
+                  -7.911823,
+                  38.581311
+                ],
+                [
+                  -7.912046,
+                  38.581544
+                ],
+                [
+                  -7.912063,
+                  38.581571
+                ],
+                [
+                  -7.91207,
+                  38.581594
+                ],
+                [
+                  -7.912071,
+                  38.581621
+                ],
+                [
+                  -7.912067,
+                  38.581641
+                ],
+                [
+                  -7.91206,
+                  38.581656
+                ],
+                [
+                  -7.912049,
+                  38.581673
+                ],
+                [
+                  -7.912034,
+                  38.581685
+                ],
+                [
+                  -7.912007,
+                  38.581704
+                ],
+                [
+                  -7.911758,
+                  38.581857
+                ],
+                [
+                  -7.911738,
+                  38.581874
+                ],
+                [
+                  -7.911719,
+                  38.581898
+                ],
+                [
+                  -7.911707,
+                  38.581918
+                ],
+                [
+                  -7.911691,
+                  38.581959
+                ],
+                [
+                  -7.91169,
+                  38.58198
+                ],
+                [
+                  -7.911689,
+                  38.581996
+                ],
+                [
+                  -7.911691,
+                  38.582015
+                ],
+                [
+                  -7.911709,
+                  38.582076
+                ],
+                [
+                  -7.91172,
+                  38.582108
+                ],
+                [
+                  -7.911728,
+                  38.582129
+                ],
+                [
+                  -7.911745,
+                  38.582171
+                ],
+                [
+                  -7.911755,
+                  38.582192
+                ],
+                [
+                  -7.911764,
+                  38.582228
+                ],
+                [
+                  -7.912034,
+                  38.583116
+                ],
+                [
+                  -7.912059,
+                  38.583198
+                ],
+                [
+                  -7.912089,
+                  38.583297
+                ],
+                [
+                  -7.912174,
+                  38.583578
+                ],
+                [
+                  -7.912184,
+                  38.583725
+                ],
+                [
+                  -7.912181,
+                  38.583802
+                ],
+                [
+                  -7.912179,
+                  38.583845
+                ],
+                [
+                  -7.912164,
+                  38.583885
+                ],
+                [
+                  -7.912161,
+                  38.583927
+                ],
+                [
+                  -7.912174,
+                  38.58395
+                ],
+                [
+                  -7.91219,
+                  38.583979
+                ],
+                [
+                  -7.912217,
+                  38.583992
+                ],
+                [
+                  -7.912245,
+                  38.583998
+                ],
+                [
+                  -7.912267,
+                  38.583994
+                ],
+                [
+                  -7.912331,
+                  38.584067
+                ],
+                [
+                  -7.912428,
+                  38.584173
+                ],
+                [
+                  -7.912508,
+                  38.584351
+                ],
+                [
+                  -7.912584,
+                  38.584576
+                ],
+                [
+                  -7.912655,
+                  38.584861
+                ],
+                [
+                  -7.912765,
+                  38.585302
+                ],
+                [
+                  -7.912922,
+                  38.586011
+                ],
+                [
+                  -7.912943,
+                  38.586105
+                ],
+                [
+                  -7.913138,
+                  38.586977
+                ],
+                [
+                  -7.913155,
+                  38.587055
+                ],
+                [
+                  -7.91319,
+                  38.587175
+                ],
+                [
+                  -7.91323,
+                  38.587295
+                ],
+                [
+                  -7.913276,
+                  38.587404
+                ],
+                [
+                  -7.913735,
+                  38.588322
+                ],
+                [
+                  -7.913784,
+                  38.588442
+                ],
+                [
+                  -7.91389,
+                  38.588791
+                ],
+                [
+                  -7.914029,
+                  38.589458
+                ],
+                [
+                  -7.914062,
+                  38.589581
+                ],
+                [
+                  -7.914096,
+                  38.589678
+                ],
+                [
+                  -7.914134,
+                  38.589742
+                ],
+                [
+                  -7.914393,
+                  38.590152
+                ],
+                [
+                  -7.91444,
+                  38.590224
+                ],
+                [
+                  -7.914896,
+                  38.590926
+                ],
+                [
+                  -7.915016,
+                  38.591099
+                ],
+                [
+                  -7.915446,
+                  38.591783
+                ],
+                [
+                  -7.915649,
+                  38.59216
+                ],
+                [
+                  -7.916086,
+                  38.593181
+                ],
+                [
+                  -7.916136,
+                  38.593321
+                ],
+                [
+                  -7.916115,
+                  38.593526
+                ],
+                [
+                  -7.916125,
+                  38.593741
+                ],
+                [
+                  -7.916129,
+                  38.593771
+                ],
+                [
+                  -7.916143,
+                  38.593812
+                ],
+                [
+                  -7.916387,
+                  38.594398
+                ],
+                [
+                  -7.916571,
+                  38.59484
+                ],
+                [
+                  -7.916762,
+                  38.595301
+                ],
+                [
+                  -7.917186,
+                  38.596303
+                ],
+                [
+                  -7.917305,
+                  38.596572
+                ],
+                [
+                  -7.91765,
+                  38.597197
+                ],
+                [
+                  -7.917864,
+                  38.597544
+                ],
+                [
+                  -7.918096,
+                  38.59791
+                ],
+                [
+                  -7.919083,
+                  38.599498
+                ],
+                [
+                  -7.919344,
+                  38.599913
+                ],
+                [
+                  -7.919405,
+                  38.600004
+                ],
+                [
+                  -7.9195,
+                  38.600129
+                ],
+                [
+                  -7.920258,
+                  38.601129
+                ],
+                [
+                  -7.920692,
+                  38.601794
+                ],
+                [
+                  -7.921548,
+                  38.603173
+                ],
+                [
+                  -7.921613,
+                  38.603311
+                ],
+                [
+                  -7.921662,
+                  38.60347
+                ],
+                [
+                  -7.921698,
+                  38.603625
+                ],
+                [
+                  -7.921715,
+                  38.603772
+                ],
+                [
+                  -7.921721,
+                  38.605659
+                ],
+                [
+                  -7.921722,
+                  38.605978
+                ],
+                [
+                  -7.922043,
+                  38.606993
+                ],
+                [
+                  -7.922852,
+                  38.609549
+                ],
+                [
+                  -7.922924,
+                  38.609776
+                ],
+                [
+                  -7.923004,
+                  38.610105
+                ],
+                [
+                  -7.923046,
+                  38.61036
+                ],
+                [
+                  -7.923038,
+                  38.610487
+                ],
+                [
+                  -7.923005,
+                  38.610716
+                ],
+                [
+                  -7.922975,
+                  38.610893
+                ],
+                [
+                  -7.922904,
+                  38.611419
+                ],
+                [
+                  -7.922902,
+                  38.611559
+                ],
+                [
+                  -7.922917,
+                  38.611699
+                ],
+                [
+                  -7.923021,
+                  38.612416
+                ],
+                [
+                  -7.923031,
+                  38.61248
+                ],
+                [
+                  -7.923417,
+                  38.613939
+                ],
+                [
+                  -7.923511,
+                  38.614252
+                ],
+                [
+                  -7.923782,
+                  38.614883
+                ],
+                [
+                  -7.923997,
+                  38.615362
+                ],
+                [
+                  -7.924061,
+                  38.615506
+                ],
+                [
+                  -7.924251,
+                  38.615863
+                ],
+                [
+                  -7.924655,
+                  38.616658
+                ],
+                [
+                  -7.924745,
+                  38.616824
+                ],
+                [
+                  -7.925043,
+                  38.617335
+                ],
+                [
+                  -7.925284,
+                  38.617652
+                ],
+                [
+                  -7.925463,
+                  38.617889
+                ],
+                [
+                  -7.926036,
+                  38.618647
+                ],
+                [
+                  -7.926271,
+                  38.61896
+                ],
+                [
+                  -7.926979,
+                  38.619797
+                ],
+                [
+                  -7.927116,
+                  38.619963
+                ],
+                [
+                  -7.92729,
+                  38.6202
+                ],
+                [
+                  -7.92743,
+                  38.620505
+                ],
+                [
+                  -7.927474,
+                  38.620624
+                ],
+                [
+                  -7.927613,
+                  38.620967
+                ],
+                [
+                  -7.927708,
+                  38.621253
+                ],
+                [
+                  -7.929791,
+                  38.621179
+                ],
+                [
+                  -7.931198,
+                  38.621085
+                ],
+                [
+                  -7.931672,
+                  38.621075
+                ],
+                [
+                  -7.931772,
+                  38.621075
+                ],
+                [
+                  -7.93187,
+                  38.621082
+                ],
+                [
+                  -7.931968,
+                  38.621095
+                ],
+                [
+                  -7.933094,
+                  38.621275
+                ],
+                [
+                  -7.934375,
+                  38.621489
+                ]
+              ]
+            },
+            "direction": "FACILITY_TO_INCIDENT",
+            "distanceKm": 7.58,
+            "facilityId": "entity:a6d3b92de9d5c34681571234",
+            "validUntil": "2026-09-12T17:31:30.575Z",
+            "alternatives": [],
+            "assumedRoads": [],
+            "calculatedAt": "2026-09-12T17:26:30.575Z",
+            "restrictionIds": [],
+            "roadInformation": {
+              "state": "NOT_CONNECTED",
+              "source": null,
+              "checkedAt": null,
+              "limitation": "Current road information is incomplete. A calculated route is not proof of reachability or safety.",
+              "observedAt": null
+            },
+            "facilityRevision": "98b5376989ab2d6f4da42716519c874571adce5dbb8473a39cc4146e0d88683e",
+            "travelTimeMinutes": 10.8,
+            "facilityCoordinate": [
+              -7.900736,
+              38.567816
+            ],
+            "incidentCoordinate": [
+              -7.9345,
+              38.62103
+            ]
+          }
+        }
+      ],
+      "ask": {
+        "status": 200,
+        "latencyMs": 153.57870800000092,
+        "data": {
+          "state": "ANSWERED",
+          "intent": "getQualifiedFacilities",
+          "answer": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+          "primaryAnswer": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+          "claims": [
+            {
+              "id": "claim:bbcc2192eba90dfa28625d2f11b8c03dd38549c8cc15179d3ff17e81e425a4c7",
+              "text": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+              "grounding": {
+                "snapshotId": "situation:a8f11ae7ac20b81cf8671757c0e76c6a99c828d2d1d573884b840f5e2cb21c65",
+                "tool": "getQualifiedFacilities",
+                "knownAt": "2026-09-12T17:27:55.885Z",
+                "resultPath": "facilities"
+              }
+            }
+          ],
+          "results": [
+            {
+              "facilities": [],
+              "rankings": {
+                "basis": {
+                  "nearest": "STRAIGHT_LINE_FROM_REPORTED_INCIDENT_POINT",
+                  "limitation": "Nearest is not best, available or safe. Calculated options do not imply live road clearance.",
+                  "calculatedOption": "LOWEST_RETURNED_QUALIFIED_ROUTE_ETA"
+                },
+                "activeReception": [],
+                "nearestHospital": "entity:659882fae0897cb89c15cdd8",
+                "nearestReception": null,
+                "nearestMapShelter": "entity:7a28ebe99c762b2f4cfa54e8",
+                "nearestFireStation": "entity:482e79003d29f1bfab2f25de",
+                "nearestOfficialRefuge": null,
+                "nearestEmergencyHospital": null,
+                "nearestVerifiedFireStation": null,
+                "nearestCalculatedEmergencyOption": null
+              }
+            }
+          ],
+          "toolCalls": [
+            {
+              "name": "getQualifiedFacilities",
+              "args": {
+                "incidentId": "PT-2026-01F7E2E21A",
+                "at": null,
+                "type": "hospital",
+                "capability": "emergency_department"
+              },
+              "snapshotId": "situation:a8f11ae7ac20b81cf8671757c0e76c6a99c828d2d1d573884b840f5e2cb21c65"
+            }
+          ],
+          "asOf": "2026-09-12T17:27:55.885Z",
+          "mode": "CURRENT_RETAINED",
+          "limitations": [
+            "Retained knowledge; nearest is not safest or confirmed available. "
+          ]
+        }
+      }
+    },
+    {
+      "id": "incident:PT-2026-08D08E2A0D",
+      "operationsStatus": 200,
+      "thermalCount": 1,
+      "situationStatus": 200,
+      "state": "AVAILABLE",
+      "snapshotId": "situation:00acd031e75c588bb3fe9e898e7d937111e7b5978f459e2fd5ad2e0e512a33bd",
+      "knownAt": "2026-09-12T17:27:56.348Z",
+      "relationships": {
+        "NEAR_FACILITY": 30,
+        "HAS_ROUTE_TO_FACILITY": 30,
+        "ROUTE_USES_ROAD": 268,
+        "NEAR_ROAD": 3,
+        "NEAR_SETTLEMENT": 3,
+        "NEAR_REFERENCE": 14,
+        "WEATHER_CONTEXT": 1,
+        "HAS_THERMAL_OBSERVATION": 1,
+        "SOURCE_HEALTH": 22
+      },
+      "facilities": 30,
+      "routes": 30,
+      "rankings": {
+        "basis": {
+          "nearest": "STRAIGHT_LINE_FROM_REPORTED_INCIDENT_POINT",
+          "limitation": "Nearest is not best, available or safe. Calculated options do not imply live road clearance.",
+          "calculatedOption": "LOWEST_RETURNED_QUALIFIED_ROUTE_ETA"
+        },
+        "activeReception": [],
+        "nearestHospital": null,
+        "nearestReception": null,
+        "nearestMapShelter": "entity:78b3f8744ca032b4bb4034d7",
+        "nearestFireStation": "entity:5aee8b18c7d58f029d30e558",
+        "nearestOfficialRefuge": null,
+        "nearestEmergencyHospital": null,
+        "nearestVerifiedFireStation": null,
+        "nearestCalculatedEmergencyOption": null
+      },
+      "hospitalExample": [],
+      "ask": {
+        "status": 200,
+        "latencyMs": 89.4927919999991,
+        "data": {
+          "state": "ANSWERED",
+          "intent": "getQualifiedFacilities",
+          "answer": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+          "primaryAnswer": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+          "claims": [
+            {
+              "id": "claim:3e862e9f03e8c914dccb21050d9b3da066f5d29958295c4f38b1ae92e01f6444",
+              "text": "No facility with this qualification is retained for this incident. This does not establish that none exists.",
+              "grounding": {
+                "snapshotId": "situation:00acd031e75c588bb3fe9e898e7d937111e7b5978f459e2fd5ad2e0e512a33bd",
+                "tool": "getQualifiedFacilities",
+                "knownAt": "2026-09-12T17:27:56.348Z",
+                "resultPath": "facilities"
+              }
+            }
+          ],
+          "results": [
+            {
+              "facilities": [],
+              "rankings": {
+                "basis": {
+                  "nearest": "STRAIGHT_LINE_FROM_REPORTED_INCIDENT_POINT",
+                  "limitation": "Nearest is not best, available or safe. Calculated options do not imply live road clearance.",
+                  "calculatedOption": "LOWEST_RETURNED_QUALIFIED_ROUTE_ETA"
+                },
+                "activeReception": [],
+                "nearestHospital": null,
+                "nearestReception": null,
+                "nearestMapShelter": "entity:78b3f8744ca032b4bb4034d7",
+                "nearestFireStation": "entity:5aee8b18c7d58f029d30e558",
+                "nearestOfficialRefuge": null,
+                "nearestEmergencyHospital": null,
+                "nearestVerifiedFireStation": null,
+                "nearestCalculatedEmergencyOption": null
+              }
+            }
+          ],
+          "toolCalls": [
+            {
+              "name": "getQualifiedFacilities",
+              "args": {
+                "incidentId": "PT-2026-08D08E2A0D",
+                "at": null,
+                "type": "hospital",
+                "capability": "emergency_department"
+              },
+              "snapshotId": "situation:00acd031e75c588bb3fe9e898e7d937111e7b5978f459e2fd5ad2e0e512a33bd"
+            }
+          ],
+          "asOf": "2026-09-12T17:27:56.348Z",
+          "mode": "CURRENT_RETAINED",
+          "limitations": [
+            "Retained knowledge; nearest is not safest or confirmed available. "
+          ]
+        }
+      }
+    }
+  ],
+  "quality": {
+    "status": 200,
+    "latencyMs": 69.4047499999997,
+    "data": {
+      "storage": {
+        "snapshots": 44,
+        "dependencies": 36189,
+        "jobs": 3,
+        "documents": 0,
+        "admissions": 0
+      },
+      "consequences": {
+        "captured": 9,
+        "unchanged": 0,
+        "recalculations": 9,
+        "routeRecalculations": 0,
+        "errors": 0
+      },
+      "ask": {
+        "successfulToolCalls": 3,
+        "abstentions": 0,
+        "unsupportedAnswerBlocks": 0
+      },
+      "model": {
+        "state": "DISABLED",
+        "reason": "No installed model passed the bounded runtime smoke tests"
+      }
+    }
+  }
+}

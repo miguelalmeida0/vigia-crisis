@@ -1,0 +1,40 @@
+import { readJsonBody } from '../../http/body.mjs';
+import { json } from '../../http/responses.mjs';
+import { assertCan, assertIncidentScope } from '../../../../../packages/domain/src/authorization.mjs';
+import { RequestGate } from '../../shared/request-gate.mjs';
+
+const actor=(context)=>context.actor?.id??'unidentified-command-actor';
+const inScope=(context,incidentId)=>Array.isArray(context.actor?.incidentScopes)&&(context.actor.incidentScopes.includes('*')||context.actor.incidentScopes.includes(String(incidentId)));
+const authorized=(context,capability='read:incident_command',incidentId=null)=>{if(context.actor?.authentication?.authenticated!==true)throw Object.assign(new Error('forbidden'),{statusCode:403,details:{capability,role:context.actor?.role??'anonymous'}});assertCan(context.actor,capability);if(incidentId&&!inScope(context,incidentId))throw Object.assign(new Error('incident_scope_forbidden'),{statusCode:403,details:{incidentId,actorId:context.actor?.id}});return context;};
+const canImport=(context)=>{authorized(context);assertCan(context.actor,'import:incident_command');return context;};
+const mutationGate=new RequestGate({maxConcurrent:8,maxConcurrentPerClient:1,maxRequestsPerWindow:120,windowMs:60_000,maxClients:512});
+const mutate=(context,incidentId,work)=>{authorized(context,'command:incident',incidentId);return mutationGate.run(`${actor(context)}:${incidentId}`,work);};
+export function registerIncidentCommandRoutes(router,{incidentCommandService}){
+  const base='/api/v10/incident-command';
+  router.post(`${base}/imports/validate`,async({req,res,context})=>{const authorizedContext=canImport(context),preview=await incidentCommandService.previewImport(await readJsonBody(req,{limitBytes:1_000_000}),{includeValidated:true});if(preview.validated){assertIncidentScope(authorizedContext.actor,preview.validated.incidentId);for(const eventId of preview.validated.canonicalEventIds)assertIncidentScope(authorizedContext.actor,eventId);}const{validated,...publicPreview}=preview;json(res,200,publicPreview);});
+  router.post(`${base}/imports`,async({req,res,context})=>{
+    const authorizedContext=canImport(context),input=await readJsonBody(req,{limitBytes:1_200_000});
+    const result=await mutationGate.run(`${actor(authorizedContext)}:import`,()=>incidentCommandService.importIncident(input,actor(authorizedContext),authorizedContext.actor));
+    const recordedAt=result?.receipt?.receivedAt??null,importId=result?.receipt?.importId??null;
+    await incidentCommandService.projectionInvalidator?.({incidentId:result?.receipt?.incidentId??input?.incidentId,type:'INCIDENT_IMPORTED',eventId:result?.state?.lastEventId??null,duplicate:result?.receipt?.duplicate===true});
+    json(res,201,{...result,receipt:{...result.receipt,schemaVersion:'vigia.incident-command-import-receipt.v1',receiptId:importId,recordedAt}});
+  });
+  router.get(`${base}/incidents/:incidentId`,async({res,params,context})=>{authorized(context,'read:incident_command',params.incidentId);json(res,200,await incidentCommandService.get(params.incidentId));});
+  router.get(`${base}/incidents/:incidentId/events`,async({res,params,url,context})=>{authorized(context,'read:incident_command',params.incidentId);json(res,200,await incidentCommandService.events(params.incidentId,{afterCursor:url.searchParams.get('afterCursor')||null,limit:url.searchParams.get('limit')??100,maxBytes:url.searchParams.get('maxBytes')??undefined,from:url.searchParams.get('from')||null,to:url.searchParams.get('to')||null}));});
+  router.get(`${base}/incidents/:incidentId/projections/:role`,async({res,params,url,context})=>{authorized(context,'read:incident_command',params.incidentId);json(res,200,await incidentCommandService.projection(params.incidentId,params.role,url.searchParams.get('subjectId')));});
+  router.get(`${base}/incidents/:incidentId/fallback/:kind`,async({res,params,url,context})=>{authorized(context,'read:incident_command',params.incidentId);json(res,200,await incidentCommandService.fallback(params.incidentId,params.kind,url.searchParams.get('lastSyncAt')));});
+  router.post(`${base}/incidents/:incidentId/intents`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.proposeCommandIntent(params.incidentId,await readJsonBody(req),actor(context),context.actor))));
+  router.post(`${base}/incidents/:incidentId/planning-decisions`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.recordPlanningDecision(params.incidentId,await readJsonBody(req),actor(context),context.actor))));
+  router.post(`${base}/incidents/:incidentId/planning-decisions/:decisionId/apply`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.applyReviewedPlan(params.incidentId,{...await readJsonBody(req),decisionId:params.decisionId},actor(context),context.actor))));
+  router.post(`${base}/incidents/:incidentId/commands`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,await readJsonBody(req),actor(context)))));
+  router.post(`${base}/incidents/:incidentId/locations`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,{type:'LOCATION_REPORTED',payload:await readJsonBody(req)},actor(context)))));
+  router.post(`${base}/incidents/:incidentId/orders`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.createOrder(params.incidentId,await readJsonBody(req),actor(context)))));
+  router.post(`${base}/incidents/:incidentId/orders/:orderId/transitions`,async({req,res,params,context})=>json(res,200,await mutate(context,params.incidentId,async()=>incidentCommandService.transitionOrder(params.incidentId,params.orderId,await readJsonBody(req),actor(context)))));
+  router.post(`${base}/incidents/:incidentId/par`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,{type:'PAR_REQUESTED',payload:await readJsonBody(req)},actor(context)))));
+  router.post(`${base}/incidents/:incidentId/par/:parId/responses`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,{type:'PAR_RESPONDED',payload:{...await readJsonBody(req),parRequestId:params.parId}},actor(context)))));
+  router.post(`${base}/incidents/:incidentId/evacuations`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,{type:'EVACUATION_CREATED',payload:await readJsonBody(req)},actor(context)))));
+  router.post(`${base}/incidents/:incidentId/evacuations/:evacuationId/transitions`,async({req,res,params,context})=>json(res,200,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,{type:'EVACUATION_TRANSITIONED',payload:{...await readJsonBody(req),evacuationId:params.evacuationId}},actor(context)))));
+  router.post(`${base}/incidents/:incidentId/maydays`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.activateMayday(params.incidentId,await readJsonBody(req),actor(context)))));
+  router.post(`${base}/incidents/:incidentId/maydays/:maydayId/transitions`,async({req,res,params,context})=>json(res,200,await mutate(context,params.incidentId,async()=>incidentCommandService.transitionMayday(params.incidentId,params.maydayId,await readJsonBody(req),actor(context)))));
+  router.post(`${base}/incidents/:incidentId/critical-changes`,async({req,res,params,context})=>json(res,201,await mutate(context,params.incidentId,async()=>incidentCommandService.execute(params.incidentId,{type:'CRITICAL_CHANGE_RECORDED',payload:await readJsonBody(req)},actor(context)))));
+}

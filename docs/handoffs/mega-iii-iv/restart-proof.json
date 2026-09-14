@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-12T18:59:30.801Z",
+  "capturedBeforeRestart": "2026-09-12T18:45:14.130Z",
+  "releaseId": "vigia-intelligence-fabric-d9d1bb8338a37028",
+  "codeStateHash": "sha256:040298209f120dc880770bbfb7bf2ef45d313ded13a85c40043dff395b444028",
+  "modelInferenceCalls": 0,
+  "operationalWrites": 0,
+  "rows": [
+    {
+      "incidentId": "incident:PT-2026-01F7E2E21A",
+      "expectedSnapshotId": "situation:e69d7e0d1c4fb2ce15f1ec90e02e182b24528d7878e1922d17d2c91fc07cb6a1",
+      "actualSnapshotId": "situation:e69d7e0d1c4fb2ce15f1ec90e02e182b24528d7878e1922d17d2c91fc07cb6a1",
+      "knownAt": "2026-09-12T18:43:28.529Z",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "incidentId": "incident:PT-2026-03CFDC147C",
+      "expectedSnapshotId": "situation:bbcbdf9f1a6a6ebc7cdb5dc3b87ca3591e85767bc405121e625ad7a8405d63f1",
+      "actualSnapshotId": "situation:bbcbdf9f1a6a6ebc7cdb5dc3b87ca3591e85767bc405121e625ad7a8405d63f1",
+      "knownAt": "2026-09-12T18:27:01.647Z",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "incidentId": "incident:PT-2026-08D08E2A0D",
+      "expectedSnapshotId": "situation:0e9f31678725eed46a44b1196a852c0c7c0d473dc665f12e504959203e81b0f9",
+      "actualSnapshotId": "situation:0e9f31678725eed46a44b1196a852c0c7c0d473dc665f12e504959203e81b0f9",
+      "knownAt": "2026-09-12T18:25:45.641Z",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

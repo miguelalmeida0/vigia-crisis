@@ -1,0 +1,28 @@
+import path from 'node:path';
+import { readdir, readFile } from 'node:fs/promises';
+import { buildForecastExamples, auditCorpusLeakage, buildIncidentCrosswalk, createCorpusReplayRecord } from '../../../../../packages/domain/src/forecast-corpus/index.mjs';
+import { readJson, writeJsonAtomic } from '../../shared/json-file.mjs';
+import { CORPUS_SOURCES } from './source-portfolio.mjs';
+import { loadMergedSilverIncidents } from './silver-loader.mjs';
+
+const percentile = (values, ratio) => [...values].sort((a, b) => a - b)[Math.min(values.length - 1, Math.floor(values.length * ratio))];
+async function measure(operation, iterations = 5) { const values = []; let result; for (let index = 0; index < iterations; index += 1) { globalThis.gc?.(); const started = performance.now(); result = await operation(); values.push(performance.now() - started); } return { p50Ms: Number(percentile(values, .5).toFixed(3)), p95Ms: Number(percentile(values, .95).toFixed(3)), result }; }
+export async function benchmarkCorpus({ paths } = {}) {
+  const stages=[],stage=async(id,operation)=>{const cpu=process.cpuUsage(),started=performance.now(),rssBefore=process.memoryUsage().rss,result=await operation(),elapsedMs=performance.now()-started,usage=process.cpuUsage(cpu),rssAfter=process.memoryUsage().rss;stages.push({id,elapsedMs:Number(elapsedMs.toFixed(3)),cpuUserMs:Number((usage.user/1000).toFixed(3)),cpuSystemMs:Number((usage.system/1000).toFixed(3)),rssBeforeBytes:rssBefore,rssAfterBytes:rssAfter});return result;};
+  const loaded=await stage('LOAD_PARTITIONED_SILVER',()=>loadMergedSilverIncidents(paths.silver,{maximumRssBytes:512*1024*1024})),files=loaded.files,incidents=loaded.incidents,state=await stage('LOAD_ACQUISITION_STATE',()=>readJson(paths.acquisitionState,{products:{}})),products=Object.values(state.products),hashes=products.map((item)=>item.checksumSha256),providerState=await readJson(paths.providerState,{retrievals:[]});
+  const timings = {};
+  timings.providerDiscovery = await measure(() => CORPUS_SOURCES.map((item) => item.id));
+  timings.archiveListing = await measure(() => readdir(paths.bronze));
+  timings.rawVaultDeduplication = await measure(() => new Set(hashes).size);
+  timings.perimeterParsing = await measure(() => incidents.flatMap((item) => item.perimeterStates));
+  timings.weatherExtraction = await measure(() => incidents.flatMap((item) => item.weatherRuns).flatMap((run) => run.fields));
+  timings.fuelTerrainExtraction = await measure(() => incidents.flatMap((item) => [item.fuelPack, item.terrainPack].filter(Boolean).flatMap((pack) => pack.layers)));
+  timings.incidentCrosswalk = await measure(() => buildIncidentCrosswalk(incidents.map((item) => ({ recordId: item.id, providerId: 'WFIGS', discoveryTime: item.discoveryTime, coordinate: null, identifiers: item.identifiers }))));
+  timings.forecastExampleGeneration = await measure(() => buildForecastExamples({ incidents }));
+  const built = timings.forecastExampleGeneration.result;
+  timings.leakageAudit = await measure(() => auditCorpusLeakage(built.examples));
+  timings.fullCorpusReplay = await measure(() => createCorpusReplayRecord({ rawObjectHashes: hashes, parserVersions: products.map((item) => item.parserVersion).filter(Boolean), canonicalSchemaVersions: ['silver-v1'], associationDoctrine: 'strict', knowledgeTimePolicy: 'available', exampleBuilderVersion: 'v1', splitVersion: 'v1', incidentCrosswalkHash: timings.incidentCrosswalk.result.fingerprint, eligibleExampleIds: built.examples.map((item) => item.id), rejectedExampleIds: built.rejections.map((item) => item.id), negativeControlIds: [], leakageAuditHash: timings.leakageAudit.result.fingerprint }));
+  const sanitized = Object.fromEntries(Object.entries(timings).map(([key, value]) => [key, { p50Ms: value.p50Ms, p95Ms: value.p95Ms }])), uniqueStoredBytes = products.reduce((sum, item) => sum + Number(item.byteLength ?? 0), 0), retrievals = Object.values(providerState.retrievals ?? {}), downloadedBytes = retrievals.reduce((sum, item) => sum + Number(item.contentLength ?? 0), 0), runFiles = (await readdir(paths.runs).catch(() => [])).filter((item) => item.endsWith('.json')), runs = await Promise.all(runFiles.map(async (file) => JSON.parse(await readFile(path.join(paths.runs, file), 'utf8')))), rates = runs.filter((run) => run.state === 'COMPLETED' && Date.parse(run.updatedAt) > Date.parse(run.createdAt)).map((run) => Number(run.metrics?.downloadedBytes ?? 0) / ((Date.parse(run.updatedAt) - Date.parse(run.createdAt)) / 1000));
+  const report = { schemaVersion: 'vigia.forecast-corpus-benchmark.v2', boundedPartitionLoading:true, partitionFiles:files.length, stageMetrics:stages, timings: sanitized, downloadThroughputBytesPerSecond: { p50: rates.length ? Number(percentile(rates, .5).toFixed(3)) : 0, p95: rates.length ? Number(percentile(rates, .95).toFixed(3)) : 0 }, peakRssBytes: Math.max(process.memoryUsage().rss,...stages.flatMap((item)=>[item.rssBeforeBytes,item.rssAfterBytes])), downloadedBytes, uniqueStoredBytes, duplicateSavingsBytes: Math.max(0, downloadedBytes - uniqueStoredBytes), objectCounts: { raw: products.length, silverIncidentRecords: loaded.partitionStats.reduce((sum,item)=>sum+item.incidents,0), uniqueSilverIncidents: incidents.length, perimeterStateRecords: incidents.flatMap((item) => item.perimeterStates).length, eligibleExamples: built.examples.length }, eligibleExamplesPerSecond: sanitized.forecastExampleGeneration.p50Ms ? Number((built.examples.length / (sanitized.forecastExampleGeneration.p50Ms / 1000)).toFixed(3)) : 0, replayTimeMs: sanitized.fullCorpusReplay.p50Ms };
+  await writeJsonAtomic(path.join(paths.benchmarks, 'corpus-benchmark.json'), report); return report;
+}

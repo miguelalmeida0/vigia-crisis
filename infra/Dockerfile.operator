@@ -1,0 +1,34 @@
+FROM node:22-bookworm-slim@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436 AS build
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3 \
+    && rm -rf /var/lib/apt/lists/*
+WORKDIR /opt/vigia
+COPY apps/operator-console ./apps/operator-console
+COPY apps/api/src/modules/basemap ./apps/api/src/modules/basemap
+COPY apps/api/src/shared/fetch.mjs apps/api/src/shared/ttl-cache.mjs apps/api/src/shared/request-gate.mjs apps/api/src/shared/pinned-https-fetch.mjs ./apps/api/src/shared/
+COPY scripts/release/build_release_manifest.mjs scripts/release/release_statement.mjs scripts/release/safe_artifact.mjs scripts/release/verify_deployment_source.mjs ./scripts/release/
+COPY packages/domain/src/release-contract.mjs ./packages/domain/src/release-contract.mjs
+COPY packages/domain/src/operator-proxy/request-auth.mjs ./packages/domain/src/operator-proxy/request-auth.mjs
+COPY apps/api/src/modules/storage/postgres-migration-runner.mjs ./apps/api/src/modules/storage/postgres-migration-runner.mjs
+COPY apps/api/src/modules/storage/migrations ./apps/api/src/modules/storage/migrations
+COPY data/replay/raw/openstreetmap/portugal-thermal-context-v1/portugal-boundary.json ./data/replay/raw/openstreetmap/portugal-thermal-context-v1/portugal-boundary.json
+COPY data/validation/release/current-release-manifest.json ./data/validation/release/current-release-manifest.json
+COPY data/validation/release/release-source-manifest.json ./data/validation/release/release-source-manifest.json
+COPY data/validation/release/release-statement.json ./data/validation/release/release-statement.json
+ARG VIGIA_APPROVED_RELEASE_STATEMENT_SHA256
+RUN test -n "$VIGIA_APPROVED_RELEASE_STATEMENT_SHA256" && node scripts/release/verify_deployment_source.mjs --profile operator
+RUN node apps/operator-console/scripts/build.mjs
+
+FROM node:22-bookworm-slim@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436
+WORKDIR /opt/vigia
+ENV NODE_ENV=production VIGIA_OPERATOR_STATIC_ROOT=dist HOST=0.0.0.0 PORT=4190
+COPY --from=build --chown=node:node /opt/vigia/apps/operator-console ./apps/operator-console
+COPY --from=build --chown=node:node /opt/vigia/apps/api/src/modules/basemap ./apps/api/src/modules/basemap
+COPY --from=build --chown=node:node /opt/vigia/apps/api/src/shared ./apps/api/src/shared
+RUN mkdir -p /opt/vigia/.tmp/basemap-cache && chown -R node:node /opt/vigia/.tmp
+COPY --from=build --chown=node:node /opt/vigia/packages/domain/src/operator-proxy ./packages/domain/src/operator-proxy
+COPY --from=build --chown=node:node /opt/vigia/data/replay/raw/openstreetmap/portugal-thermal-context-v1/portugal-boundary.json ./data/replay/raw/openstreetmap/portugal-thermal-context-v1/portugal-boundary.json
+USER node
+EXPOSE 4190
+WORKDIR /opt/vigia/apps/operator-console
+CMD ["node","server.mjs"]

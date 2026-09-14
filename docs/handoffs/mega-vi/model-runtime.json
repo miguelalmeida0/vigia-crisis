@@ -1,0 +1,192 @@
+{
+  "lane": "ACTUAL_LOCAL_RUNTIME_OUTSIDE_VIGIA",
+  "startedAt": "2026-09-13T08:57:12Z",
+  "diagnostics": {
+    "version": {
+      "exitCode": 0,
+      "stdout": "Warning: could not connect to a running Ollama instance\nWarning: client version is 0.30.7\n",
+      "stderr": ""
+    },
+    "architecture": {
+      "exitCode": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    "memory": {
+      "exitCode": 0,
+      "stdout": "The system has 17179869184 (1048576 pages with a page size of 16384).\n\nStats: \nPages free: 4820 \nPages purgeable: 2 \nPages purged: 4634902 \n\nSwap I/O:\nSwapins: 820356 \nSwapouts: 1327811 \n\nPage Q counts:\nPages active: 196564 \nPages inactive: 186320 \nPages speculative: 9298 \nPages throttled: 0 \nPages wired down: 199737 \n\nCompressor Stats:\nPages used by compressor: 412532 \nPages decompressed: 104096422 \nPages compressed: 115445415 \n\nFile I/O:\nPageins: 7803232 \nPageouts: 73530 \n\nSystem-wide memory free percentage: 39%\n",
+      "stderr": ""
+    },
+    "hardwareMemory": {
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n"
+    },
+    "processOwnership": {
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    "processList": {
+      "error": "[Errno 1] Operation not permitted: 'ps'"
+    },
+    "11434/version": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "11434/ps": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "11434/tags": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "11435/version": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "11435/ps": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "11435/tags": {
+      "error": "<urlopen error [Errno 61] Connection refused>"
+    },
+    "environment": {
+      "OLLAMA_HOST": null,
+      "OLLAMA_MODELS": null,
+      "OLLAMA_LLM_LIBRARY": null,
+      "OLLAMA_CONTEXT_LENGTH": null,
+      "OLLAMA_NUM_PARALLEL": null
+    },
+    "mlxNative": {
+      "exitCode": 1,
+      "stdout": "mlx_lm_installed False\n",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n    import importlib.util; print(\"mlx_lm_installed\",importlib.util.find_spec(\"mlx_lm\") is not None); import mlx.core as mx; mx.eval(mx.ones((4,))); print(\"MLX_ALLOCATION_OK\")\n                                                                                                                                    ~~~~~~~^^^^^^\nRuntimeError: [metal::load_device] No Metal device available. This typically occurs in headless, sandboxed, or virtualized macOS sessions where the GPU is not accessible.\nException ignored in atexit callback <nanobind.nb_func object at 0x107947890>:\nRuntimeError: [metal::load_device] No Metal device available. This typically occurs in headless, sandboxed, or virtualized macOS sessions where the GPU is not accessible.\n"
+    }
+  },
+  "attempts": [
+    {
+      "model": "qwen3:0.6b",
+      "runtime": "clean-ollama",
+      "requiredConsecutive": 20,
+      "attempts": [
+        {
+          "success": false,
+          "error": "{\"error\":\"llama-server reported out-of-memory during startup: error: failed to create command queue\\nerror: failed to allocate context\\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\\nerror: failed to allocate buffer, size =     0.02 MiB\"}",
+          "latencyMs": 848
+        }
+      ],
+      "passed": false
+    },
+    {
+      "model": "llama3.2:3b",
+      "runtime": "native-cpu",
+      "requiredConsecutive": 20,
+      "attempts": [
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 2287
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 709
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 399
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 340
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 709
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 477
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 340
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 498
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 699
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 789
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 718
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 580
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 1198
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 510
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 376
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 537
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 385
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 614
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 356
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 701
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "selectedModel": null,
+  "corpusState": "REJECTED_FOR_OPERATIONAL_USE",
+  "mandatoryMonthlyCostEUR": 0,
+  "completedAt": "2026-09-13T09:05:53Z",
+  "corpusReport": "model-evaluation.json"
+}

@@ -1,0 +1,1952 @@
+{
+  "schemaVersion": "vigia.crisis-decision-packet.v1",
+  "compilerVersion": "1.0.0",
+  "incident": {
+    "id": "2025-AZGCP-000597",
+    "region": "western-us",
+    "season": "2025",
+    "discoveryTime": "2025-07-04T19:27:55.000Z",
+    "perimeterSourceClass": "ARCHIVED_OPERATIONAL_SNAPSHOT"
+  },
+  "knowledgeTime": "2025-07-31T10:37:57.000Z",
+  "currentSituation": {
+    "state": "HISTORICAL_OPERATIONAL_SNAPSHOT",
+    "sourceClassification": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+    "perimeterRevisionCount": 40,
+    "physicalObservationCount": 9,
+    "causalFamilies": [
+      "VIIRS"
+    ]
+  },
+  "hypotheses": {
+    "schemaVersion": "vigia.multi-hypothesis-graph.v1",
+    "incidentId": "2025-AZGCP-000597",
+    "knowledgeTime": "2025-07-31T10:37:57.000Z",
+    "results": [
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:ACTIVE_WILDFIRE",
+        "type": "ACTIVE_WILDFIRE",
+        "definitionFingerprint": "hypothesis-definition:sha256:b5686ae6f5f8fa5144f817269281a69dca97ee4d2d6075d3efaee10bf3ecf56b",
+        "applicable": true,
+        "state": "STRONGLY_SUPPORTED",
+        "supportingEvidenceIds": [
+          "firms-archive-observation:sha256:2809549ba550bac0eea923b8d8d836d89bf04f30a946045f141f9eb823be45db",
+          "firms-archive-observation:sha256:813f6827db8b7b50bdd916a3c923940454499a3988f294679bb695a27da0f19a",
+          "firms-archive-observation:sha256:8c2fcf2b4a444a822949850d9880935e700ca06dedad4278ba28a680590d8fca",
+          "firms-archive-observation:sha256:96360074bed6334ab303c11940b7a76684b15b84f2c9409127d0b2162f9517ff",
+          "firms-archive-observation:sha256:ac9a45fe1a172b0c7dd323622558093eb5bfcfb1e7bf303bc2527ce93afdffa7",
+          "firms-archive-observation:sha256:df0d494d509c84e3f98c44b9ab2f24ebf5c318cee81556aff4d50cc19e559aa8",
+          "firms-archive-observation:sha256:e3ed2289112b3598e5e0e0bbec1eb3084bacc762d6853e92beb34749bc225143",
+          "firms-archive-observation:sha256:f8536fac58449f6675f4096e7ee9462464131380215f6617e7d2c6e7748beeb3",
+          "firms-archive-observation:sha256:fd4759e5891e36c66ed57ac7299c937a9339c86e84cd23648464e8e223fbf57a",
+          "incident:2025-AZGCP-000597",
+          "progression:2025-AZGCP-000597"
+        ],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [],
+        "unresolvedDiscriminators": [
+          "INDEPENDENT_PHYSICAL_FAMILY",
+          "OFFICIAL_INCIDENT_CLASSIFICATION"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+            "eligibleSourceClasses": [
+              "OFFICIAL",
+              "PHYSICAL"
+            ]
+          },
+          {
+            "requirement": "OFFICIAL_INCIDENT_CLASSIFICATION",
+            "eligibleSourceClasses": [
+              "OFFICIAL",
+              "PHYSICAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "EVALUATE_WILDFIRE_RESPONSE"
+        ],
+        "independentSupportingFamilies": 2,
+        "fingerprint": "hypothesis-result:sha256:22197996d0e359517bd4c8cb120564e0ca4dc0cb7fdc43d812e5d3a03d7b0a15"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:AGRICULTURAL_BURN",
+        "type": "AGRICULTURAL_BURN",
+        "definitionFingerprint": "hypothesis-definition:sha256:6dd6a57a78856e7dc08f25954df49dec279a32415e61969883d0b44857e583f6",
+        "applicable": true,
+        "state": "EXCLUDED",
+        "supportingEvidenceIds": [
+          "firms-archive-observation:sha256:2809549ba550bac0eea923b8d8d836d89bf04f30a946045f141f9eb823be45db",
+          "firms-archive-observation:sha256:813f6827db8b7b50bdd916a3c923940454499a3988f294679bb695a27da0f19a",
+          "firms-archive-observation:sha256:8c2fcf2b4a444a822949850d9880935e700ca06dedad4278ba28a680590d8fca",
+          "firms-archive-observation:sha256:96360074bed6334ab303c11940b7a76684b15b84f2c9409127d0b2162f9517ff",
+          "firms-archive-observation:sha256:ac9a45fe1a172b0c7dd323622558093eb5bfcfb1e7bf303bc2527ce93afdffa7",
+          "firms-archive-observation:sha256:df0d494d509c84e3f98c44b9ab2f24ebf5c318cee81556aff4d50cc19e559aa8",
+          "firms-archive-observation:sha256:e3ed2289112b3598e5e0e0bbec1eb3084bacc762d6853e92beb34749bc225143",
+          "firms-archive-observation:sha256:f8536fac58449f6675f4096e7ee9462464131380215f6617e7d2c6e7748beeb3",
+          "firms-archive-observation:sha256:fd4759e5891e36c66ed57ac7299c937a9339c86e84cd23648464e8e223fbf57a"
+        ],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [
+          "incident:2025-AZGCP-000597"
+        ],
+        "unresolvedDiscriminators": [
+          "AGRICULTURAL_BURN_AUTHORIZATION"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "AGRICULTURAL_BURN_AUTHORIZATION",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "OFFICIAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "SUPPRESS_NO_FIRE_LABEL"
+        ],
+        "independentSupportingFamilies": 1,
+        "fingerprint": "hypothesis-result:sha256:66861022b6bc873c81db639ca12705333f96f601535c252b10dd8e73e32dd811"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:DUPLICATE_OR_REPUBLISHED_OBSERVATION",
+        "type": "DUPLICATE_OR_REPUBLISHED_OBSERVATION",
+        "definitionFingerprint": "hypothesis-definition:sha256:2b73a747c8f8cceb3e1293e82e2341f8daeddd2175cdc445bd418c629c022171",
+        "applicable": true,
+        "state": "UNRESOLVED",
+        "supportingEvidenceIds": [],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [],
+        "unresolvedDiscriminators": [
+          "ROOT_MEASUREMENT_IDENTITY"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "ROOT_MEASUREMENT_IDENTITY",
+            "eligibleSourceClasses": [
+              "LINEAGE"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "REMOVE_DUPLICATE_WITNESS"
+        ],
+        "independentSupportingFamilies": 0,
+        "fingerprint": "hypothesis-result:sha256:35668f683a731ab7cc022f64db5c22877dd6fb6ac022e22085d1cbc005790061"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:GAS_FLARE",
+        "type": "GAS_FLARE",
+        "definitionFingerprint": "hypothesis-definition:sha256:e6543f60a95158c7b172f985474a4ea7b75fc68b2274ce6b5c49c6d59d3831f1",
+        "applicable": true,
+        "state": "CONTRADICTED",
+        "supportingEvidenceIds": [],
+        "contradictingEvidenceIds": [
+          "incident:2025-AZGCP-000597"
+        ],
+        "excludingEvidenceIds": [],
+        "unresolvedDiscriminators": [
+          "AUTHORITATIVE_FLARE_INVENTORY"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "AUTHORITATIVE_FLARE_INVENTORY",
+            "eligibleSourceClasses": [
+              "CONTEXT"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "REQUIRE_HARD_NEGATIVE_REVIEW"
+        ],
+        "independentSupportingFamilies": 0,
+        "fingerprint": "hypothesis-result:sha256:53a54efd2daff0b2175ac03e6e0a6fff74aeee9246de8156d1baffc1d729c20c"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:INDUSTRIAL_THERMAL_SOURCE",
+        "type": "INDUSTRIAL_THERMAL_SOURCE",
+        "definitionFingerprint": "hypothesis-definition:sha256:80d9d56dd573d64bda2947212efdafd19629a9b574839cb34747da0fe88cc617",
+        "applicable": true,
+        "state": "EXCLUDED",
+        "supportingEvidenceIds": [],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [
+          "incident:2025-AZGCP-000597",
+          "moving:2025-AZGCP-000597"
+        ],
+        "unresolvedDiscriminators": [
+          "NAMED_INDUSTRIAL_FACILITY",
+          "PERSISTENT_ANOMALY_HISTORY"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "NAMED_INDUSTRIAL_FACILITY",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "PHYSICAL"
+            ]
+          },
+          {
+            "requirement": "PERSISTENT_ANOMALY_HISTORY",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "PHYSICAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "REQUIRE_HARD_NEGATIVE_REVIEW"
+        ],
+        "independentSupportingFamilies": 0,
+        "fingerprint": "hypothesis-result:sha256:00875523a0ced0988f4489e9b7b7565e1d6b7466603300ad12070b1e091a8a88"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:PRESCRIBED_OR_MANAGED_FIRE",
+        "type": "PRESCRIBED_OR_MANAGED_FIRE",
+        "definitionFingerprint": "hypothesis-definition:sha256:c3d4749e812893723c77a1c420cf8ba695872e46c517aba30e463ca39434edd8",
+        "applicable": true,
+        "state": "EXCLUDED",
+        "supportingEvidenceIds": [
+          "firms-archive-observation:sha256:2809549ba550bac0eea923b8d8d836d89bf04f30a946045f141f9eb823be45db",
+          "firms-archive-observation:sha256:813f6827db8b7b50bdd916a3c923940454499a3988f294679bb695a27da0f19a",
+          "firms-archive-observation:sha256:8c2fcf2b4a444a822949850d9880935e700ca06dedad4278ba28a680590d8fca",
+          "firms-archive-observation:sha256:96360074bed6334ab303c11940b7a76684b15b84f2c9409127d0b2162f9517ff",
+          "firms-archive-observation:sha256:ac9a45fe1a172b0c7dd323622558093eb5bfcfb1e7bf303bc2527ce93afdffa7",
+          "firms-archive-observation:sha256:df0d494d509c84e3f98c44b9ab2f24ebf5c318cee81556aff4d50cc19e559aa8",
+          "firms-archive-observation:sha256:e3ed2289112b3598e5e0e0bbec1eb3084bacc762d6853e92beb34749bc225143",
+          "firms-archive-observation:sha256:f8536fac58449f6675f4096e7ee9462464131380215f6617e7d2c6e7748beeb3",
+          "firms-archive-observation:sha256:fd4759e5891e36c66ed57ac7299c937a9339c86e84cd23648464e8e223fbf57a"
+        ],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [
+          "incident:2025-AZGCP-000597"
+        ],
+        "unresolvedDiscriminators": [
+          "OFFICIAL_BURN_AUTHORIZATION"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "OFFICIAL_BURN_AUTHORIZATION",
+            "eligibleSourceClasses": [
+              "OFFICIAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "SUPPRESS_NO_FIRE_LABEL"
+        ],
+        "independentSupportingFamilies": 1,
+        "fingerprint": "hypothesis-result:sha256:6abdf573f55127645768083c086ef4ffd14b45caf61c8074d6f24808006552e2"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:REPORT_WITHOUT_PHYSICAL_SUPPORT",
+        "type": "REPORT_WITHOUT_PHYSICAL_SUPPORT",
+        "definitionFingerprint": "hypothesis-definition:sha256:e4d2a33ec3f26b5b905d422c4399397c7ac0da80d5641e791e0ee82381a97114",
+        "applicable": true,
+        "state": "EXCLUDED",
+        "supportingEvidenceIds": [
+          "report:2025-AZGCP-000597"
+        ],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [
+          "firms-archive-observation:sha256:2809549ba550bac0eea923b8d8d836d89bf04f30a946045f141f9eb823be45db",
+          "firms-archive-observation:sha256:813f6827db8b7b50bdd916a3c923940454499a3988f294679bb695a27da0f19a",
+          "firms-archive-observation:sha256:8c2fcf2b4a444a822949850d9880935e700ca06dedad4278ba28a680590d8fca",
+          "firms-archive-observation:sha256:96360074bed6334ab303c11940b7a76684b15b84f2c9409127d0b2162f9517ff",
+          "firms-archive-observation:sha256:ac9a45fe1a172b0c7dd323622558093eb5bfcfb1e7bf303bc2527ce93afdffa7",
+          "firms-archive-observation:sha256:df0d494d509c84e3f98c44b9ab2f24ebf5c318cee81556aff4d50cc19e559aa8",
+          "firms-archive-observation:sha256:e3ed2289112b3598e5e0e0bbec1eb3084bacc762d6853e92beb34749bc225143",
+          "firms-archive-observation:sha256:f8536fac58449f6675f4096e7ee9462464131380215f6617e7d2c6e7748beeb3",
+          "firms-archive-observation:sha256:fd4759e5891e36c66ed57ac7299c937a9339c86e84cd23648464e8e223fbf57a"
+        ],
+        "unresolvedDiscriminators": [
+          "PHYSICAL_OBSERVATION_OPPORTUNITY"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "PHYSICAL_OBSERVATION_OPPORTUNITY",
+            "eligibleSourceClasses": [
+              "PHYSICAL",
+              "REPORT"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "OPEN_PHYSICAL_EVIDENCE_WORK"
+        ],
+        "independentSupportingFamilies": 1,
+        "fingerprint": "hypothesis-result:sha256:d2f30fa06f0bc6a61db19e383d73793e72f130df361a220d342aa2044c571788"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:SENSOR_OR_ALGORITHM_ARTEFACT",
+        "type": "SENSOR_OR_ALGORITHM_ARTEFACT",
+        "definitionFingerprint": "hypothesis-definition:sha256:2ac9f1184b7c10403c522dc0f215c695251ac84b31ed80619fd842cb16c48ae8",
+        "applicable": true,
+        "state": "EXCLUDED",
+        "supportingEvidenceIds": [],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [
+          "incident:2025-AZGCP-000597"
+        ],
+        "unresolvedDiscriminators": [
+          "INDEPENDENT_PHYSICAL_FAMILY"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+            "eligibleSourceClasses": [
+              "PHYSICAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "QUARANTINE_OBSERVATION"
+        ],
+        "independentSupportingFamilies": 0,
+        "fingerprint": "hypothesis-result:sha256:aa773665da449d08ea872a1317140a2416b4e35a92ce05cfbe4072f0384d7ec6"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:UNKNOWN_THERMAL_EVENT",
+        "type": "UNKNOWN_THERMAL_EVENT",
+        "definitionFingerprint": "hypothesis-definition:sha256:2bf43049a30d89e85bbc7c464137e8453bf5b853868274a1342b21a3d820cdec",
+        "applicable": true,
+        "state": "EXCLUDED",
+        "supportingEvidenceIds": [
+          "firms-archive-observation:sha256:2809549ba550bac0eea923b8d8d836d89bf04f30a946045f141f9eb823be45db",
+          "firms-archive-observation:sha256:813f6827db8b7b50bdd916a3c923940454499a3988f294679bb695a27da0f19a",
+          "firms-archive-observation:sha256:8c2fcf2b4a444a822949850d9880935e700ca06dedad4278ba28a680590d8fca",
+          "firms-archive-observation:sha256:96360074bed6334ab303c11940b7a76684b15b84f2c9409127d0b2162f9517ff",
+          "firms-archive-observation:sha256:ac9a45fe1a172b0c7dd323622558093eb5bfcfb1e7bf303bc2527ce93afdffa7",
+          "firms-archive-observation:sha256:df0d494d509c84e3f98c44b9ab2f24ebf5c318cee81556aff4d50cc19e559aa8",
+          "firms-archive-observation:sha256:e3ed2289112b3598e5e0e0bbec1eb3084bacc762d6853e92beb34749bc225143",
+          "firms-archive-observation:sha256:f8536fac58449f6675f4096e7ee9462464131380215f6617e7d2c6e7748beeb3",
+          "firms-archive-observation:sha256:fd4759e5891e36c66ed57ac7299c937a9339c86e84cd23648464e8e223fbf57a",
+          "report:2025-AZGCP-000597"
+        ],
+        "contradictingEvidenceIds": [],
+        "excludingEvidenceIds": [
+          "incident:2025-AZGCP-000597"
+        ],
+        "unresolvedDiscriminators": [
+          "INDEPENDENT_PHYSICAL_FAMILY",
+          "OFFICIAL_INCIDENT_CLASSIFICATION",
+          "PERSISTENT_ANOMALY_HISTORY"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "OFFICIAL",
+              "PHYSICAL"
+            ]
+          },
+          {
+            "requirement": "OFFICIAL_INCIDENT_CLASSIFICATION",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "OFFICIAL",
+              "PHYSICAL"
+            ]
+          },
+          {
+            "requirement": "PERSISTENT_ANOMALY_HISTORY",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "OFFICIAL",
+              "PHYSICAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "RETAIN_UNRESOLVED"
+        ],
+        "independentSupportingFamilies": 2,
+        "fingerprint": "hypothesis-result:sha256:dbea0af5b8e603f3c7f8216f0c18f08d52547e4371251b6406884317229b112a"
+      },
+      {
+        "schemaVersion": "vigia.hypothesis-result.v1",
+        "hypothesisId": "WILDFIRE:VOLCANIC_THERMAL_ACTIVITY",
+        "type": "VOLCANIC_THERMAL_ACTIVITY",
+        "definitionFingerprint": "hypothesis-definition:sha256:3495be605ddd9ea6b0aba8e66da5efaa3d35b92399d0af289d0b3b55397ec996",
+        "applicable": true,
+        "state": "CONTRADICTED",
+        "supportingEvidenceIds": [
+          "firms-archive-observation:sha256:2809549ba550bac0eea923b8d8d836d89bf04f30a946045f141f9eb823be45db",
+          "firms-archive-observation:sha256:813f6827db8b7b50bdd916a3c923940454499a3988f294679bb695a27da0f19a",
+          "firms-archive-observation:sha256:8c2fcf2b4a444a822949850d9880935e700ca06dedad4278ba28a680590d8fca",
+          "firms-archive-observation:sha256:96360074bed6334ab303c11940b7a76684b15b84f2c9409127d0b2162f9517ff",
+          "firms-archive-observation:sha256:ac9a45fe1a172b0c7dd323622558093eb5bfcfb1e7bf303bc2527ce93afdffa7",
+          "firms-archive-observation:sha256:df0d494d509c84e3f98c44b9ab2f24ebf5c318cee81556aff4d50cc19e559aa8",
+          "firms-archive-observation:sha256:e3ed2289112b3598e5e0e0bbec1eb3084bacc762d6853e92beb34749bc225143",
+          "firms-archive-observation:sha256:f8536fac58449f6675f4096e7ee9462464131380215f6617e7d2c6e7748beeb3",
+          "firms-archive-observation:sha256:fd4759e5891e36c66ed57ac7299c937a9339c86e84cd23648464e8e223fbf57a"
+        ],
+        "contradictingEvidenceIds": [
+          "incident:2025-AZGCP-000597"
+        ],
+        "excludingEvidenceIds": [],
+        "unresolvedDiscriminators": [
+          "VOLCANO_OBSERVATORY_STATUS"
+        ],
+        "dataOpportunities": [
+          {
+            "requirement": "VOLCANO_OBSERVATORY_STATUS",
+            "eligibleSourceClasses": [
+              "CONTEXT",
+              "OFFICIAL"
+            ]
+          }
+        ],
+        "policyConsequences": [
+          "ROUTE_VOLCANO_WORKFLOW"
+        ],
+        "independentSupportingFamilies": 1,
+        "fingerprint": "hypothesis-result:sha256:28cd0bb2d23b6c31a4d13e7385ace956eef35c296eca35393c397b6e0a6b330f"
+      }
+    ],
+    "excludedEvidence": [],
+    "fingerprint": "multi-hypothesis-graph:sha256:f472cb97e224f47c41dd852e94b865628d825c879c86d3d76d876501992a02d3"
+  },
+  "discriminators": [
+    {
+      "requirement": "AUTHORITATIVE_FLARE_INVENTORY",
+      "hypothesesSeparated": [
+        "WILDFIRE:GAS_FLARE"
+      ],
+      "eligibleSourceClasses": [
+        "CONTEXT"
+      ],
+      "currentAvailability": "MISSING",
+      "decisionConsequence": "RECOMPILE_DEPENDENT_DECISIONS"
+    },
+    {
+      "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+      "hypothesesSeparated": [
+        "WILDFIRE:ACTIVE_WILDFIRE"
+      ],
+      "eligibleSourceClasses": [
+        "OFFICIAL",
+        "PHYSICAL"
+      ],
+      "currentAvailability": "MISSING",
+      "decisionConsequence": "RECOMPILE_DEPENDENT_DECISIONS"
+    },
+    {
+      "requirement": "OFFICIAL_INCIDENT_CLASSIFICATION",
+      "hypothesesSeparated": [
+        "WILDFIRE:ACTIVE_WILDFIRE"
+      ],
+      "eligibleSourceClasses": [
+        "OFFICIAL",
+        "PHYSICAL"
+      ],
+      "currentAvailability": "MISSING",
+      "decisionConsequence": "RECOMPILE_DEPENDENT_DECISIONS"
+    },
+    {
+      "requirement": "ROOT_MEASUREMENT_IDENTITY",
+      "hypothesesSeparated": [
+        "WILDFIRE:DUPLICATE_OR_REPUBLISHED_OBSERVATION"
+      ],
+      "eligibleSourceClasses": [
+        "LINEAGE"
+      ],
+      "currentAvailability": "MISSING",
+      "decisionConsequence": "RECOMPILE_DEPENDENT_DECISIONS"
+    },
+    {
+      "requirement": "VOLCANO_OBSERVATORY_STATUS",
+      "hypothesesSeparated": [
+        "WILDFIRE:VOLCANIC_THERMAL_ACTIVITY"
+      ],
+      "eligibleSourceClasses": [
+        "CONTEXT",
+        "OFFICIAL"
+      ],
+      "currentAvailability": "MISSING",
+      "decisionConsequence": "RECOMPILE_DEPENDENT_DECISIONS"
+    }
+  ],
+  "decisions": {
+    "schemaVersion": "vigia.decision-dependency-graph.v1",
+    "results": [
+      {
+        "schemaVersion": "vigia.decision-dependency-result.v1",
+        "decisionId": "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+        "definitionFingerprint": "decision-definition:sha256:c7e4c6c9c6267e67b27d75b5e91d61496897c2c254cca872d971dec951544265",
+        "policyReference": {
+          "id": "FORECAST_INPUT_COMPLETENESS",
+          "version": "1.0.0"
+        },
+        "state": "BLOCKED_BY_DATA",
+        "blockers": [
+          {
+            "category": "DATA",
+            "code": "DATA_PRODUCT_MISSING",
+            "reference": "FUTURE_LABEL_1H"
+          }
+        ],
+        "actionsUnlocked": [],
+        "blockedActions": [
+          "BUILD_FORECAST_INPUT_PACKAGE_1H"
+        ],
+        "authorityRequirement": null,
+        "consequential": false,
+        "fingerprint": "decision-dependency-result:sha256:76db30d988a393dda62635a971085ea6ceba53803fb5af7c135936b1fe103b8e"
+      },
+      {
+        "schemaVersion": "vigia.decision-dependency-result.v1",
+        "decisionId": "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+        "definitionFingerprint": "decision-definition:sha256:25f93e26d4d1a7541d37b8ce35294ce8eeb60a96acb70b1e0fd085c737ae8eca",
+        "policyReference": {
+          "id": "FORECAST_INPUT_COMPLETENESS",
+          "version": "1.0.0"
+        },
+        "state": "BLOCKED_BY_DATA",
+        "blockers": [
+          {
+            "category": "DATA",
+            "code": "DATA_PRODUCT_MISSING",
+            "reference": "FUTURE_LABEL_3H"
+          }
+        ],
+        "actionsUnlocked": [],
+        "blockedActions": [
+          "BUILD_FORECAST_INPUT_PACKAGE_3H"
+        ],
+        "authorityRequirement": null,
+        "consequential": false,
+        "fingerprint": "decision-dependency-result:sha256:eb958e6acaf80f0ffdb61775aa900201e890da84708c4e6f33256ade0c47e417"
+      },
+      {
+        "schemaVersion": "vigia.decision-dependency-result.v1",
+        "decisionId": "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+        "definitionFingerprint": "decision-definition:sha256:b0df639a93f097ae469bf29e34bb243b7b66610924f2499ea9112fed4931ac1b",
+        "policyReference": {
+          "id": "MISSING_INDEPENDENT_CORROBORATION",
+          "version": "1.0.0"
+        },
+        "state": "READY",
+        "blockers": [],
+        "actionsUnlocked": [
+          "ACQUIRE_INDEPENDENT_PHYSICAL_EVIDENCE"
+        ],
+        "blockedActions": [],
+        "authorityRequirement": null,
+        "consequential": false,
+        "fingerprint": "decision-dependency-result:sha256:1de64174611c630b8c5804aee496f2ee2f95321d8be1cf7ee7bcdfd43bc9ea43"
+      },
+      {
+        "schemaVersion": "vigia.decision-dependency-result.v1",
+        "decisionId": "PROPOSE_OFFICIAL_WARNING",
+        "definitionFingerprint": "decision-definition:sha256:edf4d8371bc39d58253611d499db45cda1411811c5ba057fc49fc9c71e80d277",
+        "policyReference": {
+          "id": "CONSEQUENTIAL_WARNING_GUARD",
+          "version": "1.0.0"
+        },
+        "state": "BLOCKED_BY_EVIDENCE",
+        "blockers": [
+          {
+            "category": "EVIDENCE",
+            "code": "REQUIRED_FACT_MISSING",
+            "reference": "IMPACT_THRESHOLD_SATISFIED"
+          },
+          {
+            "category": "EVIDENCE",
+            "code": "REQUIRED_FACT_MISSING",
+            "reference": "INDEPENDENT_PHYSICAL_CORROBORATION"
+          },
+          {
+            "category": "AUTHORITY",
+            "code": "CAPABILITY_REQUIRED",
+            "reference": "PROPOSE_OFFICIAL_WARNING"
+          }
+        ],
+        "actionsUnlocked": [],
+        "blockedActions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "authorityRequirement": {
+          "capability": "PROPOSE_OFFICIAL_WARNING"
+        },
+        "consequential": true,
+        "fingerprint": "decision-dependency-result:sha256:f082634fd2d2c7c0e5c337df0e33516ebbb62556c53bed8194c81af08e939b19"
+      },
+      {
+        "schemaVersion": "vigia.decision-dependency-result.v1",
+        "decisionId": "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+        "definitionFingerprint": "decision-definition:sha256:768406011aef9caf0136e95fdc2297f19e7a9fb5823da2532d94beeb52425ba2",
+        "policyReference": {
+          "id": "INTERNAL_IMPACT_GUARD",
+          "version": "1.0.0"
+        },
+        "state": "READY",
+        "blockers": [],
+        "actionsUnlocked": [
+          "COMPUTE_INTERNAL_IMPACT_CONTEXT"
+        ],
+        "blockedActions": [],
+        "authorityRequirement": null,
+        "consequential": false,
+        "fingerprint": "decision-dependency-result:sha256:6f94d7a75f84ec0f3757c0080268ed4be3ab71f778bf4c7bbe6bbb2fa1049f45"
+      }
+    ],
+    "edges": [
+      {
+        "source": "FUTURE_LABEL_1H",
+        "target": "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+        "relationship": "DATA_PRODUCT_MISSING"
+      },
+      {
+        "source": "FUTURE_LABEL_3H",
+        "target": "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+        "relationship": "DATA_PRODUCT_MISSING"
+      },
+      {
+        "source": "IMPACT_THRESHOLD_SATISFIED",
+        "target": "PROPOSE_OFFICIAL_WARNING",
+        "relationship": "REQUIRED_FACT_MISSING"
+      },
+      {
+        "source": "INDEPENDENT_PHYSICAL_CORROBORATION",
+        "target": "PROPOSE_OFFICIAL_WARNING",
+        "relationship": "REQUIRED_FACT_MISSING"
+      },
+      {
+        "source": "PROPOSE_OFFICIAL_WARNING",
+        "target": "PROPOSE_OFFICIAL_WARNING",
+        "relationship": "CAPABILITY_REQUIRED"
+      }
+    ],
+    "fingerprint": "decision-dependency-graph:sha256:f577ff79d743ac753c624e95946638d462855e4a87c10ac2631a88659df322c8"
+  },
+  "unknowns": [
+    {
+      "id": "material-unknown:sha256:234fb00f8b60a5d256541cd8307c97ee5dcd17b589d9cf4654aa5303dd38c87b",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "PERSISTENT_ANOMALY_HISTORY",
+      "hypothesisIds": [
+        "WILDFIRE:INDUSTRIAL_THERMAL_SOURCE"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:23a7585b5175de9b90c61dc7d9cc57f174b1e779c73c472217c5f68f4128f920",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "OFFICIAL_INCIDENT_CLASSIFICATION",
+      "hypothesisIds": [
+        "WILDFIRE:UNKNOWN_THERMAL_EVENT"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:2ff9a482b5b54311f88c01c7b0555012d2774383626378d3f9d558cbae66b35f",
+      "type": "DATA_GAP",
+      "requirement": "FUTURE_LABEL",
+      "gapId": "data-gap:sha256:2093e9319086069e3e0cd32151bc16bf2a2ccc223c02b1626115af9433b96acb",
+      "hypothesisIds": [],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:4c20bb8fba8bfdf8e681a094a5c3ad62db43fece571db0074e846ca1677d9db4",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "NAMED_INDUSTRIAL_FACILITY",
+      "hypothesisIds": [
+        "WILDFIRE:INDUSTRIAL_THERMAL_SOURCE"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:589892521a982f0dd0cbb71b514c1e08875d7fcb0e7fc8caa9120e66aaa585ee",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "ROOT_MEASUREMENT_IDENTITY",
+      "hypothesisIds": [
+        "WILDFIRE:DUPLICATE_OR_REPUBLISHED_OBSERVATION"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:7e821a670ae1634567d546de2a07e3d5f7c94d694d50ea4bbc4c96828611e9ad",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+      "hypothesisIds": [
+        "WILDFIRE:UNKNOWN_THERMAL_EVENT"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:7f01f4eb8a009905d05026b5b3a0788f20a458d0de490a04c99fe9f7a1bdd8d4",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "VOLCANO_OBSERVATORY_STATUS",
+      "hypothesisIds": [
+        "WILDFIRE:VOLCANIC_THERMAL_ACTIVITY"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:83d24a3ae86981d73828f84c8fbd32881ba8fc78be0c6b1d75381a050accc491",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "PHYSICAL_OBSERVATION_OPPORTUNITY",
+      "hypothesisIds": [
+        "WILDFIRE:REPORT_WITHOUT_PHYSICAL_SUPPORT"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:8acfadb3094bc746e7b7f4c27b8d29bcbc8901ef7819d356c1379d9a1373091e",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "AUTHORITATIVE_FLARE_INVENTORY",
+      "hypothesisIds": [
+        "WILDFIRE:GAS_FLARE"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:9fe1f5b8fe176fdcaf8aa21927a145cada7c9ae2e58334fd3bbb850ad28baa92",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "OFFICIAL_INCIDENT_CLASSIFICATION",
+      "hypothesisIds": [
+        "WILDFIRE:ACTIVE_WILDFIRE"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:ab669fe4e772f2e571a545d480fc22c4eb30b3ee928c0818f4d7906c4d484966",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "OFFICIAL_BURN_AUTHORIZATION",
+      "hypothesisIds": [
+        "WILDFIRE:PRESCRIBED_OR_MANAGED_FIRE"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:b06b65279f060746c04f246204f0d9e871bd2dafd06696178b4035fbca6f772c",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "PERSISTENT_ANOMALY_HISTORY",
+      "hypothesisIds": [
+        "WILDFIRE:UNKNOWN_THERMAL_EVENT"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:e03cb9878dce990d9a42a533569448028b6e39aa016f3492469460c683f31e38",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "AGRICULTURAL_BURN_AUTHORIZATION",
+      "hypothesisIds": [
+        "WILDFIRE:AGRICULTURAL_BURN"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:e6a0fab7ce7b5f6046a5e8d645dca1c5eca4717a2928f63633a0ac28bed642cb",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+      "hypothesisIds": [
+        "WILDFIRE:SENSOR_OR_ALGORITHM_ARTEFACT"
+      ],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:f569c3d6175ef4870af32b89a58673a28b5f5546dc596b2f66a1a24ab6e6174a",
+      "type": "DATA_GAP",
+      "requirement": "FUTURE_LABEL",
+      "gapId": "data-gap:sha256:4efc40d55cebd99ecc715b96a44cedece7a2768c1ce1cbf271b675e8e75ca283",
+      "hypothesisIds": [],
+      "decisionIds": []
+    },
+    {
+      "id": "material-unknown:sha256:f7666ebbfe9db1057dd4d72aba1e743ada6f3584d33505ce3ef701686cc8ea62",
+      "type": "HYPOTHESIS_DISCRIMINATOR",
+      "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+      "hypothesisIds": [
+        "WILDFIRE:ACTIVE_WILDFIRE"
+      ],
+      "decisionIds": []
+    }
+  ],
+  "evidenceNeedIds": [
+    "evidence-need:2025-AZGCP-000597:independent-physical-family"
+  ],
+  "openDataGaps": [
+    {
+      "incidentId": "2025-AZGCP-000597",
+      "region": "western-us",
+      "horizonHours": 3,
+      "requirement": "FUTURE_LABEL",
+      "state": "OPEN",
+      "candidateProviders": [
+        "nifc-wfigs-daily",
+        "nasa-feds"
+      ],
+      "blocker": "MISSING_FUTURE_LABEL",
+      "unlocks": [
+        "3H_FORECAST_EXAMPLE"
+      ],
+      "reasons": [],
+      "id": "data-gap:sha256:2093e9319086069e3e0cd32151bc16bf2a2ccc223c02b1626115af9433b96acb"
+    },
+    {
+      "incidentId": "2025-AZGCP-000597",
+      "region": "western-us",
+      "horizonHours": 1,
+      "requirement": "FUTURE_LABEL",
+      "state": "OPEN",
+      "candidateProviders": [
+        "nifc-wfigs-daily",
+        "nasa-feds"
+      ],
+      "blocker": "MISSING_FUTURE_LABEL",
+      "unlocks": [
+        "1H_FORECAST_EXAMPLE"
+      ],
+      "reasons": [],
+      "id": "data-gap:sha256:4efc40d55cebd99ecc715b96a44cedece7a2768c1ce1cbf271b675e8e75ca283"
+    }
+  ],
+  "forecastReadiness": {
+    "schemaVersion": "vigia.forecast-corpus-readiness.v1",
+    "decision": "CORPUS_NOT_READY",
+    "counts": {
+      "discoveredIncidents": 37,
+      "eligibleIncidents": 2,
+      "examples": 11,
+      "validNegatives": 0,
+      "hardNegatives": 0,
+      "regions": 1,
+      "seasons": 2,
+      "horizonCounts": {
+        "1": 0,
+        "3": 0,
+        "6": 1,
+        "12": 3,
+        "24": 7
+      },
+      "splitCounts": {
+        "development": 1,
+        "calibration": 0,
+        "held-out-test": 10,
+        "geographic-stress-test": 0,
+        "seasonal-stress-test": 0
+      }
+    },
+    "gates": [
+      {
+        "id": "TWO_REGIONS",
+        "value": 1,
+        "required": 2,
+        "pass": false
+      },
+      {
+        "id": "TWO_SEASONS",
+        "value": 2,
+        "required": 2,
+        "pass": true
+      },
+      {
+        "id": "ONE_HUNDRED_INCIDENTS",
+        "value": 2,
+        "required": 100,
+        "pass": false
+      },
+      {
+        "id": "ONE_HUNDRED_NEGATIVES",
+        "value": 0,
+        "required": 100,
+        "pass": false
+      },
+      {
+        "id": "PROMOTION_MINIMUM_NEGATIVES",
+        "value": 0,
+        "required": 20,
+        "pass": false
+      },
+      {
+        "id": "TWENTY_FIVE_HARD_NEGATIVES",
+        "value": 0,
+        "required": 25,
+        "pass": false
+      },
+      {
+        "id": "PROGRESSION_COMPLETENESS",
+        "value": 2,
+        "required": 100,
+        "pass": false
+      },
+      {
+        "id": "WEATHER_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "FUEL_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "TERRAIN_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "FUTURE_LABEL_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "BRONZE_SILVER_LINEAGE_COMPLETENESS",
+        "value": 11,
+        "required": "ALL_ELIGIBLE_EXAMPLES",
+        "pass": true
+      },
+      {
+        "id": "DEVELOPMENT_SPLIT_NONEMPTY",
+        "value": 1,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "CALIBRATION_SPLIT_NONEMPTY",
+        "value": 0,
+        "required": 1,
+        "pass": false
+      },
+      {
+        "id": "HELD_OUT_TEST_SPLIT_NONEMPTY",
+        "value": 10,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "INCIDENT_SPLIT_ISOLATION",
+        "value": true,
+        "required": true,
+        "pass": true
+      },
+      {
+        "id": "HORIZON_1H",
+        "value": 0,
+        "required": 1,
+        "pass": false
+      },
+      {
+        "id": "HORIZON_3H",
+        "value": 0,
+        "required": 1,
+        "pass": false
+      },
+      {
+        "id": "HORIZON_6H",
+        "value": 1,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "HORIZON_12H",
+        "value": 3,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "HORIZON_24H",
+        "value": 7,
+        "required": 1,
+        "pass": true
+      },
+      {
+        "id": "KNOWLEDGE_TIME_LEAKAGE_ZERO",
+        "value": 0,
+        "required": 0,
+        "pass": true
+      },
+      {
+        "id": "DATA_RIGHTS_EXPORTABLE",
+        "value": true,
+        "required": true,
+        "pass": true
+      },
+      {
+        "id": "REPLAY_IDENTICAL",
+        "value": true,
+        "required": true,
+        "pass": true
+      }
+    ],
+    "failedGates": [
+      "TWO_REGIONS",
+      "ONE_HUNDRED_INCIDENTS",
+      "ONE_HUNDRED_NEGATIVES",
+      "PROMOTION_MINIMUM_NEGATIVES",
+      "TWENTY_FIVE_HARD_NEGATIVES",
+      "PROGRESSION_COMPLETENESS",
+      "CALIBRATION_SPLIT_NONEMPTY",
+      "HORIZON_1H",
+      "HORIZON_3H"
+    ],
+    "decisionHash": "forecast-corpus-readiness:sha256:e8953744922cd58a97ee8c8b092351c65eb737583ea3f377e20d58d2f44b1e48"
+  },
+  "rankedAcquisitions": [
+    {
+      "schemaVersion": "vigia.candidate-acquisition-value.v1",
+      "candidateId": "gap-resolution-action:sha256:0900e7aaf45e707a8255771102551816f4943523841c774dc64e469967063954",
+      "incidentId": "2025-AZGCP-000597",
+      "provider": "nifc-wfigs-daily",
+      "requirement": "FUTURE_LABEL",
+      "gapId": "data-gap:sha256:2093e9319086069e3e0cd32151bc16bf2a2ccc223c02b1626115af9433b96acb",
+      "requirementsClosed": [
+        "FUTURE_LABEL",
+        "FUTURE_LABEL_3H"
+      ],
+      "decisionsAffected": [
+        "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H"
+      ],
+      "criticalDecisionsPotentiallyUnblocked": 1,
+      "hypothesesSeparated": [],
+      "contractsPotentiallySatisfied": [
+        "FORECAST_INPUT_3H"
+      ],
+      "forecastExamplesUnlocked": 40,
+      "horizonsUnlocked": [
+        3
+      ],
+      "independentFamilyGained": false,
+      "latency": {
+        "expectedMs": 8000
+      },
+      "cost": {
+        "expectedBytes": 16000000,
+        "estimatedCostUnits": 0
+      },
+      "rights": "READY",
+      "quality": "ADEQUATE",
+      "risk": {
+        "causalDuplication": "LOW",
+        "retryAttempts": 0
+      },
+      "blockingConditions": [
+        "ARCHIVE_EXHAUSTED_NO_HORIZON_COMPATIBLE_REVISION",
+        "NO_VALID_OBSERVATION_OPPORTUNITY"
+      ],
+      "components": {
+        "criticalDecisions": 1,
+        "decisionsAffected": 1,
+        "evidenceContracts": 1,
+        "hypothesesSeparated": 0,
+        "forecastExamplesUnlocked": 40,
+        "horizonsUnlocked": 1,
+        "negativeGateContribution": 0,
+        "independentFamilyGained": 0,
+        "urgency": 7,
+        "deadlinePressure": 0,
+        "sourceAvailable": 1,
+        "sourceHealthy": 1,
+        "coverageReady": 1,
+        "rightsReady": 1,
+        "qualityExpected": 0.5,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000,
+        "estimatedCostUnits": 0,
+        "causalDuplicationRisk": 0
+      },
+      "weights": {
+        "criticalDecision": 10000,
+        "evidenceContract": 2000,
+        "hypothesisSeparation": 1000,
+        "forecastExample": 100,
+        "horizon": 500,
+        "negativeGate": 4000,
+        "independentFamily": 3000,
+        "urgency": 250,
+        "sourceAvailable": 200,
+        "sourceHealthy": 200,
+        "rightsReady": 200,
+        "coverageReady": 200,
+        "qualityExpected": 100,
+        "partialData": 75,
+        "retryReady": 50,
+        "mebibytePenalty": 2,
+        "latencySecondPenalty": 1,
+        "costUnitPenalty": 20,
+        "causalDuplicatePenalty": 10000
+      },
+      "rankComponents": {
+        "decision": 10000,
+        "contracts": 2000,
+        "separation": 0,
+        "examples": 4000,
+        "horizons": 500,
+        "negatives": 0,
+        "independence": 0,
+        "urgency": 1750,
+        "availability": 800,
+        "quality": 100,
+        "penalties": -40
+      },
+      "totalRank": 19110,
+      "deterministicTieBreak": "gap-resolution-action:sha256:0900e7aaf45e707a8255771102551816f4943523841c774dc64e469967063954",
+      "explanation": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 2 blockers.",
+      "fingerprint": "candidate-acquisition-value:sha256:9fcd1acc3470647b69d1bdbcf046752c6c54e724d4efaed8a42c921bee65308a"
+    },
+    {
+      "schemaVersion": "vigia.candidate-acquisition-value.v1",
+      "candidateId": "gap-resolution-action:sha256:630e3109ab38b6c21420ab8fd39e3222cf7adcb7e26f3e092295b3da1d28b81a",
+      "incidentId": "2025-AZGCP-000597",
+      "provider": "nifc-wfigs-daily",
+      "requirement": "FUTURE_LABEL",
+      "gapId": "data-gap:sha256:4efc40d55cebd99ecc715b96a44cedece7a2768c1ce1cbf271b675e8e75ca283",
+      "requirementsClosed": [
+        "FUTURE_LABEL",
+        "FUTURE_LABEL_1H"
+      ],
+      "decisionsAffected": [
+        "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H"
+      ],
+      "criticalDecisionsPotentiallyUnblocked": 1,
+      "hypothesesSeparated": [],
+      "contractsPotentiallySatisfied": [
+        "FORECAST_INPUT_1H"
+      ],
+      "forecastExamplesUnlocked": 40,
+      "horizonsUnlocked": [
+        1
+      ],
+      "independentFamilyGained": false,
+      "latency": {
+        "expectedMs": 8000
+      },
+      "cost": {
+        "expectedBytes": 16000000,
+        "estimatedCostUnits": 0
+      },
+      "rights": "READY",
+      "quality": "ADEQUATE",
+      "risk": {
+        "causalDuplication": "LOW",
+        "retryAttempts": 0
+      },
+      "blockingConditions": [
+        "ARCHIVE_EXHAUSTED_NO_HORIZON_COMPATIBLE_REVISION",
+        "NO_VALID_OBSERVATION_OPPORTUNITY"
+      ],
+      "components": {
+        "criticalDecisions": 1,
+        "decisionsAffected": 1,
+        "evidenceContracts": 1,
+        "hypothesesSeparated": 0,
+        "forecastExamplesUnlocked": 40,
+        "horizonsUnlocked": 1,
+        "negativeGateContribution": 0,
+        "independentFamilyGained": 0,
+        "urgency": 7,
+        "deadlinePressure": 0,
+        "sourceAvailable": 1,
+        "sourceHealthy": 1,
+        "coverageReady": 1,
+        "rightsReady": 1,
+        "qualityExpected": 0.5,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 16000000,
+        "expectedLatencyMs": 8000,
+        "estimatedCostUnits": 0,
+        "causalDuplicationRisk": 0
+      },
+      "weights": {
+        "criticalDecision": 10000,
+        "evidenceContract": 2000,
+        "hypothesisSeparation": 1000,
+        "forecastExample": 100,
+        "horizon": 500,
+        "negativeGate": 4000,
+        "independentFamily": 3000,
+        "urgency": 250,
+        "sourceAvailable": 200,
+        "sourceHealthy": 200,
+        "rightsReady": 200,
+        "coverageReady": 200,
+        "qualityExpected": 100,
+        "partialData": 75,
+        "retryReady": 50,
+        "mebibytePenalty": 2,
+        "latencySecondPenalty": 1,
+        "costUnitPenalty": 20,
+        "causalDuplicatePenalty": 10000
+      },
+      "rankComponents": {
+        "decision": 10000,
+        "contracts": 2000,
+        "separation": 0,
+        "examples": 4000,
+        "horizons": 500,
+        "negatives": 0,
+        "independence": 0,
+        "urgency": 1750,
+        "availability": 800,
+        "quality": 100,
+        "penalties": -40
+      },
+      "totalRank": 19110,
+      "deterministicTieBreak": "gap-resolution-action:sha256:630e3109ab38b6c21420ab8fd39e3222cf7adcb7e26f3e092295b3da1d28b81a",
+      "explanation": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 2 blockers.",
+      "fingerprint": "candidate-acquisition-value:sha256:cf55e87bae989e54d5f26c8e0e52bb50644853756be932817036323b6e6d3df0"
+    },
+    {
+      "schemaVersion": "vigia.candidate-acquisition-value.v1",
+      "candidateId": "candidate:2025-AZGCP-000597:goes-abi-independent",
+      "incidentId": "2025-AZGCP-000597",
+      "provider": "noaa-goes-abi",
+      "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+      "gapId": null,
+      "requirementsClosed": [
+        "INDEPENDENT_PHYSICAL_CORROBORATION"
+      ],
+      "decisionsAffected": [
+        "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+        "PROPOSE_OFFICIAL_WARNING"
+      ],
+      "criticalDecisionsPotentiallyUnblocked": 0,
+      "hypothesesSeparated": [
+        "WILDFIRE:ACTIVE_WILDFIRE",
+        "WILDFIRE:SENSOR_OR_ALGORITHM_ARTEFACT"
+      ],
+      "contractsPotentiallySatisfied": [
+        "INDEPENDENT_PHYSICAL_FAMILY"
+      ],
+      "forecastExamplesUnlocked": 0,
+      "horizonsUnlocked": [],
+      "independentFamilyGained": true,
+      "latency": {
+        "expectedMs": 20000
+      },
+      "cost": {
+        "expectedBytes": 12582912,
+        "estimatedCostUnits": 0
+      },
+      "rights": "READY",
+      "quality": "HIGH",
+      "risk": {
+        "causalDuplication": "LOW",
+        "retryAttempts": 0
+      },
+      "blockingConditions": [
+        "NO_VALID_OBSERVATION_OPPORTUNITY"
+      ],
+      "components": {
+        "criticalDecisions": 0,
+        "decisionsAffected": 2,
+        "evidenceContracts": 1,
+        "hypothesesSeparated": 2,
+        "forecastExamplesUnlocked": 0,
+        "horizonsUnlocked": 0,
+        "negativeGateContribution": 0,
+        "independentFamilyGained": 1,
+        "urgency": 8,
+        "deadlinePressure": 0,
+        "sourceAvailable": 1,
+        "sourceHealthy": 1,
+        "coverageReady": 1,
+        "rightsReady": 1,
+        "qualityExpected": 1,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 12582912,
+        "expectedLatencyMs": 20000,
+        "estimatedCostUnits": 0,
+        "causalDuplicationRisk": 0
+      },
+      "weights": {
+        "criticalDecision": 10000,
+        "evidenceContract": 2000,
+        "hypothesisSeparation": 1000,
+        "forecastExample": 100,
+        "horizon": 500,
+        "negativeGate": 4000,
+        "independentFamily": 3000,
+        "urgency": 250,
+        "sourceAvailable": 200,
+        "sourceHealthy": 200,
+        "rightsReady": 200,
+        "coverageReady": 200,
+        "qualityExpected": 100,
+        "partialData": 75,
+        "retryReady": 50,
+        "mebibytePenalty": 2,
+        "latencySecondPenalty": 1,
+        "costUnitPenalty": 20,
+        "causalDuplicatePenalty": 10000
+      },
+      "rankComponents": {
+        "decision": 0,
+        "contracts": 2000,
+        "separation": 2000,
+        "examples": 0,
+        "horizons": 0,
+        "negatives": 0,
+        "independence": 3000,
+        "urgency": 2000,
+        "availability": 800,
+        "quality": 150,
+        "penalties": -44
+      },
+      "totalRank": 9906,
+      "deterministicTieBreak": "candidate:2025-AZGCP-000597:goes-abi-independent",
+      "explanation": "0 decisions potentially unblocked; 2 decisions affected; 2 hypotheses separated; 0 examples; 0 horizons; 1 blockers.",
+      "fingerprint": "candidate-acquisition-value:sha256:defb9310292dd54c5181f38543f06595d0ab7c35a1dff1549abe43e0bd37ac54"
+    },
+    {
+      "schemaVersion": "vigia.candidate-acquisition-value.v1",
+      "candidateId": "gap-resolution-action:sha256:12932f935549dbec0ce8b9d43c79c12d51d2152b8a60e3544769c52d6ba7728a",
+      "incidentId": "2025-AZGCP-000597",
+      "provider": "nasa-feds",
+      "requirement": "FUTURE_LABEL",
+      "gapId": "data-gap:sha256:2093e9319086069e3e0cd32151bc16bf2a2ccc223c02b1626115af9433b96acb",
+      "requirementsClosed": [
+        "FUTURE_LABEL",
+        "FUTURE_LABEL_3H"
+      ],
+      "decisionsAffected": [
+        "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H"
+      ],
+      "criticalDecisionsPotentiallyUnblocked": 1,
+      "hypothesesSeparated": [],
+      "contractsPotentiallySatisfied": [
+        "FORECAST_INPUT_3H"
+      ],
+      "forecastExamplesUnlocked": 40,
+      "horizonsUnlocked": [
+        3
+      ],
+      "independentFamilyGained": false,
+      "latency": {
+        "expectedMs": 0
+      },
+      "cost": {
+        "expectedBytes": 0,
+        "estimatedCostUnits": 0
+      },
+      "rights": "READY",
+      "quality": "ADEQUATE",
+      "risk": {
+        "causalDuplication": "HIGH",
+        "retryAttempts": 0
+      },
+      "blockingConditions": [
+        "KNOWLEDGE_TIME_PUBLICATION_RECEIPT_MISSING",
+        "NO_VALID_OBSERVATION_OPPORTUNITY",
+        "OUTSIDE_PROVIDER_COVERAGE"
+      ],
+      "components": {
+        "criticalDecisions": 1,
+        "decisionsAffected": 1,
+        "evidenceContracts": 1,
+        "hypothesesSeparated": 0,
+        "forecastExamplesUnlocked": 40,
+        "horizonsUnlocked": 1,
+        "negativeGateContribution": 0,
+        "independentFamilyGained": 0,
+        "urgency": 7,
+        "deadlinePressure": 0,
+        "sourceAvailable": 1,
+        "sourceHealthy": 1,
+        "coverageReady": 0,
+        "rightsReady": 1,
+        "qualityExpected": 0.5,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0,
+        "estimatedCostUnits": 0,
+        "causalDuplicationRisk": 1
+      },
+      "weights": {
+        "criticalDecision": 10000,
+        "evidenceContract": 2000,
+        "hypothesisSeparation": 1000,
+        "forecastExample": 100,
+        "horizon": 500,
+        "negativeGate": 4000,
+        "independentFamily": 3000,
+        "urgency": 250,
+        "sourceAvailable": 200,
+        "sourceHealthy": 200,
+        "rightsReady": 200,
+        "coverageReady": 200,
+        "qualityExpected": 100,
+        "partialData": 75,
+        "retryReady": 50,
+        "mebibytePenalty": 2,
+        "latencySecondPenalty": 1,
+        "costUnitPenalty": 20,
+        "causalDuplicatePenalty": 10000
+      },
+      "rankComponents": {
+        "decision": 10000,
+        "contracts": 2000,
+        "separation": 0,
+        "examples": 4000,
+        "horizons": 500,
+        "negatives": 0,
+        "independence": 0,
+        "urgency": 1750,
+        "availability": 600,
+        "quality": 100,
+        "penalties": -10000
+      },
+      "totalRank": 8950,
+      "deterministicTieBreak": "gap-resolution-action:sha256:12932f935549dbec0ce8b9d43c79c12d51d2152b8a60e3544769c52d6ba7728a",
+      "explanation": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 3 blockers.",
+      "fingerprint": "candidate-acquisition-value:sha256:b8704d19181893026d876fb80337e834a0e81fd4bd83df69b245542827ae00bc"
+    },
+    {
+      "schemaVersion": "vigia.candidate-acquisition-value.v1",
+      "candidateId": "gap-resolution-action:sha256:a25a21e88d691f3fa1130e1412bcdec4b26538d42d56f3105e012bc665c99aba",
+      "incidentId": "2025-AZGCP-000597",
+      "provider": "nasa-feds",
+      "requirement": "FUTURE_LABEL",
+      "gapId": "data-gap:sha256:4efc40d55cebd99ecc715b96a44cedece7a2768c1ce1cbf271b675e8e75ca283",
+      "requirementsClosed": [
+        "FUTURE_LABEL",
+        "FUTURE_LABEL_1H"
+      ],
+      "decisionsAffected": [
+        "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H"
+      ],
+      "criticalDecisionsPotentiallyUnblocked": 1,
+      "hypothesesSeparated": [],
+      "contractsPotentiallySatisfied": [
+        "FORECAST_INPUT_1H"
+      ],
+      "forecastExamplesUnlocked": 40,
+      "horizonsUnlocked": [
+        1
+      ],
+      "independentFamilyGained": false,
+      "latency": {
+        "expectedMs": 0
+      },
+      "cost": {
+        "expectedBytes": 0,
+        "estimatedCostUnits": 0
+      },
+      "rights": "READY",
+      "quality": "ADEQUATE",
+      "risk": {
+        "causalDuplication": "HIGH",
+        "retryAttempts": 0
+      },
+      "blockingConditions": [
+        "KNOWLEDGE_TIME_PUBLICATION_RECEIPT_MISSING",
+        "NO_VALID_OBSERVATION_OPPORTUNITY",
+        "OUTSIDE_PROVIDER_COVERAGE"
+      ],
+      "components": {
+        "criticalDecisions": 1,
+        "decisionsAffected": 1,
+        "evidenceContracts": 1,
+        "hypothesesSeparated": 0,
+        "forecastExamplesUnlocked": 40,
+        "horizonsUnlocked": 1,
+        "negativeGateContribution": 0,
+        "independentFamilyGained": 0,
+        "urgency": 7,
+        "deadlinePressure": 0,
+        "sourceAvailable": 1,
+        "sourceHealthy": 1,
+        "coverageReady": 0,
+        "rightsReady": 1,
+        "qualityExpected": 0.5,
+        "existingPartialData": 0,
+        "retryReady": 1,
+        "expectedBytes": 0,
+        "expectedLatencyMs": 0,
+        "estimatedCostUnits": 0,
+        "causalDuplicationRisk": 1
+      },
+      "weights": {
+        "criticalDecision": 10000,
+        "evidenceContract": 2000,
+        "hypothesisSeparation": 1000,
+        "forecastExample": 100,
+        "horizon": 500,
+        "negativeGate": 4000,
+        "independentFamily": 3000,
+        "urgency": 250,
+        "sourceAvailable": 200,
+        "sourceHealthy": 200,
+        "rightsReady": 200,
+        "coverageReady": 200,
+        "qualityExpected": 100,
+        "partialData": 75,
+        "retryReady": 50,
+        "mebibytePenalty": 2,
+        "latencySecondPenalty": 1,
+        "costUnitPenalty": 20,
+        "causalDuplicatePenalty": 10000
+      },
+      "rankComponents": {
+        "decision": 10000,
+        "contracts": 2000,
+        "separation": 0,
+        "examples": 4000,
+        "horizons": 500,
+        "negatives": 0,
+        "independence": 0,
+        "urgency": 1750,
+        "availability": 600,
+        "quality": 100,
+        "penalties": -10000
+      },
+      "totalRank": 8950,
+      "deterministicTieBreak": "gap-resolution-action:sha256:a25a21e88d691f3fa1130e1412bcdec4b26538d42d56f3105e012bc665c99aba",
+      "explanation": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 3 blockers.",
+      "fingerprint": "candidate-acquisition-value:sha256:54a56a20d2ad4870c0856773582fe69eaea12148e5e02437d57a1a920fb3aaad"
+    }
+  ],
+  "acquisitionPlan": {
+    "schemaVersion": "vigia.intelligence-acquisition-plan.v1",
+    "budgets": {
+      "maxAcquisitionsPerIncident": 2,
+      "maxBytesPerIncident": 67108864,
+      "maxRequestsPerProvider": 2,
+      "maxProviderRetries": 3,
+      "maxConcurrentTasks": 2,
+      "maxEstimatedCostUnits": 10,
+      "maxControllerCycles": 3,
+      "maxBlockedProviderAttempts": 3
+    },
+    "items": [
+      {
+        "id": "intelligence-acquisition-plan-item:sha256:1f521900c68e9b5bbaadeb06189ace96e10fec700cfb17900fea1531f25c8e7d",
+        "candidateId": "gap-resolution-action:sha256:0900e7aaf45e707a8255771102551816f4943523841c774dc64e469967063954",
+        "incidentId": "2025-AZGCP-000597",
+        "provider": "nifc-wfigs-daily",
+        "requirement": "FUTURE_LABEL",
+        "state": "NO_VALID_OBSERVATION_OPPORTUNITY",
+        "reason": null,
+        "decisionValueFingerprint": "candidate-acquisition-value:sha256:9fcd1acc3470647b69d1bdbcf046752c6c54e724d4efaed8a42c921bee65308a",
+        "whyNow": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 2 blockers.",
+        "decisionsAffected": [
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H"
+        ],
+        "hypothesesSeparated": [],
+        "contractsPotentiallySatisfied": [
+          "FORECAST_INPUT_3H"
+        ],
+        "horizonsUnlocked": [
+          3
+        ],
+        "forecastExamplesUnlocked": 40,
+        "independence": "NO_NEW_FAMILY",
+        "cost": {
+          "expectedBytes": 16000000,
+          "estimatedCostUnits": 0
+        },
+        "failureModes": [
+          "ARCHIVE_EXHAUSTED_NO_HORIZON_COMPATIBLE_REVISION",
+          "NO_VALID_OBSERVATION_OPPORTUNITY"
+        ],
+        "fallback": null
+      },
+      {
+        "id": "intelligence-acquisition-plan-item:sha256:f54bc191c8319b099247a0a0e4a273a7a2881501154be9f65ce5845e754168e0",
+        "candidateId": "gap-resolution-action:sha256:630e3109ab38b6c21420ab8fd39e3222cf7adcb7e26f3e092295b3da1d28b81a",
+        "incidentId": "2025-AZGCP-000597",
+        "provider": "nifc-wfigs-daily",
+        "requirement": "FUTURE_LABEL",
+        "state": "NO_VALID_OBSERVATION_OPPORTUNITY",
+        "reason": null,
+        "decisionValueFingerprint": "candidate-acquisition-value:sha256:cf55e87bae989e54d5f26c8e0e52bb50644853756be932817036323b6e6d3df0",
+        "whyNow": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 2 blockers.",
+        "decisionsAffected": [
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H"
+        ],
+        "hypothesesSeparated": [],
+        "contractsPotentiallySatisfied": [
+          "FORECAST_INPUT_1H"
+        ],
+        "horizonsUnlocked": [
+          1
+        ],
+        "forecastExamplesUnlocked": 40,
+        "independence": "NO_NEW_FAMILY",
+        "cost": {
+          "expectedBytes": 16000000,
+          "estimatedCostUnits": 0
+        },
+        "failureModes": [
+          "ARCHIVE_EXHAUSTED_NO_HORIZON_COMPATIBLE_REVISION",
+          "NO_VALID_OBSERVATION_OPPORTUNITY"
+        ],
+        "fallback": null
+      },
+      {
+        "id": "intelligence-acquisition-plan-item:sha256:72739452c35715ab6c0f331e5551f738b91f918ae6c078a7f653cd4f7e85d2ab",
+        "candidateId": "candidate:2025-AZGCP-000597:goes-abi-independent",
+        "incidentId": "2025-AZGCP-000597",
+        "provider": "noaa-goes-abi",
+        "requirement": "INDEPENDENT_PHYSICAL_FAMILY",
+        "state": "NO_VALID_OBSERVATION_OPPORTUNITY",
+        "reason": null,
+        "decisionValueFingerprint": "candidate-acquisition-value:sha256:defb9310292dd54c5181f38543f06595d0ab7c35a1dff1549abe43e0bd37ac54",
+        "whyNow": "0 decisions potentially unblocked; 2 decisions affected; 2 hypotheses separated; 0 examples; 0 horizons; 1 blockers.",
+        "decisionsAffected": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "hypothesesSeparated": [
+          "WILDFIRE:ACTIVE_WILDFIRE",
+          "WILDFIRE:SENSOR_OR_ALGORITHM_ARTEFACT"
+        ],
+        "contractsPotentiallySatisfied": [
+          "INDEPENDENT_PHYSICAL_FAMILY"
+        ],
+        "horizonsUnlocked": [],
+        "forecastExamplesUnlocked": 0,
+        "independence": "NEW_INDEPENDENT_FAMILY",
+        "cost": {
+          "expectedBytes": 12582912,
+          "estimatedCostUnits": 0
+        },
+        "failureModes": [
+          "NO_VALID_OBSERVATION_OPPORTUNITY"
+        ],
+        "fallback": null
+      },
+      {
+        "id": "intelligence-acquisition-plan-item:sha256:a8bbc95d93abcfeab443376ca8c705d3593ba3866f8259ec32030971c1eac3ef",
+        "candidateId": "gap-resolution-action:sha256:12932f935549dbec0ce8b9d43c79c12d51d2152b8a60e3544769c52d6ba7728a",
+        "incidentId": "2025-AZGCP-000597",
+        "provider": "nasa-feds",
+        "requirement": "FUTURE_LABEL",
+        "state": "OUTSIDE_COVERAGE",
+        "reason": null,
+        "decisionValueFingerprint": "candidate-acquisition-value:sha256:b8704d19181893026d876fb80337e834a0e81fd4bd83df69b245542827ae00bc",
+        "whyNow": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 3 blockers.",
+        "decisionsAffected": [
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H"
+        ],
+        "hypothesesSeparated": [],
+        "contractsPotentiallySatisfied": [
+          "FORECAST_INPUT_3H"
+        ],
+        "horizonsUnlocked": [
+          3
+        ],
+        "forecastExamplesUnlocked": 40,
+        "independence": "CAUSAL_DUPLICATE",
+        "cost": {
+          "expectedBytes": 0,
+          "estimatedCostUnits": 0
+        },
+        "failureModes": [
+          "KNOWLEDGE_TIME_PUBLICATION_RECEIPT_MISSING",
+          "NO_VALID_OBSERVATION_OPPORTUNITY",
+          "OUTSIDE_PROVIDER_COVERAGE"
+        ],
+        "fallback": null
+      },
+      {
+        "id": "intelligence-acquisition-plan-item:sha256:4e96f0317df2a89332941dd39695bf8b11ca960a87ba1fa6288d87bd2e9957f2",
+        "candidateId": "gap-resolution-action:sha256:a25a21e88d691f3fa1130e1412bcdec4b26538d42d56f3105e012bc665c99aba",
+        "incidentId": "2025-AZGCP-000597",
+        "provider": "nasa-feds",
+        "requirement": "FUTURE_LABEL",
+        "state": "OUTSIDE_COVERAGE",
+        "reason": null,
+        "decisionValueFingerprint": "candidate-acquisition-value:sha256:54a56a20d2ad4870c0856773582fe69eaea12148e5e02437d57a1a920fb3aaad",
+        "whyNow": "1 decisions potentially unblocked; 1 decisions affected; 0 hypotheses separated; 40 examples; 1 horizons; 3 blockers.",
+        "decisionsAffected": [
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H"
+        ],
+        "hypothesesSeparated": [],
+        "contractsPotentiallySatisfied": [
+          "FORECAST_INPUT_1H"
+        ],
+        "horizonsUnlocked": [
+          1
+        ],
+        "forecastExamplesUnlocked": 40,
+        "independence": "CAUSAL_DUPLICATE",
+        "cost": {
+          "expectedBytes": 0,
+          "estimatedCostUnits": 0
+        },
+        "failureModes": [
+          "KNOWLEDGE_TIME_PUBLICATION_RECEIPT_MISSING",
+          "NO_VALID_OBSERVATION_OPPORTUNITY",
+          "OUTSIDE_PROVIDER_COVERAGE"
+        ],
+        "fallback": null
+      }
+    ],
+    "selectedCandidateIds": [],
+    "fingerprint": "intelligence-acquisition-plan:sha256:1a28ed89cc61e6f63a7178099f93230240a5ec9deee88d0073f8806263a64f2d"
+  },
+  "currentPolicies": [
+    {
+      "id": "MISSING_INDEPENDENT_CORROBORATION",
+      "version": "1.0.0",
+      "fingerprint": "decision-policy:sha256:88d8ff8944bb796fbe28533bbdb428cec2a800d3adca1e7a78a51e02c5059dee"
+    },
+    {
+      "id": "CONSEQUENTIAL_WARNING_GUARD",
+      "version": "1.0.0",
+      "fingerprint": "decision-policy:sha256:851c65ae53158c372004b4b9252c63a2dbad00a24567817fc04fb3e836a24a5a"
+    }
+  ],
+  "currentActions": [
+    "ACQUIRE_INDEPENDENT_PHYSICAL_EVIDENCE",
+    "COMPUTE_INTERNAL_IMPACT_CONTEXT"
+  ],
+  "blockedActions": [
+    "BUILD_FORECAST_INPUT_PACKAGE_1H",
+    "BUILD_FORECAST_INPUT_PACKAGE_3H",
+    "PROPOSE_OFFICIAL_WARNING"
+  ],
+  "authorityRequirements": [
+    {
+      "capability": "PROPOSE_OFFICIAL_WARNING"
+    }
+  ],
+  "decisionDeltas": [],
+  "counterfactuals": [],
+  "sourceMarginalValue": [
+    {
+      "schemaVersion": "vigia.source-marginal-value.v1",
+      "sourceId": "nasa-feds",
+      "sourceFamily": "VIIRS",
+      "uniqueRootMeasurements": 0,
+      "causalDuplicates": 1,
+      "decisionsLostWithoutSource": [],
+      "hypothesesChangedWithoutSource": [],
+      "examplesLostWithoutSource": 0,
+      "independentFamilyLost": false,
+      "qualification": "NO_UNIQUE_MEASURED_VALUE",
+      "fingerprint": "source-marginal-value:sha256:71d528d751da1656a5bc8d82e0a620a4e9533e1a6169aee195567dced9136ab0"
+    },
+    {
+      "schemaVersion": "vigia.source-marginal-value.v1",
+      "sourceId": "nasa-firms-viirs",
+      "sourceFamily": "VIIRS",
+      "uniqueRootMeasurements": 9,
+      "causalDuplicates": 0,
+      "decisionsLostWithoutSource": [
+        "PHYSICAL_SUPPORT"
+      ],
+      "hypothesesChangedWithoutSource": [
+        "WILDFIRE:ACTIVE_WILDFIRE"
+      ],
+      "examplesLostWithoutSource": 0,
+      "independentFamilyLost": true,
+      "qualification": "MEASURED_FROM_LINEAGE",
+      "fingerprint": "source-marginal-value:sha256:1559c9c67234f7a4d3c366107a6c4a539d364482c39ff82f2af3db1321a61460"
+    },
+    {
+      "schemaVersion": "vigia.source-marginal-value.v1",
+      "sourceId": "nifc-wfigs",
+      "sourceFamily": "OFFICIAL",
+      "uniqueRootMeasurements": 1,
+      "causalDuplicates": 0,
+      "decisionsLostWithoutSource": [
+        "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT"
+      ],
+      "hypothesesChangedWithoutSource": [
+        "WILDFIRE:ACTIVE_WILDFIRE"
+      ],
+      "examplesLostWithoutSource": 10,
+      "independentFamilyLost": true,
+      "qualification": "MEASURED_FROM_LINEAGE",
+      "fingerprint": "source-marginal-value:sha256:3e02644283b461bb7d112974f5072c3931f2ccbcce47cd2110c3df7781bd0498"
+    }
+  ],
+  "lineage": {
+    "graphFingerprint": "lineage-verification:sha256:ae03a0cc327a90e1296f73d30f5372f851fd84bfe63d5172133f5407503ff439",
+    "productVersionIds": [
+      "forecast-example-candidate:sha256:5148acd9ec8114bc3419eda368a7a40eefed5c378631466356f70ab681c77cc6",
+      "forecast-example-candidate:sha256:52c4af352a2c8e7940a3c408ae6a7010b86b750cd7f9eedb832f69533087b816",
+      "forecast-example-candidate:sha256:54adb5d2948178d2135b810cb24a3135ba14239005efaac0622d0d0e01fe5f18",
+      "forecast-example-candidate:sha256:5c40c31617db125e8d4fd1a59f422cd08093a9eef0b87dced73d02afc92bb1d7",
+      "forecast-example-candidate:sha256:6a84888b7a93205e4f10f6e4f6762033b4f725a34249bfdc4df46eaf90e32db7",
+      "forecast-example-candidate:sha256:7820ae0431cdbe5fd2f08d02007ececc4d3301f75dc9a5953b34fc3e12831085",
+      "forecast-example-candidate:sha256:84e8aa4cc11961e6ddeb7e3c9f3f1d3d1970df65a3d60e99948a720dd2dcda7c",
+      "forecast-example-candidate:sha256:bf2d2ab9199ab9a30e7fc3ef00e0b97891c08518d869080fe5f807a8a14569c8",
+      "forecast-example-candidate:sha256:ee49d5f5b081ce77109d6a76c12e21bdb6ea29b3868efe71007f42edaf35fef3",
+      "forecast-example-candidate:sha256:fb72d80aeb8de8de0b5f1fb25ff598692d6cc1d93bf95fb43b4813d31fd1e943",
+      "forecast-input-package:sha256:25971c60b2f919a0345c887afbf1ad2de4a568a7a900f81b42893c1ac2973731",
+      "forecast-input-package:sha256:460cbfd84a3365a86570b0c040690d206bf7e55fc19179736078f26c66dadadd",
+      "forecast-input-package:sha256:714525f5a1dda7df7b6e9d2fbfdf0705239540baf6fe8b19f176db658a9e63ab",
+      "forecast-input-package:sha256:765b6df3ccc27980d6b31ee38e97b4bc557dc4c89a607737a35269389a5c6fbc",
+      "forecast-input-package:sha256:8a15ad950d873f96bc017791c84378696c442586c9c33ee2d85042697998a800",
+      "forecast-input-package:sha256:91aef30a6c338aa32a8c32930878bcdc40826a612e94a7da387a7ad7b909f3f5",
+      "forecast-input-package:sha256:9c6783ba14f12c837edd2c7a1db4cd6e0ce2ff58270d519725903719c0b659e1",
+      "forecast-input-package:sha256:a05e948030bba13b3a0b2fb285fa91d1bd07ed316921275d3fb26adf1e34140b",
+      "forecast-input-package:sha256:af11f97ea002a6b71c61d0bc6a762c65f5dd54761c9c4a345326fb8abfe76c94",
+      "forecast-input-package:sha256:dbf39d9767ea78d838c69822f856069876bd4d1c3129861faadc2e07b6a51cdc",
+      "version:feds-progression:sha256:48bef527289b1cd46fd1bfc4bb4caccfe95154a6aeb8a772c4aabb2b1444bafa",
+      "version:incident-weather-slice:sha256:54730b14f0ae713e4e77dd7d7631245048bad1eaccbd7c6e7536dbd8a2821c52",
+      "version:perimeter-sequence:sha256:137bc474b0a21c080b593b3e7a2211f429303b5ac2c8dce8125052ef69943fe8"
+    ],
+    "valid": true
+  },
+  "rights": {
+    "schemaVersion": "vigia.export-rights-assessment.v1",
+    "allowed": true,
+    "blockers": [],
+    "attributions": [
+      {
+        "licenceId": "ICNF-ATTRIBUTION",
+        "attribution": "Instituto da Conservação da Natureza e das Florestas (ICNF).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FEDS-TERMS",
+        "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FIRMS-TERMS",
+        "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NIFC-OPEN-DATA",
+        "attribution": "National Interagency Fire Center, WFIGS.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NOAA-HRRR-PUBLIC-DATA",
+        "attribution": "NOAA HRRR; identify access date and do not imply NOAA endorsement.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "ODBL-1.0",
+        "attribution": "© OpenStreetMap contributors.",
+        "termsVersion": "1.0"
+      },
+      {
+        "licenceId": "USFS-LANDFIRE-PUBLIC-DATA",
+        "attribution": "LANDFIRE, U.S. Department of the Interior and U.S. Department of Agriculture, Forest Service.",
+        "termsVersion": "2026-08-24"
+      }
+    ]
+  },
+  "quality": {
+    "leakagePassed": true,
+    "corpusDecision": "CORPUS_NOT_READY"
+  },
+  "proofReferences": [
+    "proof-envelope:sha256:31a78989e0a34e84e985774bc6d5babce9da13a400f2b63d828e65d08e884751"
+  ],
+  "causingDataProductIds": [
+    "forecast-example-candidate:sha256:5148acd9ec8114bc3419eda368a7a40eefed5c378631466356f70ab681c77cc6",
+    "forecast-example-candidate:sha256:52c4af352a2c8e7940a3c408ae6a7010b86b750cd7f9eedb832f69533087b816",
+    "forecast-example-candidate:sha256:54adb5d2948178d2135b810cb24a3135ba14239005efaac0622d0d0e01fe5f18",
+    "forecast-example-candidate:sha256:5c40c31617db125e8d4fd1a59f422cd08093a9eef0b87dced73d02afc92bb1d7",
+    "forecast-example-candidate:sha256:6a84888b7a93205e4f10f6e4f6762033b4f725a34249bfdc4df46eaf90e32db7",
+    "forecast-example-candidate:sha256:7820ae0431cdbe5fd2f08d02007ececc4d3301f75dc9a5953b34fc3e12831085",
+    "forecast-example-candidate:sha256:84e8aa4cc11961e6ddeb7e3c9f3f1d3d1970df65a3d60e99948a720dd2dcda7c",
+    "forecast-example-candidate:sha256:bf2d2ab9199ab9a30e7fc3ef00e0b97891c08518d869080fe5f807a8a14569c8",
+    "forecast-example-candidate:sha256:ee49d5f5b081ce77109d6a76c12e21bdb6ea29b3868efe71007f42edaf35fef3",
+    "forecast-example-candidate:sha256:fb72d80aeb8de8de0b5f1fb25ff598692d6cc1d93bf95fb43b4813d31fd1e943",
+    "forecast-input-package:sha256:25971c60b2f919a0345c887afbf1ad2de4a568a7a900f81b42893c1ac2973731",
+    "forecast-input-package:sha256:460cbfd84a3365a86570b0c040690d206bf7e55fc19179736078f26c66dadadd",
+    "forecast-input-package:sha256:714525f5a1dda7df7b6e9d2fbfdf0705239540baf6fe8b19f176db658a9e63ab",
+    "forecast-input-package:sha256:765b6df3ccc27980d6b31ee38e97b4bc557dc4c89a607737a35269389a5c6fbc",
+    "forecast-input-package:sha256:8a15ad950d873f96bc017791c84378696c442586c9c33ee2d85042697998a800",
+    "forecast-input-package:sha256:91aef30a6c338aa32a8c32930878bcdc40826a612e94a7da387a7ad7b909f3f5",
+    "forecast-input-package:sha256:9c6783ba14f12c837edd2c7a1db4cd6e0ce2ff58270d519725903719c0b659e1",
+    "forecast-input-package:sha256:a05e948030bba13b3a0b2fb285fa91d1bd07ed316921275d3fb26adf1e34140b",
+    "forecast-input-package:sha256:af11f97ea002a6b71c61d0bc6a762c65f5dd54761c9c4a345326fb8abfe76c94",
+    "forecast-input-package:sha256:dbf39d9767ea78d838c69822f856069876bd4d1c3129861faadc2e07b6a51cdc",
+    "version:feds-progression:sha256:48bef527289b1cd46fd1bfc4bb4caccfe95154a6aeb8a772c4aabb2b1444bafa",
+    "version:incident-weather-slice:sha256:54730b14f0ae713e4e77dd7d7631245048bad1eaccbd7c6e7536dbd8a2821c52",
+    "version:perimeter-sequence:sha256:137bc474b0a21c080b593b3e7a2211f429303b5ac2c8dce8125052ef69943fe8"
+  ],
+  "governedWork": [],
+  "observability": {
+    "hypothesesEvaluated": 10,
+    "hypothesesExcluded": 6,
+    "decisionDependenciesEvaluated": 5,
+    "decisionsBlockedByCategory": {
+      "BLOCKED_BY_DATA": 2,
+      "BLOCKED_BY_EVIDENCE": 1
+    },
+    "candidateAcquisitionsEvaluated": 5,
+    "candidateAcquisitionsSelected": 0,
+    "decisionValueUnlocks": 160,
+    "dataGapsOpen": 2
+  },
+  "replayFingerprint": "crisis-decision-packet:sha256:4e0573deb28766112fd1f207ee3e2cebd020b399a7ed958b91c31b1f1a41f1eb",
+  "integrityState": "SIGNED_AND_VERIFIED",
+  "proof": {
+    "schemaVersion": "vigia.proof-envelope.v1",
+    "proofType": "ED25519",
+    "keyId": "decision-foundry-ed25519-v1",
+    "issuerId": "vigia-decision-foundry",
+    "statement": {
+      "schemaVersion": "vigia.signed-statement.v1",
+      "statementType": "CRISIS_DECISION_PACKET",
+      "issuerId": "vigia-decision-foundry",
+      "principalId": "machine:decision-foundry-compiler",
+      "organizationId": "VIGIA",
+      "subjectId": "2025-AZGCP-000597",
+      "payload": {
+        "requestFingerprint": "crisis-decision-packet:sha256:4e0573deb28766112fd1f207ee3e2cebd020b399a7ed958b91c31b1f1a41f1eb",
+        "packetFingerprint": "crisis-decision-packet:sha256:4e0573deb28766112fd1f207ee3e2cebd020b399a7ed958b91c31b1f1a41f1eb"
+      },
+      "scope": {
+        "incidentIds": [
+          "2025-AZGCP-000597"
+        ],
+        "resourceTypes": [
+          "CRISIS_DECISION_PACKET"
+        ],
+        "actionClasses": [
+          "COMPILE_DECISION_PACKET"
+        ]
+      },
+      "credentialRefs": [],
+      "deviceId": null,
+      "sessionId": null,
+      "issuedAt": "2025-07-31T10:37:57.000Z",
+      "notBefore": "2025-07-31T10:37:57.000Z",
+      "expiresAt": "2025-08-01T10:37:57.000Z",
+      "nonce": "978abe146756531dd72209ee0ed7e7a9a652663817f018fcc1ee6b7b80f6df4c",
+      "sequence": 0,
+      "keyId": "decision-foundry-ed25519-v1",
+      "statementHash": "signed-statement:sha256:a3711a019ad8b196076de6b1bae0eb7ee5b1ea65ef09250df13b9b6518345eee"
+    },
+    "statementHash": "signed-statement:sha256:a3711a019ad8b196076de6b1bae0eb7ee5b1ea65ef09250df13b9b6518345eee",
+    "signature": "GJp8oU471N4dycig1A1pHL2ea7YAe9Za8S6EjV3ddWlGyp3-MmkwYAyEr3UsrZJPT3oXo4qamoPwiru3-FBOBQ",
+    "fingerprint": "proof-envelope:sha256:31a78989e0a34e84e985774bc6d5babce9da13a400f2b63d828e65d08e884751"
+  },
+  "proofVerification": {
+    "status": "VALID",
+    "cryptographicallyVerified": true,
+    "trustZone": "CRYPTOGRAPHICALLY_VERIFIED",
+    "reasons": [],
+    "envelopeFingerprint": "proof-envelope:sha256:31a78989e0a34e84e985774bc6d5babce9da13a400f2b63d828e65d08e884751",
+    "statementHash": "signed-statement:sha256:a3711a019ad8b196076de6b1bae0eb7ee5b1ea65ef09250df13b9b6518345eee",
+    "principalId": "machine:decision-foundry-compiler",
+    "organizationId": "VIGIA",
+    "keyId": "decision-foundry-ed25519-v1",
+    "verifiedAt": "2025-07-31T10:37:57.000Z"
+  },
+  "signedFingerprint": "signed-crisis-decision-packet:sha256:9274ff925f8d098c9de6d40987ec1b7b7470db3143ff8206a3e0333dc7ebab5c"
+}

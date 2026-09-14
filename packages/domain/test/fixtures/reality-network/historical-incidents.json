@@ -1,0 +1,57 @@
+[
+  {
+    "id": "pt-2023-alpha",
+    "startedAt": "2023-08-04T12:00:00.000Z",
+    "evaluationTime": "2023-08-04T18:00:00.000Z",
+    "labelTier": "OFFICIAL_FINAL",
+    "region": "Portugal",
+    "season": "2023",
+    "falseIncident": false,
+    "opportunityValid": true,
+    "signals": [
+      {"sourceId":"firms:viirs","sourceClass":"PHYSICAL","instrumentFamily":"VIIRS","knowledgeTime":"2023-08-04T12:24:00.000Z"},
+      {"sourceId":"firms:modis","sourceClass":"PHYSICAL","instrumentFamily":"MODIS","knowledgeTime":"2023-08-04T13:20:00.000Z"},
+      {"sourceId":"official:icnf","sourceClass":"OFFICIAL","instrumentFamily":"OFFICIAL","knowledgeTime":"2023-08-04T14:05:00.000Z"}
+    ]
+  },
+  {
+    "id": "pt-2024-beta",
+    "startedAt": "2024-09-17T10:00:00.000Z",
+    "evaluationTime": "2024-09-17T20:00:00.000Z",
+    "labelTier": "OFFICIAL_FINAL",
+    "region": "Portugal",
+    "season": "2024",
+    "falseIncident": false,
+    "opportunityValid": true,
+    "signals": [
+      {"sourceId":"firms:viirs","sourceClass":"PHYSICAL","instrumentFamily":"VIIRS","knowledgeTime":"2024-09-17T10:42:00.000Z"},
+      {"sourceId":"official:icnf","sourceClass":"OFFICIAL","instrumentFamily":"OFFICIAL","knowledgeTime":"2024-09-17T12:00:00.000Z"}
+    ]
+  },
+  {
+    "id": "us-2026-gamma",
+    "startedAt": "2026-08-23T19:00:00.000Z",
+    "evaluationTime": "2026-08-24T03:00:00.000Z",
+    "labelTier": "OFFICIAL_PROVISIONAL",
+    "region": "United States",
+    "season": "2026",
+    "falseIncident": false,
+    "opportunityValid": true,
+    "signals": [
+      {"sourceId":"goes:g19","sourceClass":"PHYSICAL","instrumentFamily":"ABI","knowledgeTime":"2026-08-23T19:06:00.000Z"},
+      {"sourceId":"firms:viirs","sourceClass":"PHYSICAL","instrumentFamily":"VIIRS","knowledgeTime":"2026-08-23T20:20:00.000Z"},
+      {"sourceId":"official:wfigs","sourceClass":"OFFICIAL","instrumentFamily":"OFFICIAL","knowledgeTime":"2026-08-23T21:30:00.000Z"}
+    ]
+  },
+  {
+    "id": "us-2026-control",
+    "startedAt": "2026-08-23T00:00:00.000Z",
+    "evaluationTime": "2026-08-24T00:00:00.000Z",
+    "labelTier": "OPPORTUNITY_CONTROL",
+    "region": "United States",
+    "season": "2026",
+    "falseIncident": true,
+    "opportunityValid": true,
+    "signals": []
+  }
+]

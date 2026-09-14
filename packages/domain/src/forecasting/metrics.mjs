@@ -1,0 +1,14 @@
+import { immutable,semanticHash } from '../intelligence/shared.mjs';
+import { boundaryDistances,convexIntersection,polygonAreaKm2,polygonCentroid,polygonIou } from './geometry.mjs';
+import { haversineKm } from '../geo.mjs';
+
+export function evaluateSpreadHorizon({forecastHorizon,observedPerimeter,probabilitySamples=[]}={}){const predicted=forecastHorizon.expectedPerimeter,observedArea=polygonAreaKm2(observedPerimeter),predictedArea=polygonAreaKm2(predicted),intersection=convexIntersection(predicted,observedPerimeter),intersectionArea=intersection?polygonAreaKm2(intersection):0,boundary=boundaryDistances(predicted,observedPerimeter),underpredictionAreaKm2=Math.max(0,observedArea-intersectionArea),overpredictionAreaKm2=Math.max(0,predictedArea-intersectionArea),coverage=Object.fromEntries(forecastHorizon.contours.map((item)=>{const overlap=convexIntersection(item.geometry,observedPerimeter),area=overlap?polygonAreaKm2(overlap):0;return[item.probability,observedArea?area/observedArea:null];})),brierScore=probabilitySamples.length?probabilitySamples.reduce((sum,item)=>sum+(item.probability-item.outcome)**2,0)/probabilitySamples.length:null;const core={hours:forecastHorizon.hours,iou:polygonIou(predicted,observedPerimeter),areaErrorKm2:predictedArea-observedArea,absoluteAreaErrorKm2:Math.abs(predictedArea-observedArea),centroidDisplacementKm:haversineKm(polygonCentroid(predicted),polygonCentroid(observedPerimeter)),meanBoundaryDistanceKm:boundary.meanKm,hausdorffDistanceKm:boundary.hausdorffKm,robustBoundaryP95Km:boundary.robustP95Km,underpredictionAreaKm2,overpredictionAreaKm2,brierScore,contourObservedAreaCoverage:coverage};return immutable(core);}
+export function aggregateSpreadEvaluation(cases=[]){
+  const byHorizon={};
+  for(const item of cases){const metrics=evaluateSpreadHorizon(item);(byHorizon[metrics.hours]??=[]).push(metrics);}
+  const horizons=Object.fromEntries(Object.entries(byHorizon).map(([hour,rows])=>{
+    const tailCount=Math.max(1,Math.ceil(rows.length*.1)),withBrier=rows.filter((item)=>item.brierScore!==null);
+    return[hour,{caseCount:rows.length,meanIou:rows.reduce((sum,item)=>sum+item.iou,0)/rows.length,meanAbsoluteAreaErrorKm2:rows.reduce((sum,item)=>sum+item.absoluteAreaErrorKm2,0)/rows.length,meanCentroidDisplacementKm:rows.reduce((sum,item)=>sum+item.centroidDisplacementKm,0)/rows.length,meanBoundaryDistanceKm:rows.reduce((sum,item)=>sum+item.meanBoundaryDistanceKm,0)/rows.length,worstDecileUnderpredictionKm2:[...rows].sort((a,b)=>b.underpredictionAreaKm2-a.underpredictionAreaKm2).slice(0,tailCount).reduce((sum,item)=>sum+item.underpredictionAreaKm2,0)/tailCount,meanBrierScore:withBrier.length?withBrier.reduce((sum,item)=>sum+item.brierScore,0)/withBrier.length:null}];
+  })),core={schemaVersion:'vigia.spread-evaluation.v1',horizons};
+  return immutable({...core,evaluationHash:semanticHash('spread-evaluation',core)});
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "nasa-firms-archive",
+  "purpose": "MODIS/VIIRS standard active fire",
+  "coverage": [
+    "western-us",
+    "portugal"
+  ],
+  "period": "MODIS 2000-present; VIIRS 2012-present",
+  "resolution": "bounded by area and five-day windows",
+  "collectionProcess": "MAP_KEY area API and Earthdata archives",
+  "knowledgeTimeSemantics": "OBSERVATION_PLUS_ARCHIVE_DISCOVERY",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "CSV point presence alone does not prove swath opportunity or a negative."
+  ],
+  "knownMissingness": [
+    "CSV point presence alone does not prove swath opportunity or a negative."
+  ],
+  "licence": "NASA-FIRMS-TERMS",
+  "appropriateUse": "NONE",
+  "inappropriateUse": "Independent truth without lineage."
+}

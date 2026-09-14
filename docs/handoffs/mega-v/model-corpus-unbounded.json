@@ -1,0 +1,161 @@
+{
+  "lane": "ACTUAL_LOCAL_MODEL_ON_CONTROLLED_CORPUS_NO_OPERATIONAL_WRITES",
+  "model": "llama3.2:3b",
+  "casesPlanned": 104,
+  "casesRun": 6,
+  "schemaValidPercent": 33.333333333333336,
+  "factCorrectPercent": 0,
+  "sourceSpanPercent": 33.333333333333336,
+  "abstentionPercent": null,
+  "toolIntentPercent": null,
+  "p50Ms": 18334,
+  "p95Ms": 39541,
+  "crashes": 4,
+  "rows": [
+    {
+      "id": "address-1",
+      "category": "address",
+      "text": "Hospital de Teste 1. Morada: Rua da República, 1.",
+      "expected": [
+        {
+          "subject": "Hospital de Teste 1",
+          "field": "address.street",
+          "value": "Rua da República, 1"
+        }
+      ],
+      "intent": null,
+      "output": null,
+      "error": "Unexpected end of JSON input",
+      "schemaValid": false,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 39541
+    },
+    {
+      "id": "phone-1",
+      "category": "phone",
+      "text": "Hospital de Teste 1. Telefone: 239123451.",
+      "expected": [
+        {
+          "subject": "Hospital de Teste 1",
+          "field": "contact.phone",
+          "value": "239123451"
+        }
+      ],
+      "intent": null,
+      "output": null,
+      "error": "Unexpected end of JSON input",
+      "schemaValid": false,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 26359
+    },
+    {
+      "id": "road-1",
+      "category": "road",
+      "text": "Aviso: estrada N111. Não é publicado o estado de circulação.",
+      "expected": [
+        {
+          "subject": "notice",
+          "field": "road.identifier",
+          "value": "N111"
+        }
+      ],
+      "intent": null,
+      "output": {
+        "facts": [
+          {
+            "subject": "estrada N111",
+            "field": "road.identifier",
+            "value": "N111",
+            "sourceText": "Aviso: estrada N111. Não é publicado o estado de circulação."
+          }
+        ],
+        "intent": null
+      },
+      "error": null,
+      "schemaValid": true,
+      "sourceSupported": true,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 7788
+    },
+    {
+      "id": "municipality-1",
+      "category": "municipality",
+      "text": "Hospital de Teste 1. Município: Évora.",
+      "expected": [
+        {
+          "subject": "Hospital de Teste 1",
+          "field": "address.municipality",
+          "value": "Évora"
+        }
+      ],
+      "intent": null,
+      "output": null,
+      "error": "Unterminated string in JSON at position 513 (line 25 column 6)",
+      "schemaValid": false,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 10935
+    },
+    {
+      "id": "dates-1",
+      "category": "dates",
+      "text": "Aviso publicado em 2026-09-12T08:00:00Z.",
+      "expected": [
+        {
+          "subject": "notice",
+          "field": "publishedAt",
+          "value": "2026-09-12T08:00:00Z"
+        }
+      ],
+      "intent": null,
+      "output": {
+        "facts": [
+          {
+            "subject": "publishedAt",
+            "field": "date",
+            "value": "2026-09-12T08:00:00Z",
+            "sourceText": "Aviso publicado em 2026-09-12T08:00:00Z."
+          }
+        ],
+        "intent": null
+      },
+      "error": null,
+      "schemaValid": true,
+      "sourceSupported": true,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 7666
+    },
+    {
+      "id": "ranges-1",
+      "category": "ranges",
+      "text": "Validade do aviso: 2026-09-12T10:00:00Z até 2026-09-12T12:00:00Z.",
+      "expected": [
+        {
+          "subject": "notice",
+          "field": "validFrom",
+          "value": "2026-09-12T10:00:00Z"
+        },
+        {
+          "subject": "notice",
+          "field": "validUntil",
+          "value": "2026-09-12T12:00:00Z"
+        }
+      ],
+      "intent": null,
+      "output": null,
+      "error": "Expected ',' or ']' after array element in JSON at position 428 (line 15 column 2)",
+      "schemaValid": false,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 18334
+    }
+  ]
+}

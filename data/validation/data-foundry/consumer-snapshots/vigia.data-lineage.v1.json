@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "vigia.data-lineage.v1",
+  "generatedFrom": "data-foundry-report:sha256:c8287a3cff1eb45693facb4c7b6751b182e5c262b228438379dc91bb9755514b",
+  "rights": {
+    "schemaVersion": "vigia.export-rights-assessment.v1",
+    "allowed": true,
+    "blockers": [],
+    "attributions": [
+      {
+        "licenceId": "ICNF-ATTRIBUTION",
+        "attribution": "Instituto da Conservação da Natureza e das Florestas (ICNF).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FEDS-TERMS",
+        "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NASA-FIRMS-TERMS",
+        "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NIFC-OPEN-DATA",
+        "attribution": "National Interagency Fire Center, WFIGS.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "NOAA-HRRR-PUBLIC-DATA",
+        "attribution": "NOAA HRRR; identify access date and do not imply NOAA endorsement.",
+        "termsVersion": "2026-08-24"
+      },
+      {
+        "licenceId": "ODBL-1.0",
+        "attribution": "© OpenStreetMap contributors.",
+        "termsVersion": "1.0"
+      },
+      {
+        "licenceId": "USFS-LANDFIRE-PUBLIC-DATA",
+        "attribution": "LANDFIRE, U.S. Department of the Interior and U.S. Department of Agriculture, Forest Service.",
+        "termsVersion": "2026-08-24"
+      }
+    ]
+  },
+  "quality": {
+    "lineage": {
+      "schemaVersion": "vigia.lineage-verification.v1",
+      "nodeCount": 100,
+      "edgeCount": 148,
+      "failures": [],
+      "passed": true,
+      "fingerprint": "lineage-verification:sha256:ae03a0cc327a90e1296f73d30f5372f851fd84bfe63d5172133f5407503ff439"
+    },
+    "leakage": {
+      "schemaVersion": "vigia.corpus-leakage-audit.v1",
+      "passed": true,
+      "rowsInspected": 11,
+      "negativesInspected": 100,
+      "violations": [],
+      "fingerprint": "corpus-leakage-audit:sha256:20152c207bb4cc63376eca4767d96b1063e213d8e07d3e8c41f50d92d5cf9f9a"
+    }
+  },
+  "materializationStatus": {
+    "forecastInputPackages": 11
+  },
+  "nodeCount": 100,
+  "edgeCount": 148,
+  "verification": {
+    "schemaVersion": "vigia.lineage-verification.v1",
+    "nodeCount": 100,
+    "edgeCount": 148,
+    "failures": [],
+    "passed": true,
+    "fingerprint": "lineage-verification:sha256:ae03a0cc327a90e1296f73d30f5372f851fd84bfe63d5172133f5407503ff439"
+  },
+  "registryFingerprint": "data-product-registry:sha256:57cd1f08b1894ad766ae5fae02a309e9873b5413eb6a5a0bca5b41947f95f1e0"
+}

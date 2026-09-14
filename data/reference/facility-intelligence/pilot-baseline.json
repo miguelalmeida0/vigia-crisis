@@ -1,0 +1,2578 @@
+{
+  "sourceArchive": {
+    "purpose": "RESPONSE_FACILITIES",
+    "path": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+    "bytes": 5152293,
+    "sha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6",
+    "queryHash": "sha256:e379e41fc645afdc470bd75e78c4232ca207b3d9e60690dd90984cf3c8018431",
+    "query": "{\"baseline\":\"osm-community-medical-fire-protected.json\",\"classificationPolicy\":{\"version\":\"vigia.response-facility-local-classification.v2\",\"civilProtectionSourceTags\":[\"office\",\"government\",\"emergency\",\"name\"],\"airSupportSourceTags\":[\"aeroway\",\"operator\",\"name\",\"description\"],\"truthBoundary\":\"Only explicit mapped tags and locally matched operational-response terms classify a facility; mapped presence does not establish current availability or capacity.\"},\"segments\":[{\"group\":\"response-support\",\"bbox\":[36.7,-9.75,38,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"amenity\\\"=\\\"ambulance_station\\\"](36.7,-9.75,38,-6);nwr[\\\"emergency\\\"=\\\"ambulance_station\\\"](36.7,-9.75,38,-6);nwr[\\\"amenity\\\"=\\\"police\\\"](36.7,-9.75,38,-6);nwr[\\\"amenity\\\"=\\\"shelter\\\"](36.7,-9.75,38,-6);nwr[\\\"emergency\\\"=\\\"shelter\\\"](36.7,-9.75,38,-6);nwr[\\\"amenity\\\"=\\\"social_facility\\\"][\\\"social_facility\\\"=\\\"shelter\\\"](36.7,-9.75,38,-6););out center tags qt;\"},{\"group\":\"civil-protection\",\"bbox\":[36.7,-9.75,38,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"government\\\"=\\\"civil_protection\\\"](36.7,-9.75,38,-6);nwr[\\\"emergency\\\"=\\\"civil_protection\\\"](36.7,-9.75,38,-6);nwr[\\\"office\\\"=\\\"government\\\"](36.7,-9.75,38,-6););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[36.7,-9.75,38,-7.875],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](36.7,-9.75,38,-7.875);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](36.7,-9.75,38,-7.875););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[36.7,-7.875,38,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](36.7,-7.875,38,-6);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](36.7,-7.875,38,-6););out center tags qt;\"},{\"group\":\"water-support\",\"bbox\":[36.7,-9.75,38,-6],\"query\":\"[out:json][timeout:60];(node[\\\"emergency\\\"=\\\"fire_hydrant\\\"](36.7,-9.75,38,-6);node[\\\"emergency\\\"=\\\"water_tank\\\"](36.7,-9.75,38,-6););out center tags qt;\"},{\"group\":\"response-support\",\"bbox\":[38,-9.75,39,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"amenity\\\"=\\\"ambulance_station\\\"](38,-9.75,39,-6);nwr[\\\"emergency\\\"=\\\"ambulance_station\\\"](38,-9.75,39,-6);nwr[\\\"amenity\\\"=\\\"police\\\"](38,-9.75,39,-6);nwr[\\\"amenity\\\"=\\\"shelter\\\"](38,-9.75,39,-6);nwr[\\\"emergency\\\"=\\\"shelter\\\"](38,-9.75,39,-6);nwr[\\\"amenity\\\"=\\\"social_facility\\\"][\\\"social_facility\\\"=\\\"shelter\\\"](38,-9.75,39,-6););out center tags qt;\"},{\"group\":\"civil-protection\",\"bbox\":[38,-9.75,39,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"government\\\"=\\\"civil_protection\\\"](38,-9.75,39,-6);nwr[\\\"emergency\\\"=\\\"civil_protection\\\"](38,-9.75,39,-6);nwr[\\\"office\\\"=\\\"government\\\"](38,-9.75,39,-6););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[38,-9.75,39,-7.875],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](38,-9.75,39,-7.875);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](38,-9.75,39,-7.875););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[38,-7.875,39,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](38,-7.875,39,-6);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](38,-7.875,39,-6););out center tags qt;\"},{\"group\":\"water-support\",\"bbox\":[38,-9.75,39,-6],\"query\":\"[out:json][timeout:60];(node[\\\"emergency\\\"=\\\"fire_hydrant\\\"](38,-9.75,39,-6);node[\\\"emergency\\\"=\\\"water_tank\\\"](38,-9.75,39,-6););out center tags qt;\"},{\"group\":\"response-support\",\"bbox\":[39,-9.75,40,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"amenity\\\"=\\\"ambulance_station\\\"](39,-9.75,40,-6);nwr[\\\"emergency\\\"=\\\"ambulance_station\\\"](39,-9.75,40,-6);nwr[\\\"amenity\\\"=\\\"police\\\"](39,-9.75,40,-6);nwr[\\\"amenity\\\"=\\\"shelter\\\"](39,-9.75,40,-6);nwr[\\\"emergency\\\"=\\\"shelter\\\"](39,-9.75,40,-6);nwr[\\\"amenity\\\"=\\\"social_facility\\\"][\\\"social_facility\\\"=\\\"shelter\\\"](39,-9.75,40,-6););out center tags qt;\"},{\"group\":\"civil-protection\",\"bbox\":[39,-9.75,40,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"government\\\"=\\\"civil_protection\\\"](39,-9.75,40,-6);nwr[\\\"emergency\\\"=\\\"civil_protection\\\"](39,-9.75,40,-6);nwr[\\\"office\\\"=\\\"government\\\"](39,-9.75,40,-6););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[39,-9.75,40,-7.875],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](39,-9.75,40,-7.875);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](39,-9.75,40,-7.875););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[39,-7.875,40,-6.9375],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](39,-7.875,40,-6.9375);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](39,-7.875,40,-6.9375););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[39,-6.9375,40,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](39,-6.9375,40,-6);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](39,-6.9375,40,-6););out center tags qt;\"},{\"group\":\"water-support\",\"bbox\":[39,-9.75,40,-6],\"query\":\"[out:json][timeout:60];(node[\\\"emergency\\\"=\\\"fire_hydrant\\\"](39,-9.75,40,-6);node[\\\"emergency\\\"=\\\"water_tank\\\"](39,-9.75,40,-6););out center tags qt;\"},{\"group\":\"response-support\",\"bbox\":[40,-9.75,41,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"amenity\\\"=\\\"ambulance_station\\\"](40,-9.75,41,-6);nwr[\\\"emergency\\\"=\\\"ambulance_station\\\"](40,-9.75,41,-6);nwr[\\\"amenity\\\"=\\\"police\\\"](40,-9.75,41,-6);nwr[\\\"amenity\\\"=\\\"shelter\\\"](40,-9.75,41,-6);nwr[\\\"emergency\\\"=\\\"shelter\\\"](40,-9.75,41,-6);nwr[\\\"amenity\\\"=\\\"social_facility\\\"][\\\"social_facility\\\"=\\\"shelter\\\"](40,-9.75,41,-6););out center tags qt;\"},{\"group\":\"civil-protection\",\"bbox\":[40,-9.75,41,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"government\\\"=\\\"civil_protection\\\"](40,-9.75,41,-6);nwr[\\\"emergency\\\"=\\\"civil_protection\\\"](40,-9.75,41,-6);nwr[\\\"office\\\"=\\\"government\\\"](40,-9.75,41,-6););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[40,-9.75,41,-8.8125],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](40,-9.75,41,-8.8125);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](40,-9.75,41,-8.8125););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[40,-8.8125,41,-7.875],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](40,-8.8125,41,-7.875);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](40,-8.8125,41,-7.875););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[40,-7.875,41,-6.9375],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](40,-7.875,41,-6.9375);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](40,-7.875,41,-6.9375););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[40,-6.9375,41,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](40,-6.9375,41,-6);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](40,-6.9375,41,-6););out center tags qt;\"},{\"group\":\"water-support\",\"bbox\":[40,-9.75,41,-6],\"query\":\"[out:json][timeout:60];(node[\\\"emergency\\\"=\\\"fire_hydrant\\\"](40,-9.75,41,-6);node[\\\"emergency\\\"=\\\"water_tank\\\"](40,-9.75,41,-6););out center tags qt;\"},{\"group\":\"response-support\",\"bbox\":[41,-9.75,42.3,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"amenity\\\"=\\\"ambulance_station\\\"](41,-9.75,42.3,-6);nwr[\\\"emergency\\\"=\\\"ambulance_station\\\"](41,-9.75,42.3,-6);nwr[\\\"amenity\\\"=\\\"police\\\"](41,-9.75,42.3,-6);nwr[\\\"amenity\\\"=\\\"shelter\\\"](41,-9.75,42.3,-6);nwr[\\\"emergency\\\"=\\\"shelter\\\"](41,-9.75,42.3,-6);nwr[\\\"amenity\\\"=\\\"social_facility\\\"][\\\"social_facility\\\"=\\\"shelter\\\"](41,-9.75,42.3,-6););out center tags qt;\"},{\"group\":\"civil-protection\",\"bbox\":[41,-9.75,42.3,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"government\\\"=\\\"civil_protection\\\"](41,-9.75,42.3,-6);nwr[\\\"emergency\\\"=\\\"civil_protection\\\"](41,-9.75,42.3,-6);nwr[\\\"office\\\"=\\\"government\\\"](41,-9.75,42.3,-6););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[41,-9.75,42.3,-8.8125],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](41,-9.75,42.3,-8.8125);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](41,-9.75,42.3,-8.8125););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[41,-8.8125,42.3,-7.875],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](41,-8.8125,42.3,-7.875);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](41,-8.8125,42.3,-7.875););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[41,-7.875,42.3,-6.9375],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](41,-7.875,42.3,-6.9375);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](41,-7.875,42.3,-6.9375););out center tags qt;\"},{\"group\":\"air-support\",\"bbox\":[41,-6.9375,42.3,-6],\"query\":\"[out:json][timeout:60];(nwr[\\\"aeroway\\\"=\\\"heliport\\\"](41,-6.9375,42.3,-6);nwr[\\\"aeroway\\\"=\\\"helipad\\\"](41,-6.9375,42.3,-6););out center tags qt;\"},{\"group\":\"water-support\",\"bbox\":[41,-9.75,42.3,-6],\"query\":\"[out:json][timeout:60];(node[\\\"emergency\\\"=\\\"fire_hydrant\\\"](41,-9.75,42.3,-6);node[\\\"emergency\\\"=\\\"water_tank\\\"](41,-9.75,42.3,-6););out center tags qt;\"}]}",
+    "retrievedAt": "2026-09-04T19:22:24.963Z",
+    "provider": "OpenStreetMap contributors via Overpass API",
+    "license": "ODbL 1.0; attribution required",
+    "truthBoundary": "Static mapped context only; no live staffing, capacity, availability, dispatch, authority, or outcome is inferred."
+  },
+  "selection": "34 Évora, 33 Coimbra, 33 Leiria; diverse mapped types within 30 km of city reference points. Pilot area is not an inferred municipality.",
+  "records": [
+    {
+      "id": "osm:node:12983299161",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9085606,
+        38.571181
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.05272856825163017
+    },
+    {
+      "id": "osm:node:4775206361",
+      "name": "Posto Médico",
+      "canonicalName": "Posto Médico",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.9090557,
+        38.572628
+      ],
+      "address": {
+        "street": "Rua de Dona Isabel",
+        "locality": "Évora"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:street": "Rua de Dona Isabel",
+        "amenity": "clinic",
+        "name": "Posto Médico"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.20296129467604115
+    },
+    {
+      "id": "osm:node:13710218923",
+      "name": "Polícia de Segurança Pública de Évora - Esquadra de Investigação Criminal",
+      "canonicalName": "Polícia de Segurança Pública de Évora - Esquadra de Investigação Criminal",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -7.9083012,
+        38.5729248
+      ],
+      "operator": "Polícia de Segurança Pública",
+      "phone": "+351 266 760 450",
+      "website": "https://www.psp.pt/",
+      "address": {
+        "street": "Rua Francisco Soares Lusitano",
+        "postcode": "7004-511",
+        "locality": "Évora"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:postcode": "7004-511",
+        "addr:street": "Rua Francisco Soares Lusitano",
+        "amenity": "police",
+        "building": "yes",
+        "name": "Polícia de Segurança Pública de Évora - Esquadra de Investigação Criminal",
+        "operator": "Polícia de Segurança Pública",
+        "operator:short": "PSP",
+        "operator:wikidata": "Q3460075",
+        "operator:wikipedia": "en:Polícia de Segurança Pública",
+        "phone": "+351 266 760 450",
+        "short_name": "PSP",
+        "website": "https://www.psp.pt/"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.21562381182751994
+    },
+    {
+      "id": "osm:relation:13478475",
+      "name": "Hospital do Espírito Santo",
+      "canonicalName": "Hospital do Espírito Santo",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -7.9020634,
+        38.56919
+      ],
+      "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+      "address": {
+        "street": "Largo Senhor da Pobreza",
+        "postcode": "7000-811",
+        "locality": "Évora"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:postcode": "7000-811",
+        "addr:street": "Largo Senhor da Pobreza",
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Hospital do Espírito Santo",
+        "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+        "operator:type": "government",
+        "short_name": "HESE",
+        "type": "multipolygon"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.5539660108350338
+    },
+    {
+      "id": "osm:way:481130645",
+      "name": "Bombeiros Voluntários de Évora",
+      "canonicalName": "Bombeiros Voluntários de Évora",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -7.902044,
+        38.5673919
+      ],
+      "address": {
+        "street": "Avenida dos Bombeiros",
+        "locality": "Évora"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:street": "Avenida dos Bombeiros",
+        "amenity": "fire_station",
+        "building": "yes",
+        "name": "Bombeiros Voluntários de Évora",
+        "wikidata": "Q91301851"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.6550461691204624
+    },
+    {
+      "id": "osm:way:162512606",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -7.9072287,
+        38.5604816
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "layer": "1",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 1.1715135535407408
+    },
+    {
+      "id": "osm:node:12983124527",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9076945,
+        38.5714729
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.05891062795374275
+    },
+    {
+      "id": "osm:node:6141367940",
+      "name": "Joaquim Chaves Saúde",
+      "canonicalName": "Joaquim Chaves Saúde",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.9082017,
+        38.5691473
+      ],
+      "phone": "+351 266 703 592",
+      "website": "https://www.jcs.pt/pt/home",
+      "address": {
+        "street": "Rua da República",
+        "houseNumber": "105",
+        "postcode": "7000-656",
+        "locality": "Évora"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:housenumber": "105",
+        "addr:postcode": "7000-656",
+        "addr:street": "Rua da República",
+        "amenity": "clinic",
+        "name": "Joaquim Chaves Saúde",
+        "opening_hours": "Mo-Fr 08:00-16:00; Sa 08:00-13:00",
+        "phone": "+351 266 703 592",
+        "website": "https://www.jcs.pt/pt/home"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.2067557781382793
+    },
+    {
+      "id": "osm:node:9212196979",
+      "name": "GNR - Destacamento de Ação Fiscal de Évora",
+      "canonicalName": "GNR - Destacamento de Ação Fiscal de Évora",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -7.9057088,
+        38.5681563
+      ],
+      "operator": "Guarda Nacional Republicana",
+      "address": {
+        "street": "Rua da Rampa",
+        "postcode": "7000-655",
+        "locality": "Évora"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:postcode": "7000-655",
+        "addr:street": "Rua da Rampa",
+        "amenity": "police",
+        "check_date": "2024-12-20",
+        "name": "GNR - Destacamento de Ação Fiscal de Évora",
+        "operator": "Guarda Nacional Republicana",
+        "operator:wikidata": "Q1280906",
+        "operator:wikipedia": "pt:Guarda Nacional Republicana"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.37371531926767854
+    },
+    {
+      "id": "osm:node:5922139070",
+      "name": "Hospital da Misericórdia de Évora",
+      "canonicalName": "Hospital da Misericórdia de Évora",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -7.914578,
+        38.5633397
+      ],
+      "address": {},
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "Hospital da Misericórdia de Évora"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 1.0259660279459697
+    },
+    {
+      "id": "osm:way:770292264",
+      "name": "Bombeiros Voluntários de Arraiolos",
+      "canonicalName": "Bombeiros Voluntários de Arraiolos",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -7.9884918,
+        38.7205646
+      ],
+      "address": {},
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "amenity": "fire_station",
+        "name": "Bombeiros Voluntários de Arraiolos"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 18.040216727345364
+    },
+    {
+      "id": "osm:way:1361875236",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -7.907649,
+        38.5600696
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 1.2157880821984322
+    },
+    {
+      "id": "osm:node:3575235993",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9071821,
+        38.5722052
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.15170729811146638
+    },
+    {
+      "id": "osm:node:9723453040",
+      "name": "URAP Alentejo Central",
+      "canonicalName": "URAP Alentejo Central",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.911657,
+        38.5740843
+      ],
+      "operator": "Serviço Nacional de Saúde",
+      "phone": "+351 266242607",
+      "email": "urap@alentejocentral.min-saude.pt",
+      "address": {
+        "street": "Rua Manuel d'Olival",
+        "houseNumber": "16",
+        "postcode": "7000-610",
+        "locality": "Évora"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:housenumber": "16",
+        "addr:postcode": "7000-610",
+        "addr:street": "Rua Manuel d'Olival",
+        "amenity": "clinic",
+        "email": "urap@alentejocentral.min-saude.pt",
+        "healthcare": "clinic",
+        "name": "URAP Alentejo Central",
+        "operator": "Serviço Nacional de Saúde",
+        "operator:short": "SNS",
+        "operator:wikidata": "Q1299901",
+        "phone": "+351 266242607"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.4676462040532856
+    },
+    {
+      "id": "osm:node:6233153426",
+      "name": "Departamento de Investigação e Acção Penal de Évora",
+      "canonicalName": "Departamento de Investigação e Acção Penal de Évora",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -7.9056129,
+        38.5754426
+      ],
+      "address": {},
+      "upstreamType": "police",
+      "sourceTags": {
+        "amenity": "police",
+        "name": "Departamento de Investigação e Acção Penal de Évora",
+        "short_name": "DIAP"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.5358122701125446
+    },
+    {
+      "id": "osm:relation:9527742",
+      "name": "Hospital da Misericórdia",
+      "canonicalName": "Hospital da Misericórdia",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.2129205,
+        38.6452662
+      ],
+      "address": {},
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "alt_name": "Recolhimento do Santíssimo Sacramento de Nossa Senhora da Luz",
+        "amenity": "hospital",
+        "building": "yes",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "Hospital da Misericórdia",
+        "type": "multipolygon",
+        "wikidata": "Q110864214"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 27.752030949681522
+    },
+    {
+      "id": "osm:way:115627866",
+      "name": "Bombeiros Voluntários de Viana do Alentejo",
+      "canonicalName": "Bombeiros Voluntários de Viana do Alentejo",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.0062726,
+        38.3376539
+      ],
+      "address": {},
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "amenity": "fire_station",
+        "name": "Bombeiros Voluntários de Viana do Alentejo"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 27.32158291850409
+    },
+    {
+      "id": "osm:way:1361875237",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -7.9075084,
+        38.5599868
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 1.225357609307409
+    },
+    {
+      "id": "osm:node:12983139775",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9083251,
+        38.5692832
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.19298034663836325
+    },
+    {
+      "id": "osm:node:12120948764",
+      "name": "ULSAC",
+      "canonicalName": "ULSAC",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.9133275,
+        38.5724845
+      ],
+      "operator": "ULSAC",
+      "address": {},
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "amenity": "clinic",
+        "healthcare": "laboratory",
+        "healthcare:speciality": "blood_check",
+        "operator": "ULSAC"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.49168455217163964
+    },
+    {
+      "id": "osm:node:10219560169",
+      "name": "Policia Judiciária",
+      "canonicalName": "Policia Judiciária",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -7.9047374,
+        38.5662269
+      ],
+      "address": {
+        "street": "Avenida Fundação Calouste Gulbenkian",
+        "houseNumber": "1",
+        "postcode": "7005-137",
+        "locality": "Évora"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:housenumber": "1",
+        "addr:postcode": "7005-137",
+        "addr:street": "Avenida Fundação Calouste Gulbenkian",
+        "amenity": "police",
+        "name": "Policia Judiciária"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.6017853757388915
+    },
+    {
+      "id": "osm:way:252696393",
+      "name": "Hospital São João de Deus",
+      "canonicalName": "Hospital São João de Deus",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.2139988,
+        38.6512196
+      ],
+      "address": {},
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "name": "Hospital São João de Deus"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 28.043926476571453
+    },
+    {
+      "id": "osm:way:692761923",
+      "name": "Bombeiros Voluntários de Montemor-o-Novo",
+      "canonicalName": "Bombeiros Voluntários de Montemor-o-Novo",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.2153427,
+        38.6475054
+      ],
+      "address": {},
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "amenity": "fire_station",
+        "name": "Bombeiros Voluntários de Montemor-o-Novo",
+        "wikidata": "Q91313715"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 28.027204220085874
+    },
+    {
+      "id": "osm:way:615890125",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.091043,
+        38.553225
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "pavilion"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 16.037291307360906
+    },
+    {
+      "id": "osm:node:12983065373",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9078993,
+        38.5682728
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.30337714789241527
+    },
+    {
+      "id": "osm:node:9721446736",
+      "name": "USF Planície",
+      "canonicalName": "USF Planície",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.9008285,
+        38.5689968
+      ],
+      "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+      "phone": "+351 266781616",
+      "email": "usf.planicie@alentejocentral.min-saude.pt",
+      "address": {
+        "street": "Rua Doutor Celestino David",
+        "postcode": "7005-389",
+        "locality": "Évora"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:postcode": "7005-389",
+        "addr:street": "Rua Doutor Celestino David",
+        "amenity": "clinic",
+        "email": "usf.planicie@alentejocentral.min-saude.pt",
+        "healthcare": "clinic",
+        "name": "USF Planície",
+        "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+        "operator:short": "SNS",
+        "operator:wikidata": "Q1299901",
+        "phone": "+351 266781616"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.6620669526325862
+    },
+    {
+      "id": "osm:node:1602368300",
+      "name": "GNR - Comando Territorial de Évora",
+      "canonicalName": "GNR - Comando Territorial de Évora",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -7.9072946,
+        38.562247
+      ],
+      "operator": "Guarda Nacional Republicana",
+      "address": {
+        "street": "Avenida Doutor Francisco Barahona",
+        "postcode": "7005-150",
+        "locality": "Évora"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:postcode": "7005-150",
+        "addr:street": "Avenida Doutor Francisco Barahona",
+        "amenity": "police",
+        "name": "GNR - Comando Territorial de Évora",
+        "operator": "Guarda Nacional Republicana",
+        "operator:wikidata": "Q1280906",
+        "operator:wikipedia": "pt:Guarda Nacional Republicana",
+        "short_name": "GNR"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.9752194844455293
+    },
+    {
+      "id": "osm:node:4850712757",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.1580636,
+        38.4993673
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 23.16299625838146
+    },
+    {
+      "id": "osm:node:11787673796",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9058694,
+        38.57336
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.32120386670806816
+    },
+    {
+      "id": "osm:node:9723276205",
+      "name": "USF Eborae",
+      "canonicalName": "USF Eborae",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.9008105,
+        38.5688484
+      ],
+      "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+      "phone": "+351 266785618",
+      "email": "usf.eborae@alentejocentral.min-saude.pt",
+      "address": {
+        "street": "Rua Doutor Celestino David",
+        "postcode": "7005-389",
+        "locality": "Évora"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:postcode": "7005-389",
+        "addr:street": "Rua Doutor Celestino David",
+        "amenity": "clinic",
+        "email": "usf.eborae@alentejocentral.min-saude.pt",
+        "healthcare": "clinic",
+        "name": "USF Eborae",
+        "operator": "Unidade Local de Saúde do Alentejo Central, E.P.E.",
+        "operator:short": "SNS",
+        "operator:wikidata": "Q1299901",
+        "phone": "+351 266785618"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.6692613143057812
+    },
+    {
+      "id": "osm:way:548907435",
+      "name": "Polícia de Segurança Pública - Esquadra de Trânsito de Évora",
+      "canonicalName": "Polícia de Segurança Pública - Esquadra de Trânsito de Évora",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -7.917218,
+        38.5763871
+      ],
+      "operator": "Polícia de Segurança Pública",
+      "address": {
+        "street": "Avenida Arquitectos Torralva",
+        "houseNumber": "44",
+        "postcode": "7000-740",
+        "locality": "Évora"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:housenumber": "44",
+        "addr:postcode": "7000-740",
+        "addr:street": "Avenida Arquitectos Torralva",
+        "amenity": "police",
+        "building": "yes",
+        "name": "Polícia de Segurança Pública - Esquadra de Trânsito de Évora",
+        "operator": "Polícia de Segurança Pública",
+        "operator:short": "PSP",
+        "operator:wikidata": "Q3460075",
+        "operator:wikipedia": "en:Polícia de Segurança Pública"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 1.0004905558973303
+    },
+    {
+      "id": "osm:way:1361875235",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.0954763,
+        38.4067491
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 24.4911356387046
+    },
+    {
+      "id": "osm:node:5227125362",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -7.9251928,
+        38.5738752
+      ],
+      "address": {},
+      "sourceTags": {
+        "bonnet:colour": "red",
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 1.5284576121354052
+    },
+    {
+      "id": "osm:node:11225969770",
+      "name": "Affidea",
+      "canonicalName": "Affidea",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -7.9161255,
+        38.5720871
+      ],
+      "phone": "+351 266 749 740",
+      "address": {
+        "street": "Praça Doutor Rosado da Fonseca",
+        "houseNumber": "8",
+        "postcode": "7000-766",
+        "locality": "Évora"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Évora",
+        "addr:housenumber": "8",
+        "addr:postcode": "7000-766",
+        "addr:street": "Praça Doutor Rosado da Fonseca",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "healthcare:speciality": "diagnostic_radiology",
+        "name": "Affidea",
+        "official_name": "Affidea Évora – CDI",
+        "opening_hours": "Mo-Fr 08:00-20:00; Sa 08:00-13:00",
+        "phone": "+351 266 749 740"
+      },
+      "pilotArea": "Évora",
+      "pilotDistanceKm": 0.7166628669036035
+    },
+    {
+      "id": "osm:node:13416193159",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.4289262,
+        40.2116235
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.06961269177742346
+    },
+    {
+      "id": "osm:way:223297862",
+      "name": "PSP - 2ª Esquadra de Coimbra",
+      "canonicalName": "PSP - 2ª Esquadra de Coimbra",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.4284832,
+        40.2117593
+      ],
+      "operator": "Polícia de Segurança Pública",
+      "address": {
+        "street": "Rua Olímpio Nicolau Rui Fernandes",
+        "postcode": "3000-303",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:postcode": "3000-303",
+        "addr:street": "Rua Olímpio Nicolau Rui Fernandes",
+        "amenity": "police",
+        "building": "civic",
+        "name": "PSP - 2ª Esquadra de Coimbra",
+        "operator": "Polícia de Segurança Pública",
+        "operator:short": "PSP",
+        "operator:wikidata": "Q3460075",
+        "operator:wikipedia": "en:Polícia de Segurança Pública"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.09515426116774361
+    },
+    {
+      "id": "osm:way:1550418136",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.4323779,
+        40.2103319
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "lit": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.29630475984012555
+    },
+    {
+      "id": "osm:way:1005478166",
+      "name": "Bombeiros Voluntários de Coimbra",
+      "canonicalName": "Bombeiros Voluntários de Coimbra",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.4329215,
+        40.2112365
+      ],
+      "address": {},
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "amenity": "fire_station",
+        "name": "Bombeiros Voluntários de Coimbra",
+        "name:hu": "Önkéntes tűzoltóság",
+        "official_name": "Associação Humanitária de Bombeiros Voluntários de Coimbra"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.33403609941961315
+    },
+    {
+      "id": "osm:way:473335592",
+      "name": "Nefrovida",
+      "canonicalName": "Nefrovida",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.4309173,
+        40.2081629
+      ],
+      "phone": "+351 239 851 658",
+      "website": "https://nefrovida.pt",
+      "address": {
+        "street": "Avenida Emídio Navarro",
+        "houseNumber": "12",
+        "postcode": "3000-150",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housenumber": "12",
+        "addr:postcode": "3000-150",
+        "addr:street": "Avenida Emídio Navarro",
+        "amenity": "clinic",
+        "building": "commercial",
+        "building:levels": "4",
+        "healthcare": "dialysis",
+        "name": "Nefrovida",
+        "old_name": "Cinema Tivoli",
+        "phone": "+351 239 851 658",
+        "website": "https://nefrovida.pt",
+        "wikidata": "Q37813072"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.3550075294773517
+    },
+    {
+      "id": "osm:relation:3370067",
+      "name": "Hospital Militar Regional 2",
+      "canonicalName": "Hospital Militar Regional 2",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.42146,
+        40.2037519
+      ],
+      "operator": "Exército Português",
+      "phone": "+351 239 102 770",
+      "email": "csmc@exercito.pt",
+      "website": "https://www.exercito.pt/pt/quem-somos/organizacao/ceme/cmdpess/ds/cs-coimbra",
+      "address": {
+        "street": "Rua Vandelli",
+        "houseNumber": "2",
+        "postcode": "3030-405",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housename": "Edifício Hospital Militar Regional 2",
+        "addr:housenumber": "2",
+        "addr:postcode": "3030-405",
+        "addr:street": "Rua Vandelli",
+        "alt_name": "Centro de Saúde Militar de Coimbra",
+        "amenity": "hospital",
+        "building": "yes",
+        "email": "csmc@exercito.pt",
+        "healthcare": "hospital",
+        "military_service": "army",
+        "name": "Hospital Militar Regional 2",
+        "operator": "Exército Português",
+        "ownership": "national",
+        "phone": "+351 239 102 770",
+        "ref": "CSMC",
+        "source:addr": "INE",
+        "type": "multipolygon",
+        "website": "https://www.exercito.pt/pt/quem-somos/organizacao/ceme/cmdpess/ds/cs-coimbra"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 1.0293435863426805
+    },
+    {
+      "id": "osm:node:13414585556",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.4301388,
+        40.2123066
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.17452696438957313
+    },
+    {
+      "id": "osm:way:778660063",
+      "name": "Polícia Municipal",
+      "canonicalName": "Polícia Municipal",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.421946,
+        40.2102499
+      ],
+      "address": {},
+      "upstreamType": "police",
+      "sourceTags": {
+        "amenity": "police",
+        "building": "yes",
+        "building:levels": "2",
+        "name": "Polícia Municipal",
+        "roof:material": "roof_tiles",
+        "roof:shape": "pyramidal",
+        "wheelchair": "yes"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.6047831202749746
+    },
+    {
+      "id": "osm:way:1550418135",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.4324153,
+        40.2104057
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.29745005097939775
+    },
+    {
+      "id": "osm:way:932606102",
+      "name": "Quartel dos Bombeiros Sapadores de Coimbra",
+      "canonicalName": "Quartel dos Bombeiros Sapadores de Coimbra",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.4134431,
+        40.1938181
+      ],
+      "address": {},
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "amenity": "fire_station",
+        "check_date": "2025-03-08",
+        "name": "Quartel dos Bombeiros Sapadores de Coimbra"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 2.3228741715753136
+    },
+    {
+      "id": "osm:way:778436174",
+      "name": "Sanfil",
+      "canonicalName": "Sanfil",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.4312113,
+        40.2082873
+      ],
+      "address": {
+        "street": "Avenida Emídio Navarro",
+        "houseNumber": "8,9",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housenumber": "8,9",
+        "addr:street": "Avenida Emídio Navarro",
+        "amenity": "clinic",
+        "building": "commercial",
+        "building:levels": "6",
+        "building:levels:underground": "1",
+        "healthcare": "clinic",
+        "name": "Sanfil",
+        "opening_hours": "Mo-Su 08:00-23:00",
+        "ownership": "private"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.35531243100516424
+    },
+    {
+      "id": "osm:way:112545594",
+      "name": "Maternidade Bissaya Barreto",
+      "canonicalName": "Maternidade Bissaya Barreto",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.4149629,
+        40.2120697
+      ],
+      "operator": "Centro Hospitalar e Universitário de Coimbra",
+      "phone": "+351 239 800 100;+351 239 488 700",
+      "address": {
+        "street": "Rua Augusta",
+        "postcode": "3000-061",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:postcode": "3000-061",
+        "addr:street": "Rua Augusta",
+        "alt_name": "Instituto Maternal",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "gynaecology",
+        "name": "Maternidade Bissaya Barreto",
+        "operator": "Centro Hospitalar e Universitário de Coimbra",
+        "operator:type": "public",
+        "ownership": "national",
+        "phone": "+351 239 800 100;+351 239 488 700",
+        "wikidata": "Q30675117",
+        "wikipedia": "pt:Unidade Local de Saúde de Coimbra"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 1.1978914593813883
+    },
+    {
+      "id": "osm:node:10996768530",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.4296119,
+        40.2094665
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.17825861288663322
+    },
+    {
+      "id": "osm:way:223299550",
+      "name": "Polícia Judiciária",
+      "canonicalName": "Polícia Judiciária",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.420519,
+        40.2082527
+      ],
+      "address": {
+        "street": "Rua Venâncio Rodrigues",
+        "houseNumber": "16"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:housenumber": "16",
+        "addr:street": "Rua Venâncio Rodrigues",
+        "amenity": "police",
+        "building": "civic",
+        "check_date": "2026-03-09",
+        "name": "Polícia Judiciária"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.7823022628482517
+    },
+    {
+      "id": "osm:way:1550402851",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.433556,
+        40.2099825
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "lit": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.4030865531725102
+    },
+    {
+      "id": "osm:way:1495815166",
+      "name": "Bombeiros Voluntários de Brasfemes",
+      "canonicalName": "Bombeiros Voluntários de Brasfemes",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.4010963,
+        40.2689491
+      ],
+      "address": {},
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "amenity": "fire_station",
+        "name": "Bombeiros Voluntários de Brasfemes"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 6.865145470417618
+    },
+    {
+      "id": "osm:node:7063861110",
+      "name": "Nutribalance",
+      "canonicalName": "Nutribalance",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.4333073,
+        40.2138199
+      ],
+      "phone": "+351 239 851 000",
+      "website": "https://nutribalance.pt/",
+      "address": {
+        "street": "Rua João Machado",
+        "houseNumber": "23",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housenumber": "23",
+        "addr:street": "Rua João Machado",
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "name": "Nutribalance",
+        "opening_hours": "Mo-Fr 09:00-20:00; Sa 09:00-13:00",
+        "ownership": "private",
+        "phone": "+351 239 851 000",
+        "website": "https://nutribalance.pt/"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.48176165000305826
+    },
+    {
+      "id": "osm:relation:4861848",
+      "name": "Centro Hospitalar e Universitário de Coimbra",
+      "canonicalName": "Centro Hospitalar e Universitário de Coimbra",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.4297743,
+        40.1996786
+      ],
+      "operator": "Serviço Nacional de Saúde",
+      "phone": "+351 239 400 400",
+      "website": "https://www.chuc.min-saude.pt/",
+      "address": {
+        "street": "Praceta Professor Mota Pinto",
+        "postcode": "3000-075",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:postcode": "3000-075",
+        "addr:street": "Praceta Professor Mota Pinto",
+        "amenity": "hospital",
+        "name": "Centro Hospitalar e Universitário de Coimbra",
+        "operator": "Serviço Nacional de Saúde",
+        "ownership": "national",
+        "phone": "+351 239 400 400",
+        "short_name": "CHUC",
+        "type": "site",
+        "website": "https://www.chuc.min-saude.pt/"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 1.2605984263712782
+    },
+    {
+      "id": "osm:node:13414585557",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.4269684,
+        40.2115962
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.1848149248567463
+    },
+    {
+      "id": "osm:node:2701213196",
+      "name": "Serviço de Estrangeiros e Fronteiras",
+      "canonicalName": "Serviço de Estrangeiros e Fronteiras",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.4193429,
+        40.2079739
+      ],
+      "address": {},
+      "upstreamType": "police",
+      "sourceTags": {
+        "amenity": "police",
+        "check_date": "2026-03-09",
+        "name": "Serviço de Estrangeiros e Fronteiras",
+        "short_name": "SEF"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.8864142436623142
+    },
+    {
+      "id": "osm:way:1550402852",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.4336312,
+        40.2099426
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "lit": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.4104684410083458
+    },
+    {
+      "id": "osm:way:1420254063",
+      "name": "Bombeiros Voluntários de Condeixa-a-Nova",
+      "canonicalName": "Bombeiros Voluntários de Condeixa-a-Nova",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.4966646,
+        40.1125986
+      ],
+      "phone": "+351 239 941 503",
+      "email": "secretaria@bvcondeixa.pt",
+      "website": "https://bvcondeixa.pt/",
+      "address": {
+        "street": "Avenida Visconde de Alverca",
+        "postcode": "3150-120",
+        "locality": "Condeixa-a-Nova"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:city": "Condeixa-a-Nova",
+        "addr:postcode": "3150-120",
+        "addr:street": "Avenida Visconde de Alverca",
+        "amenity": "fire_station",
+        "contact:email": "secretaria@bvcondeixa.pt",
+        "contact:facebook": "https://www.facebook.com/oficial.bombeiros.condeixa/",
+        "contact:phone": "+351 239 941 503",
+        "contact:website": "https://bvcondeixa.pt/",
+        "name": "Bombeiros Voluntários de Condeixa-a-Nova",
+        "official_name": "Associação Humanitária de Bombeiros Voluntários de Condeixa-a-Nova",
+        "short_name": "Condeixa-a-Nova, AHBV",
+        "start_date": "1929-04-12"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 12.360588843237199
+    },
+    {
+      "id": "osm:node:9844248747",
+      "name": "Serviços de Saúde e Gestão da Segurança no Trabalho",
+      "canonicalName": "Serviços de Saúde e Gestão da Segurança no Trabalho",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.4245947,
+        40.2080598
+      ],
+      "operator": "Universidade de Coimbra",
+      "phone": "+351 239 240 845",
+      "email": "gabadmin@sas.uc.pt",
+      "website": "https://www.uc.pt/sasuc/",
+      "address": {
+        "street": "Rua Larga"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:floor": "2",
+        "addr:street": "Rua Larga",
+        "amenity": "clinic",
+        "check_date": "2022-06-24",
+        "email": "gabadmin@sas.uc.pt",
+        "healthcare": "clinic",
+        "internet_access": "wlan",
+        "internet_access:fee": "customers",
+        "level": "2",
+        "name": "Serviços de Saúde e Gestão da Segurança no Trabalho",
+        "opening_hours": "Mo-Fr 08:30-13:00, 14:00-17:30",
+        "operator": "Universidade de Coimbra",
+        "operator:type": "university",
+        "payment:cash": "yes",
+        "payment:coins": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:mastercard": "yes",
+        "payment:notes": "yes",
+        "payment:visa": "yes",
+        "phone": "+351 239 240 845",
+        "website": "https://www.uc.pt/sasuc/",
+        "wheelchair": "yes"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.4968203778197773
+    },
+    {
+      "id": "osm:way:342652619",
+      "name": "Maternidade Doutor Daniel de Matos",
+      "canonicalName": "Maternidade Doutor Daniel de Matos",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.4116574,
+        40.2078936
+      ],
+      "operator": "Centro Hospitalar e Universitário de Coimbra",
+      "phone": "+351 239 403 060",
+      "address": {
+        "street": "Rua Miguel Torga",
+        "postcode": "3030-165",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:country": "PT",
+        "addr:postcode": "3030-165",
+        "addr:street": "Rua Miguel Torga",
+        "amenity": "hospital",
+        "healthcare": "hospital",
+        "healthcare:speciality": "gynaecology",
+        "name": "Maternidade Doutor Daniel de Matos",
+        "operator": "Centro Hospitalar e Universitário de Coimbra",
+        "ownership": "national",
+        "phone": "+351 239 403 060"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 1.5126715092874259
+    },
+    {
+      "id": "osm:node:13414585558",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.4264048,
+        40.2118141
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.23824190148591476
+    },
+    {
+      "id": "osm:way:222072068",
+      "name": "GNR - Comando Territorial de Coimbra",
+      "canonicalName": "GNR - Comando Territorial de Coimbra",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.4094767,
+        40.2114015
+      ],
+      "operator": "Guarda Nacional Republicana",
+      "phone": "+351 239 794 300",
+      "address": {
+        "street": "Avenida Dias da Silva",
+        "houseNumber": "122",
+        "postcode": "3000-135",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housenumber": "122",
+        "addr:postcode": "3000-135",
+        "addr:street": "Avenida Dias da Silva",
+        "amenity": "police",
+        "contact:facebook": "GuardaNacionalRepublicanaCoimbra",
+        "fax": "+351 239 794 386",
+        "name": "GNR - Comando Territorial de Coimbra",
+        "operator": "Guarda Nacional Republicana",
+        "operator:wikidata": "Q1280906",
+        "operator:wikipedia": "pt:Guarda Nacional Republicana",
+        "phone": "+351 239 794 300"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 1.6584456806367998
+    },
+    {
+      "id": "osm:way:1380106387",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.4345394,
+        40.2141527
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.5866414784583603
+    },
+    {
+      "id": "osm:way:338462914",
+      "name": "Bombeiros Voluntários de Penacova",
+      "canonicalName": "Bombeiros Voluntários de Penacova",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.2832248,
+        40.2681978
+      ],
+      "address": {
+        "street": "Avenida João António Gomes",
+        "houseNumber": "1"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:housenumber": "1",
+        "addr:street": "Avenida João António Gomes",
+        "amenity": "fire_station",
+        "building": "yes",
+        "name": "Bombeiros Voluntários de Penacova"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 13.912372204755272
+    },
+    {
+      "id": "osm:relation:15806650",
+      "name": "Centro de Saúde Fernão de Magalhães",
+      "canonicalName": "Centro de Saúde Fernão de Magalhães",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.435134,
+        40.2154699
+      ],
+      "phone": "+351 239 856 110",
+      "address": {
+        "street": "Avenida Fernão de Magalhães",
+        "houseNumber": "620",
+        "postcode": "3000-174",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housenumber": "620",
+        "addr:postcode": "3000-174",
+        "addr:street": "Avenida Fernão de Magalhães",
+        "amenity": "clinic",
+        "building": "civic",
+        "check_date": "2024-08-16",
+        "healthcare": "clinic",
+        "name": "Centro de Saúde Fernão de Magalhães",
+        "opening_hours": "Mo-Fr 09:00-17:00",
+        "phone": "+351 239 856 110",
+        "type": "multipolygon"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.7199545701058535
+    },
+    {
+      "id": "osm:way:256925839",
+      "name": "Hospital da Luz Coimbra",
+      "canonicalName": "Hospital da Luz Coimbra",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.4237163,
+        40.2247805
+      ],
+      "operator": "Grupo Luz Saúde",
+      "phone": "+351 239 096 900",
+      "website": "https://www.hospitaldaluz.pt/coimbra/pt/",
+      "address": {
+        "street": "Praceta Robalo Cordeiro",
+        "houseNumber": "1",
+        "postcode": "3020-479",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:housenumber": "1",
+        "addr:postcode": "3020-479",
+        "addr:street": "Praceta Robalo Cordeiro",
+        "amenity": "hospital",
+        "check_date": "2026-04-22",
+        "healthcare": "hospital",
+        "name": "Hospital da Luz Coimbra",
+        "old_name": "Idealmed - Unidade Hospitalar de Coimbra",
+        "operator": "Grupo Luz Saúde",
+        "ownership": "private",
+        "phone": "+351 239 096 900",
+        "website": "https://www.hospitaldaluz.pt/coimbra/pt/"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 1.5966453514829722
+    },
+    {
+      "id": "osm:node:13414585559",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.4258608,
+        40.2116489
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.27616120660003
+    },
+    {
+      "id": "osm:way:293133303",
+      "name": "GNR - Unidade de Acção Fiscal de Coimbra",
+      "canonicalName": "GNR - Unidade de Acção Fiscal de Coimbra",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.4264604,
+        40.1913523
+      ],
+      "operator": "Guarda Nacional Republicana",
+      "address": {
+        "street": "Quinta das Canas",
+        "postcode": "3040-194",
+        "locality": "Coimbra"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Coimbra",
+        "addr:postcode": "3040-194",
+        "addr:street": "Quinta das Canas",
+        "amenity": "police",
+        "name": "GNR - Unidade de Acção Fiscal de Coimbra",
+        "operator": "Guarda Nacional Republicana",
+        "operator:wikidata": "Q1280906",
+        "operator:wikipedia": "pt:Guarda Nacional Republicana"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 2.1953454094801677
+    },
+    {
+      "id": "osm:way:1380106386",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.4363799,
+        40.2160399
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Coimbra",
+      "pilotDistanceKm": 0.840686142954856
+    },
+    {
+      "id": "osm:node:6882112298",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.8077471,
+        39.7430694
+      ],
+      "address": {},
+      "sourceTags": {
+        "colour": "red",
+        "emergency": "fire_hydrant",
+        "fire_hydrant:type": "pillar",
+        "water_source": "main"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.1216055514989024
+    },
+    {
+      "id": "osm:node:11895696492",
+      "name": "Malo Clinic",
+      "canonicalName": "Malo Clinic",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.8085282,
+        39.7435612
+      ],
+      "phone": "+351 217 228 120",
+      "email": "geral@maloclinics.com",
+      "website": "https://www.maloclinics.com",
+      "address": {
+        "street": "Rua Engenheiro Duarte Pacheco"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:street": "Rua Engenheiro Duarte Pacheco",
+        "amenity": "clinic",
+        "email": "geral@maloclinics.com",
+        "healthcare": "clinic",
+        "healthcare:speciality": "orthodontics;diagnostic_radiology;dental_oral_maxillo_facial_surgery",
+        "name": "Malo Clinic",
+        "phone": "+351 217 228 120",
+        "website": "https://www.maloclinics.com"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.1394726747614642
+    },
+    {
+      "id": "osm:way:256378031",
+      "name": "Hospital Dom Manuel de Aguiar",
+      "canonicalName": "Hospital Dom Manuel de Aguiar",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.8049184,
+        39.7439319
+      ],
+      "operator": "Santa Casa da Misericórdia",
+      "phone": "+351 244 106 201",
+      "email": "geral@misericordiadeleiria.pt",
+      "address": {
+        "houseNumber": "8"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:housenumber": "8",
+        "amenity": "hospital",
+        "building": "yes",
+        "building:levels": "3",
+        "email": "geral@misericordiadeleiria.pt",
+        "healthcare": "hospital",
+        "healthcare:speciality": "orthopaedics;surgery;cardiology;physiatry",
+        "name": "Hospital Dom Manuel de Aguiar",
+        "operator": "Santa Casa da Misericórdia",
+        "phone": "+351 244 106 201",
+        "wikidata": "Q109462549"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.17813531965521257
+    },
+    {
+      "id": "osm:way:758172292",
+      "name": "Serviço Estrangeiros e Fronteiras",
+      "canonicalName": "Serviço Estrangeiros e Fronteiras",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.8087209,
+        39.746418
+      ],
+      "operator": "Ministério da Administração Interna",
+      "address": {
+        "houseNumber": "3"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:housenumber": "3",
+        "amenity": "police",
+        "building": "yes",
+        "name": "Serviço Estrangeiros e Fronteiras",
+        "operator": "Ministério da Administração Interna",
+        "short_name": "SEF"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.306494062985558
+    },
+    {
+      "id": "osm:way:246796119",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.8116495,
+        39.7402759
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "gazebo"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.5740344009827509
+    },
+    {
+      "id": "osm:way:256378744",
+      "name": "Bombeiros Sapadores de Leiria",
+      "canonicalName": "Bombeiros Sapadores de Leiria",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.8003519,
+        39.7411107
+      ],
+      "phone": "+351 244 849 700",
+      "address": {
+        "street": "Rua de Tomar",
+        "postcode": "2410-187",
+        "locality": "Leiria"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:housename": "Bombeiros Sapadores de Leiria",
+        "addr:postcode": "2410-187",
+        "addr:street": "Rua de Tomar",
+        "amenity": "fire_station",
+        "name": "Bombeiros Sapadores de Leiria",
+        "name:fr": "Sapeurs-Pompiers de Leiria",
+        "opening_hours": "24/7",
+        "phone": "+351 244 849 700",
+        "wheelchair": "yes",
+        "wikidata": "Q18500768",
+        "wikipedia": "pt:Bombeiros Municipais de Leiria"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.6529279620702929
+    },
+    {
+      "id": "osm:way:1144413918",
+      "name": "Proteção Civil - Atendimento ao Público",
+      "canonicalName": "Proteção Civil - Atendimento ao Público",
+      "canonicalType": "other_public_facility",
+      "coordinate": [
+        -8.7948319,
+        39.7316687
+      ],
+      "address": {},
+      "sourceTags": {
+        "building": "yes",
+        "name": "Proteção Civil - Atendimento ao Público",
+        "office": "government"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 1.7212397686093266
+    },
+    {
+      "id": "osm:node:11895696491",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.8085007,
+        39.7439817
+      ],
+      "address": {},
+      "sourceTags": {
+        "colour": "#ff0000",
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.12832413558265485
+    },
+    {
+      "id": "osm:node:12783813112",
+      "name": "SAMS",
+      "canonicalName": "SAMS",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.8073897,
+        39.7400938
+      ],
+      "address": {},
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "amenity": "clinic",
+        "healthcare": "clinic",
+        "level": "1",
+        "name": "SAMS"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.4356257616965403
+    },
+    {
+      "id": "osm:way:800039751",
+      "name": "Centro Hospitalar de São Francisco",
+      "canonicalName": "Centro Hospitalar de São Francisco",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.8157974,
+        39.7491259
+      ],
+      "operator": "Grupo Sanfil Medicina",
+      "phone": "+351 244 819 300",
+      "email": "leiria@chsf.pt",
+      "website": "https://www.sanfil.pt/centro-hospitalar-sao-francisco-leiria/",
+      "address": {},
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "amenity": "hospital",
+        "email": "leiria@chsf.pt",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "healthcare:speciality": "physiatry;surgery;cardiology;dentistry;gynaecology;psychiatry;radiology;urology",
+        "name": "Centro Hospitalar de São Francisco",
+        "operator": "Grupo Sanfil Medicina",
+        "operator:type": "private",
+        "phone": "+351 244 819 300",
+        "website": "https://www.sanfil.pt/centro-hospitalar-sao-francisco-leiria/",
+        "wheelchair": "yes"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.9437071537389852
+    },
+    {
+      "id": "osm:relation:11519962",
+      "name": "Polícia de Segurança Pública de Leiria",
+      "canonicalName": "Polícia de Segurança Pública de Leiria",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.8072794,
+        39.7468892
+      ],
+      "operator": "Polícia de Segurança Pública",
+      "phone": "+351 244 859 859",
+      "email": "cpleiria@psp.pt",
+      "address": {
+        "street": "Largo de São Pedro",
+        "houseNumber": "20",
+        "locality": "Leiria"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:housenumber": "20",
+        "addr:street": "Largo de São Pedro",
+        "amenity": "police",
+        "building": "yes",
+        "email": "cpleiria@psp.pt",
+        "name": "Polícia de Segurança Pública de Leiria",
+        "old_name": "Paço Episcopal de Leiria",
+        "opening_hours": "24/7",
+        "operator": "Polícia de Segurança Pública",
+        "operator:short": "PSP",
+        "operator:wikidata": "Q3460075",
+        "operator:wikipedia": "en:Polícia de Segurança Pública",
+        "phone": "+351 244 859 859",
+        "type": "multipolygon"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.32215125739506245
+    },
+    {
+      "id": "osm:way:473189531",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.8278019,
+        39.7566125
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "layer": "1",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 2.2648329150355826
+    },
+    {
+      "id": "osm:way:296437964",
+      "name": "Bombeiros Voluntários de Leiria",
+      "canonicalName": "Bombeiros Voluntários de Leiria",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.8166365,
+        39.7674219
+      ],
+      "phone": "+351 244 882 015",
+      "email": "geral@bvleiria.pt",
+      "website": "https://bvleiria.pt/",
+      "address": {
+        "street": "Avenida da Liberdade",
+        "postcode": "2400-560",
+        "locality": "Leiria"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:postcode": "2400-560",
+        "addr:street": "Avenida da Liberdade",
+        "amenity": "fire_station",
+        "building": "fire_station",
+        "contact:facebook": "BombeirosVoluntariosdeLeiria",
+        "contact:instagram": "bombeiros_v_leiria",
+        "email": "geral@bvleiria.pt",
+        "name": "Bombeiros Voluntários de Leiria",
+        "phone": "+351 244 882 015",
+        "website": "https://bvleiria.pt/"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 2.7315701997654296
+    },
+    {
+      "id": "osm:node:7571645715",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.8077738,
+        39.7456231
+      ],
+      "address": {},
+      "sourceTags": {
+        "colour": "red",
+        "emergency": "fire_hydrant",
+        "fire_hydrant:type": "pillar",
+        "water_source": "main"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.19222410765892828
+    },
+    {
+      "id": "osm:node:9466718062",
+      "name": "Dra. Rosa Basto",
+      "canonicalName": "Dra. Rosa Basto",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.8030045,
+        39.7395616
+      ],
+      "phone": "+351 244 063 598;+351 932 098 404",
+      "email": "infoleiria@drarosabasto.com",
+      "website": "https://www.drarosabasto.com/corpo-clinico-de-leiria/",
+      "address": {
+        "street": "Avenida Nossa Senhora de Fátima",
+        "houseNumber": "51",
+        "postcode": "2410-140",
+        "locality": "Leiria"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:housenumber": "51",
+        "addr:postcode": "2410-140",
+        "addr:street": "Avenida Nossa Senhora de Fátima",
+        "amenity": "clinic",
+        "email": "infoleiria@drarosabasto.com",
+        "healthcare": "clinic",
+        "healthcare:speciality": "psychology;hypnotherapeutics",
+        "name": "Dra. Rosa Basto",
+        "opening_hours": "Mo-Sa 09:00-13:00,14:00-20:00",
+        "phone": "+351 244 063 598;+351 932 098 404",
+        "website": "https://www.drarosabasto.com/corpo-clinico-de-leiria/"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.6002287529535999
+    },
+    {
+      "id": "osm:way:166576348",
+      "name": "Hospital de Santo André",
+      "canonicalName": "Hospital de Santo André",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.7950975,
+        39.7436123
+      ],
+      "operator": "Ministério da Saúde",
+      "phone": "+351 244 817 000",
+      "website": "https://www.chleiria.pt/",
+      "address": {},
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "amenity": "hospital",
+        "emergency": "yes",
+        "healthcare": "hospital",
+        "name": "Hospital de Santo André",
+        "official_name": "Centro Hospitalar de Leiria",
+        "operator": "Ministério da Saúde",
+        "operator:type": "government",
+        "operator:wikidata": "Q4294357",
+        "operator:wikipedia": "pt:Ministério da Saúde (Portugal)",
+        "phone": "+351 244 817 000",
+        "website": "https://www.chleiria.pt/"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 1.0185645312194684
+    },
+    {
+      "id": "osm:way:256098947",
+      "name": "GNR - Comando Territorial de Leiria",
+      "canonicalName": "GNR - Comando Territorial de Leiria",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.811809,
+        39.7447325
+      ],
+      "operator": "Guarda Nacional Republicana",
+      "phone": "+351 244 830 150",
+      "email": "ct.lra.dlra.plra@gnr.pt",
+      "website": "https://www.gnr.pt",
+      "address": {
+        "street": "Largo de Santo Estevão",
+        "houseNumber": "13",
+        "postcode": "2403-004",
+        "locality": "Leiria"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:housenumber": "13",
+        "addr:postcode": "2403-004",
+        "addr:street": "Largo de Santo Estevão",
+        "amenity": "police",
+        "contact:email": "ct.lra.dlra.plra@gnr.pt",
+        "contact:phone": "+351 244 830 150",
+        "contact:website": "https://www.gnr.pt",
+        "name": "GNR - Comando Territorial de Leiria",
+        "operator": "Guarda Nacional Republicana",
+        "operator:wikidata": "Q1280906",
+        "operator:wikipedia": "pt:Guarda Nacional Republicana",
+        "short_name": "GNR"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.41915127532578766
+    },
+    {
+      "id": "osm:way:473189530",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.8279643,
+        39.7565942
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "layer": "1",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 2.2744975741168836
+    },
+    {
+      "id": "osm:way:368683796",
+      "name": "Bombeiros Voluntários de Ortigosa",
+      "canonicalName": "Bombeiros Voluntários de Ortigosa",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.839252,
+        39.8212667
+      ],
+      "phone": "+351 244 613 700",
+      "email": "direccao@bvortigosa.pt",
+      "website": "https://www.bvortigosa.pt/",
+      "address": {
+        "houseNumber": "1150",
+        "postcode": "2425-737"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:housenumber": "1150",
+        "addr:postcode": "2425-737",
+        "amenity": "fire_station",
+        "contact:email": "direccao@bvortigosa.pt",
+        "contact:facebook": "bombeirosortigosa",
+        "contact:phone": "+351 244 613 700",
+        "name": "Bombeiros Voluntários de Ortigosa",
+        "website": "https://www.bvortigosa.pt/"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 9.022860725357537
+    },
+    {
+      "id": "osm:node:12294603555",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.8090095,
+        39.7449366
+      ],
+      "address": {},
+      "sourceTags": {
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.20090894809976276
+    },
+    {
+      "id": "osm:node:9533084471",
+      "name": "CliniFátima",
+      "canonicalName": "CliniFátima",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.8057965,
+        39.7508547
+      ],
+      "phone": "+351 244 870 629",
+      "email": "leiria@clinifatima.pt",
+      "website": "https://clinifatima.pt",
+      "address": {
+        "street": "Avenida Doutor Adelino Amaro da Costa",
+        "houseNumber": "21C",
+        "postcode": "2415-367",
+        "locality": "Leiria"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:housenumber": "21C",
+        "addr:postcode": "2415-367",
+        "addr:street": "Avenida Doutor Adelino Amaro da Costa",
+        "addr:unit": "Loja B",
+        "amenity": "clinic",
+        "email": "leiria@clinifatima.pt",
+        "healthcare": "clinic",
+        "healthcare:speciality": "cardiology;nutrition;urology;ophthalmology;dermatology;endocrinology;gynaecology;neurology;pediatric;psychiatry;plastic_surgery;gastroenterology;orthopaedics",
+        "level": "1",
+        "name": "CliniFátima",
+        "opening_hours": "Mo-Fr 09:00-18:00",
+        "phone": "+351 244 870 629",
+        "website": "https://clinifatima.pt"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.769121395983635
+    },
+    {
+      "id": "osm:way:257662607",
+      "name": "Centro Hospitalar de Nossa Senhora da Conceição",
+      "canonicalName": "Centro Hospitalar de Nossa Senhora da Conceição",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.8171181,
+        39.6381946
+      ],
+      "phone": "+351 244 769 430",
+      "website": "http://www.misericordiabatalha.com/portal/",
+      "address": {
+        "street": "Rua Principal",
+        "houseNumber": "26",
+        "postcode": "2440-090",
+        "locality": "Batalha"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Batalha",
+        "addr:housenumber": "26",
+        "addr:postcode": "2440-090",
+        "addr:street": "Rua Principal",
+        "amenity": "hospital",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "healthcare:speciality": "psychiatry",
+        "name": "Centro Hospitalar de Nossa Senhora da Conceição",
+        "phone": "+351 244 769 430",
+        "website": "http://www.misericordiabatalha.com/portal/"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 11.796834437781815
+    },
+    {
+      "id": "osm:way:686648924",
+      "name": "Polícia Judiciária",
+      "canonicalName": "Polícia Judiciária",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.7882232,
+        39.7429851
+      ],
+      "phone": "+351 244 845 200",
+      "email": "dic.leiria@pj.pt",
+      "address": {},
+      "upstreamType": "police",
+      "sourceTags": {
+        "amenity": "police",
+        "building": "yes",
+        "email": "dic.leiria@pj.pt",
+        "fax": "+351 244 811 059",
+        "name": "Polícia Judiciária",
+        "phone": "+351 244 845 200",
+        "short_name": "PJ"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 1.6093664314954141
+    },
+    {
+      "id": "osm:way:729378060",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.8414889,
+        39.7621457
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "picnic_shelter"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 3.5726791993260654
+    },
+    {
+      "id": "osm:way:639124527",
+      "name": "Associação de Bombeiros do Sul do Concelho de Leiria",
+      "canonicalName": "Associação de Bombeiros do Sul do Concelho de Leiria",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.7045555,
+        39.7158465
+      ],
+      "phone": "+351 244 745 672; +351 966 218 705",
+      "address": {
+        "street": "Rua Quinta do Salgueiro",
+        "houseNumber": "86",
+        "postcode": "2495-106",
+        "locality": "Santa Catarina da Serra Cardosos"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:city": "Santa Catarina da Serra Cardosos",
+        "addr:housenumber": "86",
+        "addr:postcode": "2495-106",
+        "addr:street": "Rua Quinta do Salgueiro",
+        "amenity": "fire_station",
+        "contact:facebook": "https://www.facebook.com/BombeirosLeiriaSul",
+        "contact:phone": "+351 244 745 672; +351 966 218 705",
+        "name": "Associação de Bombeiros do Sul do Concelho de Leiria"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 9.303196168447352
+    },
+    {
+      "id": "osm:node:7738007519",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.8047658,
+        39.7446603
+      ],
+      "address": {},
+      "sourceTags": {
+        "colour": "red",
+        "emergency": "fire_hydrant",
+        "fire_hydrant:type": "pillar",
+        "water_source": "main"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.2046450274059601
+    },
+    {
+      "id": "osm:node:9537245237",
+      "name": "Centro de Estudos Urológicos de Leiria",
+      "canonicalName": "Centro de Estudos Urológicos de Leiria",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.8061479,
+        39.7511392
+      ],
+      "phone": "+351 244 852 796",
+      "email": "ceul.lda@sapo.pt",
+      "website": "https://www.ceul.pt/",
+      "address": {
+        "street": "Avenida Doutor Adelino Amaro da Costa",
+        "houseNumber": "21B",
+        "postcode": "2415-367",
+        "locality": "Leiria"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:housenumber": "21B",
+        "addr:postcode": "2415-367",
+        "addr:street": "Avenida Doutor Adelino Amaro da Costa",
+        "addr:unit": "R/C",
+        "amenity": "clinic",
+        "email": "ceul.lda@sapo.pt",
+        "healthcare": "clinic",
+        "healthcare:speciality": "urology",
+        "name": "Centro de Estudos Urológicos de Leiria",
+        "phone": "+351 244 852 796",
+        "website": "https://www.ceul.pt/"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.7971784646239536
+    },
+    {
+      "id": "osm:way:689728956",
+      "name": "Centro Hospitalar Santa Casa de Misericórdia de Porto de Mós",
+      "canonicalName": "Centro Hospitalar Santa Casa de Misericórdia de Porto de Mós",
+      "canonicalType": "hospital",
+      "coordinate": [
+        -8.8065018,
+        39.606108
+      ],
+      "phone": "+351 244 471 318",
+      "address": {
+        "street": "Rua de São João",
+        "houseNumber": "370",
+        "postcode": "2480-158",
+        "locality": "Porto de Mós"
+      },
+      "upstreamType": "hospital",
+      "sourceTags": {
+        "addr:city": "Porto de Mós",
+        "addr:housenumber": "370",
+        "addr:postcode": "2480-158",
+        "addr:street": "Rua de São João",
+        "amenity": "hospital",
+        "building": "yes",
+        "emergency": "no",
+        "healthcare": "hospital",
+        "healthcare:speciality": "geriatrics",
+        "name": "Centro Hospitalar Santa Casa de Misericórdia de Porto de Mós",
+        "phone": "+351 244 471 318"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 15.332950109152998
+    },
+    {
+      "id": "osm:node:6106360976",
+      "name": "2ª Esquadra de Leiria",
+      "canonicalName": "2ª Esquadra de Leiria",
+      "canonicalType": "police_station",
+      "coordinate": [
+        -8.8066233,
+        39.7632721
+      ],
+      "operator": "Polícia de Segurança Pública",
+      "address": {
+        "street": "Rua Joaquim Soares Cêa Simões",
+        "postcode": "2415-508",
+        "locality": "Leiria"
+      },
+      "upstreamType": "police",
+      "sourceTags": {
+        "addr:city": "Leiria",
+        "addr:postcode": "2415-508",
+        "addr:street": "Rua Joaquim Soares Cêa Simões",
+        "amenity": "police",
+        "name": "2ª Esquadra de Leiria",
+        "operator": "Polícia de Segurança Pública",
+        "operator:short": "PSP",
+        "operator:wikidata": "Q3460075",
+        "operator:wikipedia": "en:Polícia de Segurança Pública",
+        "short_name": "PSP"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 2.1432016931041846
+    },
+    {
+      "id": "osm:way:473189553",
+      "name": "Unnamed shelter_generic",
+      "canonicalName": null,
+      "canonicalType": "shelter_generic",
+      "coordinate": [
+        -8.8371781,
+        39.7975774
+      ],
+      "address": {},
+      "upstreamType": "shelter",
+      "sourceTags": {
+        "amenity": "shelter",
+        "building": "yes",
+        "shelter_type": "public_transport"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 6.491873853124743
+    },
+    {
+      "id": "osm:way:138323270",
+      "name": "Bombeiros Voluntários de Maceira",
+      "canonicalName": "Bombeiros Voluntários de Maceira",
+      "canonicalType": "fire_station",
+      "coordinate": [
+        -8.8873235,
+        39.6851049
+      ],
+      "phone": "+351 244 770 000",
+      "email": "geral@bombeirosmaceira.pt",
+      "address": {
+        "street": "Rua de Leiria",
+        "postcode": "2405-018"
+      },
+      "upstreamType": "fire_station",
+      "sourceTags": {
+        "addr:postcode": "2405-018",
+        "addr:street": "Rua de Leiria",
+        "amenity": "fire_station",
+        "check_date": "2024-09-11",
+        "contact:email": "geral@bombeirosmaceira.pt",
+        "contact:facebook": "bvmaceira",
+        "contact:phone": "+351 244 770 000",
+        "name": "Bombeiros Voluntários de Maceira"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 9.49162371575627
+    },
+    {
+      "id": "osm:node:6437155782",
+      "name": "Unnamed water_point",
+      "canonicalName": null,
+      "canonicalType": "water_point",
+      "coordinate": [
+        -8.8071591,
+        39.7458915
+      ],
+      "address": {},
+      "sourceTags": {
+        "colour": "red",
+        "emergency": "fire_hydrant",
+        "fire_hydrant:position": "sidewalk",
+        "fire_hydrant:type": "pillar",
+        "water_source": "main"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.21076461714184488
+    },
+    {
+      "id": "osm:node:8200189474",
+      "name": "Clínica Natércia Roque",
+      "canonicalName": "Clínica Natércia Roque",
+      "canonicalType": "health_center",
+      "coordinate": [
+        -8.8017814,
+        39.749955
+      ],
+      "phone": "+351 244 813 360;+351 913 014 565;+351 963 334 958",
+      "email": "geral@clinicanaterciaroque.com",
+      "website": "https://www.clinicanaterciaroque.com",
+      "address": {
+        "street": "Rua Anzebino da Cruz Saraiva",
+        "houseNumber": "342"
+      },
+      "upstreamType": "clinic",
+      "sourceTags": {
+        "addr:housenumber": "342",
+        "addr:street": "Rua Anzebino da Cruz Saraiva",
+        "amenity": "clinic",
+        "email": "geral@clinicanaterciaroque.com",
+        "healthcare": "clinic",
+        "healthcare:speciality": "dentist;acupuncture;speech_therapy;osteopathy",
+        "name": "Clínica Natércia Roque",
+        "phone": "+351 244 813 360;+351 913 014 565;+351 963 334 958",
+        "website": "https://www.clinicanaterciaroque.com"
+      },
+      "pilotArea": "Leiria",
+      "pilotDistanceKm": 0.7984524519093257
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "vigia.integrated-quality-certification.v1",
+  "command": "npm test",
+  "tests": 728,
+  "passed": 726,
+  "failed": 1,
+  "skipped": 1,
+  "processExitCode": 1,
+  "failureFiles": [
+    "apps/api/test/release-contract-governance.test.mjs"
+  ],
+  "backendOwnedFailureFiles": [],
+  "frontendOwnedFailureFiles": [
+    "apps/api/test/release-contract-governance.test.mjs"
+  ],
+  "backendOwnedFailures": 0,
+  "knownFrontendIntegrationGate": true,
+  "frontendIntegrationEvidence": {
+    "sourcePath": "apps/web/src/v2/release-compatibility.js",
+    "expectedSchemaContract": "vigia-postgis-017",
+    "observedSchemaContract": "vigia-postgis-014"
+  },
+  "state": "BACKEND_CLEAN_FRONTEND_INTEGRATION_GATE",
+  "startedAt": "2026-08-25T10:53:07.908Z",
+  "completedAt": "2026-08-25T10:53:54.402Z",
+  "fingerprint": "integrated-quality-certification:sha256:a65defcc8f3fee0271631b39f02ba4868de0a1e8e82b48418daf5c480ca9efaa"
+}

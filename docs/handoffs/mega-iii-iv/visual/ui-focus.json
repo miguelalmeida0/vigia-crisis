@@ -1,0 +1,40 @@
+{
+  "lane": "CANONICAL_RENDERED_UI",
+  "screens": [
+    {
+      "name": "facility-route-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "facility-map-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "facility-route-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "facility-map-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": null,
+      "map": "vigia-map-1"
+    }
+  ],
+  "errors": [],
+  "checks": [],
+  "browser": "139.0.7258.5"
+}

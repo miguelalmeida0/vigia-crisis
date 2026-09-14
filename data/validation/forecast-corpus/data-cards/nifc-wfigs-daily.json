@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "nifc-wfigs-daily",
+  "purpose": "captured perimeter geometry changes; incident attributes",
+  "coverage": [
+    "western-us"
+  ],
+  "period": "2025-present",
+  "resolution": "15,576 rows for 2025 before bounded filtering",
+  "collectionProcess": "public ArcGIS FeatureServer",
+  "knowledgeTimeSemantics": "DOCUMENTED_LATENCY_MODEL",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "NIFC says the automated geometry-change history is not an official progression."
+  ],
+  "knownMissingness": [
+    "NIFC says the automated geometry-change history is not an official progression."
+  ],
+  "licence": "NIFC-OPEN-DATA",
+  "appropriateUse": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+  "inappropriateUse": "Independent truth without lineage."
+}

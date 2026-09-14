@@ -1,0 +1,671 @@
+{
+  "state": "FIRST_VISIT_NAVIGATION_GATE_OPEN",
+  "method": "Pinned Chromium 139.0.7258.5 in Docker, 1728 x 966 CSS pixels, real backend, transparent proxy with browser cache. Before/intermediate: 2 cold samples; bundle/final: 3. No model inference. Final timing run did not overlap other explicit browser QA or live capture scripts.",
+  "measurementCorrection": "The original observer missed some first tile events and over-waited for all imagery. Final cold measurements use the product render event after its first loaded imagery tile. Intermediate raw reports preserve both observed and product timestamps; a 26.95 s observer value contained a real first frame at 1.889 s and three approximately 25.2 s remaining imagery requests. These are not silently equated.",
+  "targets": {
+    "cold": {
+      "targetMs": 2500,
+      "samples": 3,
+      "completed": 3,
+      "timeouts": 0,
+      "p50Ms": 1891.1999999955297,
+      "p95Ms": 4913.19999999553,
+      "observedPass": false
+    },
+    "cachedReturn": {
+      "targetMs": 750,
+      "samples": 3,
+      "completed": 3,
+      "timeouts": 0,
+      "p50Ms": 302.40000000596046,
+      "p95Ms": 372.70000000298023,
+      "observedPass": true
+    },
+    "cachedRevisit": {
+      "targetMs": 400,
+      "samples": 3,
+      "completed": 3,
+      "timeouts": 0,
+      "p50Ms": 330,
+      "p95Ms": 417.5,
+      "observedPass": false
+    }
+  },
+  "lanes": {
+    "before": {
+      "cases": {
+        "cold": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 4827.300000000745,
+          "p95Ms": 6923
+        },
+        "detail-to-fire": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 4361.449999999255,
+          "p95Ms": 8153.10000000149
+        },
+        "fire-to-response": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 4563.449999999255,
+          "p95Ms": 7993.5
+        },
+        "response-to-detail": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 1127.6500000003725,
+          "p95Ms": 1721
+        },
+        "cached-revisit": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 829.5999999996275,
+          "p95Ms": 941.3999999985099
+        },
+        "incident-switch": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 2443.1500000003725,
+          "p95Ms": 3393.300000000745
+        },
+        "overview": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 1218.300000000745,
+          "p95Ms": 1534.800000000745
+        },
+        "national": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 1991.199999999255,
+          "p95Ms": 3036.89999999851
+        }
+      },
+      "errors": [],
+      "coldRequests": [
+        {
+          "requests": 139,
+          "bytes": 7749237,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 6922.300000000745
+        },
+        {
+          "requests": 141,
+          "bytes": 18041896,
+          "apiCalls": 9,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 2731.199999999255
+        }
+      ],
+      "slowRequests": [
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/labels/6/31/24",
+          "ms": 45133.701562997885
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/labels/6/32/24",
+          "ms": 45101.412895000976
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/labels/6/32/23",
+          "ms": 45100.39427099764
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v10/operator/global-situational-awareness",
+          "ms": 8755.128962999152
+        },
+        {
+          "case": "detail-to-fire",
+          "url": "/backend/api/v10/operator/incidents",
+          "ms": 8475.944171001174
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v1/basemap/labels/11/980/785",
+          "ms": 8355.491836999136
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v1/basemap/labels/11/977/785",
+          "ms": 8340.689628999826
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v1/basemap/labels/11/977/784",
+          "ms": 8313.630045999162
+        }
+      ]
+    },
+    "after": {
+      "cases": {
+        "cold": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 6555.800000000745,
+          "p95Ms": 6673
+        },
+        "detail-to-fire": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 3470.7000000011176,
+          "p95Ms": 6245.5
+        },
+        "fire-to-response": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 7491.10000000149,
+          "p95Ms": 12995.70000000298
+        },
+        "response-to-detail": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 2176,
+          "p95Ms": 3649.5
+        },
+        "cached-revisit": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 921,
+          "p95Ms": 1178.199999999255
+        },
+        "incident-switch": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 2605.0999999996275,
+          "p95Ms": 2615.699999999255
+        },
+        "overview": {
+          "samples": 2,
+          "completed": 1,
+          "timeouts": 1,
+          "p50Ms": 770.6999999992549,
+          "p95Ms": 770.6999999992549
+        },
+        "national": {
+          "samples": 2,
+          "completed": 2,
+          "timeouts": 0,
+          "p50Ms": 7111.35000000149,
+          "p95Ms": 12267.400000002235
+        }
+      },
+      "errors": [],
+      "coldRequests": [
+        {
+          "requests": 141,
+          "bytes": 7687240,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 4829.60000000149
+        },
+        {
+          "requests": 131,
+          "bytes": 7649841,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 3999
+        }
+      ],
+      "slowRequests": [
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/imagery/6/31/25",
+          "ms": 46338.828938001825
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/imagery/6/28/24",
+          "ms": 45513.96377100173
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/imagery/6/32/23",
+          "ms": 45513.961520999146
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/labels/6/29/23",
+          "ms": 45108.55647899734
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v1/basemap/labels/6/29/25",
+          "ms": 45083.953020999616
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v1/basemap/imagery/11/977/785",
+          "ms": 9643.144255001971
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v1/basemap/imagery/11/979/786",
+          "ms": 9639.527046005242
+        },
+        {
+          "case": "fire-to-response",
+          "url": "/backend/api/v1/basemap/imagery/11/980/785",
+          "ms": 9632.700837995799
+        }
+      ]
+    },
+    "bundle": {
+      "cases": {
+        "cold": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 4430,
+          "p95Ms": 26950.5
+        },
+        "detail-to-fire": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 1368.1000000014901,
+          "p95Ms": 2140.39999999851
+        },
+        "fire-to-response": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 1809.8000000044703,
+          "p95Ms": 2296.400000002235
+        },
+        "response-to-detail": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 496.8999999985099,
+          "p95Ms": 871.2000000029802
+        },
+        "cached-revisit": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 700.6999999992549,
+          "p95Ms": 997.1999999992549
+        },
+        "incident-switch": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 3733.60000000149,
+          "p95Ms": 13965.39999999851
+        },
+        "overview": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 2590.60000000149,
+          "p95Ms": 2665.89999999851
+        },
+        "national": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 2319.7000000029802,
+          "p95Ms": 3097
+        }
+      },
+      "errors": [],
+      "coldRequests": [
+        {
+          "requests": 41,
+          "bytes": 7143727,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 2822.199999999255
+        },
+        {
+          "requests": 41,
+          "bytes": 7142921,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1192.199999999255
+        },
+        {
+          "requests": 45,
+          "bytes": 26736745,
+          "apiCalls": 11,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1889
+        }
+      ],
+      "slowRequests": [
+        {
+          "case": "cold",
+          "url": "/backend/api/v1/basemap/imagery/13/3915/3142",
+          "ms": 25212.726011995983
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v1/basemap/imagery/13/3916/3142",
+          "ms": 25212.503344999277
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v1/basemap/imagery/13/3914/3141",
+          "ms": 25198.79196999682
+        },
+        {
+          "case": "incident-switch",
+          "url": "/backend/api/v10/operator/incidents",
+          "ms": 11803.929879999487
+        },
+        {
+          "case": "incident-switch",
+          "url": "/backend/api/v10/operator/incidents/incident%3APT-2026-08D08E2A0D/location",
+          "ms": 11458.991254003195
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/global-situational-awareness",
+          "ms": 8630.936003995885
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/reports",
+          "ms": 6424.774420003814
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/incidents",
+          "ms": 6028.609419998247
+        }
+      ]
+    },
+    "firstVisitIntermediate": {
+      "cases": {
+        "cold": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 1798.3999999985099,
+          "p95Ms": 1815.8000000044703
+        },
+        "detail-to-fire": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 1919.6000000014901,
+          "p95Ms": 6361.5
+        },
+        "fire-to-response": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 2273.5999999940395,
+          "p95Ms": 2281.7000000029802
+        },
+        "response-to-detail": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 272.79999999701977,
+          "p95Ms": 495.8999999985099
+        },
+        "cached-revisit": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 247.39999999850988,
+          "p95Ms": 272.5
+        },
+        "incident-switch": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 2608.1999999955297,
+          "p95Ms": 3674.6999999955297
+        },
+        "overview": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 8381.80000000447,
+          "p95Ms": 11681.79999999702
+        },
+        "national": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 9885.79999999702,
+          "p95Ms": 10418.40000000596
+        }
+      },
+      "errors": [],
+      "coldRequests": [
+        {
+          "requests": 52,
+          "bytes": 12705585,
+          "apiCalls": 8,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1798.3999999985099
+        },
+        {
+          "requests": 52,
+          "bytes": 12698579,
+          "apiCalls": 8,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1653.8999999985099
+        },
+        {
+          "requests": 52,
+          "bytes": 12700744,
+          "apiCalls": 8,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1815.8000000044703
+        }
+      ],
+      "slowRequests": [
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/incidents",
+          "ms": 6942.300169997907
+        },
+        {
+          "case": "national",
+          "url": "/backend/api/v10/operator/global-situational-awareness",
+          "ms": 6712.236544997722
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v1/basemap/labels/13/3913/3142",
+          "ms": 6636.808294999355
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v1/basemap/labels/13/3917/3141",
+          "ms": 6635.828628001036
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v1/basemap/labels/13/3917/3142",
+          "ms": 6635.63062799949
+        },
+        {
+          "case": "overview",
+          "url": "/backend/api/v10/operator/command-overview",
+          "ms": 6445.025961002102
+        },
+        {
+          "case": "detail-to-fire",
+          "url": "/backend/api/v1/basemap/imagery/12/1959/1570",
+          "ms": 6194.547878003505
+        },
+        {
+          "case": "detail-to-fire",
+          "url": "/backend/api/v1/basemap/imagery/12/1958/1571",
+          "ms": 5815.9257950028405
+        }
+      ]
+    },
+    "final": {
+      "cases": {
+        "cold": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 1891.1999999955297,
+          "p95Ms": 4913.19999999553
+        },
+        "detail-to-fire": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 6298.5,
+          "p95Ms": 6740.10000000149
+        },
+        "fire-to-response": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 1506.6000000014901,
+          "p95Ms": 2656.8000000044703
+        },
+        "response-to-detail": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 302.40000000596046,
+          "p95Ms": 372.70000000298023
+        },
+        "cached-revisit": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 330,
+          "p95Ms": 417.5
+        },
+        "incident-switch": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 2018.6000000014901,
+          "p95Ms": 3425.2000000029802
+        },
+        "overview": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 8351.20000000298,
+          "p95Ms": 9945.10000000149
+        },
+        "national": {
+          "samples": 3,
+          "completed": 3,
+          "timeouts": 0,
+          "p50Ms": 8421.30000000447,
+          "p95Ms": 8749.79999999702
+        }
+      },
+      "errors": [],
+      "coldRequests": [
+        {
+          "requests": 51,
+          "bytes": 7229928,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 4913.19999999553
+        },
+        {
+          "requests": 52,
+          "bytes": 12703982,
+          "apiCalls": 8,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1408.7000000029802
+        },
+        {
+          "requests": 51,
+          "bytes": 7231603,
+          "apiCalls": 7,
+          "mounts": 1,
+          "styleReloads": 0,
+          "firstUsefulFrameFromProductMs": 1891.1999999955297
+        }
+      ],
+      "slowRequests": [
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/incidents/incident%3APT-2026-01F7E2E21A",
+          "ms": 8514.841504002106
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/incidents/incident%3APT-2026-01F7E2E21A/intelligence",
+          "ms": 8293.914003996179
+        },
+        {
+          "case": "cold",
+          "url": "/backend/api/v10/operator/incidents/incident%3APT-2026-01F7E2E21A/operations",
+          "ms": 8276.869129003899
+        },
+        {
+          "case": "overview",
+          "url": "/backend/api/v1/basemap/labels/5/14/11",
+          "ms": 8173.851379004191
+        },
+        {
+          "case": "overview",
+          "url": "/backend/api/v1/basemap/labels/5/14/12",
+          "ms": 8147.225461994822
+        },
+        {
+          "case": "overview",
+          "url": "/backend/api/v1/basemap/imagery/5/15/12",
+          "ms": 8011.384170000383
+        },
+        {
+          "case": "overview",
+          "url": "/backend/api/v1/basemap/imagery/5/14/12",
+          "ms": 8009.609462002118
+        },
+        {
+          "case": "overview",
+          "url": "/backend/api/v1/basemap/imagery/5/14/11",
+          "ms": 8005.424836999737
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Small samples describe this workstation run, not a statistical release guarantee.",
+    "First visits and incident switching remain slow. Report them separately from cached return paths.",
+    "PostGIS per-navigation query counts are not instrumented; live-proof.json records direct SQL latency and an EXPLAIN ANALYZE.",
+    "The current renderer has 14 eventual layers, one instance, and zero style reloads; it did not initialize 32 layers."
+  ]
+}

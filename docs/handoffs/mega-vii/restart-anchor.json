@@ -1,0 +1,30 @@
+{
+  "capturedAt": "2026-09-13T11:00:43.404Z",
+  "snapshots": [
+    {
+      "id": "situation:ce384005cb631f25385980fe73c64c7772d97dc76f0da7a49860c5c709c2c3a0",
+      "content_hash": "0e6c902f2b912edc2ff74049b590aad80b6b659470a35b9668e8fe6d0c92b5f8",
+      "universe": "OPERATIONAL"
+    },
+    {
+      "id": "situation:23197b6365f44a88c9317c96625d52aa354649968414c4ff0bb5cfb00b5cfb23",
+      "content_hash": "8222037c10a570c992d24aabb0afefff2859f53f910e935ad8bfb1bf3ea3eed3",
+      "universe": "OPERATIONAL"
+    },
+    {
+      "id": "situation:82f36b5ce45a054bdbfeec57ad68b8af3de042e14980066cdada283cd207a134",
+      "content_hash": "74903710c0750938efb3393082faf6d1b8a2affe3b6275e145ac2663142167c4",
+      "universe": "OPERATIONAL"
+    },
+    {
+      "id": "situation:440e36148ea6b4871a99144bba76bf793e548c04af45ad9cd3fc5087bf2f7581",
+      "content_hash": "03837e1a175632ff9c2189fd635a7fe4ed4dc0f7ad081ff37176424bc93fd1df",
+      "universe": "OPERATIONAL"
+    },
+    {
+      "id": "situation:6c5c0e3c0b5aab333af6d144db43af4eae3f9d812c91622c8b46fdf1cdfa4a2f",
+      "content_hash": "e9b4ad53cec47e5bc9cf0d2e82c769ad64092fca8856a75cb5fb62a62a15e163",
+      "universe": "OPERATIONAL"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "capturedAt": "2026-09-14T07:38:53.109Z",
+  "releaseId": "vigia-intelligence-fabric-14b343443ea8c494",
+  "codeStateHash": "sha256:6ffbbb28e7b876d254907061d816c960fd4dfe2b1438b686694402d76e824bd2",
+  "readiness": {
+    "status": 503,
+    "data": {
+      "schemaVersion": "vigia.public-operational-readiness.v1",
+      "ready": false,
+      "status": "not_ready",
+      "checkedAt": "2026-09-14T07:38:51.862Z",
+      "checks": [
+        {
+          "id": "production_synthetic_observations",
+          "ok": true,
+          "state": "zero",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "demo_identities",
+          "ok": true,
+          "state": "zero",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "authenticated_operator_boundary",
+          "ok": true,
+          "state": "operator_proxy_assertion_configured",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "operator_state_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "event_state_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "postgres_physical_truth",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "postgres_live_operations",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "audit_chain",
+          "ok": false,
+          "state": "invalid",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "operational_source_families",
+          "ok": false,
+          "state": "insufficient",
+          "blocking": false,
+          "evidencePresent": true
+        },
+        {
+          "id": "unknown_to_work_invariant",
+          "ok": true,
+          "state": "holding",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "physical_source_families",
+          "ok": false,
+          "state": "insufficient",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "scientific_runtime",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "geo_proof_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "external_validation",
+          "ok": true,
+          "state": "official_archive_report_reference_measured",
+          "blocking": false,
+          "evidencePresent": true
+        }
+      ],
+      "capabilities": {
+        "productionReality": {
+          "state": "fixture_free",
+          "syntheticObservations": 0,
+          "demoIdentities": 0
+        },
+        "evidenceAcquisition": {
+          "state": "engineering_loop_holding",
+          "unresolved": 0
+        },
+        "currentPhysicalCoverage": {
+          "state": "explicit_per_event",
+          "physicallyCurrentEvents": 0,
+          "activeEvents": 0
+        },
+        "observationOpportunities": {
+          "state": "current",
+          "confirmedFutureRecords": 0
+        },
+        "fusion": {
+          "state": "engineering_ready_unvalidated",
+          "probability": "disabled_without_approved_calibration_evidence"
+        },
+        "thermalGeometry": {
+          "state": "support_geometry_only_unvalidated",
+          "perimeterAuthority": false
+        },
+        "nativePixels": {
+          "state": "engineering_runtime_ready",
+          "persistedProofs": 0
+        },
+        "portugalValidation": {
+          "state": "official_archive_report_reference_measured",
+          "cases": 35
+        }
+      }
+    }
+  },
+  "model": {
+    "state": "disabled",
+    "model": null,
+    "inferenceVerified": false
+  },
+  "sourceFamilies": {
+    "families": [
+      {
+        "family": "road_restrictions",
+        "evidence": [
+          {
+            "url": "https://servicos.infraestruturasdeportugal.pt/viajar-na-estrada/transito-em-tempo-real",
+            "provider": "Infraestruturas de Portugal",
+            "checkedAt": "2026-09-14T07:34:02.085Z",
+            "accepted": 188
+          }
+        ],
+        "acceptedFacts": 1
+      }
+    ],
+    "count": 1,
+    "criterion": "Accepted non-scenario authoritative capability/designation facts or current official road observations; source refresh remains distinct from observation time.",
+    "sensingSubstitution": false
+  },
+  "sources": {
+    "firms": {
+      "id": "firms",
+      "label": "VIIRS active-fire detections",
+      "origin": "NASA FIRMS",
+      "cadence": "near-real-time; service updated frequently",
+      "staleAfterSeconds": 21600,
+      "authority": "satellite thermal detection",
+      "url": "https://firms.modaps.eosdis.nasa.gov/api/",
+      "provider": "NASA FIRMS",
+      "configured": true,
+      "configurationState": "configured",
+      "accessClassification": "LIVE_ACCESSIBLE",
+      "evidenceRole": "independent physical point evidence",
+      "state": "stale",
+      "fetchedAt": "2026-09-13T10:01:40.814Z",
+      "upstreamAt": "2026-09-13T02:56:00.000Z",
+      "lastPollAt": "2026-09-13T10:01:40.814Z",
+      "lastAcquisitionAttemptAt": "2026-09-13T10:01:40.814Z",
+      "lastSuccessAt": "2026-09-13T10:01:40.814Z",
+      "latestSourceObservation": "2026-09-13T02:56:00.000Z",
+      "ingestLagSeconds": 25541,
+      "accepted": 113,
+      "rejected": 0,
+      "currentCoverage": "Portugal mainland · 4/4 thermal feeds",
+      "nextPollAt": "2026-09-13T10:07:24.778Z",
+      "nextExpectedOpportunity": null,
+      "pollIntervalMs": 300000,
+      "consecutiveFailures": 0,
+      "error": null,
+      "feeds": [
+        "VIIRS_NOAA20_NRT",
+        "VIIRS_NOAA21_NRT",
+        "VIIRS_SNPP_NRT",
+        "MODIS_NRT"
+      ],
+      "healthyFeeds": [
+        "VIIRS_NOAA20_NRT",
+        "VIIRS_NOAA21_NRT",
+        "VIIRS_SNPP_NRT",
+        "MODIS_NRT"
+      ],
+      "rawSourceProductIds": [
+        "raw:nasa-firms:firms_VIIRS_NOAA20_NRT:c9bf9f90ca3055ba938efe7181fb94e9c5a769ad4bd449eee705e849b51912ad",
+        "raw:nasa-firms:firms_VIIRS_NOAA21_NRT:9997e0289c3c3265991db0a818ac74b6112fa0abbafe593894f060e46bb7451d",
+        "raw:nasa-firms:firms_VIIRS_SNPP_NRT:dbd27bb45013528c9ffe79de052813b57a2b1b7065be7b5948bd258f4736dc32",
+        "raw:nasa-firms:firms_MODIS_NRT:f55337066441907866c6ba7cf8be08d4c95086366c322f4780128b9c233ead64"
+      ],
+      "failurePolicy": {
+        "deadlineMs": 45000,
+        "openAfterFailures": 3,
+        "cooldownMs": 120000,
+        "retry": "Next scheduled acquisition after cooldown; no retries on the console read path",
+        "lastKnownValid": "Retain dated last-good data with failed/stale state; successful empty responses clear old data",
+        "requestTimeoutMs": 12000,
+        "expirySeconds": 21600,
+        "circuitScope": "firms"
+      },
+      "circuit": "CLOSED",
+      "consecutiveProviderFailures": 0,
+      "quarantine": [],
+      "ageSeconds": 26180,
+      "timeConflict": false,
+      "currentStateSince": "2026-09-13T08:57:06.956Z",
+      "transitionHistory": [
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T17:14:51.057Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T17:18:17.721Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T17:21:31.811Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T17:23:02.557Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T18:02:52.550Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T18:08:56.879Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T20:52:51.752Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T21:00:03.865Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T21:08:48.590Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T21:47:51.154Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T21:53:01.642Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T21:54:06.409Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-12T22:42:25.442Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-12T22:46:53.302Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-13T08:40:46.486Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-13T08:46:10.874Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-13T08:48:05.726Z"
+        },
+        {
+          "from": "stale",
+          "to": "current",
+          "at": "2026-09-13T08:50:07.277Z"
+        },
+        {
+          "from": "current",
+          "to": "stale",
+          "at": "2026-09-13T08:57:06.956Z"
+        }
+      ],
+      "lastRecoveryAt": "2026-09-13T08:50:07.277Z",
+      "lastStaleDurationMs": 121551,
+      "latestPhysicalObservation": "2026-09-13T02:56:00.000Z",
+      "sourceLagSeconds": 26180,
+      "cumulativeAcceptedObservations": 1163
+    },
+    "mtgPixels": {
+      "id": "mtgPixels",
+      "label": "MTG FCI FRP Pixel",
+      "provider": "EUMETSAT / LSA SAF",
+      "state": "not_configured",
+      "fetchedAt": "2026-09-13T10:12:19.852Z",
+      "upstreamAt": null,
+      "error": "Set VIGIA_MTG_FRP_DIR to an EUMETCast/LSA SAF MTFRPPIXEL directory, or VIGIA_MTG_FRP_JSON_URL.",
+      "origin": "EUMETSAT / LSA SAF MTFRPPIXEL",
+      "mode": "netcdf_drop",
+      "pointLevel": true,
+      "evidenceRole": "independent physical point evidence",
+      "cadenceMinutes": 10,
+      "nominalResolutionKm": 1,
+      "productStatus": "demonstration_nrt",
+      "configurationState": "registered_data_drop_or_gateway_required",
+      "accessClassification": "CREDENTIAL_BLOCKED",
+      "parserState": "ready",
+      "accepted": 0,
+      "rejected": 0,
+      "nextExpectedOpportunity": null
+    },
+    "sentinel3Pixels": {
+      "id": "sentinel3Pixels",
+      "label": "Sentinel-3 SLSTR L2 FRP",
+      "provider": "Copernicus Data Space Ecosystem",
+      "configured": true,
+      "authenticated": false,
+      "state": "unavailable",
+      "fetchedAt": "2026-09-13T10:01:40.812Z",
+      "upstreamAt": null,
+      "error": "cdse_auth_http_401",
+      "origin": "Copernicus Sentinel-3 SLSTR",
+      "mode": "cdse_stac_download",
+      "pointLevel": true,
+      "evidenceRole": "independent physical point evidence",
+      "nominalResolutionKm": 1,
+      "productStatus": "operational_nrt",
+      "configurationState": "configured",
+      "accessClassification": "CREDENTIAL_BLOCKED",
+      "parserState": "ready",
+      "latestPollAt": "2026-09-13T10:01:40.812Z",
+      "lastPollAt": "2026-09-13T10:01:40.812Z",
+      "latestSuccessAt": null,
+      "latestProduct": {
+        "id": "S3A_SL_2_FRP____20260912T225535_20260912T225835_20260913T011218_0179_144_030______MAR_O_NR_003",
+        "platform": "sentinel-3a",
+        "observedAt": "2026-09-12T22:55:34.503694Z",
+        "startAt": "2026-09-12T22:55:34.503694Z",
+        "endAt": "2026-09-12T22:58:34.503694Z",
+        "bbox": [
+          -28.2233,
+          30.6901,
+          -8.703,
+          44.0042
+        ],
+        "collection": "sentinel-3-sl-2-frp-nrt",
+        "asset": {
+          "name": "FRP_MWIR1km_STANDARD",
+          "format": "netcdf",
+          "mediaType": "application/netcdf",
+          "size": 275870,
+          "checksum": "d5011029e7a1d76cf2b38b9f88b795f8411796",
+          "checksumIntegrity": {
+            "algorithm": "md5",
+            "digest": "29e7a1d76cf2b38b9f88b795f8411796",
+            "encoding": "multihash",
+            "strength": "legacy_provider_integrity"
+          }
+        },
+        "officialItemUrl": "https://stac.dataspace.copernicus.eu/v1/collections/sentinel-3-sl-2-frp-nrt/items/S3A_SL_2_FRP____20260912T225535_20260912T225835_20260913T011218_0179_144_030______MAR_O_NR_003"
+      },
+      "latestPhysicalObservation": null,
+      "sourceLagSeconds": null,
+      "acquisitionLagSeconds": null,
+      "accepted": 0,
+      "rejected": 0,
+      "cumulativeAcceptedObservations": 0,
+      "cumulativeRejectedProducts": 0,
+      "cumulativeProductsAcquired": 0,
+      "cumulativeProductsCatalogued": 11,
+      "cumulativeKnownProductsSkipped": 0,
+      "checkpoint": [],
+      "nextPollAt": "2026-09-13T10:06:43.017Z",
+      "nextExpectedOpportunity": null,
+      "authenticationState": "rejected_or_missing",
+      "acceptedThisPoll": 0
+    }
+  },
+  "sensorAssets": {
+    "state": "not_configured",
+    "loadedAt": "2026-09-14T07:37:33.734Z",
+    "count": 0,
+    "assets": [],
+    "error": "No connected observation assets are configured."
+  }
+}

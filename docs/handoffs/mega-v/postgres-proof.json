@@ -1,0 +1,49 @@
+{
+  "lane": "CONTROLLED_SESSION_TEMPORARY_TABLES",
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    "append",
+    "no-op",
+    "retention-does-not-remove-current-snapshots",
+    "same-millisecond-capture-order",
+    "indexed-dependency-lookup",
+    "queue-merge-and-stale-ack",
+    "scenario-write-blocked",
+    "no-future-leakage",
+    "queue-only-transaction-preserves-facility-facts",
+    "html-passages-with-script-inert",
+    "reviewed-facility-fact-with-enforced-parent-foreign-keys"
+  ],
+  "extraction": {
+    "text": "Fixture hospital; Telefone: 239123456",
+    "candidates": [
+      {
+        "sourceText": "Fixture hospital; Telefone: 239123456",
+        "sourceLocator": {
+          "start": 0,
+          "end": 37
+        },
+        "validFrom": null,
+        "validUntil": null,
+        "extractionMethod": "DETERMINISTIC_PASSAGE",
+        "state": "REVIEW_REQUIRED",
+        "id": "candidate:ab4737dbeecd26e6bdc2e4454554fe827ff053d8dbb810c328852910559b3668",
+        "fact": {
+          "kind": "FACILITY_FACT",
+          "entityId": "entity:9227de3c4bedb61e534e7b5d",
+          "subjectCandidate": "Fixture hospital",
+          "predicate": "contact.phone",
+          "value": "239123456"
+        }
+      }
+    ],
+    "source": {
+      "id": "https://www.cm-evora.pt/pg-controlled",
+      "url": "https://www.cm-evora.pt/pg-controlled",
+      "provider": "Controlled municipal source",
+      "authority": "MUNICIPAL"
+    }
+  },
+  "operationalFixtureWrites": 0
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "vigia.corpus-worldclass-gate.v1",
+  "sourceFingerprint": "forecast-corpus:sha256:5a0d5e22abd70ade0ce62359a9e3cf465f09c79440b3b545a7e09acc41df92e7",
+  "criteria": {
+    "regions": {
+      "actual": 1,
+      "required": 2,
+      "passed": false
+    },
+    "seasons": {
+      "actual": 2,
+      "required": 2,
+      "passed": true
+    },
+    "eligibleIncidents": {
+      "actual": 2,
+      "required": 100,
+      "passed": false
+    },
+    "validNegatives": {
+      "actual": 0,
+      "required": 100,
+      "passed": false
+    },
+    "hardNegatives": {
+      "actual": 0,
+      "required": 25,
+      "passed": false
+    },
+    "developmentSplit": {
+      "actual": 1,
+      "required": 1,
+      "passed": true
+    },
+    "calibrationSplit": {
+      "actual": 0,
+      "required": 1,
+      "passed": false
+    },
+    "heldoutSplit": {
+      "actual": 10,
+      "required": 1,
+      "passed": true
+    },
+    "nearTermExamples": {
+      "actual": 0,
+      "required": 1,
+      "passed": false
+    },
+    "scoreableHorizons": {
+      "actual": 3,
+      "required": 3,
+      "passed": true
+    },
+    "knowledgeTimeAudit": {
+      "actual": 11,
+      "required": 1,
+      "passed": true
+    },
+    "sourceAblations": {
+      "actual": 0,
+      "required": 1,
+      "passed": false
+    },
+    "deterministicReplay": {
+      "actual": true,
+      "required": true,
+      "passed": true
+    }
+  },
+  "failures": [
+    "regions",
+    "eligibleIncidents",
+    "validNegatives",
+    "hardNegatives",
+    "calibrationSplit",
+    "nearTermExamples",
+    "sourceAblations"
+  ],
+  "passed": false,
+  "state": "CORPUS_NOT_READY",
+  "modelTrainingAuthorized": false,
+  "fingerprint": "corpus-worldclass-gate:sha256:bcecf2c22354ef694c75f86d0fd268168dc95c48ed6acfa6afebbcaee551af96"
+}

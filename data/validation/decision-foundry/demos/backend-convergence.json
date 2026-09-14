@@ -1,0 +1,227 @@
+{
+  "schemaVersion": "vigia.backend-convergence-demo.v1",
+  "generatedAt": "2026-08-25T09:02:22.981Z",
+  "incidentId": "2025-AZGCP-000597",
+  "state": "PASS",
+  "steps": [
+    {
+      "number": 1,
+      "name": "Verify Docker engine",
+      "state": "PASS",
+      "evidence": {
+        "serverVersion": "29.4.1"
+      }
+    },
+    {
+      "number": 2,
+      "name": "Start isolated PostGIS",
+      "state": "PASS",
+      "evidence": {
+        "certificationState": "PASS",
+        "image": "postgis/postgis:17-3.5",
+        "loopbackOnly": true
+      }
+    },
+    {
+      "number": 3,
+      "name": "Apply migrations through intelligence schema 017",
+      "state": "PASS",
+      "evidence": {
+        "migrationHead": "017",
+        "idempotent": true
+      }
+    },
+    {
+      "number": 4,
+      "name": "Load retained real incident history",
+      "state": "PASS",
+      "evidence": {
+        "incidentId": "2025-AZGCP-000597"
+      }
+    },
+    {
+      "number": 5,
+      "name": "Materialize Operational Twin/Decision state",
+      "state": "PASS",
+      "evidence": {
+        "state": "HISTORICAL_OPERATIONAL_SNAPSHOT"
+      }
+    },
+    {
+      "number": 6,
+      "name": "Compile signed Decision Packet",
+      "state": "PASS",
+      "evidence": {
+        "fingerprint": "crisis-decision-packet:sha256:4727e534f75fef67861c3b90d52ef641a104bc211b8eaee5426f27dc30a17d94",
+        "proof": "VALID"
+      }
+    },
+    {
+      "number": 7,
+      "name": "Query hypotheses and blockers",
+      "state": "PASS",
+      "evidence": {
+        "hypotheses": 10,
+        "blockedDecisions": 13
+      }
+    },
+    {
+      "number": 8,
+      "name": "Query ranked acquisition plan",
+      "state": "PASS",
+      "evidence": {
+        "candidates": 5,
+        "doctrine": "2.0.0"
+      }
+    },
+    {
+      "number": 9,
+      "name": "Persist new operational event transactionally",
+      "state": "PASS",
+      "evidence": {
+        "state": "DUPLICATE",
+        "sequence": 1,
+        "databaseTransactionCertified": true
+      }
+    },
+    {
+      "number": 10,
+      "name": "Incrementally update affected projections only",
+      "state": "PASS",
+      "evidence": {
+        "affectedIncidentIds": [
+          "2025-AZGCP-000597"
+        ],
+        "artifactsRead": 3,
+        "affectedObjectCount": 20
+      }
+    },
+    {
+      "number": 11,
+      "name": "Recompile packet against changed fact set",
+      "state": "PASS",
+      "evidence": {
+        "fingerprint": "crisis-decision-packet:sha256:750086cc090212ff705dd149784fdcef2925c3a31937e125c15e9450d56fdbf4"
+      }
+    },
+    {
+      "number": 12,
+      "name": "Produce Decision Delta",
+      "state": "PASS",
+      "evidence": {
+        "decisionsChanged": 1,
+        "actionsBecameAvailable": [
+          "REFRESH_STALE_SOURCE"
+        ]
+      }
+    },
+    {
+      "number": 13,
+      "name": "Execute safe bounded reconciliation",
+      "state": "PASS",
+      "evidence": {
+        "tasksCreated": 0,
+        "shadowRecordId": "backend-convergence-shadow:2025-AZGCP-000597:crisis-decision-packet:sha256:750086cc090212ff705dd149784fdcef2925c3a31937e125c15e9450d56fdbf4",
+        "unsafeActionsExecuted": 0
+      }
+    },
+    {
+      "number": 14,
+      "name": "Persist receipt",
+      "state": "PASS",
+      "evidence": {
+        "receiptId": "backend-convergence:receipt:source-stale"
+      }
+    },
+    {
+      "number": 15,
+      "name": "Query historical state",
+      "state": "PASS",
+      "evidence": {
+        "packetVersions": 2,
+        "projectionVersion": 42
+      }
+    },
+    {
+      "number": 16,
+      "name": "Restart services",
+      "state": "PASS",
+      "evidence": {
+        "adapter": "FILE_CERTIFIED_ADAPTER",
+        "databaseRestartCertified": true
+      }
+    },
+    {
+      "number": 17,
+      "name": "Reconstruct identical current state",
+      "state": "PASS",
+      "evidence": {
+        "packetFingerprint": "crisis-decision-packet:sha256:750086cc090212ff705dd149784fdcef2925c3a31937e125c15e9450d56fdbf4"
+      }
+    },
+    {
+      "number": 18,
+      "name": "Back up database",
+      "state": "PASS",
+      "evidence": {
+        "rpoEvents": 0,
+        "measuredRtoMs": 1419.372542
+      }
+    },
+    {
+      "number": 19,
+      "name": "Restore database into isolation",
+      "state": "PASS",
+      "evidence": {
+        "state": "PASS",
+        "rpoEvents": 0,
+        "rtoMs": 1419.372542,
+        "dataLossRecords": 0,
+        "projectionRecoveryMs": 11.001832999999351,
+        "replayVerificationMs": 1.1594999999997526,
+        "migrationHead": "017",
+        "migrationIdempotentAfterRestore": true,
+        "decisionPacketVerified": true,
+        "lineageVerified": true,
+        "receiptsVerified": true,
+        "prospectiveArchiveVerified": true,
+        "decisionMemoryVerified": true,
+        "informationValueVerified": true,
+        "projectionRebuilt": true,
+        "replayVerified": true
+      }
+    },
+    {
+      "number": 20,
+      "name": "Verify replay, lineage, and signatures",
+      "state": "PASS",
+      "evidence": {
+        "replay": true,
+        "lineage": true,
+        "signedRetainedPacket": "VALID",
+        "databaseSemanticEquivalence": "PASS"
+      }
+    },
+    {
+      "number": 21,
+      "name": "Report indexed object-set latency",
+      "state": "PASS",
+      "evidence": {
+        "p50Ms": 0.022124999999505235,
+        "p95Ms": 0.026834000000235392
+      }
+    },
+    {
+      "number": 22,
+      "name": "Shut down cleanly",
+      "state": "PASS",
+      "evidence": {
+        "externalConsequentialActions": 0,
+        "certificationContainersRemaining": 0
+      }
+    }
+  ],
+  "blockedSteps": [],
+  "failedSteps": [],
+  "externalConsequentialActions": 0
+}

@@ -1,0 +1,102 @@
+CRITICAL RELEASE — VIGIA OPERATIONAL TRUTH, ACTION, PROTECTION, AND OUTCOME RECOVERY
+
+You are now the accountable principal engineer, crisis-intelligence product lead, geospatial systems lead, and operational UX owner for one heavy release.
+
+This is not a cosmetic patch, another design exploration, or a test-count exercise.
+
+Read every file in this package in order:
+
+1. 00_EXECUTIVE_MANDATE.md
+2. 02_IMPLEMENTATION_HANDOFF.md
+3. 03_ACCEPTANCE_GATES.md
+4. 04_TEST_AND_CERTIFICATION_MATRIX.md
+5. evidence/INDEX.md
+6. every screenshot and the supplied runtime transcript
+
+The approved white VIGIA visual system is LOCKED. Do not redesign the shell.
+
+CURRENT RELEASE BASELINE
+
+- Runtime release observed: vigia-intelligence-fabric-5ed3541f7fcbcc00
+- Runtime reached Database/API/FieldNet/Operator READY.
+- 173 canonical records were exposed.
+- Evidence was reported UNAVAILABLE immediately after startup.
+- Map was reported DEGRADED_PARTIAL 3/32 immediately after startup, while later route views showed partial/live transport.
+- Current UI and quality reports contain severe semantic contradictions.
+
+THE PRODUCT IS NOT ACCEPTABLE
+
+Do not optimize for preserving 173 “active” records.
+Optimize for a smaller, governed operational truth set and explicitly separate:
+
+- VERIFIED CURRENT
+- DETECTION CANDIDATE
+- NEEDS REVALIDATION
+- HISTORICAL / CLOSED
+
+Only governed current incidents count as Active.
+
+P0 FAILURES TO ELIMINATE
+
+1. Command says 173 Active, but quality says 128 are stale.
+2. Command says Needs Attention 0, while Reports shows 47 unresolved high-impact decisions and Incident Detail can emit MANUAL_ESCALATION_REQUIRED.
+3. Command labels 692 resolution requirements as System Actions even though Outcome Analysis correctly says they are not initiated actions.
+4. Header/System Health report green Operational/Available while map transport and SLOs are critical.
+5. Selected incidents can show unrelated map geography/camera.
+6. Intelligence can show fresh weather while quality reports 0% weather association without explaining scope.
+7. Operations is populated by evidence requirements pretending to be operational actions.
+8. Every source-resolution row says dependency not identified and waits for the next canonical refresh rather than running an actual job.
+9. Outcome measurement has no persisted action-to-outcome chain.
+10. Situation Quality has no functional drill-downs.
+11. Global Awareness maps only a partial fraction of records and uses weak marker semantics.
+12. Primary UI still exposes internal terms/enums and generic “not returned” language.
+13. Map stable render and API p95 miss their SLOs by multiples.
+14. Health/readiness definitions can contradict component readiness payloads.
+
+EXECUTE THE FULL RELEASE
+
+A. Build one canonical operational-classification and cross-route consistency contract.
+B. Derive Command, Incidents, Detail, Intelligence, Operations, Reports, and Global from it.
+C. Implement a real source-resolution scheduler and job lifecycle using existing source capabilities.
+D. Repair map selection/camera atomicity, label fallback, geolocation coverage, transport states, and performance.
+E. Replace vanity Command metrics with current verified, candidates, revalidation, and human decisions.
+F. Make incident priority transparent and remove “context” as fake priority.
+G. Rebuild Operations around two distinct work types: Source Resolution and Response Operations.
+H. Implement a governed Protect workflow, using clearly isolated SHADOW/EXERCISE mode when live authority is unavailable.
+I. Persist and certify at least one complete action → acknowledgement → expected postcondition → observed postcondition → measured outcome chain through a real archive or explicit replay.
+J. Make Reports drillable, consistent, and useful.
+K. Make Global Awareness semantically rich and operationally complete for the governed current subset.
+L. Add invariant, route, interaction, performance, source-resolution, protection, outcome, and responsive certification.
+
+DO NOT
+
+- fabricate source confirmation, geometry, official status, authority, alerts, or outcomes;
+- treat exercise/replay data as production;
+- reset runtime data;
+- delete history to improve scores;
+- lower acceptance thresholds;
+- relabel missing capability as operational;
+- hide stale records without a governed lifecycle classification;
+- create more primary routes;
+- restore Evidence, Control Plane, or Authority & Trust as primary navigation;
+- stage or commit.
+
+WHEN EXTERNAL TRUTH CANNOT MEET A GATE
+
+Do not fabricate it. Reclassify the record out of the operational subset, create a visible source-resolution job, or demonstrate the capability through an isolated certified replay. The operational scope must meet the gate even when the total historical universe cannot.
+
+RELEASE DISCIPLINE
+
+Do not return after implementing only one workstream. Continue until every P0 gate in 03_ACCEPTANCE_GATES.md is either PASS or blocked by a precise external dependency that cannot be resolved from existing project capabilities.
+
+Static assertions alone are insufficient. Produce fresh canonical runtime screenshots, interaction recordings/evidence, invariant results, performance traces, source-resolution job evidence, one protection-flow artifact, and one certified outcome chain.
+
+Use 05_END_OF_DAY_REPORT_TEMPLATE.md exactly.
+
+Finish only with one of these phrases:
+
+VIGIA_OPERATIONAL_TRUTH_AND_ACTION_RECOVERY_READY
+
+or
+
+VIGIA_OPERATIONAL_TRUTH_AND_ACTION_RECOVERY_BLOCKED: <precise external blocker and affected gates>

@@ -1,0 +1,8 @@
+import {e} from './html.js';
+export function sparkline(series,{color='#3989ee',area=true,label='Illustrative measurement trend'}={}){
+ const w=430,h=83,pad=7;const lo=Math.min(...series)*.8,hi=Math.max(...series)*1.1;const pts=series.map((v,i)=>[pad+i*(w-2*pad)/Math.max(1,series.length-1),h-pad-(v-lo)/(hi-lo||1)*(h-2*pad)]);const d=pts.map(([x,y],i)=>`${i?'L':'M'}${x.toFixed(2)} ${y.toFixed(2)}`).join(' ');
+ return `<svg class="sparkline" viewBox="0 0 ${w} ${h}" role="img" aria-label="${e(label)}">${area?`<path d="${d} L${w-pad} ${h} L${pad} ${h}Z" fill="${color}" opacity=".08"/>`:''}<path d="${d}" stroke="${color}" stroke-width="2.5" fill="none"/>${pts.map(([x,y])=>`<circle cx="${x}" cy="${y}" r="3.8" fill="${color}" stroke="white" stroke-width="1.5"/>`).join('')}</svg>`;
+}
+export function barChart(series,labels){const w=570,h=202,base=169,max=Math.max(...series,1),step=490/series.length;
+ return `<svg class="bar-chart" viewBox="0 0 ${w} ${h}" role="img" aria-label="Illustrative reviews by period: ${e(series.join(', '))}">${[0,1,2,3].map(i=>{const y=base-i*45;return `<line x1="38" x2="551" y1="${y}" y2="${y}" stroke="#edf0f6"/><text x="23" y="${y+4}" text-anchor="end">${Math.round(max*i/3)}</text>`;}).join('')}${series.map((v,i)=>{const ht=v/max*130;return `<g><rect x="${47+i*step}" y="${base-ht}" width="${Math.min(48,step-18)}" height="${ht}" rx="3" fill="#4054dc"/><text x="${47+i*step+Math.min(48,step-18)/2}" y="${base-ht-7}" text-anchor="middle" class="chart-value">${v}</text><text x="${47+i*step+Math.min(48,step-18)/2}" y="${base+22}" text-anchor="middle">${e(labels[i])}</text></g>`;}).join('')}</svg>`;
+}

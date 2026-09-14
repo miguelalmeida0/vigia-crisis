@@ -1,0 +1,144 @@
+{
+  "schemaVersion": "vigia.backend-convergence-benchmark.v1",
+  "generatedAt": "2026-08-25T10:13:23.367Z",
+  "engineeringOnlySyntheticFixture": true,
+  "prohibitedAsOperationalEvidence": true,
+  "indexedQueries": {
+    "coldQuery": {
+      "iterations": 25,
+      "p50Ms": 0.25095799999999713,
+      "p95Ms": 0.3619170000000054,
+      "maxMs": 3.4462500000000205
+    },
+    "warmQuery": {
+      "iterations": 2000,
+      "p50Ms": 0.0201669999999865,
+      "p95Ms": 0.02637500000000159,
+      "maxMs": 2.6622919999999795
+    },
+    "pagination": {
+      "iterations": 1000,
+      "p50Ms": 0.025834000000003243,
+      "p95Ms": 0.029167000000001053,
+      "maxMs": 0.1615839999999764
+    },
+    "compoundFilters": {
+      "iterations": 1000,
+      "p50Ms": 0.022625000000005002,
+      "p95Ms": 0.025000000000005684,
+      "maxMs": 0.1675000000000182
+    },
+    "incrementalUpdate": {
+      "iterations": 25,
+      "p50Ms": 3.829207999999994,
+      "p95Ms": 4.149457999999981,
+      "maxMs": 4.300833999999952
+    },
+    "sustained": {
+      "iterations": 10000,
+      "p50Ms": 0.004000000000019099,
+      "p95Ms": 0.004540999999960604,
+      "maxMs": 2.376209000000017
+    }
+  },
+  "scale": {
+    "incidents": 10000,
+    "canonicalEvents": 1000000,
+    "evidenceObjects": 100000,
+    "dataProducts": 100000,
+    "decisionMemoryQualification": "ENGINEERING_ONLY_COMPACT_REPLAY_INDEX",
+    "ingestion": {
+      "qualification": "COMPACT_INDEX_CONSTRUCTION_NOT_DATABASE_INSERT",
+      "elapsedMs": 5.012875000000008,
+      "indexOperationsPerSecond": 199486322.71899828
+    },
+    "databaseIngestion": {
+      "state": "NOT_MEASURED_POSTGIS_CERTIFICATION_REQUIRED"
+    },
+    "databaseSize": {
+      "state": "NOT_MEASURED_POSTGIS_CERTIFICATION_REQUIRED"
+    },
+    "incidentLookup": {
+      "iterations": 10000,
+      "p50Ms": 0.00004200000000764703,
+      "p95Ms": 0.00004200000000764703,
+      "maxMs": 0.03741700000000492
+    },
+    "incidentSnapshot": {
+      "iterations": 1000,
+      "p50Ms": 0.023000000000024556,
+      "p95Ms": 0.025791999999967175,
+      "maxMs": 0.2967090000000212
+    },
+    "incidentSnapshotRepository": "ENGINEERING_ONLY_COMPACT_INDEX_ADAPTER",
+    "commonObjectSet": {
+      "iterations": 1000,
+      "p50Ms": 0.004416999999989457,
+      "p95Ms": 0.0053339999999479915,
+      "maxMs": 0.25387499999999363
+    },
+    "largeResultPagination": {
+      "iterations": 1000,
+      "p50Ms": 0.00012499999996862243,
+      "p95Ms": 0.00012500000002546585,
+      "maxMs": 0.024833000000000993
+    },
+    "decisionPacketCompilation": {
+      "iterations": 500,
+      "p50Ms": 1.9574589999999716,
+      "p95Ms": 2.3692499999999654,
+      "maxMs": 50.090584000000035
+    },
+    "decisionDelta": {
+      "iterations": 10000,
+      "p50Ms": 0.01491600000008475,
+      "p95Ms": 0.016499999999950887,
+      "maxMs": 0.28045799999995324
+    },
+    "lineageTraversal": {
+      "iterations": 10000,
+      "p50Ms": 0.0000829999999609754,
+      "p95Ms": 0.00012500000002546585,
+      "maxMs": 0.011124999999992724
+    },
+    "replay": {
+      "iterations": 50,
+      "p50Ms": 0.057084000000031665,
+      "p95Ms": 0.07645800000000236,
+      "maxMs": 0.3265830000000278
+    }
+  },
+  "memory": {
+    "baselineRssBytes": 219889664,
+    "baselineRssMiB": 209.7,
+    "peakRssBytes": 270237696,
+    "peakRssMiB": 257.7,
+    "steadyStateRssBytes": 268075008,
+    "steadyStateRssMiB": 255.7,
+    "growthDuringSustainedBytes": 1327104,
+    "cacheSizeBytes": 76642,
+    "compactIndexBytes": 1250000,
+    "workingSetBytes": 1574527
+  },
+  "targets": {
+    "commonObjectSetP95Ms": 25,
+    "complexGraphP95Ms": 75,
+    "incidentSnapshotP95Ms": 50,
+    "decisionPacketP95Ms": 50,
+    "decisionDeltaP95Ms": 10,
+    "incrementalProjectionP95Ms": 25
+  },
+  "gates": {
+    "commonObjectSet": true,
+    "coldObjectSet": true,
+    "pagination": true,
+    "compoundFilters": true,
+    "incidentSnapshot": true,
+    "queryCount": true,
+    "decisionPacket": true,
+    "decisionDelta": true,
+    "incrementalProjection": true,
+    "boundedMemoryGrowth": true
+  },
+  "state": "PASS"
+}

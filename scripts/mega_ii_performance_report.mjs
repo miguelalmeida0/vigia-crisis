@@ -1,0 +1,12 @@
+import {readFile,writeFile,copyFile} from 'node:fs/promises';
+const root='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration';
+const lanes=['before','after','optimized','compact'],data={};
+const navigationFailures=[];
+for(const lane of lanes){try{data[lane]=JSON.parse(await readFile(`${root}/mega-ii-${lane}-map.json`,'utf8'));await copyFile(`${root}/mega-ii-${lane}-map.json`,`docs/handoffs/mega-ii/map-${lane}.json`);}catch{}}
+const compactLog=await readFile('.tmp/mega-ii/map-compact.log','utf8').catch(()=> '');
+if(compactLog.includes('Page.goto: Timeout')){navigationFailures.push({lane:'compact',case:'cold',sample:1,stage:'DOMContentLoaded',timeoutMs:30000,remainingUnexecutedCases:7});await writeFile('docs/handoffs/mega-ii/map-compact-failure.log',compactLog);}
+const stats=rows=>{const values=rows.map(r=>r.firstUsefulFrameMs).filter(Number.isFinite).sort((a,b)=>a-b);return{samples:rows.length,completed:values.length,timeouts:rows.length-values.length,p50Ms:values.length?(values[Math.floor((values.length-1)/2)]+values[Math.ceil((values.length-1)/2)])/2:null,p95Ms:values.length?values[Math.ceil(values.length*.95)-1]:null};};
+const report={capturedAt:new Date().toISOString(),state:'SMALL_SAMPLE_COMPARISON_NOT_CERTIFICATION',method:'Pinned Docker Chromium, 1728x966 CSS pixels, one transparent local proxy, real backend, browser cache enabled. First useful frame is the first observed tile/render or retained loaded-renderer frame after navigation. Two cold sessions per lane. Shared 16 GB workstation; background source work remains active.',cases:{},overall:Object.fromEntries(Object.entries(data).map(([lane,d])=>[lane,stats(d.results)])),consoleErrors:Object.fromEntries(Object.entries(data).map(([lane,d])=>[lane,d.errors])),limitation:'Two samples per route do not establish a statistical no-regression guarantee. PostGIS calls are not attributed per browser navigation. No results are omitted.'};
+for(const name of new Set(data.before.results.map(r=>r.case)))report.cases[name]=Object.fromEntries(Object.entries(data).map(([lane,d])=>[lane,stats(d.results.filter(r=>r.case===name))]));
+report.navigationFailures=navigationFailures;report.state='PERFORMANCE_GATE_OPEN';report.recordedResultsExcludeAbortedNavigation=true;
+await writeFile('docs/handoffs/mega-ii/performance.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report.overall,null,2));

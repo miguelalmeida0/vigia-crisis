@@ -1,0 +1,125 @@
+{
+  "package": "VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03",
+  "files": [
+    {
+      "path": "00_EXECUTIVE_MANDATE.md",
+      "bytes": 5349,
+      "sha256": "d78021db21557da3aa68b602665d91c80f550c8f590e3f239dee9d95bebdfc09"
+    },
+    {
+      "path": "01_AGENT_PROMPT.txt",
+      "bytes": 5559,
+      "sha256": "12aa3eb3c706e859cc1566f37bae33979c34d2a90c4e08671dae54d81da7f4ec"
+    },
+    {
+      "path": "02_IMPLEMENTATION_HANDOFF.md",
+      "bytes": 19838,
+      "sha256": "470896cf4bfb17510bb24f1f4973eaaa7d53778badd03dc465a84239a45d5700"
+    },
+    {
+      "path": "03_ACCEPTANCE_GATES.md",
+      "bytes": 5397,
+      "sha256": "b2fc3c934451678f96d365f874ac9d2837fac01d6521888849f1d426b1802aa3"
+    },
+    {
+      "path": "04_TEST_AND_CERTIFICATION_MATRIX.md",
+      "bytes": 5020,
+      "sha256": "d49c67d6eb74529a816d40c10c9db2f8a422eaab39b46ce16e9716b6f366884d"
+    },
+    {
+      "path": "05_END_OF_DAY_REPORT_TEMPLATE.md",
+      "bytes": 3384,
+      "sha256": "bde692566508d732027a175b59c6ddb64f72bf6188452c5d6680ca490c9e60ca"
+    },
+    {
+      "path": "06_COMMANDS_TO_RUN.md",
+      "bytes": 1633,
+      "sha256": "e322daff30a19eb15db6ea3bebffbc88ee36ec19bd5f72524ae221617105f2c9"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1643,
+      "sha256": "d7603a2876edf92b908734b01ac74f1dbc541b9fc4f24fba44c11b08582d0123"
+    },
+    {
+      "path": "evidence/INDEX.md",
+      "bytes": 2156,
+      "sha256": "a7dc0bf2fbde32c5bca905875933ecd7c5ae99e1bff6b538b64123e89de13c7d"
+    },
+    {
+      "path": "evidence/current-ui/01-command-overview.png",
+      "bytes": 826448,
+      "sha256": "e6fb1a9a002abcc577a8406cedd085e973d6b1798e5620b32aff6f93b5c3a0f8"
+    },
+    {
+      "path": "evidence/current-ui/02-incident-detail-valongo.png",
+      "bytes": 1582634,
+      "sha256": "bde4b42cc72416fbb4497cf5b9455e0b259c4a82c611cb31f3cc53dcae508f1a"
+    },
+    {
+      "path": "evidence/current-ui/03-incident-detail-vilar-andorinho.png",
+      "bytes": 802161,
+      "sha256": "f5b14f353ba17e5178e9af195410daa180ebaf742a357bbf51b1a0ec3293eadf"
+    },
+    {
+      "path": "evidence/current-ui/04-incident-selector-open.png",
+      "bytes": 844238,
+      "sha256": "39456d27d23490651eb50653bd0977d915702ca76c8359f7c4b601315919d8e5"
+    },
+    {
+      "path": "evidence/current-ui/05-incidents.png",
+      "bytes": 823943,
+      "sha256": "d1e5354a817fcf323d6ab8af7ccf52556ba6746bbf66020475c802932cb23d70"
+    },
+    {
+      "path": "evidence/current-ui/06-intelligence.png",
+      "bytes": 716622,
+      "sha256": "d49b94b9f30fbe9bd78b85ddd8a7948194201b715c3f96b61b50304ee45b4312"
+    },
+    {
+      "path": "evidence/current-ui/07-operations-action-1.png",
+      "bytes": 268953,
+      "sha256": "7d9e0e869fdb4ebb48da5b21a6e41e5dec47f9a409e461b99b7860054dd47d2c"
+    },
+    {
+      "path": "evidence/current-ui/08-operations-action-3.png",
+      "bytes": 274234,
+      "sha256": "e42fc498075c3a627346de154928ba104e5d82047f4c0382436fed9dc87c8257"
+    },
+    {
+      "path": "evidence/current-ui/09-reports-decision-summary.png",
+      "bytes": 205556,
+      "sha256": "7f1fff5192fc3da658efa91539696096f46b66fc296db2a2d13d477d84248393"
+    },
+    {
+      "path": "evidence/current-ui/10-reports-outcome-analysis.png",
+      "bytes": 221885,
+      "sha256": "5105a511f2ca0a09e3b483d160a8015f8be04ed01cd9e644a2a53a348bf6037e"
+    },
+    {
+      "path": "evidence/current-ui/11-reports-system-performance.png",
+      "bytes": 231676,
+      "sha256": "f53c05eb100823d802762d3dbad4dad0bf3db9cf10cfe3f724b75fdb1549babc"
+    },
+    {
+      "path": "evidence/current-ui/12-reports-situation-quality.png",
+      "bytes": 261945,
+      "sha256": "357db4e3387a6fc4ba72fd27859003af2965a86946489243282ec17de42a20c8"
+    },
+    {
+      "path": "evidence/current-ui/13-global-awareness-all.png",
+      "bytes": 1437483,
+      "sha256": "9a01a979c94b95b78c9a385d3c7f22c2ad13b90d0c592f27e9f24b5903ffce04"
+    },
+    {
+      "path": "evidence/current-ui/14-global-awareness-filtered.png",
+      "bytes": 2308778,
+      "sha256": "14d2ce9a4e702d2b4d4d86a8d7c9dd47fee14a8f47383603d02531227c4dd305"
+    },
+    {
+      "path": "evidence/runtime/terminal-and-runtime-results.md",
+      "bytes": 72254,
+      "sha256": "965d57a474d03aa02f36f2bba67638a0f079a14e0550ee7042f0a6607bc5b5a2"
+    }
+  ]
+}

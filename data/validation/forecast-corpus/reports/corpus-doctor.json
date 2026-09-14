@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "vigia.forecast-corpus-doctor.v1",
+  "sources": [
+    {
+      "source": "nifc-wfigs-daily",
+      "provider": "NIFC WFIGS",
+      "accessStatus": "READY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 39487,
+      "latencyMs": 576.765,
+      "archivePeriod": "2025-present",
+      "regionCoverage": [
+        "western-us"
+      ],
+      "knowledgeTimeQuality": "DOCUMENTED_LATENCY_MODEL",
+      "perimeterSequenceCapability": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REVIEW_REQUIRED",
+      "estimatedVolume": "15,576 rows for 2025 before bounded filtering",
+      "currentBlocker": "NIFC says the automated geometry-change history is not an official progression."
+    },
+    {
+      "source": "nifc-wfigs-history",
+      "provider": "NIFC WFIGS",
+      "accessStatus": "FINAL_ONLY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 40230,
+      "latencyMs": 175.149,
+      "archivePeriod": "current decade plus historical integrations",
+      "regionCoverage": [
+        "western-us"
+      ],
+      "knowledgeTimeQuality": "RETROSPECTIVE",
+      "perimeterSequenceCapability": "FINAL_ONLY",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REVIEW_REQUIRED",
+      "estimatedVolume": "national",
+      "currentBlocker": "One best available geometry does not reconstruct historical knowledge time."
+    },
+    {
+      "source": "nasa-feds-history",
+      "provider": "NASA FEDS",
+      "accessStatus": "READY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 12454,
+      "latencyMs": 286.259,
+      "archivePeriod": "2025-03-present service extent",
+      "regionCoverage": [
+        "western-us"
+      ],
+      "knowledgeTimeQuality": "DERIVED_OBSERVATION_TIME_WITH_SIMULATED_ARRIVAL",
+      "perimeterSequenceCapability": "DERIVED_PROGRESS_SEQUENCE",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REVIEW_REQUIRED",
+      "estimatedVolume": "bounded server query",
+      "currentBlocker": "FEDS is VIIRS-derived and cannot add an independent physical family."
+    },
+    {
+      "source": "noaa-hrrr-archive",
+      "provider": "NOAA NODD",
+      "accessStatus": "READY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 648,
+      "latencyMs": 382.451,
+      "archivePeriod": "2014-present",
+      "regionCoverage": [
+        "western-us"
+      ],
+      "knowledgeTimeQuality": "ISSUE_TIME_RUN_IDENTITY",
+      "perimeterSequenceCapability": "NONE",
+      "weatherRunCapability": "ISSUE_TIME_DETERMINISTIC",
+      "licenceStatus": "REGISTERED",
+      "estimatedVolume": "multi-petabyte archive; byte ranges required",
+      "currentBlocker": "Selected GRIB messages must be decoded and missing-value checked before Gold use."
+    },
+    {
+      "source": "nasa-firms-archive",
+      "provider": "NASA FIRMS",
+      "accessStatus": "READY",
+      "network": "REACHABLE",
+      "credentialStatus": "CONFIGURED_NOT_EMITTED",
+      "responseBytes": 20380,
+      "latencyMs": 624.209,
+      "archivePeriod": "MODIS 2000-present; VIIRS 2012-present",
+      "regionCoverage": [
+        "western-us",
+        "portugal"
+      ],
+      "knowledgeTimeQuality": "OBSERVATION_PLUS_ARCHIVE_DISCOVERY",
+      "perimeterSequenceCapability": "NONE",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REVIEW_REQUIRED",
+      "estimatedVolume": "bounded by area and five-day windows",
+      "currentBlocker": "CSV point presence alone does not prove swath opportunity or a negative."
+    },
+    {
+      "source": "usfs-landfire",
+      "provider": "USGS LANDFIRE",
+      "accessStatus": "READY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 3198,
+      "latencyMs": 532.091,
+      "archivePeriod": "versioned historical releases",
+      "regionCoverage": [
+        "western-us"
+      ],
+      "knowledgeTimeQuality": "VERSION_AND_REFERENCE_DATE",
+      "perimeterSequenceCapability": "NONE",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REGISTERED",
+      "estimatedVolume": "bounded raster export",
+      "currentBlocker": "Release availability and landscape-reference dates must precede each forecast cutoff."
+    },
+    {
+      "source": "mtbs-final",
+      "provider": "MTBS",
+      "accessStatus": "FINAL_ONLY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 31896,
+      "latencyMs": 1066.125,
+      "archivePeriod": "1984-present programme period",
+      "regionCoverage": [
+        "western-us"
+      ],
+      "knowledgeTimeQuality": "RETROSPECTIVE_LABEL_ONLY",
+      "perimeterSequenceCapability": "FINAL_ONLY",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "NOT_REGISTERED",
+      "estimatedVolume": "national",
+      "currentBlocker": "MTBS products are labels, never issue-time features."
+    },
+    {
+      "source": "icnf-burned-area",
+      "provider": "ICNF",
+      "accessStatus": "FINAL_ONLY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 24847,
+      "latencyMs": 820.994,
+      "archivePeriod": "1975-2024 published annual layers",
+      "regionCoverage": [
+        "portugal"
+      ],
+      "knowledgeTimeQuality": "RETROSPECTIVE_LABEL_ONLY",
+      "perimeterSequenceCapability": "FINAL_ONLY",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REVIEW_REQUIRED",
+      "estimatedVolume": "annual national layers",
+      "currentBlocker": "No historical issue-time geometry revision timestamps are exposed."
+    },
+    {
+      "source": "effis-history",
+      "provider": "EFFIS",
+      "accessStatus": "NETWORK_BLOCKED",
+      "network": "upstream_redirect_limit_exceeded",
+      "credentialStatus": "NOT_REQUIRED",
+      "archivePeriod": "multi-year European fire database",
+      "regionCoverage": [
+        "portugal"
+      ],
+      "knowledgeTimeQuality": "PRODUCT_DEPENDENT",
+      "perimeterSequenceCapability": "TIMESTAMP_UNTRUSTWORTHY",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "NOT_REGISTERED",
+      "estimatedVolume": "European archive",
+      "currentBlocker": "Publication/revision timing and satellite lineage require product-level confirmation."
+    },
+    {
+      "source": "cems-rapid-mapping",
+      "provider": "Copernicus EMS",
+      "accessStatus": "READY",
+      "network": "REACHABLE",
+      "credentialStatus": "NOT_REQUIRED",
+      "responseBytes": 26036,
+      "latencyMs": 582.859,
+      "archivePeriod": "activation-specific",
+      "regionCoverage": [
+        "portugal"
+      ],
+      "knowledgeTimeQuality": "ACTIVATION_DELIVERY_TIME",
+      "perimeterSequenceCapability": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "NOT_REGISTERED",
+      "estimatedVolume": "sparse activation products",
+      "currentBlocker": "Not a systematic national incident sample and revisions are activation-specific."
+    },
+    {
+      "source": "ecmwf-operational-archive",
+      "provider": "ECMWF",
+      "accessStatus": "PARTNER_REQUIRED",
+      "network": "NOT_PROBED",
+      "credentialStatus": "PARTNER_REQUIRED",
+      "archivePeriod": "archive catalogue",
+      "regionCoverage": [
+        "portugal"
+      ],
+      "knowledgeTimeQuality": "ISSUE_TIME_RUN_IDENTITY",
+      "perimeterSequenceCapability": "NONE",
+      "weatherRunCapability": "ISSUE_TIME_ENSEMBLE",
+      "licenceStatus": "REGISTERED",
+      "estimatedVolume": "high-volume archive",
+      "currentBlocker": "Historical delivery access is not configured; rolling Open Data cannot reconstruct old incidents."
+    },
+    {
+      "source": "copernicus-dem",
+      "provider": "Copernicus Data Space",
+      "accessStatus": "CREDENTIALS_REQUIRED",
+      "network": "NOT_PROBED",
+      "credentialStatus": "CREDENTIALS_REQUIRED",
+      "archivePeriod": "static reference DEM",
+      "regionCoverage": [
+        "portugal"
+      ],
+      "knowledgeTimeQuality": "STATIC_REFERENCE_INSTANCE",
+      "perimeterSequenceCapability": "NONE",
+      "weatherRunCapability": "NONE",
+      "licenceStatus": "REVIEW_REQUIRED",
+      "estimatedVolume": "tile based",
+      "currentBlocker": "The 30 m service requires current licence acceptance/user-category access."
+    }
+  ]
+}

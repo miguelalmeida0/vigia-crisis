@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "vigia.authoritative-truth-replay.v1",
+  "generatedAt": "2026-08-25T16:07:45.147Z",
+  "campaignId": "authoritative-truth-20260825153724",
+  "exactFingerprint": "authoritative-truth-replay-state:sha256:c5fb3bc545d1941cb8e099e6b027355c47a71606d9eb6f207bd05c66a71f2973",
+  "revisionChainsVerified": true,
+  "rawObjectsVerified": true,
+  "labelReplayVerified": true,
+  "backupRestorePassed": true,
+  "restartRecoveryPassed": true,
+  "priorSnapshotsRewritten": 0,
+  "failures": [],
+  "durationMs": 4516.09,
+  "passed": true,
+  "fingerprint": "authoritative-truth-replay:sha256:568173948dfb9325dc0c38ac6839bfb05c61b221305c44eb9e84f5ea4e4e84f3"
+}

@@ -1,0 +1,172 @@
+{
+  "status": 200,
+  "latencyMs": 1003.8416659999998,
+  "data": {
+    "events": [
+      {
+        "id": "audit:db2af32a-5084-4853-81f2-190168c29f77",
+        "at": "2026-09-12T22:25:07.820Z",
+        "actorId": "system",
+        "actorRole": "system",
+        "type": "evidence.backlog.reconciled",
+        "entityType": "evidence_backlog",
+        "entityId": "current",
+        "payload": {
+          "classified": 0,
+          "classifiedOpen": 0,
+          "internallyActionable": 0,
+          "actionableNow": 0,
+          "evidenceProducingCompleted": 0,
+          "waitingRemoteSensor": 0,
+          "waitingExpertReview": 0,
+          "associationClosable": 0,
+          "externallyBlocked": 0,
+          "stale": 0,
+          "superseded": 0,
+          "unresolvable": 0,
+          "blocked": 0,
+          "unobtainable": 0,
+          "staleOrSuperseded": 0,
+          "duplicatesClosed": 0,
+          "unobtainableRequestsClosed": 0,
+          "unknownsClosedWithEvidence": 0,
+          "overdue": 0,
+          "globalEvidenceYieldPercent": null,
+          "actionableEvidenceYieldPercent": null,
+          "automaticRequestCreation": "ENABLED"
+        },
+        "previousHash": "d1b91ba48dae96c75752c450e89b60d5d9973bfe231c64d0237ed33fc8b1c131",
+        "hash": "d229f795d1e84b40f0828d2dc2115f9b6925c92af84c66d846512f2742c817bc"
+      }
+    ],
+    "chain": {
+      "valid": false,
+      "count": 1844,
+      "head": "d229f795d1e84b40f0828d2dc2115f9b6925c92af84c66d846512f2742c817bc",
+      "failedIndex": 872,
+      "failureCount": 972,
+      "failures": [
+        {
+          "index": 872,
+          "id": "audit:860f68d6-fd46-49bf-a441-c28f37bc64ce",
+          "at": "2026-08-25T20:34:30.551Z",
+          "reason": "CHAIN_DISCONTINUITY"
+        },
+        {
+          "index": 873,
+          "id": null,
+          "at": "2026-09-04T09:05:17.864Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 874,
+          "id": null,
+          "at": "2026-09-04T09:05:22.675Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 875,
+          "id": null,
+          "at": "2026-09-04T14:23:00.532Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 876,
+          "id": null,
+          "at": "2026-09-04T14:23:05.205Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 877,
+          "id": null,
+          "at": "2026-09-04T14:23:09.028Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 878,
+          "id": null,
+          "at": "2026-09-04T14:23:13.141Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 879,
+          "id": null,
+          "at": "2026-09-04T14:23:16.497Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 880,
+          "id": null,
+          "at": "2026-09-04T14:24:06.253Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 881,
+          "id": null,
+          "at": "2026-09-04T14:24:07.286Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 882,
+          "id": null,
+          "at": "2026-09-04T14:24:08.416Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 883,
+          "id": null,
+          "at": "2026-09-04T14:24:09.348Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 884,
+          "id": null,
+          "at": "2026-09-04T14:24:10.146Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 885,
+          "id": null,
+          "at": "2026-09-04T14:31:20.523Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 886,
+          "id": null,
+          "at": "2026-09-04T14:31:26.767Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 887,
+          "id": null,
+          "at": "2026-09-04T14:31:33.378Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 888,
+          "id": null,
+          "at": "2026-09-04T14:31:38.087Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 889,
+          "id": null,
+          "at": "2026-09-04T14:31:42.979Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 890,
+          "id": null,
+          "at": "2026-09-04T14:34:59.277Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        },
+        {
+          "index": 891,
+          "id": null,
+          "at": "2026-09-04T14:35:04.735Z",
+          "reason": "UNSIGNED_LEGACY_RECEIPT"
+        }
+      ]
+    }
+  }
+}

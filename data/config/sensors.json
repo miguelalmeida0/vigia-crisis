@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "assets": [],
+  "note": "Production deployments register cameras, thermal cameras, ground sensors, drones and field units here or generate this file from an asset-management system. Field entries support organizationId, capabilities, currentAvailability, lastKnownLocation and shift. Empty means field resources are not configured and no hardware capability is advertised to operators."
+}

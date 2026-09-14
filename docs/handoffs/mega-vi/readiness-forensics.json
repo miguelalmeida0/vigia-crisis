@@ -1,0 +1,1190 @@
+{
+  "capturedAt": "2026-09-13T08:30:19.318Z",
+  "audit": {
+    "valid": false,
+    "count": 1849,
+    "head": "a4317d1bb3d31460c32010ff6218f8590bec81abbba628e4d9cdb237df886f42",
+    "failedIndex": 877,
+    "failureCount": 972,
+    "failures": [
+      {
+        "index": 877,
+        "id": "audit:860f68d6-fd46-49bf-a441-c28f37bc64ce",
+        "at": "2026-08-25T20:34:30.551Z",
+        "reason": "CHAIN_DISCONTINUITY",
+        "hashValid": true,
+        "linkValid": false,
+        "expectedHash": "ae8c70ec1d77121d75698d013064d63cadaa8257dd48ad72bc148b7bbaf2ee49",
+        "actualHash": "ae8c70ec1d77121d75698d013064d63cadaa8257dd48ad72bc148b7bbaf2ee49",
+        "expectedPreviousHash": null,
+        "actualPreviousHash": "GENESIS",
+        "nextEntryId": null
+      },
+      {
+        "index": 878,
+        "id": null,
+        "at": "2026-09-04T09:05:17.864Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "f2cc86a204cb5e4c74c041cd88d94477e66e3a9899f9030dfbd0bfbb10be7728",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 879,
+        "id": null,
+        "at": "2026-09-04T09:05:22.675Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "106c4ab831d65828814414c054792ceb49b0820f12d1df16e05bbbfc8f547e5a",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 880,
+        "id": null,
+        "at": "2026-09-04T14:23:00.532Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "d2789c58d032690c0944b02a431a50abd8d1dd77e63baf3775a814b1bff35c64",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 881,
+        "id": null,
+        "at": "2026-09-04T14:23:05.205Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "4aa3b11f2605214f4ce295d5c97c2e5864b19955ca27d800283849538f46fd7a",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 882,
+        "id": null,
+        "at": "2026-09-04T14:23:09.028Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "e207404f038fb358f07bd3d064efecc3d0cadf2e78dccf83f0fd08ae3e3cccef",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 883,
+        "id": null,
+        "at": "2026-09-04T14:23:13.141Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "561a3b6e07a7803d98aa9882fb6c9504e15bdb2a38c2c9f43568b1a61e2b1c65",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 884,
+        "id": null,
+        "at": "2026-09-04T14:23:16.497Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "744c9b480005cf1b41504624aef795855d7effdc150c6d22f1ff66f9a6458690",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 885,
+        "id": null,
+        "at": "2026-09-04T14:24:06.253Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "66e100a3ded78d10d2677ca7c10f7893ca9ad202955342a803e9dd2953d9b8a0",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 886,
+        "id": null,
+        "at": "2026-09-04T14:24:07.286Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "abc09ae868ab742176788d4e46f1e27e63f133159b4d4a053d5a322b5f94e0ff",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 887,
+        "id": null,
+        "at": "2026-09-04T14:24:08.416Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "2bb20304e6ce30ccfb590d9cb943acfa9de6eca16ed1d9ec102bb65366b2a62c",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 888,
+        "id": null,
+        "at": "2026-09-04T14:24:09.348Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "fda75fd60f6e626d0d4eba38120784e34f18dba5d24d560cb5624c2f090ea23e",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 889,
+        "id": null,
+        "at": "2026-09-04T14:24:10.146Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "77ea17650cb7d0363bb8ce48c8ea621789a60e7fe0684a93daf5fe47127c3636",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 890,
+        "id": null,
+        "at": "2026-09-04T14:31:20.523Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "8554df74a08180cb04276f28449257b246cbf31102bb69d308704068721d70ab",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 891,
+        "id": null,
+        "at": "2026-09-04T14:31:26.767Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "3dce436bb72bd0548edb8526f68cd09bd47e7fa203cb716c7dfe8360c8660341",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 892,
+        "id": null,
+        "at": "2026-09-04T14:31:33.378Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "5486e2fc1e4d2790af8d9eb298adf969d45ab26b01a02a91bb5021de1a990b5a",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 893,
+        "id": null,
+        "at": "2026-09-04T14:31:38.087Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "4894209a81657b8dad90d4c7fab774e500e5abc3b8fc64155dbcf32558ffca08",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 894,
+        "id": null,
+        "at": "2026-09-04T14:31:42.979Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "a51bb74d0992bae34182335a0147c15e02e90d5ba58c2928610f7d6fed193ef6",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 895,
+        "id": null,
+        "at": "2026-09-04T14:34:59.277Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "bf5974df0ccd09a1dfb3b80b63efdc579e0b69999076b10c530462be88796653",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      },
+      {
+        "index": 896,
+        "id": null,
+        "at": "2026-09-04T14:35:04.735Z",
+        "reason": "UNSIGNED_LEGACY_RECEIPT",
+        "hashValid": false,
+        "linkValid": false,
+        "expectedHash": "c704171d8a40a5665acfb88bd89853b0f574f957f8a58aa1e30ec7af33db7d06",
+        "actualHash": null,
+        "expectedPreviousHash": null,
+        "actualPreviousHash": null,
+        "nextEntryId": null
+      }
+    ],
+    "firstHeadOrderFailure": {
+      "index": 877,
+      "id": "audit:860f68d6-fd46-49bf-a441-c28f37bc64ce",
+      "at": "2026-08-25T20:34:30.551Z",
+      "kind": "CHAIN_DISCONTINUITY",
+      "expectedHash": "ae8c70ec1d77121d75698d013064d63cadaa8257dd48ad72bc148b7bbaf2ee49",
+      "actualHash": "ae8c70ec1d77121d75698d013064d63cadaa8257dd48ad72bc148b7bbaf2ee49",
+      "expectedPreviousHash": null,
+      "actualPreviousHash": "GENESIS",
+      "nextId": null
+    },
+    "oldestArrayOrderFailure": {
+      "index": 1848,
+      "id": null,
+      "at": "2026-09-06T18:52:06.186Z",
+      "kind": "UNSIGNED_LEGACY_RECEIPT",
+      "expectedHash": "ebf073563d8bf3a4e9ec7910150712443c04f920d2d792eae3e273fa167af1c1",
+      "actualHash": null,
+      "expectedPreviousHash": null,
+      "actualPreviousHash": null,
+      "nextId": null
+    },
+    "boundaries": [
+      {
+        "index": 877,
+        "id": "audit:860f68d6-fd46-49bf-a441-c28f37bc64ce",
+        "at": "2026-08-25T20:34:30.551Z",
+        "kind": "CHAIN_DISCONTINUITY",
+        "expectedHash": "ae8c70ec1d77121d75698d013064d63cadaa8257dd48ad72bc148b7bbaf2ee49",
+        "actualHash": "ae8c70ec1d77121d75698d013064d63cadaa8257dd48ad72bc148b7bbaf2ee49",
+        "expectedPreviousHash": null,
+        "actualPreviousHash": "GENESIS",
+        "nextId": null
+      }
+    ],
+    "classification": "LEGACY_UNSIGNED_RECEIPTS_AND_BOUNDARY_GAPS",
+    "repair": "New receipts sealed at mutation boundary. Historical unsigned data cannot be retroactively authenticated. Preserve evidence and keep the chain gate red.",
+    "retainedDigest": "5e86f135d3860272c83a022746acb2605cac9c3ae97636bebe6005806297e5d3"
+  },
+  "tables": [
+    {
+      "relname": "incident_situation_dependency",
+      "n_live_tup": "296882"
+    },
+    {
+      "relname": "world_knowledge_job",
+      "n_live_tup": "2206"
+    },
+    {
+      "relname": "world_knowledge_document",
+      "n_live_tup": "1794"
+    },
+    {
+      "relname": "world_knowledge_relation",
+      "n_live_tup": "1081"
+    },
+    {
+      "relname": "world_knowledge_fact",
+      "n_live_tup": "1031"
+    },
+    {
+      "relname": "monitored_asset",
+      "n_live_tup": "1000"
+    },
+    {
+      "relname": "operational_observation_opportunity",
+      "n_live_tup": "580"
+    },
+    {
+      "relname": "intelligence_snapshot",
+      "n_live_tup": "407"
+    },
+    {
+      "relname": "vigia_intelligence_input_generation",
+      "n_live_tup": "315"
+    },
+    {
+      "relname": "vigia_capacity_counter",
+      "n_live_tup": "313"
+    },
+    {
+      "relname": "world_knowledge_entity",
+      "n_live_tup": "223"
+    },
+    {
+      "relname": "evidence_need",
+      "n_live_tup": "172"
+    }
+  ],
+  "history": [
+    {
+      "incident_id": "PT-2026-4DE4DB96C6",
+      "count": 2,
+      "first": "2026-09-13T08:25:22.000Z",
+      "last": "2026-09-13T08:30:10.015Z"
+    },
+    {
+      "incident_id": "PT-2026-03CFDC147C",
+      "count": 42,
+      "first": "2026-09-12T17:00:45.047Z",
+      "last": "2026-09-13T08:19:26.024Z"
+    },
+    {
+      "incident_id": "PT-2026-1BED7638BC",
+      "count": 3,
+      "first": "2026-09-13T08:20:06.661Z",
+      "last": "2026-09-13T08:25:20.889Z"
+    },
+    {
+      "incident_id": "PT-2026-A3F4FFA3C8",
+      "count": 3,
+      "first": "2026-09-13T08:14:56.012Z",
+      "last": "2026-09-13T08:19:54.589Z"
+    },
+    {
+      "incident_id": "PT-2026-08D08E2A0D",
+      "count": 112,
+      "first": "2026-09-12T17:00:55.411Z",
+      "last": "2026-09-13T08:29:24.352Z"
+    },
+    {
+      "incident_id": "PT-2026-08A73FFAE0",
+      "count": 3,
+      "first": "2026-09-13T08:11:16.694Z",
+      "last": "2026-09-13T08:19:22.671Z"
+    },
+    {
+      "incident_id": "PT-2026-1AC16BDA31",
+      "count": 3,
+      "first": "2026-09-13T08:19:39.425Z",
+      "last": "2026-09-13T08:24:42.181Z"
+    },
+    {
+      "incident_id": "PT-2026-252A1BF0FE",
+      "count": 2,
+      "first": "2026-09-13T08:23:42.345Z",
+      "last": "2026-09-13T08:29:06.255Z"
+    },
+    {
+      "incident_id": "PT-2026-811C78A808",
+      "count": 1,
+      "first": "2026-09-13T08:26:17.589Z",
+      "last": "2026-09-13T08:26:17.589Z"
+    },
+    {
+      "incident_id": "PT-2026-4AC62972C3",
+      "count": 2,
+      "first": "2026-09-13T08:24:17.040Z",
+      "last": "2026-09-13T08:29:07.464Z"
+    },
+    {
+      "incident_id": "PT-2026-DF2DB17E34",
+      "count": 2,
+      "first": "2026-09-13T08:23:27.963Z",
+      "last": "2026-09-13T08:28:02.517Z"
+    },
+    {
+      "incident_id": "PT-2026-1678684951",
+      "count": 24,
+      "first": "2026-09-12T17:55:31.538Z",
+      "last": "2026-09-13T08:20:19.953Z"
+    },
+    {
+      "incident_id": "PT-2026-BB033BAAF5",
+      "count": 1,
+      "first": "2026-09-13T08:29:21.290Z",
+      "last": "2026-09-13T08:29:21.290Z"
+    },
+    {
+      "incident_id": "PT-2026-D4A0EAFE75",
+      "count": 1,
+      "first": "2026-09-13T08:29:57.789Z",
+      "last": "2026-09-13T08:29:57.789Z"
+    },
+    {
+      "incident_id": "PT-2026-CCEE9FB876",
+      "count": 1,
+      "first": "2026-09-13T08:28:32.020Z",
+      "last": "2026-09-13T08:28:32.020Z"
+    },
+    {
+      "incident_id": "PT-2026-01F7E2E21A",
+      "count": 162,
+      "first": "2026-09-12T17:00:49.132Z",
+      "last": "2026-09-13T08:30:10.363Z"
+    },
+    {
+      "incident_id": "PT-2026-82E03A4818",
+      "count": 1,
+      "first": "2026-09-13T08:27:38.905Z",
+      "last": "2026-09-13T08:27:38.905Z"
+    }
+  ],
+  "sources": [
+    {
+      "provider": "OpenStreetMap contributors",
+      "authority": "OSM",
+      "adapter": "OSM_BASELINE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T13:58:12.571Z",
+      "url": "https://www.openstreetmap.org/"
+    },
+    {
+      "provider": "Ministério Público",
+      "authority": "OWNER",
+      "adapter": "MP_CONTACT_DIRECTORY",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T13:58:15.527Z",
+      "url": "https://www.ministeriopublico.pt/contactos"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:45.393Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-quinta-da-prata/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:47.621Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-borba/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:35.803Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-batalha/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:43.164Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-matriz/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:44.213Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/17/unidade-de-cuidados-na-comunidade-ucc-arraiolos/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:40.400Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-alandroal/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:02.151Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/27/unidade-de-saude-familiar-usf-planicie/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:49.901Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-extremus/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:50.870Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-estremoz/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:57.053Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-salus/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:59.266Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-lusitania/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:03.642Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-evora/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:04.584Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-evora/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:10.842Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-cuidados-na-comunidade-ucc-mora/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:13.591Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-portel/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:14.643Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-redondo/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:15.958Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/17/unidade-de-cuidados-de-saude-primarios-ucsp-redondo/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:16.908Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-remo/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:06.957Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-famliar-usf-foral/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:09.651Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-mora/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:12.227Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-portel/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:28.633Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-vendas-novas/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:30.100Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-viana-do-alentejo/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:31.062Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-viana-do-alentejo/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:33.704Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-vila-vicosa/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:34.627Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-alcobaca-2/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:20.881Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-mourao/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:23.924Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-vendas-novas/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:26.273Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-vendas-novas/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:40.498Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-marinha-grande/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:41.948Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-nazare/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:43.698Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-ourem/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:49.151Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-pombal/"
+    },
+    {
+      "provider": "ULS de Coimbra",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:28.058Z",
+      "url": "https://www.ulscoimbra.min-saude.pt/contactos/contactos-gerais-do-chuc/"
+    },
+    {
+      "provider": "ULS Lisboa Ocidental",
+      "authority": "OWNER",
+      "adapter": "ULSLO_PRIMARY_PDF",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:29.926Z",
+      "url": "https://www.ulslo.min-saude.pt/attachments/article/461/Contactos%20Cuidados%20de%20Sa%C3%BAde%20Prim%C3%A1rios.pdf"
+    },
+    {
+      "provider": "Federação de Bombeiros do Distrito de Coimbra",
+      "authority": "PLACE_PROVIDER",
+      "adapter": "FIRE_FEDERATION_DIRECTORY",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:33.259Z",
+      "url": "https://www.bombeiroscoimbra.pt/federadas"
+    },
+    {
+      "provider": "Bombeiros Voluntários de Leiria",
+      "authority": "OWNER",
+      "adapter": "BVLEIRIA_CONTACTS",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:35.992Z",
+      "url": "https://bvleiria.pt/contactos/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:38.302Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-dr-gorjao-henriques/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:39.290Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-fatima/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "SOURCE_UNAVAILABLE",
+      "lastFetch": null,
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-porto-mos/"
+    },
+    {
+      "provider": "Guarda Nacional Republicana",
+      "authority": "OWNER",
+      "adapter": "GNR_DIRECTORY",
+      "status": "SOURCE_UNAVAILABLE",
+      "lastFetch": null,
+      "url": "https://www.gnr.pt/contactos.aspx"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:48.783Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-estremoz/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:52.603Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-sol/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:54.361Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-eborae/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:05.941Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-monte-mor/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:19.077Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-almoreg/"
+    },
+    {
+      "provider": "ULS da Região de Leiria",
+      "authority": "OWNER",
+      "adapter": "ULSRL_CENTRE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:36.978Z",
+      "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-dr-arnaldo-sampaio/"
+    },
+    {
+      "provider": "Câmara Municipal de Coimbra",
+      "authority": "MUNICIPAL",
+      "adapter": "COIMBRA_RECEPTION_HISTORY",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:38.285Z",
+      "url": "https://www.coimbra.pt/2026/02/160-pessoas-acolhidas-durante-a-noite-nas-zonas-de-apoio-ativadas-em-coimbra/"
+    },
+    {
+      "provider": "Câmara Municipal de Leiria",
+      "authority": "MUNICIPAL",
+      "adapter": "MUNICIPAL_PLAN",
+      "status": "SOURCE_UNAVAILABLE",
+      "lastFetch": null,
+      "url": "https://www.cm-leiria.pt/cmleiria-migrate/uploads/document/file/42240/anexo_65_25.pdf"
+    },
+    {
+      "provider": "Câmara Municipal de Évora",
+      "authority": "OWNER",
+      "adapter": "EVORA_CIVIL_PROTECTION",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:37.128Z",
+      "url": "https://www.cm-evora.pt/municipe/areas-de-acao/protecao-civil/a-protecao-civil/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:05:41.669Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-alandroal/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:08.081Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-alcaides/"
+    },
+    {
+      "provider": "ULS do Alentejo Central",
+      "authority": "OWNER",
+      "adapter": "ULS_CONTACT_TABLE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:32.327Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-vila-vicosa/"
+    },
+    {
+      "provider": "Câmara Municipal de Évora",
+      "authority": "MUNICIPAL",
+      "adapter": "MUNICIPAL_CONTACT_ACCORDION",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T16:06:42.571Z",
+      "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/"
+    },
+    {
+      "provider": "Comunidade Intermunicipal do Alentejo Central",
+      "authority": "MUNICIPAL",
+      "family": "FIRE_PUBLIC_CONTACT",
+      "adapter": "CIMAC_FIRE_CONTACT",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T22:18:30.091Z",
+      "url": "https://centraldecompras.cimac.pt/entidade/view?id=29"
+    },
+    {
+      "provider": "ULS Alentejo Central",
+      "authority": "OWNER",
+      "family": "HEALTH_CAPABILITY",
+      "adapter": "ULSAC_EMERGENCY_SERVICE",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T21:35:15.229Z",
+      "url": "https://www.ulsac.min-saude.pt/2025/11/28/areas-clinicas/"
+    },
+    {
+      "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+      "authority": "MUNICIPAL",
+      "family": "CIVIL_PROTECTION_DESIGNATION",
+      "adapter": "EVORA_EMERGENCY_PLAN",
+      "status": "AVAILABLE",
+      "lastFetch": "2026-09-12T21:35:19.106Z",
+      "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf"
+    }
+  ],
+  "queryPlans": {
+    "latest": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 0.61,
+          "Total Cost": 0.99,
+          "Plan Rows": 1,
+          "Plan Width": 34,
+          "Actual Startup Time": 0.819,
+          "Actual Total Time": 0.822,
+          "Actual Rows": 1,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 9,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Incremental Sort",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 0.61,
+              "Total Cost": 68.27,
+              "Plan Rows": 181,
+              "Plan Width": 34,
+              "Actual Startup Time": 0.817,
+              "Actual Total Time": 0.818,
+              "Actual Rows": 1,
+              "Actual Loops": 1,
+              "Sort Key": [
+                "known_at DESC",
+                "capture_sequence DESC"
+              ],
+              "Presorted Key": [
+                "known_at"
+              ],
+              "Full-sort Groups": {
+                "Group Count": 1,
+                "Sort Methods Used": [
+                  "quicksort"
+                ],
+                "Sort Space Memory": {
+                  "Average Sort Space Used": 25,
+                  "Peak Sort Space Used": 25
+                }
+              },
+              "Shared Hit Blocks": 9,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Index Scan",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Scan Direction": "Forward",
+                  "Index Name": "incident_situation_time",
+                  "Relation Name": "incident_situation_snapshot",
+                  "Alias": "incident_situation_snapshot",
+                  "Startup Cost": 0.27,
+                  "Total Cost": 60.13,
+                  "Plan Rows": 181,
+                  "Plan Width": 34,
+                  "Actual Startup Time": 0.282,
+                  "Actual Total Time": 0.285,
+                  "Actual Rows": 2,
+                  "Actual Loops": 1,
+                  "Index Cond": "(incident_id = 'PT-2026-01F7E2E21A'::text)",
+                  "Rows Removed by Index Recheck": 0,
+                  "Shared Hit Blocks": 3,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0
+                }
+              ]
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 11,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 0.707,
+        "Triggers": [],
+        "Execution Time": 1.384
+      }
+    ],
+    "recent": [
+      {
+        "Plan": {
+          "Node Type": "Limit",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 31.6,
+          "Total Cost": 33.46,
+          "Plan Rows": 4,
+          "Plan Width": 53,
+          "Actual Startup Time": 0.968,
+          "Actual Total Time": 1.023,
+          "Actual Rows": 17,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 15,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Unique",
+              "Parent Relationship": "Outer",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 31.6,
+              "Total Cost": 33.46,
+              "Plan Rows": 4,
+              "Plan Width": 53,
+              "Actual Startup Time": 0.965,
+              "Actual Total Time": 1.017,
+              "Actual Rows": 17,
+              "Actual Loops": 1,
+              "Shared Hit Blocks": 15,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Sort",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 31.6,
+                  "Total Cost": 32.53,
+                  "Plan Rows": 372,
+                  "Plan Width": 53,
+                  "Actual Startup Time": 0.925,
+                  "Actual Total Time": 0.941,
+                  "Actual Rows": 365,
+                  "Actual Loops": 1,
+                  "Sort Key": [
+                    "incident_id",
+                    "known_at DESC",
+                    "capture_sequence DESC"
+                  ],
+                  "Sort Method": "quicksort",
+                  "Sort Space Used": 50,
+                  "Sort Space Type": "Memory",
+                  "Shared Hit Blocks": 15,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Plans": [
+                    {
+                      "Node Type": "Seq Scan",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Relation Name": "incident_situation_snapshot",
+                      "Alias": "incident_situation_snapshot",
+                      "Startup Cost": 0,
+                      "Total Cost": 15.72,
+                      "Plan Rows": 372,
+                      "Plan Width": 53,
+                      "Actual Startup Time": 0.013,
+                      "Actual Total Time": 0.069,
+                      "Actual Rows": 365,
+                      "Actual Loops": 1,
+                      "Shared Hit Blocks": 12,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "Planning": {
+          "Shared Hit Blocks": 0,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0
+        },
+        "Planning Time": 0.352,
+        "Triggers": [],
+        "Execution Time": 1.229
+      }
+    ]
+  }
+}

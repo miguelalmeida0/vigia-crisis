@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "vigia.fieldnet-offline-geography.v1",
+  "acquiredAt": "2026-08-14T10:05:17.096Z",
+  "bbox": [
+    -6.60769638157765,
+    37.46592925194872,
+    -6.426437164291098,
+    37.60965903994729
+  ],
+  "configurableBufferKm": 8,
+  "source": {
+    "provider": "OpenStreetMap via Overpass API",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "license": "ODbL",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+    "providerTimestamp": "2026-08-14T10:04:11Z",
+    "rawSha256": "sha256:31315c743713d1c075e5e89f7cf18288c65dcaa71e5fc44852a01b9440685b4c",
+    "rawRecordCount": 557
+  },
+  "counts": {
+    "road": 263,
+    "structure": 24,
+    "water": 23,
+    "place": 100
+  },
+  "qualification": "Bounded incident-scoped vector geography derived from archived OSM records. No remote tile request is required at runtime.",
+  "query": "[out:json][timeout:90];(way[\"highway\"](37.46592925194872,-6.60769638157765,37.60965903994729,-6.426437164291098);way[\"building\"](37.46592925194872,-6.60769638157765,37.60965903994729,-6.426437164291098);way[\"waterway\"](37.46592925194872,-6.60769638157765,37.60965903994729,-6.426437164291098);way[\"natural\"=\"water\"](37.46592925194872,-6.60769638157765,37.60965903994729,-6.426437164291098);way[\"landuse\"=\"reservoir\"](37.46592925194872,-6.60769638157765,37.60965903994729,-6.426437164291098);node[\"place\"](37.46592925194872,-6.60769638157765,37.60965903994729,-6.426437164291098););out tags center geom;",
+  "rawPath": "data/replay/raw/openstreetmap/fieldnet-incident-v1/incident-osm-response.json"
+}

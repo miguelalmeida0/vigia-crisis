@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "vigia.authoritative-truth-latency.v1",
+  "generatedAt": "2026-08-25T16:07:40.174Z",
+  "rows": [
+    {
+      "providerId": "nifc-wfigs",
+      "region": "US-WEST",
+      "incidentId": "US-WEST:2026-UTUOA-100254",
+      "revisionId": "authoritative-perimeter-revision:sha256:fdfafb17fb93f7a7be45b4fdd54faaf380dcc93677f7f8508d55c2ac2d169a5f",
+      "physicalObservationToPublicationMs": null,
+      "officialPublicationToVigiaReceiptMs": 132007285,
+      "vigiaReceiptToTwinUpdateMs": 228,
+      "twinToDecisionPacketMs": -17234,
+      "forecastIssueToLaterTruthMs": null,
+      "sourceChangeToOperatorVisibleMs": 131990279
+    },
+    {
+      "providerId": "nifc-wfigs",
+      "region": "US-WEST",
+      "incidentId": "US-WEST:2026-FLEVP-002565",
+      "revisionId": "authoritative-perimeter-revision:sha256:eb295f6c0cac198e15145a7812d6f0907dd96816997d432dad3d43528b6d92e1",
+      "physicalObservationToPublicationMs": null,
+      "officialPublicationToVigiaReceiptMs": 159398095,
+      "vigiaReceiptToTwinUpdateMs": 10,
+      "twinToDecisionPacketMs": -17826,
+      "forecastIssueToLaterTruthMs": null,
+      "sourceChangeToOperatorVisibleMs": 159380279
+    }
+  ],
+  "stratified": {
+    "nifc-wfigs:US-WEST": {
+      "examples": 2,
+      "publicationToReceiptP50Ms": 132007285,
+      "publicationToReceiptP95Ms": 159398095,
+      "receiptToTwinP95Ms": 228,
+      "sourceChangeToOperatorVisibleP95Ms": 159380279
+    }
+  },
+  "fingerprint": "authoritative-truth-latency:sha256:194ac14868905ad668231bc3ba980f493411bf7d122d0f37f1e00c57cfd9f88d"
+}

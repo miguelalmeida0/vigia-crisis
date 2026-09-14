@@ -1,0 +1,1488 @@
+{
+  "schema": "vigia.firms-area-archive.v1",
+  "acquiredAt": "2026-08-13T07:54:49.531Z",
+  "provider": "NASA LANCE FIRMS",
+  "products": "VIIRS standard active-fire CSV area products",
+  "region": {
+    "bbox": "-9.75,36.7,-6,42.3",
+    "qualification": "Bounding-box acquisition; downstream reference matching determines evaluation eligibility."
+  },
+  "timeRange": {
+    "start": "2023-01-01",
+    "end": "2023-12-31"
+  },
+  "selection": "Every provider row returned in consecutive non-overlapping windows; no outcome-based selection.",
+  "sources": [
+    "VIIRS_NOAA20_SP",
+    "VIIRS_SNPP_SP"
+  ],
+  "requestWindowMaximumDays": 5,
+  "keyPresentDuringAcquisition": true,
+  "productsInventory": [
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-01",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-01_5d.csv",
+      "checksumSha256": "77a7c372c338b5c6b524573608790df9ace665299ac5bc1cf25b4812cf0b7b7b",
+      "bytes": 1246,
+      "rows": 14,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-06",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-06_5d.csv",
+      "checksumSha256": "0ed931bee6fa3efcdf4662f5b46c240e2377076c8dcb1591adbda7b9b9e66727",
+      "bytes": 286,
+      "rows": 2,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-11",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-11_5d.csv",
+      "checksumSha256": "c2d722b12753d13f4861c0dd80b2987e886b5f96e87264683ee112581a4147aa",
+      "bytes": 840,
+      "rows": 9,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-16",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-16_5d.csv",
+      "checksumSha256": "bacd0b22cf77c556a799c643cd0f8f9c3a0bb0210a9d754c720695b3fbc07af2",
+      "bytes": 447,
+      "rows": 4,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-21",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-21_5d.csv",
+      "checksumSha256": "81aceff9f128651d5396424ddff5d6a23c5be9f87d286119772b09cc4f922557",
+      "bytes": 1637,
+      "rows": 19,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-26",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-26_5d.csv",
+      "checksumSha256": "614c8d316353f431da6981aee5e1eb831a464152e81b8a2688d64f424f8d3737",
+      "bytes": 2448,
+      "rows": 29,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-01-31",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-01-31_5d.csv",
+      "checksumSha256": "a9663c107d309def031075da30bbd434b7173bb66569e5ac472217b59bccb80f",
+      "bytes": 9555,
+      "rows": 118,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-02-05",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-02-05_5d.csv",
+      "checksumSha256": "e6474d5a47b4b87e681445c1eb7c953e64bd7241ab6e81bc3291e858e9d579f2",
+      "bytes": 21316,
+      "rows": 265,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-02-10",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-02-10_5d.csv",
+      "checksumSha256": "94fcc0c9c1b021b2d4a3133f46cae6943f8e6bcb92ba540ec6d2dbfd8fb3acfb",
+      "bytes": 13342,
+      "rows": 165,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-02-15",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-02-15_5d.csv",
+      "checksumSha256": "bf49a0ebcf68716d2a6c41fe5153efb6c3913dcbc38ae9d211ebc1a4680df2dc",
+      "bytes": 15171,
+      "rows": 188,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-02-20",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-02-20_5d.csv",
+      "checksumSha256": "3991bfbd451e7a5e06210e1060ba3303a394a7422cf7c55e59f9156520c7540d",
+      "bytes": 4723,
+      "rows": 58,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-02-25",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-02-25_5d.csv",
+      "checksumSha256": "ea6b2d50d15977e58f3120cfa54fc0a1c0346598b54393956c2d2bd6d0ec3df4",
+      "bytes": 2933,
+      "rows": 35,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-03-02",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-03-02_5d.csv",
+      "checksumSha256": "42b6df0804f258f9151f1b8dbe45cc61cec64ecf58370b7cb22d38cca1e8e261",
+      "bytes": 9198,
+      "rows": 113,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-03-07",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-03-07_5d.csv",
+      "checksumSha256": "a83a5f901b1339dbb82c07b719870e919ffda5569e549f3b29aca4736c031189",
+      "bytes": 771,
+      "rows": 8,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-03-12",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-03-12_5d.csv",
+      "checksumSha256": "2f3ebac8f5447ca7c96d6b03610a3852229e293e8383d2e4ffebe75cbb2fca53",
+      "bytes": 5142,
+      "rows": 63,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-03-17",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-03-17_5d.csv",
+      "checksumSha256": "9517d743e9182d393f8a63a0987fc6247a547dbdaff655624f655c543b5b2cbb",
+      "bytes": 4348,
+      "rows": 53,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-03-22",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-03-22_5d.csv",
+      "checksumSha256": "0c9ae22e9204776932604860f1c48c5298ead945c404d45a4e7f7c4bc29b7a1b",
+      "bytes": 2607,
+      "rows": 31,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-03-27",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-03-27_5d.csv",
+      "checksumSha256": "1997e97d08275b9c8792eca87b95b8143e1dcb4c17ea52ae01e5211593dd4c55",
+      "bytes": 7368,
+      "rows": 91,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-04-01",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-04-01_5d.csv",
+      "checksumSha256": "da86c23477c0c5c17cc0bef5952db4f11f0a2861601b5875979cde0c1af68c49",
+      "bytes": 4980,
+      "rows": 61,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-04-06",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-04-06_5d.csv",
+      "checksumSha256": "e87f7d2529908fb7299b52990064a34a9c0fccd3799516615db5d6ba003ae033",
+      "bytes": 9973,
+      "rows": 123,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-04-11",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-04-11_5d.csv",
+      "checksumSha256": "cbea60b04962fe8558d095a273edabbfea56f17158b90640649a0173b1f1a490",
+      "bytes": 2758,
+      "rows": 33,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-04-16",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-04-16_5d.csv",
+      "checksumSha256": "ca96a259b33e805aabbed493401a31912dcfe1961801f3be15dae4ab331dbeee",
+      "bytes": 3077,
+      "rows": 37,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-04-21",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-04-21_5d.csv",
+      "checksumSha256": "3dc2fa5064d7886db2da15658db1d0365e2f501662998f0ea0621db0e6ee4135",
+      "bytes": 1168,
+      "rows": 13,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-04-26",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-04-26_5d.csv",
+      "checksumSha256": "55f3a348032793677b91e02276f95a2763a0da9c0a4c0b3db78ef4657343c30b",
+      "bytes": 2296,
+      "rows": 27,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-01",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-01_5d.csv",
+      "checksumSha256": "d9343300a1630b805294c482da1d1b63c381f0eb3c11b152fddd0ae9b4e26cbe",
+      "bytes": 2429,
+      "rows": 29,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-06",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-06_5d.csv",
+      "checksumSha256": "a9314b6c2ad7f4bb3e9c56964d262f0f9432fa6657969a2fe17367ce8809339b",
+      "bytes": 2195,
+      "rows": 26,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-11",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-11_5d.csv",
+      "checksumSha256": "ec89e6d7dbfb095f5f01473e5cfc0b7b6a14b0f8c7ffb510efc9c06498c4431a",
+      "bytes": 3960,
+      "rows": 48,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-16",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-16_5d.csv",
+      "checksumSha256": "b42e4a1fb3422bb936301b86139ff615796b15e4ab157543778793fd7a7d0f45",
+      "bytes": 55837,
+      "rows": 698,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-21",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-21_5d.csv",
+      "checksumSha256": "7b064119cd2642461f8d10c75ebb4b4068b9bd853d5c24ccdcf583470c36d8f4",
+      "bytes": 1952,
+      "rows": 23,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-26",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-26_5d.csv",
+      "checksumSha256": "d0cd6f92c0742359a56520bae287220dab0a14df6f55789c97bddcc044d3de84",
+      "bytes": 1401,
+      "rows": 16,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-05-31",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-05-31_5d.csv",
+      "checksumSha256": "c7ef60156dd518b72365a9121d4b515fe002b5ea87718d4d97fdce35183fd365",
+      "bytes": 1877,
+      "rows": 22,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-06-05",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-06-05_5d.csv",
+      "checksumSha256": "dffae31440c2b2e8e5a8cde499565bc3981dda1449426e9fe022667567a2c501",
+      "bytes": 1319,
+      "rows": 15,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-06-10",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-06-10_5d.csv",
+      "checksumSha256": "8005dfda75017347fef194da490240b2b0b1aa267b7b7161d95a6ca13f3f0650",
+      "bytes": 1002,
+      "rows": 11,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-06-15",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-06-15_5d.csv",
+      "checksumSha256": "94c875567d4f9b706706d39b34c09cb536edbb941cb0f1fcd7620b9aa4fe8aee",
+      "bytes": 1077,
+      "rows": 12,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-06-20",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-06-20_5d.csv",
+      "checksumSha256": "a7710640110226b5220fb37c7fcec4a1783aed1832d30d8eb1565426ffa48af8",
+      "bytes": 2745,
+      "rows": 33,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-06-25",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-06-25_5d.csv",
+      "checksumSha256": "589a952da63916c73260bf675246b107f273190c50aa7f6da7a88127cc27adc8",
+      "bytes": 2593,
+      "rows": 31,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-06-30",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-06-30_5d.csv",
+      "checksumSha256": "bb13e4c96ee6942829d4a1fa11287ae40e2cc39a9f8b50a008381ce69b6d5ca5",
+      "bytes": 3085,
+      "rows": 37,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-07-05",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-07-05_5d.csv",
+      "checksumSha256": "a11455ea80ecce865c54d70e88c9885cb5edc4943cff29fdddedd3fd46546146",
+      "bytes": 2527,
+      "rows": 30,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-07-10",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-07-10_5d.csv",
+      "checksumSha256": "d2cf8bda2b0e427641c754d1308c0f99911d14da609bc894ef0de758ef7402c9",
+      "bytes": 2437,
+      "rows": 29,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-07-15",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-07-15_5d.csv",
+      "checksumSha256": "f27b01a3b1203e880a57f95ec82c39fb43edc8a3a5dfc6464931230bb30eb942",
+      "bytes": 2360,
+      "rows": 28,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-07-20",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-07-20_5d.csv",
+      "checksumSha256": "6b13eefe1b1af4361336e481d733d0fc13819cc9d0a781e63677cc61aadfa095",
+      "bytes": 604,
+      "rows": 6,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-07-25",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-07-25_5d.csv",
+      "checksumSha256": "da295356ed5339d53277f4056df131c2553b582e838aec8f630fb534e39802e5",
+      "bytes": 4271,
+      "rows": 52,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-07-30",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-07-30_5d.csv",
+      "checksumSha256": "bf939ffa71551008143bf05973191f116eb1c2c95371723e1d6482a4be0e3860",
+      "bytes": 3412,
+      "rows": 41,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-08-04",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-08-04_5d.csv",
+      "checksumSha256": "7874399c9bc60fc3be0072043a5fb800365a43575d3ebc395bd96537187f9328",
+      "bytes": 89677,
+      "rows": 1127,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-08-09",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-08-09_5d.csv",
+      "checksumSha256": "f53d6c9782c37fe76a79509c8a2fff9efd8e8366e78374251048b55eeec6e0ba",
+      "bytes": 3493,
+      "rows": 42,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-08-14",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-08-14_5d.csv",
+      "checksumSha256": "311bbdfc2acb10cf25ba16c00ed8815fbe1de645deee6d591aa30307f77408ec",
+      "bytes": 2833,
+      "rows": 34,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-08-19",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-08-19_5d.csv",
+      "checksumSha256": "943623632f8e7d04f2288e987c87ea1a3f344f5089bd33c3f120c629cd41d5e2",
+      "bytes": 9263,
+      "rows": 114,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-08-24",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-08-24_5d.csv",
+      "checksumSha256": "c53b3b1491a1d1cd2b8c938bdcb68410cd624c341e6459ef40ec224414a16fa9",
+      "bytes": 5238,
+      "rows": 64,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-08-29",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-08-29_5d.csv",
+      "checksumSha256": "027883887d32d03c12a84d42a86315976ca0a62a09728b3420ca48fcb1c2de53",
+      "bytes": 4018,
+      "rows": 49,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-09-03",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-09-03_5d.csv",
+      "checksumSha256": "dcb947a4715cf3e6acaa0165a95a4a121c8d182657410c56f1e8e165f3bae4d4",
+      "bytes": 1484,
+      "rows": 17,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-09-08",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-09-08_5d.csv",
+      "checksumSha256": "f8bbf2fb92c177f19866ef093d145e16d83bd10861b3c1d01a7cc05c92acae04",
+      "bytes": 2120,
+      "rows": 25,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-09-13",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-09-13_5d.csv",
+      "checksumSha256": "19ff53bfef5b679a76ba8932e750ca6e2b48f8a72fdef5994b57cbdcba141c8f",
+      "bytes": 1161,
+      "rows": 13,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-09-18",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-09-18_5d.csv",
+      "checksumSha256": "038450fa89e74cf18c0105e8696ffd56d67213171d3ccbe0946c376b92658ae1",
+      "bytes": 1006,
+      "rows": 11,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-09-23",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-09-23_5d.csv",
+      "checksumSha256": "541a9142a529e6a2d49dc8475761e3703e626d9dac713513ae65be8c742e1b58",
+      "bytes": 4126,
+      "rows": 50,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-09-28",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-09-28_5d.csv",
+      "checksumSha256": "a7ab8c2eb7602a3700efcf2122cbe29a0881a7037fdfdbed9803e1f6fd27af45",
+      "bytes": 2358,
+      "rows": 28,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-10-03",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-10-03_5d.csv",
+      "checksumSha256": "8991c9c2877598ddadaeb8a5bbd8bc84f32f39670a75b7c219b8882b16d1a8d3",
+      "bytes": 2438,
+      "rows": 29,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-10-08",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-10-08_5d.csv",
+      "checksumSha256": "b013389fb3687484be7ae2e2916447b77fb725a487a978a1214e9c633aa154c6",
+      "bytes": 7292,
+      "rows": 90,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-10-13",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-10-13_5d.csv",
+      "checksumSha256": "f3b385928b22871cd234ebc0d5967cce9722f6e44de2807622093679dc85a39b",
+      "bytes": 2650,
+      "rows": 32,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-10-18",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-10-18_5d.csv",
+      "checksumSha256": "09a25eab3e597064a8e37e35ff111bc5306047d9a0bd9426baf6b56322670ca9",
+      "bytes": 1004,
+      "rows": 11,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-10-23",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-10-23_5d.csv",
+      "checksumSha256": "6f0131bbbe67ee2a6caf0eed6361e126c7a7c059654bb1516bcad33ad05dfe18",
+      "bytes": 1398,
+      "rows": 16,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-10-28",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-10-28_5d.csv",
+      "checksumSha256": "c66696b8c5ac393321521fd074132951f64c51bbcc414d5f93baae7dbc61380d",
+      "bytes": 1398,
+      "rows": 16,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-11-02",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-11-02_5d.csv",
+      "checksumSha256": "8fbb1e94f45346ef5c463f3809c3bf996c0e9d9dd61bacaffc7283523ee10986",
+      "bytes": 1723,
+      "rows": 20,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-11-07",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-11-07_5d.csv",
+      "checksumSha256": "34900de6fdf658800cb095ac4c36caff054cca39d7a0c3ba4a9061e1d7eb0730",
+      "bytes": 927,
+      "rows": 10,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-11-12",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-11-12_5d.csv",
+      "checksumSha256": "2e66695a5c20c38eabb4ef6b084f52732dad671f57dd75c623154e43d59e4099",
+      "bytes": 2511,
+      "rows": 30,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-11-17",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-11-17_5d.csv",
+      "checksumSha256": "15a26edafa9e131f2a3a634f37b43cd50728fcb2c0eea26cf4330ba7394fd763",
+      "bytes": 2917,
+      "rows": 35,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-11-22",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-11-22_5d.csv",
+      "checksumSha256": "818cfcc6d92ce95d55c48dbd75c2df62cb09749cbc6821207ce382dcce75dee4",
+      "bytes": 5100,
+      "rows": 62,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-11-27",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-11-27_5d.csv",
+      "checksumSha256": "ae5f7b41c724a0a53c642a894a57a458ed49d3fab6dd7f3ff1d166c0fdeb911d",
+      "bytes": 609,
+      "rows": 6,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-12-02",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-12-02_5d.csv",
+      "checksumSha256": "6f5868c661d768d981f1f8a9712efd86dbaa6c0e61298937962ca2fc4d0a4cd1",
+      "bytes": 1000,
+      "rows": 11,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-12-07",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-12-07_5d.csv",
+      "checksumSha256": "507f5c90323d814484b9d8ba8d9ffe93d1df8fbb4d2b1e28b543b7be92f753c7",
+      "bytes": 841,
+      "rows": 9,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-12-12",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-12-12_5d.csv",
+      "checksumSha256": "13e4f7b718b4b7757d515e8a26cce685e4f0dfbe5533d1e42c9f92f44a8ff474",
+      "bytes": 1639,
+      "rows": 19,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-12-17",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-12-17_5d.csv",
+      "checksumSha256": "0c9ca7ed618bb0c6e29e28f218c0d4a4ca04459a1254ea9bca1dca6d39cd5e5c",
+      "bytes": 4340,
+      "rows": 53,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-12-22",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-12-22_5d.csv",
+      "checksumSha256": "825517097e26203730cfffe53384049d60abf7d5d4ce5a88988185c8601e1c45",
+      "bytes": 4266,
+      "rows": 52,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_NOAA20_SP",
+      "start": "2023-12-27",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_NOAA20_SP_2023-12-27_5d.csv",
+      "checksumSha256": "6c2f2d5b6d8a4bc4d6449e4d25987733ba32bea3fb386955d72ad2c8405f8827",
+      "bytes": 605,
+      "rows": 6,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-01",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-01_5d.csv",
+      "checksumSha256": "beaa6ec68d62fcc194519e3c6ad770abf6595455d57fc4f9b8150ff0314afca7",
+      "bytes": 903,
+      "rows": 10,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-06",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-06_5d.csv",
+      "checksumSha256": "29025cc0b281f235e4a754b893ec90567f92cf573f14d1b21941d2a3ba4de543",
+      "bytes": 359,
+      "rows": 3,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-11",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-11_5d.csv",
+      "checksumSha256": "e66c116429fa733ad80f37de129346c1ff65085f68dca8a9a1ac1a9467ca2ed9",
+      "bytes": 594,
+      "rows": 6,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-16",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-16_5d.csv",
+      "checksumSha256": "168c8604a6524236e7036714efb578ed672122d10e7668ef0231b06d887d1055",
+      "bytes": 518,
+      "rows": 5,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-21",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-21_5d.csv",
+      "checksumSha256": "3c99db7486b602ae935f3904aee9e6327e0ba0aeb309106c209c105422fddcdd",
+      "bytes": 1290,
+      "rows": 15,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-26",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-26_5d.csv",
+      "checksumSha256": "cd66d6dae1ea60656cd0664ae7d378381561c79824e27666761a2cb8358cc53e",
+      "bytes": 2859,
+      "rows": 35,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-01-31",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-01-31_5d.csv",
+      "checksumSha256": "0411de479b2a65720c3769d9c2fb09d380ad1c65317a8e4cf57a4c2c56a77727",
+      "bytes": 9499,
+      "rows": 120,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-02-05",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-02-05_5d.csv",
+      "checksumSha256": "afbe5559b78a7cc6b776568aa0074f40b9e2f3dda2a657214dda7747470cf022",
+      "bytes": 20192,
+      "rows": 258,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-02-10",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-02-10_5d.csv",
+      "checksumSha256": "4df11bd8642b77e0e3dc76dec2ff918b87a378ffc931ac937867db7466a5c8a3",
+      "bytes": 9227,
+      "rows": 117,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-02-15",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-02-15_5d.csv",
+      "checksumSha256": "2a97fdf61eeecfbf581be8638768151a21c8b7d482157f05334e86059b0ecf80",
+      "bytes": 16832,
+      "rows": 214,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-02-20",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-02-20_5d.csv",
+      "checksumSha256": "92103eafb70e530887cb0948d9147f72014519e3061dd0ff724a05d880c95426",
+      "bytes": 5176,
+      "rows": 65,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-02-25",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-02-25_5d.csv",
+      "checksumSha256": "0c14a2b360ea5f51ca9c2a8b670a6dea5f1b370b266faf678062fbd51ca1ad18",
+      "bytes": 2860,
+      "rows": 35,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-03-02",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-03-02_5d.csv",
+      "checksumSha256": "831f6b122183a6ecde3b049d7fa10b70f23cc66d652b9a0069ad4a1b6b9293ff",
+      "bytes": 8501,
+      "rows": 107,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-03-07",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-03-07_5d.csv",
+      "checksumSha256": "9b4f064f2706082ed260f554d4aa8866b828670e14c8bf63351c2966e6052ca2",
+      "bytes": 1992,
+      "rows": 24,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-03-12",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-03-12_5d.csv",
+      "checksumSha256": "2694dfee9fbf5db4fd79ab80fde8bc64b0fdb75f6c85ed45fa4c9a7f4af301df",
+      "bytes": 5105,
+      "rows": 64,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-03-17",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-03-17_5d.csv",
+      "checksumSha256": "64b1f06afcd42c9d1658d3e5552f78816aab0df223d4d79014f1d98b049ea1c0",
+      "bytes": 3249,
+      "rows": 40,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-03-22",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-03-22_5d.csv",
+      "checksumSha256": "b4a07984e77985b4d2e4426626bbb6c3bcf4de65fe47650786ba73df73c0c1a7",
+      "bytes": 2544,
+      "rows": 31,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-03-27",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-03-27_5d.csv",
+      "checksumSha256": "10f9a094b5052e51f189f63baab0d199d8dd6a378afec109b6b2286bbd8184fd",
+      "bytes": 3999,
+      "rows": 50,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-04-01",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-04-01_5d.csv",
+      "checksumSha256": "b4c6e731a812bb41070f2db32d39f9b6912aae090fce122e67a4e7c4878a80a0",
+      "bytes": 4321,
+      "rows": 54,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-04-06",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-04-06_5d.csv",
+      "checksumSha256": "2404089a2e9dbf277a53dc68e6806257a17384d1aea4b4db9b62f7bf4e827d72",
+      "bytes": 11804,
+      "rows": 150,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-04-11",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-04-11_5d.csv",
+      "checksumSha256": "57de340bb163df6752340adc43ec2135b68d79d4a90571cad6b27faf63556128",
+      "bytes": 2772,
+      "rows": 34,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-04-16",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-04-16_5d.csv",
+      "checksumSha256": "85f9899dde6006fff6e263201d808dea36e6480d4ced68f77410947f34a6d2f2",
+      "bytes": 2929,
+      "rows": 36,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-04-21",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-04-21_5d.csv",
+      "checksumSha256": "3832375f9ddb3ce13f5373eeb250449744fe4e704eb717cf753752822fb7fad3",
+      "bytes": 1519,
+      "rows": 18,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-04-26",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-04-26_5d.csv",
+      "checksumSha256": "5527bf936fbaa0dbb23b3969e87a15137cda89db1a844437d6477bf60626853a",
+      "bytes": 2083,
+      "rows": 25,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-01",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-01_5d.csv",
+      "checksumSha256": "a361a0077c36d619544daf837a80c1496367a125943d4661128736c827c4ec21",
+      "bytes": 1833,
+      "rows": 22,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-06",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-06_5d.csv",
+      "checksumSha256": "369edf5fc62790a8022ff174010d7c08b9d7da4c608154d7603eecc97bb5ec88",
+      "bytes": 2936,
+      "rows": 36,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-11",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-11_5d.csv",
+      "checksumSha256": "cf6e6775e8e68744d15454ef24f252d82d5ecef64abd57807ff8fb7490f124e4",
+      "bytes": 4088,
+      "rows": 51,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-16",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-16_5d.csv",
+      "checksumSha256": "5a8700a00b942f27f467bcbb6f9acace332c86a4616b15389de16937529ce2fa",
+      "bytes": 70768,
+      "rows": 910,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-21",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-21_5d.csv",
+      "checksumSha256": "dec40e15561f2b6a13aad7f49cc06f91d91f2d724b68a20512f7ef500aa609f7",
+      "bytes": 2154,
+      "rows": 26,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-26",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-26_5d.csv",
+      "checksumSha256": "338a3555fdc98c5077711c4aa3933dd7d71b051b735cc0f6c95c13f62f109497",
+      "bytes": 1132,
+      "rows": 13,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-05-31",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-05-31_5d.csv",
+      "checksumSha256": "f6a6b73c8014be209eb29593fe1203e6077b8a746f07427f8bea6821a85ff8a5",
+      "bytes": 1826,
+      "rows": 22,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-06-05",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-06-05_5d.csv",
+      "checksumSha256": "675b7184a36cc5d78d7d0383e34fc962af5a78f93f672add9a3c4b674f865dd7",
+      "bytes": 891,
+      "rows": 10,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-06-10",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-06-10_5d.csv",
+      "checksumSha256": "a019616e102356a1d67ba3d1d4ef6f6d6219e46df255413935f8476f1896f08a",
+      "bytes": 1056,
+      "rows": 12,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-06-15",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-06-15_5d.csv",
+      "checksumSha256": "b1051cda7bc618663e39e3f22b539c7d7437c9fc73c80bac85566a2a39c46965",
+      "bytes": 1601,
+      "rows": 19,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-06-20",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-06-20_5d.csv",
+      "checksumSha256": "c9348b897ab3fd5b2f2214bbd6809eb8d9f651ba0b7404808121b4912fed2502",
+      "bytes": 1826,
+      "rows": 22,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-06-25",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-06-25_5d.csv",
+      "checksumSha256": "a8f2e28f00ddc7ad90d50bc37a3ec8d98982be49022a4144b8524a55eeb18b23",
+      "bytes": 2226,
+      "rows": 27,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-06-30",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-06-30_5d.csv",
+      "checksumSha256": "43325f9ca72b18b5def2100f3d81176cf4e768aed72e97bb760f8fd360d7de20",
+      "bytes": 2842,
+      "rows": 35,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-07-05",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-07-05_5d.csv",
+      "checksumSha256": "ff5a5d9959df9380e7cc24c2dffe085c065dae278d396a812c4cf25838ad16d9",
+      "bytes": 3012,
+      "rows": 37,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-07-10",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-07-10_5d.csv",
+      "checksumSha256": "5082574500349a68d147bdc656bcf65650f482f2f01e46cb41e2b881e3444aee",
+      "bytes": 3454,
+      "rows": 43,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-07-15",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-07-15_5d.csv",
+      "checksumSha256": "328272f8ab8b4d54ff3d3bee6fc7259045c236991f8ec81931a837f31740d8bf",
+      "bytes": 1761,
+      "rows": 21,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-07-20",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-07-20_5d.csv",
+      "checksumSha256": "3b642305712673844b03541fe9a2431aa808ffa007f8b09151a70a3b13c409a9",
+      "bytes": 1531,
+      "rows": 18,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-07-25",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-07-25_5d.csv",
+      "checksumSha256": "76398d2c877d8061424ea421ff82f4876ea42deab6c24b889ac64065dea7c70d",
+      "bytes": 2694,
+      "rows": 33,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-07-30",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-07-30_5d.csv",
+      "checksumSha256": "ee3e560f9b2eddd7a86a163a0d8f41e6296ab0818277696690b613327e50d78f",
+      "bytes": 2227,
+      "rows": 27,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-08-04",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-08-04_5d.csv",
+      "checksumSha256": "b53041d3eb8291b01f2d49148396fbb1edaf1feacbd54d098751b67e435aa8e5",
+      "bytes": 71061,
+      "rows": 912,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-08-09",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-08-09_5d.csv",
+      "checksumSha256": "581e56607f04125d8f2546719f6efae1d5af4a13863cc042d81a4b70d8ebb003",
+      "bytes": 4178,
+      "rows": 52,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-08-14",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-08-14_5d.csv",
+      "checksumSha256": "11c090c8b4733a4120f128a35b34e0f821618eda04ba5c3423d5592d4ab383b0",
+      "bytes": 2383,
+      "rows": 29,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-08-19",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-08-19_5d.csv",
+      "checksumSha256": "16fe6d611dcc3d914ecda8d8000fbf86cdd4c05770e0595ecfbc131c536b7f3d",
+      "bytes": 5972,
+      "rows": 75,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-08-24",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-08-24_5d.csv",
+      "checksumSha256": "0571db86d9612e9d03f7cc5a26afa53b2b938a0695ddda7ab26f2ed35577fc8d",
+      "bytes": 7364,
+      "rows": 93,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-08-29",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-08-29_5d.csv",
+      "checksumSha256": "7c80f19212e8981daf881a1e82e2d133bbbebab8b3061e392ee7befae37027d9",
+      "bytes": 4069,
+      "rows": 51,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-09-03",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-09-03_5d.csv",
+      "checksumSha256": "be400391e15a953b7574737c2b901562e3042a8dead14c45b36752ee65e4d8fc",
+      "bytes": 981,
+      "rows": 11,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-09-08",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-09-08_5d.csv",
+      "checksumSha256": "86c23212cac5c4612ccffe31538b44a4b3b39fdadc9118eb98ded8fe14035386",
+      "bytes": 1755,
+      "rows": 21,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-09-13",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-09-13_5d.csv",
+      "checksumSha256": "ecc8622f55489185945f3c5c7b8e2c4e1c6da0620db4950719f284c61c618da2",
+      "bytes": 2614,
+      "rows": 32,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-09-18",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-09-18_5d.csv",
+      "checksumSha256": "04853262e7b2bb9ced30a6aeb89f4ccbdd86e91819dbdca7b861526b1ffe278c",
+      "bytes": 1439,
+      "rows": 17,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-09-23",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-09-23_5d.csv",
+      "checksumSha256": "3e9bed5da55093e55befdab9842474cfab9e4893fd8dacca1aaca4554010e894",
+      "bytes": 3093,
+      "rows": 38,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-09-28",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-09-28_5d.csv",
+      "checksumSha256": "3db89bb53c01c31df5703c099cd20aa71cbad5b4016fce6c7a32b39731f234e1",
+      "bytes": 6202,
+      "rows": 78,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-10-03",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-10-03_5d.csv",
+      "checksumSha256": "61126cb18f374f73dbe393bdf498b98a34833dbcc519739f37e98d04da99c64c",
+      "bytes": 7854,
+      "rows": 99,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-10-08",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-10-08_5d.csv",
+      "checksumSha256": "0f64fce46d0a149593299efb256fe511950ff999eec88baa054b625209dae44f",
+      "bytes": 5082,
+      "rows": 64,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-10-13",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-10-13_5d.csv",
+      "checksumSha256": "e1d89eca6976dd96cb07040c8d3d641cc24691b40a79f34d06dd569b79abb64d",
+      "bytes": 1679,
+      "rows": 20,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-10-18",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-10-18_5d.csv",
+      "checksumSha256": "ea5ffbf125e205724fa0b0395c785312275e7b694d3fe8e72d71cc507fb98679",
+      "bytes": 1221,
+      "rows": 14,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-10-23",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-10-23_5d.csv",
+      "checksumSha256": "2b76922023faab1381fbf268852bfb6db144e8b532a98cea3352f0011dc8a212",
+      "bytes": 588,
+      "rows": 6,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-10-28",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-10-28_5d.csv",
+      "checksumSha256": "185dfadf91293b61ff6ab01ebeeb834590b6dbe708b738ee8a6b54ce2e8fa94a",
+      "bytes": 742,
+      "rows": 8,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-11-02",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-11-02_5d.csv",
+      "checksumSha256": "dfb5f397f09465d066209e1e4c11fb9f2992ac321723f45d24fe66d1f1c78a2e",
+      "bytes": 1136,
+      "rows": 13,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-11-07",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-11-07_5d.csv",
+      "checksumSha256": "fbb9e1db9cb92c9000d799e872d9ead158be58c170c7d23b03daaf941780aab1",
+      "bytes": 1214,
+      "rows": 14,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-11-12",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-11-12_5d.csv",
+      "checksumSha256": "cfa6407fe17630a7f673d9ec4cb73a6d262fca0a9a179cc620a473460b8291c3",
+      "bytes": 2225,
+      "rows": 27,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-11-17",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-11-17_5d.csv",
+      "checksumSha256": "d54ef401b9189124b5f738691d39b9598b0c09246d2f732050c253663d74e4e8",
+      "bytes": 2679,
+      "rows": 33,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-11-22",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-11-22_5d.csv",
+      "checksumSha256": "ebb880d983ee09dd1adf18fd88eb5b84773d4338e6dd3a48a07720ac81f39034",
+      "bytes": 4412,
+      "rows": 55,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-11-27",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-11-27_5d.csv",
+      "checksumSha256": "ca9f4b60d00e53d33514d6b23f69930da3bc21f2b03d7bf14e67f040624fa7b7",
+      "bytes": 673,
+      "rows": 7,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-12-02",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-12-02_5d.csv",
+      "checksumSha256": "623897eead52fa34fa6c1de68ece326d01e051aa82115cccf84cf1f2ee4399aa",
+      "bytes": 1209,
+      "rows": 14,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-12-07",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-12-07_5d.csv",
+      "checksumSha256": "84bdcb0f51123f8c7a3264e4f75c717574a8469313cf87fb0d06d3283dc21bff",
+      "bytes": 1130,
+      "rows": 13,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-12-12",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-12-12_5d.csv",
+      "checksumSha256": "7167077aafa85d189ed1e8c42c9184d463babac1553ae14dd1b52c0aef400d80",
+      "bytes": 671,
+      "rows": 7,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-12-17",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-12-17_5d.csv",
+      "checksumSha256": "c5cb66ad69a6ae35cafdfc438b1cacf6451f627fda39b9fb27998f3a4a4910ff",
+      "bytes": 4725,
+      "rows": 59,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-12-22",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-12-22_5d.csv",
+      "checksumSha256": "2cc1594d11a748702b56a6516040430af2e7fde5e04d6c58fb1fb81538e3ca07",
+      "bytes": 2992,
+      "rows": 37,
+      "resumed": false
+    },
+    {
+      "source": "VIIRS_SNPP_SP",
+      "start": "2023-12-27",
+      "days": 5,
+      "file": "data/replay/raw/nasa-firms/area-archive/portugal-2023-v4-confirmatory/VIIRS_SNPP_SP_2023-12-27_5d.csv",
+      "checksumSha256": "06e506453025a85096a65cb859b644195a8a0a4a308c9f9cf8a4a9f1cea5cbb1",
+      "bytes": 1141,
+      "rows": 13,
+      "resumed": false
+    }
+  ],
+  "totals": {
+    "products": 146,
+    "rows": 9639,
+    "bytes": 777617
+  }
+}

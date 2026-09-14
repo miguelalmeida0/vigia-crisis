@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "vigia.forecast-baseline-training-receipt.v1",
+  "generatedAt": "2026-08-24T13:58:12.943Z",
+  "registryFingerprint": "forecast-model-registry:sha256:ba36142b21339418f12e80cedc63bcb882c948e82727e80f6cbe02b60bfeb873",
+  "registeredBaselines": [
+    "NO_GROWTH_PERSISTENCE",
+    "RECENT_GROWTH_PERSISTENCE",
+    "WIND_ALIGNED_PROGRESSION",
+    "OBSERVATION_KINEMATIC_PROGRESSION"
+  ],
+  "statisticalModelState": "NOT_TRAINED_DATA_GATE_FAILED",
+  "fabricatedLabels": 0,
+  "leakagePassed": true,
+  "promotionDecision": "DO_NOT_ADVANCE",
+  "reasons": [
+    "No issue-time future-perimeter label corpus exists.",
+    "No valid negative opportunity-control corpus exists.",
+    "Single-region, single-season source material cannot establish generalization."
+  ]
+}

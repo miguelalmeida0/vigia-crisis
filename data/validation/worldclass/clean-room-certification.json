@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "vigia.clean-room-certification.v1",
+  "releaseId": "vigia-decision-os-bd82bd7ff251e7cf",
+  "manifestFingerprint": "clean-room-manifest:sha256:5a5e6d17d269d5b3d376b42c5c6c4dc5dd960771ca22599184084e6f32c6f085",
+  "signatureVerified": true,
+  "independentAttestation": null,
+  "blockers": [
+    "DOCKER_IMAGE_DIGESTS_MISSING",
+    "INDEPENDENT_REVIEWER_ATTESTATION_MISSING_OR_INVALID"
+  ],
+  "state": "BLOCKED",
+  "passed": false,
+  "fingerprint": "clean-room-certification:sha256:6c5ec6fc81a3133814a9e68dad7c1e52b9194609195a63235ceb55534f86f28a"
+}

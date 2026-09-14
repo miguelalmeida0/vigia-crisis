@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "vigia.autonomous-wildfire-fixture.v1",
+  "incidentId": "incident:autonomous-wildfire",
+  "location": [-8.0002, 40.0001],
+  "registeredAt": "2026-08-24T12:00:00Z",
+  "sources": [
+    { "sourceId": "report:public", "familyId": "report.public", "familyClass": "REPORT", "priority": 1 },
+    { "sourceId": "viirs:broker-a", "familyId": "physical.viirs", "familyClass": "PHYSICAL", "priority": 20, "upstreamLineage": ["measurement:viirs-pixel-001"] },
+    { "sourceId": "viirs:broker-b", "familyId": "physical.viirs", "familyClass": "PHYSICAL", "priority": 20, "upstreamLineage": ["measurement:viirs-pixel-001"] },
+    { "sourceId": "sensor:optical", "familyId": "physical.optical", "familyClass": "PHYSICAL", "priority": 1 },
+    { "sourceId": "sensor:thermal", "familyId": "physical.thermal", "familyClass": "PHYSICAL", "priority": 2 },
+    { "sourceId": "sensor:radar", "familyId": "physical.radar", "familyClass": "PHYSICAL", "priority": 3 },
+    { "sourceId": "authority:cap", "familyId": "official.cap", "familyClass": "OFFICIAL", "priority": 1 },
+    { "sourceId": "authority:field", "familyId": "official.field", "familyClass": "OFFICIAL", "priority": 2 }
+  ]
+}

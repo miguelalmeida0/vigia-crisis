@@ -1,0 +1,169 @@
+{
+  "at": "2026-09-12T18:48:42.266Z",
+  "/ready": {
+    "status": 503,
+    "data": {
+      "schemaVersion": "vigia.public-operational-readiness.v1",
+      "ready": false,
+      "status": "not_ready",
+      "checkedAt": "2026-09-12T18:48:43.338Z",
+      "checks": [
+        {
+          "id": "production_synthetic_observations",
+          "ok": true,
+          "state": "zero",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "demo_identities",
+          "ok": true,
+          "state": "zero",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "authenticated_operator_boundary",
+          "ok": true,
+          "state": "operator_proxy_assertion_configured",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "operator_state_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "event_state_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "postgres_physical_truth",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "postgres_live_operations",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "audit_chain",
+          "ok": false,
+          "state": "invalid",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "unknown_to_work_invariant",
+          "ok": true,
+          "state": "holding",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "physical_source_families",
+          "ok": false,
+          "state": "insufficient",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "scientific_runtime",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "geo_proof_persistence",
+          "ok": true,
+          "state": "ready",
+          "blocking": true,
+          "evidencePresent": true
+        },
+        {
+          "id": "external_validation",
+          "ok": true,
+          "state": "official_archive_report_reference_measured",
+          "blocking": false,
+          "evidencePresent": true
+        }
+      ],
+      "capabilities": {
+        "productionReality": {
+          "state": "fixture_free",
+          "syntheticObservations": 0,
+          "demoIdentities": 0
+        },
+        "evidenceAcquisition": {
+          "state": "engineering_loop_holding",
+          "unresolved": 1
+        },
+        "currentPhysicalCoverage": {
+          "state": "explicit_per_event",
+          "physicallyCurrentEvents": 0,
+          "activeEvents": 1
+        },
+        "observationOpportunities": {
+          "state": "current",
+          "confirmedFutureRecords": 0
+        },
+        "fusion": {
+          "state": "engineering_ready_unvalidated",
+          "probability": "disabled_without_approved_calibration_evidence"
+        },
+        "thermalGeometry": {
+          "state": "support_geometry_only_unvalidated",
+          "perimeterAuthority": false
+        },
+        "nativePixels": {
+          "state": "engineering_runtime_ready",
+          "persistedProofs": 0
+        },
+        "portugalValidation": {
+          "state": "official_archive_report_reference_measured",
+          "cases": 35
+        }
+      }
+    }
+  },
+  "/api/v10/operator/situation-quality": {
+    "status": 200,
+    "data": {
+      "storage": {
+        "snapshots": 98,
+        "dependencies": 83684,
+        "jobs": 4,
+        "documents": 0,
+        "admissions": 0
+      },
+      "consequences": {
+        "captured": 7,
+        "unchanged": 5,
+        "recalculations": 7,
+        "routeRecalculations": 0,
+        "errors": 0
+      },
+      "ask": {
+        "successfulToolCalls": 19,
+        "abstentions": 0,
+        "unsupportedAnswerBlocks": 0
+      },
+      "model": {
+        "state": "DISABLED",
+        "reason": "No installed model passed the bounded runtime smoke tests"
+      }
+    }
+  }
+}

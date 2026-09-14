@@ -1,0 +1,94 @@
+{
+  "schemaVersion": "vigia.forecast-worldclass-evaluation.v1",
+  "protocol": {
+    "schemaVersion": "vigia.forecast-evaluation-protocol.v1",
+    "protocolId": "VIGIA-SPREAD-PREREGISTRATION-1",
+    "protocolVersion": "1.0.0",
+    "ladder": [
+      "NO_GROWTH",
+      "RECENT_GROWTH",
+      "OBSERVATION_KINEMATIC",
+      "PHYSICAL_BASELINE",
+      "CALIBRATED_HYBRID_ENSEMBLE"
+    ],
+    "horizonsHours": [
+      1,
+      3,
+      6,
+      12,
+      24
+    ],
+    "scoreableHorizonMinimum": 3,
+    "metrics": [
+      "iou",
+      "boundaryErrorM",
+      "areaErrorRatio",
+      "arrivalTimeErrorMinutes",
+      "brierScore",
+      "reliabilityError",
+      "contourCoverage",
+      "falseSafeRate",
+      "worstDecileUnderprediction"
+    ],
+    "splitDoctrine": {
+      "development": "incident-disjoint development only",
+      "calibration": "incident and causal-family disjoint calibration only",
+      "heldout": "incident, physical-pixel, revision, and causal-family disjoint; never used for tuning"
+    },
+    "abstentionPolicy": {
+      "requiredWhen": [
+        "INPUT_QA_FAILED",
+        "OUTSIDE_VALIDATED_DOMAIN",
+        "CALIBRATION_UNAVAILABLE",
+        "UNCERTAINTY_EXCEEDS_BOUND"
+      ],
+      "falseSafeTreatment": "Abstention is not scored as safe; unsafe non-abstention is a false-safe event."
+    },
+    "tailRiskLimits": {
+      "falseSafeRateMax": 0.02,
+      "worstDecileUnderpredictionMax": 0.35,
+      "contourCoverageMin": 0.9
+    },
+    "promotionGates": {
+      "iouMin": 0.45,
+      "boundaryErrorMMax": 2500,
+      "areaErrorRatioMax": 0.35,
+      "arrivalTimeErrorMinutesMax": 90,
+      "brierScoreMax": 0.2,
+      "reliabilityErrorMax": 0.08,
+      "contourCoverageMin": 0.9,
+      "falseSafeRateMax": 0.02,
+      "worstDecileUnderpredictionMax": 0.35,
+      "mustBeatPriorLadderStage": true,
+      "sourceAblationsRequired": true,
+      "stratifiedEvaluationRequired": true
+    },
+    "evidenceSeparation": {
+      "forecastOutputRole": "PREDICTION",
+      "observedEvidenceRole": "OBSERVATION",
+      "forecastMayCreateAuthority": false,
+      "forecastMayClosePhysicalEvidenceNeed": false
+    },
+    "preregisteredBeforePromotion": true,
+    "fingerprint": "forecast-evaluation-protocol:sha256:9dfa504ec88d59b9f5090861b0d14b095850ca3bd73d4440fca89fa475231329"
+  },
+  "corpusGateFingerprint": "corpus-worldclass-gate:sha256:bcecf2c22354ef694c75f86d0fd268168dc95c48ed6acfa6afebbcaee551af96",
+  "state": "BLOCKED_BY_CORPUS",
+  "trainingExecuted": false,
+  "promotionExecuted": false,
+  "evaluatedModels": [],
+  "measuredMetrics": {
+    "iou": null,
+    "boundaryErrorM": null,
+    "areaErrorRatio": null,
+    "arrivalTimeErrorMinutes": null,
+    "brierScore": null,
+    "reliabilityError": null,
+    "contourCoverage": null,
+    "falseSafeRate": null,
+    "worstDecileUnderprediction": null
+  },
+  "blocker": "Scientific corpus promotion gates are not satisfied; model training and promotion remain forbidden.",
+  "passed": false,
+  "fingerprint": "forecast-evaluation:sha256:1a9ac6e37f697bebff160364eca96cf626d9a12fc9c0a09244fc50658fa73fa2"
+}

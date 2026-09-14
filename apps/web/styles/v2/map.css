@@ -1,0 +1,56 @@
+.gt-map{position:absolute;inset:0}.atlas-map-shell,.atlas-map{width:100%;height:100%}.atlas-map{background:radial-gradient(circle at 54% 45%,#14251a,#07100c 72%)}.atlas-ocean{fill:#07100d}.atlas-country-shadow{fill:#000;opacity:.42;filter:url(#atlas-shadow)}.atlas-country-land{fill:url(#atlas-land)}.atlas-country-line{fill:none;stroke:rgba(237,240,232,.55);stroke-width:1.2}.atlas-contour{fill:none;stroke:rgba(229,234,224,.045);stroke-width:.7}.atlas-contour.major{stroke:rgba(229,234,224,.075)}.atlas-road{fill:none;stroke:rgba(220,168,62,.09);stroke-width:1}.atlas-river{fill:none;stroke:rgba(89,199,197,.15);stroke-width:1}.atlas-region{fill:rgba(222,228,217,.08);font:44px var(--display);text-anchor:middle}.atlas-city circle{fill:rgba(238,231,214,.55)}.atlas-city text{fill:rgba(238,231,214,.5);font:8px var(--mono);letter-spacing:.04em}.atlas-marker{cursor:pointer}.marker-halo{fill:transparent}.marker-core{vector-effect:non-scaling-stroke}.atlas-marker.candidate .marker-core{fill:var(--amber);stroke:#0a0d0b;stroke-width:2}.atlas-marker.hazard .marker-core{fill:var(--cream);stroke:var(--orange);stroke-width:2}.atlas-marker.incident.reported .marker-core{fill:#13231a;stroke:var(--red);stroke-width:2.4}.atlas-marker.incident.supported .marker-core{fill:var(--orange);stroke:var(--cream);stroke-width:1.3}.atlas-marker.incident.verified .marker-core{fill:var(--red);stroke:var(--cream);stroke-width:1.5}.atlas-marker.incident.stale .marker-core{fill:transparent;stroke:#7a655d;stroke-width:1.7;stroke-dasharray:3 2}.atlas-marker.incident.rejected .marker-core{fill:#111;stroke:#666}.marker-cross{stroke:#aaa;stroke-width:1.5}.atlas-marker.thermal .marker-core{fill:#ffdc72;stroke:#0b0d0b}.atlas-marker.asset .marker-core{fill:var(--cyan);stroke:#07100c}.marker-pulse{fill:none;stroke:var(--cream);stroke-width:1;animation:pulse 2s ease-out infinite}.atlas-feature-label{fill:var(--cream);font:9px var(--mono);paint-order:stroke;stroke:#07100c;stroke-width:4px}.cluster-count{fill:var(--paper);font:bold 8px var(--mono);text-anchor:middle}.atlas-spread{stroke:var(--orange);stroke-width:1.7;vector-effect:non-scaling-stroke}.atlas-spread.outer{fill:rgba(239,106,68,.13);stroke-dasharray:5 4}.atlas-spread.central{fill:rgba(255,68,48,.26)}@keyframes pulse{to{opacity:0;transform:scale(1.5)}}.atlas-tooltip{position:absolute;z-index:30;padding:7px 9px;background:#080b09;border:1px solid var(--line-strong);font:8px var(--mono);pointer-events:none}.map-controls{position:absolute;z-index:20;right:18px;top:18px;display:grid;background:rgba(8,11,9,.88);border:1px solid var(--line);backdrop-filter:blur(12px)}.map-controls button{width:40px;height:40px;background:transparent;border-top:1px solid var(--line);color:var(--soft);font:9px var(--mono)}.map-controls button:first-child{border-top:0}.map-controls button:hover{background:var(--cream);color:#080b09}.map-legend{position:absolute;z-index:20;left:50%;bottom:20px;display:flex;transform:translateX(-50%);background:rgba(8,11,9,.86);border:1px solid var(--line);padding:4px;backdrop-filter:blur(14px)}.legend-item{display:flex;align-items:center;gap:7px;padding:8px 10px;color:var(--muted);font:7px var(--mono);text-transform:uppercase}.legend-item i{width:9px;height:9px;border-radius:50%;border:2px solid var(--c);background:var(--f,transparent)}.map-source-note{position:absolute;z-index:12;left:16px;bottom:8px;color:rgba(226,232,221,.32);font:6px var(--mono);letter-spacing:.08em}.stage-loading{position:absolute;z-index:40;inset:0;display:grid;place-content:center;justify-items:center;gap:12px;background:#08100c;transition:.4s}.stage-loading span{width:38px;height:38px;border:1px solid var(--line-strong);border-top-color:var(--amber);border-radius:50%;animation:spin 1s linear infinite}.stage-loading p{color:var(--muted);font:8px var(--mono);letter-spacing:.12em;text-transform:uppercase}.gt-app[data-ready="true"] .stage-loading{opacity:0;pointer-events:none}@keyframes spin{to{transform:rotate(360deg)}}
+.stage-loading.is-failed{max-width:none;padding:30px;text-align:center}.stage-loading.is-failed span{display:grid;place-items:center;border-color:var(--red);border-radius:0;color:var(--red);font:700 18px var(--mono);animation:none}.stage-loading.is-failed h2{font:520 clamp(30px,4vw,54px)/.95 var(--display);letter-spacing:-.05em}.stage-loading.is-failed p{max-width:620px;color:var(--soft);font:10px/1.55 var(--mono);letter-spacing:.03em;text-transform:none}.stage-loading.is-failed button{min-height:42px;padding:0 18px;background:var(--cream);color:#080b09;font:700 8px var(--mono);letter-spacing:.08em;text-transform:uppercase}
+/* v3 plain-language controls */
+.map-controls button:first-child{width:auto;min-width:72px;padding:0 12px}.map-source-note{font-size:7px}.legend-item{font-size:8px}
+
+.atlas-thermal-live{pointer-events:none;opacity:.9;mix-blend-mode:screen;filter:saturate(1.08) contrast(1.14)}
+.atlas-marker.event.two-family .marker-core{fill:#ef6a44;stroke:#f6e8ba;stroke-width:2.4}.atlas-marker.event.two-family .marker-halo{fill:rgba(239,106,68,.13);stroke:#e7ba53;stroke-width:1.2;stroke-dasharray:2 2}
+.gt-app[data-view="live"] .atlas-country-land{fill:#102019}.gt-app[data-view="live"] .atlas-region{opacity:.6}.gt-app[data-view="live"] .atlas-marker.incident.supported .marker-halo{fill:rgba(239,106,68,.16)}
+/* v5 persistent fire-event semantics */
+.atlas-marker.event.reported .marker-core{fill:#12251b;stroke:#ff4430;stroke-width:2.4}.atlas-marker.event.multisource .marker-core{fill:#ef6a44;stroke:#fff1d8;stroke-width:1.5}.atlas-marker.event.satellite .marker-core{fill:#ffdc72;stroke:#16140d;stroke-width:1.7}.atlas-marker.event.stale .marker-core{fill:transparent;stroke:#7a655d;stroke-width:1.7;stroke-dasharray:3 2}.atlas-marker.event.growing .marker-halo{fill:rgba(255,68,48,.15);animation:event-breathe 1.8s ease-in-out infinite}.atlas-marker.event.is-selected .marker-halo{fill:rgba(238,231,214,.08)}@keyframes event-breathe{50%{opacity:.32;transform:scale(1.35)}}
+.atlas-basemap{opacity:.68;filter:saturate(.7) brightness(.62) contrast(1.12)}
+.atlas-basemap-tile{image-rendering:auto}
+.atlas-event-footprint{fill:rgba(239,106,68,.12);stroke:rgba(239,106,68,.8);stroke-width:1.5;stroke-dasharray:5 4;vector-effect:non-scaling-stroke;pointer-events:none}
+.atlas-event-footprint.growing{fill:rgba(255,68,48,.16);stroke:#ff5d43}
+.atlas-event-footprint.selected{fill:rgba(255,220,114,.10);stroke:#ffdc72;stroke-width:2.2;stroke-dasharray:none}
+.cluster-count{fill:var(--cream);text-anchor:middle;font-family:var(--mono);letter-spacing:.02em;paint-order:stroke;stroke:#08100b;stroke-width:3px}
+.atlas-region{opacity:.18}
+
+.atlas-country-line-top{stroke:rgba(244,239,223,.72);stroke-width:1.25;vector-effect:non-scaling-stroke}.gt-app[data-view="live"] .atlas-basemap{opacity:.62}
+
+.atlas-marker.event.uncertain .marker-core{fill:#13231a;stroke:#efb64b;stroke-width:2;stroke-dasharray:2 2}
+
+/* v7 operational-fire cartography: real geography dominates at local scale. */
+.atlas-basemap{opacity:.90;filter:saturate(.82) brightness(.86) contrast(1.05)}
+.gt-app[data-view="live"] .atlas-basemap,.gt-app[data-view="incidents"] .atlas-basemap,.gt-app[data-view="command"] .atlas-basemap{opacity:.88}
+.atlas-country-line.is-local,.atlas-country-line-top.is-local{opacity:.14;stroke-width:.7}
+.atlas-city.detail-local text{fill:rgba(242,239,228,.72)}
+.atlas-city.detail-local circle{fill:rgba(242,239,228,.72)}
+.atlas-event-footprint{fill:rgba(239,106,68,.10);stroke:rgba(255,119,82,.82);stroke-width:1.6}
+.atlas-event-footprint.selected{fill:rgba(255,220,114,.14);stroke:#ffdc72;stroke-width:2.4}
+.atlas-event-footprint.phenomenon-fuel-continuity{fill:rgba(220,168,62,.13);stroke:#e7ba53;stroke-width:1.8;stroke-dasharray:2 3}
+.atlas-event-footprint.phenomenon-fuel-continuity.selected{fill:rgba(255,220,114,.2);stroke:#ffdc72;stroke-width:2.5;stroke-dasharray:none}
+.queue-item.is-pinned{box-shadow:inset 0 0 0 1px rgba(255,220,114,.35)}
+.queue-item.is-pinned .rank{color:var(--amber);font-size:6px;letter-spacing:.08em}
+.atlas-country-shadow.is-local{opacity:.08;filter:none}.atlas-country-land.is-local{opacity:.12}.gt-app[data-view="live"] .atlas-country-land.is-local,.gt-app[data-view="incidents"] .atlas-country-land.is-local{opacity:.08}
+/* v8 semantic zoom: low-zoom maps stay cartographic, not debug-like. */
+.atlas-region{font-size:28px;opacity:.09;letter-spacing:.04em}
+.atlas-city.detail-national text{font-size:7px;fill:rgba(238,231,214,.46)}
+.cluster-badge{fill:#0b110d;stroke:rgba(238,231,214,.55);stroke-width:1.2;vector-effect:non-scaling-stroke}
+.cluster-count{fill:#f4efdf;stroke:#0b110d;stroke-width:2px;font-weight:700}
+.atlas-marker.is-cluster .marker-core{opacity:.55}
+.atlas-marker.is-cluster .marker-halo{fill:rgba(8,12,9,.36)}
+/* v8 operational map: authoritative quantiles, physical-footprint freshness and movement. */
+.atlas-spread.high{fill:rgba(239,106,68,.08);stroke:rgba(239,106,68,.62);stroke-dasharray:6 5}
+.atlas-spread.central{fill:rgba(255,92,62,.14);stroke:rgba(255,119,82,.88)}
+.atlas-spread.low{fill:rgba(255,220,114,.10);stroke:#ffdc72;stroke-width:1.4}
+.atlas-event-footprint.freshness-stale,.atlas-event-footprint.freshness-delayed{fill:rgba(120,101,93,.035);stroke:rgba(160,132,120,.5);stroke-dasharray:3 5}
+.atlas-movement-vector{stroke:#ffdc72;stroke-width:2;vector-effect:non-scaling-stroke;stroke-dasharray:5 3;pointer-events:none}
+.atlas-movement-tip{fill:#ffdc72;stroke:#08100b;stroke-width:1;pointer-events:none}
+.atlas-country-line:not(.is-local),.atlas-country-line-top:not(.is-local){stroke:rgba(237,240,232,.38)}
+.atlas-city.detail-local text{paint-order:stroke;stroke:#07100c;stroke-width:2.5px}
+.atlas-marker.event.sensor .marker-core{fill:#59c7c5;stroke:#f4efdf;stroke-width:1.5}
+/* V9 national-scale cartography: uncluttered overview, full reference tiles only after regional zoom. */
+.atlas-map{background:radial-gradient(circle at 52% 46%,#102016 0,#07100c 64%,#050a07 100%)}
+.atlas-marker.is-cluster .cluster-badge{fill:#0a120d;stroke:#e8e3d3;stroke-width:1.1}
+.atlas-marker.is-cluster .cluster-count{font-size:6px;stroke-width:2.2px}

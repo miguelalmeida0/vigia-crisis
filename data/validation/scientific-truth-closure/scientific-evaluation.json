@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "vigia.scientific-evaluation.v1",
+  "generatedAt": "2026-08-25T15:54:44.151Z",
+  "evaluations": {
+    "fireExistence": {
+      "state": "SCORED_NONVACUOUS",
+      "baseline": "ATTRIBUTABLE_PHYSICAL_CORROBORATION",
+      "metrics": {
+        "examples": 92,
+        "truePositives": 72,
+        "trueNegatives": 20,
+        "falsePositives": 0,
+        "falseNegatives": 0,
+        "accuracy": 1,
+        "precision": 1,
+        "recall": 1,
+        "specificity": 1,
+        "balancedAccuracy": 1
+      },
+      "qualification": "Corpus-consistency/corroboration evaluation, not a predictive-skill claim."
+    },
+    "largeFireGrowth": {
+      "state": "SCORED_NONVACUOUS",
+      "baselines": {
+        "noGrowth": {
+          "examples": 38,
+          "truePositives": 0,
+          "trueNegatives": 25,
+          "falsePositives": 0,
+          "falseNegatives": 13,
+          "accuracy": 0.6578947368421053,
+          "precision": null,
+          "recall": 0,
+          "specificity": 1,
+          "balancedAccuracy": 0.5
+        },
+        "issueArea": {
+          "examples": 38,
+          "truePositives": 13,
+          "trueNegatives": 13,
+          "falsePositives": 12,
+          "falseNegatives": 0,
+          "accuracy": 0.6842105263157895,
+          "precision": 0.52,
+          "recall": 1,
+          "specificity": 0.52,
+          "balancedAccuracy": 0.76
+        }
+      }
+    },
+    "shortHorizonProgression": {
+      "state": "BLOCKED",
+      "baselines": null
+    },
+    "impactExposure": {
+      "state": "BLOCKED_NO_ATTRIBUTABLE_OUTCOMES",
+      "metrics": null
+    }
+  },
+  "nonVacuousTasks": 2,
+  "decision": "NONVACUOUS_SCIENTIFIC_EVALUATION_COMPLETE",
+  "statisticalModelTrained": false,
+  "promotionGranted": false,
+  "replay": {
+    "fingerprint": "scientific-evaluation-replay:sha256:ca90986d77d94be8099eadde467e3fcc495c18c52a601d763b901e423b0314a4",
+    "verified": true
+  },
+  "fingerprint": "scientific-evaluation:sha256:1a4dd716fa98e38506092c068d6451ea708c40b360336e20cc468a314aab9498"
+}

@@ -1,0 +1,86 @@
+{
+  "method": "Largest observed useful-frame delays, retaining corresponding resource durations. Correlation does not establish exclusive cause.",
+  "examples": [
+    {
+      "sample": 18,
+      "case": "incident-switch",
+      "firstUsefulFrameMs": 25651.70000000001,
+      "longestResources": [
+        {
+          "path": "/backend/api/v1/basemap/labels/13/3939/3131",
+          "durationMs": 20191.899999999965
+        },
+        {
+          "path": "/backend/api/v1/basemap/labels/13/3941/3132",
+          "durationMs": 19785.79999999999
+        },
+        {
+          "path": "/backend/api/v1/basemap/imagery/13/3940/3132",
+          "durationMs": 19395.800000000047
+        },
+        {
+          "path": "/backend/api/v1/basemap/imagery/13/3941/3132",
+          "durationMs": 19394.899999999965
+        },
+        {
+          "path": "/backend/api/v10/operator/incidents/incident%3APT-2026-08D08E2A0D/situation/picture",
+          "durationMs": 6305
+        }
+      ]
+    },
+    {
+      "sample": 4,
+      "case": "cold",
+      "firstUsefulFrameMs": 23940.60000000149,
+      "longestResources": [
+        {
+          "path": "/backend/api/v10/operator/incidents/incident%3APT-2026-01F7E2E21A/location",
+          "durationMs": 12043.89999999851
+        },
+        {
+          "path": "/backend/api/v10/operator/incidents",
+          "durationMs": 5095
+        },
+        {
+          "path": "/backend/api/v10/session",
+          "durationMs": 5008.89999999851
+        },
+        {
+          "path": "/backend/__health",
+          "durationMs": 3508.0999999996275
+        },
+        {
+          "path": "/backend/api/v10/operator/incidents/incident%3APT-2026-01F7E2E21A/situation/picture",
+          "durationMs": 621.8000000007451
+        }
+      ]
+    },
+    {
+      "sample": 4,
+      "case": "incident-switch",
+      "firstUsefulFrameMs": 20288.599999999627,
+      "longestResources": [
+        {
+          "path": "/backend/api/v1/basemap/labels/13/3939/3131",
+          "durationMs": 19591.200000001118
+        },
+        {
+          "path": "/backend/api/v1/basemap/imagery/13/3942/3132",
+          "durationMs": 19556.10000000149
+        },
+        {
+          "path": "/backend/api/v1/basemap/labels/13/3938/3131",
+          "durationMs": 19461.400000000373
+        },
+        {
+          "path": "/backend/api/v1/basemap/imagery/13/3939/3132",
+          "durationMs": 351.1000000014901
+        },
+        {
+          "path": "/backend/api/v1/basemap/imagery/13/3939/3131",
+          "durationMs": 345.8999999985099
+        }
+      ]
+    }
+  ]
+}

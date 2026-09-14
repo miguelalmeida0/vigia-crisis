@@ -1,0 +1,30 @@
+{
+  "at": "2026-09-12T14:03:02.913Z",
+  "environment": "Local PostgreSQL/PostGIS; real stored directory and pilot; no inference",
+  "initializationMs": 411.26,
+  "entities": 200,
+  "facts": 5353,
+  "documents": 7,
+  "modelCalls": 0,
+  "measures": {
+    "decorateAndRenderStoredFacility": {
+      "samples": 100,
+      "p50Ms": 0.59,
+      "p95Ms": 1.6,
+      "maxMs": 18.17
+    },
+    "postgisNearestFacilities": {
+      "samples": 20,
+      "p50Ms": 216.5,
+      "p95Ms": 720.37,
+      "maxMs": 720.37
+    },
+    "canonicalEntityWithProvenance": {
+      "samples": 20,
+      "p50Ms": 202.46,
+      "p95Ms": 394.34,
+      "maxMs": 394.34
+    }
+  },
+  "limitation": "Warm local pilot-size measurements; not a national-scale throughput or tail-latency guarantee."
+}

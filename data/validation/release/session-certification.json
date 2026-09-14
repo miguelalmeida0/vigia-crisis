@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "vigia.session-certification.v1",
+  "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+  "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+  "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+  "certifiedRuntimeReleaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+  "targets": {
+    "central": "http://127.0.0.1:4177",
+    "fieldNode": "http://127.0.0.1:4188"
+  },
+  "completedAt": "2026-08-25T15:03:42.291Z",
+  "state": "PASS",
+  "identity": {
+    "id": "miguel-almeida",
+    "name": "Miguel Almeida",
+    "title": "Shadow Operator",
+    "role": "administrator"
+  },
+  "surfaces": [
+    "session",
+    "command",
+    "bootstrap"
+  ],
+  "reloadPersistent": true,
+  "httpOnlyCookieIssued": false,
+  "contradictions": 0
+}

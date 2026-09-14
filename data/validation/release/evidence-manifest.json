@@ -1,0 +1,2941 @@
+{
+  "schemaVersion": "vigia.evidence-manifest.v2",
+  "generatedAt": "2026-09-14T07:35:10.975Z",
+  "releaseId": "vigia-intelligence-fabric-14b343443ea8c494",
+  "codeStateHash": "sha256:6ffbbb28e7b876d254907061d816c960fd4dfe2b1438b686694402d76e824bd2",
+  "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
+  "entries": [
+    {
+      "path": ".agents/skills/impeccable/agents/impeccable_asset_producer.toml",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/agents/impeccable_documenter.toml",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/agents/impeccable_finish_reviewer.toml",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/agents/impeccable_manual_edit_applier.toml",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/scripts/bin/darwin-arm64/impeccable",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/scripts/impeccable",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/scripts/impeccable.cmd",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": ".agents/skills/impeccable/scripts/VERSION",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "data/validation/.gitignore",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/frontend-visual-contract/map-engine-hardening/existing-capability-inventory.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/frontend-visual-contract/map-engine-hardening/old-good-map-archaeology.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/checkpoint-commands.sh",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/checkpoint-handoff.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/current-release-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/dirty-tree-classification.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/evidence-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/ignored-runtime-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/release-source-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/release-statement.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "data/validation/release/unknown-path-report.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/after-explain.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/after-knowledge-performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/after-scoped-event-loop.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/before-event-loop.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/before-explain.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/before-knowledge-performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/enrichment-gaps.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/facility-metrics.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/field-recovery.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/FINAL_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/git-status.txt",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/gnr-persistence.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/map-performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/no-ai-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/qwen-cli.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/relationships.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/acceleration/source-health.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/FIRE_RESPONSE_DESIGN.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/FIRE_RESPONSE_FINAL_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/fire-response-changed-files.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/benchmark.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/canonical/ask-existing-desktop.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/canonical/ask-existing-mobile.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/extraction-corpus.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/final-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/git-status.txt",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/IMPLEMENTATION.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/live-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/live-situation-PT-2026-01F7E2E21A.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/live-situation-PT-2026-03CFDC147C.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/live-situation-PT-2026-08D08E2A0D.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/manifest.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/map-after.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/map-before.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/map-compact.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/map-optimized.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/model-cpu-retry.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/model-report.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/model-smoke.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/postgres-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/quality-report.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-ii/REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/benchmark.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/extraction-corpus.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/final-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/git-start-status.txt",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/git-status.txt",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/IMPLEMENTATION.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/intent-benchmark.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/live-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/manifest.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/map-after.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/map-before.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/map-bundle.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/map-final.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/map-first-visit-intermediate.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/map-firstVisitIntermediate.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/model-gate.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/postgres-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/readiness-final.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/restart-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/situation-PT-2026-01F7E2E21A.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/situation-PT-2026-03CFDC147C.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/situation-PT-2026-08D08E2A0D.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/TESTS.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-1024.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-1280.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-1440.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-1600.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-320.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-430.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/brief-768.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/command-overview-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/command-overview-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/command-overview-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/command-overview-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/command-overview-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/command-overview-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/compare-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/compare-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-entry-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-entry-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-rejected-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-rejected-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-review-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-review-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/document-ui.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/facility-map-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/facility-map-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/facility-route-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/facility-route-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/fire-activity-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/fire-activity-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/fire-activity-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/fire-activity-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/fire-activity-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/fire-activity-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/historical-map-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/historical-map-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/history-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/history-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/hospital-answer-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/hospital-answer-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incident-detail-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incident-detail-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incident-detail-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incident-detail-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incident-detail-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incident-detail-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incidents-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incidents-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incidents-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incidents-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incidents-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/incidents-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/national-awareness-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/national-awareness-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/reference-comparisons.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/response-access-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/response-access-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/response-access-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/response-access-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/response-access-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/response-access-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/scenario-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/scenario-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/ui-focus.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-iii-iv/visual/ui-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/ARCHITECTURE.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/evidence-manifest.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/FINAL_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/live-directory-comparison.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/live-source-check.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/model-evaluation.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/model-gpu-attempt.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/progress.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-intelligence/relationship-evidence.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/audit-diagnosis.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/audit-final.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/final-live-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/fire-contact-acquisition.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/IMPLEMENTATION.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/live-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/map-results.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/model-corpus-initial.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/model-corpus-unbounded.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/model-corpus.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/model-evaluation.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/model-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/postgres-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/quality-final.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/ready-final.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/resolver-profile.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/road-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/situation-PT-2026-01F7E2E21A.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/situation-PT-2026-03CFDC147C.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/situation-PT-2026-08D08E2A0D.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/source-acquisition.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-1024.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-1280.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-1440.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-1600.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-320.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-430.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/brief-768.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/command-overview-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/command-overview-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/command-overview-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/command-overview-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/command-overview-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/command-overview-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/compare-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/compare-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/document-entry-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/document-entry-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/facility-route-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/facility-route-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/fire-activity-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/fire-activity-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/fire-activity-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/fire-activity-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/fire-activity-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/fire-activity-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/historical-map-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/historical-map-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/history-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/history-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/hospital-answer-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/hospital-answer-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incident-detail-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incident-detail-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incident-detail-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incident-detail-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incident-detail-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incident-detail-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incidents-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incidents-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incidents-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incidents-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incidents-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/incidents-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/national-awareness-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/national-awareness-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/reference-comparisons.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/response-access-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/response-access-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/response-access-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/response-access-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/response-access-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/response-access-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/scenario-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/scenario-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/visual/ui-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-v/worker-profile.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/design-read.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/final-state.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/git-status.txt",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/map-performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/model-corpus.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/model-evaluation.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/model-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/performance-raw.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/postgres-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/progress.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/readiness-forensics-after.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/readiness-forensics.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/real-examples-before-priority.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/real-examples.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/report.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/restart-anchor.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/restart-before.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/restart-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/situation-PT-2026-01F7E2E21A.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/situation-PT-2026-03CFDC147C.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/situation-PT-2026-08D08E2A0D.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-1024.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-1280.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-1440.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-1600.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-320.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-430.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/brief-768.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/command-overview-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/command-overview-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/command-overview-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/command-overview-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/command-overview-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/command-overview-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/community-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/community-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/compare-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/compare-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/coverage-restored-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/coverage-restored-320.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/coverage-restored-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/document-entry-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/document-entry-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/facility-route-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/facility-route-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/fire-activity-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/fire-activity-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/fire-activity-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/fire-activity-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/fire-activity-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/fire-activity-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/healthcare-coverage-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/healthcare-coverage-320.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/healthcare-coverage-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/historical-map-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/historical-map-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/history-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/history-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/hospital-answer-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/hospital-answer-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incident-detail-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incident-detail-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incident-detail-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incident-detail-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incident-detail-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incident-detail-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incidents-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incidents-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incidents-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incidents-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incidents-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/incidents-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/national-awareness-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/national-awareness-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/reference-comparisons.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/response-access-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/response-access-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/response-access-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/response-access-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/response-access-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/response-access-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/scenario-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/scenario-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/ui-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vi/visual/ui-request-timeout.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/design-read.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/final-state.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/live-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/LOCAL_AI.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/map-performance.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/mlx-device-recheck.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/mlx-startup.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/model-corpus.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/model-runtime.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/performance-observations.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/progress.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/restart-anchor.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/restart-proof.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/command-overview-mobile.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/community-qualified-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/detail-operational-picture.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/discovery-community-access-attempt.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/discovery-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/discovery-sep13.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-add-failure.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-ask-followup.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-ask-road.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-causal-after.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-causal-before.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-causal-timeline.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-community-access-loss.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-community-healthcare.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-compare-now.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-current-support.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-em527-lens.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-fire-coverage.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-gaps.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-healthcare-before.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-healthcare-failure.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-historical-picture.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-limited-redundancy.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-louredo-network.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-louredo-qualified.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-mobile-map.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-multiple-failure.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-operational-picture.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-qualified-historical-picture.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-reception-coverage.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-replay-paused.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-1024.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-1280.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-1440.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-320.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-430.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-scenario-768.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-stress-consequence.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/final-stress-test.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fire-activity-mobile.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/focused-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/fresh-session-discovery.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incident-detail-mobile.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/incidents-mobile.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/national-awareness-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/national-awareness-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/national-awareness-mobile.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/reference-comparisons.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/response-access-1672.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/response-access-390.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/response-access-comparison/difference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/response-access-comparison/overlay.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/response-access-comparison/reference.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/response-access-comparison/runtime.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/routes-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/mega-vii/visual/ui-qa.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/REALITY_FIRST_FINAL_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/REALITY_FIRST_REVIVAL.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/REALITY_FIRST_USABILITY.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/reality-first-changed-files.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/reality-first-copy-audit.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/reality-first-status.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_ANDURIL_CLASS_CRISIS_OS_INTERRUPTED_CHECKPOINT_2026-09-05.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_ANDURIL_CLASS_CRISIS_OS_MEGA_PATCH_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_COLLECTION_FUSION_TASKING_DECISION_RECOVERY.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/00_EXECUTIVE_MANDATE.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/01_AGENT_PROMPT.txt",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/02_IMPLEMENTATION_HANDOFF.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/03_ACCEPTANCE_GATES.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/04_TEST_AND_CERTIFICATION_MATRIX.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/05_END_OF_DAY_REPORT_TEMPLATE.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/06_COMMANDS_TO_RUN.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/01-command-overview.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/02-incident-detail-valongo.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/03-incident-detail-vilar-andorinho.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/04-incident-selector-open.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/05-incidents.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/06-intelligence.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/07-operations-action-1.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/08-operations-action-3.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/09-reports-decision-summary.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/10-reports-outcome-analysis.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/11-reports-system-performance.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/12-reports-situation-quality.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/13-global-awareness-all.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui/14-global-awareness-filtered.png",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/INDEX.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/runtime/terminal-and-runtime-results.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/PACKAGE_MANIFEST.json",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/README.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/VIGIA_OPERATIONAL_TRUTH_AND_ACTION_RECOVERY_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/VIGIA_POST_RECOVERY_RUTHLESS_AUDIT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/VIGIA_WORLD_LEADER_GAP_CLOSURE_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_OPERATIONAL_PROOF_AND_FIELD_DEPLOYMENT_MANDATE_2026-09-04.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "docs/handoffs/VIGIA_OPERATIONAL_PROOF_AND_FIELD_DEPLOYMENT_REPORT.md",
+      "status": "??",
+      "classification": "GOVERNED EVIDENCE"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/00_MASTER_WHITE_DIRECTION.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/01_COMMAND_OVERVIEW_VISUAL_BASE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/02_INCIDENTS_VISUAL_BASE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/03_INCIDENT_DETAIL_VISUAL_BASE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/04_INTELLIGENCE_FINAL_TARGET.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/05_OPERATIONS_VISUAL_BASE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/06_REPORTS_ANALYTICS_VISUAL_BASE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/07_GLOBAL_AWARENESS_VISUAL_BASE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    },
+    {
+      "path": "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/08_INTELLIGENCE_EXISTING_HYPOTHESES_REFERENCE.png",
+      "status": "??",
+      "classification": "REFERENCE DATA"
+    }
+  ],
+  "deploymentEntries": [
+    {
+      "path": "data/reference/community-intelligence/C21_LUGF0705.zip",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c95c3a03767b71550c8a687ddfa6ad0972e4fb66a9989108683fb72d790b766b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/community-intelligence/ine-evora-2021.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:edb1d547ed446eda4a637be5644414b9afd506ffa0145d3b1a8180db9810bf16",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-alandroal.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:8f9bd5e2ca531a4419b1192823d4824c1220984d807f2fd72a78d037724f0d26",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-arraiolos.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:06405bc7ea3c41beb1904b30737ee247555c5965293e415c8f685d1def548852",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-borba.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:14a453d3ff897cf4a6c338ecd9e3a9eaaa605a42ab790af59a45546dcb7e175d",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-estremoz.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:04acd3ce54cd1c7b0a9133eb38c10336b93b182ef9d6d98def56f1f38c1bccef",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-evora.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:33b61c99c2e70cb945f292d00d87ac56746bcc7ae1ea84e2345e83125f55c066",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-montemor-o-novo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:811410efcc05d75ee29a0693e72da5cc808d021dca1acbd540d4cf1e3c249853",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-mora.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:9412aab4d6a791f4b814009c7b9203fb835cd76fa6370de829141258bcbc1d1f",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-portel.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:50c9d92337ba88e8a5c47460ed326b9b17e912a5c46d536a1b4517c37cef4c34",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-redondo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:143bdd5e5c354cefc4a098f13bcb574485bd2ebb9eea2684faafbbd1359a0a18",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-reguengos-de-monsaraz.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:25002ca8c528c680e6c007b5b251b29e6fa4e3d58c9c7df545f2cb9a7aa08fcc",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-vendas-novas.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c0ccacf5d846a02208da0a2f7081484caf620ec04cb1b28c0aaab68c5b22a934",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-viana-do-alentejo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:d7d54a5240583139dc3a52bc8705f33603c13d8966f00816a8ca28429142fda0",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/ac-vila-vicosa.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:fa352b677cc9e29600c08bd596608d10bc34bd3ba87315813e9c4426f41b3af2",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/alentejo-contacts.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:0220c2ce333adf61184d522d82593d9b9067cb8f69a8ae3e6026eae330aae535",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/alentejo-health.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:a0d64a14cbd6ee4e3fc2687ef855cc9f0902f564907383a821f46d450324b1bb",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/castanheira-refuge.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:390d27db250de7d4e9b90441595c576ed3907c6b17227350b7b6d6f754c67855",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/coimbra-fire.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:a8df7c3782678728d2b5bb94e6a9a9c6c102afee36eb5d9ed3a557d2eda0fc48",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/coimbra-hospitals.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:805023fa6a92e0dd4e13c38bcc48f22a1b988e8dd5531ea526f167215d0a887d",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/coimbra-reception.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:182b3ba028f7cae8d16f1be3c0f9e750246e71a055a8a10a0d2c4cf0b6193531",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/directory-review.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:54f43c22181ba7764148997741047ace05cb02dc1a51828d9d1cfc77423f2880",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/evora-civil.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:f6e98e380080e46bc6f6726195d3cfd268ed2dbc12135a39dc700f27d48d7b96",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/evora-public-contacts.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:cc266aa31f987dc7fff2f421aeafa08d6a7e06122f423f8439c7af13291d816d",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/leiria-contacts.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:67d25b97bd8b8b7aac9b57060cf8fbcd78aca2c64f65db8117635c89a3d303a9",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/leiria-fire.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:4c762782d56d1c19d02827e4a7ce23c83f801bf5f4a10633fb839dfaca2d8877",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/leiria-health.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:12f75c132280f992557fbd77381996b422691fe9aeb0f390f532af8de02dc198",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/leiria-primary.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:fe4f265f26171ccfab28f88816a5afeddabe39fb80ff8a3c14a083f7ad46a77a",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lisboa-health.pdf",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:e7e4d1beffd60d8e80c7cc39a9be5d7503736b0b369be34a19b418ea37d09c3b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-alcobaca-2.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:ba42ee78b84d8f595bfcb0df346309d97e63a629bf29b14d6a20aa510f8bd568",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-batalha.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:e8ad844894152ecc5386de3b5abd6fd605108253028eee05774eb00114a8ea54",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-dr-arnaldo-sampaio.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:510f50319a4b5c14c11ea964a223989e99ab2def46adeed50c14fd25047b48ff",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-dr-gorjao-henriques.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:25b82ed4b48087107410232a606010c4a5f8a11d3d31a9f0f59b6df0794ee9df",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-fatima.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:d7ee59e42c03ab8baf2fc2caf0bb2534cf1525b51ef4f4da223b801b9f9dc863",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-marinha-grande.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:96bdb36777258a3a3e25d3a26e242712a1f263fb525621d4f6e813e2b74c89e4",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-nazare.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:087444f0dec806e86833fa648d09c5f538466add55a5981dd5897bec81d37485",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-ourem.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:b471f4bdac14c04176a0a5002f1c5ef7278e1acdecfcd23b1ad3137d063da5ad",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-pombal.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:70872c05f9f436322b338617f52a7be9793bf67f882306a021b2b29fab4150cd",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/lr-centro-saude-porto-mos.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:77901343462f1e53406a8a5272fa4e3bc6fe010ea012d4a773e8c51a6c47560b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/pilot-review.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:d2b835158532cd1b4751ba2b706e12592b058520365ed36adb644a7b1727ded9",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-cuidados-na-comunidade-ucc-mora.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c57abdac479e2b214b700bfa01f8836bc0b0657555ec73cebcdad9245b8df05e",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-alandroal.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:53f17b889fc258d53cd3204ccb67847da40a426874ea028540b7eda56f1d586f",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-estremoz.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c06662b21b2474b39235d5117c719328b5ff7e724c3af962b0c58cbf49e27cc9",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-evora.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:3b42deb370d0dfa64fcd1cbd2ab41ad2e9807a98265e4c8c251732556a6a2b0a",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-mora.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:e209911fc428ed9d0c60d7b4faf1b3c70bd12173e1fc25b9e6e915e3837bb502",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-mourao.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:fb78a6cff691b289906d997bf6d23066e1b4b161d5c5d1003c144d73a224d684",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-redondo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:1e4258f8ec6155379512bc3cdbd04d858c70bba81ee00475a1b7ccbf86eeab36",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-vendas-novas.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:131cd4453bb0526d16055bfe7f6c5a8870813ed972325433259691f765e2a4ec",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-viana-do-alentejo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:95c078e95758c250829d7eeb4320339cfdf5ddd4f1cc5ad7c859bf96f37909f8",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-de-saude-primarios-ucsp-vila-vicosa.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:93203e5f4849e526fe3c2d2685e0d534a2910c313af0c14cee97e45f3cef5a63",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-alandroal.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:961d2dc1e527f784914a02c4ea7da563f3e1904bd4f2289acdf6f587a13640c2",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-almoreg.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:6b84372b0f2e8ac9d83a8ac518225ff4d51866942c3c7dd7b8c5d08f46113f72",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-arraiolos.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:5f8924ca2a6500d96082f98f6855687771b089b67bf880cc5923c0562fc6c700",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-borba.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:598f71746539b54386dc40b3eb1651b8725278c2ce9a6b91737984f1464860d6",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-estremoz.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:63ae70f9ac559f94c9fd10b6e90be4d7acdf943d5fc5bb520411cdda49e8ae23",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-evora.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:3c25f8f8a76b1de5af2f3813fa735c777a5b37bf4c3fb111d1ab88a01ea83bcf",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-monte-mor.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:02cc045c82b3fc6a9ccf6d4e9bb3f4bc11c49cd9e91dd67c91febaf7f27a856d",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-portel.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c86f3dc9889fcebdd463c2d5215a6d90248227cef328650acfc92f9e4ac1ebb5",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-redondo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:0e75cdef49e05921a804bbf840d76d9755cabae9457f68f82e8add1d114a9ea4",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-vendas-novas.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c7049bd1ba9813648f47f57e8f404e6261bf16fbba0cde74dccaf84cb7295b43",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-viana-do-alentejo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:4606c87d3214a4c82ac5d7d9dc4dfdaead8f3033b21dbeccb72604cef06f14f4",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-cuidados-na-comunidade-ucc-vila-vicosa.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:2df1be428d4636ecb44d847e06c7699df465d8ccf44bc2f94eaac6951ab1aae9",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-alcaides.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:e0d1d3049b18c5f16bc895d5ddfcccbe86231ad78aab2652a1aa5928c5df43dd",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-eborae.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:1cad180fbac5faa8f6b5e87247d3f4e130bf3a359e754c699cb4c372453aac1b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-extremus.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:7ab9a2976770452d2a22bd52284f879e889e9e246358095458e8f783c261f3cc",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-lusitania.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:ff2e5533309b5ecce61e28549345c521ba81bb442775839c2393e7a71876de51",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-matriz.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:0ac83f8c352832f58d0fc12d03e50b9694cb282c4af544b10ab1ab7696b2c8d7",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-planicie.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:6a5e432209dc43e47b0fec5f23382bc809c47882ca09e748a30814243eea4d74",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-portel.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:4455a3b9bc7fa17d8842d43a5a3e883b5a9d8b0ce001ce132b9c0e00dc68d376",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-quinta-da-prata.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:034b780808b6c40b9d4206c9f131bf0392d69ce307a5527ae8e17d8540c9ede0",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-remo.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:1a211aa7b500ecd78f1f4b609d01714e5a02b8dcda7cb849cc690b6210812220",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-salus.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:3f651d77e0585d393475e4ad84d514904a9d2eb3c84b0325c4f920232eaa4b71",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-sol.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:157ffae30c78a8ad08d1f25be5a21ee29e9f8a5127ec7c84811b9992963d6ad9",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-familiar-usf-vendas-novas.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:0bb9e922d31b7cf9939f0cb56e6af55fb39c434b2aba641a1768d3bcfb7c8675",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/acceleration/unit-unidade-de-saude-famliar-usf-foral.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:e749e0a23d2ab71f419869f7867d68dbae2f61565aef14606658ea029be72232",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/pilot-baseline.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:896ef47a496e68de6c150ed814e6d45c0f0cc1d479c19673353c11976dad0f06",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/pilot-review.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:54eaaed55fee45e76cfd01cba914a815a960516fed12569441afab034917aa74",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/raw/mp-contacts.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:451da42fb5a2ac0f0eb38e2d8ee2c288e2d1fbccb71a90908128489b98f19855",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/raw/mp-robots.txt",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:773fb8d35bb9a39d35335ee6db8dc5c912d2aacbfb823152d9c61cd647dd902d",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/raw/prociv-contacts.html",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:de69a7ffe0a6fedd77f0b328251ac46ac3f9983a5071df73acb81880c38819fb",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/raw/prociv-robots.txt",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:300e4e97fd6099c3d394348b528e7241241eb14486fb027c8d11e151b7301810",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/facility-intelligence/source-manifest.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:d68c76dc858e09e562395fb6763e36694d166f0df74a6fea7a05b1bef55ae902",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/operational-proof/.gitignore",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:fc5ba76fe50e07e9c6454636d5336ab78f181af27e9b2ed56aec1e60e8612ec3",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/operational-proof/acquisition-provenance.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:bc38e5145b63e125e18031b28c70737221c8a9589963e78478a1fc7d5a440e1b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/orbits/sentinel3-current.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:e2bf8483b6ba13396a5bbe0c1f953268f62551d9f2b868fba98ada0a9f636184",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/portugal-thermal-context-v1.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:f75987df53de22c223a93d6036e74eb2dfdfee8e4421e078c4ce9f90ca2a51b1",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/prevention-machine-validation/raw/cdse-stac-collections.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:4f3c454348066758f4aa38ff61b9da8a24921a645bb37f9589a920f4d6e305ab",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/prevention-machine-validation/raw/earth-search-repeat-scene-catalogue.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:70ddea56bf50b3fd70ea8fe7f51217ed90e245a599369539746f830dd9a07ef6",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/prevention-machine-validation/reference-registry-v1.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:f924ced67a152ff4db7c439511c855b7c4dacfb080696bdfd1ac45d988cce087",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/prevention-review-context-v1.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:0052585399fb81a85b19b64a913dd97ee4ccd34d495d9110f3e7670785136b85",
+      "mode": "0644"
+    },
+    {
+      "path": "data/replay/corpus/portugal-2024-official.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:9d79ef18573004337a31653c92e928708589dfa0f76dea15eb15d86df1cf9561",
+      "mode": "0644"
+    },
+    {
+      "path": "data/replay/corpus/portugal-2024-source-manifest.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:adf2aad710dee8b5888522a593dc4f5f70d82b4a73c53f828e0b58e6cc52416b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/replay/raw/openstreetmap/portugal-thermal-context-v1/portugal-boundary.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:15f12c4a090e31951cf245120c7e71d282d1a0dc9ab52c1668901d6731e09437",
+      "mode": "0644"
+    },
+    {
+      "path": "data/replay/results/portugal-2024-benchmark.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:faee0637001efbbd81205a7968ee534aa6a2d79ede2c0c04d9467a1adee4084b",
+      "mode": "0644"
+    }
+  ],
+  "requiredArtifacts": []
+}

@@ -1,0 +1,315 @@
+{
+  "model": "mlx-community/Qwen3.5-2B-MLX-4bit",
+  "runtime": "direct MLX isolated worker",
+  "startup": {
+    "attempts": 50,
+    "passed": 0
+  },
+  "attempts": [
+    {
+      "index": 1,
+      "status": 503,
+      "latencyMs": 62,
+      "state": "unavailable"
+    },
+    {
+      "index": 2,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 3,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 4,
+      "status": 503,
+      "latencyMs": 2,
+      "state": "unavailable"
+    },
+    {
+      "index": 5,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 6,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 7,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 8,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 9,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 10,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 11,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 12,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 13,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 14,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 15,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 16,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 17,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 18,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 19,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 20,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 21,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 22,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 23,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 24,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 25,
+      "status": 503,
+      "latencyMs": 2,
+      "state": "unavailable"
+    },
+    {
+      "index": 26,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 27,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 28,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 29,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 30,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 31,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 32,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 33,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 34,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 35,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 36,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 37,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 38,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 39,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 40,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 41,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 42,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 43,
+      "status": 503,
+      "latencyMs": 0,
+      "state": "unavailable"
+    },
+    {
+      "index": 44,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 45,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 46,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 47,
+      "status": 503,
+      "latencyMs": 2,
+      "state": "unavailable"
+    },
+    {
+      "index": 48,
+      "status": 503,
+      "latencyMs": 2,
+      "state": "unavailable"
+    },
+    {
+      "index": 49,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    },
+    {
+      "index": 50,
+      "status": 503,
+      "latencyMs": 1,
+      "state": "unavailable"
+    }
+  ],
+  "failure": "Exception ignored in atexit callback <nanobind.nb_func object at 0x100aff450>:\nRuntimeError: [metal::load_device] No Metal device available. This typically occurs in headless, sandboxed, or virtualized macOS sessions where the GPU is not accessible.\n",
+  "selected": false,
+  "weightsLoaded": false,
+  "corpus": "NOT_RUN_STARTUP_GATE_FAILED",
+  "memory": "Model never allocated. Process memory inspection blocked by sandbox."
+}

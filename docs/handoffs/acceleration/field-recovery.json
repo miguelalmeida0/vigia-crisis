@@ -1,0 +1,166 @@
+[
+  {
+    "name": "Hospital do Espírito Santo",
+    "field": "address.street",
+    "before": {
+      "state": "PROBABLE",
+      "value": "Largo Senhor da Pobreza",
+      "authority": "OSM",
+      "provenance": [
+        "fact:48c511437bf0c2c26df0d8759b7fe3ecfdb2d9a078b59ede44b96ab2e8b7ee90"
+      ]
+    },
+    "after": {
+      "value": "Largo Senhor da Pobreza, Évora",
+      "state": "RESOLVED",
+      "provenance": [
+        "fact:306dd3af3cea0244210ff687e68e90190c98fbbc2b78eacd90ae91c2d812dccb"
+      ],
+      "authority": "MUNICIPAL"
+    },
+    "provenance": [
+      {
+        "factId": "fact:306dd3af3cea0244210ff687e68e90190c98fbbc2b78eacd90ae91c2d812dccb",
+        "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+        "file": "evora-public-contacts.html",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "MUNICIPAL_CONTACT_ACCORDION",
+        "category": "FACILITY_DIRECTORY",
+        "provider": "Câmara Municipal de Évora",
+        "authority": "MUNICIPAL",
+        "publishedAt": null,
+        "retrievedAt": "2026-09-12T16:06:42.571Z",
+        "municipality": "Évora",
+        "pollIntervalMs": 604800000,
+        "sourceText": "small-12 columns no-padding\"> ​Hospital do Espírito Santo T. +351266740100 Largo Senhor da Pobreza, Évora [ver no mapa] Telefone : +351 266 740 100 «Chamada para a rede fixa nacional»",
+        "sourceLocator": "contact-section:1",
+        "resolutionMethod": "DETERMINISTIC_ADAPTER",
+        "validFrom": null,
+        "validUntil": null
+      }
+    ]
+  },
+  {
+    "name": "Hospital do Espírito Santo",
+    "field": "contact.phone",
+    "before": {
+      "state": "NOT_RESOLVED_YET",
+      "value": null,
+      "provenance": []
+    },
+    "after": {
+      "value": "+351266740100",
+      "state": "RESOLVED",
+      "provenance": [
+        "fact:77d2c440d91b476d04171d02f82dec36837428468a5fd32ecba25f5d65f25fb3"
+      ],
+      "authority": "MUNICIPAL"
+    },
+    "provenance": [
+      {
+        "factId": "fact:77d2c440d91b476d04171d02f82dec36837428468a5fd32ecba25f5d65f25fb3",
+        "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+        "file": "evora-public-contacts.html",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "MUNICIPAL_CONTACT_ACCORDION",
+        "category": "FACILITY_DIRECTORY",
+        "provider": "Câmara Municipal de Évora",
+        "authority": "MUNICIPAL",
+        "publishedAt": null,
+        "retrievedAt": "2026-09-12T16:06:42.571Z",
+        "municipality": "Évora",
+        "pollIntervalMs": 604800000,
+        "sourceText": "small-12 columns no-padding\"> ​Hospital do Espírito Santo T. +351266740100 Largo Senhor da Pobreza, Évora [ver no mapa] Telefone : +351 266 740 100 «Chamada para a rede fixa nacional»",
+        "sourceLocator": "contact-section:1",
+        "resolutionMethod": "DETERMINISTIC_ADAPTER",
+        "validFrom": null,
+        "validUntil": null
+      }
+    ]
+  },
+  {
+    "name": "Maternidade Bissaya Barreto",
+    "field": "address.street",
+    "before": {
+      "state": "PROBABLE",
+      "value": "Rua Augusta",
+      "authority": "OSM",
+      "provenance": [
+        "fact:90f7da6bc2dbafdaef7ff21cfaa3ed68ad28158a5a8d63aafda1fff0a5bb228e"
+      ]
+    },
+    "after": {
+      "value": "Rua Augusta",
+      "state": "RESOLVED",
+      "provenance": [
+        "fact:10a2cdc93120b69d1eb6c48fae18a014be06679f1bf58c867f3cc034e200c19a"
+      ],
+      "authority": "OWNER"
+    },
+    "provenance": [
+      {
+        "factId": "fact:10a2cdc93120b69d1eb6c48fae18a014be06679f1bf58c867f3cc034e200c19a",
+        "url": "https://www.ulscoimbra.min-saude.pt/contactos/contactos-gerais-do-chuc/",
+        "file": "coimbra-hospitals.html",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "ULS_CONTACT_TABLE",
+        "category": "FACILITY_DIRECTORY",
+        "provider": "ULS de Coimbra",
+        "authority": "OWNER",
+        "publishedAt": null,
+        "retrievedAt": "2026-09-12T15:11:30.985Z",
+        "facilityType": "hospital",
+        "municipality": "Coimbra",
+        "pollIntervalMs": 604800000,
+        "sourceText": "Maternidade Bissaya Barreto 239 800 100 239 488 700 239 480 304 adm.mbb@ulscoimbra.min-saude.pt Rua Augusta 3000-061 Coimbra",
+        "sourceLocator": "table-row:5",
+        "resolutionMethod": "DETERMINISTIC_ADAPTER",
+        "validFrom": null,
+        "validUntil": null
+      }
+    ]
+  },
+  {
+    "name": "Maternidade Bissaya Barreto",
+    "field": "contact.phone",
+    "before": {
+      "state": "NOT_RESOLVED_YET",
+      "value": null,
+      "provenance": []
+    },
+    "after": {
+      "value": "+351239800100",
+      "state": "RESOLVED",
+      "provenance": [
+        "fact:528452c0e1a01721ae91b3cd540e3c5e0f29fe24a2893871485cdefcc5e6a7fd"
+      ],
+      "authority": "OWNER"
+    },
+    "provenance": [
+      {
+        "factId": "fact:528452c0e1a01721ae91b3cd540e3c5e0f29fe24a2893871485cdefcc5e6a7fd",
+        "url": "https://www.ulscoimbra.min-saude.pt/contactos/contactos-gerais-do-chuc/",
+        "file": "coimbra-hospitals.html",
+        "watch": true,
+        "format": "HTML",
+        "adapter": "ULS_CONTACT_TABLE",
+        "category": "FACILITY_DIRECTORY",
+        "provider": "ULS de Coimbra",
+        "authority": "OWNER",
+        "publishedAt": null,
+        "retrievedAt": "2026-09-12T15:11:30.985Z",
+        "facilityType": "hospital",
+        "municipality": "Coimbra",
+        "pollIntervalMs": 604800000,
+        "sourceText": "Maternidade Bissaya Barreto 239 800 100 239 488 700 239 480 304 adm.mbb@ulscoimbra.min-saude.pt Rua Augusta 3000-061 Coimbra",
+        "sourceLocator": "table-row:5",
+        "resolutionMethod": "DETERMINISTIC_ADAPTER",
+        "validFrom": null,
+        "validUntil": null
+      }
+    ]
+  }
+]

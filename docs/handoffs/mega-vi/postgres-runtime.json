@@ -1,0 +1,45 @@
+{
+  "capturedAt": "2026-09-13T09:24:51.902Z",
+  "lane": "READ_ONLY_RUNTIME_DIAGNOSTIC",
+  "sessions": [
+    {
+      "state": "active",
+      "wait_event_type": "Client",
+      "wait_event": "ClientRead",
+      "sessions": 2,
+      "oldest_query_seconds": 0
+    },
+    {
+      "state": "idle",
+      "wait_event_type": "Client",
+      "wait_event": "ClientRead",
+      "sessions": 2,
+      "oldest_query_seconds": 1
+    },
+    {
+      "state": "idle",
+      "wait_event_type": null,
+      "wait_event": null,
+      "sessions": 1,
+      "oldest_query_seconds": 0
+    }
+  ],
+  "latencyMs": 209,
+  "locks": [
+    {
+      "mode": "AccessShareLock",
+      "granted": true,
+      "count": 1
+    },
+    {
+      "mode": "RowExclusiveLock",
+      "granted": true,
+      "count": 2
+    },
+    {
+      "mode": "ExclusiveLock",
+      "granted": true,
+      "count": 3
+    }
+  ]
+}

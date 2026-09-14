@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "vigia.authoritative-truth-performance.v1",
+  "generatedAt": "2026-08-25T16:07:40.174Z",
+  "stages": {
+    "providerDiscovery": {
+      "p95Ms": null
+    },
+    "pollCycle": {
+      "p95Ms": 18004.952292
+    },
+    "rawPersistenceAndFetch": {
+      "p95Ms": 14337.216416000001
+    },
+    "geometryHashing": {
+      "p95Ms": 13.712
+    },
+    "revisionClassification": {
+      "p95Ms": 0.17954199999985576
+    },
+    "incidentAssociation": {
+      "p95Ms": 1.6124159999999392
+    },
+    "sequenceUpdate": {
+      "p95Ms": 430.219
+    },
+    "labelGeneration": {
+      "p95Ms": 22.989165999999386
+    },
+    "forecastScoreUpdate": {
+      "p95Ms": null
+    },
+    "decisionPacketUpdate": {
+      "p95Ms": 10.321625000000495
+    },
+    "largeCampaignReplay": {
+      "p95Ms": 7913.768
+    }
+  },
+  "changedPerimeterProcessingP95Ms": 13.712,
+  "targets": {
+    "unchangedPollPerIncidentP95Ms": 50,
+    "changedPerimeterP95Ms": 250,
+    "incrementalLabelP95Ms": 100,
+    "decisionPacketP95Ms": 50
+  },
+  "checks": {
+    "unchangedPoll": true,
+    "changedPerimeter": true,
+    "incrementalLabel": true,
+    "decisionPacket": true
+  },
+  "boundedMemory": true,
+  "singleIncidentChangeRequiresGlobalRebuild": false,
+  "providerBatchSequenceUpdateExcludedFromPerIncidentTarget": true,
+  "fingerprint": "authoritative-truth-performance:sha256:4f6db131693df9b651386a2ae305ffa568216623c0e41c52abe2f521a7efbad8"
+}

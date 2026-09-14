@@ -1,0 +1,69 @@
+{
+  "runtime": "Ollama 0.30.7",
+  "models": [
+    {
+      "model": "qwen3:0.6b",
+      "port": 11434,
+      "stage": "sentinel",
+      "successPercent": 0,
+      "schemaPercent": null,
+      "latencyMs": 1619,
+      "startupFailures": 1,
+      "ramBytes": null,
+      "stagesNotRun": [
+        "JSON",
+        "Portuguese extraction",
+        "tool translation",
+        "120-case corpus"
+      ],
+      "error": "⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ Error: 500 Internal Server Error: llama-server reported out-of-memory during startup: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\nerror: failed to allocate buffer, size =     0.02 MiB\n"
+    },
+    {
+      "model": "llama3.2:3b",
+      "port": 11434,
+      "stage": "sentinel",
+      "successPercent": 0,
+      "schemaPercent": null,
+      "latencyMs": 2034,
+      "startupFailures": 1,
+      "ramBytes": null,
+      "stagesNotRun": [
+        "JSON",
+        "Portuguese extraction",
+        "tool translation",
+        "120-case corpus"
+      ],
+      "error": "⠋ ⠹ ⠹ ⠼ ⠼ ⠦ ⠦ ⠧ ⠇ ⠏ ⠙ ⠙ ⠸ ⠸ ⠼ ⠦ ⠧ Error: 500 Internal Server Error: llama-server reported out-of-memory during startup: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\n"
+    },
+    {
+      "model": "qwen3.5:4b",
+      "port": 11435,
+      "stage": "sentinel",
+      "successPercent": 0,
+      "schemaPercent": null,
+      "latencyMs": 9347,
+      "startupFailures": 1,
+      "ramBytes": null,
+      "stagesNotRun": [
+        "JSON",
+        "Portuguese extraction",
+        "tool translation",
+        "120-case corpus"
+      ],
+      "error": "25h⠦ ⠦ ⠇ ⠇ ⠋ ⠙ ⠹ ⠼ ⠴ ⠴ ⠧ ⠇ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠼ ⠴ ⠧ ⠧ ⠏ ⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠦ ⠧ ⠏ ⠋ ⠙ ⠙ ⠹ ⠼ ⠴ ⠦ ⠧ ⠇ ⠇ ⠏ ⠙ ⠹ ⠹ ⠼ ⠼ ⠦ ⠧ ⠇ ⠇ ⠏ ⠙ ⠙ Error: 500 Internal Server Error: llama-server startup failed after projector CPU offload retry: llama-server reported out-of-memory during startup: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\nerror: failed to allocate buffer, size =     0.02 MiB\n"
+    }
+  ],
+  "cpuRetry": [
+    {
+      "stage": "sentinel",
+      "success": false,
+      "error": "{\"error\":\"llama-server reported out-of-memory during startup: error: failed to create command queue\\nerror: failed to allocate context\\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\\nerror: failed to create command queue\\nerror: failed to allocate context\"}",
+      "model": "qwen3:0.6b",
+      "cpuOnlyRequested": true,
+      "latencyMs": 2004
+    }
+  ],
+  "winner": null,
+  "operationalMode": "DETERMINISTIC_PRIMARY_LOCAL_MODEL_DISABLED",
+  "qualification": "No installed model passed VIGIA_OK. Weight presence is not inference proof. CPU-only was requested but actual backend CPU-only operation was not verified."
+}

@@ -1,0 +1,60 @@
+{
+  "at": "2026-09-12T16:25:32.971Z",
+  "entities": [
+    {
+      "id": "entity:91da077eb00c2d171a4fb9cb",
+      "canonicalName": "GNR - Posto Territorial de Vila de Rei",
+      "externalIds": [
+        "osm:way:1114866257"
+      ]
+    },
+    {
+      "id": "entity:c1ecae98ef547abf95b160a0",
+      "canonicalName": "GNR - Posto Territorial de Vila de Rei",
+      "externalIds": [
+        "osm:node:6452213258"
+      ]
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job:9421f9087c9c984adc08f625ff156df0e3f1b20f1b97f669b12662b27ef04a76",
+      "type": "ENRICH_FACILITY",
+      "dueAt": "2026-09-12T16:25:10.223Z",
+      "state": "PENDING",
+      "payload": {
+        "reason": "NEAR_MONITORED_INCIDENT",
+        "missing": [
+          "address.street",
+          "contact.phone",
+          "authority",
+          "contact.website"
+        ],
+        "distanceKm": 4.60423765137,
+        "incidentId": "incident:PT-2026-03CFDC147C"
+      },
+      "subject": "entity:91da077eb00c2d171a4fb9cb",
+      "attempts": 0,
+      "priority": 70
+    },
+    {
+      "id": "job:d5eb074209ab03946dc2373b98098d2422ee89810732837ef9cdf4ea201da815",
+      "type": "ENRICH_FACILITY",
+      "dueAt": "2026-09-12T16:25:10.223Z",
+      "state": "PENDING",
+      "payload": {
+        "reason": "NEAR_MONITORED_INCIDENT",
+        "missing": [
+          "contact.phone",
+          "authority",
+          "contact.website"
+        ],
+        "distanceKm": 4.61108769266,
+        "incidentId": "incident:PT-2026-03CFDC147C"
+      },
+      "subject": "entity:c1ecae98ef547abf95b160a0",
+      "attempts": 0,
+      "priority": 65
+    }
+  ]
+}

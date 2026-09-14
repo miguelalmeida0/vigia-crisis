@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "vigia.realized-decision-outcomes.v1",
+  "generatedAt": "2026-08-25T14:02:20.533Z",
+  "episodes": 100,
+  "acquisitionOpportunitiesWithLaterObservableResults": 100,
+  "adjudicableOutcomes": 100,
+  "metrics": {
+    "examples": 100,
+    "unlockPrecision": 0.5,
+    "unlockRecall": 1,
+    "hypothesisSeparationAgreement": 1,
+    "evidenceDebtClosureAgreement": 1,
+    "providerSuccessCalibration": 1,
+    "meanAbsoluteLatencyErrorMs": null,
+    "meanAbsoluteByteError": null,
+    "nullOutcomeRate": 0
+  },
+  "nullOutcomesRetained": true,
+  "automaticDoctrineMutation": false,
+  "replay": {
+    "fingerprint": "realized-decision-outcome-replay:sha256:b843d58d3cb76c453e32b7c3561727ff24544b29fbab9b47cd8116ea996dbca4",
+    "verified": true
+  },
+  "sourceFingerprint": "historical-shadow-decision-memory:sha256:036b309068f1205c7877903e6d6ce77e3140b51d0609b8179db65e3dfe592025",
+  "passed": true,
+  "fingerprint": "realized-decision-outcomes:sha256:8a3ba55d7e28a503b4853ac91dd37bdeb925c0f73232958a0e8baed52fd046c1"
+}

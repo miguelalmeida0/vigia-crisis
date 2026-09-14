@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "vigia.release-rollback.v1",
+  "action": "rollback",
+  "releaseId": null,
+  "canary": {
+    "trafficPercent": 5,
+    "observationMinutes": 15,
+    "minimumRequests": 100,
+    "promotionRequires": [
+      "all error budgets within budget",
+      "zero new HIGH/MEDIUM security findings",
+      "zero schema/replay drift",
+      "health checks pass"
+    ],
+    "automaticRollbackOn": [
+      "error budget exhausted",
+      "health failure",
+      "schema drift",
+      "replay fingerprint mismatch"
+    ]
+  },
+  "uncontrolledBackgroundProcesses": false,
+  "state": "BLOCKED_RELEASE_CONTROL_CONFIGURATION_REQUIRED",
+  "endpointConfigured": false,
+  "credential": "ABSENT",
+  "passed": false,
+  "fingerprint": "release-rollback:sha256:c40c18d787b1a5505aafeb73997d5944c2e9d6dcd53bb37c708908f4ff587a6a"
+}

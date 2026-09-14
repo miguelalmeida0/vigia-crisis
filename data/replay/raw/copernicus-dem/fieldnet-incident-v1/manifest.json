@@ -1,0 +1,25 @@
+{
+  "provider": "Copernicus DEM GLO-30 via Copernicus DEM public object storage",
+  "product": "Copernicus_DSM_COG_10_N37_00_W007_00_DEM",
+  "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N37_00_W007_00_DEM/Copernicus_DSM_COG_10_N37_00_W007_00_DEM.tif",
+  "rawSha256": "sha256:8c3c018571e36e42381c6250ea4a2258c817b887c73456a00f5f4d6f0c51cbf8",
+  "rawByteLength": 45484529,
+  "etag": "\"e761902e753894f7d7b5028db2d4b6fc\"",
+  "lastModified": "Mon, 09 May 2022 14:19:33 GMT",
+  "rawArchivePath": "data/replay/raw/copernicus-dem/fieldnet-incident-v1/Copernicus_DSM_COG_10_N37_00_W007_00_DEM.tif",
+  "bbox": [
+    -6.60769638157765,
+    37.46592925194872,
+    -6.426437164291098,
+    37.60965903994729
+  ],
+  "derivedGrid": {
+    "width": 80,
+    "height": 80,
+    "statistics": {
+      "minElevationM": 46,
+      "maxElevationM": 505,
+      "meanElevationM": 262
+    }
+  }
+}

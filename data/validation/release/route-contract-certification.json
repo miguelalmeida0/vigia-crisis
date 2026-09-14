@@ -1,0 +1,383 @@
+{
+  "schemaVersion": "vigia.route-certification.v1",
+  "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+  "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+  "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+  "certifiedRuntimeReleaseStatementHash": "sha256:abb4769115fc41d9be3487db305fc533d1abb34fc6a608940549cfb13858639a",
+  "targets": {
+    "central": "http://127.0.0.1:4177",
+    "fieldNode": "http://127.0.0.1:4188"
+  },
+  "startedAt": "2026-08-25T15:03:40.128Z",
+  "completedAt": "2026-08-25T15:03:42.291Z",
+  "state": "PASS",
+  "certificationIncident": {
+    "incidentId": "CSX-20260814174314-PT-2026-5C3C5DE25E",
+    "source": "controlled-exercise-proof"
+  },
+  "routes": [
+    {
+      "id": "release",
+      "product": "RELEASE",
+      "path": "/api/v10/release",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 3.399,
+      "schemaVersion": "vigia.release-identity.v1"
+    },
+    {
+      "id": "health",
+      "product": "RELEASE",
+      "path": "/api/v10/health",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 19.598,
+      "schemaVersion": null
+    },
+    {
+      "id": "session",
+      "product": "SESSION",
+      "path": "/api/v10/session",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 25.347,
+      "schemaVersion": null
+    },
+    {
+      "id": "command",
+      "product": "COMMAND",
+      "path": "/api/v10/workspaces/command",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 116.355,
+      "schemaVersion": null
+    },
+    {
+      "id": "events",
+      "product": "INCIDENT",
+      "path": "/api/v10/events",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 11.122,
+      "schemaVersion": null
+    },
+    {
+      "id": "territory",
+      "product": "COMMAND",
+      "path": "/api/v10/territory",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 32.057,
+      "schemaVersion": null
+    },
+    {
+      "id": "prevention",
+      "product": "PREVENTION",
+      "path": "/api/v10/prevention/findings",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 40.392,
+      "schemaVersion": null
+    },
+    {
+      "id": "bootstrap",
+      "product": "PREVENTION",
+      "path": "/api/v2/bootstrap",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 98.755,
+      "schemaVersion": null
+    },
+    {
+      "id": "benchmark",
+      "product": "VALIDATION",
+      "path": "/api/v10/detection/benchmark",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 89.681,
+      "schemaVersion": null
+    },
+    {
+      "id": "measurement-debt",
+      "product": "MEASUREMENT_DEBT",
+      "path": "/api/v10/validation/measurement-debt",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 15.634,
+      "schemaVersion": "vigia.measurement-debt-workspace.v2"
+    },
+    {
+      "id": "prevention-science",
+      "product": "VALIDATION",
+      "path": "/api/v10/validation/prevention-machine-evidence",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 11.49,
+      "schemaVersion": "vigia.prevention-machine-evidence.v1"
+    },
+    {
+      "id": "measurement-campaigns",
+      "product": "VALIDATION",
+      "path": "/api/v10/validation/measurement-campaigns",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 12.85,
+      "schemaVersion": "vigia.measurement-campaigns.v1"
+    },
+    {
+      "id": "false-negative-taxonomy",
+      "product": "VALIDATION",
+      "path": "/api/v10/validation/false-negative-taxonomy",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 9.376,
+      "schemaVersion": "vigia.false-negative-taxonomy.v1"
+    },
+    {
+      "id": "live-campaign",
+      "product": "OPERATIONS",
+      "path": "/api/v10/campaign/live-shadow/scorecards",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 31.485,
+      "schemaVersion": "vigia.live-shadow-scorecards.v2"
+    },
+    {
+      "id": "pilot",
+      "product": "VALIDATION",
+      "path": "/api/v10/pilot/report",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 446.289,
+      "schemaVersion": "vigia.governed-pilot-report.v1"
+    },
+    {
+      "id": "alerts",
+      "product": "ALERTS",
+      "path": "/api/v10/alerts",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 19.36,
+      "schemaVersion": null
+    },
+    {
+      "id": "operations-status",
+      "product": "OPERATIONS",
+      "path": "/api/v10/operations/status",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 156.892,
+      "schemaVersion": "vigia.live-operations-status.v2"
+    },
+    {
+      "id": "operations-metrics",
+      "product": "OPERATIONS",
+      "path": "/api/v10/operations/metrics",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 72.85,
+      "schemaVersion": null
+    },
+    {
+      "id": "work",
+      "product": "WORK",
+      "path": "/api/v10/evidence-needs",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 17.485,
+      "schemaVersion": null
+    },
+    {
+      "id": "fieldnet-central",
+      "product": "FIELDNET",
+      "path": "/api/v10/fieldnet/status",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 8.975,
+      "schemaVersion": null
+    },
+    {
+      "id": "command-survival",
+      "product": "COMMAND",
+      "path": "/api/v10/incident-command/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 78.447,
+      "schemaVersion": "vigia.incident-command-state.v1"
+    },
+    {
+      "id": "intelligence-inbox",
+      "product": "INTELLIGENCE",
+      "path": "/api/v10/intelligence/inbox",
+      "method": "GET",
+      "family": "central",
+      "status": 200,
+      "durationMs": 78.701,
+      "schemaVersion": "vigia.intelligence-inbox.v1"
+    },
+    {
+      "id": "prevention-detail",
+      "product": "PREVENTION",
+      "family": "central-supplementary",
+      "path": "/api/v10/prevention/findings/fuel-continuity:aef30d56c1041a07846d6f592430",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 26.635,
+      "schemaVersion": "vigia.prevention-consensus-assessment.v4"
+    },
+    {
+      "id": "prevention-consensus",
+      "product": "VALIDATION",
+      "family": "central-supplementary",
+      "path": "/api/v10/validation/prevention-consensus/fuel-continuity:aef30d56c1041a07846d6f592430",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 8.168,
+      "schemaVersion": "vigia.prevention-consensus-assessment.v4"
+    },
+    {
+      "id": "fieldnet-release",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/release",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 2.095,
+      "schemaVersion": "vigia.release-identity.v1"
+    },
+    {
+      "id": "fieldnet-health",
+      "product": "FIELDNET",
+      "path": "/health",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 3.902,
+      "schemaVersion": null
+    },
+    {
+      "id": "fieldnet-state",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/state",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 5.896,
+      "schemaVersion": "vigia.fieldnet-node-state.v1"
+    },
+    {
+      "id": "fieldnet-incidents",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 5.623,
+      "schemaVersion": null
+    },
+    {
+      "id": "fieldnet-incident",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 3.209,
+      "schemaVersion": "vigia.field-incident-package.v1"
+    },
+    {
+      "id": "fieldnet-map",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E/offline-map",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 2.406,
+      "schemaVersion": "vigia.fieldnet-offline-map.v1"
+    },
+    {
+      "id": "fieldnet-truth",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E/truth-graph",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 1.913,
+      "schemaVersion": "vigia.field-truth-graph.v1"
+    },
+    {
+      "id": "fieldnet-replay",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E/replay",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 8.467,
+      "schemaVersion": "vigia.fieldnet-disconnection-replay.v2"
+    },
+    {
+      "id": "fieldnet-debt",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E/evidence-debt",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 1.213,
+      "schemaVersion": null
+    },
+    {
+      "id": "fieldnet-sensors",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/sensor-gateway",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 1.384,
+      "schemaVersion": "vigia.field-sensor-gateway-status.v1"
+    },
+    {
+      "id": "fieldnet-command-survival",
+      "product": "FIELDNET",
+      "path": "/api/fieldnet/incidents/CSX-20260814174314-PT-2026-5C3C5DE25E/command-survival",
+      "method": "GET",
+      "family": "fieldNode",
+      "status": 200,
+      "durationMs": 31.438,
+      "schemaVersion": "vigia.field-command-survival-state.v1"
+    }
+  ],
+  "requiredRouteFamilies": {
+    "central": {
+      "required": 22,
+      "passed": 22
+    },
+    "fieldNode": {
+      "required": 11,
+      "passed": 11
+    }
+  },
+  "required": 35,
+  "passed": 35,
+  "maximumDurationMs": 446.289
+}

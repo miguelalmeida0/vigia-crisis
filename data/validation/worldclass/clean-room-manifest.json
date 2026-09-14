@@ -1,0 +1,210 @@
+{
+  "schemaVersion": "vigia.clean-room-manifest.v1",
+  "releaseIdentity": {
+    "releaseId": "vigia-decision-os-bd82bd7ff251e7cf",
+    "commit": "124ac703d2ffcb2569db64b8db1955ce2a2363a4",
+    "branch": "feat/vigia-intelligence-foundation",
+    "codeStateHash": "sha256:bd82bd7ff251e7cfb4e5040e55ab26baaf326cc5d59cc9cae8f6db740e9f792b",
+    "sourceEntries": 1032
+  },
+  "dockerImageDigests": [],
+  "sbom": {
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.5",
+    "version": 1,
+    "metadata": {
+      "component": {
+        "type": "application",
+        "name": "vigia-physical-intelligence-core",
+        "version": "10.0.0"
+      }
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "fast-check",
+        "version": "4.9.0",
+        "purl": "pkg:npm/fast-check@4.9.0"
+      },
+      {
+        "type": "library",
+        "name": "pg",
+        "version": "8.23.0",
+        "purl": "pkg:npm/pg@8.23.0"
+      },
+      {
+        "type": "library",
+        "name": "satellite.js",
+        "version": "7.1.0",
+        "purl": "pkg:npm/satellite.js@7.1.0"
+      }
+    ],
+    "serialNumber": "urn:uuid:92534f1f23b87f6b4d6ee8fed541ff43"
+  },
+  "migrations": [
+    {
+      "version": "001",
+      "name": "physical-truth",
+      "checksum": "sha256:dcbe173ce75accb05c9efe6e8258481255d1ef6bfe45b9e9ba9cdc1f33df9f6a"
+    },
+    {
+      "version": "002",
+      "name": "operational-work",
+      "checksum": "sha256:46c779506692f86f1b59ae3033c00e328f9c7f87e61442cd71686fc97bf4f2ff"
+    },
+    {
+      "version": "003",
+      "name": "category-reset",
+      "checksum": "sha256:4a5bb8735ce14a403b7e7da772a751e0ca77de9bad169c24b95ee4b9a8d6f68a"
+    },
+    {
+      "version": "004",
+      "name": "flagship-productization",
+      "checksum": "sha256:2da0d877e9b61f3a1dededf69cbf1a447cdc8f9e5508be6bd4f6f78b9a1d2187"
+    },
+    {
+      "version": "005",
+      "name": "prevention-review-lab",
+      "checksum": "sha256:742f931ed65503d09d98c7afed9819dbd16664ae5bd0d6cac0645dda1ec74db2"
+    },
+    {
+      "version": "006",
+      "name": "detection-proof",
+      "checksum": "sha256:ed2ff6e00a9db73bcf3ca24ae5368efaa22948979f82a2536ece195da952a257"
+    },
+    {
+      "version": "007",
+      "name": "prospective-causality",
+      "checksum": "sha256:1da09ed38ce2d2e4eb59e27c513074f3b1474605622b9eb62d262a8d7d336b77"
+    },
+    {
+      "version": "008",
+      "name": "live-operations",
+      "checksum": "sha256:5975d364dfc19400670242a9c1236c731a8a4dfc989f56738fd894931006a354"
+    },
+    {
+      "version": "009",
+      "name": "operations-recovery",
+      "checksum": "sha256:a1389f4bd5e24de20f2064c0027dfebf52643cb406fa867b41503829a52f6f1b"
+    },
+    {
+      "version": "010",
+      "name": "autonomous-evidence-operations",
+      "checksum": "sha256:202b7fe1cda2e8dd35e88b420243114040f635e1abbfb4e39fdd41949aac0c08"
+    },
+    {
+      "version": "011",
+      "name": "physical-truth-autopilot",
+      "checksum": "sha256:3a0eeee6bde0a9e2cb452be156192b73145715f3bb486974be141951cd59d82b"
+    },
+    {
+      "version": "012",
+      "name": "decision-ledger-autopilot",
+      "checksum": "sha256:d2a3e67486288b06bbd8e89a6f18cac5ae67a3fc3e5229c7b0e5f54c97ec94e5"
+    },
+    {
+      "version": "013",
+      "name": "command-survival",
+      "checksum": "sha256:dcfbb0a3ecd64a07b35b5d4258457bb6578b156184e1d062bccc36b99237a661"
+    },
+    {
+      "version": "014",
+      "name": "command-evidence-envelope",
+      "checksum": "sha256:9a9688568ccf555908d6220a010263d1a606d564c7dcc941e51603b7d132217a"
+    },
+    {
+      "version": "015",
+      "name": "partial-incident-import",
+      "checksum": "sha256:7077b3ac2e017c848bd2dc21e8e1bacf43da37009fc6a88ec3d521e3d4d6c335"
+    },
+    {
+      "version": "016",
+      "name": "security-identity-boundaries",
+      "checksum": "sha256:1862a4c577638f9ed43a1bb025474fe9bd9fdfb5e03e1fdcb35fcba51a9172e5"
+    },
+    {
+      "version": "017",
+      "name": "intelligence-convergence",
+      "checksum": "sha256:2b09d1af75326b807bf251f4d1c4469165fcba17d700453390f1088ef28f627c"
+    }
+  ],
+  "testManifest": {
+    "commands": [
+      "npm run test:intelligence",
+      "npm run test:event-fabric",
+      "npm run test:control-plane",
+      "npm run test:proof-plane",
+      "npm run test:reality-network",
+      "npm run test:forecasting",
+      "npm run test:forecast-corpus",
+      "npm run test:data-foundry",
+      "npm run test:decision-foundry",
+      "npm run test:backend-convergence",
+      "npm run test:worldclass"
+    ]
+  },
+  "propertyTestSeeds": [
+    "vigia-worldclass-0001",
+    "vigia-worldclass-0042",
+    "vigia-worldclass-0100"
+  ],
+  "databaseFixtures": [
+    "scripts/certify_intelligence_postgis.mjs"
+  ],
+  "replayHistories": [
+    {
+      "path": "data/runtime/decision-foundry/replays/2025-AZGCP-000597.json",
+      "sha256": "sha256:21f1ab12b96dd2363fa3cc0e5b6d1dda885f33f4aefc0ce80041ae7d02d92988"
+    },
+    {
+      "path": "data/runtime/decision-foundry/replays/2026-WACOA-260140.json",
+      "sha256": "sha256:3d6545ce9c786fe61d5df9519d785b6c96a67bb926a6cd929a6ac2abdd621609"
+    }
+  ],
+  "expectedFingerprints": {
+    "doctrine": "doctrine-worldclass-coverage:sha256:6ea4931e045798520b82b2e3ed3c2f6bbc454941cf78ad2ce7cb988bcb7b30f5",
+    "partner": null
+  },
+  "benchmarks": [
+    "npm run benchmark:backend-convergence",
+    "npm run corpus:benchmark",
+    "npm run benchmark:data-foundry"
+  ],
+  "threatModel": {
+    "assets": [
+      "evidence chain",
+      "decision authority",
+      "tenant data",
+      "release identity"
+    ],
+    "threats": [
+      "cross-tenant access",
+      "rights bypass",
+      "stale authority",
+      "split brain",
+      "supply-chain substitution",
+      "replay drift"
+    ],
+    "trustBoundaries": [
+      "public provider",
+      "partner endpoint",
+      "API",
+      "query service",
+      "Postgres",
+      "release controller",
+      "KMS/HSM"
+    ]
+  },
+  "rubric": {
+    "critical": [
+      "all focused tests pass",
+      "PostGIS head and checksums reproduce",
+      "replays match",
+      "compartment adversarial suite passes",
+      "no unresolved canonical HIGH/MEDIUM",
+      "reviewer is independent"
+    ],
+    "passRule": "Every critical condition must pass; one failure blocks certification."
+  },
+  "fingerprint": "clean-room-manifest:sha256:5a5e6d17d269d5b3d376b42c5c6c4dc5dd960771ca22599184084e6f32c6f085"
+}

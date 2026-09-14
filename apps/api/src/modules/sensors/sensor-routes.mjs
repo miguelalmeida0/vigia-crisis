@@ -1,0 +1,11 @@
+import { readJsonBody } from '../../http/body.mjs';
+import { json } from '../../http/responses.mjs';
+import { signedIngressAdmission } from '../../http/signed-ingress-admission.mjs';
+import { assertGlobalIncidentScope, assertIncidentScope } from '../../../../../packages/domain/src/authorization.mjs';
+function auth(req){const bearer=String(req.headers.authorization??''),encoded=String(req.headers['x-vigia-proof-bundle']??'');let proofBundle=null;if(encoded&&encoded.length<=32_768)try{proofBundle=JSON.parse(Buffer.from(encoded,'base64url').toString('utf8'));}catch{}return{token:bearer.toLowerCase().startsWith('bearer ')?bearer.slice(7).trim():String(req.headers['x-vigia-sensor-token']??''),timestamp:String(req.headers['x-vigia-sensor-timestamp']??''),nonce:String(req.headers['x-vigia-sensor-nonce']??''),signature:String(req.headers['x-vigia-sensor-signature']??''),proofBundle};}
+function clientAbort(req,res){const controller=new AbortController(),abort=()=>{if(!res.writableEnded)controller.abort(new Error('client_disconnected'));};req.once?.('aborted',abort);res.once?.('close',abort);return controller.signal;}
+export function registerSensorRoutes(router,{sensorIngestService,sensorRegistryService,sensorTaskService}){
+  const status=async({res,context})=>{assertGlobalIncidentScope(context.actor);json(res,200,{...sensorIngestService.status(),registry:sensorRegistryService.snapshot()});}; const registry=async({res,context})=>{assertGlobalIncidentScope(context.actor);json(res,200,sensorRegistryService.snapshot());}; const ingest=async({req,res})=>signedIngressAdmission.run(req,async()=>json(res,202,await sensorIngestService.ingest(auth(req),await readJsonBody(req,{timeoutMs:10_000}))));
+  for(const prefix of ['/api/v8','/api/v9','/api/v10']){router.get(`${prefix}/sensors/status`,status);router.get(`${prefix}/sensors/registry`,registry);router.post(`${prefix}/sensors/observations`,ingest);}
+  for(const prefix of ['/api/v9','/api/v10'])router.post(`${prefix}/sensors/:id/task`,async({req,res,params,context})=>{const input=await readJsonBody(req);assertGlobalIncidentScope(context.actor);assertIncidentScope(context.actor,input.eventId);json(res,202,await sensorTaskService.task(params.id,input,clientAbort(req,res)));});
+}

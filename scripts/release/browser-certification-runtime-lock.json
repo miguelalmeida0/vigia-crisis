@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "vigia.browser-certification-runtime.v1",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "pythonVersion": "3.12",
+  "pythonExecutable": {
+    "sha256": "sha256:f64cf6322e4f20cd0458aab89c0d332895817bb8f243b943109b6a957582fd5d",
+    "bytes": 18041104,
+    "mode": "0755"
+  },
+  "pyvenvConfig": {
+    "sha256": "sha256:e0250fa4b879b8b455680aab1f8fa1c745031ebbc816ec09a0d9857febd32274",
+    "bytes": 176
+  },
+  "standardLibrary": {
+    "entryCount": 747,
+    "digest": "sha256:c36ae56b598f15f91952305a4626e16272d208469c4119a0c41090219ad95839"
+  },
+  "dependencies": {
+    "entryCount": 529,
+    "digest": "sha256:41adaf315d204aa5ade56d86aea5caf9680377a00008401f6508229ed86e2c37",
+    "roots": [
+      "playwright",
+      "playwright-1.54.0.dist-info",
+      "pyee",
+      "pyee-13.0.1.dist-info",
+      "greenlet",
+      "greenlet-3.5.4.dist-info",
+      "typing_extensions.py",
+      "typing_extensions-4.16.0.dist-info"
+    ]
+  },
+  "startupHooks": {
+    "names": [
+      "_virtualenv.pth"
+    ],
+    "entryCount": 1,
+    "digest": "sha256:b4d31ad988cb78268837be657a476315bc4f76646a64e7311617f943b9f4c3e2"
+  },
+  "runtimeDigest": "sha256:2d5259eeaaed6ce205fd8e107a691efa49a10dd9119124a9c5f7a04a4f1df320"
+}

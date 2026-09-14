@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080b09">
+  <link rel="manifest" href="/field/manifest.webmanifest"><link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%23080b09'/><path d='M15 43V27m11 16V17m11 26V23m11 20V12' stroke='%23ede6d5' stroke-width='5'/><circle cx='48' cy='12' r='4' fill='%23e1aa43'/></svg>"><link rel="stylesheet" href="/field/field.css"><title>VIGIA Field</title>
+</head>
+<body>
+  <header><a href="/">← VIGIA</a><div><strong>FIELD CAPTURE</strong><span data-network>Checking network</span></div><nav><button type="button" data-theme-toggle>Daylight</button><button type="button" data-sync>Sync 0</button></nav></header>
+  <main><section class="hero"><span>ATTRIBUTABLE GROUND TRUTH</span><h1>Capture what the territory actually looks like.</h1><p>GPS, time, observer, note and evidence remain queued when connectivity disappears.</p></section><section class="assignments" data-assignments><p>Loading assignments…</p></section></main>
+  <dialog data-dialog><form data-form><button type="button" data-close aria-label="Close">×</button><span>FIELD EVIDENCE</span><h2 data-title>Capture evidence</h2><label>GPS<input name="gps" readonly required></label><label>Accuracy<input name="accuracy" readonly required></label><label>Photo<input name="photo" type="file" accept="image/*" capture="environment" required></label><label>Observation note<textarea name="note" required></textarea></label><label>Checklist observations<textarea name="observations" required placeholder="One observation per line"></textarea></label><footer><button type="button" data-close>Cancel</button><button type="submit">Save evidence</button></footer></form></dialog>
+  <div class="toast" data-toast hidden></div><script type="module" src="/field/field.js"></script>
+</body>
+</html>

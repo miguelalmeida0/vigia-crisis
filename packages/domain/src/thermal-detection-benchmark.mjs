@@ -1,0 +1,43 @@
+const ratio=(top,bottom)=>bottom?Number((top/bottom).toFixed(4)):null;
+const median=(values)=>{const rows=values.filter(Number.isFinite).sort((a,b)=>a-b);if(!rows.length)return null;const middle=Math.floor(rows.length/2);return rows.length%2?rows[middle]:Number(((rows[middle-1]+rows[middle])/2).toFixed(2));};
+const round=(value,digits=4)=>Number.isFinite(value)?Number(value.toFixed(digits)):null;
+function wilson(successes,total,z=1.96){if(!total)return null;const p=successes/total,z2=z*z,denominator=1+z2/total,centre=(p+z2/(2*total))/denominator,margin=z*Math.sqrt((p*(1-p)+z2/(4*total))/total)/denominator;return{level:.95,low:round(Math.max(0,centre-margin)),high:round(Math.min(1,centre+margin)),method:'Wilson score interval'};}
+
+function confusion(results){
+  const positives=results.filter((item)=>item.referenceLabel==='FIRE_POSITIVE'),negatives=results.filter((item)=>item.referenceLabel==='NON_WILDFIRE_NEGATIVE');
+  const tp=positives.filter((item)=>item.predictedPositive).length,fn=positives.length-tp,fp=negatives.filter((item)=>item.predictedPositive).length,tn=negatives.length-fp;
+  const precision=ratio(tp,tp+fp),recall=ratio(tp,tp+fn),specificity=ratio(tn,tn+fp),falsePositiveRate=ratio(fp,fp+tn),negativePredictiveValue=ratio(tn,tn+fn);
+  const denominator=Math.sqrt((tp+fp)*(tp+fn)*(tn+fp)*(tn+fn)),mcc=denominator?round((tp*tn-fp*fn)/denominator):null;
+  return{cases:positives.length+negatives.length,positiveCases:positives.length,negativeCases:negatives.length,classComposition:{positiveFraction:ratio(positives.length,positives.length+negatives.length),negativeFraction:ratio(negatives.length,positives.length+negatives.length)},truePositives:tp,falsePositives:fp,trueNegatives:tn,falseNegatives:fn,precision,recall,specificity,falsePositiveRate,negativePredictiveValue,f1:precision===null||recall===null||precision+recall===0?null:round(2*precision*recall/(precision+recall)),balancedAccuracy:recall===null||specificity===null?null:round((recall+specificity)/2),matthewsCorrelationCoefficient:mcc,confidenceIntervals:{precision:wilson(tp,tp+fp),recall:wilson(tp,tp+fn),specificity:wilson(tn,tn+fp),falsePositiveRate:wilson(fp,fp+tn),negativePredictiveValue:wilson(tn,tn+fn)}};
+}
+
+function curves(eligible){
+  const scored=eligible.filter((item)=>Number.isFinite(Number(item.score))&&['FIRE_POSITIVE','NON_WILDFIRE_NEGATIVE'].includes(item.referenceLabel));
+  if(!scored.length)return{precisionRecall:[],thresholdCoverage:[],qualification:'UNMEASURED_NO_NUMERIC_SCREENING_SCORE'};
+  const thresholds=[0,.3,.4,.48,.55,.6,.65,.72,.8,.9,1];
+  const points=thresholds.map((threshold)=>{const rows=scored.map((item)=>({...item,predictedPositive:Number(item.score)>=threshold})),metrics=confusion(rows);return{threshold:round(threshold,3),precision:metrics.precision,recall:metrics.recall,specificity:metrics.specificity,falsePositiveRate:metrics.falsePositiveRate,balancedAccuracy:metrics.balancedAccuracy,mcc:metrics.matthewsCorrelationCoefficient,coverage:ratio(rows.length,eligible.length)};});
+  return{precisionRecall:points.map(({threshold,precision,recall})=>({threshold,precision,recall})),thresholdCoverage:points,qualification:'The screening score is uncalibrated and is not a fire probability. Curves diagnose ranking behavior only.'};
+}
+
+function areaTimeRate(eligible){
+  const negatives=eligible.filter((item)=>item.referenceLabel==='NON_WILDFIRE_NEGATIVE'),exposure=negatives.reduce((sum,item)=>sum+Number(item.areaTime?.areaKm2??0)*Number(item.areaTime?.durationDays??0),0),falseAlerts=negatives.filter((item)=>item.predictedPositive).length;
+  if(!exposure)return{value:null,basis:'UNMEASURED_NO_NEGATIVE_AREA_TIME_EXPOSURE'};
+  return{value:round(falseAlerts/exposure*1_000),unit:'false alerts per 1,000 km²-day',falseAlerts,negativeExposureKm2Days:round(exposure,2),basis:'STRATIFIED_REFERENCE_WINDOWS_NOT_POPULATION_WEIGHTED_TERRITORIAL_RATE'};
+}
+
+function fireSizeStrata(eligible){
+  const strata=[['lt_1_ha',0,1],['1_to_10_ha',1,10],['10_to_100_ha',10,100],['100_to_500_ha',100,500],['gte_500_ha',500,Infinity]];
+  return Object.fromEntries(strata.map(([name,minimum,maximum])=>{
+    const rows=eligible.filter((item)=>item.referenceLabel==='FIRE_POSITIVE'&&Number(item.burnedAreaHa)>=minimum&&Number(item.burnedAreaHa)<maximum);
+    return[name,{...confusion(rows),qualification:'Conditional on a matched VIIRS observation; cases without proven observation opportunity are excluded, not false negatives.'}];
+  }));
+}
+
+export function thermalDetectionMetrics(results=[]){
+  const labelled=results.filter((item)=>['FIRE_POSITIVE','NON_WILDFIRE_NEGATIVE'].includes(item.referenceLabel)),eligible=labelled.filter((item)=>item.evaluationEligibility?.eligible===true),allPositives=results.filter((item)=>item.referenceLabel==='FIRE_POSITIVE'),eligiblePositives=eligible.filter((item)=>item.referenceLabel==='FIRE_POSITIVE'),base=confusion(eligible),abstentions=eligible.filter((item)=>String(item.decision).startsWith('ABSTAIN')).length,areaRate=areaTimeRate(eligible);
+  return{eligibleCases:eligible.length,excludedCases:labelled.length-eligible.length,unlabelledCases:results.filter((item)=>item.referenceLabel==='UNLABELLED').length,labelledCases:labelled.length,labelCoverage:ratio(labelled.length,results.length),evaluationCoverage:ratio(eligible.length,results.length),...base,abstentions,abstentionRate:ratio(abstentions,eligible.length),suppressedProviderNegatives:eligible.filter((item)=>item.decision==='SUPPRESS_PROVIDER_NON_WILDFIRE').length,referencePositiveCases:allPositives.length,positiveCasesWithMatchedObservation:eligiblePositives.length,positiveCasesWithoutProvenObservationOpportunity:allPositives.length-eligiblePositives.length,matchedObservationYield:ratio(eligiblePositives.length,allPositives.length),matchedObservationYieldQualification:'This is not sensor recall: annual hotspot archives do not retain a complete VIIRS coverage mask.',detectionCoverage:null,detectionCoverageBasis:'UNMEASURED_NO_COMPLETE_SENSOR_COVERAGE_PRODUCT',observationOpportunityRecall:base.recall,observationOpportunityRecallBasis:'Policy recall among official-fire cases with at least one spatially and temporally matched VIIRS observation.',fireSizeStrata:fireSizeStrata(eligible),medianTimeToFirstPhysicalMinutes:median(eligiblePositives.map((item)=>item.timeToFirstPhysicalMinutes)),medianObservationToReportMinutes:median(eligiblePositives.map((item)=>item.observationToReportMinutes)),falsePositivesPerAreaTime:areaRate.value,falsePositivesPerAreaTimeUnit:areaRate.unit??null,falsePositivesPerAreaTimeExposure:areaRate.negativeExposureKm2Days??null,falsePositivesPerAreaTimeBasis:areaRate.basis,curves:curves(eligible)};
+}
+
+export function thermalDetectionErrors(results=[]){
+  return results.filter((item)=>item.evaluationEligibility?.eligible===true&&item.predictedPositive!==(item.referenceLabel==='FIRE_POSITIVE')).map((item)=>{const failure=item.referenceLabel==='FIRE_POSITIVE'?'FALSE_NEGATIVE':'FALSE_POSITIVE',tags=item.tags??[],flags=item.flags??[];let failureClass='UNKNOWN';if(tags.includes('OFFSHORE_HEAT'))failureClass='OFFSHORE';else if(tags.some((tag)=>['HARD_STATIC_LAND_HEAT','PERSISTENT_STATIC_HEAT','STATIC_OR_INDUSTRIAL_HEAT'].includes(tag)))failureClass='STATIC / INDUSTRIAL HEAT';else if(tags.includes('AGRICULTURAL_FIRE')||tags.includes('AGRICULTURAL_BURN'))failureClass='AGRICULTURAL BURN';else if(tags.includes('SMALL_LT_1_HA'))failureClass='SMALL FIRE';else if(flags.includes('low_frp')||flags.includes('low_sensor_confidence'))failureClass='LOW-SIGNAL FIRE';else if(flags.some((flag)=>String(flag).includes('quality')))failureClass='QUALITY';else if(flags.some((flag)=>String(flag).includes('persistence')))failureClass='TEMPORAL PERSISTENCE';else if(flags.some((flag)=>String(flag).includes('cluster')))failureClass='SPATIAL CLUSTERING';else if(failure==='FALSE_NEGATIVE')failureClass='POLICY THRESHOLD';return{caseId:item.caseId,windowId:item.windowId??item.caseId,evaluationSplit:item.evaluationSplit,source:item.source,coordinate:item.coordinate,geometry:item.geometry??null,areaTime:item.areaTime??null,timeWindow:item.timeWindow,firstObservationAt:item.firstPhysicalAt??item.timeWindow?.start??null,frpMw:item.maxFrpMw,quality:item.sourceQuality,dayNight:item.dayNight??null,decision:item.decision,reason:item.reason,flags,referenceLabel:item.referenceLabel,labelSource:item.labelSource,labelAuthority:item.labelAuthority,referenceEvidence:item.referenceEvidence??null,evidenceProvenance:item.evidenceProvenance??null,referenceQualification:item.referenceQualification??null,tags,burnedAreaHa:item.burnedAreaHa??null,temporalContext:item.temporalContext??null,spatialContext:item.spatialContext??null,failure,failureClass};});
+}

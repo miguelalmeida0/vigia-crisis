@@ -1,0 +1,6 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { performance } from 'node:perf_hooks';
+import { projectIncidentIntelligence } from '../../../packages/domain/src/intelligence/kernel.mjs';
+
+test('normal incident projection remains below the 75 ms local CPU budget',()=>{const now='2026-08-23T12:00:00.000Z',observations=Array.from({length:96},(_,index)=>({id:`obs:${index}`,type:'thermal',sourceFamily:index%2?'viirs':'sentinel3_slstr',independenceGroup:index%2?'viirs':'sentinel3_slstr',at:new Date(Date.parse(now)-index*1000).toISOString(),receivedAt:new Date(Date.parse(now)-index*900).toISOString()})),input={incident:{id:'perf:1',observations,physicalState:{freshness:'current'}},evidenceNeeds:[],evidenceRequests:[],opportunities:[],sourceState:{viirs:{state:'healthy'},sentinel3_slstr:{state:'healthy'}},operatorDecisions:[],generatedAt:now,asOf:now};for(let index=0;index<5;index++)projectIncidentIntelligence(input);const samples=[];for(let index=0;index<50;index++){const started=performance.now();projectIncidentIntelligence(input);samples.push(performance.now()-started);}samples.sort((a,b)=>a-b);const p95=samples[Math.floor(samples.length*.95)],max=samples.at(-1);assert.ok(p95<75,`projection p95 ${p95}ms exceeded 75ms`);assert.ok(max<75,`projection max ${max}ms exceeded 75ms`);});

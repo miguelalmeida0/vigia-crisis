@@ -1,0 +1,15 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { BasemapService } from '../src/modules/basemap/basemap-service.mjs';
+
+const tile={kind:'imagery',z:7,x:61,y:48,clientKey:'operator'};
+const jpeg=Buffer.from([0xff,0xd8,0xff,0xd9]);
+const wait=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+
+test('governed basemap returns exact provenance and deduplicates concurrent viewport requests',async()=>{let calls=0;const service=new BasemapService({fetchImpl:async()=>{calls+=1;await wait(15);return new Response(jpeg,{status:200,headers:{'content-type':'image/jpeg'}});}}),rows=await Promise.all(Array.from({length:12},()=>service.tile(tile)));assert.equal(calls,1);assert(rows.every(item=>item.state==='current'&&item.contentType==='image/jpeg'&&item.provider==='Esri World Imagery'&&item.provenance==='governed:https://server.arcgisonline.com'));});
+
+test('governed basemap admits one bounded high-DPI viewport burst without internal capacity failures',async()=>{let calls=0;const service=new BasemapService({fetchImpl:async()=>{calls+=1;await wait(15);return new Response(jpeg,{status:200,headers:{'content-type':'image/jpeg'}});}}),rows=await Promise.all(Array.from({length:24},(_,index)=>service.tile({...tile,x:100+index})));assert.equal(calls,24);assert.equal(rows.length,24);assert.equal(rows.every(item=>item.state==='current'),true);});
+
+test('governed basemap retains a bounded labelled last-good tile and recovers on the next viewport read',async()=>{let mode='healthy',now=Date.parse('2026-08-23T20:00:00Z');const service=new BasemapService({cacheTtlMs:1,lastGoodTtlMs:10_000,clock:()=>new Date(now),fetchImpl:async()=>{if(mode==='failed')throw new Error('provider_down');return new Response(jpeg,{status:200,headers:{'content-type':'image/jpeg'}});}});const first=await service.tile(tile);await wait(3);mode='failed';now+=1_000;const stale=await service.tile(tile);assert.equal(stale.state,'stale');assert.equal(stale.lastGoodAt,first.lastGoodAt);await wait(3);mode='healthy';now+=1_000;const recovered=await service.tile(tile);assert.equal(recovered.state,'current');assert.notEqual(recovered.acquiredAt,first.acquiredAt);});
+
+test('governed basemap rejects bad status, MIME, oversize and invalid coordinates without false LIVE content',async()=>{for(const [name,fetchImpl,pattern] of [['status',async()=>new Response('down',{status:503}),/basemap_upstream_unavailable/],['mime',async()=>new Response('not image',{status:200,headers:{'content-type':'text/plain'}}),/upstream_not_image/],['oversize',async()=>new Response(Buffer.alloc(3*1024*1024+1),{status:200,headers:{'content-type':'image/jpeg'}}),/upstream_body_too_large/]]){const service=new BasemapService({fetchImpl});await assert.rejects(()=>service.tile(tile),pattern,name);}const service=new BasemapService({fetchImpl:async()=>new Response(jpeg,{headers:{'content-type':'image/jpeg'}})});await assert.rejects(()=>service.tile({...tile,z:20}),/invalid_zoom/);await assert.rejects(()=>service.tile({...tile,x:-1}),/invalid_x/);});

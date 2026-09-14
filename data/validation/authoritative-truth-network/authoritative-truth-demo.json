@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "vigia.authoritative-truth-network-demo.v1",
+  "generatedAt": "2026-08-25T15:54:29.406Z",
+  "steps": {
+    "providerDiscovery": {
+      "passed": true,
+      "providers": 4
+    },
+    "multiIncidentSelection": {
+      "watched": 474
+    },
+    "realOfficialFetch": {
+      "rawObjects": 22,
+      "providerPublications": 265
+    },
+    "immutableRawPersistence": {
+      "uniqueBytes": 63997549,
+      "duplicates": 34
+    },
+    "unchangedVersusChanged": {
+      "unchanged": 834,
+      "newRevisions": 0
+    },
+    "realRevisionDetectedIfAvailable": {
+      "available": false,
+      "fabricated": false
+    },
+    "revisionSemantics": {
+      "classes": []
+    },
+    "authoritativeSequences": {
+      "count": 585
+    },
+    "nearTermLabel": {
+      "created": 0,
+      "fabricated": false
+    },
+    "forecastScoring": {
+      "comparisons": 0
+    },
+    "decisionPacketRecompiled": {
+      "deltas": 0
+    },
+    "decisionDelta": {
+      "count": 0
+    },
+    "exactReplay": {
+      "passed": true,
+      "fingerprint": "authoritative-truth-replay:sha256:e5ccc64fb4c64c116c8fdb5327e0ddbd2c07061322ad2cf679b4368a8dbacf9f"
+    },
+    "fingerprintVerification": {
+      "state": "authoritative-truth-network-state:sha256:463f039d3b33846f8daae083eb125fd964602e7a632b31262169afe3bb3919d9",
+      "replay": "authoritative-truth-replay-state:sha256:bcc7e9aa9b24cd6c9d5f4b7c1c49095a38c03821463af3cc5423acbbc88d24e8"
+    }
+  },
+  "campaign": {
+    "campaignId": "authoritative-truth-20260825153724",
+    "state": "STOPPED_CLEANLY_RESUMABLE",
+    "resumeCommand": "npm run truth-network:watch -- --resume=authoritative-truth-20260825153724 --all-active",
+    "noBackgroundProcess": true,
+    "shutdownClean": true
+  },
+  "qualification": "REAL_UNCHANGED_STATE_AND_RESUMABILITY_DEMONSTRATED_NO_REVISION_FABRICATED",
+  "durationMs": 119659.805,
+  "passed": true,
+  "fingerprint": "authoritative-truth-demo:sha256:f7920afcd0809f00fef68d4aa5f528a26821326ae33d95ae2fee2e5606554922"
+}

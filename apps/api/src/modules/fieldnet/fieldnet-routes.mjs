@@ -1,0 +1,12 @@
+import { readJsonBody } from '../../http/body.mjs';
+import { json } from '../../http/responses.mjs';
+import { signedIngressAdmission } from '../../http/signed-ingress-admission.mjs';
+import { assertCan, assertGlobalIncidentScope, assertIncidentScope } from '../../../../../packages/domain/src/authorization.mjs';
+
+function incompatible(message,details){const error=new Error(message);error.statusCode=409;error.details=details;throw error;}
+export function registerFieldNetRoutes(router, { centralFieldNetService,fieldSensorQualificationService,releaseIdentityService }) {
+  router.get('/api/v10/fieldnet/status', async ({ res,context }) => {assertGlobalIncidentScope(context.actor);json(res, 200, centralFieldNetService.status());});
+  router.get('/api/v10/fieldnet/sensor-production-gate', async ({ res,context }) => {assertGlobalIncidentScope(context.actor);json(res, 200, await fieldSensorQualificationService.status());});
+  router.get('/api/v10/fieldnet/reconciliation/:incidentId', async ({ req,res, params, context }) => {assertCan(context.actor,'read:evidence');assertIncidentScope(context.actor,params.incidentId);const query=new URL(req.url,'http://localhost').searchParams;json(res, 200, centralFieldNetService.snapshot(params.incidentId,{afterCursor:query.get('afterCursor')??0,limit:query.get('limit')??undefined,collectionCursors:{observations:query.get('observationsAfter')??'',tasks:query.get('tasksAfter')??'',acknowledgements:query.get('acknowledgementsAfter')??'',conflicts:query.get('conflictsAfter')??'',nodes:query.get('nodesAfter')??''}}));});
+  router.post('/api/v10/fieldnet/sync', async ({ req, res }) => signedIngressAdmission.run(req,async()=>{const envelope=centralFieldNetService.authorizeSyncEnvelope(req),input=await readJsonBody(req,{limitBytes:1_200_000,timeoutMs:10_000}),principal=centralFieldNetService.authorizeSyncBody(envelope,input);const expected=releaseIdentityService?.identity();if(expected?.releaseId&&(input.release?.releaseId!==expected.releaseId||input.release?.codeStateHash!==expected.codeStateHash||input.release?.fieldNodeContractVersion!==expected.contracts?.fieldNodeContractVersion))incompatible('fieldnet_release_incompatible',{state:'FIELDNET_UPDATE_REQUIRED',expectedReleaseId:expected.releaseId,receivedReleaseId:input.release?.releaseId??null});const body=await centralFieldNetService.sync(input,{signedAt:principal.signedAt});json(res,200,body,centralFieldNetService.signSyncResponse(principal,body));}));
+}

@@ -1,0 +1,324 @@
+{
+  "schemaVersion": "vigia.operator-console-screenshot-evidence.v2",
+  "state": "PASS",
+  "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+  "codeStateHash": "sha256:5fc5ac7d1dffa27bf5a096d4b382aa704a7886c118d0ac3613a8b402ca989b1f",
+  "operationalDataHash": "sha256:42929a0ec72d56bb0f4e8f374ca545f2b3308a00d6e6a9d4c48328bdf8268bac",
+  "certifiedRuntimeReleaseStatementHash": "sha256:bc97454f4249e828873a17acbe3000bb5bf77cdd9d695a0b66606f3edf8dee3a",
+  "frontend": {
+    "id": "operator-console",
+    "path": "apps/operator-console",
+    "origin": "http://127.0.0.1:4190",
+    "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+    "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+  },
+  "capturedAt": "2026-08-25T15:05:42.403Z",
+  "required": 19,
+  "captured": 19,
+  "entries": [
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/01-overview-truth-first.png",
+      "sha256": "sha256:f1d432f35008fcaf28ddc3792df717027ed2e91eeeb741d8ccd587fe81de1331",
+      "bytes": 650104,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/02-detect-first-event.png",
+      "sha256": "sha256:04f96e94a289399f76e4c7ce132b7bb159cfaaf23ffdfea33bde2af014b4184f",
+      "bytes": 511399,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/03-detect-second-event.png",
+      "sha256": "sha256:8be2c317cc52db0bccf75dce3dd71a7c4ea0f3d3ee394b8c47848fc82baf0962",
+      "bytes": 317733,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/04-detect-third-event.png",
+      "sha256": "sha256:8f11f34e1d97ce195aad7a30a2be6ae6df44b60edf280729ea22621397bee295",
+      "bytes": 1090789,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/05-evidence-selected-event.png",
+      "sha256": "sha256:a8cd06e8dd2b9431320694d488e8403fc688f99cc690d1e60d78a2183c8eea49",
+      "bytes": 215881,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/06-handoff-bounded-work.png",
+      "sha256": "sha256:72f789996f5bcc68a2d8113bd16aef1d1bcf05eeb5f7284736479e5b688cdc3e",
+      "bytes": 676077,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/07-prevent-preview-unavailable-no-substitute.png",
+      "sha256": "sha256:c3d90aba74ef7fe6248d109b5adb5c34b82bf065b521db6dac4cd3f1d77b327c",
+      "bytes": 182462,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/08-source-health-semantics.png",
+      "sha256": "sha256:5b946058010dbfac3b28327f00d7ee4d49cb119a2680495285a4891c374694c6",
+      "bytes": 185530,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/09-fieldnet-truth-boundary.png",
+      "sha256": "sha256:2e2451b0da744a21a8fe43fc08f3a2a1b77fedd936bc740f124242664e9eef89",
+      "bytes": 215080,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/10-replay-focus-continuity.png",
+      "sha256": "sha256:a8fed2c23befa06d869cf9d3ff02fca7ccea113b62ae33a175e663bc5337015d",
+      "bytes": 988809,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/11-settings-persistence.png",
+      "sha256": "sha256:d7e5eeccbc5b852b5e05f7b7ebec502dd94c4cbdf22d67282dee70cd84b180fb",
+      "bytes": 158288,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/12-responsive-1600x1000.png",
+      "sha256": "sha256:7d59ab4b3fd26081fa48220a34d941e264e464518a45c86409aa16af1d4c5075",
+      "bytes": 848779,
+      "width": 1600,
+      "height": 1000,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/13-responsive-1440x900.png",
+      "sha256": "sha256:a9ec91b770fa41168990530c90468d2baf4a21303de0d34e4db4174f13458257",
+      "bytes": 589358,
+      "width": 1440,
+      "height": 900,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/14-responsive-1280x800.png",
+      "sha256": "sha256:49a1761c7bd882b60bac34d197e443c3d8a038e0db585a11896eaf42f91f2b5a",
+      "bytes": 418085,
+      "width": 1280,
+      "height": 800,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/15-responsive-1024x768.png",
+      "sha256": "sha256:7d17572bc788b007876886fef3bae7faabda045d7426c960718bd9e5d3e44df3",
+      "bytes": 207627,
+      "width": 1024,
+      "height": 768,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/16-responsive-768x1024.png",
+      "sha256": "sha256:7e3f398803bca47f7cb0a70051a8b7f059f61af909d5f68c486099c5413d5934",
+      "bytes": 220614,
+      "width": 768,
+      "height": 1024,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/17-responsive-430x932.png",
+      "sha256": "sha256:c5d593705767da03f9ffb80fa492321bcd3051993e6a4aa00d8315c12e9525b3",
+      "bytes": 165826,
+      "width": 430,
+      "height": 932,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/18-responsive-390x844.png",
+      "sha256": "sha256:fdb1d471b00f0ff16f44eddd40fa264c90eeb2c31a02fe34be10cc45258c21a9",
+      "bytes": 148669,
+      "width": 390,
+      "height": 844,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    },
+    {
+      "state": "PASS",
+      "path": "data/validation/release/operator-console-screenshots/19-responsive-320x568.png",
+      "sha256": "sha256:09992017252e7c207e2ad901e965abb0abc1a1e8e5d12824fa22c6b54839878a",
+      "bytes": 67252,
+      "width": 320,
+      "height": 568,
+      "releaseId": "vigia-intelligence-fabric-26a6a59bdda54100",
+      "frontend": {
+        "id": "operator-console",
+        "path": "apps/operator-console",
+        "origin": "http://127.0.0.1:4190",
+        "sourceHash": "sha256:4cd4d7b01b1a3b2084885c5f3bed100bc043a25764986c66863252f1a68b3f7f",
+        "assetDigest": "sha256:821414bd36a213e1e3b60f97ca31a20a9c384b0d423118d278e0e8e015fe3a6e"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Agency CAP integration boundary
+
+VIGIA implements one standards-first inbound boundary: an OASIS CAP 1.2 feed. It remains `NOT_CONFIGURED` unless `VIGIA_CAP_PARTNER_URL` names a real HTTPS endpoint. Optional bearer authentication is supplied through `VIGIA_CAP_PARTNER_TOKEN`; it is never persisted or logged. Exact external CAP identifiers must be mapped to canonical VIGIA incident IDs in the JSON object named by `VIGIA_CAP_INCIDENT_BINDINGS_FILE`. The legacy `VIGIA_CAP_FEED_URL` and `VIGIA_CAP_BEARER_TOKEN` names remain accepted for the standalone acceptance harness, but the canonical production names are authoritative.
+
+Configure the three variables, run `npm run integration:cap:acceptance`, and then start the canonical runtime with `npm run local:up`. The source-resolution scheduler now uses this same adapter. It enforces a pinned public HTTPS destination, redirect rejection, time and byte ceilings, MIME and CAP schema validation, XML entity rejection, replay protection, idempotency, bounded polling and backoff, per-alert quarantine, provenance, audit, exact incident binding, and explicit partial failure. CAP remains official report/agency evidence and never becomes a physical source family.
+
+The acceptance command writes a secret-free proof to `.tmp/operational-maturity-75/cap-integration-acceptance.json`. A live-integration score cannot pass until a real endpoint produces an accepted, bound, persisted downstream projection with an operator-visible effect.

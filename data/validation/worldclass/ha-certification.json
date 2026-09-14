@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "vigia.ha-certification-envelope.v1",
+  "requiredTopology": {
+    "regionalPrimary": true,
+    "synchronousCrossZoneStandby": true,
+    "asynchronousCrossRegionRecovery": true,
+    "independentlyDeployableStacks": 3,
+    "trafficRouting": true,
+    "splitBrainFencing": true
+  },
+  "targets": {
+    "zoneRtoSecondsExclusiveMaximum": 60,
+    "zoneRpoAcknowledgedTransactions": 0,
+    "regionRtoSecondsExclusiveMaximum": 300,
+    "regionRpo": "EXPLICITLY_MEASURED",
+    "automatedCycles": 100,
+    "splitBrainWrites": 0,
+    "duplicateActions": 0
+  },
+  "result": null,
+  "error": null,
+  "localEngineeringEvidence": {
+    "passed": true,
+    "fingerprint": "local-ha-certification:sha256:e1ed197528f1319e9df6d2acd734eb85b5eeeb5a70279f36c6f684a787bd8e8d",
+    "evidenceClass": "ENGINEERING_ONLY_LOCAL_DOCKER",
+    "cycles": 100,
+    "splitBrainWrites": 0,
+    "acknowledgedActionsLost": 0
+  },
+  "actualCloudEvidence": false,
+  "singleNodeDockerAccepted": false,
+  "state": "LOCAL_ENGINEERING_PASS_CREDENTIAL_REQUIRED_FOR_REAL_CLOUD",
+  "remainingBlockerClass": "CREDENTIAL_REQUIRED",
+  "passed": false,
+  "fingerprint": "ha-certification:sha256:d31725600998eaf2452ecbe3bad0f0a03faa8605019bf1ce1cb4ae84afba1869"
+}

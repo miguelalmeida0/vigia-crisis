@@ -1,0 +1,1 @@
+throw new Error('workspace_staging_helper_disabled_no_staging_or_commit_authorized');

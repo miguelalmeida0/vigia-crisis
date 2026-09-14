@@ -1,0 +1,898 @@
+{
+  "schemaVersion": "vigia.hard-negative-data-product.v1",
+  "generatedAt": "2026-08-25T13:56:35.076Z",
+  "candidates": 25,
+  "certified": 25,
+  "unknown": 0,
+  "rejected": 0,
+  "categories": {
+    "NEARBY_DISTINCT_INCIDENT": 25
+  },
+  "packets": [
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:6c37304d795259b52d8a4e28220e462399c3e416e59b6a47543ab601568b4f38:CA-AB-2025ABC003",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ABC002",
+      "negativeIncidentId": "CA-AB-2025ABC003",
+      "physicalObservationId": "cwfis-hotspot:6c37304d795259b52d8a4e28220e462399c3e416e59b6a47543ab601568b4f38",
+      "observedAt": "2024-05-13T09:45:00Z",
+      "coordinate": [
+        -120.492,
+        56.5889
+      ],
+      "sourceDistanceKm": 0.4053,
+      "negativeDistanceKm": 21.0494,
+      "separationMarginKm": 20.6441,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:5cfa5e8fe05266986b8087870fa6642a351747804ac1086c51cf819e94b67937"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:e2c182f28a2d33090df583f5db23cdc43c5b4516b5f30124dc13f5e950066efe:CA-AB-2025ABC003",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ABC002",
+      "negativeIncidentId": "CA-AB-2025ABC003",
+      "physicalObservationId": "cwfis-hotspot:e2c182f28a2d33090df583f5db23cdc43c5b4516b5f30124dc13f5e950066efe",
+      "observedAt": "2024-05-13T09:45:00Z",
+      "coordinate": [
+        -120.493,
+        56.5849
+      ],
+      "sourceDistanceKm": 0.5063,
+      "negativeDistanceKm": 20.8439,
+      "separationMarginKm": 20.3376,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:e519e255d2952d7ec37ddbce804ea8b9b3991b0e2349cfeec1714a4a1a5957be"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:b9e156d676338e52040cfb0e41c9e7ed7cb8f564978f7b5fc13ada843d0c4c0e:CA-AB-2025ABC003",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ABC002",
+      "negativeIncidentId": "CA-AB-2025ABC003",
+      "physicalObservationId": "cwfis-hotspot:b9e156d676338e52040cfb0e41c9e7ed7cb8f564978f7b5fc13ada843d0c4c0e",
+      "observedAt": "2024-05-13T10:34:00Z",
+      "coordinate": [
+        -120.497,
+        56.5851
+      ],
+      "sourceDistanceKm": 0.7171,
+      "negativeDistanceKm": 21.0587,
+      "separationMarginKm": 20.3416,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:559193690f8d9ef6411401a05ccc2a5a4addb51ca39de6f8079393034a58c847"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:bfebfa583b1720aa27843c0e75819eeb406a8167333d2729c1e3e19ed0906f87:CA-AB-2025ABC003",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ABC002",
+      "negativeIncidentId": "CA-AB-2025ABC003",
+      "physicalObservationId": "cwfis-hotspot:bfebfa583b1720aa27843c0e75819eeb406a8167333d2729c1e3e19ed0906f87",
+      "observedAt": "2024-05-13T11:25:00Z",
+      "coordinate": [
+        -120.498,
+        56.5885
+      ],
+      "sourceDistanceKm": 0.745,
+      "negativeDistanceKm": 21.3236,
+      "separationMarginKm": 20.5786,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:175755eac2cfd2f2d33f29e1703cec082724601089a462491890250a8a300b32"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:2fc4ae6f205db27ab3b2da48cbf077840716d987a611ec4d7c0b64fb29d41e08:CA-AB-2025ABC003",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ABC002",
+      "negativeIncidentId": "CA-AB-2025ABC003",
+      "physicalObservationId": "cwfis-hotspot:2fc4ae6f205db27ab3b2da48cbf077840716d987a611ec4d7c0b64fb29d41e08",
+      "observedAt": "2024-05-13T19:36:00Z",
+      "coordinate": [
+        -120.491,
+        56.5899
+      ],
+      "sourceDistanceKm": 0.4173,
+      "negativeDistanceKm": 21.0648,
+      "separationMarginKm": 20.6475,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:5b21b2d5c51753fe835018234855efd9f537944f63300258685f04713d2c94ff"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:016c9fc0b9b17ed46dfc07b53bd46473b185cbb678be706309e14c2f3064f041:CA-AB-2024ANP002",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ANP003",
+      "negativeIncidentId": "CA-AB-2024ANP002",
+      "physicalObservationId": "cwfis-hotspot:016c9fc0b9b17ed46dfc07b53bd46473b185cbb678be706309e14c2f3064f041",
+      "observedAt": "2024-07-24T10:34:00Z",
+      "coordinate": [
+        -118.053,
+        52.9459
+      ],
+      "sourceDistanceKm": 2.2018,
+      "negativeDistanceKm": 23.5586,
+      "separationMarginKm": 21.3568,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:eaa89777269c08a062f4fbc68d987e0b0298c8c0b8e226231f67e0b3b3711191"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:174c4a5a0b6a3368e2a7be6850ac28c71d394e19dd7524de5eb26d108fdf2f70:CA-AB-2024ANP002",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ANP003",
+      "negativeIncidentId": "CA-AB-2024ANP002",
+      "physicalObservationId": "cwfis-hotspot:174c4a5a0b6a3368e2a7be6850ac28c71d394e19dd7524de5eb26d108fdf2f70",
+      "observedAt": "2024-07-24T10:34:00Z",
+      "coordinate": [
+        -118.049,
+        52.9365
+      ],
+      "sourceDistanceKm": 3.2793,
+      "negativeDistanceKm": 22.4798,
+      "separationMarginKm": 19.2005,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:b9c210da8d7a944ac756dda477ccce3e956a04c9ecb7c4eadb84f3f01bd59b13"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:1e5f93f121cae86777d4328bf046b00fe10a784f42a697bfd71e7248259e8e22:CA-AB-2024ANP002",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ANP003",
+      "negativeIncidentId": "CA-AB-2024ANP002",
+      "physicalObservationId": "cwfis-hotspot:1e5f93f121cae86777d4328bf046b00fe10a784f42a697bfd71e7248259e8e22",
+      "observedAt": "2024-07-24T10:34:00Z",
+      "coordinate": [
+        -118.058,
+        52.9386
+      ],
+      "sourceDistanceKm": 2.9763,
+      "negativeDistanceKm": 22.8747,
+      "separationMarginKm": 19.8984,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:79cbe8d53b11c03182be8f14d3c5cbcb098117d255b8be802abbac6f27db25d5"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:22dc99695a9d4c0af951b50604ff43166c49bc2d2a22b0135b9c4a00b920006e:CA-AB-2024ANP002",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024ANP003",
+      "negativeIncidentId": "CA-AB-2024ANP002",
+      "physicalObservationId": "cwfis-hotspot:22dc99695a9d4c0af951b50604ff43166c49bc2d2a22b0135b9c4a00b920006e",
+      "observedAt": "2024-07-24T10:34:00Z",
+      "coordinate": [
+        -118.052,
+        52.9328
+      ],
+      "sourceDistanceKm": 3.6513,
+      "negativeDistanceKm": 22.1409,
+      "separationMarginKm": 18.4896,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:c6aa9bc33a18aa08594619bec03c26d1d1816aac09e3c64b965cac6c43c0983e"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:24183f920ea8c3bc63c5d2ce40d9c3c34007b551896d422c9dedced5a8c9749f:CA-AB-2025CWF067",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024CWF057",
+      "negativeIncidentId": "CA-AB-2025CWF067",
+      "physicalObservationId": "cwfis-hotspot:24183f920ea8c3bc63c5d2ce40d9c3c34007b551896d422c9dedced5a8c9749f",
+      "observedAt": "2024-07-24T20:59:00Z",
+      "coordinate": [
+        -114.97,
+        51.5407
+      ],
+      "sourceDistanceKm": 0.0679,
+      "negativeDistanceKm": 7.1997,
+      "separationMarginKm": 7.1318,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:8674e0135c48171ce4d7bc57c52341090bb03dbbf1337bcdd34b00553f345cbe"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:75193b3d3e013e6c1a3e5e9d6dfdf6ee6097b93ef8e2eec15d30feac5fae01f0:CA-AB-2025CWF067",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024CWF057",
+      "negativeIncidentId": "CA-AB-2025CWF067",
+      "physicalObservationId": "cwfis-hotspot:75193b3d3e013e6c1a3e5e9d6dfdf6ee6097b93ef8e2eec15d30feac5fae01f0",
+      "observedAt": "2024-07-24T21:14:00Z",
+      "coordinate": [
+        -114.97,
+        51.5383
+      ],
+      "sourceDistanceKm": 0.305,
+      "negativeDistanceKm": 6.988,
+      "separationMarginKm": 6.683,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:10c65c77f719695cb96aa297bcf31c18346e252db4032f7874afe57b02a7de99"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:65b12963241c2a5de071aafb51bb37888c605b8c6612afa8ec14da5fd0101d63:CA-AB-2025CWF021",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024CWF081",
+      "negativeIncidentId": "CA-AB-2025CWF021",
+      "physicalObservationId": "cwfis-hotspot:65b12963241c2a5de071aafb51bb37888c605b8c6612afa8ec14da5fd0101d63",
+      "observedAt": "2024-09-25T19:53:00Z",
+      "coordinate": [
+        -114.922,
+        51.2627
+      ],
+      "sourceDistanceKm": 0.187,
+      "negativeDistanceKm": 8.9913,
+      "separationMarginKm": 8.8043,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:82d9dbd6f143e7522bd07394319dc1fbef1b8ffb52439c7860cbb8b36f16439d"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:27288a115ab1b1d52514365d20cbbddd7721c445b4a2bcd858c700fb5f46015f:CA-AB-2025EWF030",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF001",
+      "negativeIncidentId": "CA-AB-2025EWF030",
+      "physicalObservationId": "cwfis-hotspot:27288a115ab1b1d52514365d20cbbddd7721c445b4a2bcd858c700fb5f46015f",
+      "observedAt": "2024-01-30T19:59:00Z",
+      "coordinate": [
+        -117.404,
+        53.1416
+      ],
+      "sourceDistanceKm": 0.1808,
+      "negativeDistanceKm": 15.2919,
+      "separationMarginKm": 15.1111,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:8b959457e4a2db8b9c0a660ea87299f06a791a87d68993340780ce56fcee61df"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:5184393d703824f4e31d8d24f490fe60e912381e4a4d7272bdd621dc59728ecf:CA-AB-2025EWF036",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF018",
+      "negativeIncidentId": "CA-AB-2025EWF036",
+      "physicalObservationId": "cwfis-hotspot:5184393d703824f4e31d8d24f490fe60e912381e4a4d7272bdd621dc59728ecf",
+      "observedAt": "2024-04-20T20:08:00Z",
+      "coordinate": [
+        -116.048,
+        53.573
+      ],
+      "sourceDistanceKm": 0.1027,
+      "negativeDistanceKm": 9.2492,
+      "separationMarginKm": 9.1465,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:ad96e5dee098035d60d470a7a85d3f0795a6bcdaaca67974793a77943fe134ff"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:380b8af528cc41fe2cc6807ab78af3de67a6a288e7814583fa692545ac55a04c:CA-AB-2025EWF045",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF024",
+      "negativeIncidentId": "CA-AB-2025EWF045",
+      "physicalObservationId": "cwfis-hotspot:380b8af528cc41fe2cc6807ab78af3de67a6a288e7814583fa692545ac55a04c",
+      "observedAt": "2024-05-04T09:15:00Z",
+      "coordinate": [
+        -116.367,
+        53.5577
+      ],
+      "sourceDistanceKm": 2.3883,
+      "negativeDistanceKm": 17.6253,
+      "separationMarginKm": 15.237,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:59397b5ba60282fe41e95635b77db2a7d47ec50177a75b7545ebd1333d2b65db"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:fb9aa379d97eadac4dfe9402f3232c8ee65bc46c4693dbc0ed7fb09a53258fb1:CA-AB-2024EWF024",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF060",
+      "negativeIncidentId": "CA-AB-2024EWF024",
+      "physicalObservationId": "cwfis-hotspot:fb9aa379d97eadac4dfe9402f3232c8ee65bc46c4693dbc0ed7fb09a53258fb1",
+      "observedAt": "2024-07-01T20:29:00Z",
+      "coordinate": [
+        -116.642,
+        53.5746
+      ],
+      "sourceDistanceKm": 0.0992,
+      "negativeDistanceKm": 20.435,
+      "separationMarginKm": 20.3358,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:c3d3348d187d3e9ff36eebfe466dc42565640242782ae24a213fc2fd0cff02d5"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:bf991bb264bb7da3af104783a8e36d16b86d312dacb0bb7dec7ff28683b22f9c:CA-AB-2024EWF024",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF060",
+      "negativeIncidentId": "CA-AB-2024EWF024",
+      "physicalObservationId": "cwfis-hotspot:bf991bb264bb7da3af104783a8e36d16b86d312dacb0bb7dec7ff28683b22f9c",
+      "observedAt": "2024-07-01T21:46:00Z",
+      "coordinate": [
+        -116.647,
+        53.571
+      ],
+      "sourceDistanceKm": 0.5708,
+      "negativeDistanceKm": 20.7055,
+      "separationMarginKm": 20.1347,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:9b63b36567655e5b30837a76243fb2bafad64888fb432a65716e006290f231ef"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:31f1e42650c78f71045fd231c7ae84ac1b8351f054adf92654ea84a18f612f7a:CA-AB-2024EWF088",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF061",
+      "negativeIncidentId": "CA-AB-2024EWF088",
+      "physicalObservationId": "cwfis-hotspot:31f1e42650c78f71045fd231c7ae84ac1b8351f054adf92654ea84a18f612f7a",
+      "observedAt": "2024-07-10T21:18:00Z",
+      "coordinate": [
+        -115.335,
+        53.4322
+      ],
+      "sourceDistanceKm": 0.5828,
+      "negativeDistanceKm": 5.7394,
+      "separationMarginKm": 5.1566,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:c2a8c062b3ee8ea114d5572a66fa0d6798eb72b9d3dffa8275d981dca501d3d7"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:6f202f0eb2aaf9cc9d65ae0f3ccd7ea5e926f02d068c0ede1bd5a48402c2faac:CA-AB-2024EWF088",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF061",
+      "negativeIncidentId": "CA-AB-2024EWF088",
+      "physicalObservationId": "cwfis-hotspot:6f202f0eb2aaf9cc9d65ae0f3ccd7ea5e926f02d068c0ede1bd5a48402c2faac",
+      "observedAt": "2024-07-10T21:18:00Z",
+      "coordinate": [
+        -115.319,
+        53.4342
+      ],
+      "sourceDistanceKm": 0.6102,
+      "negativeDistanceKm": 5.3957,
+      "separationMarginKm": 4.7855,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:a358be501d9b3fb9b54df910cce5890d55ca99262456b7f9b3c21dc24041e64f"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:d82feda5369d6bb6debf027f6225d200f74af3274d776ff8ae945f3916cace42:CA-AB-2024EWF088",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF061",
+      "negativeIncidentId": "CA-AB-2024EWF088",
+      "physicalObservationId": "cwfis-hotspot:d82feda5369d6bb6debf027f6225d200f74af3274d776ff8ae945f3916cace42",
+      "observedAt": "2024-07-10T21:18:00Z",
+      "coordinate": [
+        -115.338,
+        53.4412
+      ],
+      "sourceDistanceKm": 0.9266,
+      "negativeDistanceKm": 6.6823,
+      "separationMarginKm": 5.7557,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:b799b8205f6cf9c8364796998d0d4feceba2827a85d45542e6450882c6da9345"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:17a74dd055f6d20cb3d94befcd81d2474764d9478b28f06674865da8ae3552df:CA-AB-2024EWF088",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF061",
+      "negativeIncidentId": "CA-AB-2024EWF088",
+      "physicalObservationId": "cwfis-hotspot:17a74dd055f6d20cb3d94befcd81d2474764d9478b28f06674865da8ae3552df",
+      "observedAt": "2024-07-11T08:48:00Z",
+      "coordinate": [
+        -115.332,
+        53.4347
+      ],
+      "sourceDistanceKm": 0.2755,
+      "negativeDistanceKm": 5.8589,
+      "separationMarginKm": 5.5834,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:ae7b5afd2bf82595c877f30f4475531d1a5fd7ea03cb122eb19d0e5d5fea11f9"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:991d4aa727efc14efc3961d21b7659d06da88b9dab758b4f563d8739d0caac7e:CA-AB-2024EWF088",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF061",
+      "negativeIncidentId": "CA-AB-2024EWF088",
+      "physicalObservationId": "cwfis-hotspot:991d4aa727efc14efc3961d21b7659d06da88b9dab758b4f563d8739d0caac7e",
+      "observedAt": "2024-07-11T08:48:00Z",
+      "coordinate": [
+        -115.319,
+        53.4321
+      ],
+      "sourceDistanceKm": 0.6984,
+      "negativeDistanceKm": 5.185,
+      "separationMarginKm": 4.4866,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:cfe9c299a4d4270bf9583c04fbf13a969412b5e7ee93c72422c3384915388342"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:5094bdf4f89f03ac0586c822d1f272e683b01adbfaf65b239eb8e4a59dd205b6:CA-AB-2024EWF074",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF072",
+      "negativeIncidentId": "CA-AB-2024EWF074",
+      "physicalObservationId": "cwfis-hotspot:5094bdf4f89f03ac0586c822d1f272e683b01adbfaf65b239eb8e4a59dd205b6",
+      "observedAt": "2024-07-17T21:46:00Z",
+      "coordinate": [
+        -117.122,
+        53.8859
+      ],
+      "sourceDistanceKm": 0.332,
+      "negativeDistanceKm": 10.812,
+      "separationMarginKm": 10.48,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:7f0e382b468c61c63405908659f2f20a943bad7144ad82e5ee20cc0c374c3250"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:64f08be6d7c99436c91deb2e2098b8f2a9b39e97390f7115cee4b14e752ad070:CA-AB-2024EWF074",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF072",
+      "negativeIncidentId": "CA-AB-2024EWF074",
+      "physicalObservationId": "cwfis-hotspot:64f08be6d7c99436c91deb2e2098b8f2a9b39e97390f7115cee4b14e752ad070",
+      "observedAt": "2024-07-18T09:05:00Z",
+      "coordinate": [
+        -117.125,
+        53.8897
+      ],
+      "sourceDistanceKm": 0.4853,
+      "negativeDistanceKm": 11.2629,
+      "separationMarginKm": 10.7776,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:e131aa9cb80da9d2037d656fc1855d294bfef985096b5e527f5b366ff6f0e153"
+    },
+    {
+      "schemaVersion": "vigia.hard-negative-packet.v1",
+      "id": "hard-negative:cwfis-hotspot:dc71350d12b0bd1eb03ae3820034a0d353fb2980a41470470ffa27f04e69f37d:CA-AB-2024EWF072",
+      "task": "INCIDENT_ASSOCIATION",
+      "category": "NEARBY_DISTINCT_INCIDENT",
+      "label": "VALID_NO_OFFICIAL_WILDFIRE_INCIDENT",
+      "meaning": "This physical observation is bound to the authoritative source incident and is a negative association for the distinct nearby official incident; it is not a claim of no physical fire.",
+      "sourceIncidentId": "CA-AB-2024EWF074",
+      "negativeIncidentId": "CA-AB-2024EWF072",
+      "physicalObservationId": "cwfis-hotspot:dc71350d12b0bd1eb03ae3820034a0d353fb2980a41470470ffa27f04e69f37d",
+      "observedAt": "2024-07-19T10:04:00Z",
+      "coordinate": [
+        -117.014,
+        53.812
+      ],
+      "sourceDistanceKm": 0.175,
+      "negativeDistanceKm": 10.8628,
+      "separationMarginKm": 10.6878,
+      "rawObject": {
+        "id": "raw:cwfis-nrcan:cwfis_hotspot-archive_2024:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sha256": "sha256:edf36565415b78e2d7cb61b1b8067e569820abb33b37e187b7854adf17557ec9",
+        "sourceTimestamp": "2024-12-31T23:59:59.000Z",
+        "receivedAt": "2026-08-25T11:25:38.077Z"
+      },
+      "doctrineVersion": "vigia.nearby-distinct-incident-hard-negative.v1",
+      "proof": {
+        "distinctAuthoritativeIds": true,
+        "uniquePhysicalObservation": true,
+        "spatialSeparationMarginSatisfied": true,
+        "rawLineagePresent": true,
+        "forcedJoin": false
+      },
+      "certified": true,
+      "fingerprint": "hard-negative-packet:sha256:d5cffb66d4ceaadce56bdd7af90195bed73650967416a26d67f1f1240bc7ae5f"
+    }
+  ],
+  "releaseFloor": {
+    "target": 10,
+    "passed": true
+  },
+  "worldClassTarget": {
+    "target": 25,
+    "passed": true
+  },
+  "noAbsoluteNoFireClaim": true,
+  "fingerprint": "hard-negative-data-product:sha256:a98ef3e5883a7e7e7f3c49fba805ad366167ba4fed8150bde874bf4ff0ea0dae"
+}

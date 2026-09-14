@@ -1,0 +1,86 @@
+{
+  "schemaVersion": "vigia.backend-convergence-quality-certification.v1",
+  "generatedAt": "2026-08-25T09:01:32Z",
+  "fullSuite": {
+    "command": "npm test",
+    "tests": 715,
+    "passed": 706,
+    "failed": 8,
+    "skipped": 1,
+    "durationMs": 43203.449041
+  },
+  "preChangeBaseline": {
+    "tests": 689,
+    "passed": 681,
+    "failed": 8,
+    "skipped": 0
+  },
+  "regressionAssessment": {
+    "newTests": 26,
+    "newPasses": 25,
+    "newSkips": 1,
+    "newFailures": 0,
+    "state": "NO_NEW_REGRESSIONS"
+  },
+  "convergenceSuite": {
+    "command": "npm run test:backend-convergence",
+    "tests": 26,
+    "passed": 25,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "The node-only suite leaves its environment-injected PostGIS case disabled unless VIGIA_TEST_DATABASE_URL is supplied. The mandatory isolated database path ran independently through npm run test:semantic-equivalence and passed against disposable PostGIS."
+  },
+  "databaseCertification": {
+    "command": "npm run db:certify-intelligence",
+    "state": "PASS",
+    "migrationHead": "017",
+    "semanticEquivalence": "PASS",
+    "backupRestore": "PASS",
+    "rpoEvents": 0,
+    "dataLossRecords": 0
+  },
+  "focusedReasoning": {
+    "property": { "passed": 8, "failed": 0 },
+    "metamorphic": { "passed": 7, "failed": 0 },
+    "fuzz": { "passed": 2, "failed": 0 },
+    "race": { "passed": 3, "failed": 0 },
+    "crash": { "passed": 3, "failed": 0 },
+    "queryConsistency": { "passed": 3, "failed": 0 },
+    "security": { "passed": 9, "failed": 0 }
+  },
+  "performance": {
+    "compactBenchmark": "PASS",
+    "postgisRepresentativeScale": "PASS",
+    "incidents": 10000,
+    "canonicalEvents": 1000000,
+    "totalRows": 1440000
+  },
+  "architectureGate": {
+    "command": "npm run check",
+    "state": "PASS",
+    "filesInspected": 872,
+    "runtimeAndTestModules": 780
+  },
+  "buildGate": {
+    "command": "npm --prefix apps/operator-console run build",
+    "state": "PASS"
+  },
+  "diffWhitespaceGate": {
+    "command": "git diff --check",
+    "state": "PASS"
+  },
+  "inheritedFailures": [
+    {
+      "file": "apps/api/test/measurement-debt-api.test.mjs",
+      "count": 7,
+      "reason": "The retained prevention-validation artifact chain and several of its authoritative source artifacts are absent from the current filesystem; seven unrelated endpoints return 500. Fabricated replacement evidence was not generated."
+    },
+    {
+      "file": "apps/api/test/release-contract-governance.test.mjs",
+      "count": 1,
+      "reason": "Existing operator frontend source hard-codes vigia-postgis-014. The mandate prohibited frontend source changes."
+    }
+  ],
+  "frontendSourceModified": false,
+  "productionReadiness": "BACKEND_PRODUCTION_SHAPED_WITH_INHERITED_REPOSITORY_GATE_DEBT"
+}

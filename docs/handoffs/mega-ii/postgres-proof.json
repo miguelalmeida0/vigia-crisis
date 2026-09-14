@@ -1,0 +1,17 @@
+{
+  "lane": "CONTROLLED_SESSION_TEMPORARY_TABLES",
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    "append",
+    "no-op",
+    "same-millisecond-capture-order",
+    "indexed-dependency-lookup",
+    "queue-merge-and-stale-ack",
+    "scenario-write-blocked",
+    "no-future-leakage",
+    "html-passages-with-script-inert",
+    "reviewed-facility-fact-with-enforced-parent-foreign-keys"
+  ],
+  "operationalFixtureWrites": 0
+}

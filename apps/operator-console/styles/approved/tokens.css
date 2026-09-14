@@ -1,0 +1,174 @@
+/* Canonical VIGIA design tokens. All primary routes share this contract. */
+:root {
+  --vg-ink:#101d43;
+  --vg-muted:#50617b;
+  --vg-subtle:#596a82;
+  --vg-red:#d51d32;
+  --vg-red-soft:#fff2f4;
+  --vg-blue:#175bb0;
+  --vg-blue-soft:#eef5fc;
+  --vg-green:#087d50;
+  --vg-green-soft:#ecfaf4;
+  --vg-amber:#965006;
+  --vg-amber-soft:#fff7e9;
+  --vg-line:#e6ebf3;
+  --vg-surface:#fff;
+  --vg-canvas:#f8faff;
+  --vg-radius:6px;
+  --vg-control-radius:4px;
+  --vg-rail:208px;
+  --vg-header:80px;
+  --vg-space:24px;
+  --vg-shadow:0 8px 24px #101d4314;
+  --vg-type-meta:12px;
+  --vg-type-body:14px;
+  --vg-type-subsection:16px;
+  --vg-type-section:20px;
+  --vg-type-page:28px;
+  --vg-type-metric:28px;
+  --vg-space-1:4px;
+  --vg-space-2:8px;
+  --vg-space-3:12px;
+  --vg-space-4:16px;
+  --vg-space-6:24px;
+  --vg-space-8:32px;
+  --vg-control-height:40px;
+  --vg-touch-height:44px;
+  --vg-motion:140ms;
+  --vg-font:Arial,Helvetica,sans-serif
+}
+
+* {
+  box-sizing:border-box
+}
+
+body {
+  margin:0;
+  font-family:var(--vg-font);
+  font-size:14px;
+  line-height:1.45;
+  color:var(--vg-ink);
+  background:var(--vg-canvas);
+  -webkit-font-smoothing:antialiased
+}
+
+button,input,select,textarea {
+  font:inherit
+}
+
+button,a,input,select,textarea {
+  -webkit-tap-highlight-color:transparent
+}
+
+button {
+  cursor:pointer
+}
+
+button:disabled {
+  cursor:not-allowed;
+  opacity:.52
+}
+
+a {
+  color:inherit;
+  text-decoration:none
+}
+
+h1,h2,h3,h4,p {
+  margin:0
+}
+
+h1 {
+  font-size:29px;
+  letter-spacing:-1px;
+  line-height:1.2;
+  font-weight:800
+}
+
+h2 {
+  font-size:18px;
+  letter-spacing:-.45px;
+  font-weight:750;
+  line-height:1.3
+}
+
+h3 {
+  font-size:15px;
+  line-height:1.4
+}
+
+p {
+  color:var(--vg-muted)
+}
+
+:focus-visible {
+  outline:3px solid #466cf0;
+  outline-offset:3px
+}
+
+input,select,textarea {
+  min-width:0;
+  color:var(--vg-ink)
+}
+
+button {
+  color:var(--vg-ink)
+}
+
+.icon {
+  width:19px;
+  height:19px;
+  flex-shrink:0;
+  vertical-align:middle
+}
+
+.sr-only {
+  position:absolute!important;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap
+}
+
+.skip-link {
+  position:fixed;
+  left:12px;
+  top:-60px;
+  background:var(--vg-ink);
+  color:white;
+  z-index:200;
+  padding:10px
+}
+
+.skip-link:focus {
+  top:12px
+}
+
+[hidden] {
+  display:none!important
+}
+
+.muted {
+  color:var(--vg-muted)
+}
+
+.small {
+  font-size:12px
+}
+
+.text-green {
+  color:var(--vg-green)
+}
+
+.text-red {
+  color:var(--vg-red)
+}
+
+.text-amber {
+  color:var(--vg-amber)
+}
+
+.num {
+  font-variant-numeric:tabular-nums
+}

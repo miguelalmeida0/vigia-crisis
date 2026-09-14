@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "vigia.decision-learning-evidence-audit.v1",
+  "generatedAt": "2026-08-25T14:02:20.817Z",
+  "sourceFingerprint": "historical-shadow-decision-memory:sha256:036b309068f1205c7877903e6d6ce77e3140b51d0609b8179db65e3dfe592025",
+  "registeredCohort": {
+    "inclusion": "First 100 chronologically ordered Alberta records with an official issue-time candidate and a strictly later official perimeter.",
+    "exclusion": "No strictly later attributable official perimeter, missing issue time, or missing incident identity.",
+    "episodes": 100,
+    "uniqueIncidents": 100,
+    "informationValueOutcomes": 100
+  },
+  "checks": {
+    "predefinedInclusionCriteria": true,
+    "incidentIndependence": true,
+    "outcomeAuthority": true,
+    "outcomeCompletenessWithinRegisteredCohort": true,
+    "knowledgeTimeSeparation": true,
+    "noConsequentialAgencyActionClaim": true,
+    "automaticDoctrineMutationDisabled": true
+  },
+  "violations": {
+    "chronology": 0,
+    "authorityMissing": 0,
+    "missingOutcomesWithinCohort": 0,
+    "duplicateIncidents": 0
+  },
+  "biasAudit": {
+    "selectionBias": {
+      "state": "PRESENT_AND_SCOPED",
+      "reason": "The registered cohort conditions on later-perimeter availability and is not a population sample."
+    },
+    "providerAvailabilityBias": {
+      "state": "PRESENT",
+      "providers": [
+        "alberta-wildfire"
+      ]
+    },
+    "geographicBias": {
+      "state": "PRESENT",
+      "regions": [
+        "CA-AB"
+      ]
+    },
+    "easyCaseBias": {
+      "state": "POSSIBLE",
+      "reason": "Cases without observable later truth are outside this adjudicable cohort and remain outside the denominator; results cannot be generalized to them."
+    },
+    "incidentTypeCoverage": [
+      "Wildfire",
+      "Mutual Aid"
+    ]
+  },
+  "claimBoundary": "Audit pass establishes integrity and completeness only within the registered observable Alberta shadow cohort; it does not establish external calibration or agency impact.",
+  "passed": true,
+  "fingerprint": "decision-learning-evidence-audit:sha256:eec195992577a41f9b957276981dc7d29fe2474bae3e82c63a288fbe31811085"
+}

@@ -1,0 +1,42 @@
+// Original, dependency-free SVG symbols. No icon-font or CDN requests.
+const paths = {
+ home: '<path d="m3 10 9-7 9 7M5 9v12h5v-7h4v7h5V9"/>',
+ file: '<path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6M9 16h6"/>',
+ map: '<path d="m3 5 6-2 6 2 6-2v16l-6 2-6-2-6 2zM9 3v16M15 5v16"/>',
+ target: '<circle cx="12" cy="12" r="7"/><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M1 12h4M19 12h4"/>',
+ layers: '<path d="m12 3 9 5-9 5-9-5zM3 12l9 5 9-5M3 16l9 5 9-5"/>',
+ chart: '<path d="M4 3v18h17M8 15v3M12 8v10M16 11v7M20 5v13"/>',
+ globe: '<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18M5 6h14M5 18h14"/>',
+ flame: '<path d="M13 2c1 6 6 7 6 13a7 7 0 0 1-14 0c0-4 2-6 4-8 0 3 1 4 2 4 2-3 2-5 2-9Z"/>',
+ arrow: '<path d="M4 12h16m-6-6 6 6-6 6"/>',
+ chevron: '<path d="m9 5 7 7-7 7"/>', down: '<path d="m6 9 6 6 6-6"/>',
+ refresh: '<path d="M20 7v5h-5M4 17v-5h5"/><path d="M5 7a8 8 0 0 1 13-2l2 3M4 16l2 3a8 8 0 0 0 13-2"/>',
+ search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+ clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ pin: '<path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+ user: '<circle cx="12" cy="7" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+ check: '<path d="m5 12 4 4L19 6"/>',
+ alert: '<path d="m12 3 10 18H2zM12 9v5M12 17v1"/>',
+ plus: '<path d="M12 5v14M5 12h14"/>', minus: '<path d="M5 12h14"/>',
+ close: '<path d="m6 6 12 12M6 18 18 6"/>',
+ filter: '<path d="M3 5h18l-7 8v6l-4 2v-8z"/>',
+ download: '<path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/>',
+ expand: '<path d="M9 3H3v6M15 3h6v6M3 15v6h6M21 15v6h-6"/>',
+ shield: '<path d="M12 2 3 6v6c0 5 9 10 9 10s9-5 9-10V6z"/><path d="m8 12 3 3 5-6"/>',
+ menu: '<path d="M4 6h16M4 12h16M4 18h16"/>',
+ bolt: '<path d="m13 2-9 12h7l-1 8 10-13h-7z"/>',
+ cloud: '<path d="M6 18h12a4 4 0 0 0 .5-8 7 7 0 0 0-13-2A5 5 0 0 0 6 18Z"/>',
+ info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7v1"/>',
+ calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 10h18M7 14h3M14 14h3"/>',
+ compare: '<path d="M4 7h16m-4-4 4 4-4 4M20 17H4m4-4-4 4 4 4"/>',
+ wind: '<path d="M2 8h13a3 3 0 1 0-3-3M2 12h17a3 3 0 1 1-3 3M2 16h7a3 3 0 1 1-3 3"/>',
+ link: '<path d="m9 15 6-6M8 16l-1 1a4 4 0 0 1-6-6l5-5a4 4 0 0 1 6 0M16 8l1-1a4 4 0 0 1 6 6l-5 5a4 4 0 0 1-6 0" transform="translate(1 0) scale(.92)"/>',
+ eye: '<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
+ more: '<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',
+ list: '<path d="m3 6 1 1 2-3M9 6h12m-18 7 1 1 2-3M9 13h12m-18 7 1 1 2-3M9 20h12"/>',
+ database: '<ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 4 16 4 16 0V5M4 12c0 4 16 4 16 0"/>',
+};
+export function icon(name, cls='') {
+ return `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.info}</svg>`;
+}
+export function brand() {return '<span class="brand-shield"><svg viewBox="0 0 38 44" aria-hidden="true"><path fill="currentColor" d="M3 2h32v23L19 42 3 25z"/><path d="m19 11 7 9-7 9-7-9z" fill="none" stroke="white" stroke-width="3"/></svg></span><span>VIGIA</span>';}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "noaa-hrrr-archive",
+  "purpose": "issue-time HRRR GRIB2; message indexes",
+  "coverage": [
+    "western-us"
+  ],
+  "period": "2014-present",
+  "resolution": "multi-petabyte archive; byte ranges required",
+  "collectionProcess": "anonymous HTTPS/S3",
+  "knowledgeTimeSemantics": "ISSUE_TIME_RUN_IDENTITY",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "Selected GRIB messages must be decoded and missing-value checked before Gold use."
+  ],
+  "knownMissingness": [
+    "Selected GRIB messages must be decoded and missing-value checked before Gold use."
+  ],
+  "licence": "NOAA-HRRR-PUBLIC-DATA",
+  "appropriateUse": "NONE",
+  "inappropriateUse": "Independent truth without lineage."
+}

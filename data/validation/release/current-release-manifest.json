@@ -1,0 +1,393 @@
+{
+  "schemaVersion": "vigia.current-release-manifest.v2",
+  "releaseId": "vigia-intelligence-fabric-14b343443ea8c494",
+  "codeStateHash": "sha256:6ffbbb28e7b876d254907061d816c960fd4dfe2b1438b686694402d76e824bd2",
+  "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
+  "buildTimestamp": "2026-09-14T07:35:10.975Z",
+  "runtimeProfile": "local_shadow",
+  "canonicalOperatorConsole": {
+    "path": "apps/operator-console",
+    "origin": "http://127.0.0.1:4190",
+    "backendOrigin": "http://127.0.0.1:4177",
+    "sourceHash": "sha256:420bc42c3a160f1016694116e02749e9931d3df3e3eef6b4555fd9e2708668ef"
+  },
+  "canonicalBrowserContract": {
+    "path": "apps/web/src/v2/release-compatibility.js",
+    "contractSource": "immutable release identity generated from packages/domain/src/release-contract.mjs"
+  },
+  "quarantinedProducts": [
+    "apps/mission-dark",
+    "apps/web"
+  ],
+  "contracts": {
+    "apiContractVersion": "vigia-api-v10.5",
+    "operationsApiVersion": "operations-api-v6",
+    "validationApiVersion": "validation-api-v8",
+    "fieldNodeContractVersion": "fieldnet-api-v5",
+    "databaseSchemaVersion": "vigia-postgis-025",
+    "migrationHead": "025",
+    "domainSchemaVersion": "vigia-domain-v10.5",
+    "webContractVersion": "decision-os-web-v1",
+    "ontologyContractVersion": "vigia.crisis-ontology.v1",
+    "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+  },
+  "webRequiredContracts": {
+    "apiContractVersion": "vigia-api-v10.5",
+    "operationsApiVersion": "operations-api-v6",
+    "validationApiVersion": "validation-api-v8",
+    "fieldNodeContractVersion": "fieldnet-api-v5",
+    "databaseSchemaVersion": "vigia-postgis-025",
+    "domainSchemaVersion": "vigia-domain-v10.5",
+    "ontologyContractVersion": "vigia.crisis-ontology.v1",
+    "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
+  },
+  "webBuildVersion": "decision-os-web-v1+14b34344",
+  "requiredRoutes": {
+    "central": [
+      {
+        "id": "release",
+        "product": "RELEASE",
+        "path": "/api/v10/release",
+        "method": "GET"
+      },
+      {
+        "id": "health",
+        "product": "RELEASE",
+        "path": "/api/v10/health",
+        "method": "GET"
+      },
+      {
+        "id": "session",
+        "product": "SESSION",
+        "path": "/api/v10/session",
+        "method": "GET"
+      },
+      {
+        "id": "command",
+        "product": "COMMAND",
+        "path": "/api/v10/workspaces/command",
+        "method": "GET"
+      },
+      {
+        "id": "events",
+        "product": "INCIDENT",
+        "path": "/api/v10/events",
+        "method": "GET"
+      },
+      {
+        "id": "territory",
+        "product": "COMMAND",
+        "path": "/api/v10/territory",
+        "method": "GET"
+      },
+      {
+        "id": "prevention",
+        "product": "PREVENTION",
+        "path": "/api/v10/prevention/findings",
+        "method": "GET"
+      },
+      {
+        "id": "bootstrap",
+        "product": "PREVENTION",
+        "path": "/api/v2/bootstrap",
+        "method": "GET"
+      },
+      {
+        "id": "benchmark",
+        "product": "VALIDATION",
+        "path": "/api/v10/detection/benchmark",
+        "method": "GET"
+      },
+      {
+        "id": "measurement-debt",
+        "product": "MEASUREMENT_DEBT",
+        "path": "/api/v10/validation/measurement-debt",
+        "method": "GET"
+      },
+      {
+        "id": "prevention-science",
+        "product": "VALIDATION",
+        "path": "/api/v10/validation/prevention-machine-evidence",
+        "method": "GET"
+      },
+      {
+        "id": "measurement-campaigns",
+        "product": "VALIDATION",
+        "path": "/api/v10/validation/measurement-campaigns",
+        "method": "GET"
+      },
+      {
+        "id": "false-negative-taxonomy",
+        "product": "VALIDATION",
+        "path": "/api/v10/validation/false-negative-taxonomy",
+        "method": "GET"
+      },
+      {
+        "id": "live-campaign",
+        "product": "OPERATIONS",
+        "path": "/api/v10/campaign/live-shadow/scorecards",
+        "method": "GET"
+      },
+      {
+        "id": "pilot",
+        "product": "VALIDATION",
+        "path": "/api/v10/pilot/report",
+        "method": "GET"
+      },
+      {
+        "id": "alerts",
+        "product": "ALERTS",
+        "path": "/api/v10/alerts",
+        "method": "GET"
+      },
+      {
+        "id": "operations-status",
+        "product": "OPERATIONS",
+        "path": "/api/v10/operations/status",
+        "method": "GET"
+      },
+      {
+        "id": "operations-metrics",
+        "product": "OPERATIONS",
+        "path": "/api/v10/operations/metrics",
+        "method": "GET"
+      },
+      {
+        "id": "work",
+        "product": "WORK",
+        "path": "/api/v10/evidence-needs",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-central",
+        "product": "FIELDNET",
+        "path": "/api/v10/fieldnet/status",
+        "method": "GET"
+      },
+      {
+        "id": "command-survival",
+        "product": "COMMAND",
+        "path": "/api/v10/incident-command/incidents/{incidentId}",
+        "method": "GET"
+      },
+      {
+        "id": "intelligence-inbox",
+        "product": "INTELLIGENCE",
+        "path": "/api/v10/intelligence/inbox",
+        "method": "GET"
+      }
+    ],
+    "fieldNode": [
+      {
+        "id": "fieldnet-release",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/release",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-health",
+        "product": "FIELDNET",
+        "path": "/health",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-ready",
+        "product": "FIELDNET",
+        "path": "/ready",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-state",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/state",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-incidents",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-incident",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents/{incidentId}",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-map",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents/{incidentId}/offline-map",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-truth",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents/{incidentId}/truth-graph",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-replay",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents/{incidentId}/replay",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-debt",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents/{incidentId}/evidence-debt",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-sensors",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/sensor-gateway",
+        "method": "GET"
+      },
+      {
+        "id": "fieldnet-command-survival",
+        "product": "FIELDNET",
+        "path": "/api/fieldnet/incidents/{incidentId}/command-survival",
+        "method": "GET"
+      }
+    ]
+  },
+  "requiredMigrations": [
+    "001",
+    "002",
+    "003",
+    "004",
+    "005",
+    "006",
+    "007",
+    "008",
+    "009",
+    "010",
+    "011",
+    "012",
+    "013",
+    "014",
+    "015",
+    "016",
+    "017",
+    "018",
+    "019",
+    "020",
+    "021",
+    "022",
+    "023",
+    "024",
+    "025"
+  ],
+  "requiredArtifacts": [],
+  "evidenceHashes": {},
+  "certificationEvidence": {
+    "schemaVersion": "vigia.certification-evidence-bindings.v1",
+    "entries": {}
+  },
+  "testEvidence": {
+    "state": "PENDING_RUNNING_RELEASE_CERTIFICATION"
+  },
+  "screenshotEvidence": {
+    "state": "PENDING_FRESH_BROWSER_CERTIFICATION",
+    "entries": []
+  },
+  "worktree": {
+    "dirtyPaths": 962,
+    "classifications": {
+      "DEPLOYMENT DATA": 84,
+      "GOVERNED EVIDENCE": 456,
+      "REFERENCE DATA": 17,
+      "SOURCE — release code": 362,
+      "TEST": 43
+    },
+    "unknownCount": 0,
+    "gitWritable": false,
+    "checkpointMode": "DETERMINISTIC_COMMAND_HANDOFF",
+    "checkpoints": [
+      {
+        "id": "physical-sensing",
+        "title": "Physical sensing and provider truth",
+        "pathCount": 28,
+        "commitMessage": "checkpoint(physical-sensing): physical sensing and provider truth"
+      },
+      {
+        "id": "operations",
+        "title": "Operations, alerting and work",
+        "pathCount": 5,
+        "commitMessage": "checkpoint(operations): operations, alerting and work"
+      },
+      {
+        "id": "truth-autopilot",
+        "title": "Physical truth autopilot and incident evidence",
+        "pathCount": 73,
+        "commitMessage": "checkpoint(truth-autopilot): physical truth autopilot and incident evidence"
+      },
+      {
+        "id": "measurement-science",
+        "title": "Validation and measurement science",
+        "pathCount": 22,
+        "commitMessage": "checkpoint(measurement-science): validation and measurement science"
+      },
+      {
+        "id": "command-product",
+        "title": "Command and Decision OS product",
+        "pathCount": 107,
+        "commitMessage": "checkpoint(command-product): command and decision os product"
+      },
+      {
+        "id": "release-certification",
+        "title": "Release integrity and schema certification",
+        "pathCount": 8,
+        "commitMessage": "checkpoint(release-certification): release integrity and schema certification"
+      },
+      {
+        "id": "governed-evidence",
+        "title": "Remaining governed evidence and documentation",
+        "pathCount": 719,
+        "commitMessage": "checkpoint(governed-evidence): remaining governed evidence and documentation"
+      }
+    ],
+    "checkpointHandoff": "data/validation/release/checkpoint-handoff.json",
+    "checkpointCommands": "data/validation/release/checkpoint-commands.sh"
+  },
+  "certification": {
+    "schema": {
+      "state": "PENDING",
+      "scope": "DATABASE_SCHEMA_AND_MIGRATION_HEAD",
+      "checkedAt": null,
+      "evidence": "data/validation/release/current-release-manifest.json#/certification/schema",
+      "reason": "Database schema and migration certification has not been executed for this release identity."
+    },
+    "routes": {
+      "state": "PENDING",
+      "scope": "REQUIRED_CENTRAL_API_AND_FIELDNET_ROUTE_CONTRACTS",
+      "checkedAt": null,
+      "evidence": "data/validation/release/route-contract-certification.json",
+      "reason": "Required Central API and FieldNet route certification has not been executed for this release identity."
+    },
+    "session": {
+      "state": "PENDING",
+      "scope": "OPERATOR_SESSION_IDENTITY_AND_RELOAD_CONTINUITY",
+      "checkedAt": null,
+      "evidence": "data/validation/release/session-certification.json",
+      "reason": "Operator session identity and reload-continuity certification has not been executed for this release identity."
+    },
+    "fieldNode": {
+      "state": "PENDING",
+      "scope": "FIELDNET_RELEASE_AND_RUNTIME_READINESS",
+      "checkedAt": null,
+      "evidence": "data/validation/release/current-release-manifest.json#/certification/fieldNode",
+      "reason": "FieldNet release and readiness certification has not been executed for this release identity."
+    },
+    "browser": {
+      "state": "PENDING",
+      "scope": "CANONICAL_OPERATOR_BROWSER_BEHAVIOR",
+      "checkedAt": null,
+      "evidence": "data/validation/release/running-browser-certification.json",
+      "reason": "Canonical operator browser certification has not been executed for this release identity."
+    }
+  },
+  "manifestEvidenceHash": "sha256:b92e29702bfcf9d440a5a4fbc9535bcc28eed0a8bde0fc9acb7cc082b29730d5",
+  "releaseStatementHash": "sha256:3b8d061f802a9fecdc42932a7b96220dbea7463216fce29438e4775794848444"
+}

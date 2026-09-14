@@ -1,0 +1,8 @@
+{
+  "command": "ollama run qwen3.5:4b Return only VIGIA_OK",
+  "endpoint": "127.0.0.1:11435",
+  "code": 1,
+  "stdout": "",
+  "stderr": "\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2807 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u280f \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u280b \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2839 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2839 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2838 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u283c \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2834 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2826 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G\u2827 \u001b[K\u001b[?25h\u001b[?2026l\u001b[?25l\u001b[?2026h\u001b[?25l\u001b[1G\u001b[K\u001b[?25h\u001b[?2026l\u001b[2K\u001b[1G\u001b[?25hError: 500 Internal Server Error: llama-server startup failed after projector CPU offload retry: llama-server process has terminated: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\nerror: failed to allocate buffer, size =     0.02 MiB: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\nerror: failed to allocate buffer, size =     0.02 MiB\n",
+  "durationMs": 6365
+}

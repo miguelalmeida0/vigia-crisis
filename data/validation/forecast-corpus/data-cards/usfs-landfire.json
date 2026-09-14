@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "usfs-landfire",
+  "purpose": "fuel model; canopy; elevation; slope; aspect",
+  "coverage": [
+    "western-us"
+  ],
+  "period": "versioned historical releases",
+  "resolution": "bounded raster export",
+  "collectionProcess": "public ArcGIS ImageServer",
+  "knowledgeTimeSemantics": "VERSION_AND_REFERENCE_DATE",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "Release availability and landscape-reference dates must precede each forecast cutoff."
+  ],
+  "knownMissingness": [
+    "Release availability and landscape-reference dates must precede each forecast cutoff."
+  ],
+  "licence": "USFS-LANDFIRE-PUBLIC-DATA",
+  "appropriateUse": "NONE",
+  "inappropriateUse": "Independent truth without lineage."
+}

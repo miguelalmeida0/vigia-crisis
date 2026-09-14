@@ -1,0 +1,344 @@
+{
+  "capturedAt": "2026-09-14T07:33:06.296Z",
+  "lanes": {
+    "after": {
+      "provenance": {
+        "original": "after-map-interrupted.json",
+        "resumed": "resumed-map.json",
+        "resumedAt": "2026-09-14T07:33:06.116Z",
+        "completeContexts": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20
+        ],
+        "startedContexts": 21,
+        "note": "All original measurements retained, including the partial context. Four new cold contexts replace no original failures."
+      },
+      "interruptedAttempts": [
+        {
+          "sample": 16,
+          "case": "national",
+          "completedJourneys": 7,
+          "cause": "Docker daemon stopped; benchmark container exited with unexpected EOF on 2026-09-13. The missing national journey is not a successful measurement."
+        }
+      ],
+      "browser": "139.0.7258.5",
+      "viewport": [
+        1728,
+        966
+      ],
+      "cache": "enabled; transparent forwarding hop",
+      "cases": [
+        {
+          "case": "cold",
+          "n": 21,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 2333,
+          "p95Ms": 7282,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 8793,
+          "requestsP95": 52,
+          "bytesP95": 10719874,
+          "mainThreadBlockingP95Ms": 1971
+        },
+        {
+          "case": "detail-to-fire",
+          "n": 21,
+          "failed": 1,
+          "navigationFailures": 0,
+          "projectionFailures": 1,
+          "medianMs": 351,
+          "p95Ms": 1056,
+          "limitMs": 1000,
+          "passed": false,
+          "interactiveP95Ms": 1535,
+          "requestsP95": 18,
+          "bytesP95": 3692762,
+          "mainThreadBlockingP95Ms": 998
+        },
+        {
+          "case": "fire-to-response",
+          "n": 21,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 1203,
+          "p95Ms": 1944,
+          "limitMs": 1000,
+          "passed": false,
+          "interactiveP95Ms": 3646,
+          "requestsP95": 36,
+          "bytesP95": 2449995,
+          "mainThreadBlockingP95Ms": 2153
+        },
+        {
+          "case": "cached-revisit",
+          "n": 21,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 193,
+          "p95Ms": 669,
+          "limitMs": 400,
+          "passed": false,
+          "interactiveP95Ms": 746,
+          "requestsP95": 1,
+          "bytesP95": 112284,
+          "mainThreadBlockingP95Ms": 659
+        },
+        {
+          "case": "incident-switch",
+          "n": 21,
+          "failed": 1,
+          "navigationFailures": 0,
+          "projectionFailures": 1,
+          "medianMs": 5338,
+          "p95Ms": 20289,
+          "limitMs": 1500,
+          "passed": false,
+          "interactiveP95Ms": 20310,
+          "requestsP95": 27,
+          "bytesP95": 6978887,
+          "mainThreadBlockingP95Ms": 1596
+        },
+        {
+          "case": "overview",
+          "n": 21,
+          "failed": 0,
+          "navigationFailures": 0,
+          "projectionFailures": 0,
+          "medianMs": 1199,
+          "p95Ms": 7941,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 9431,
+          "requestsP95": 18,
+          "bytesP95": 4354922,
+          "mainThreadBlockingP95Ms": 2210
+        },
+        {
+          "case": "national",
+          "n": 20,
+          "failed": 0,
+          "navigationFailures": 1,
+          "projectionFailures": 1,
+          "medianMs": 2091,
+          "p95Ms": 15898,
+          "limitMs": 2500,
+          "passed": false,
+          "interactiveP95Ms": 20391,
+          "requestsP95": 46,
+          "bytesP95": 6198928,
+          "mainThreadBlockingP95Ms": 1562
+        }
+      ],
+      "passed": false,
+      "pageErrors": [],
+      "failedRequests": 175,
+      "waterfall": {
+        "other": {
+          "requests": 408,
+          "p95Ms": 582,
+          "ttfbP95Ms": 256,
+          "downloadP95Ms": 13
+        },
+        "javascript": {
+          "requests": 105,
+          "p95Ms": 526,
+          "ttfbP95Ms": 128,
+          "downloadP95Ms": 9
+        },
+        "api": {
+          "requests": 399,
+          "p95Ms": 8013,
+          "ttfbP95Ms": 7218,
+          "downloadP95Ms": 395
+        },
+        "imagery": {
+          "requests": 1382,
+          "p95Ms": 373,
+          "ttfbP95Ms": 231,
+          "downloadP95Ms": 6366
+        },
+        "labels": {
+          "requests": 1345,
+          "p95Ms": 403,
+          "ttfbP95Ms": 232,
+          "downloadP95Ms": 50
+        }
+      }
+    }
+  },
+  "definition": "Same 20-context harness in each lane; fresh browser HTTP cache for each context, retained renderer for route transitions. Timeouts are failures, never zero. p95 is reported among measured useful frames; any missing frame fails the gate.",
+  "previousSprintAfter": {
+    "browser": "139.0.7258.5",
+    "viewport": [
+      1728,
+      966
+    ],
+    "cache": "enabled; transparent forwarding hop",
+    "cases": [
+      {
+        "case": "cold",
+        "n": 20,
+        "failed": 0,
+        "navigationFailures": 2,
+        "projectionFailures": 1,
+        "medianMs": 2000,
+        "p95Ms": 4039,
+        "limitMs": 2500,
+        "passed": false,
+        "interactiveP95Ms": 20686,
+        "requestsP95": 52,
+        "bytesP95": 10346328,
+        "mainThreadBlockingP95Ms": 2717
+      },
+      {
+        "case": "detail-to-fire",
+        "n": 20,
+        "failed": 3,
+        "navigationFailures": 0,
+        "projectionFailures": 3,
+        "medianMs": 380,
+        "p95Ms": 1721,
+        "limitMs": 1000,
+        "passed": false,
+        "interactiveP95Ms": 2387,
+        "requestsP95": 18,
+        "bytesP95": 5096923,
+        "mainThreadBlockingP95Ms": 1943
+      },
+      {
+        "case": "fire-to-response",
+        "n": 20,
+        "failed": 0,
+        "navigationFailures": 0,
+        "projectionFailures": 1,
+        "medianMs": 908,
+        "p95Ms": 3267,
+        "limitMs": 1000,
+        "passed": false,
+        "interactiveP95Ms": 4043,
+        "requestsP95": 33,
+        "bytesP95": 1900796,
+        "mainThreadBlockingP95Ms": 3053
+      },
+      {
+        "case": "cached-revisit",
+        "n": 20,
+        "failed": 0,
+        "navigationFailures": 0,
+        "projectionFailures": 0,
+        "medianMs": 159,
+        "p95Ms": 579,
+        "limitMs": 400,
+        "passed": false,
+        "interactiveP95Ms": 670,
+        "requestsP95": 3,
+        "bytesP95": 23634,
+        "mainThreadBlockingP95Ms": 599
+      },
+      {
+        "case": "incident-switch",
+        "n": 20,
+        "failed": 2,
+        "navigationFailures": 0,
+        "projectionFailures": 2,
+        "medianMs": 998,
+        "p95Ms": 5051,
+        "limitMs": 1500,
+        "passed": false,
+        "interactiveP95Ms": 7402,
+        "requestsP95": 31,
+        "bytesP95": 8927870,
+        "mainThreadBlockingP95Ms": 1019
+      },
+      {
+        "case": "overview",
+        "n": 20,
+        "failed": 0,
+        "navigationFailures": 0,
+        "projectionFailures": 0,
+        "medianMs": 587,
+        "p95Ms": 3113,
+        "limitMs": 2500,
+        "passed": false,
+        "interactiveP95Ms": 10548,
+        "requestsP95": 17,
+        "bytesP95": 4244727,
+        "mainThreadBlockingP95Ms": 841
+      },
+      {
+        "case": "national",
+        "n": 20,
+        "failed": 1,
+        "navigationFailures": 0,
+        "projectionFailures": 1,
+        "medianMs": 6226,
+        "p95Ms": 18278,
+        "limitMs": 2500,
+        "passed": false,
+        "interactiveP95Ms": 18420,
+        "requestsP95": 46,
+        "bytesP95": 5973577,
+        "mainThreadBlockingP95Ms": 918
+      }
+    ],
+    "passed": false,
+    "pageErrors": [],
+    "failedRequests": 28,
+    "waterfall": {
+      "other": {
+        "requests": 389,
+        "p95Ms": 440,
+        "ttfbP95Ms": 178,
+        "downloadP95Ms": 6
+      },
+      "javascript": {
+        "requests": 100,
+        "p95Ms": 428,
+        "ttfbP95Ms": 128,
+        "downloadP95Ms": 12
+      },
+      "api": {
+        "requests": 365,
+        "p95Ms": 8849,
+        "ttfbP95Ms": 8263,
+        "downloadP95Ms": 155
+      },
+      "imagery": {
+        "requests": 1196,
+        "p95Ms": 263,
+        "ttfbP95Ms": 188,
+        "downloadP95Ms": 12
+      },
+      "labels": {
+        "requests": 1191,
+        "p95Ms": 266,
+        "ttfbP95Ms": 186,
+        "downloadP95Ms": 9
+      }
+    }
+  },
+  "comparisonNote": "Same harness and viewport; separate time windows on this shared workstation, not a controlled isolated performance experiment."
+}

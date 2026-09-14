@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "copernicus-dem",
+  "purpose": "GLO-30/GLO-90 DEM",
+  "coverage": [
+    "portugal"
+  ],
+  "period": "static reference DEM",
+  "resolution": "tile based",
+  "collectionProcess": "CDSE OData/S3 with licence acceptance",
+  "knowledgeTimeSemantics": "STATIC_REFERENCE_INSTANCE",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "The 30 m service requires current licence acceptance/user-category access."
+  ],
+  "knownMissingness": [
+    "The 30 m service requires current licence acceptance/user-category access."
+  ],
+  "licence": "COPERNICUS-DEM-CCM",
+  "appropriateUse": "NONE",
+  "inappropriateUse": "Independent truth without lineage."
+}

@@ -1,0 +1,11 @@
+# Operational fusion and autonomous intelligence
+
+The 12 September III + IV brief explicitly approves the Mega II drawer, history, scenario, document, facility, Why and material-change composition. That supersedes the earlier pending approval gate.
+
+Design read: VIGIA is operational wildfire decision support for operators under pressure. The immediate task is to understand one incident and inspect relevant support. The existing map remains dominant. P1 incident and map, P2 relevant facility and access, P3 meaningful changes, P4 provenance, history and scenarios. Preserve near-white surfaces, navy text, restrained command red, existing controls, flat rows and hairlines. Design variance 1/10, motion 1/10, density 7/10. Safety-critical; existing converged design is authoritative.
+
+Composition: extend the existing Ask drawer with Questions, History, Scenario and Source document sections. Render facts directly as short answer paragraphs and existing detail rows. A single Brief me action returns the structured incident brief; shared access and alternatives belong in that result and facility disclosures. What Matters Now occupies the existing incident change context with at most five rows. Document candidates expose exact passages and explicit review; spatial preview is a deliberate action. Historical text does not change the map; an explicit scene action does, with a persistent historical label and return-to-current control. New analog context uses the same answer region and explains comparable and missing attributes.
+
+Desktop drawers retain their established width. Narrow drawers stack control groups, use full-width input/select and wrap long place/road names. No new primary navigation, cards, graphs, or model status feed. Loading, absence, stale, permission failure and retry remain within the selected interaction.
+
+Work: extend stored situation relationships with access resilience; add explainable historical comparison and scoped tools; integrate approved UI; profile and optimize map tiering; run a bounded 20-sentinel model gate and existing 120-case corpus where supported; prove real relationships, controlled admission, history, scenarios, restart and responsive interactions. Preserve all inherited changes and distinguish every evidence lane.

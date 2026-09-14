@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "vigia.authoritative-crisis-truth-gate.v1",
+  "generatedAt": "2026-08-25T16:09:08.603Z",
+  "checks": {
+    "legitimateOfficialOneHourLabel": false,
+    "legitimateOfficialThreeHourLabel": false,
+    "completeChronology": false,
+    "validAuthorityClass": false,
+    "forecastEvaluationExecuted": false,
+    "decisionPacketUpdated": false,
+    "fullReplayPassed": true,
+    "zeroNewRegressions": true
+  },
+  "officialLabels": {
+    "oneHour": 0,
+    "threeHour": 0
+  },
+  "passed": false,
+  "decision": "AUTHORITATIVE_CRISIS_TRUTH_GATE_NOT_PASSED",
+  "preciseRemainingBlocker": "TIME_ACCUMULATION_REQUIRED",
+  "strongerScientificPromotionGate": {
+    "separate": true,
+    "oneHourLabels": 10,
+    "threeHourLabels": 10,
+    "independentDevelopmentCalibrationHeldOutRequired": true
+  },
+  "fingerprint": "authoritative-crisis-truth-gate:sha256:0435622730d3386dc2f820d26a452462d458c546480ff4a38c80ba9d0d9ad1b7"
+}

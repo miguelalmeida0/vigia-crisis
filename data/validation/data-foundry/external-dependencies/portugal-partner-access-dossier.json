@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "vigia.portugal-partner-access-dossier.v1",
+  "state": "BLOCKED_EXTERNAL_ACCESS",
+  "region": "Portugal / Mediterranean Europe",
+  "requiredHistoricalPeriod": {
+    "from": "2022-01-01T00:00:00Z",
+    "to": "2026-12-31T23:59:59Z"
+  },
+  "requiredSource": [
+    "ICNF archived operational incident perimeters",
+    "Copernicus Emergency Management Service activation situation maps or EFFIS rapid-damage/progression snapshots"
+  ],
+  "specificProductOrEndpoint": [
+    "ICNF partner archive/API for operational perimeter revisions; public annual burned-area catalogue is final-only",
+    "CEMS Rapid Mapping historical activation products/API with publication chronology",
+    "EFFIS partner/API issue-time fire-perimeter revisions if separately licensed"
+  ],
+  "requiredCredentialOrAgreement": [
+    "ICNF data-sharing agreement or authenticated archive credential",
+    "CEMS/EFAS Data Store or EFFIS partner access as applicable"
+  ],
+  "exactMissingFields": [
+    "stable incident identifier",
+    "revision identifier",
+    "native geometry and CRS",
+    "physical observation time",
+    "provider publication time",
+    "provider modification time",
+    "supersession/correction state",
+    "incident status/type",
+    "source agency",
+    "licence and redistribution terms"
+  ],
+  "requiredPublicationTimestamps": [
+    "providerPublishedAt for every revision",
+    "providerModifiedAt when supplied",
+    "archive retrieval receipt"
+  ],
+  "requiredRights": [
+    "raw retention",
+    "internal transformation",
+    "derived evaluation use",
+    "redistribution and attribution rules"
+  ],
+  "adapterReadiness": {
+    "state": "READY_FOR_SAMPLE",
+    "parserContract": "vigia.portugal-operational-perimeter-contract.v1",
+    "rawVault": "READY",
+    "bitemporalNormalizer": "READY",
+    "missing": "representative payload and access agreement"
+  },
+  "acceptanceTest": [
+    "payload passes size/schema/geometry/CRS contract",
+    "providerPublishedAt is source-supplied and not inferred from geometry date",
+    "three or more valid revisions bind to one authoritative incident ID",
+    "all revisions preserve raw hashes and supersession",
+    "at least one 3h/6h/12h horizon-compatible label can be constructed without hindsight",
+    "rights manifest permits internal derived evaluation"
+  ],
+  "sampleExpectedPayloadSchema": {
+    "incidentId": "string",
+    "revisionId": "string",
+    "geometry": {
+      "type": "Polygon|MultiPolygon",
+      "coordinates": "GeoJSON coordinates"
+    },
+    "crs": "EPSG identifier",
+    "observedAt": "ISO-8601 source time",
+    "providerPublishedAt": "ISO-8601 source publication time",
+    "providerModifiedAt": "ISO-8601|null",
+    "status": "ACTIVE|CONTAINED|FINAL|CORRECTED",
+    "sourceAgency": "string",
+    "supersedesRevisionId": "string|null",
+    "licenceId": "string"
+  },
+  "shortestExternalAction": "Provide one representative 2024 operational incident revision sequence plus written use rights and publication-time semantics to run the prepared acceptance test."
+}

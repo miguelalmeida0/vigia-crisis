@@ -1,0 +1,298 @@
+{
+  "basis": "Production source hashes captured before this request, plus explicitly edited tests. Prior dirty changes excluded. Generated runtime and documentation artifacts are listed separately in the final report.",
+  "files": [
+    {
+      "path": "AGENTS.override.md",
+      "change": "modified",
+      "beforeSha256": "cf92b477f0cafd59984c68ffb0317cc16812b11d95d2dd8e3494391c5dc4f68f",
+      "afterSha256": "3a12f992d849d4a0b7e3c9169d93d738dca8fe493cb89f431409151c7d37019e"
+    },
+    {
+      "path": "apps/api/src/modules/operator/canonical-operator-api-service.mjs",
+      "change": "modified",
+      "beforeSha256": "2ff0eed23831478a997eb449e0007cfa2517def245416c810e0ad9aa27666367",
+      "afterSha256": "0d30f20eb649d09c35420172bbb10a3983a28ba3e837dcf9a4a799e49afbab75"
+    },
+    {
+      "path": "apps/api/src/modules/operator/decision-intelligence-service.mjs",
+      "change": "modified",
+      "beforeSha256": "cbfde760e165bc97713b5252fad04d53855ccc38e1ce7d22ed31753c8c4f9943",
+      "afterSha256": "dfbbe40fcb0af9eb21f5a2a6ca2edee02c772be41ddb0f91ebc524965ecfe443"
+    },
+    {
+      "path": "apps/api/src/modules/operator/final-gap-closure-service.mjs",
+      "change": "modified",
+      "beforeSha256": "a745f43505e2090f1cf8b419d5dc5f0729ee6546a26d9714b322ab27e38d5dd9",
+      "afterSha256": "61546e328676af356d6d0a7b722ca4dff875915d88d9b233ed0f6dc192c157f1"
+    },
+    {
+      "path": "apps/api/src/modules/operator/operator-intelligence-projection.mjs",
+      "change": "modified",
+      "beforeSha256": "da82cedbeb5225dcd62b0ba901e3a23a822ed6ee6c3e1c43b16ca853ce6e1fd4",
+      "afterSha256": "49f4a689fc331e9c5280911c6dddb50a9c06fddc7dfb02163276cb425bd38923"
+    },
+    {
+      "path": "apps/api/src/modules/operator/physical-activity.mjs",
+      "change": "added",
+      "afterSha256": "693f97d6ce5ddfe42ee55a223c40a0faf8aa14c9c117dc2d6123e812a1f35220"
+    },
+    {
+      "path": "apps/api/src/modules/world/ipma-gateway.mjs",
+      "change": "modified",
+      "beforeSha256": "1ffdeb88010b3f57404b4044a5302eded34be5480019883df3f2da0b8359beba",
+      "afterSha256": "056ce5ff9ce400b26903dd7811fc6ed130595d62212c7798cc3d06443adc357a"
+    },
+    {
+      "path": "apps/api/src/modules/world/live-source-gateway.mjs",
+      "change": "modified",
+      "beforeSha256": "4c32c842bb424d959f77b81ab80209b72d11336a1e2477a8c51599d84665a5f5",
+      "afterSha256": "cf377b72d96388bf3f72fccb68a2ffd0fdcd2d970da6aa0cbeb526f13d8f1ea1"
+    },
+    {
+      "path": "apps/api/src/modules/world/ptdata-normalizers.mjs",
+      "change": "modified",
+      "beforeSha256": "59962c9194370ee968be845bde1942add841578fba3816bbbd49b977c26b81f9",
+      "afterSha256": "17df1ad730db0bf2523ff026d1544011ffb4d928a8c00445f16a300c602b60cc"
+    },
+    {
+      "path": "apps/api/src/modules/world/world-service.mjs",
+      "change": "modified",
+      "beforeSha256": "a34d9b47ab3eef029da35894d45ebac8b43758fc351dae5f6e9c71fbdb6c1465",
+      "afterSha256": "3751d037a8e8cbeccaf088af2b8e8c65688d63252225e58347f92fac0e94fc08"
+    },
+    {
+      "path": "apps/api/test/physical-metrics.test.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "deb0dbaa778e80ad11349e925cc627257502cbc0746db70990742e0bed1e987a"
+    },
+    {
+      "path": "apps/api/test/reality-first-api.test.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "134e66c492a43a15fa66c2595829175a0edb90d3f6b6faf9ba5d159ddb74de8f"
+    },
+    {
+      "path": "apps/operator-console/src/app.js",
+      "change": "modified",
+      "beforeSha256": "087275d89a5f830be2e9a027b47cb219309ef28370cd771cedf93f6e6a4ff4da",
+      "afterSha256": "2f82508489726f0069a5ab09799c25070863c39f2febfd23fd0c3f98508a3c93"
+    },
+    {
+      "path": "apps/operator-console/src/appActionController.js",
+      "change": "modified",
+      "beforeSha256": "3ded5a6ebdd397e6d4ac97ea038e85ed57c70f676750f2961bd683e3c4e61c8d",
+      "afterSha256": "8277b87d089bcd7fe21377a3b6eaa16128e86f0090d916900008221b1b613ba6"
+    },
+    {
+      "path": "apps/operator-console/src/approved/controller.js",
+      "change": "modified",
+      "beforeSha256": "a18a974b73a928235dc3feda89f0934955bcf54c8ef0fb5ad89221dfa657e2b1",
+      "afterSha256": "e32e0fa3a6666c5951a03ded098b4c304443e48cc09b287143d558bb1b865a0c"
+    },
+    {
+      "path": "apps/operator-console/src/approved/data/model.js",
+      "change": "modified",
+      "beforeSha256": "edf3558e00f8cb108dc8cc108501d56c977a6840d1a4fc8d489b7416e299eb8b",
+      "afterSha256": "d0be2c7eb02165aff1c29e3ff859c2a44f8e4eebee979b0bb66dec1ebb33970d"
+    },
+    {
+      "path": "apps/operator-console/src/approved/data/physical.js",
+      "change": "modified",
+      "beforeSha256": "9fd41ba5d93e75c3f4db4c21c866578362b0950fd6d020448a31bece46523af7",
+      "afterSha256": "b82086c79f10b3d92eecdfc12fd4f16ff12e180aee3e8b519e1606c49bd25ea0"
+    },
+    {
+      "path": "apps/operator-console/src/approved/routes/detail.js",
+      "change": "modified",
+      "beforeSha256": "351e55ee3da02a580e59927b32e87e8737ed176eda575b98ea6137e404939f81",
+      "afterSha256": "4dc7b22b63d9c6d3e36307166dc0831e4aafb40e1c8a82aee6fabd987904a6c8"
+    },
+    {
+      "path": "apps/operator-console/src/approved/routes/intelligence.js",
+      "change": "modified",
+      "beforeSha256": "ca0142c296f67e03fa5a52504662aa282fd3b563f06a12fa7f8e65eb2604d64a",
+      "afterSha256": "50277a12e4c292662e12b6398bbf699690b92468f4e064d481d60a6197ea04c0"
+    },
+    {
+      "path": "apps/operator-console/src/approved/routes/national.js",
+      "change": "modified",
+      "beforeSha256": "adb6f25f600523f29287be6e218031cd5cac45611091205ae29c0d434cec477b",
+      "afterSha256": "d0d384fb58f72b3258946aecbef62f8ae109ae89ccbff911c7fd9fda75850720"
+    },
+    {
+      "path": "apps/operator-console/src/approved/routes/operations.js",
+      "change": "modified",
+      "beforeSha256": "d2bf4c068d7563fcba111de9207bfaabb2be2d74bd0d8e74b4ebb6f53e603352",
+      "afterSha256": "2e16fd73a24719e4244b30d420e20f00fa2441b663eb450302a45793a17ca1b4"
+    },
+    {
+      "path": "apps/operator-console/src/approved/routes/overview.js",
+      "change": "modified",
+      "beforeSha256": "37bedf6f4ab83a67d7abd82d373e16bc61a046a100b02c6e1875563acc4b09ae",
+      "afterSha256": "38c5f8a31eec2641021fc294fb76cdeb8f567d53519ca7e9bda2f1fc884adebf"
+    },
+    {
+      "path": "apps/operator-console/src/approved/routes/reports.js",
+      "change": "modified",
+      "beforeSha256": "8165fd5af30a428f255ce9ffbc3c8fa2f88b6feb43ee0bec77069f29a277eb5c",
+      "afterSha256": "d6cda379819c26d36e3971e46a7a096d9286368ab32c5e3ca6dacebfd8b9abc4"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/activity.js",
+      "change": "modified",
+      "beforeSha256": "215d4f9057779fa3e335f82a8bce1837832899df97a3bc6ba3bd4cd63c729a20",
+      "afterSha256": "ba229de39aa0367430f9bbf8ed86f3a0b8a07fbbf6284743f99d9375281da73e"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/decision-intelligence.js",
+      "change": "modified",
+      "beforeSha256": "a7dfe73314ef7603d91e710bfa3e5aa668830bd73b54b25c3330be30f38e7efc",
+      "afterSha256": "c70c25c86af30654a514cc03f66ace2414144f84fa13bf3e74083ee8620b167f"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/map.js",
+      "change": "modified",
+      "beforeSha256": "5ab489b54e933c94e7e7b6540f4718be9430e8d5f8d566018762e35267c75371",
+      "afterSha256": "d058f08efb7c22b05559267dc96d4797b1d11acc03f9de6484f1e13f2e26d89f"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/operator-answers.js",
+      "change": "added",
+      "afterSha256": "86b7cee8caed9c23238f15c8cfb2172910519b1ae6ad67571753e99c2ddaf8f1"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/physical.js",
+      "change": "modified",
+      "beforeSha256": "633f469631260d1388244602ea83e2921f245983c2b11a1a9f1b2f8c9903ffdb",
+      "afterSha256": "3b8117d46a2a6d4c29062ffd687ce5475591ba67679a75e616569106f8c523ea"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/shell.js",
+      "change": "modified",
+      "beforeSha256": "d036d40622896909a6d5427303c2e0f2953ec13da1eb01f96e8bd76795eb5b6e",
+      "afterSha256": "483589f1241d87a9815a1c03e9433dd3748f1d567d660ff24da2d7c66d1d3669"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/signals.js",
+      "change": "modified",
+      "beforeSha256": "d090a4c5532cd60c4ccb26c753defeb12e7a4080a8cf92b3ad35975b31d626fb",
+      "afterSha256": "3061cc5ff88e654312ded903b40ef4c07900f5a63c0e004fe20e5e912d0d2e23"
+    },
+    {
+      "path": "apps/operator-console/src/bootSkeleton.js",
+      "change": "modified",
+      "beforeSha256": "0e68f578fce9de27b19bcb9a97e65f6720235c3abffa3255a76506d8b767afa8",
+      "afterSha256": "94a12b033355f7dd98cb2ae340cefe8488dbdaad144bb505a991efdc032d8c89"
+    },
+    {
+      "path": "apps/operator-console/src/canonicalComponents.js",
+      "change": "modified",
+      "beforeSha256": "db9305f1d74aaf7754c8dbaa7ebc1b3e52de5879c55f2a154850225c4832ccc9",
+      "afterSha256": "9ea153f664fde6e9557041ca5d93eda2dcf1183e56d7bfb432e5f56a462e5f0a"
+    },
+    {
+      "path": "apps/operator-console/src/canonicalViewModel.js",
+      "change": "modified",
+      "beforeSha256": "a93790fbae2af42d555e32e99ed895ade1df0d2e0f544ac500bdf84eab5ae302",
+      "afterSha256": "2cb72cd66c33f4347988517db6b51d37367b1dacfdc35f0229cdd275bcf60901"
+    },
+    {
+      "path": "apps/operator-console/src/components.js",
+      "change": "modified",
+      "beforeSha256": "02574a62cf6c886d28fce5cf2f1f4135a0f4c1e5c2b89783af8ea4659378a54b",
+      "afterSha256": "91457a77b6206ee8f272e2059150dffe61da11be66b540551f68a4c8415809ac"
+    },
+    {
+      "path": "apps/operator-console/src/mapModel.js",
+      "change": "modified",
+      "beforeSha256": "3ad330691473a68c212afb8507704ec26b20ac8d21653f3ae20cd6ea9b91569b",
+      "afterSha256": "c37d46dd99b568a82b4b2e9bc3f3e0d136b17f6361db0e0e8a38019580eacdb3"
+    },
+    {
+      "path": "apps/operator-console/src/operatorPrimitives.js",
+      "change": "modified",
+      "beforeSha256": "85483bdce3204d9cead69b6f36532af52d302cf6fa6fbb706c118cec861e857a",
+      "afterSha256": "3514d918937442d8e5c7e5e3d25c9737ec5bd87018ba1e8245e17f6710850c0b"
+    },
+    {
+      "path": "apps/operator-console/src/runtimeLoader.js",
+      "change": "modified",
+      "beforeSha256": "e7a4aea085a7ce7cbe6064b93a35341c6cf75103926440590c4c52bb00f4d75b",
+      "afterSha256": "5ce39db2cbcd918bf707c258cf3d033727fcafb6ab3400cebfeb906ed89b0c0a"
+    },
+    {
+      "path": "apps/operator-console/styles/approved/signals.css",
+      "change": "modified",
+      "beforeSha256": "62f6e2fd4b9166791d769c0ca5fb8dff4ba671bb3c8e66db5c8cd4363897327a",
+      "afterSha256": "6929fd07f51febee31e10ae30804c92d2a72f3f8fb56636d9a396eb904a567c6"
+    },
+    {
+      "path": "apps/operator-console/tests/physical-metrics.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "7e9d2b658a712556132cfef52589920e058e94f5c093dcd12253bc11aa54a32f"
+    },
+    {
+      "path": "apps/operator-console/tests/signal-composition.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "eb0901d42159044ff71bd43af9b91147d5f1ac825d389de354e783e6edd5441e"
+    },
+    {
+      "path": "apps/operator-console/tests/truth-integrity.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "e803990bdc613e1eb355b353459c22d39a49abfcfab9a24f29d94448b5b6b8d5"
+    },
+    {
+      "path": "apps/operator-console/tests/ux-contract.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "652aa084d8ad5e23d17b198f10733060ac970f55e151912e45a1f0daf8cc4a9b"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/ipma-warning-areas.mjs",
+      "change": "added",
+      "afterSha256": "8ef766dad9e2a0aa1dccf5c6a589fcf729def2c8e8783cc114486c7d89c6b8ad"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/operator-questions.mjs",
+      "change": "added",
+      "afterSha256": "6f6314ec0674e6649d0297e8c04792773c52e4d98600160901d50a75f6dade58"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/physical-conditions.mjs",
+      "change": "modified",
+      "beforeSha256": "613e89ecd92d4080b875f3cbe655d7e4611bf3ad084a51e7bee28cde935d489c",
+      "afterSha256": "35df19b00c1e24ad8e2ba72dadd7219ce9d9ba80d28946109cec192787ab923d"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/physical-metric.mjs",
+      "change": "modified",
+      "beforeSha256": "c159b4791eefa3c354232f80188d4b485130e4321f5604df7cbebf1bfa4ae3ee",
+      "afterSha256": "befd35035060c281a6007a722e8fd041474444932ee7c1991ecd47d8ffe6261f"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/physical-world-context.mjs",
+      "change": "modified",
+      "beforeSha256": "243d55a4e0d6b6b45ea946c1e71f113b2e0f91cf510e2a254add718086c196ff",
+      "afterSha256": "5bcbb8f866eed4a4a4942f4d5593f74225d0f0ba9b18b2ccbac5ec252d7abbde"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/physical-world.mjs",
+      "change": "modified",
+      "beforeSha256": "910057ade622005391c0c2498d789d1b5707d49ae35a0072b15b814f405e564e",
+      "afterSha256": "720920b32cb1847dd377b3d4e15fd8be8f125559503c4ce1c12beca7f9bb022b"
+    },
+    {
+      "path": "packages/domain/src/operational-twin/real-world-value.mjs",
+      "change": "added",
+      "afterSha256": "532f94c9f1ed211be97bfc7d5dac6cb76b1c8dc5e04e90961a39f04bcfe3c5ce"
+    },
+    {
+      "path": "packages/domain/test/intelligence/physical-world.test.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "520cc9507f806501abe4872edb807842775eebf741866c6b711c23345a7cb0e1"
+    },
+    {
+      "path": "packages/domain/test/intelligence/reality-first.test.mjs",
+      "change": "test added or updated in this task",
+      "afterSha256": "ab069efa38c49c0b880701f50ccadab828f22f8429931c49351b4a31f3d79a97"
+    }
+  ]
+}

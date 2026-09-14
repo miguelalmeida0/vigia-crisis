@@ -1,0 +1,206 @@
+services:
+  postgis:
+    image: postgis/postgis:17-3.5@sha256:0a23a2b5e4fbd9b4c6980d20ee80dd6b63dec52669379c75a506db58a4116708
+    environment:
+      POSTGRES_DB: vigia
+      POSTGRES_USER: vigia
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets: [postgres_password]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vigia -d vigia"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes: [vigia-postgis:/var/lib/postgresql/data]
+    networks: [database]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 2g
+    cpus: 2.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+  migration:
+    image: "${VIGIA_API_IMAGE_REFERENCE:?set VIGIA_API_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    command: ["node", "scripts/migrate_postgis.mjs"]
+    environment:
+      VIGIA_DATABASE_URL_FILE: /run/secrets/database_url
+      VIGIA_LOCAL_SECRETS_DISABLED: "1"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    secrets: [database_url]
+    networks: [database]
+    depends_on:
+      postgis: { condition: service_healthy }
+    restart: "no"
+  api:
+    image: "${VIGIA_API_IMAGE_REFERENCE:?set VIGIA_API_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4177
+      VIGIA_DATABASE_URL_FILE: /run/secrets/database_url
+      VIGIA_SECRETS_FILE: /run/secrets/provider_credentials
+      VIGIA_OPERATOR_PROXY_KEY_FILE: /run/secrets/operator_proxy_key
+      VIGIA_FIELDNET_NODE_REGISTRY_FILE: /run/secrets/fieldnet_node_registry
+      VIGIA_OPERATOR_CONSOLE_ORIGIN: "http://127.0.0.1:${VIGIA_SHADOW_PORT:-4190}"
+      VIGIA_RUNTIME_PROFILE: remote_shadow
+      VIGIA_RELEASE_ID: "${VIGIA_RELEASE_ID:?set VIGIA_RELEASE_ID}"
+      VIGIA_CODE_STATE_HASH: "${VIGIA_CODE_STATE_HASH:?set VIGIA_CODE_STATE_HASH}"
+      VIGIA_OPERATIONAL_DATA_HASH: "${VIGIA_OPERATIONAL_DATA_HASH:?set VIGIA_OPERATIONAL_DATA_HASH}"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    secrets: [database_url, provider_credentials, operator_proxy_key, fieldnet_node_registry]
+    networks: [database, fieldnet_control, operator_control, api_ingress]
+    depends_on:
+      migration: { condition: service_completed_successfully }
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4177/api/v10/release').then(async r=>{const b=await r.json(),d=b.schema?.deploymentIdentity;if(!r.ok||b.releaseId!==process.env.VIGIA_RELEASE_ID||b.codeStateHash!==process.env.VIGIA_CODE_STATE_HASH||b.operationalDataHash!==process.env.VIGIA_OPERATIONAL_DATA_HASH||b.releaseStatementHash!==process.env.VIGIA_APPROVED_RELEASE_STATEMENT_SHA256||d?.state!=='ready'||d.releaseId!==b.releaseId||d.codeStateHash!==b.codeStateHash||d.migrationHead!==b.migrationHead)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    ports: ["127.0.0.1:${VIGIA_API_PORT:-4177}:4177"]
+    volumes: [vigia-runtime:/opt/vigia/data/runtime]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 2g
+    cpus: 2.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+  fieldnet:
+    image: "${VIGIA_API_IMAGE_REFERENCE:?set VIGIA_API_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    command: ["node", "apps/field-node/src/server.mjs"]
+    environment:
+      FIELDNET_HOST: 0.0.0.0
+      FIELDNET_PORT: 4188
+      FIELDNET_PUBLIC_AUTHORITY: "127.0.0.1:${VIGIA_FIELDNET_PORT:-4188}"
+      FIELDNET_ALLOW_SHARED_CONTROL_LISTENER: "1"
+      FIELDNET_CONTROL_KEY_FILE: /run/secrets/fieldnet_control_key
+      FIELDNET_CONTROL_KEY_ID: field-operator
+      FIELDNET_CONTROL_INCIDENT_SCOPES: "${VIGIA_FIELDNET_INCIDENT_SCOPE:?set VIGIA_FIELDNET_INCIDENT_SCOPE}"
+      FIELDNET_NODE_ID: "${VIGIA_FIELDNET_NODE_ID:-field-node:pilot-1}"
+      FIELDNET_NODE_KEY_FILE: /run/secrets/fieldnet_node_key
+      FIELDNET_CENTRAL_URL: http://api:4177/api/v10
+      FIELDNET_DB_PATH: data/runtime/fieldnet/pilot.sqlite
+      VIGIA_RUNTIME_PROFILE: remote_shadow
+      VIGIA_RELEASE_ID: "${VIGIA_RELEASE_ID:?set VIGIA_RELEASE_ID}"
+      VIGIA_CODE_STATE_HASH: "${VIGIA_CODE_STATE_HASH:?set VIGIA_CODE_STATE_HASH}"
+      VIGIA_OPERATIONAL_DATA_HASH: "${VIGIA_OPERATIONAL_DATA_HASH:?set VIGIA_OPERATIONAL_DATA_HASH}"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    secrets: [fieldnet_control_key, fieldnet_node_key]
+    networks: [fieldnet_control, fieldnet_ingress]
+    depends_on:
+      api: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('node:http').get('http://127.0.0.1:4188/api/fieldnet/release',{headers:{host:process.env.FIELDNET_PUBLIC_AUTHORITY}},r=>{let s='';r.on('data',c=>{s+=c;if(s.length>65536){r.destroy();process.exit(1)}});r.on('end',()=>{try{const b=JSON.parse(s);if(r.statusCode!==200||b.releaseId!==process.env.VIGIA_RELEASE_ID||b.codeStateHash!==process.env.VIGIA_CODE_STATE_HASH||b.operationalDataHash!==process.env.VIGIA_OPERATIONAL_DATA_HASH||b.releaseStatementHash!==process.env.VIGIA_APPROVED_RELEASE_STATEMENT_SHA256)process.exit(1)}catch{process.exit(1)}})}).on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    ports: ["127.0.0.1:${VIGIA_FIELDNET_PORT:-4188}:4188"]
+    volumes: [vigia-fieldnet:/opt/vigia/data/runtime/fieldnet]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 1g
+    cpus: 1.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+  web:
+    image: "${VIGIA_OPERATOR_IMAGE_REFERENCE:?set VIGIA_OPERATOR_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.operator
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4190
+      VIGIA_BACKEND_URL: http://api:4177
+      VIGIA_RUNTIME_PROFILE: remote_shadow
+      VIGIA_OPERATOR_PUBLIC_AUTHORITY: "127.0.0.1:${VIGIA_SHADOW_PORT:-4190}"
+      VIGIA_OPERATOR_PROXY_KEY_FILE: /run/secrets/operator_proxy_key
+      VIGIA_OPERATOR_ACCESS_TOKEN_FILE: /run/secrets/operator_access_token
+      VIGIA_RELEASE_ID: "${VIGIA_RELEASE_ID:?set VIGIA_RELEASE_ID}"
+      VIGIA_CODE_STATE_HASH: "${VIGIA_CODE_STATE_HASH:?set VIGIA_CODE_STATE_HASH}"
+      VIGIA_OPERATOR_SOURCE_HASH: "${VIGIA_OPERATOR_SOURCE_HASH:?set VIGIA_OPERATOR_SOURCE_HASH}"
+      VIGIA_OPERATOR_ASSET_DIGEST: "${VIGIA_OPERATOR_ASSET_DIGEST:?set VIGIA_OPERATOR_ASSET_DIGEST}"
+      VIGIA_OPERATIONAL_DATA_HASH: "${VIGIA_OPERATIONAL_DATA_HASH:?set VIGIA_OPERATIONAL_DATA_HASH}"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    secrets: [operator_proxy_key, operator_access_token]
+    networks: [operator_control, operator_ingress]
+    ports: ["127.0.0.1:${VIGIA_SHADOW_PORT:-4190}:4190"]
+    depends_on:
+      api: { condition: service_healthy }
+      fieldnet: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('node:http').get({hostname:'127.0.0.1',port:4190,path:'/__operator/ready',headers:{host:process.env.VIGIA_OPERATOR_PUBLIC_AUTHORITY}},r=>{let s='';r.on('data',c=>{s+=c;if(s.length>65536){r.destroy();process.exit(1)}});r.on('end',()=>{try{const b=JSON.parse(s);if(r.statusCode!==200||b.releaseId!==process.env.VIGIA_RELEASE_ID||b.codeStateHash!==process.env.VIGIA_CODE_STATE_HASH||b.operationalDataHash!==process.env.VIGIA_OPERATIONAL_DATA_HASH||b.releaseStatementHash!==process.env.VIGIA_APPROVED_RELEASE_STATEMENT_SHA256||b.sourceHash!==process.env.VIGIA_OPERATOR_SOURCE_HASH||b.assetDigest!==process.env.VIGIA_OPERATOR_ASSET_DIGEST)process.exit(1)}catch{process.exit(1)}})}).on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    stop_grace_period: 20s
+    mem_limit: 512m
+    cpus: 1.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+  backup:
+    image: postgis/postgis:17-3.5@sha256:0a23a2b5e4fbd9b4c6980d20ee80dd6b63dec52669379c75a506db58a4116708
+    profiles: [maintenance]
+    environment:
+      PGHOST: postgis
+      PGUSER: vigia
+      PGDATABASE: vigia
+    secrets: [postgres_password]
+    volumes: [vigia-backups:/backups]
+    command: ["sh", "-c", "export PGPASSWORD=$$(cat /run/secrets/postgres_password); exec pg_dump -Fc --no-owner --file=/backups/vigia-$$(date -u +%Y%m%dT%H%M%SZ).dump"]
+    depends_on:
+      postgis: { condition: service_healthy }
+    networks: [database]
+secrets:
+  postgres_password:
+    file: "${VIGIA_POSTGRES_PASSWORD_FILE:?set VIGIA_POSTGRES_PASSWORD_FILE}"
+  database_url:
+    file: "${VIGIA_DATABASE_URL_FILE:?set VIGIA_DATABASE_URL_FILE}"
+  provider_credentials:
+    file: "${VIGIA_PROVIDER_CREDENTIALS_FILE:?set VIGIA_PROVIDER_CREDENTIALS_FILE}"
+  operator_proxy_key:
+    file: "${VIGIA_OPERATOR_PROXY_KEY_FILE:?set VIGIA_OPERATOR_PROXY_KEY_FILE}"
+  operator_access_token:
+    file: "${VIGIA_OPERATOR_ACCESS_TOKEN_FILE:?set VIGIA_OPERATOR_ACCESS_TOKEN_FILE}"
+  fieldnet_control_key:
+    file: "${VIGIA_FIELDNET_CONTROL_KEY_FILE:?set VIGIA_FIELDNET_CONTROL_KEY_FILE}"
+  fieldnet_node_key:
+    file: "${VIGIA_FIELDNET_NODE_KEY_FILE:?set VIGIA_FIELDNET_NODE_KEY_FILE}"
+  fieldnet_node_registry:
+    file: "${VIGIA_FIELDNET_NODE_REGISTRY_FILE:?set VIGIA_FIELDNET_NODE_REGISTRY_FILE}"
+volumes:
+  vigia-postgis:
+  vigia-runtime:
+  vigia-fieldnet:
+  vigia-backups:
+networks:
+  database: { internal: true }
+  fieldnet_control: { internal: true }
+  operator_control: { internal: true }
+  api_ingress: {}
+  fieldnet_ingress: {}
+  operator_ingress: {}

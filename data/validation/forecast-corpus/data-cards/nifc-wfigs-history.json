@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "nifc-wfigs-history",
+  "purpose": "best available perimeter; incident history",
+  "coverage": [
+    "western-us"
+  ],
+  "period": "current decade plus historical integrations",
+  "resolution": "national",
+  "collectionProcess": "public ArcGIS FeatureServer",
+  "knowledgeTimeSemantics": "RETROSPECTIVE",
+  "labelConstruction": "Retrospective label only.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "One best available geometry does not reconstruct historical knowledge time."
+  ],
+  "knownMissingness": [
+    "One best available geometry does not reconstruct historical knowledge time."
+  ],
+  "licence": "NIFC-OPEN-DATA",
+  "appropriateUse": "FINAL_ONLY",
+  "inappropriateUse": "Issue-time progression feature."
+}

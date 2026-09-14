@@ -1,0 +1,22 @@
+ALTER TABLE incident_decision_ledger
+  DROP CONSTRAINT IF EXISTS incident_decision_ledger_decision_type_check;
+
+ALTER TABLE incident_decision_ledger
+  ADD CONSTRAINT incident_decision_ledger_decision_type_check
+  CHECK (decision_type IN (
+    'ALERT_OPENED',
+    'ALERT_UPDATED',
+    'EVIDENCE_PLAN_CREATED',
+    'OPPORTUNITY_SELECTED',
+    'WATCH_ARMED',
+    'EVIDENCE_ASSOCIATED',
+    'UNKNOWN_CLOSED',
+    'UNKNOWN_PRESERVED',
+    'PREVENTION_REVIEW_ACCEPTED',
+    'PREVENTION_REVIEW_REJECTED',
+    'COVERAGE_GAP_IDENTIFIED',
+    'FIRE_TRUTH_STATE_RECOMPUTED',
+    'EVIDENCE_RACE_ARMED',
+    'EVIDENCE_RACE_SETTLED',
+    'ALERT_MATERIAL_UPDATE'
+  ));

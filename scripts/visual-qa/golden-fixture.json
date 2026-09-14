@@ -1,0 +1,259 @@
+{
+  "schemaVersion": "vigia.visual-qa-golden-fixture.v1",
+  "sentinel": "VIGIA_TEST_ONLY_GOLDEN_VISUAL_LANE_DO_NOT_SHIP",
+  "frozenAt": "2025-05-15T21:37:12.000Z",
+  "region": "NORCAL REGION",
+  "command": "WILDFIRE COMMAND",
+  "commandOverview": {
+    "schemaVersion": "vigia.test-only-golden-command-projection.v1",
+    "conditions": {
+      "region": "NORCAL REGION",
+      "command": "WILDFIRE COMMAND",
+      "localDate": "May 15, 2025",
+      "localTime": "14:37",
+      "timezone": "PDT",
+      "temperatureF": 72,
+      "sky": "clear"
+    },
+    "telemetry": {
+      "activeIncidents": 5,
+      "totalAcres": 18392,
+      "unitsDeployed": 42,
+      "intelConfidence": 87,
+      "windBearing": "NW",
+      "windSpeedMph": 8,
+      "windGustMph": 20
+    },
+    "focusedIncidentId": "INC-2025-0515-0012",
+    "priorityIncidents": [
+      {"incidentId":"INC-2025-0515-0012","priority":1,"name":"Ridge Fire","state":"ACTIVE","areaHa":2147,"growth2hPercent":24,"containmentPercent":15,"updatedAt":"2025-05-15T21:35:12.000Z"},
+      {"incidentId":"INC-2025-0515-0017","priority":2,"name":"Pine Valley Fire","state":"ACTIVE","areaHa":1285,"growth2hPercent":8,"containmentPercent":10,"updatedAt":"2025-05-15T21:31:12.000Z"},
+      {"incidentId":"INC-2025-0515-0021","priority":3,"name":"Oak Creek Fire","state":"CONTAINED","areaHa":851,"growth2hPercent":0,"containmentPercent":95,"updatedAt":"2025-05-15T21:22:12.000Z"},
+      {"incidentId":"INC-2025-0515-0024","priority":4,"name":"Mountain View Fire","state":"CONTAINED","areaHa":238,"growth2hPercent":0,"containmentPercent":100,"updatedAt":"2025-05-15T21:05:12.000Z"},
+      {"incidentId":"INC-2025-0515-0029","priority":5,"name":"Sunset Fire","state":"MONITORING","areaHa":41,"growth2hPercent":null,"containmentPercent":0,"updatedAt":"2025-05-15T20:52:12.000Z"}
+    ],
+    "activity": [
+      {"incidentId":"INC-2025-0515-0012","incident":"Ridge Fire","state":"ACTIVE","areaHa":2147,"summary":"Rapid spread to the southeast. Evacuations in progress.","updatedAt":"2025-05-15T21:35:12.000Z"},
+      {"incidentId":"INC-2025-0515-0017","incident":"Pine Valley Fire","state":"ACTIVE","areaHa":1285,"summary":"Wind-driven growth on western flank. Structure threat increasing.","updatedAt":"2025-05-15T21:31:12.000Z"},
+      {"incidentId":"INC-2025-0515-0021","incident":"Oak Creek Fire","state":"CONTAINED","areaHa":851,"summary":"Containment holding. Mop-up operations continue.","updatedAt":"2025-05-15T21:22:12.000Z"},
+      {"incidentId":"INC-2025-0515-0029","incident":"Sunset Fire","state":"MONITORING","areaHa":41,"summary":"Small fire under monitoring. No threat to communities.","updatedAt":"2025-05-15T20:52:12.000Z"}
+    ],
+    "priorityFactors": [
+      {"factor":"Threat to Life","weight":40,"impact":92,"tone":"critical"},
+      {"factor":"Rate of Spread","weight":25,"impact":78,"tone":"critical"},
+      {"factor":"Exposure","weight":20,"impact":64,"tone":"warning"},
+      {"factor":"Resource Demand","weight":10,"impact":46,"tone":"positive"},
+      {"factor":"Containment Progress","weight":5,"impact":28,"tone":"positive"}
+    ],
+    "watchTriggers": [
+      {"indicator":"Wind Shift / Increase","threshold":"> 20 mph sustained","impact":"Higher spread potential","icon":"wind"},
+      {"indicator":"RH Lower Than Forecast","threshold":"< 15% for 3+ hrs","impact":"Active fire behavior","icon":"humidity"},
+      {"indicator":"Spotting Distance","threshold":"> 1.5 km","impact":"New ignitions","icon":"spotting"},
+      {"indicator":"No Rain Event","threshold":"0.00\" in 72 hrs","impact":"Fuels continue drying","icon":"rain"}
+    ],
+    "readiness": {
+      "resources": [
+        {"type":"Engines","assigned":14,"total":18,"readinessPercent":78},
+        {"type":"Crews","assigned":8,"total":12,"readinessPercent":67},
+        {"type":"Water Tenders","assigned":6,"total":10,"readinessPercent":60},
+        {"type":"Helicopters","assigned":5,"total":7,"readinessPercent":71}
+      ],
+      "tempo": {"activityLevel":"HIGH","sustainedSince":"10:12","trend24h":"Increasing","burnWindow":"Active","nextShiftChange":"16:00 PDT"},
+      "availableUnits": 312,
+      "totalUnits": 358
+    },
+    "run": {"modelRun":"2025-05-15 14:00 PDT","lastUpdated":"14:37:12 PDT","dataLatency":"1m"},
+    "bbox": {"west":-122.95,"east":-121.55,"south":38.6,"north":39.6},
+    "systemStatus": {"ok":true,"label":"All Systems Operational"}
+  },
+  "session": {
+    "authenticated": true,
+    "sessionId": "visual-qa-golden-session",
+    "mode": "local_shadow_session",
+    "actor": {
+      "id": "operator:jane-cooper",
+      "name": "Jane Cooper",
+      "title": "Intelligence Officer",
+      "role": "SUPERVISOR",
+      "incidentScopes": ["*"]
+    }
+  },
+  "incidents": [
+    {
+      "id": "INC-2025-0515-0012",
+      "label": "Ridge Fire",
+      "location": "Canyon County, CA",
+      "coordinate": [-122.3200, 39.0500],
+      "state": "ACTIVE",
+      "priority": 1,
+      "areaHa": 2147,
+      "acres": 5306,
+      "growthPercent": 24,
+      "containmentPercent": 15,
+      "populationAtRisk": 2417,
+      "unitsDeployed": 14,
+      "updatedAt": "2025-05-15T21:35:12.000Z",
+      "summary": "Rapid spread to the southeast. Evacuations in progress."
+    },
+    {
+      "id": "INC-2025-0515-0017",
+      "label": "Pine Valley Fire",
+      "location": "Mendocino County, CA",
+      "coordinate": [-121.7900, 39.3800],
+      "state": "ACTIVE",
+      "priority": 2,
+      "areaHa": 1285,
+      "acres": 3175,
+      "growthPercent": 18,
+      "containmentPercent": 10,
+      "populationAtRisk": 1036,
+      "unitsDeployed": 12,
+      "updatedAt": "2025-05-15T21:31:12.000Z",
+      "summary": "Wind-driven growth on western flank. Structure threat increasing."
+    },
+    {
+      "id": "INC-2025-0515-0021",
+      "label": "Oak Creek Fire",
+      "location": "Lake County, CA",
+      "coordinate": [-121.9800, 39.1400],
+      "state": "CONTAINED",
+      "priority": 3,
+      "areaHa": 851,
+      "acres": 2103,
+      "growthPercent": 0,
+      "containmentPercent": 95,
+      "populationAtRisk": 238,
+      "unitsDeployed": 6,
+      "updatedAt": "2025-05-15T21:22:12.000Z",
+      "summary": "Containment holding. Mop-up operations continue."
+    },
+    {
+      "id": "INC-2025-0515-0024",
+      "label": "Mountain View Fire",
+      "location": "Shasta County, CA",
+      "coordinate": [-121.8600, 38.9400],
+      "state": "CONTAINED",
+      "priority": 4,
+      "areaHa": 238,
+      "acres": 588,
+      "growthPercent": 0,
+      "containmentPercent": 100,
+      "populationAtRisk": 0,
+      "unitsDeployed": 5,
+      "updatedAt": "2025-05-15T21:05:12.000Z",
+      "summary": "Line held. No growth."
+    },
+    {
+      "id": "INC-2025-0515-0029",
+      "label": "Sunset Fire",
+      "location": "Trinity County, CA",
+      "coordinate": [-122.1900, 38.7900],
+      "state": "MONITORING",
+      "priority": 5,
+      "areaHa": 41,
+      "acres": 101,
+      "growthPercent": 0,
+      "containmentPercent": 0,
+      "populationAtRisk": 0,
+      "unitsDeployed": 3,
+      "updatedAt": "2025-05-15T20:52:12.000Z",
+      "summary": "Small fire under monitoring. No threat to communities."
+    },
+    {
+      "id": "INC-2025-0515-0034",
+      "label": "Creek Fire",
+      "location": "Tehama County, CA",
+      "coordinate": [-122.5600, 38.8800],
+      "state": "MONITORING",
+      "priority": 6,
+      "areaHa": 53,
+      "acres": 131,
+      "growthPercent": 0,
+      "containmentPercent": 0,
+      "populationAtRisk": 0,
+      "unitsDeployed": 2,
+      "updatedAt": "2025-05-15T20:37:12.000Z",
+      "summary": "Monitored ignition. No community threat."
+    }
+  ],
+  "governedWork": [
+    {"id":"work:1","incidentId":"INC-2025-0515-0017","title":"Deploy 2 Type 3 Engines","actionType":"DEPLOY","coordinate":"38.7921, -120.4567","state":"URGENT","lane":"HUMAN_REQUIRED","whyItMatters":"East flank — Pine Valley Fire","eta":"00:18"},
+    {"id":"work:2","incidentId":"INC-2025-0515-0021","title":"Reinforce Community Line","actionType":"PROTECT","coordinate":"38.7143, -120.3921","state":"HIGH","lane":"HUMAN_REQUIRED","whyItMatters":"Oak Creek Community","eta":"00:22"},
+    {"id":"work:3","incidentId":"INC-2025-0515-0012","title":"Reposition 1 Helicopter","actionType":"REPOSITION","coordinate":"38.9450, -120.5123","state":"HIGH","lane":"WAITING_ON_REALITY","whyItMatters":"Ridge Fire — Bucket Support","eta":"00:28"},
+    {"id":"work:4","incidentId":"INC-2025-0515-0012","title":"Validate Wind Shift","actionType":"INTEL VALIDATION","coordinate":"All Sectors","state":"MEDIUM","lane":"WAITING_ON_OBSERVATION","whyItMatters":"Predicted 15:00 ± 30m","eta":"00:42"},
+    {"id":"work:5","incidentId":"INC-2025-0515-0012","title":"Check Fuel Truck Status","actionType":"RESOURCE CHECK","coordinate":"—","state":"MEDIUM","lane":"VIGIA_HANDLING","whyItMatters":"Division A & C staging","eta":"01:05"}
+  ],
+  "resources": [
+    {"id":"resource:engines","title":"Engines (Type 3)","assigned":14,"total":20,"available":6,"outOfService":0,"readinessPercent":70,"state":"READY"},
+    {"id":"resource:crews","title":"Crews","assigned":8,"total":12,"available":4,"outOfService":0,"readinessPercent":67,"state":"READY"},
+    {"id":"resource:water-tenders","title":"Water Tenders","assigned":6,"total":10,"available":4,"outOfService":0,"readinessPercent":60,"state":"READY"},
+    {"id":"resource:helicopters","title":"Helicopters","assigned":5,"total":7,"available":2,"outOfService":0,"readinessPercent":71,"state":"READY"},
+    {"id":"resource:air-tankers","title":"Air Tankers","assigned":2,"total":4,"available":1,"outOfService":1,"readinessPercent":50,"state":"WATCH"},
+    {"id":"resource:dozers","title":"Dozers","assigned":3,"total":6,"available":2,"outOfService":1,"readinessPercent":50,"state":"WATCH"},
+    {"id":"resource:fuel-trucks","title":"Fuel Trucks","assigned":3,"total":6,"available":2,"outOfService":1,"readinessPercent":50,"state":"WATCH"},
+    {"id":"resource:medical","title":"Med Units","assigned":2,"total":4,"available":2,"outOfService":0,"readinessPercent":100,"state":"READY"}
+  ],
+  "detailResources": [
+    {"id":"detail-resource:helicopters","title":"Helicopters","assigned":5,"total":7,"readinessPercent":71,"state":"READY"},
+    {"id":"detail-resource:engines","title":"Engines","assigned":14,"total":18,"readinessPercent":78,"state":"READY"},
+    {"id":"detail-resource:crews","title":"Crews","assigned":120,"total":160,"readinessPercent":75,"state":"READY"},
+    {"id":"detail-resource:dozers","title":"Dozers","assigned":6,"total":10,"readinessPercent":60,"state":"WATCH"},
+    {"id":"detail-resource:water-tenders","title":"Water Tenders","assigned":6,"total":8,"readinessPercent":75,"state":"READY"}
+  ],
+  "criticalNeeds": [
+    {"id":"need:helicopter","title":"Helicopter Bucket Support (Ridge Fire)","severity":"URGENT","dispatchState":"REQUESTED","eta":"00:28"},
+    {"id":"need:engines","title":"Type 3 Engines (Pine Valley Fire)","severity":"HIGH","dispatchState":"DISPATCHED","eta":"00:18"},
+    {"id":"need:fuel","title":"Fuel Trucks (Div A & C)","severity":"HIGH","dispatchState":"REQUESTED","eta":"00:45"},
+    {"id":"need:crews","title":"Hand Crews (Oak Creek Fire)","severity":"MEDIUM","dispatchState":"ON_ORDER","eta":"02:30"}
+  ],
+  "recentChanges": [
+    {"id":"change:perimeter","title":"Perimeter updated","reason":"+38 ha (north flank)","state":"READY","at":"2025-05-15T21:32:00.000Z"},
+    {"id":"change:wind","title":"Wind shift detected","reason":"NW → WNW","state":"READY","at":"2025-05-15T21:28:00.000Z"},
+    {"id":"change:containment","title":"Containment update","reason":"22% → 24%","state":"READY","at":"2025-05-15T21:25:00.000Z"},
+    {"id":"change:infrared","title":"New IR hotspots","reason":"+12 detected","state":"ACTIVE","at":"2025-05-15T21:18:00.000Z"},
+    {"id":"change:resource","title":"Resource en route","reason":"E-21 to Alpha","state":"READY","at":"2025-05-15T21:10:00.000Z"}
+  ],
+  "communities": [
+    {"id":"community:pine-valley","title":"Pine Valley","distanceKm":2.1,"population":1420,"state":"AT_RISK"},
+    {"id":"community:oak-creek","title":"Oak Creek","distanceKm":3.4,"population":640,"state":"AT_RISK"},
+    {"id":"community:sunset-springs","title":"Sunset Springs","distanceKm":6.7,"population":357,"state":"MONITORING"}
+  ],
+  "evacuationZones": [
+    {"id":"zone:a","title":"Zone A (Immediate)","state":"MANDATORY"},
+    {"id":"zone:b","title":"Zone B (Potential)","state":"PREPARE"},
+    {"id":"zone:c","title":"Zone C (Monitor)","state":"MONITOR"},
+    {"id":"zone:d","title":"Zone D (Out of Threat)","state":"NONE"}
+  ],
+  "thresholds": [
+    {"id":"threshold:spread","title":"Spread Rate (ha/h)","current":"8.9","threshold":"> 10","state":"STABLE"},
+    {"id":"threshold:wind","title":"Wind Speed (mph)","current":"18","threshold":"> 20","state":"STABLE"},
+    {"id":"threshold:rh","title":"RH (%)","current":"22","threshold":"< 20","state":"WATCH"},
+    {"id":"threshold:temperature","title":"Temperature (°F)","current":"72","threshold":"> 85","state":"WATCH"},
+    {"id":"threshold:fuel","title":"Fuel Moisture (%)","current":"6","threshold":"< 8","state":"CRITICAL"}
+  ],
+  "hypotheses": [
+    {"id":"hypothesis:1","title":"Ridge-Driven Upslope Run","state":"LEAD","probability":68,"supporting":3,"conflicting":2,"operationalConsequence":"High"},
+    {"id":"hypothesis:2","title":"Wind-Driven Flank Run","state":"ALTERNATIVE","probability":23,"supporting":3,"conflicting":2,"operationalConsequence":"Medium"},
+    {"id":"hypothesis:3","title":"Canyon Channeling","state":"ALTERNATIVE","probability":9,"supporting":3,"conflicting":1,"operationalConsequence":"Low"}
+  ],
+  "scenarios": [
+    {"id":"scenario:a","title":"High Spread","state":"HIGH_SPREAD","confidence":87,"hectares":9450,"consequence":["Communities at risk increase substantially","Long-range spotting above 2 km","Expect rapid growth in 24–36 hrs"],"recommendation":["Pre-position resources north and east","Prepare for structure defense"]},
+    {"id":"scenario:b","title":"Moderate Spread","state":"MODERATE_SPREAD","confidence":63,"hectares":6120,"consequence":["Active growth continues but rate slows","Spotting limited to <1.5 km","Line opportunities increase"],"recommendation":["Reinforce indirect lines","Maintain flexibility"]},
+    {"id":"scenario:c","title":"Contained Outcome","state":"CONTAINED_OUTCOME","confidence":41,"hectares":3210,"consequence":["Favorable conditions enable containment","Short-range spotting only","Focus on mop-up and depth"],"recommendation":["Aggressive suppression effective","Transition to containment posture"]}
+  ],
+  "evidence": [
+    {"id":"evidence:satellite:1","observationId":"observation:satellite:1","sourceId":"source:satellite","stance":"SUPPORTS","title":"Thermal anomaly cluster expansion","rationale":"High relevance satellite observation"},
+    {"id":"evidence:ground:1","observationId":"observation:ground:1","sourceId":"source:ground","stance":"SUPPORTS","title":"Resident report smoke increase","rationale":"Independent ground report"},
+    {"id":"evidence:camera:1","observationId":"observation:camera:1","sourceId":"source:camera","stance":"CONTRADICTS","title":"Camera capture plume column","rationale":"Conflicting visual direction"},
+    {"id":"evidence:weather:1","observationId":"observation:weather:1","sourceId":"source:weather","stance":"SUPPORTS","title":"Weather update wind shift SW","rationale":"Current weather station report"},
+    {"id":"evidence:field:1","observationId":"observation:field:1","sourceId":"source:field","stance":"SUPPORTS","title":"Field observation flame front visible","rationale":"Verified field observation"}
+  ],
+  "staging": [
+    {"id":"staging:base","title":"Incident Base","state":"GREEN","coordinate":"38.7123, -120.3987"},
+    {"id":"staging:north","title":"North Staging","state":"YELLOW","coordinate":"38.8456, -120.5120"},
+    {"id":"staging:east","title":"East Staging","state":"GREEN","coordinate":"38.7261, -120.3214"},
+    {"id":"staging:helibase","title":"Helibase","state":"GREEN","coordinate":"38.6987, -120.4555"},
+    {"id":"staging:drops","title":"Drop Points","state":"ACTIVE","coordinate":"12 ACTIVE"},
+    {"id":"staging:roads","title":"Road Closures","state":"ACTIVE","coordinate":"3 ACTIVE"}
+  ]
+}

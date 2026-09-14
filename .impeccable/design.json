@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-08T19:25:53.945842+00:00",
+  "title": "Design System: VIGIA",
+  "extensions": {
+    "shadows": [
+      {
+        "name": "field-panel",
+        "value": "none",
+        "purpose": "Hairlines and flat surfaces carry hierarchy."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-feedback",
+        "value": "140ms background-color, color",
+        "purpose": "Restrained interaction feedback, disabled by reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "workspace-stack",
+        "value": "1200px"
+      },
+      {
+        "name": "mobile-navigation-and-disclosures",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Compact field action",
+      "kind": "button",
+      "refersTo": "compact-button",
+      "description": "Secondary action; mobile field controls expand to 44px.",
+      "html": "<button class=\"ds-action\">Map layers</button>",
+      "css": ".ds-action{font-family:var(--vg-font,Arial,Helvetica,sans-serif);font-size:14px;font-weight:600;line-height:1.35;padding:8px 12px;min-height:40px;color:var(--vg-ink,#101d43);background:white;border:1px solid #dce3ef;border-radius:5px;cursor:pointer;transition:background .12s}.ds-action:hover{background:#f7f9fc}.ds-action:focus-visible{outline:3px solid #466cf0;outline-offset:3px}.ds-action:disabled{cursor:not-allowed;opacity:.52}"
+    },
+    {
+      "name": "Inherited search field",
+      "kind": "input",
+      "description": "Existing shell search treatment; the replacement routes do not introduce a new input pattern.",
+      "html": "<label class=\"ds-search\"><input aria-label=\"Search incidents\" placeholder=\"Search incidents\"></label>",
+      "css": ".ds-search{display:flex;border:1px solid #dce3ef;border-radius:6px;background:#fff;padding:0 12px;min-height:40px}.ds-search input{font-family:var(--vg-font,Arial,Helvetica,sans-serif);font-size:13px;min-width:0;flex:1;width:100%;padding:9px 0;border:0;background:none;color:var(--vg-ink,#101d43)}.ds-search:focus-within{box-shadow:0 0 0 2px #4565d84d}.ds-search input:focus-visible{outline:3px solid #466cf0;outline-offset:3px}.ds-search input::placeholder{color:#8791a8}"
+    },
+    {
+      "name": "Selected route",
+      "kind": "nav",
+      "description": "Inherited route selection combines an edge, tinted background and emphasis.",
+      "html": "<a class=\"ds-nav\" aria-current=\"page\" href=\"#/fire-activity\">Fire Activity</a>",
+      "css": ".ds-nav{display:flex;align-items:center;font-family:var(--vg-font,Arial,Helvetica,sans-serif);font-size:12px;font-weight:600;min-height:47px;padding:12px;border-radius:7px;border-left:3px solid var(--vg-red,#d51d32);background:var(--vg-red-soft,#fff2f4);color:var(--vg-ink,#101d43);text-decoration:none;transition:background .12s}.ds-nav:hover{background:#f7f8fb}.ds-nav:focus-visible{outline:3px solid #466cf0;outline-offset:3px}"
+    },
+    {
+      "name": "Source label",
+      "kind": "chip",
+      "description": "Passive source attribution accompanying an operational fact.",
+      "html": "<span class=\"ds-source\">IPMA</span>",
+      "css": ".ds-source{font-family:var(--vg-font,Arial,Helvetica,sans-serif);font-size:12px;background:#f1f5fe;color:#365891;border-radius:3px;padding:3px 5px;max-width:100px;overflow-wrap:anywhere}"
+    },
+    {
+      "name": "Field panel",
+      "kind": "card",
+      "refersTo": "field-panel",
+      "description": "Flat container for a primary workspace or compact measured trend; tertiary history uses quieter open sections.",
+      "html": "<section class=\"ds-panel\"><header><h2>Conditions over time</h2><p>Dated source measurements</p></header></section>",
+      "css": ".ds-panel{font-family:var(--vg-font,Arial,Helvetica,sans-serif);border:1px solid var(--field-line,#e2ebfa);border-radius:7px;background:var(--vg-surface,#fff);box-shadow:none;color:var(--vg-ink,#101d43)}.ds-panel header{padding:8px 11px;min-height:48px}.ds-panel h2{margin:0;font-size:16px;font-weight:750;line-height:1.3;letter-spacing:-.3px}.ds-panel p{margin:1px 0 0;font-size:12px;line-height:1.4;color:var(--field-muted,#50617b)}"
+    },
+    {
+      "name": "Facility category",
+      "kind": "button",
+      "description": "Category filter in the full support inventory drawer; pressed state combines border, fill and weight. Mobile minimum height is 44px.",
+      "html": "<button class=\"ds-category\" aria-pressed=\"true\">Fire stations</button>",
+      "css": ".ds-category{font-family:var(--vg-font,Arial,Helvetica,sans-serif);font-size:14px;font-weight:700;min-height:31px;padding:5px 6px;background:#ecf3ff;border:1px solid var(--field-blue,#175bb0);border-radius:5px;color:var(--vg-ink,#101d43);cursor:pointer}.ds-category:focus-visible{outline:3px solid #466cf0;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Operational wildfire intelligence",
+    "overview": "One canonical six-route light operational console. DESIGN.md records the complete shared hierarchy, 208px shell, 14px body/12px metadata, semantic weather blue and responsive disclosure contract. Real geography and attributable facts lead; history and provenance remain subordinate.",
+    "keyCharacteristics": [
+      "Map-led operational workspaces.",
+      "Compact, dated and attributable facts.",
+      "Hairline separation and flat surfaces.",
+      "Restrained red selection with semantic signal colors.",
+      "Current state first, supporting information second, history and provenance subordinate."
+    ],
+    "rules": [
+      {
+        "name": "The Meaning Before Color Rule",
+        "body": "A color treatment may organize a measured fact; it must not invent an operational status.",
+        "section": "colors"
+      },
+      {
+        "name": "The Operational Priority Rule",
+        "body": "Give current state and actionable comparisons the strongest position and typography; use compact supporting rows, quieter history and disclosed provenance instead of equally emphasized panels.",
+        "section": "layout"
+      },
+      {
+        "name": "The Usable Fact Rule",
+        "body": "Omit unusable primary metrics and reflow the remaining facts. Preserve valid zero and keep absence reasons in coverage or source detail; reserve inline status for actionable load failures.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Workspace Rule",
+        "body": "Organize field surfaces with hairlines and spacing instead of adding elevation to every container.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the established VIGIA shell and identity.",
+      "**Do** keep the map dominant and contextual controls close to it.",
+      "**Do** retain measurement units, location and date/time beside facts.",
+      "**Do** recompose dense rows at small viewports and preserve visible focus.",
+      "**Do** make current state and operational comparisons visibly stronger than history and source details.",
+      "**Do** omit unusable prime metrics, retain valid zero and provide coverage reasons in disclosure."
+    ],
+    "donts": [
+      "**Don't** turn semantic color into an unsupported risk or availability claim.",
+      "**Don't** add decorative route numbers, neon, glass or generic card stacks.",
+      "**Don't** use screenshots or procedural geography as a live map.",
+      "**Don't** treat this design record as exact pixel-parity or whole-product verification."
+    ]
+  }
+}

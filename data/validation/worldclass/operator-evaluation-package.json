@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "vigia.external-operator-evaluation.v1",
+  "tasks": [
+    {
+      "id": "TASK-01",
+      "name": "identify top incident",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-02",
+      "name": "explain assessment",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-03",
+      "name": "distinguish physical/report evidence",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-04",
+      "name": "identify contradiction",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-05",
+      "name": "identify decision blocker",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-06",
+      "name": "explain source selection",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-07",
+      "name": "complete handoff",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-08",
+      "name": "recover from degraded state",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-09",
+      "name": "review authority boundary",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    },
+    {
+      "id": "TASK-10",
+      "name": "perform replay",
+      "critical": true,
+      "completeTraceRequired": true,
+      "environmentOutcomeRequired": true
+    }
+  ],
+  "design": {
+    "requiredSessions": 10,
+    "requiredEmergencyPractitioners": 5,
+    "requiredOperationalPerspectives": 3,
+    "graders": [
+      "task-completion grader",
+      "dangerous-misinterpretation safety grader",
+      "trace completeness grader",
+      "environment outcome grader"
+    ],
+    "consent": {
+      "required": true,
+      "withdrawalSupported": true
+    },
+    "deidentification": {
+      "required": true,
+      "directIdentifiersProhibited": true
+    },
+    "exportSchema": "vigia.operator-evaluation-results.v1"
+  },
+  "successCriteria": {
+    "criticalTaskCompletionMinimum": 0.9,
+    "dangerousMisinterpretationsMaximum": 0,
+    "medianTopIncidentSecondsExclusiveMaximum": 45,
+    "medianWhySecondsExclusiveMaximum": 75,
+    "medianHandoffSecondsExclusiveMaximum": 240,
+    "clarityTrustMinimum": 4
+  },
+  "metrics": {
+    "sessions": 0,
+    "emergencyPractitioners": 0,
+    "operationalPerspectives": 0,
+    "criticalTaskCompletion": null,
+    "dangerousMisinterpretations": 0,
+    "medianTopIncidentSeconds": null,
+    "medianWhySeconds": null,
+    "medianHandoffSeconds": null,
+    "clarityTrust": null,
+    "traceComplete": true
+  },
+  "simulatedParticipants": false,
+  "state": "BLOCKED_REAL_PRACTITIONER_SESSIONS_REQUIRED",
+  "passed": false,
+  "fingerprint": "operator-evaluation-package:sha256:161c80b45b3de7793955085a24dfdf9a38b8564f16b5675fe539f01381c14bc2"
+}

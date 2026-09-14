@@ -1,0 +1,182 @@
+{
+  "lane": "ACTUAL_LOCAL_MODEL_ON_CONTROLLED_CORPUS_NO_OPERATIONAL_WRITES",
+  "model": "llama3.2:3b",
+  "casesPlanned": 104,
+  "casesRun": 5,
+  "schemaValidPercent": 60,
+  "factCorrectPercent": 0,
+  "sourceSpanPercent": 40,
+  "abstentionPercent": null,
+  "toolIntentPercent": null,
+  "p50Ms": 31880,
+  "p95Ms": 45036,
+  "crashes": 2,
+  "rows": [
+    {
+      "id": "address-1",
+      "category": "address",
+      "text": "Hospital de Teste 1. Morada: Rua da República, 1.",
+      "expected": [
+        {
+          "subject": "Hospital de Teste 1",
+          "field": "address.street",
+          "value": "Rua da República, 1"
+        }
+      ],
+      "intent": null,
+      "output": null,
+      "error": "The operation was aborted due to timeout",
+      "schemaValid": false,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 45029
+    },
+    {
+      "id": "phone-1",
+      "category": "phone",
+      "text": "Hospital de Teste 1. Telefone: 239123451.",
+      "expected": [
+        {
+          "subject": "Hospital de Teste 1",
+          "field": "contact.phone",
+          "value": "239123451"
+        }
+      ],
+      "intent": null,
+      "output": {
+        "facts": [
+          {
+            "subject": "Hospital de Teste",
+            "field": "address.street",
+            "value": "Hospital de Teste",
+            "sourceText": "Hospital de Teste"
+          },
+          {
+            "subject": "Hospital de Teste",
+            "field": "contact.phone",
+            "value": "239123451",
+            "sourceText": "Telefone: 239123451."
+          },
+          {
+            "subject": "Hospital de Teste",
+            "field": "address.municipality",
+            "value": "unknown",
+            "sourceText": "unknown"
+          },
+          {
+            "subject": "Hospital de Teste",
+            "field": "road.identifier",
+            "value": "unknown",
+            "sourceText": "unknown"
+          },
+          {
+            "subject": "Hospital de Teste",
+            "field": "publishedAt",
+            "value": "unknown",
+            "sourceText": "unknown"
+          },
+          {
+            "subject": "Hospital de Teste",
+            "field": "validFrom",
+            "value": "unknown",
+            "sourceText": "unknown"
+          },
+          {
+            "subject": "Hospital de Teste",
+            "field": "validUntil",
+            "value": "unknown",
+            "sourceText": "unknown"
+          }
+        ],
+        "intent": "getFacilityDetails"
+      },
+      "error": null,
+      "schemaValid": true,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 31880
+    },
+    {
+      "id": "road-1",
+      "category": "road",
+      "text": "Aviso: estrada N111. Não é publicado o estado de circulação.",
+      "expected": [
+        {
+          "subject": "notice",
+          "field": "road.identifier",
+          "value": "N111"
+        }
+      ],
+      "intent": null,
+      "output": {
+        "facts": [
+          {
+            "subject": "estrada N111",
+            "field": "road.identifier",
+            "value": "N111",
+            "sourceText": "Aviso: estrada N111. Não é publicado o estado de circulação."
+          }
+        ],
+        "intent": "getRoadState"
+      },
+      "error": null,
+      "schemaValid": true,
+      "sourceSupported": true,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 20399
+    },
+    {
+      "id": "municipality-1",
+      "category": "municipality",
+      "text": "Hospital de Teste 1. Município: Évora.",
+      "expected": [
+        {
+          "subject": "Hospital de Teste 1",
+          "field": "address.municipality",
+          "value": "Évora"
+        }
+      ],
+      "intent": null,
+      "output": null,
+      "error": "The operation was aborted due to timeout",
+      "schemaValid": false,
+      "sourceSupported": false,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 45036
+    },
+    {
+      "id": "dates-1",
+      "category": "dates",
+      "text": "Aviso publicado em 2026-09-12T08:00:00Z.",
+      "expected": [
+        {
+          "subject": "notice",
+          "field": "publishedAt",
+          "value": "2026-09-12T08:00:00Z"
+        }
+      ],
+      "intent": null,
+      "output": {
+        "facts": [
+          {
+            "subject": "publishedAt",
+            "field": "date",
+            "value": "2026-09-12T08:00:00Z",
+            "sourceText": "Aviso publicado em 2026-09-12T08:00:00Z."
+          }
+        ],
+        "intent": "getIncidentBrief"
+      },
+      "error": null,
+      "schemaValid": true,
+      "sourceSupported": true,
+      "correct": false,
+      "abstentionExpected": false,
+      "latencyMs": 30222
+    }
+  ]
+}

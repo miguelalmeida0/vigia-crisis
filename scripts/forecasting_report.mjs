@@ -1,0 +1,27 @@
+#!/usr/bin/env node
+import path from 'node:path';
+import { chmod,mkdir,rename,writeFile } from 'node:fs/promises';
+import { loadConfig } from '../apps/api/src/config/env.mjs';
+import { buildForecastQualityReport,createForecastRuntime,doctorForecasting } from '../apps/api/src/modules/forecasting/index.mjs';
+import { readJson,writeJsonAtomic } from '../apps/api/src/shared/json-file.mjs';
+
+const mode=process.argv[2]??'quality',argument=(name)=>{const direct=process.argv.find((item)=>item.startsWith(`--${name}=`));if(direct)return direct.slice(name.length+3);const index=process.argv.indexOf(`--${name}`);return index>=0?process.argv[index+1]??null:null;};
+if(process.argv.includes('--help')){console.log(`Usage:
+  npm run forecast:doctor
+  npm run corpus:forecast
+  npm run train:forecast-baselines
+  npm run eval:spread-forecast
+  npm run report:forecast-quality
+
+These commands audit retained real inputs. The train command never fabricates labels and will not train a statistical model while corpus gates fail.`);process.exit(0);}
+if(!['doctor','corpus','train','eval','quality'].includes(mode))throw new Error('forecast_report_mode_invalid');
+const config=loadConfig(),runtime=await createForecastRuntime({config});
+if(mode==='doctor'){console.log(JSON.stringify(await doctorForecasting({config,runner:runtime.runner,registry:runtime.registry}),null,2));process.exit(0);}
+const latest=await readJson(config.forecastReportFile,null),report=await buildForecastQualityReport({config,runtime,latest});
+if(mode==='corpus'){const region=argument('region'),from=argument('from'),to=argument('to');if([from,to].some((value)=>value&&Number.isNaN(Date.parse(value))))throw new Error('forecast_corpus_date_filter_invalid');const source=await readJson(config.replayCorpusFile,{cases:[]}),selected=source.cases.filter((item)=>(!region||region.toLowerCase()==='portugal')&&(!from||Date.parse(item.alertAt)>=Date.parse(from))&&(!to||Date.parse(item.alertAt)<=Date.parse(to))),output={schemaVersion:'vigia.forecast-corpus-audit.v1',generatedAt:report.generatedAt,filters:{region:region??null,from:from??null,to:to??null},sourceCandidateIncidentCount:selected.length,sourceMaterial:report.sourceMaterial,corpus:report.corpus,negativeControls:report.negativeControls,leakage:report.leakage,forecastEligible:report.corpus.positiveCases>0&&report.corpus.negativeControls>0};await writeJsonAtomic(path.join(config.projectRoot,'data/validation/forecasting/forecast-corpus-audit.json'),output);console.log(JSON.stringify(output,null,2));process.exit(0);}
+if(mode==='train'){const receipt={schemaVersion:'vigia.forecast-baseline-training-receipt.v1',generatedAt:report.generatedAt,registryFingerprint:runtime.registry.fingerprint,registeredBaselines:report.baselines.implemented,statisticalModelState:'NOT_TRAINED_DATA_GATE_FAILED',fabricatedLabels:0,leakagePassed:report.leakage.passed,promotionDecision:report.promotion.decision,reasons:['No issue-time future-perimeter label corpus exists.','No valid negative opportunity-control corpus exists.','Single-region, single-season source material cannot establish generalization.']};await writeJsonAtomic(path.join(config.projectRoot,'data/validation/forecasting/baseline-training-receipt.json'),receipt);console.log(JSON.stringify(receipt,null,2));process.exit(0);}
+await writeJsonAtomic(config.forecastQualityFile,report);
+const markdownPath=path.join(path.dirname(config.forecastQualityFile),'forecast-quality.md'),markdown=`# VIGIA forecast quality report\n\nGenerated: ${report.generatedAt}\n\n- Forecast-eligible historical cases: ${report.corpus.positiveCases}\n- Valid negative opportunity controls: ${report.corpus.negativeControls}\n- Regions in eligible corpus: ${report.corpus.regions.join(', ')||'none'}\n- Seasons in eligible corpus: ${report.corpus.seasons.join(', ')||'none'}\n- Historical spread metrics: ${report.spreadMetrics.state}\n- Calibration: ${report.calibration.state}\n- Physical model actually ran: ${report.physicalModel.actuallyRan}\n- Latest shadow forecast: ${report.shadow?.forecastState??'none'}\n- Replay valid: ${report.shadow?.replay?.valid??false}\n- Consequential actions executed: ${report.shadow?.externalActionsExecuted??0}\n- Promotion decision: ${report.promotion.decision}\n\n## Failed gates\n\n${report.promotion.failedGates.map((item)=>`- ${item}`).join('\n')}\n\n## Data-quality limitations\n\n${report.dataQualityLimitations.map((item)=>`- ${item}`).join('\n')}\n`;
+await mkdir(path.dirname(markdownPath),{recursive:true,mode:0o700});const temporary=`${markdownPath}.${process.pid}.tmp`;await writeFile(temporary,markdown,{encoding:'utf8',mode:0o600,flag:'wx'});await rename(temporary,markdownPath);await chmod(markdownPath,0o600);
+if(mode==='eval')console.log(JSON.stringify({schemaVersion:report.schemaVersion,output:config.forecastQualityFile,readableOutput:markdownPath,forecastEligibleCases:report.corpus.positiveCases,historicalMetrics:report.spreadMetrics.state,physicalModelActuallyRan:report.physicalModel.actuallyRan,replay:report.shadow?.replay??null,promotion:report.promotion},null,2));
+else console.log(JSON.stringify({schemaVersion:report.schemaVersion,output:config.forecastQualityFile,readableOutput:markdownPath,corpus:report.corpus,spreadMetrics:report.spreadMetrics,calibration:report.calibration,impactMetrics:report.impactMetrics,abstention:report.abstention,physicalModelActuallyRan:report.physicalModel.actuallyRan,shadow:report.shadow,promotion:report.promotion},null,2));

@@ -1,0 +1,898 @@
+{
+  "schemaVersion": "vigia.backend-convergence-report.v1",
+  "generatedAt": "2026-08-25T10:54:09.815Z",
+  "releaseState": "PASS",
+  "database": {
+    "schemaVersion": "vigia.intelligence-postgis-certification.v1",
+    "generatedAt": "2026-08-25T10:40:05.033Z",
+    "state": "PASS",
+    "isolatedDisposableDatabase": true,
+    "loopbackOnly": true,
+    "image": "postgis/postgis:17-3.5",
+    "platform": "linux/amd64",
+    "credentialsGenerated": true,
+    "credentialValuesRecorded": false,
+    "migrationHead": "017",
+    "migrationIdempotency": {
+      "appliedOnSecondRun": [],
+      "skippedOnSecondRun": [
+        "001",
+        "002",
+        "003",
+        "004",
+        "005",
+        "006",
+        "007",
+        "008",
+        "009",
+        "010",
+        "011",
+        "012",
+        "013",
+        "014",
+        "015",
+        "016",
+        "017"
+      ]
+    },
+    "semanticEquivalence": {
+      "state": "PASS",
+      "fileFingerprint": "file-database-semantic-equivalence:sha256:e637de6c90841bc64e4e1d7c916b5923c84a9a3919866bc8c8dde4a5814d686e",
+      "postgresFingerprint": "file-database-semantic-equivalence:sha256:e637de6c90841bc64e4e1d7c916b5923c84a9a3919866bc8c8dde4a5814d686e",
+      "events": 1,
+      "objects": 11,
+      "lineageEdges": 1,
+      "certifiedSemantics": [
+        "EVIDENCE_STATE",
+        "INDEPENDENT_FAMILY_COUNT",
+        "EVIDENCE_DEBT",
+        "DATA_GAPS",
+        "HYPOTHESIS_STATES",
+        "DECISION_DEPENDENCY_GRAPH",
+        "DECISION_PRIORITY_ORDERING",
+        "ACQUISITION_PLAN",
+        "CONTROL_PLANE_ACTIONS",
+        "DECISION_DELTA",
+        "DECISION_PACKET",
+        "REPLAY_FINGERPRINT"
+      ]
+    },
+    "checks": {
+      "schemaMigration": true,
+      "spatialExtension": true,
+      "migrationIdempotency": true,
+      "transactionCommit": true,
+      "transactionRollback": true,
+      "concurrentInserts": true,
+      "idempotentEventPersistence": true,
+      "concurrentDuplicateEventIngestion": true,
+      "concurrencyControl": true,
+      "duplicateAcquisitionPrevention": true,
+      "concurrentControllerReconciliation": true,
+      "concurrentDataProductAcquisition": true,
+      "requiredObjectPersistence": true,
+      "materializedProjectionUpdate": true,
+      "crashBetweenEventAndProjection": true,
+      "projectionRecovery": true,
+      "uniqueSemanticIdentity": true,
+      "lineageIntegrity": true,
+      "foreignKeyIntegrity": true,
+      "rightsPropagationPersistence": true,
+      "rollbackBeforeTransactionWork": true,
+      "rollbackAfterEventInsert": true,
+      "rollbackBeforeProjectionUpdate": true,
+      "rollbackDuringProjectionUpdate": true,
+      "rollbackAfterActionPlanning": true,
+      "rollbackBeforeReceiptPersistence": true,
+      "rollbackDuringLineagePersistence": true,
+      "rollbackDuringMaterialization": true,
+      "decisionPacketPersistence": true,
+      "policyPacketMixedVersionPrevented": true,
+      "historicalQueryProjectionRacePrevented": true,
+      "receiptPersistence": true,
+      "prospectiveArchivePersistence": true,
+      "spatialTypePersistence": true,
+      "spatialIndexCreation": true,
+      "atomicDecisionOutcomeRollback": true,
+      "atomicArchiveRollback": true,
+      "decisionMemoryPersistence": true,
+      "informationValuePersistence": true,
+      "restartReconstruction": true,
+      "fileDatabaseSemanticEquivalence": true,
+      "backupRestore": true
+    },
+    "recovery": {
+      "state": "PASS",
+      "rpoEvents": 0,
+      "rtoMs": 1465.95075,
+      "dataLossRecords": 0,
+      "projectionRecoveryMs": 11.641625000000204,
+      "replayVerificationMs": 1.639709000000039,
+      "migrationHead": "017",
+      "migrationIdempotentAfterRestore": true,
+      "decisionPacketVerified": true,
+      "lineageVerified": true,
+      "receiptsVerified": true,
+      "prospectiveArchiveVerified": true,
+      "decisionMemoryVerified": true,
+      "informationValueVerified": true,
+      "projectionRebuilt": true,
+      "replayVerified": true
+    },
+    "durationMs": 2934.1682500000006,
+    "failed": []
+  },
+  "quality": {
+    "schemaVersion": "vigia.integrated-quality-certification.v1",
+    "command": "npm test",
+    "tests": 728,
+    "passed": 726,
+    "failed": 1,
+    "skipped": 1,
+    "processExitCode": 1,
+    "failureFiles": [
+      "apps/api/test/release-contract-governance.test.mjs"
+    ],
+    "backendOwnedFailureFiles": [],
+    "frontendOwnedFailureFiles": [
+      "apps/api/test/release-contract-governance.test.mjs"
+    ],
+    "backendOwnedFailures": 0,
+    "knownFrontendIntegrationGate": true,
+    "frontendIntegrationEvidence": {
+      "sourcePath": "apps/web/src/v2/release-compatibility.js",
+      "expectedSchemaContract": "vigia-postgis-017",
+      "observedSchemaContract": "vigia-postgis-014"
+    },
+    "state": "BACKEND_CLEAN_FRONTEND_INTEGRATION_GATE",
+    "startedAt": "2026-08-25T10:53:07.908Z",
+    "completedAt": "2026-08-25T10:53:54.402Z",
+    "fingerprint": "integrated-quality-certification:sha256:a65defcc8f3fee0271631b39f02ba4868de0a1e8e82b48418daf5c480ca9efaa"
+  },
+  "retainedPriorQuality": {
+    "schemaVersion": "vigia.backend-convergence-quality-certification.v1",
+    "generatedAt": "2026-08-25T09:01:32Z",
+    "fullSuite": {
+      "command": "npm test",
+      "tests": 715,
+      "passed": 706,
+      "failed": 8,
+      "skipped": 1,
+      "durationMs": 43203.449041
+    },
+    "preChangeBaseline": {
+      "tests": 689,
+      "passed": 681,
+      "failed": 8,
+      "skipped": 0
+    },
+    "regressionAssessment": {
+      "newTests": 26,
+      "newPasses": 25,
+      "newSkips": 1,
+      "newFailures": 0,
+      "state": "NO_NEW_REGRESSIONS"
+    },
+    "convergenceSuite": {
+      "command": "npm run test:backend-convergence",
+      "tests": 26,
+      "passed": 25,
+      "failed": 0,
+      "skipped": 1,
+      "skipReason": "The node-only suite leaves its environment-injected PostGIS case disabled unless VIGIA_TEST_DATABASE_URL is supplied. The mandatory isolated database path ran independently through npm run test:semantic-equivalence and passed against disposable PostGIS."
+    },
+    "databaseCertification": {
+      "command": "npm run db:certify-intelligence",
+      "state": "PASS",
+      "migrationHead": "017",
+      "semanticEquivalence": "PASS",
+      "backupRestore": "PASS",
+      "rpoEvents": 0,
+      "dataLossRecords": 0
+    },
+    "focusedReasoning": {
+      "property": {
+        "passed": 8,
+        "failed": 0
+      },
+      "metamorphic": {
+        "passed": 7,
+        "failed": 0
+      },
+      "fuzz": {
+        "passed": 2,
+        "failed": 0
+      },
+      "race": {
+        "passed": 3,
+        "failed": 0
+      },
+      "crash": {
+        "passed": 3,
+        "failed": 0
+      },
+      "queryConsistency": {
+        "passed": 3,
+        "failed": 0
+      },
+      "security": {
+        "passed": 9,
+        "failed": 0
+      }
+    },
+    "performance": {
+      "compactBenchmark": "PASS",
+      "postgisRepresentativeScale": "PASS",
+      "incidents": 10000,
+      "canonicalEvents": 1000000,
+      "totalRows": 1440000
+    },
+    "architectureGate": {
+      "command": "npm run check",
+      "state": "PASS",
+      "filesInspected": 872,
+      "runtimeAndTestModules": 780
+    },
+    "buildGate": {
+      "command": "npm --prefix apps/operator-console run build",
+      "state": "PASS"
+    },
+    "diffWhitespaceGate": {
+      "command": "git diff --check",
+      "state": "PASS"
+    },
+    "inheritedFailures": [
+      {
+        "file": "apps/api/test/measurement-debt-api.test.mjs",
+        "count": 7,
+        "reason": "The retained prevention-validation artifact chain and several of its authoritative source artifacts are absent from the current filesystem; seven unrelated endpoints return 500. Fabricated replacement evidence was not generated."
+      },
+      {
+        "file": "apps/api/test/release-contract-governance.test.mjs",
+        "count": 1,
+        "reason": "Existing operator frontend source hard-codes vigia-postgis-014. The mandate prohibited frontend source changes."
+      }
+    ],
+    "frontendSourceModified": false,
+    "productionReadiness": "BACKEND_PRODUCTION_SHAPED_WITH_INHERITED_REPOSITORY_GATE_DEBT"
+  },
+  "performance": {
+    "schemaVersion": "vigia.backend-convergence-benchmark.v1",
+    "generatedAt": "2026-08-25T10:13:23.367Z",
+    "engineeringOnlySyntheticFixture": true,
+    "prohibitedAsOperationalEvidence": true,
+    "indexedQueries": {
+      "coldQuery": {
+        "iterations": 25,
+        "p50Ms": 0.25095799999999713,
+        "p95Ms": 0.3619170000000054,
+        "maxMs": 3.4462500000000205
+      },
+      "warmQuery": {
+        "iterations": 2000,
+        "p50Ms": 0.0201669999999865,
+        "p95Ms": 0.02637500000000159,
+        "maxMs": 2.6622919999999795
+      },
+      "pagination": {
+        "iterations": 1000,
+        "p50Ms": 0.025834000000003243,
+        "p95Ms": 0.029167000000001053,
+        "maxMs": 0.1615839999999764
+      },
+      "compoundFilters": {
+        "iterations": 1000,
+        "p50Ms": 0.022625000000005002,
+        "p95Ms": 0.025000000000005684,
+        "maxMs": 0.1675000000000182
+      },
+      "incrementalUpdate": {
+        "iterations": 25,
+        "p50Ms": 3.829207999999994,
+        "p95Ms": 4.149457999999981,
+        "maxMs": 4.300833999999952
+      },
+      "sustained": {
+        "iterations": 10000,
+        "p50Ms": 0.004000000000019099,
+        "p95Ms": 0.004540999999960604,
+        "maxMs": 2.376209000000017
+      }
+    },
+    "scale": {
+      "incidents": 10000,
+      "canonicalEvents": 1000000,
+      "evidenceObjects": 100000,
+      "dataProducts": 100000,
+      "decisionMemoryQualification": "ENGINEERING_ONLY_COMPACT_REPLAY_INDEX",
+      "ingestion": {
+        "qualification": "COMPACT_INDEX_CONSTRUCTION_NOT_DATABASE_INSERT",
+        "elapsedMs": 5.012875000000008,
+        "indexOperationsPerSecond": 199486322.71899828
+      },
+      "databaseIngestion": {
+        "state": "NOT_MEASURED_POSTGIS_CERTIFICATION_REQUIRED"
+      },
+      "databaseSize": {
+        "state": "NOT_MEASURED_POSTGIS_CERTIFICATION_REQUIRED"
+      },
+      "incidentLookup": {
+        "iterations": 10000,
+        "p50Ms": 0.00004200000000764703,
+        "p95Ms": 0.00004200000000764703,
+        "maxMs": 0.03741700000000492
+      },
+      "incidentSnapshot": {
+        "iterations": 1000,
+        "p50Ms": 0.023000000000024556,
+        "p95Ms": 0.025791999999967175,
+        "maxMs": 0.2967090000000212
+      },
+      "incidentSnapshotRepository": "ENGINEERING_ONLY_COMPACT_INDEX_ADAPTER",
+      "commonObjectSet": {
+        "iterations": 1000,
+        "p50Ms": 0.004416999999989457,
+        "p95Ms": 0.0053339999999479915,
+        "maxMs": 0.25387499999999363
+      },
+      "largeResultPagination": {
+        "iterations": 1000,
+        "p50Ms": 0.00012499999996862243,
+        "p95Ms": 0.00012500000002546585,
+        "maxMs": 0.024833000000000993
+      },
+      "decisionPacketCompilation": {
+        "iterations": 500,
+        "p50Ms": 1.9574589999999716,
+        "p95Ms": 2.3692499999999654,
+        "maxMs": 50.090584000000035
+      },
+      "decisionDelta": {
+        "iterations": 10000,
+        "p50Ms": 0.01491600000008475,
+        "p95Ms": 0.016499999999950887,
+        "maxMs": 0.28045799999995324
+      },
+      "lineageTraversal": {
+        "iterations": 10000,
+        "p50Ms": 0.0000829999999609754,
+        "p95Ms": 0.00012500000002546585,
+        "maxMs": 0.011124999999992724
+      },
+      "replay": {
+        "iterations": 50,
+        "p50Ms": 0.057084000000031665,
+        "p95Ms": 0.07645800000000236,
+        "maxMs": 0.3265830000000278
+      }
+    },
+    "memory": {
+      "baselineRssBytes": 219889664,
+      "baselineRssMiB": 209.7,
+      "peakRssBytes": 270237696,
+      "peakRssMiB": 257.7,
+      "steadyStateRssBytes": 268075008,
+      "steadyStateRssMiB": 255.7,
+      "growthDuringSustainedBytes": 1327104,
+      "cacheSizeBytes": 76642,
+      "compactIndexBytes": 1250000,
+      "workingSetBytes": 1574527
+    },
+    "targets": {
+      "commonObjectSetP95Ms": 25,
+      "complexGraphP95Ms": 75,
+      "incidentSnapshotP95Ms": 50,
+      "decisionPacketP95Ms": 50,
+      "decisionDeltaP95Ms": 10,
+      "incrementalProjectionP95Ms": 25
+    },
+    "gates": {
+      "commonObjectSet": true,
+      "coldObjectSet": true,
+      "pagination": true,
+      "compoundFilters": true,
+      "incidentSnapshot": true,
+      "queryCount": true,
+      "decisionPacket": true,
+      "decisionDelta": true,
+      "incrementalProjection": true,
+      "boundedMemoryGrowth": true
+    },
+    "state": "PASS"
+  },
+  "databasePerformance": {
+    "schemaVersion": "vigia.backend-postgis-scale-benchmark.v1",
+    "generatedAt": "2026-08-25T08:52:06.852Z",
+    "state": "PASS",
+    "engineeringOnlySyntheticFixture": true,
+    "prohibitedAsOperationalEvidence": true,
+    "isolatedDisposableDatabase": true,
+    "loopbackOnly": true,
+    "image": "postgis/postgis:17-3.5",
+    "platform": "linux/amd64",
+    "credentialsGenerated": true,
+    "credentialValuesRecorded": false,
+    "scale": {
+      "incidents": 10000,
+      "canonicalEvents": 1000000,
+      "evidenceObjects": 100000,
+      "dataProducts": 100000,
+      "decisionPackets": 10000,
+      "decisionOutcomes": 10000,
+      "informationValueOutcomes": 10000,
+      "indexedProjectionRows": 110000,
+      "lineageEdges": 100000
+    },
+    "ingestion": {
+      "elapsedMs": 49491.636083,
+      "rows": 1440000,
+      "rowsPerSecond": 29095.825354915458
+    },
+    "projection": {
+      "indexedRows": 110000
+    },
+    "queries": {
+      "coldObjectSet": {
+        "iterations": 1,
+        "p50Ms": 5.109792000002926,
+        "p95Ms": 5.109792000002926,
+        "maxMs": 5.109792000002926
+      },
+      "commonObjectSet": {
+        "iterations": 500,
+        "p50Ms": 0.3072089999986929,
+        "p95Ms": 0.5916670000005979,
+        "maxMs": 2.0100000000020373
+      },
+      "complexGraph": {
+        "iterations": 200,
+        "p50Ms": 11.250041999999667,
+        "p95Ms": 13.47899999999936,
+        "maxMs": 35.57395800000086
+      },
+      "incidentSnapshot": {
+        "iterations": 500,
+        "p50Ms": 0.41583299999911105,
+        "p95Ms": 0.6344590000007884,
+        "maxMs": 3.4412500000034925
+      },
+      "decisionPacket": {
+        "iterations": 500,
+        "p50Ms": 0.2599999999947613,
+        "p95Ms": 0.5637499999938882,
+        "maxMs": 2.589917000004789
+      },
+      "decisionDelta": {
+        "iterations": 500,
+        "p50Ms": 0.2737920000072336,
+        "p95Ms": 0.3492079999996349,
+        "maxMs": 1.5658750000002328
+      },
+      "incrementalProjection": {
+        "iterations": 100,
+        "p50Ms": 0.7483750000028522,
+        "p95Ms": 1.6213340000031167,
+        "maxMs": 4.500040999999328
+      },
+      "lineageTraversal": {
+        "iterations": 200,
+        "p50Ms": 20.115499999999884,
+        "p95Ms": 25.325042000004032,
+        "maxMs": 44.46120900000096
+      },
+      "replay": {
+        "iterations": 200,
+        "p50Ms": 0.4075840000004973,
+        "p95Ms": 0.6226660000029369,
+        "maxMs": 17.80475000000297
+      }
+    },
+    "database": {
+      "baselineSizeBytes": 21900435,
+      "finalSizeBytes": 830022159,
+      "growthBytes": 808121724,
+      "backendMemoryBytes": 3806528
+    },
+    "memory": {
+      "baselineRssBytes": 54149120,
+      "peakRssBytes": 56213504,
+      "steadyStateRssBytes": 53329920,
+      "sustainedGrowthBytes": -819200
+    },
+    "gates": {
+      "commonObjectSet": true,
+      "complexGraph": true,
+      "incidentSnapshot": true,
+      "decisionPacket": true,
+      "decisionDelta": true,
+      "incrementalProjection": true,
+      "boundedNodeMemory": true
+    }
+  },
+  "flagshipDemo": {
+    "schemaVersion": "vigia.backend-convergence-demo.v1",
+    "generatedAt": "2026-08-25T09:02:22.981Z",
+    "incidentId": "2025-AZGCP-000597",
+    "state": "PASS",
+    "steps": [
+      {
+        "number": 1,
+        "name": "Verify Docker engine",
+        "state": "PASS",
+        "evidence": {
+          "serverVersion": "29.4.1"
+        }
+      },
+      {
+        "number": 2,
+        "name": "Start isolated PostGIS",
+        "state": "PASS",
+        "evidence": {
+          "certificationState": "PASS",
+          "image": "postgis/postgis:17-3.5",
+          "loopbackOnly": true
+        }
+      },
+      {
+        "number": 3,
+        "name": "Apply migrations through intelligence schema 017",
+        "state": "PASS",
+        "evidence": {
+          "migrationHead": "017",
+          "idempotent": true
+        }
+      },
+      {
+        "number": 4,
+        "name": "Load retained real incident history",
+        "state": "PASS",
+        "evidence": {
+          "incidentId": "2025-AZGCP-000597"
+        }
+      },
+      {
+        "number": 5,
+        "name": "Materialize Operational Twin/Decision state",
+        "state": "PASS",
+        "evidence": {
+          "state": "HISTORICAL_OPERATIONAL_SNAPSHOT"
+        }
+      },
+      {
+        "number": 6,
+        "name": "Compile signed Decision Packet",
+        "state": "PASS",
+        "evidence": {
+          "fingerprint": "crisis-decision-packet:sha256:4727e534f75fef67861c3b90d52ef641a104bc211b8eaee5426f27dc30a17d94",
+          "proof": "VALID"
+        }
+      },
+      {
+        "number": 7,
+        "name": "Query hypotheses and blockers",
+        "state": "PASS",
+        "evidence": {
+          "hypotheses": 10,
+          "blockedDecisions": 13
+        }
+      },
+      {
+        "number": 8,
+        "name": "Query ranked acquisition plan",
+        "state": "PASS",
+        "evidence": {
+          "candidates": 5,
+          "doctrine": "2.0.0"
+        }
+      },
+      {
+        "number": 9,
+        "name": "Persist new operational event transactionally",
+        "state": "PASS",
+        "evidence": {
+          "state": "DUPLICATE",
+          "sequence": 1,
+          "databaseTransactionCertified": true
+        }
+      },
+      {
+        "number": 10,
+        "name": "Incrementally update affected projections only",
+        "state": "PASS",
+        "evidence": {
+          "affectedIncidentIds": [
+            "2025-AZGCP-000597"
+          ],
+          "artifactsRead": 3,
+          "affectedObjectCount": 20
+        }
+      },
+      {
+        "number": 11,
+        "name": "Recompile packet against changed fact set",
+        "state": "PASS",
+        "evidence": {
+          "fingerprint": "crisis-decision-packet:sha256:750086cc090212ff705dd149784fdcef2925c3a31937e125c15e9450d56fdbf4"
+        }
+      },
+      {
+        "number": 12,
+        "name": "Produce Decision Delta",
+        "state": "PASS",
+        "evidence": {
+          "decisionsChanged": 1,
+          "actionsBecameAvailable": [
+            "REFRESH_STALE_SOURCE"
+          ]
+        }
+      },
+      {
+        "number": 13,
+        "name": "Execute safe bounded reconciliation",
+        "state": "PASS",
+        "evidence": {
+          "tasksCreated": 0,
+          "shadowRecordId": "backend-convergence-shadow:2025-AZGCP-000597:crisis-decision-packet:sha256:750086cc090212ff705dd149784fdcef2925c3a31937e125c15e9450d56fdbf4",
+          "unsafeActionsExecuted": 0
+        }
+      },
+      {
+        "number": 14,
+        "name": "Persist receipt",
+        "state": "PASS",
+        "evidence": {
+          "receiptId": "backend-convergence:receipt:source-stale"
+        }
+      },
+      {
+        "number": 15,
+        "name": "Query historical state",
+        "state": "PASS",
+        "evidence": {
+          "packetVersions": 2,
+          "projectionVersion": 42
+        }
+      },
+      {
+        "number": 16,
+        "name": "Restart services",
+        "state": "PASS",
+        "evidence": {
+          "adapter": "FILE_CERTIFIED_ADAPTER",
+          "databaseRestartCertified": true
+        }
+      },
+      {
+        "number": 17,
+        "name": "Reconstruct identical current state",
+        "state": "PASS",
+        "evidence": {
+          "packetFingerprint": "crisis-decision-packet:sha256:750086cc090212ff705dd149784fdcef2925c3a31937e125c15e9450d56fdbf4"
+        }
+      },
+      {
+        "number": 18,
+        "name": "Back up database",
+        "state": "PASS",
+        "evidence": {
+          "rpoEvents": 0,
+          "measuredRtoMs": 1419.372542
+        }
+      },
+      {
+        "number": 19,
+        "name": "Restore database into isolation",
+        "state": "PASS",
+        "evidence": {
+          "state": "PASS",
+          "rpoEvents": 0,
+          "rtoMs": 1419.372542,
+          "dataLossRecords": 0,
+          "projectionRecoveryMs": 11.001832999999351,
+          "replayVerificationMs": 1.1594999999997526,
+          "migrationHead": "017",
+          "migrationIdempotentAfterRestore": true,
+          "decisionPacketVerified": true,
+          "lineageVerified": true,
+          "receiptsVerified": true,
+          "prospectiveArchiveVerified": true,
+          "decisionMemoryVerified": true,
+          "informationValueVerified": true,
+          "projectionRebuilt": true,
+          "replayVerified": true
+        }
+      },
+      {
+        "number": 20,
+        "name": "Verify replay, lineage, and signatures",
+        "state": "PASS",
+        "evidence": {
+          "replay": true,
+          "lineage": true,
+          "signedRetainedPacket": "VALID",
+          "databaseSemanticEquivalence": "PASS"
+        }
+      },
+      {
+        "number": 21,
+        "name": "Report indexed object-set latency",
+        "state": "PASS",
+        "evidence": {
+          "p50Ms": 0.022124999999505235,
+          "p95Ms": 0.026834000000235392
+        }
+      },
+      {
+        "number": 22,
+        "name": "Shut down cleanly",
+        "state": "PASS",
+        "evidence": {
+          "externalConsequentialActions": 0,
+          "certificationContainersRemaining": 0
+        }
+      }
+    ],
+    "blockedSteps": [],
+    "failedSteps": [],
+    "externalConsequentialActions": 0
+  },
+  "prospectiveKnowledgeTime": {
+    "incidentId": "2026-WAOWF-260420",
+    "providers": [
+      "nifc-wfigs",
+      "noaa-goes-abi"
+    ],
+    "snapshots": 2,
+    "rawBytes": 3424537,
+    "immutable": true,
+    "consequentialActionsExecuted": 0
+  },
+  "secondRegionAccess": {
+    "schemaVersion": "vigia.second-region-access-adjudication.v1",
+    "adjudicatedAt": "2026-08-25T00:00:00.000Z",
+    "regions": {
+      "canada": {
+        "historicalQualification": "PARTNER_REQUIRED",
+        "prospectiveQualification": "CONDITIONALLY_QUALIFIED_SHADOW_ONLY",
+        "captureState": "BLOCKED_RIGHTS_ACCEPTANCE_REQUIRED",
+        "publicationTime": "NOT_EXPOSED_BY_CURRENT_FIRE_M3_PRODUCT",
+        "products": [
+          "public:m3_polygons_current",
+          "public:cwfif_national_activefires"
+        ],
+        "rawVault": "REQUIRED",
+        "consequentialActions": "DISABLED"
+      },
+      "portugal": {
+        "historicalQualification": "FINAL_ONLY",
+        "prospectiveQualification": "PARTNER_REQUIRED",
+        "captureState": "BLOCKED_RIGHTS_AND_PUBLICATION_TIMESTAMP_REVIEW_REQUIRED",
+        "officialFinalReference": "https://sigservices.icnf.pt/server/rest/services/BDG/areas_ardidas/MapServer",
+        "scraping": "PROHIBITED",
+        "consequentialActions": "DISABLED"
+      }
+    }
+  },
+  "doctrine": {
+    "libraryId": "VIGIA_WILDFIRE_OPERATIONS",
+    "version": "2.0.0",
+    "decisions": 18,
+    "priorDemonstrationDecisions": 5,
+    "netNewDecisions": 13,
+    "consequentialDecisions": 1,
+    "coverage": {
+      "schemaVersion": "vigia.decision-doctrine-coverage.v1",
+      "doctrineFingerprint": "compiled-decision-doctrine:sha256:134cdf158887d4298c9ceb34dad57443d115cc4b906ed58445633a8059154f2d",
+      "supportedOperationalStates": 2,
+      "states": [
+        {
+          "stateId": "2025-AZGCP-000597",
+          "applicableDecisions": 18,
+          "readyDecisions": [
+            "MATERIALIZE_AUDIT_PACKET",
+            "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+            "PREPARE_HANDOFF",
+            "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+            "REQUEST_FORECAST_INPUT"
+          ],
+          "blockedDecisions": [
+            "ABSTAIN_FROM_FORECAST",
+            "CANCEL_OBSOLETE_ACQUISITION",
+            "ESCALATE_DATA_QUALITY_FAILURE",
+            "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+            "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+            "MONITOR_CRITICAL_ASSET",
+            "OPEN_CONTRADICTION_REVIEW",
+            "PREPARE_SOURCE_FAILOVER",
+            "PROPOSE_OFFICIAL_WARNING",
+            "QUARANTINE_COMPROMISED_SOURCE",
+            "REASSESS_INCIDENT_ASSOCIATION",
+            "RECALCULATE_AFTER_REVOCATION",
+            "REFRESH_STALE_SOURCE"
+          ],
+          "blockerCategories": [
+            "AUTHORITY",
+            "DATA",
+            "EVIDENCE"
+          ],
+          "unreachableDecisions": []
+        },
+        {
+          "stateId": "2026-WACOA-260140",
+          "applicableDecisions": 18,
+          "readyDecisions": [
+            "MATERIALIZE_AUDIT_PACKET",
+            "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+            "PREPARE_HANDOFF",
+            "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+            "REQUEST_FORECAST_INPUT"
+          ],
+          "blockedDecisions": [
+            "ABSTAIN_FROM_FORECAST",
+            "CANCEL_OBSOLETE_ACQUISITION",
+            "ESCALATE_DATA_QUALITY_FAILURE",
+            "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+            "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+            "MONITOR_CRITICAL_ASSET",
+            "OPEN_CONTRADICTION_REVIEW",
+            "PREPARE_SOURCE_FAILOVER",
+            "PROPOSE_OFFICIAL_WARNING",
+            "QUARANTINE_COMPROMISED_SOURCE",
+            "REASSESS_INCIDENT_ASSOCIATION",
+            "RECALCULATE_AFTER_REVOCATION",
+            "REFRESH_STALE_SOURCE"
+          ],
+          "blockerCategories": [
+            "AUTHORITY",
+            "DATA",
+            "EVIDENCE"
+          ],
+          "unreachableDecisions": []
+        }
+      ],
+      "uncoveredOperationalStates": [],
+      "fingerprint": "decision-doctrine-coverage:sha256:f5b54363e5cd9e1d873a527dfc2eaa35af70756b13df12c23259b71e41344a6f"
+    }
+  },
+  "decisionMemory": {
+    "schemaVersion": "vigia.operational-learning-report.v1",
+    "decisionOutcomes": 0,
+    "shadowRecords": 1,
+    "prospectiveSnapshots": 2,
+    "calibration": {
+      "schemaVersion": "vigia.information-value-calibration.v1",
+      "qualification": "INSUFFICIENT_OUTCOMES",
+      "overall": {
+        "examples": 0,
+        "unlockPrecision": null,
+        "unlockRecall": null,
+        "decisionImpactAgreement": null,
+        "hypothesisDiscriminationAgreement": null,
+        "meanAbsoluteLatencyErrorMs": null,
+        "meanAbsoluteByteError": null,
+        "sourceSuccessRate": null
+      },
+      "stratified": {
+        "providerId": {},
+        "acquisitionType": {},
+        "incidentType": {},
+        "region": {},
+        "sourceHealth": {}
+      },
+      "automaticDoctrineMutation": false,
+      "recommendationRequiresReview": true,
+      "fingerprint": "information-value-calibration:sha256:4861045c18c29aae38cce730ff0a2d783a5c2ce229dcb1a73d19c979544b3939"
+    },
+    "fingerprint": "operational-learning-report:sha256:036583d9c67f573196e7762fe7add11514dd69df4b34fa0c3303ab1501d4d8cb"
+  },
+  "scientificReadiness": {
+    "negativeExamples": 0,
+    "hardNegatives": 0,
+    "calibrationOutcomes": 0,
+    "state": "CORPUS_NOT_READY"
+  },
+  "secondaryHazard": {
+    "state": "NOT_ATTEMPTED",
+    "reason": "The completion directive remained scoped to the wildfire convergence backend; scientific transfer evidence is still absent."
+  }
+}

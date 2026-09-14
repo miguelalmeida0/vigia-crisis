@@ -1,0 +1,398 @@
+{
+  "schema": "vigia.category-leadership-release-evidence.v1",
+  "generatedAt": "2026-08-12T09:02:19.774Z",
+  "repositoryCommit": "9a14d23e353f169561a13dfc99c1a10d700b1681",
+  "runtime": {
+    "endpoint": "local-vigia-runtime",
+    "universe": "production",
+    "features": {
+      "prevention": true,
+      "detection": true,
+      "livingFire": true,
+      "action": true,
+      "outcomes": false
+    },
+    "region": "Portugal mainland"
+  },
+  "integrity": {
+    "syntheticObservations": 0,
+    "demoIdentities": 0,
+    "auditChain": {
+      "valid": true,
+      "count": 389,
+      "head": "7a57436d423a44bf39542d5e9d7e696ce9965cd54b51ca2a1bf9b2f4cda23a8e"
+    },
+    "postgis": {
+      "state": "ready",
+      "version": "3.5 USE_GEOS=1 USE_PROJ=1 USE_STATS=1"
+    }
+  },
+  "physicalTruth": {
+    "database": {
+      "raw_products": 1611,
+      "firms_products": 6,
+      "physical_observations": 5769,
+      "viirs_observations": 5769,
+      "synthetic_observations": 0,
+      "fire_events": 124,
+      "detector_runs": 19,
+      "prevention_findings": 11,
+      "prevention_reviews": 1,
+      "evidence_needs": 97,
+      "evidence_requests": 71,
+      "postgis_version": "3.5 USE_GEOS=1 USE_PROJ=1 USE_STATS=1",
+      "firmsProducts": [
+        {
+          "source_id": "firms:VIIRS_NOAA20_NRT",
+          "provider_product_id": "VIIRS_NOAA20_NRT:2026-08-12T03:17:00.000Z",
+          "checksum_sha256": "d9f6fe529377f92257b79b9adf8260159b2ee3dd5487d9006237f9372fc67322",
+          "processing_state": "ingested",
+          "source_timestamp": "2026-08-12T03:17:00.000Z"
+        },
+        {
+          "source_id": "firms:VIIRS_SNPP_NRT",
+          "provider_product_id": "VIIRS_SNPP_NRT:2026-08-12T02:56:00.000Z",
+          "checksum_sha256": "46dbf37e6d2806e5f8a9569c9bb658cd4518253a83273902553323cf92dfa0f2",
+          "processing_state": "ingested",
+          "source_timestamp": "2026-08-12T02:56:00.000Z"
+        },
+        {
+          "source_id": "firms:VIIRS_NOAA21_NRT",
+          "provider_product_id": "VIIRS_NOAA21_NRT:2026-08-12T02:19:00.000Z",
+          "checksum_sha256": "a28c78fd820c02e117a5819a5416c6ce806b5e1f928098ae6046d9a93a70f4e9",
+          "processing_state": "ingested",
+          "source_timestamp": "2026-08-12T02:19:00.000Z"
+        },
+        {
+          "source_id": "firms:VIIRS_NOAA21_NRT",
+          "provider_product_id": "VIIRS_NOAA21_NRT:2026-08-10T14:20:00.000Z",
+          "checksum_sha256": "c7630d1c387b0e44fa1f10a09336f259cfd82de9cff2a6cfc8466619942363a4",
+          "processing_state": "ingested",
+          "source_timestamp": "2026-08-10T14:20:00.000Z"
+        },
+        {
+          "source_id": "firms:VIIRS_NOAA20_NRT",
+          "provider_product_id": "VIIRS_NOAA20_NRT:2026-08-10T13:33:00.000Z",
+          "checksum_sha256": "acd531a2a62a4db07dcc592327637e9755850b29dfc472ea7e2d108a480b2603",
+          "processing_state": "ingested",
+          "source_timestamp": "2026-08-10T13:33:00.000Z"
+        },
+        {
+          "source_id": "firms:VIIRS_SNPP_NRT",
+          "provider_product_id": "VIIRS_SNPP_NRT:2026-08-10T13:16:00.000Z",
+          "checksum_sha256": "c3b0a11635fc1203c0b0e1c48b10832159987c3375ddd3541a781c4860e7000b",
+          "processing_state": "ingested",
+          "source_timestamp": "2026-08-10T13:16:00.000Z"
+        }
+      ],
+      "physicalFamilies": [
+        {
+          "source": "NASA FIRMS VIIRS",
+          "source_family": "viirs",
+          "independence_group": "viirs_noaa_21",
+          "observation_count": 1995,
+          "latest_observation": "2026-08-12T02:19:00.000Z"
+        },
+        {
+          "source": "NASA FIRMS VIIRS",
+          "source_family": "viirs",
+          "independence_group": "viirs_s_npp",
+          "observation_count": 1901,
+          "latest_observation": "2026-08-12T02:56:00.000Z"
+        },
+        {
+          "source": "NASA FIRMS VIIRS",
+          "source_family": "viirs",
+          "independence_group": "viirs_noaa_20",
+          "observation_count": 1873,
+          "latest_observation": "2026-08-12T03:17:00.000Z"
+        }
+      ]
+    },
+    "liveSummary": {
+      "allEvents": 126,
+      "currentEvents": 3,
+      "activeCurrentPhysicalEvents": 0,
+      "activeCurrentPhysicalSharePercent": 0,
+      "currentReportEvents": 1,
+      "delayedReportEvents": 2,
+      "staleOpenEvents": 91,
+      "currentPhysicalEvents": 0,
+      "physicallyObservedEvents": 0,
+      "agingPhysicalEvents": 0,
+      "needsPhysicalObservation": 3,
+      "routedNeedCount": 13,
+      "growingEvents": 0,
+      "satelliteOnlyEvents": 0,
+      "sensorOnlyEvents": 0,
+      "unreportedPhysicalCandidates": 0,
+      "highPrioritySatelliteOnly": 0,
+      "staleEvents": 123,
+      "multisourceEvents": 9,
+      "currentMultisourceEvents": 0,
+      "uncertainAssociations": 1,
+      "thermalObservations": 5769,
+      "detectedBeforeReport": 7,
+      "leadSampleSize": 7,
+      "medianLeadMinutes": 45,
+      "leadSamples": [
+        {
+          "eventId": "PT-2026-A255C14B03",
+          "label": "Sabugal · Pousafoles Do Bispo, Pena Lobo E Lomba",
+          "minutes": 45,
+          "thermalAt": "2026-08-11T13:59:00.000Z",
+          "reportAt": "2026-08-11T14:44:00.000Z"
+        },
+        {
+          "eventId": "PT-2026-9778583A70",
+          "label": "Valpaços · São João Da Corveira",
+          "minutes": 42,
+          "thermalAt": "2026-08-10T14:20:00.000Z",
+          "reportAt": "2026-08-10T15:02:00.000Z"
+        },
+        {
+          "eventId": "PT-2026-7596F225BD",
+          "label": "Viseu",
+          "minutes": 45,
+          "thermalAt": "2026-08-10T13:16:00.000Z",
+          "reportAt": "2026-08-10T14:01:00.000Z"
+        },
+        {
+          "eventId": "PT-2026-56EAC28201",
+          "label": "Carrazeda de Ansiães · Linhares",
+          "minutes": 31,
+          "thermalAt": "2026-08-08T13:16:00.000Z",
+          "reportAt": "2026-08-08T13:47:00.000Z"
+        },
+        {
+          "eventId": "PT-2026-D6AC12CA6A",
+          "label": "Oeiras · Carnaxide E Queijas",
+          "minutes": 45,
+          "thermalAt": "2026-08-11T14:35:00.000Z",
+          "reportAt": "2026-08-11T15:20:00.000Z"
+        },
+        {
+          "eventId": "PT-2026-A3FA258C21",
+          "label": "Sintra · Belas",
+          "minutes": 49,
+          "thermalAt": "2026-08-10T13:33:00.000Z",
+          "reportAt": "2026-08-10T14:22:00.000Z"
+        },
+        {
+          "eventId": "PT-2026-3F1F77A514",
+          "label": "Setúbal",
+          "minutes": 213,
+          "thermalAt": "2026-08-11T13:14:00.000Z",
+          "reportAt": "2026-08-11T16:47:00.000Z"
+        }
+      ],
+      "evidenceAcquisition": {
+        "REQUEST_ACTIVE": 11,
+        "WAITING_FOR_SCHEDULED_OBSERVATION": 0,
+        "WAITING_FOR_OBSERVATION": 0,
+        "MANUAL_ESCALATION_REQUIRED": 0,
+        "FIELD_CAPACITY_NOT_CONFIGURED": 13,
+        "NO_AVAILABLE_OBSERVATION": 0,
+        "RESOLVED": 73
+      },
+      "unresolvedEvidenceNeeds": 24,
+      "untrackedRoutingNeeds": 0,
+      "orphanedEvidenceNeeds": 0,
+      "acquisitionInvariantHolds": true
+    },
+    "physicalEvidenceEvents": 42,
+    "physicalFirstEvents": [
+      {
+        "id": "PT-2026-A255C14B03",
+        "label": "Sabugal · Pousafoles Do Bispo, Pena Lobo E Lomba",
+        "leadMinutes": 45,
+        "firstPhysicalAt": "2026-08-11T13:59:00.000Z",
+        "firstReportAt": "2026-08-11T14:44:00.000Z",
+        "evidenceState": "multisource"
+      },
+      {
+        "id": "PT-2026-9778583A70",
+        "label": "Valpaços · São João Da Corveira",
+        "leadMinutes": 42,
+        "firstPhysicalAt": "2026-08-10T14:20:00.000Z",
+        "firstReportAt": "2026-08-10T15:02:00.000Z",
+        "evidenceState": "multisource"
+      },
+      {
+        "id": "PT-2026-7596F225BD",
+        "label": "Viseu",
+        "leadMinutes": 45,
+        "firstPhysicalAt": "2026-08-10T13:16:00.000Z",
+        "firstReportAt": "2026-08-10T14:01:00.000Z",
+        "evidenceState": "multisource"
+      },
+      {
+        "id": "PT-2026-56EAC28201",
+        "label": "Carrazeda de Ansiães · Linhares",
+        "leadMinutes": 31,
+        "firstPhysicalAt": "2026-08-08T13:16:00.000Z",
+        "firstReportAt": "2026-08-08T13:47:00.000Z",
+        "evidenceState": "multisource"
+      },
+      {
+        "id": "PT-2026-D6AC12CA6A",
+        "label": "Oeiras · Carnaxide E Queijas",
+        "leadMinutes": 45,
+        "firstPhysicalAt": "2026-08-11T14:35:00.000Z",
+        "firstReportAt": "2026-08-11T15:20:00.000Z",
+        "evidenceState": "multisource"
+      },
+      {
+        "id": "PT-2026-A3FA258C21",
+        "label": "Sintra · Belas",
+        "leadMinutes": 49,
+        "firstPhysicalAt": "2026-08-10T13:33:00.000Z",
+        "firstReportAt": "2026-08-10T14:22:00.000Z",
+        "evidenceState": "multisource"
+      },
+      {
+        "id": "PT-2026-3F1F77A514",
+        "label": "Setúbal",
+        "leadMinutes": 213,
+        "firstPhysicalAt": "2026-08-11T13:14:00.000Z",
+        "firstReportAt": "2026-08-11T16:47:00.000Z",
+        "evidenceState": "association-uncertain"
+      }
+    ]
+  },
+  "prevention": {
+    "campaign": {
+      "campaignId": "prevention-campaign:94dbd4395e4665ac",
+      "datasetHash": "sha256:94dbd4395e4665ac82e78345ff3e36aab72f7fb92382d4be8b9a135b2c531b72",
+      "evidenceInputHash": "sha256:d71ade0320d7fe34e48d3157f047c83256f9af2589e38a2a8074be24a3846be1",
+      "generatedAt": "2026-08-12T08:53:34.394Z",
+      "summary": {
+        "completed": 8,
+        "failed": 0,
+        "screened": 2,
+        "screenedNoCandidate": 1,
+        "abstained": 6,
+        "findings": 2,
+        "negativeComponentsRejected": 26,
+        "negativeSamples": 26
+      },
+      "integrity": {
+        "manualCandidateSelection": false,
+        "syntheticLabels": false,
+        "expertGroundTruthAvailable": false,
+        "operationalClaimAllowed": false,
+        "failedCandidates": 0
+      }
+    },
+    "runtime": {
+      "findings": 11,
+      "detectorRuns": 19,
+      "validation": {
+        "candidateCount": 11,
+        "reviewedCount": 1,
+        "developerReviewCount": 1,
+        "domainExpertReviewCount": 0,
+        "acceptedCount": 0,
+        "rejectedCount": 0,
+        "abstainedCount": 1,
+        "developerAcceptanceRate": null,
+        "candidatePrecision": null,
+        "falseCandidateRate": null,
+        "recall": null,
+        "abstentionRate": 1,
+        "errorTaxonomy": {
+          "PHYSICAL_CHANGE_SUPPORTED": 0,
+          "TRUE_FUEL_CONTINUITY_CHANGE": 0,
+          "SEASONAL_VEGETATION": 0,
+          "AGRICULTURE": 0,
+          "FORESTRY_OPERATION": 0,
+          "CLEARING": 0,
+          "REGISTRATION_ERROR": 0,
+          "REGISTRATION_FAILURE": 0,
+          "CLOUD_SHADOW": 0,
+          "LAND_COVER_CONFUSION": 0,
+          "ASSET_MAP_ERROR": 0,
+          "STRUCTURE_MAP_ERROR": 0,
+          "INSUFFICIENT_RESOLUTION": 1,
+          "OTHER": 0
+        },
+        "sourceQualityBreakdown": {
+          "UNMEASURED": {
+            "reviewed": 1,
+            "accepted": 0,
+            "rejected": 0,
+            "abstained": 1
+          }
+        },
+        "landCoverBreakdown": {
+          "UNMEASURED": {
+            "reviewed": 1,
+            "accepted": 0,
+            "rejected": 0,
+            "abstained": 1
+          }
+        },
+        "precisionBasis": "UNMEASURED_NO_DOMAIN_EXPERT_LABELS",
+        "recallBasis": "UNMEASURED_NO_EXHAUSTIVE_GROUND_TRUTH"
+      }
+    }
+  },
+  "heldOut": {
+    "state": "MEASURED_AGAINST_OFFICIAL_REPORT_REFERENCES",
+    "corpusId": "portugal-2024-official-evidence",
+    "controlledClock": true,
+    "cases": 10,
+    "observationAssociationAccuracy": 0.8887,
+    "reportJoinAccuracy": 1,
+    "ambiguityRate": 0.1113,
+    "fragmentationRate": 0,
+    "falseMergeRate": 0,
+    "futureEvidenceViolations": 0
+  },
+  "territory": {
+    "summary": {
+      "preIgnitionFindings": 11,
+      "thermalFireCandidates": 0,
+      "physicalFireEvents": 0,
+      "reportOnlyIncidents": 3,
+      "staleArchive": 123,
+      "actionsRequired": 24
+    },
+    "signalCount": 137
+  },
+  "sources": {
+    "states": {
+      "fires": "current",
+      "riskToday": "current",
+      "riskTomorrow": "current",
+      "weather": "current",
+      "warnings": "current",
+      "history": "current",
+      "copernicus": "current",
+      "firms": "not_configured",
+      "thermal": "current",
+      "mtgPixels": "not_configured",
+      "sentinel3Pixels": "not_configured",
+      "sensorAssets": "not_configured",
+      "observationSchedule": "planner_ready"
+    },
+    "externalBlockers": [
+      {
+        "id": "physical_source_families",
+        "state": "insufficient",
+        "evidence": {
+          "families": [],
+          "count": 0,
+          "assetRegistryState": "not_configured",
+          "required": 2
+        }
+      }
+    ]
+  },
+  "claims": {
+    "productionReady": false,
+    "operationallyValidated": false,
+    "reason": "Release readiness remains false until the strict current two-physical-family gate passes. Official-report replay is measured; domain-expert prevention precision and recall remain unmeasured."
+  },
+  "evidenceHash": "sha256:059e6cf9ba8944ec8174e2a2798a58c4dec8c29022365febd5d4881256f84dee"
+}

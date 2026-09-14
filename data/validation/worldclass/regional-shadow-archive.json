@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "vigia.regional-shadow-campaign.v1",
+  "supportedModes": [
+    "ONCE",
+    "BOUNDED_DURATION",
+    "INCIDENT_WATCH",
+    "REGIONAL_SHADOW"
+  ],
+  "boundedCampaign": {
+    "durationDays": 7,
+    "incidents": 25,
+    "providerSourceClasses": 3,
+    "immutableSnapshots": 1000,
+    "cadenceSeconds": 300,
+    "maximumConcurrentRequests": 3,
+    "maximumBytesPerResponse": 5242880,
+    "backgroundProcess": false
+  },
+  "preservedFields": [
+    "raw provider object",
+    "provider publication time",
+    "VIGIA receipt time",
+    "source health",
+    "perimeter revision",
+    "physical observations",
+    "weather run",
+    "Evidence State",
+    "Evidence Debt",
+    "hypotheses",
+    "Decision Packet",
+    "shadow actions",
+    "later outcomes",
+    "rights",
+    "lineage"
+  ],
+  "currentEvidence": {
+    "snapshots": 229,
+    "incidents": 108,
+    "providerSourceClasses": 3,
+    "campaignFingerprint": "public-evidence-prospective-campaign:sha256:68718c9cef747afd3f079d6a0407f29f2d7311d834ad29c5081e5f353e961624",
+    "rawBytes": 0
+  },
+  "importedEvidence": {
+    "checks": {
+      "duration": false,
+      "incidents": true,
+      "providers": true,
+      "snapshots": false,
+      "restartRecovery": false,
+      "backupRestore": false,
+      "rights": true,
+      "replay": false,
+      "appendOnly": true
+    },
+    "fingerprint": "sha256:bd7ed2ed64b32bc300facc6f578bc12be2ca8de890b1629ed8b3c8aabd4bdcdf"
+  },
+  "state": "TIME_ACCUMULATION_REQUIRED",
+  "passed": false,
+  "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+  "runningCommand": "npm run evidence:prospective:capture",
+  "fingerprint": "regional-shadow-archive:sha256:bfccfbfdc4df51f54c650d3143c50f2a3955ddeeee8f08b907fdf106b0832069"
+}

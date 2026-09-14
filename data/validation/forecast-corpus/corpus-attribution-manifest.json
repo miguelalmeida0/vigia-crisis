@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "vigia.corpus-attribution-manifest.v1",
+  "allowed": true,
+  "blockers": [],
+  "attributions": [
+    {
+      "licenceId": "ICNF-ATTRIBUTION",
+      "attribution": "Instituto da Conservação da Natureza e das Florestas (ICNF).",
+      "termsVersion": "2026-08-24"
+    },
+    {
+      "licenceId": "NASA-FEDS-TERMS",
+      "attribution": "NASA Earth Information System FEDS; cite Chen et al. (2022).",
+      "termsVersion": "2026-08-24"
+    },
+    {
+      "licenceId": "NASA-FIRMS-TERMS",
+      "attribution": "NASA FIRMS / LANCE; retain provider disclaimer and citation.",
+      "termsVersion": "2026-08-24"
+    },
+    {
+      "licenceId": "NIFC-OPEN-DATA",
+      "attribution": "National Interagency Fire Center, WFIGS.",
+      "termsVersion": "2026-08-24"
+    },
+    {
+      "licenceId": "NOAA-HRRR-PUBLIC-DATA",
+      "attribution": "NOAA HRRR; identify access date and do not imply NOAA endorsement.",
+      "termsVersion": "2026-08-24"
+    },
+    {
+      "licenceId": "ODBL-1.0",
+      "attribution": "© OpenStreetMap contributors.",
+      "termsVersion": "1.0"
+    },
+    {
+      "licenceId": "USFS-LANDFIRE-PUBLIC-DATA",
+      "attribution": "LANDFIRE, U.S. Department of the Interior and U.S. Department of Agriculture, Forest Service.",
+      "termsVersion": "2026-08-24"
+    }
+  ]
+}

@@ -1,0 +1,1067 @@
+{
+  "schemaVersion": "vigia-real-corpus-benchmark-result.v1",
+  "generatedAt": "2026-08-11T18:07:54.990Z",
+  "corpus": {
+    "id": "portugal-2024-official-evidence",
+    "file": "data/replay/corpus/portugal-2024-official.json",
+    "checksumSha256": "9d79ef18573004337a31653c92e928708589dfa0f76dea15eb15d86df1cf9561",
+    "sourceManifest": "data/replay/corpus/portugal-2024-source-manifest.json",
+    "evidenceClass": "official_archival_evidence"
+  },
+  "softwareReplay": {
+    "passed": true,
+    "controlledClock": true,
+    "projectionMode": "final_governed_clock",
+    "futureEvidenceViolations": 0,
+    "arrivalCount": 2523,
+    "arrivalBatchCount": 111,
+    "lateArrivalCount": 0,
+    "eventCount": 68,
+    "stableObservationAssignments": 2523,
+    "identityReassignments": 0,
+    "unjustifiedIdentityReassignments": 0,
+    "identityStable": true,
+    "persistedDerivedStates": 68,
+    "geometry": {
+      "thermalSupportFeatures": 2488,
+      "allRejectPerimeterAuthority": true
+    }
+  },
+  "validation": {
+    "state": "MEASURED_AGAINST_OFFICIAL_REPORT_REFERENCES",
+    "metrics": {
+      "schemaVersion": "vigia-official-archive-benchmark.v2",
+      "caseCount": 35,
+      "associatedCases": 35,
+      "associationRate": 1,
+      "reportJoinAccuracy": 1,
+      "fragmentedCases": 0,
+      "fragmentationRate": 0,
+      "falseMergedEvents": 0,
+      "falseMergeRate": 0,
+      "observationLevelAssociationAccuracy": 0.7556,
+      "labelledPhysicalObservations": 2488,
+      "correctlyAssociatedPhysicalObservations": 1880,
+      "ambiguityCount": 608,
+      "ambiguityRate": 0.2444,
+      "physicalFirstCases": 7,
+      "physicalFirstRate": 0.2,
+      "physicalFirstEventRetention": 1,
+      "physicalLeadMedianMinutes": 41,
+      "physicalLeadMaxMinutes": 433,
+      "cases": [
+        {
+          "id": "PT-2024-ICNF-59380",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support",
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-2BBA90926F",
+          "predictedEventIds": [
+            "PT-2024-2BBA90926F"
+          ],
+          "unresolvedObservationCount": 23,
+          "thermalObservationCount": 124,
+          "associatedPhysicalObservations": 101,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 8
+        },
+        {
+          "id": "PT-2024-ICNF-59191",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support",
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-F5561C021A",
+          "predictedEventIds": [
+            "PT-2024-F5561C021A"
+          ],
+          "unresolvedObservationCount": 31,
+          "thermalObservationCount": 84,
+          "associatedPhysicalObservations": 53,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 151
+        },
+        {
+          "id": "PT-2024-ICNF-59325",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support",
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-057B18C6A1",
+          "predictedEventIds": [
+            "PT-2024-057B18C6A1"
+          ],
+          "unresolvedObservationCount": 30,
+          "thermalObservationCount": 124,
+          "associatedPhysicalObservations": 94,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 100
+        },
+        {
+          "id": "PT-2024-ICNF-58921",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-6D58421AF1",
+          "predictedEventIds": [
+            "PT-2024-6D58421AF1"
+          ],
+          "unresolvedObservationCount": 9,
+          "thermalObservationCount": 27,
+          "associatedPhysicalObservations": 18,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 24
+        },
+        {
+          "id": "PT-2024-ICNF-59158",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-7AB912C531",
+          "predictedEventIds": [
+            "PT-2024-7AB912C531"
+          ],
+          "unresolvedObservationCount": 9,
+          "thermalObservationCount": 49,
+          "associatedPhysicalObservations": 40,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 41
+        },
+        {
+          "id": "PT-2024-ICNF-59677",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-EC4AC3A4E2",
+          "predictedEventIds": [
+            "PT-2024-EC4AC3A4E2"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 44,
+          "associatedPhysicalObservations": 44,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 433
+        },
+        {
+          "id": "PT-2024-ICNF-58591",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "physical_first_late_report"
+          ],
+          "reportEventId": "PT-2024-F0DE25B00C",
+          "predictedEventIds": [
+            "PT-2024-F0DE25B00C"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 25,
+          "associatedPhysicalObservations": 25,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": 2
+        },
+        {
+          "id": "PT-2024-ICNF-59214",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-36A30824A1",
+          "predictedEventIds": [
+            "PT-2024-36A30824A1"
+          ],
+          "unresolvedObservationCount": 98,
+          "thermalObservationCount": 118,
+          "associatedPhysicalObservations": 20,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-58977",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-BD59EA7693",
+          "predictedEventIds": [
+            "PT-2024-BD59EA7693"
+          ],
+          "unresolvedObservationCount": 25,
+          "thermalObservationCount": 139,
+          "associatedPhysicalObservations": 114,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59043",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-BD8AF820BA",
+          "predictedEventIds": [
+            "PT-2024-BD8AF820BA"
+          ],
+          "unresolvedObservationCount": 58,
+          "thermalObservationCount": 147,
+          "associatedPhysicalObservations": 89,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-58975",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-D3056E55A4",
+          "predictedEventIds": [
+            "PT-2024-D3056E55A4"
+          ],
+          "unresolvedObservationCount": 16,
+          "thermalObservationCount": 109,
+          "associatedPhysicalObservations": 93,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-58230",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [],
+          "reportEventId": "PT-2024-A70A1C33D7",
+          "predictedEventIds": [
+            "PT-2024-A70A1C33D7"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 43,
+          "associatedPhysicalObservations": 43,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-58715",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [],
+          "reportEventId": "PT-2024-DE3C3226FB",
+          "predictedEventIds": [
+            "PT-2024-DE3C3226FB"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 26,
+          "associatedPhysicalObservations": 26,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-109",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [],
+          "reportEventId": "PT-2024-ED6251995D",
+          "predictedEventIds": [
+            "PT-2024-ED6251995D"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 33,
+          "associatedPhysicalObservations": 33,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-58116",
+          "evaluationSplit": "baseline_comparable",
+          "difficultyTags": [],
+          "reportEventId": "PT-2024-9EF3892E4E",
+          "predictedEventIds": [
+            "PT-2024-9EF3892E4E"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 22,
+          "associatedPhysicalObservations": 22,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59206",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-7BEE6A09C4",
+          "predictedEventIds": [
+            "PT-2024-7BEE6A09C4"
+          ],
+          "unresolvedObservationCount": 17,
+          "thermalObservationCount": 87,
+          "associatedPhysicalObservations": 70,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59108",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-2D19E53100",
+          "predictedEventIds": [
+            "PT-2024-2D19E53100"
+          ],
+          "unresolvedObservationCount": 25,
+          "thermalObservationCount": 76,
+          "associatedPhysicalObservations": 51,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59063",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-9C57B65B14",
+          "predictedEventIds": [
+            "PT-2024-9C57B65B14"
+          ],
+          "unresolvedObservationCount": 21,
+          "thermalObservationCount": 108,
+          "associatedPhysicalObservations": 87,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59135",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-A7ED042B7A",
+          "predictedEventIds": [
+            "PT-2024-A7ED042B7A"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 60,
+          "associatedPhysicalObservations": 60,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59334",
+          "evaluationSplit": "development",
+          "difficultyTags": [],
+          "reportEventId": "PT-2024-B70177C931",
+          "predictedEventIds": [
+            "PT-2024-B70177C931"
+          ],
+          "unresolvedObservationCount": 47,
+          "thermalObservationCount": 63,
+          "associatedPhysicalObservations": 16,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59294",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-297FC08311",
+          "predictedEventIds": [
+            "PT-2024-297FC08311"
+          ],
+          "unresolvedObservationCount": 15,
+          "thermalObservationCount": 59,
+          "associatedPhysicalObservations": 44,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59127",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-B7774BDF15",
+          "predictedEventIds": [
+            "PT-2024-B7774BDF15"
+          ],
+          "unresolvedObservationCount": 49,
+          "thermalObservationCount": 86,
+          "associatedPhysicalObservations": 37,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59033",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-E8FB434AEA",
+          "predictedEventIds": [
+            "PT-2024-E8FB434AEA"
+          ],
+          "unresolvedObservationCount": 11,
+          "thermalObservationCount": 47,
+          "associatedPhysicalObservations": 36,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59194",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-DE4ECDF4F8",
+          "predictedEventIds": [
+            "PT-2024-DE4ECDF4F8"
+          ],
+          "unresolvedObservationCount": 22,
+          "thermalObservationCount": 58,
+          "associatedPhysicalObservations": 36,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59193",
+          "evaluationSplit": "development",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-6B6785C251",
+          "predictedEventIds": [
+            "PT-2024-6B6785C251"
+          ],
+          "unresolvedObservationCount": 29,
+          "thermalObservationCount": 74,
+          "associatedPhysicalObservations": 45,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59221",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-4421C8E8DD",
+          "predictedEventIds": [
+            "PT-2024-4421C8E8DD"
+          ],
+          "unresolvedObservationCount": 12,
+          "thermalObservationCount": 56,
+          "associatedPhysicalObservations": 44,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59096",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-B91F07B65C",
+          "predictedEventIds": [
+            "PT-2024-B91F07B65C"
+          ],
+          "unresolvedObservationCount": 12,
+          "thermalObservationCount": 69,
+          "associatedPhysicalObservations": 57,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59304",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-F0B2C5E59F",
+          "predictedEventIds": [
+            "PT-2024-F0B2C5E59F"
+          ],
+          "unresolvedObservationCount": 10,
+          "thermalObservationCount": 83,
+          "associatedPhysicalObservations": 73,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59265",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-6D94344444",
+          "predictedEventIds": [
+            "PT-2024-6D94344444"
+          ],
+          "unresolvedObservationCount": 12,
+          "thermalObservationCount": 65,
+          "associatedPhysicalObservations": 53,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59306",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-6A568357E8",
+          "predictedEventIds": [
+            "PT-2024-6A568357E8"
+          ],
+          "unresolvedObservationCount": 8,
+          "thermalObservationCount": 70,
+          "associatedPhysicalObservations": 62,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59231",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-E0B34772D8",
+          "predictedEventIds": [
+            "PT-2024-E0B34772D8"
+          ],
+          "unresolvedObservationCount": 16,
+          "thermalObservationCount": 78,
+          "associatedPhysicalObservations": 62,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59200",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-380C099EE0",
+          "predictedEventIds": [
+            "PT-2024-380C099EE0"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 61,
+          "associatedPhysicalObservations": 61,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59259",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire",
+            "large_evolving_support"
+          ],
+          "reportEventId": "PT-2024-8B60F44E01",
+          "predictedEventIds": [
+            "PT-2024-8B60F44E01"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 85,
+          "associatedPhysicalObservations": 85,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59175",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [],
+          "reportEventId": "PT-2024-6716FCA32C",
+          "predictedEventIds": [
+            "PT-2024-6716FCA32C"
+          ],
+          "unresolvedObservationCount": 3,
+          "thermalObservationCount": 59,
+          "associatedPhysicalObservations": 56,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        },
+        {
+          "id": "PT-2024-ICNF-59099",
+          "evaluationSplit": "held_out",
+          "difficultyTags": [
+            "nearby_concurrent_fire"
+          ],
+          "reportEventId": "PT-2024-ADC854E5CA",
+          "predictedEventIds": [
+            "PT-2024-ADC854E5CA"
+          ],
+          "unresolvedObservationCount": 0,
+          "thermalObservationCount": 30,
+          "associatedPhysicalObservations": 30,
+          "associated": true,
+          "fragmented": false,
+          "physicalLeadMinutes": null
+        }
+      ],
+      "splitMetrics": {
+        "baseline_comparable": {
+          "caseCount": 15,
+          "associatedCases": 15,
+          "associationRate": 1,
+          "reportJoinAccuracy": 1,
+          "fragmentedCases": 0,
+          "fragmentationRate": 0,
+          "falseMergedEvents": 0,
+          "falseMergeRate": 0,
+          "observationLevelAssociationAccuracy": 0.7316,
+          "labelledPhysicalObservations": 1114,
+          "correctlyAssociatedPhysicalObservations": 815,
+          "ambiguityCount": 299,
+          "ambiguityRate": 0.2684,
+          "physicalFirstCases": 7,
+          "physicalFirstRate": 0.4667,
+          "physicalFirstEventRetention": 1
+        },
+        "development": {
+          "caseCount": 10,
+          "associatedCases": 10,
+          "associationRate": 1,
+          "reportJoinAccuracy": 1,
+          "fragmentedCases": 0,
+          "fragmentationRate": 0,
+          "falseMergedEvents": 0,
+          "falseMergeRate": 0,
+          "observationLevelAssociationAccuracy": 0.6713,
+          "labelledPhysicalObservations": 718,
+          "correctlyAssociatedPhysicalObservations": 482,
+          "ambiguityCount": 236,
+          "ambiguityRate": 0.3287,
+          "physicalFirstCases": 0,
+          "physicalFirstRate": 0,
+          "physicalFirstEventRetention": null
+        },
+        "held_out": {
+          "caseCount": 10,
+          "associatedCases": 10,
+          "associationRate": 1,
+          "reportJoinAccuracy": 1,
+          "fragmentedCases": 0,
+          "fragmentationRate": 0,
+          "falseMergedEvents": 0,
+          "falseMergeRate": 0,
+          "observationLevelAssociationAccuracy": 0.8887,
+          "labelledPhysicalObservations": 656,
+          "correctlyAssociatedPhysicalObservations": 583,
+          "ambiguityCount": 73,
+          "ambiguityRate": 0.1113,
+          "physicalFirstCases": 0,
+          "physicalFirstRate": 0,
+          "physicalFirstEventRetention": null
+        }
+      },
+      "beforeAfter": {
+        "baselineComparable": {
+          "before": {
+            "caseCount": 15,
+            "associationRate": 0.1333,
+            "fragmentationRate": 0.6667,
+            "falseMergeRate": 0.2059,
+            "unjustifiedIdentityReassignments": 151
+          },
+          "after": {
+            "caseCount": 15,
+            "associatedCases": 15,
+            "associationRate": 1,
+            "reportJoinAccuracy": 1,
+            "fragmentedCases": 0,
+            "fragmentationRate": 0,
+            "falseMergedEvents": 0,
+            "falseMergeRate": 0,
+            "observationLevelAssociationAccuracy": 0.7316,
+            "labelledPhysicalObservations": 1114,
+            "correctlyAssociatedPhysicalObservations": 815,
+            "ambiguityCount": 299,
+            "ambiguityRate": 0.2684,
+            "physicalFirstCases": 7,
+            "physicalFirstRate": 0.4667,
+            "physicalFirstEventRetention": 1
+          }
+        }
+      },
+      "unmeasured": [
+        "provider delivery latency",
+        "exact ignition-time lead",
+        "authoritative perimeter accuracy",
+        "calibrated fire-existence probability",
+        "negative-case precision outside the governed incident corpus",
+        "ambiguous-to-correctly-abstained rate without authoritative pixel identity labels"
+      ]
+    },
+    "qualification": "ICNF SGIF records are official reported-fire references. They are not exact ignition-time, perimeter, or complete negative labels."
+  },
+  "caseStates": [
+    {
+      "caseId": "PT-2024-ICNF-59380",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 4,
+      "observationCount": 266,
+      "physicalObservationCount": 265,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59191",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 6,
+      "observationCount": 191,
+      "physicalObservationCount": 190,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59325",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 5,
+      "observationCount": 207,
+      "physicalObservationCount": 206,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58921",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 60,
+      "physicalObservationCount": 59,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59158",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 67,
+      "physicalObservationCount": 66,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59677",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 45,
+      "physicalObservationCount": 44,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58591",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 26,
+      "physicalObservationCount": 25,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59214",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 131,
+      "physicalObservationCount": 130,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58977",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 155,
+      "physicalObservationCount": 154,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59043",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 5,
+      "observationCount": 246,
+      "physicalObservationCount": 245,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58975",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 133,
+      "physicalObservationCount": 132,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58230",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 44,
+      "physicalObservationCount": 43,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58715",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 27,
+      "physicalObservationCount": 26,
+      "hasLivingGeometry": true,
+      "movementMeasured": false
+    },
+    {
+      "caseId": "PT-2024-ICNF-109",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 34,
+      "physicalObservationCount": 33,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-58116",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 23,
+      "physicalObservationCount": 22,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59206",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 104,
+      "physicalObservationCount": 103,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59108",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 158,
+      "physicalObservationCount": 157,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59063",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 168,
+      "physicalObservationCount": 167,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59135",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 61,
+      "physicalObservationCount": 60,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59334",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 6,
+      "observationCount": 64,
+      "physicalObservationCount": 63,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59294",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 78,
+      "physicalObservationCount": 77,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59127",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 119,
+      "physicalObservationCount": 118,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59033",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 117,
+      "physicalObservationCount": 116,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59194",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 4,
+      "observationCount": 70,
+      "physicalObservationCount": 69,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59193",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 4,
+      "observationCount": 157,
+      "physicalObservationCount": 156,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59221",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 141,
+      "physicalObservationCount": 140,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59096",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 82,
+      "physicalObservationCount": 81,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59304",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 84,
+      "physicalObservationCount": 83,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59265",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 78,
+      "physicalObservationCount": 77,
+      "hasLivingGeometry": true,
+      "movementMeasured": false
+    },
+    {
+      "caseId": "PT-2024-ICNF-59306",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 3,
+      "observationCount": 72,
+      "physicalObservationCount": 71,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59231",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 94,
+      "physicalObservationCount": 93,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59200",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 62,
+      "physicalObservationCount": 61,
+      "hasLivingGeometry": true,
+      "movementMeasured": false
+    },
+    {
+      "caseId": "PT-2024-ICNF-59259",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 86,
+      "physicalObservationCount": 85,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59175",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 2,
+      "observationCount": 60,
+      "physicalObservationCount": 59,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    },
+    {
+      "caseId": "PT-2024-ICNF-59099",
+      "asOf": "2024-09-21T02:04:00.000Z",
+      "predictedEventCount": 1,
+      "observationCount": 31,
+      "physicalObservationCount": 30,
+      "hasLivingGeometry": true,
+      "movementMeasured": true
+    }
+  ]
+}

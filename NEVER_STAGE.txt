@@ -1,0 +1,40 @@
+# VIGIA operational-maturity release — prohibited staging boundary
+#
+# These paths contain unrelated work, generated build output, volatile runtime
+# state, secrets, local credentials, recovery material, or temporary evidence.
+
+apps/mission-dark/**
+apps/web/data/**
+artifacts/mission-dark-acceptance/**
+
+.tmp/**
+.codex-runtime-tmp/**
+.external-campaigns/**
+apps/operator-console/dist/**
+data/runtime/**
+
+**/.env
+**/.env.*
+**/secrets/**
+**/credentials/**
+**/operator-console-access-token
+**/*.key
+**/*.pem
+**/*.p12
+**/*.pid
+**/*.sock
+**/*.log
+**/*.sqlite
+**/*.sqlite-shm
+**/*.sqlite-wal
+**/*.db
+**/*.db-shm
+**/*.db-wal
+
+**/*before-*-recovery*
+**/*recovery-backup*
+**/*recovery-snapshot*
+**/*stale-screenshot*
+**/node_modules/**
+**/__pycache__/**
+**/*.pyc

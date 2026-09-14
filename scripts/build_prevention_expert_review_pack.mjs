@@ -1,0 +1,25 @@
+#!/usr/bin/env node
+import { createHash } from 'node:crypto';
+import { readFile, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { preventionFindingVersion } from '../packages/domain/src/prevention-review.mjs';
+import { PreventionReviewContextService } from '../apps/api/src/modules/prevention/prevention-review-context-service.mjs';
+
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const statePath=path.join(root,'data/runtime/production-v1.json'),contextPath=path.join(root,'data/reference/prevention-review-context-v1.json');
+const packPath=path.join(root,'data/validation/prevention/portugal-sentinel2-expert-review-pack-v1.json'),keyPath=path.join(root,'data/validation/prevention/portugal-sentinel2-expert-review-key-v1.json'),labelsPath=path.join(root,'data/validation/prevention/portugal-sentinel2-expert-review-labels-v1.csv');
+const sha=(value)=>createHash('sha256').update(typeof value==='string'||Buffer.isBuffer(value)?value:JSON.stringify(value)).digest('hex');
+const state=JSON.parse(await readFile(statePath,'utf8')),context=new PreventionReviewContextService({filePath:contextPath});await context.initialize();
+const findings=(state.preventionFindings??[]).map((item)=>context.enrich(item));
+const rows=findings.map((finding)=>{
+  const current=finding.provenance?.current??{},comparison=finding.provenance?.comparison??{},caseId=`PREVENT-${sha(`blind-v1:${finding.findingId}`).slice(0,10).toUpperCase()}`;
+  return{caseId,sortKey:sha(`order-v1:${caseId}`),case:{place:finding.place,coordinate:finding.coordinate,geometry:finding.geometry,scenePair:{current:{observationId:current.id,acquiredAt:current.acquiredAt,visualCogUrl:current.visualCogUrl,previewPath:current.previewUrl,bindingHash:current.bindingHash},comparison:{observationId:comparison.id,acquiredAt:comparison.acquiredAt,visualCogUrl:comparison.visualCogUrl,previewPath:comparison.previewUrl,bindingHash:comparison.bindingHash}},physicalMeasurements:{affectedAreaHa:finding.affectedAreaHa,corridorLengthM:finding.corridorLengthM,newFuelFraction:finding.newFuelFraction,nearestMappedStructureM:finding.nearestStructureM,structuresWithin150m:finding.structuresWithinPolicyRadius},reviewContext:{landCover:finding.landCoverContext,terrain:finding.terrainContext,roadCrossings:finding.roadCrossings,criticalAssetProximityM:finding.criticalAssetProximityM,contextEvidenceHash:finding.reviewContextBinding?.evidenceHash},sourceQuality:finding.sourceQuality,question:'Do the bound native scenes and real context support a meaningful fuel-continuity change requiring prevention attention?',requiredAlternatives:['SEASONAL_VEGETATION','AGRICULTURE','FORESTRY_OPERATION','CLEARING','REGISTRATION_ERROR','CLOUD_SHADOW','LAND_COVER_CONFUSION','INSUFFICIENT_RESOLUTION']},key:{caseId,findingId:finding.findingId,findingVersion:preventionFindingVersion(finding),detectorVersion:finding.detectorVersion,evaluationSplit:(parseInt(sha(`prevention:${finding.findingId}`).slice(0,8),16)%5===0?'FROZEN_CONFIRMATORY':'DEVELOPMENT_REVIEW')}};
+}).sort((a,b)=>a.sortKey.localeCompare(b.sortKey));
+const generatedAt=new Date().toISOString();
+const pack={schema:'vigia.prevention.blinded-expert-review-pack.v1',generatedAt,datasetPolicy:'Every current geometry-bound PREVENT candidate is included exactly once in deterministic blinded order.',blinding:{attentionScoreHidden:true,detectorDecisionHidden:true,priorReviewsHidden:true,caseToFindingKeySeparate:true},reviewerContract:{requiredQualification:'wildfire_prevention_domain_expert',decisions:['ACCEPT_CANDIDATE','REJECT_CANDIDATE','ABSTAIN'],reasons:['PHYSICAL_CHANGE_SUPPORTED','TRUE_FUEL_CONTINUITY_CHANGE','SEASONAL_VEGETATION','AGRICULTURE','FORESTRY_OPERATION','CLEARING','REGISTRATION_ERROR','REGISTRATION_FAILURE','CLOUD_SHADOW','LAND_COVER_CONFUSION','ASSET_MAP_ERROR','STRUCTURE_MAP_ERROR','INSUFFICIENT_RESOLUTION','OTHER'],minimumNote:'Describe visible evidence and the principal alternative explanation. Abstain when native evidence or context is insufficient.'},inventory:{cases:rows.length},integrity:{syntheticEvidence:false,labelsGenerated:false,operationalClaimAllowed:false,contextEvidenceHash:context.snapshot().evidenceHash},cases:rows.map((row,index)=>({caseId:row.caseId,order:index+1,...row.case}))};
+pack.evidenceHash=`sha256:${sha(pack)}`;
+const key={schema:'vigia.prevention.blinded-expert-review-key.v1',generatedAt,packEvidenceHash:pack.evidenceHash,integrity:{labelsGenerated:false},cases:rows.map((row,index)=>({order:index+1,...row.key}))};key.evidenceHash=`sha256:${sha(key)}`;
+const csv=['caseId,reviewerId,reviewerQualifications,decision,reason,note',...rows.map((row)=>`${row.caseId},,,,,`)].join('\n')+'\n';
+await Promise.all([writeFile(packPath,`${JSON.stringify(pack)}\n`),writeFile(keyPath,`${JSON.stringify(key)}\n`),writeFile(labelsPath,csv)]);
+console.log(JSON.stringify({packPath,keyPath,labelsPath,cases:rows.length,packEvidenceHash:pack.evidenceHash,keyEvidenceHash:key.evidenceHash},null,2));

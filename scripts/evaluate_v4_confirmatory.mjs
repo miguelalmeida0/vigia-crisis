@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { open, readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { assessThermalCandidateV3Candidate, assessThermalCandidateV4Candidate, THERMAL_CANDIDATE_V4_CANDIDATE_THRESHOLD_VERSION, THERMAL_CANDIDATE_V4_CANDIDATE_VERSION } from '../packages/domain/src/thermal-candidate-policy.mjs';
+import { thermalTrend } from '../packages/domain/src/fire-event-tracker.mjs';
+import { thermalDetectionMetrics } from '../packages/domain/src/thermal-detection-benchmark.mjs';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const year = Number(process.argv.find((item) => item.startsWith('--year='))?.slice(7) ?? 2023);
+const directory = path.join(root, 'data/validation/detection');
+const corpusPath = path.join(directory, `portugal-${year}-v4-confirmatory-corpus.json`), lockPath = path.join(directory, `portugal-${year}-v4-policy-lock.json`), outputPath = path.join(directory, `portugal-${year}-v4-confirmatory-benchmark.json`);
+const sha = (value) => createHash('sha256').update(String(value)).digest('hex');
+const compact = (metrics) => Object.fromEntries(['cases', 'positiveCases', 'negativeCases', 'truePositives', 'falsePositives', 'trueNegatives', 'falseNegatives', 'precision', 'recall', 'specificity', 'falsePositiveRate', 'negativePredictiveValue', 'f1', 'balancedAccuracy', 'matthewsCorrelationCoefficient', 'abstentions', 'abstentionRate', 'falsePositivesPerAreaTime', 'falsePositivesPerAreaTimeUnit', 'confidenceIntervals', 'fireSizeStrata'].map((key) => [key, metrics[key]]));
+function evaluate(item, assessor) {
+  const now = new Date(Date.parse(item.observations.at(-1)?.at ?? item.timeWindow.end) + 300_000), event = { observations: item.observations, thermal: thermalTrend(item.observations, { now }), thermalMemory: item.detectorContext.thermalMemory, siteContext: item.detectorContext.siteContext }, assessment = assessor(event, { now });
+  return { ...item, source: 'VIIRS', decision: assessment.decision ?? 'NO_OBSERVATION', reason: assessment.conclusion ?? 'No retained signal.', predictedPositive: Boolean(assessment.qualifiesAsFireCandidate), score: assessment.score ?? null, flags: assessment.flags ?? [], policyVersion: assessment.policyVersion, thresholdVersion: assessment.thresholdVersion, maxFrpMw: assessment.maxFrpMw ?? null, durationHours: assessment.durationHours ?? null, siteContext: item.detectorContext.siteContext };
+}
+function detailedErrors(results) {
+  return results.filter((item) => item.evaluationEligibility.eligible && ((item.referenceLabel === 'FIRE_POSITIVE') !== item.predictedPositive)).map((item) => ({ failure: item.referenceLabel === 'FIRE_POSITIVE' ? 'FALSE_NEGATIVE' : 'FALSE_POSITIVE', windowId: item.windowId, subject: item.splitAssignmentUnit, coordinate: item.coordinate, timeWindow: item.timeWindow, referenceLabel: item.referenceLabel, labelSource: item.labelSource, tags: item.tags, burnedAreaHa: item.burnedAreaHa, sourceObservationCount: item.observations.length, observations: item.observations.map((observation) => ({ id: observation.id, at: observation.at, coordinate: observation.coordinate, frpMw: observation.frpMw, confidence: observation.confidence, satellite: observation.satellite, provenance: observation.provenance })), maxFrpMw: item.maxFrpMw, decision: item.decision, reason: item.reason, flags: item.flags, siteContext: item.siteContext, thermalMemory: item.detectorContext.thermalMemory }));
+}
+const corpusBody = await readFile(corpusPath), lockBody = await readFile(lockPath), corpus = JSON.parse(corpusBody), lock = JSON.parse(lockBody);
+if (lock.corpusDatasetHash !== corpus.datasetHash) throw new Error('v4_confirmatory_corpus_lock_mismatch');
+if (lock.confirmatoryOutcomeInspectedBeforeLock !== false) throw new Error('v4_confirmatory_preopen_gate_not_satisfied');
+if (lock.candidate.policyVersion !== THERMAL_CANDIDATE_V4_CANDIDATE_VERSION || lock.candidate.thresholdVersion !== THERMAL_CANDIDATE_V4_CANDIDATE_THRESHOLD_VERSION) throw new Error('v4_confirmatory_policy_lock_mismatch');
+const cohort = corpus.windows.filter((item) => item.confirmatoryCohort && item.evaluationEligibility.eligible), v3 = cohort.map((item) => evaluate(item, assessThermalCandidateV3Candidate)), v4 = cohort.map((item) => evaluate(item, assessThermalCandidateV4Candidate)), v3Metrics = thermalDetectionMetrics(v3), v4Metrics = thermalDetectionMetrics(v4), errors = detailedErrors(v4);
+const promotionPass = v4Metrics.specificity > .95 && v4Metrics.falsePositiveRate < .05 && v4Metrics.balancedAccuracy >= .95 && v4Metrics.matthewsCorrelationCoefficient >= .90 && v4Metrics.recall >= .95;
+const taxonomy = (failure) => Object.fromEntries([...new Set(errors.filter((item) => item.failure === failure).map((item) => item.tags.find((tag) => /FIRE|HEAT|QUARRY|INDUSTRIAL|CONTEXT/.test(tag)) ?? 'UNCLASSIFIED'))].sort().map((name) => [name, errors.filter((item) => item.failure === failure && (item.tags.find((tag) => /FIRE|HEAT|QUARRY|INDUSTRIAL|CONTEXT/.test(tag)) ?? 'UNCLASSIFIED') === name).length]));
+const benchmark = { schema: 'vigia.detector-v4-frozen-confirmatory.v1', generatedAt: new Date().toISOString(), repositoryCommit: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(), corpusDatasetHash: corpus.datasetHash, corpusChecksumSha256: sha(corpusBody), policyLockChecksumSha256: sha(lockBody), policyLock: { ...lock, confirmatoryOpenedAt: new Date().toISOString(), confirmatoryOutcomeInspectionState: 'OPENED_ONCE_AFTER_CORPUS_CONTEXT_AND_POLICY_LOCK' }, cohort: { year, inventory: corpus.inventory.frozenCohort, negativeSubjectCount: corpus.inventory.eligibleNegativeSubjects, priorNegativeSiteOverlap: false, negativeContextClasses: corpus.inventory.negativeContextClasses, negativeBehaviorClasses: corpus.inventory.negativeBehaviorClasses }, v3Baseline: compact(v3Metrics), v4: { ...compact(v4Metrics), policyVersion: THERMAL_CANDIDATE_V4_CANDIDATE_VERSION, thresholdVersion: THERMAL_CANDIDATE_V4_CANDIDATE_THRESHOLD_VERSION, promotionDecision: promotionPass ? 'PROMOTE_TO_LIVE_ENGINEERING_POLICY' : 'DO_NOT_PROMOTE', promotionRule: lock.candidate.promotionRule }, falsePositiveTaxonomy: taxonomy('FALSE_POSITIVE'), falseNegativeTaxonomy: taxonomy('FALSE_NEGATIVE'), errorExplorer: errors, sourceSpecific: { viirs: compact(v4Metrics), sentinel3: { state: 'UNMEASURED_NO_AUTHENTICATED_POSITIVE_OBSERVATIONS', metrics: null }, viirsPlusSentinel3: { state: 'UNMEASURED_NO_TWO_FAMILY_CASES', metrics: null } }, limitations: corpus.limitations };
+benchmark.evidenceHash = `sha256:${sha(JSON.stringify(benchmark))}`;
+const handle = await open(outputPath, 'wx');
+try { await handle.writeFile(`${JSON.stringify(benchmark)}\n`); } finally { await handle.close(); }
+console.log(JSON.stringify({ outputPath, evidenceHash: benchmark.evidenceHash, cohort: benchmark.cohort, v3Baseline: benchmark.v3Baseline, v4: benchmark.v4, falsePositiveTaxonomy: benchmark.falsePositiveTaxonomy, falseNegativeTaxonomy: benchmark.falseNegativeTaxonomy }, null, 2));

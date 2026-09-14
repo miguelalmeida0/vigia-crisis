@@ -1,0 +1,26 @@
+{
+  "name": "VIGIA 48-Hour Category Reset",
+  "purpose": "Implementation war-room package for the top engineering agent",
+  "documents": [
+    "00_READ_ME_FIRST.md",
+    "01_MASTER_EXECUTION_PROMPT.md",
+    "02_48_HOUR_WAR_PLAN.md",
+    "03_PRODUCT_RESET_ARCHITECTURE.md",
+    "04_DETECTION_ENGINES.md",
+    "05_TERRITORY_COMMAND_UX.md",
+    "06_REAL_SOURCE_ACQUISITION.md",
+    "07_VALIDATION_AND_METRICS.md",
+    "08_RELEASE_GATES.md",
+    "09_ADVERSARIAL_QA.md",
+    "10_VC_PROOF_AND_PORTFOLIO.md",
+    "11_AGENT_HANDOFF_CHECKLIST.md"
+  ],
+  "release_objectives": [
+    "Territory Command replaces report-centric home",
+    "Real pre-ignition fuel-continuity detector",
+    "Physical-first ignition candidate path",
+    "Living Fire physical evolution",
+    "Action closes uncertainty",
+    "Zero synthetic operational evidence"
+  ]
+}

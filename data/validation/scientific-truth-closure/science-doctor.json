@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "vigia.scientific-truth-doctor.v1",
+  "generatedAt": "2026-08-25T13:49:02.468Z",
+  "checks": {
+    "python": true,
+    "parser": true,
+    "candidates": true,
+    "goesPublicListing": true
+  },
+  "publicGoesLane": "READY",
+  "viirsCloudMaskLane": "CREDENTIAL_REQUIRED",
+  "earthdata": {
+    "configured": false,
+    "inspectedNames": [
+      "EARTHDATA_TOKEN",
+      "LAADS_TOKEN",
+      "NASA_EARTHDATA_TOKEN"
+    ],
+    "valuesRecorded": false,
+    "requirement": "Provide an Earthdata/LAADS bearer token through EARTHDATA_TOKEN, LAADS_TOKEN, or NASA_EARTHDATA_TOKEN; the value is never persisted or printed."
+  },
+  "boundedDefaults": {
+    "goesScans": 3,
+    "candidates": 160,
+    "contextIncidents": 25
+  },
+  "rightsEnforced": true,
+  "secretValuesRecorded": false,
+  "passed": true,
+  "fingerprint": "scientific-truth-doctor:sha256:65b533d0815ff24060dc37ecfe8c51b79c460c4e6d85ded23b9d4b45f3ddd9c4"
+}

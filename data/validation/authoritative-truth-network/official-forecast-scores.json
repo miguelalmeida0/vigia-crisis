@@ -1,0 +1,9 @@
+{
+  "schemaVersion": "vigia.official-forecast-evaluation.v1",
+  "generatedAt": "2026-08-25T16:07:40.174Z",
+  "officialLabels": 0,
+  "evaluationExecuted": false,
+  "forecastsScored": 0,
+  "comparisons": [],
+  "fingerprint": "official-forecast-evaluation:sha256:1b9b2d7e3e5f8bae3d0f6b028c8a35f799f9379b94739d58fbe079600e0fba57"
+}

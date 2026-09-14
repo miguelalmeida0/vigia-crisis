@@ -1,0 +1,28 @@
+import { createHash } from 'node:crypto';
+
+export function assessGoesNegativeCandidate(row, doctrine) {
+  const reasons = [], observations = row.observations ?? [], permitted = new Set(doctrine.permittedCloudStates);
+  if (row.providerHealth !== 'LIVE') reasons.push('PROVIDER_UNAVAILABLE');
+  if (row.productAvailability !== 'AVAILABLE') reasons.push('PRODUCT_UNAVAILABLE');
+  if (observations.length < doctrine.requiredConsecutiveScans) reasons.push('CONSECUTIVE_SCAN_FLOOR_NOT_MET');
+  if (observations.some((item) => !permitted.has(item.state))) reasons.push(`OPPORTUNITY_${observations.find((item) => !permitted.has(item.state))?.state ?? 'UNKNOWN'}`);
+  if (observations.some((item) => Number(item.localZenithDegrees) > doctrine.maximumLocalZenithDegrees)) reasons.push('OUTSIDE_USEFUL_VIEW_GEOMETRY');
+  if (observations.some((item) => !doctrine.permittedFireDqf.includes(item.fireDqf))) reasons.push('FIRE_QUALITY_INSUFFICIENT');
+  if (observations.some((item) => !doctrine.permittedCloudDqf.includes(item.cloudDqf))) reasons.push('CLOUD_QUALITY_INSUFFICIENT');
+  if (row.qualifyingFire || observations.some((item) => item.qualifyingFire)) reasons.push('QUALIFYING_GOES_FIRE_PRESENT');
+  if (!row.knowledgeTimeValid) reasons.push('KNOWLEDGE_TIME_INVALID');
+  return { certified: reasons.length === 0, rejectionReasons: [...new Set(reasons)] };
+}
+
+export function chooseUnambiguousIncident(candidates, marginKm = 3) { const ordered = [...candidates].sort((a, b) => a.distanceKm - b.distanceKm || String(a.incidentId).localeCompare(String(b.incidentId))); if (!ordered.length) return { state: 'NO_MATCH', incidentId: null }; if (ordered.length > 1 && ordered[1].distanceKm - ordered[0].distanceKm < marginKm) return { state: 'AMBIGUOUS', incidentId: null }; return { state: 'BOUND', incidentId: ordered[0].incidentId }; }
+export function classifyPerimeterRevision(issue, later) { if (issue.stateHash === later.stateHash) return 'IDENTICAL'; const before = Number(issue.state?.areaHectares), after = Number(later.state?.areaHectares); if (!later.state?.geometry) return 'NON_GEOMETRY_CHANGE'; if (before > 0 && after > 0 && after < before * 0.8) return 'CORRECTION_OR_CONTRACTION_UNRESOLVED'; return 'GEOMETRY_CHANGE_GROWTH_CANDIDATE'; }
+export function admitPerimeterPair(issue, later) { if (Date.parse(later?.providerPublishedAt) <= Date.parse(issue?.providerPublishedAt)) return { admitted: false, reason: 'FUTURE_TRUTH_CHRONOLOGY_INVALID' }; const revisionType = classifyPerimeterRevision(issue, later); return { admitted: revisionType === 'GEOMETRY_CHANGE_GROWTH_CANDIDATE', reason: revisionType }; }
+export function assessStrongCrossSourceNegative(input = {}) { const reasons = []; if (input.goesCertified !== true) reasons.push('GOES_NOT_CERTIFIED'); if (input.officialIncidentMatch !== false) reasons.push('OFFICIAL_SOURCE_ABSENCE_NOT_PROVEN'); if (input.otherPhysicalMatch !== false) reasons.push('OTHER_PHYSICAL_SOURCE_ABSENCE_NOT_PROVEN'); if (input.prescribedOrManagedMatch !== false) reasons.push('PRESCRIBED_FIRE_ABSENCE_NOT_PROVEN'); if (input.persistentAnomalyMatch !== false) reasons.push('PERSISTENT_ANOMALY_ABSENCE_NOT_PROVEN'); return { certified: reasons.length === 0, label: reasons.length ? 'UNKNOWN' : 'NO_DETECTABLE_ACTIVE_WILDFIRE_UNDER_DEFINED_DOCTRINE', reasons }; }
+export function hardNegativeLabel(category) { return ['PRESCRIBED_OR_MANAGED_FIRE', 'AGRICULTURAL_BURN', 'PERSISTENT_INDUSTRIAL_THERMAL_SOURCE', 'VOLCANIC_THERMAL_SOURCE'].includes(category) ? 'REAL_FIRE_NOT_WILDFIRE' : ['SENSOR_ARTEFACT', 'NEARBY_DISTINCT_INCIDENT', 'REPUBLISHER_DUPLICATION_TRAP'].includes(category) ? 'ASSOCIATION_OR_SENSOR_HARD_NEGATIVE' : 'UNKNOWN'; }
+export function deduplicatePhysicalObservations(rows = []) { const seen = new Set(); return rows.filter((item) => { const identity = item.originalObservationIdentity ?? item.id; if (!identity || seen.has(identity)) return false; seen.add(identity); return true; }); }
+export function admitFuelContext({ productYear, incidentTime, retrospectiveDoctrine = false } = {}) { const year = new Date(incidentTime).getUTCFullYear(); return { admitted: Number(productYear) <= year || retrospectiveDoctrine, mode: Number(productYear) <= year ? 'ISSUE_TIME_COMPATIBLE_PRODUCT_YEAR' : retrospectiveDoctrine ? 'RETROSPECTIVE_ONLY' : 'REJECTED_FUTURE_PRODUCT' }; }
+export function admitWeatherRecord(record, cutoff) { const issue = Date.parse(record?.issueTime), valid = Date.parse(record?.validTime), limit = Date.parse(cutoff); return { admitted: Number.isFinite(issue) && Number.isFinite(valid) && issue <= limit && valid >= issue, reason: issue > limit ? 'FUTURE_RUN_LEAKAGE' : valid < issue ? 'INVALID_FORECAST_CHRONOLOGY' : null }; }
+export function verifySnapshotAppendOnly(prior = [], next = []) { return { passed: prior.every((item, index) => item.snapshotHash === next[index]?.snapshotHash), rewritten: prior.filter((item, index) => item.snapshotHash !== next[index]?.snapshotHash).length, duplicateObservationIds: next.length - new Set(next.map((item) => item.observationId)).size }; }
+export function authorizeScientificExport(rights) { return rights?.permitScientificRetention === true && Boolean(rights.licenceId) && rights.restricted !== true; }
+export function verifyDigest(expected, body) { const actual = `sha256:${createHash('sha256').update(body).digest('hex')}`; return { passed: expected === actual, expected, actual }; }
+export function safeCredentialDiagnostic(env = {}) { return { earthdataConfigured: ['EARTHDATA_TOKEN', 'LAADS_TOKEN', 'NASA_EARTHDATA_TOKEN'].some((name) => Boolean(env[name])), values: undefined, inspectedNames: ['EARTHDATA_TOKEN', 'LAADS_TOKEN', 'NASA_EARTHDATA_TOKEN'] }; }

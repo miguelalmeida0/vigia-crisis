@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "vigia.forecast-corpus-benchmark.v2",
+  "boundedPartitionLoading": true,
+  "partitionFiles": 10,
+  "stageMetrics": [
+    {
+      "id": "LOAD_PARTITIONED_SILVER",
+      "elapsedMs": 345.454,
+      "cpuUserMs": 451.794,
+      "cpuSystemMs": 62.947,
+      "rssBeforeBytes": 55230464,
+      "rssAfterBytes": 421216256
+    },
+    {
+      "id": "LOAD_ACQUISITION_STATE",
+      "elapsedMs": 0.574,
+      "cpuUserMs": 0.593,
+      "cpuSystemMs": 0.199,
+      "rssBeforeBytes": 421232640,
+      "rssAfterBytes": 421265408
+    }
+  ],
+  "timings": {
+    "providerDiscovery": {
+      "p50Ms": 0.007,
+      "p95Ms": 0.034
+    },
+    "archiveListing": {
+      "p50Ms": 0.288,
+      "p95Ms": 0.386
+    },
+    "rawVaultDeduplication": {
+      "p50Ms": 0.008,
+      "p95Ms": 0.045
+    },
+    "perimeterParsing": {
+      "p50Ms": 0.014,
+      "p95Ms": 0.066
+    },
+    "weatherExtraction": {
+      "p50Ms": 0.013,
+      "p95Ms": 0.063
+    },
+    "fuelTerrainExtraction": {
+      "p50Ms": 0.027,
+      "p95Ms": 0.089
+    },
+    "incidentCrosswalk": {
+      "p50Ms": 0.188,
+      "p95Ms": 0.399
+    },
+    "forecastExampleGeneration": {
+      "p50Ms": 255.355,
+      "p95Ms": 267.218
+    },
+    "leakageAudit": {
+      "p50Ms": 0.209,
+      "p95Ms": 0.485
+    },
+    "fullCorpusReplay": {
+      "p50Ms": 0.267,
+      "p95Ms": 0.499
+    }
+  },
+  "downloadThroughputBytesPerSecond": {
+    "p50": 1538868.502,
+    "p95": 2723636.464
+  },
+  "peakRssBytes": 453509120,
+  "downloadedBytes": 71333608,
+  "uniqueStoredBytes": 41947056,
+  "duplicateSavingsBytes": 29386552,
+  "objectCounts": {
+    "raw": 37,
+    "silverIncidentRecords": 11,
+    "uniqueSilverIncidents": 2,
+    "perimeterStateRecords": 80,
+    "eligibleExamples": 11
+  },
+  "eligibleExamplesPerSecond": 43.077,
+  "replayTimeMs": 0.267
+}

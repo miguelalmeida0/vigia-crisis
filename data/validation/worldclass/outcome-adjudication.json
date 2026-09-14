@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "vigia.outcome-adjudication-gate.v1",
+  "informationValueOutcomes": 25,
+  "decisionOutcomes": 100,
+  "sources": {
+    "semanticRepository": 0,
+    "historicalShadowExternalReality": 25,
+    "historicalShadowFingerprint": "historical-shadow-decision-memory:sha256:1928b92c68ff9db8c74f03c015e2030226cd695ec4e7524673fc9bf00a29d05f"
+  },
+  "calibration": {
+    "schemaVersion": "vigia.information-value-calibration.v1",
+    "qualification": "EMPIRICAL_DESCRIPTIVE_STATISTICS",
+    "overall": {
+      "examples": 25,
+      "unlockPrecision": 0.52,
+      "unlockRecall": 1,
+      "decisionImpactAgreement": 0.52,
+      "hypothesisDiscriminationAgreement": 1,
+      "meanAbsoluteLatencyErrorMs": null,
+      "meanAbsoluteByteError": null,
+      "sourceSuccessRate": 1
+    },
+    "stratified": {
+      "providerId": {
+        "alberta-wildfire": {
+          "examples": 25,
+          "unlockPrecision": 0.52,
+          "unlockRecall": 1,
+          "decisionImpactAgreement": 0.52,
+          "hypothesisDiscriminationAgreement": 1,
+          "meanAbsoluteLatencyErrorMs": null,
+          "meanAbsoluteByteError": null,
+          "sourceSuccessRate": 1
+        }
+      },
+      "acquisitionType": {
+        "OFFICIAL_PERIMETER_UPDATE": {
+          "examples": 25,
+          "unlockPrecision": 0.52,
+          "unlockRecall": 1,
+          "decisionImpactAgreement": 0.52,
+          "hypothesisDiscriminationAgreement": 1,
+          "meanAbsoluteLatencyErrorMs": null,
+          "meanAbsoluteByteError": null,
+          "sourceSuccessRate": 1
+        }
+      },
+      "incidentType": {
+        "Mutual Aid": {
+          "examples": 2,
+          "unlockPrecision": 1,
+          "unlockRecall": 1,
+          "decisionImpactAgreement": 1,
+          "hypothesisDiscriminationAgreement": 1,
+          "meanAbsoluteLatencyErrorMs": null,
+          "meanAbsoluteByteError": null,
+          "sourceSuccessRate": 1
+        },
+        "Wildfire": {
+          "examples": 23,
+          "unlockPrecision": 0.4782608695652174,
+          "unlockRecall": 1,
+          "decisionImpactAgreement": 0.4782608695652174,
+          "hypothesisDiscriminationAgreement": 1,
+          "meanAbsoluteLatencyErrorMs": null,
+          "meanAbsoluteByteError": null,
+          "sourceSuccessRate": 1
+        }
+      },
+      "region": {
+        "CA-AB": {
+          "examples": 25,
+          "unlockPrecision": 0.52,
+          "unlockRecall": 1,
+          "decisionImpactAgreement": 0.52,
+          "hypothesisDiscriminationAgreement": 1,
+          "meanAbsoluteLatencyErrorMs": null,
+          "meanAbsoluteByteError": null,
+          "sourceSuccessRate": 1
+        }
+      },
+      "sourceHealth": {
+        "HISTORICAL_ARCHIVE_AVAILABLE": {
+          "examples": 25,
+          "unlockPrecision": 0.52,
+          "unlockRecall": 1,
+          "decisionImpactAgreement": 0.52,
+          "hypothesisDiscriminationAgreement": 1,
+          "meanAbsoluteLatencyErrorMs": null,
+          "meanAbsoluteByteError": null,
+          "sourceSuccessRate": 1
+        }
+      }
+    },
+    "automaticDoctrineMutation": false,
+    "recommendationRequiresReview": true,
+    "fingerprint": "information-value-calibration:sha256:6821e4d463cc4ab6247d904fa86c9f2fddb6ec6bdca8ae17f483ab66a8b79aa4"
+  },
+  "automaticDoctrineMutation": false,
+  "reviewerApprovalRequired": true,
+  "minimumOutcomePairs": 25,
+  "state": "PASS",
+  "passed": true,
+  "fingerprint": "outcome-adjudication:sha256:3fb9b919ba2ea0651309dad313dafa4232785859f4b4a4ab1f3189576baf3aed"
+}

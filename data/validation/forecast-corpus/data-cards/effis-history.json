@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "effis-history",
+  "purpose": "European fire perimeters and attributes",
+  "coverage": [
+    "portugal"
+  ],
+  "period": "multi-year European fire database",
+  "resolution": "European archive",
+  "collectionProcess": "official portal and registered downloads",
+  "knowledgeTimeSemantics": "PRODUCT_DEPENDENT",
+  "labelConstruction": "No label is inferred solely from source presence.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "Publication/revision timing and satellite lineage require product-level confirmation."
+  ],
+  "knownMissingness": [
+    "Publication/revision timing and satellite lineage require product-level confirmation."
+  ],
+  "licence": "EFFIS-TERMS-REVIEW",
+  "appropriateUse": "TIMESTAMP_UNTRUSTWORTHY",
+  "inappropriateUse": "Independent truth without lineage."
+}

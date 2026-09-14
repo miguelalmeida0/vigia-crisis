@@ -1,0 +1,21 @@
+import {canonicalIncidentId} from '../../../../../packages/domain/src/authorization.mjs';
+import {hash} from '../../../../../packages/domain/src/intelligence/world-knowledge.mjs';
+const rows=value=>Array.isArray(value)?value:Object.values(value??{});
+const measured=m=>m?Object.fromEntries(['id','label','value','unit','observedAt','receivedAt','sourceId','sourceName','sourceLocation','distanceToSubject','expiresAt','provenanceRef','validity','limitations'].filter(k=>m[k]!==undefined).map(k=>[k,m[k]])):null;
+export function responseSituationInput(projection){
+  const incident=projection.incident??{},incidentId=incident.id??incident.incidentId??incident.incident?.id;
+  const facilities=rows(projection.facilities??projection.facilitiesByKind).flat().filter(f=>f.canonicalId).slice(0,200);
+  const routes=facilities.flatMap(f=>{
+    const reach=f.reachability,r=reach?.currentRoute;if(!r?.geometry)return[];
+    return [{id:'facility-route:'+hash([incidentId,f.canonicalId,'FACILITY_TO_INCIDENT']).slice(0,32),facilityId:f.canonicalId,direction:'FACILITY_TO_INCIDENT',geometry:r.geometry,roads:r.roads??[],distanceKm:r.distanceKm??reach.routeDistanceKm,travelTimeMinutes:r.travelTimeMinutes??reach.travelTimeMinutes,calculatedAt:reach.checkedAt,validUntil:new Date(Date.parse(reach.checkedAt)+300000).toISOString(),source:reach.source,alternatives:reach.alternativeRoute?[reach.alternativeRoute]:[],facilityCoordinate:f.coordinate,incidentCoordinate:incident.coordinate,facilityRevision:f.canonicalRevision}];
+  });
+  return {incidentId,patch:{incident:{id:incidentId,coordinate:incident.coordinate,name:incident.name??incident.incident?.name},facilities,routes}};
+}
+export function physicalSituationInput({physical,spatial,sources,asOf}){
+  const metrics=rows(physical.weather?.metrics),metric=pattern=>metrics.find(m=>pattern.test(m.id??m.key??m.label??'')&&Number.isFinite(m.value));
+  const weather={station:physical.weather?.station??null,windSpeed:measured(metric(/wind.*speed|wind/i)),temperature:measured(metric(/temperature/i)),humidity:measured(metric(/humidity/i))};
+  const places=(spatial?.relationships??[]).map(r=>({id:r.feature?.id,name:r.feature?.name,geometry:r.feature?.geometry,coordinate:r.feature?.coordinate,kind:String(r.feature?.kind??r.category??'').toLowerCase().replace(/^road_reference$/,'road'),intersects:r.intersects===true,distanceM:r.distanceM??r.distanceFromPointM,distanceFromPerimeterM:r.distanceFromPerimeterM,source:r.feature?.source,provenanceRef:r.feature?.provenanceRef,receivedAt:r.feature?.receivedAt}));
+  const rawRoads=rows(physical.places?.roads),roadReports=rawRoads.filter(r=>r.source&&r.statusEvidenceId&&r.observedAt).map(r=>({...r,id:r.id??r.statusEvidenceId,admitted:true,roadRef:r.ref??r.name,knownAt:r.receivedAt??r.observedAt,validFrom:r.effective??r.observedAt,validUntil:r.expires??new Date(Date.parse(r.observedAt)+3600000).toISOString()}));
+  const sourceRows=rows(sources?.sources).map(s=>({id:s.id,name:s.name,provider:s.provider,status:s.status,configuration:s.configuration,lastFetch:s.lastIngestedAt??s.receivedAt??null,lastRelevantObservation:s.lastObservationAt??s.observedAt??null,pollIntervalMs:s.expectedUpdateIntervalSeconds?1000*s.expectedUpdateIntervalSeconds:null,provenanceRef:s.provenanceRef,coverage:s.coverage}));
+  return {incidentId:canonicalIncidentId(physical.incidentId),patch:{incident:{id:canonicalIncidentId(physical.incidentId),coordinate:physical.location,observedAt:physical.incidentObservedAt??null,name:physical.name??physical.locationLabel??physical.incidentName,municipality:physical.municipality??null,district:physical.district??null,locationEvidence:physical.locationSource?[physical.locationSource]:[]},perimeter:spatial?.perimeter?.current??null,weather,thermal:rows(physical.thermal?.detections),places,notices:rows(physical.warnings?.warnings),roadReports,roadCoverage:roadReports.length?{connected:true,checkedAt:asOf,coveredRoads:roadReports.map(r=>r.roadRef),source:'Attributable returned road reports',validUntil:new Date(Date.parse(asOf)+3600000).toISOString()}:{connected:false,checkedAt:null},sources:sourceRows}};
+}

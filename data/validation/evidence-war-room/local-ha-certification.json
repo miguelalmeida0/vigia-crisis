@@ -1,0 +1,1226 @@
+{
+  "schemaVersion": "vigia.local-ha-certification.v1",
+  "startedAt": "2026-08-25T11:43:30.375Z",
+  "completedAt": "2026-08-25T11:44:55.142Z",
+  "evidenceClass": "ENGINEERING_ONLY_LOCAL_DOCKER",
+  "actualCloudEvidence": false,
+  "topology": {
+    "nodes": [
+      {
+        "site": "zone-a",
+        "database": "PostGIS 17/3.5",
+        "separateNetwork": "EPHEMERAL_PREFIX-zone-a-net",
+        "hostPortRecorded": false
+      },
+      {
+        "site": "zone-b",
+        "database": "PostGIS 17/3.5",
+        "separateNetwork": "EPHEMERAL_PREFIX-zone-b-net",
+        "hostPortRecorded": false
+      },
+      {
+        "site": "region-b",
+        "database": "PostGIS 17/3.5",
+        "separateNetwork": "EPHEMERAL_PREFIX-region-b-net",
+        "hostPortRecorded": false
+      }
+    ],
+    "failureDomains": 3,
+    "regionalPrimary": "zone-a",
+    "regionalStandby": "zone-b",
+    "secondRegionReplica": "region-b"
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 2,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 636.561,
+      "payloadHash": "ha-cycle-action:sha256:9338b9b240edb2c661a5bcbe3b7bbf44ed1b74c92c01422bcbe5cb9ef047e449"
+    },
+    {
+      "cycle": 2,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 3,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 693.121,
+      "payloadHash": "ha-cycle-action:sha256:bb94875527cc52b3dd1139c9e5e4e42c5113c861124319bf00ddcc2f7dd22557"
+    },
+    {
+      "cycle": 3,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 4,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 628.491,
+      "payloadHash": "ha-cycle-action:sha256:76258a647e8fe70cd23b13f71b1898753869da49ab65f61c6bf3eeb4ae67b26b"
+    },
+    {
+      "cycle": 4,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 5,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 632.348,
+      "payloadHash": "ha-cycle-action:sha256:88fbcccc2065880dae5aff3ea16f150bf8b72b1726d54ab1a8ef04e3501bd202"
+    },
+    {
+      "cycle": 5,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 6,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 656.472,
+      "payloadHash": "ha-cycle-action:sha256:59f1b415c7a782723199a6a1a3277af8f1408da313f8b09ea813d9ce11c21c6d"
+    },
+    {
+      "cycle": 6,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 7,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 613.242,
+      "payloadHash": "ha-cycle-action:sha256:2fab10d5faca0f9c29856cb61f09209e28aca1a47fe030d4d5752a6a650a96ec"
+    },
+    {
+      "cycle": 7,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 8,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 658.388,
+      "payloadHash": "ha-cycle-action:sha256:9d65e540eee3005ed8ee159674230d205507b462f9396e0ed0953d38a55bbb1e"
+    },
+    {
+      "cycle": 8,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 9,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 612.933,
+      "payloadHash": "ha-cycle-action:sha256:ab6dafe08d7abfd96f39c5ed60ba4c541697eb1a883dd790b2cdaa22b8d1d744"
+    },
+    {
+      "cycle": 9,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 10,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 627.638,
+      "payloadHash": "ha-cycle-action:sha256:77829b3dfa0b91de50f82cbf4d53df66150985962ef36ebb22ac6ff7854708f5"
+    },
+    {
+      "cycle": 10,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 11,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 735.281,
+      "payloadHash": "ha-cycle-action:sha256:dfa24393a9d69ad122f3c5e5adc7de2708c503bcc671d5a9d69840da244baf35"
+    },
+    {
+      "cycle": 11,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 12,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 682.853,
+      "payloadHash": "ha-cycle-action:sha256:edc8ed4da1578baa8b97e59eeafd09bae24ea88b1213abe6747c05b736e4e4e8"
+    },
+    {
+      "cycle": 12,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 13,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 661.41,
+      "payloadHash": "ha-cycle-action:sha256:4dc94979627d43089bbb2b1f433be12b3ce302ac46752a7f82ae32cb69e15f24"
+    },
+    {
+      "cycle": 13,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 14,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 641.001,
+      "payloadHash": "ha-cycle-action:sha256:f6f2e3b70017ba6251c0723d1a290f389c0cf720fc6cd3c9e21783bf7f483f49"
+    },
+    {
+      "cycle": 14,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 15,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 599.006,
+      "payloadHash": "ha-cycle-action:sha256:957ae1118445be8fbd05db73a6958ada26f659ae93031f33fb5292fa43e5c180"
+    },
+    {
+      "cycle": 15,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 16,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 691.806,
+      "payloadHash": "ha-cycle-action:sha256:312271c8a1e30ccc7e5f02f1b1e2f223a068141771e6c2765aa88a3b1d1cfa52"
+    },
+    {
+      "cycle": 16,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 17,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 616.52,
+      "payloadHash": "ha-cycle-action:sha256:995634b3bd5c71de7e6b83f386d549a1fa11dfb63d729908280179a3cd64b25d"
+    },
+    {
+      "cycle": 17,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 18,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 607.17,
+      "payloadHash": "ha-cycle-action:sha256:722b24e30f882fe6b6f8533c21113527a1de9ab05f8cebaf0c194bd9f79503ac"
+    },
+    {
+      "cycle": 18,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 19,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 598.02,
+      "payloadHash": "ha-cycle-action:sha256:13d28764d3fc142b29c55743614d0d82c74c33743dca3039021a75bb3bf5b067"
+    },
+    {
+      "cycle": 19,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 20,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 615.345,
+      "payloadHash": "ha-cycle-action:sha256:a32789c5481b81f67cb99ceab9c043c7eaa0704c2aa3074cb1df2c4df1db9b3c"
+    },
+    {
+      "cycle": 20,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 21,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 604.034,
+      "payloadHash": "ha-cycle-action:sha256:6deb2e1a4dda7f8abe7b90920680f75e78778569a6d3abd1fb478e90484ef355"
+    },
+    {
+      "cycle": 21,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 22,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 616.841,
+      "payloadHash": "ha-cycle-action:sha256:39b6b6c45cf801ffb400397c84f935e384aad4b3fd43b6ccc1614fa8f532ecee"
+    },
+    {
+      "cycle": 22,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 23,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 600.091,
+      "payloadHash": "ha-cycle-action:sha256:b4d2e169e077192becb80bfe6f7d8317a2eb8c0f41505dd1e535aec021d14d3e"
+    },
+    {
+      "cycle": 23,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 24,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 627.615,
+      "payloadHash": "ha-cycle-action:sha256:bd65b8c411913d29b747606196114b627201b670185c815c1c66beb26d53451f"
+    },
+    {
+      "cycle": 24,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 25,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 592.992,
+      "payloadHash": "ha-cycle-action:sha256:c7ba6738049abdf500c53c5c4b89e07dedaf029831d95495b8b1a8ff14ff7f27"
+    },
+    {
+      "cycle": 25,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 26,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 595.599,
+      "payloadHash": "ha-cycle-action:sha256:61d15c12ae7881f3cecac5985cb517d84afc6c8fb3e170b996e642425beaa84e"
+    },
+    {
+      "cycle": 26,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 27,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 644.824,
+      "payloadHash": "ha-cycle-action:sha256:66507353acac75112481104294f109def1919c6909c88c17be3eac98d4d78dc4"
+    },
+    {
+      "cycle": 27,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 28,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 644.923,
+      "payloadHash": "ha-cycle-action:sha256:9edf142842c623943d71c1b4f3a03c22816a0b414fc528555f6d0ae7879bef41"
+    },
+    {
+      "cycle": 28,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 29,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 723.713,
+      "payloadHash": "ha-cycle-action:sha256:cdbdf89c2fba3578ce12c4bcdb2bc66f49ce4d22c7b0fe631bd8036a2da8c25b"
+    },
+    {
+      "cycle": 29,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 30,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 627.171,
+      "payloadHash": "ha-cycle-action:sha256:af5c4948c12ff9abd3024a23560b9b8b692f6eb08ec918a3b82746ef3ded0362"
+    },
+    {
+      "cycle": 30,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 31,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 616.384,
+      "payloadHash": "ha-cycle-action:sha256:9a49bd1d724154e833949177c79dfa7495191acfac61624fb48a1bd148b52a91"
+    },
+    {
+      "cycle": 31,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 32,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 611.964,
+      "payloadHash": "ha-cycle-action:sha256:7f2a04873a8826ef24d6dba390d62049130b083f172889746d9e9e62a11ae378"
+    },
+    {
+      "cycle": 32,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 33,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 621.377,
+      "payloadHash": "ha-cycle-action:sha256:cface3fb80244d86c9106b5aa159a3a30e5443d69ef96ea93093e3781337d85a"
+    },
+    {
+      "cycle": 33,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 34,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 630.867,
+      "payloadHash": "ha-cycle-action:sha256:9e0fad6571600a689b98ec05c7eb98d7e2b0da5402c3cdccfdcec093ad25e240"
+    },
+    {
+      "cycle": 34,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 35,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 600.951,
+      "payloadHash": "ha-cycle-action:sha256:9839d4d2cf7d26a79ee7cbc62b972f4d99698ee7786df26fa1c734603f458349"
+    },
+    {
+      "cycle": 35,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 36,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 607.77,
+      "payloadHash": "ha-cycle-action:sha256:0143edc5dad4f994c882d5cb07542e1e6c92f118049476c68f5b7f2589c6b218"
+    },
+    {
+      "cycle": 36,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 37,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 633.32,
+      "payloadHash": "ha-cycle-action:sha256:02be57861063e8a1e0d87684785a50250767e7f5d08726d640e038ab28584cc0"
+    },
+    {
+      "cycle": 37,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 38,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 609.988,
+      "payloadHash": "ha-cycle-action:sha256:131a0125caf343eb01b2b4b205deff81b1fd456885acf97828837f1aa335bfd9"
+    },
+    {
+      "cycle": 38,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 39,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 595.773,
+      "payloadHash": "ha-cycle-action:sha256:a686ccc32440312bd0ab155f6d0d5698aa0e9b57fd4a785f4afec49eecefc416"
+    },
+    {
+      "cycle": 39,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 40,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 619.313,
+      "payloadHash": "ha-cycle-action:sha256:5b20c064503d88d10cb7df6c78928c98fac8ccddf0c402b72ca9d4c15832c0b5"
+    },
+    {
+      "cycle": 40,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 41,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 615.59,
+      "payloadHash": "ha-cycle-action:sha256:cf5ae7e92fe89828ba194a7b1339b99ae7c8e879f2e3eb48efe3cc422f64b13d"
+    },
+    {
+      "cycle": 41,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 42,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 621.787,
+      "payloadHash": "ha-cycle-action:sha256:c0ef85263c26b8c5c244de45d04ab9ef2236490d61cab85a77aef9c6f2dbf1d9"
+    },
+    {
+      "cycle": 42,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 43,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 592.437,
+      "payloadHash": "ha-cycle-action:sha256:dd168ce29225bb32eb8828450f0ddcbcce0cf79ef7b070a39b01e4f0ec91da2f"
+    },
+    {
+      "cycle": 43,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 44,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 625.595,
+      "payloadHash": "ha-cycle-action:sha256:1b880bce51c9c2e0e7ad6512d0e905f38c6ed423fe918c27a57c1cd308efd593"
+    },
+    {
+      "cycle": 44,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 45,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 613.393,
+      "payloadHash": "ha-cycle-action:sha256:40dfcc849796a428843fca1d5b9019c5817998eb8d5804bfdaa9f9bd82466aea"
+    },
+    {
+      "cycle": 45,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 46,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 619.121,
+      "payloadHash": "ha-cycle-action:sha256:ec2c541601dc21caf1df03c2dcb4ec1e468ff625e8d58ff35b2eeb2b1c56d1e3"
+    },
+    {
+      "cycle": 46,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 47,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 598.412,
+      "payloadHash": "ha-cycle-action:sha256:02b188c397d3f15b369d6e3dae5062b8ede7df67b950edb72de48245aa1d2dc4"
+    },
+    {
+      "cycle": 47,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 48,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 670.674,
+      "payloadHash": "ha-cycle-action:sha256:936ea4677f63a7138c70ecdc3f637a3794c5e3104fcd22255f33b2982410d76b"
+    },
+    {
+      "cycle": 48,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 49,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 697.967,
+      "payloadHash": "ha-cycle-action:sha256:85579acbd7d29bf34a770195862c0eafa9091f77e6fd7158fe2814eecb8a54df"
+    },
+    {
+      "cycle": 49,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 50,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 649.201,
+      "payloadHash": "ha-cycle-action:sha256:22dce32b49599279bd560339aacf4d261363756a490fe2df0853bc8d9a8baa21"
+    },
+    {
+      "cycle": 50,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 51,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 625.393,
+      "payloadHash": "ha-cycle-action:sha256:9878cdc979a64c0a9ef38f0cf16c21a28614fecefa50a74049edeed6486230f6"
+    },
+    {
+      "cycle": 51,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 52,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 601.534,
+      "payloadHash": "ha-cycle-action:sha256:9de8c4186b745c47065a4a62c29823c3fddbaeb9bf5e4bfbf60b76247f75f811"
+    },
+    {
+      "cycle": 52,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 53,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 693.396,
+      "payloadHash": "ha-cycle-action:sha256:c6bb5bf5be5183aa0d1ad6e268ee27a3903376d160ac35bb6e3343ba69674fe4"
+    },
+    {
+      "cycle": 53,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 54,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 605.231,
+      "payloadHash": "ha-cycle-action:sha256:c035da97239b4c54cfe8c9d4b320a19268c4756586b41a38d70e297dbe895b5e"
+    },
+    {
+      "cycle": 54,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 55,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 602.172,
+      "payloadHash": "ha-cycle-action:sha256:b521033ec101123886834b1ece59e41a042674955dc33768c1d2402ba7342918"
+    },
+    {
+      "cycle": 55,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 56,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 599.401,
+      "payloadHash": "ha-cycle-action:sha256:b0e984030dc82e2778900c71897a5d8d35311a99025e6cce9a8b9f6adafdd965"
+    },
+    {
+      "cycle": 56,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 57,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 600.756,
+      "payloadHash": "ha-cycle-action:sha256:63bdae0dc321a5573946a3ba9e014dba512174ddf96d6c9c44f1ef72613cedbd"
+    },
+    {
+      "cycle": 57,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 58,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 593.993,
+      "payloadHash": "ha-cycle-action:sha256:189bea3b861867876c78939604e6c0e19d4cbfbd2bfaf2c20e998efd80086499"
+    },
+    {
+      "cycle": 58,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 59,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 588.799,
+      "payloadHash": "ha-cycle-action:sha256:9953d80f2006cb8d16cf6af3706c47d1715f8ad812a33678f4277a9a52586e74"
+    },
+    {
+      "cycle": 59,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 60,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 595.966,
+      "payloadHash": "ha-cycle-action:sha256:5d332fc2c0c665de8a98a3d3ab8dcb30be9a223670502239fd6d3f9c520edbd8"
+    },
+    {
+      "cycle": 60,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 61,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 610.04,
+      "payloadHash": "ha-cycle-action:sha256:75766ec8fad6738d02ed931e5a640d260ea912598a0e946c38f9e3f2f6943e57"
+    },
+    {
+      "cycle": 61,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 62,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 724.121,
+      "payloadHash": "ha-cycle-action:sha256:6acf8733c8bfbe43acad5eee2fa8123a6541732b9736d727e53fd1c6c4c1c77f"
+    },
+    {
+      "cycle": 62,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 63,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 704.443,
+      "payloadHash": "ha-cycle-action:sha256:bf038f0a6b456bd92935e7d3e5d62d702d077d672a84ce6aa14ef7806e1ef0cd"
+    },
+    {
+      "cycle": 63,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 64,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 609.909,
+      "payloadHash": "ha-cycle-action:sha256:8f5ce1e5dcb3eaaefe6cd5b7e7b6fadca0de9c582bd0b17194bd0d64f82909d5"
+    },
+    {
+      "cycle": 64,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 65,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 609.675,
+      "payloadHash": "ha-cycle-action:sha256:888c2d412b4e9ee60f5ea84e5bd12ecea86f28aa7a94d4982aa36d534a269ce0"
+    },
+    {
+      "cycle": 65,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 66,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 612.673,
+      "payloadHash": "ha-cycle-action:sha256:4efce30b06864358449335db8d97b78362134f7666bfbec6cb02ea03c453c965"
+    },
+    {
+      "cycle": 66,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 67,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 592.955,
+      "payloadHash": "ha-cycle-action:sha256:daf2b7a66a3ede405111b18ecb5c5ec24cd5c59c59a0fbb4f62ddbb02bbb87bc"
+    },
+    {
+      "cycle": 67,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 68,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 605.421,
+      "payloadHash": "ha-cycle-action:sha256:140ac181f5afbdb0e78c32062fcb0c3c805edd35765fcebbb021f0debf7b4a0b"
+    },
+    {
+      "cycle": 68,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 69,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 616.01,
+      "payloadHash": "ha-cycle-action:sha256:2c6234eadffafde89cf6846d2dfc10d9bda886862aa10fb990d0134eaa5a5e74"
+    },
+    {
+      "cycle": 69,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 70,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 600.653,
+      "payloadHash": "ha-cycle-action:sha256:5c65387eb5259b2094c8e77f55673d672747f2504fa6de8255a61bf71f95a040"
+    },
+    {
+      "cycle": 70,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 71,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 639.092,
+      "payloadHash": "ha-cycle-action:sha256:c74b3184760722424fdbc43c1da3328dfdc9c05438f41bfd40097f0fedeb5b9b"
+    },
+    {
+      "cycle": 71,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 72,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 632.628,
+      "payloadHash": "ha-cycle-action:sha256:3365625df8dc94af3bc2d3cd442e3042f4a1d134568906838138d33fb58977f0"
+    },
+    {
+      "cycle": 72,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 73,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 624.801,
+      "payloadHash": "ha-cycle-action:sha256:fc39808845ed7ed413baeb682c82b7cd1d9e9822c5a3f384a6ab23cfbf3aa45f"
+    },
+    {
+      "cycle": 73,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 74,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 602.934,
+      "payloadHash": "ha-cycle-action:sha256:39731013816a633ce8d8488ab8de5cfad4ac98434c6a77ba49d293a522f87353"
+    },
+    {
+      "cycle": 74,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 75,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 616.249,
+      "payloadHash": "ha-cycle-action:sha256:492f4d0497333925632450a67e4d5a776c674c25455dd798937b7f7e6ce4898a"
+    },
+    {
+      "cycle": 75,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 76,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 616.095,
+      "payloadHash": "ha-cycle-action:sha256:283442bdeefbfa7c3771b75206da48e19c0c600bae220eedc23e578b031f52c9"
+    },
+    {
+      "cycle": 76,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 77,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 618.071,
+      "payloadHash": "ha-cycle-action:sha256:0e17c056a1d9edb3442aba7dbcb64f75145b0f75f9cde933257d603b3e8b507b"
+    },
+    {
+      "cycle": 77,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 78,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 660.876,
+      "payloadHash": "ha-cycle-action:sha256:3344e6aa09d2a47a5465647f0f87c8b79a4801a2e798b868305ea21d2c93f17c"
+    },
+    {
+      "cycle": 78,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 79,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 615.982,
+      "payloadHash": "ha-cycle-action:sha256:bb37b7f5a2bc3ff544484515277852e3d48ce65a0e7d56dc7466dc7e779e28e7"
+    },
+    {
+      "cycle": 79,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 80,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 631.225,
+      "payloadHash": "ha-cycle-action:sha256:448244e46f7e92bfd3dede322bf05ec74d1dc5a901aaf312e6f548fda4107eac"
+    },
+    {
+      "cycle": 80,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 81,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 610.198,
+      "payloadHash": "ha-cycle-action:sha256:67214ffbb99b0cb063dec250887827721474710ba7246d18754e9d7422c8c598"
+    },
+    {
+      "cycle": 81,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 82,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 599.407,
+      "payloadHash": "ha-cycle-action:sha256:14cabb9eee697bdb8b5514e676ac5e9076cca38a881f54acce275cc083f0caef"
+    },
+    {
+      "cycle": 82,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 83,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 602.419,
+      "payloadHash": "ha-cycle-action:sha256:f20c72d841ae702a3afdb0473b2488ef8adbbcf6e2eba4a7c4af38b7d43b8de2"
+    },
+    {
+      "cycle": 83,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 84,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 609.999,
+      "payloadHash": "ha-cycle-action:sha256:6f2f1940222f79c6196d1ef9b8bd5cbe44963fb452d3776275537be16ef6811d"
+    },
+    {
+      "cycle": 84,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 85,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1035.295,
+      "payloadHash": "ha-cycle-action:sha256:e9749993b99592b6a135a360ff5334f805395fc464786e145ac80b33c93c546f"
+    },
+    {
+      "cycle": 85,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 86,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 961.959,
+      "payloadHash": "ha-cycle-action:sha256:20aaea24ff544d5e5360a3482d055f56d8f3f50ae8f70f553f33b7ca3aa385fb"
+    },
+    {
+      "cycle": 86,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 87,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1156.173,
+      "payloadHash": "ha-cycle-action:sha256:ebe46802af66e0b12c3ad89239ffd0e087b3f0f59b9f9a57989be8566995e259"
+    },
+    {
+      "cycle": 87,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 88,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1241.071,
+      "payloadHash": "ha-cycle-action:sha256:9f3d9680169c890d9f97dd001cf9da791860116c8ee21a3c8e22ffc868906bd4"
+    },
+    {
+      "cycle": 88,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 89,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 998.498,
+      "payloadHash": "ha-cycle-action:sha256:f7518a7d9970a2a1ea8598c9509b8707eb8c724d4d0689bca7402f90eabeefe8"
+    },
+    {
+      "cycle": 89,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 90,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 973.763,
+      "payloadHash": "ha-cycle-action:sha256:146962a4b12de459e548debd98a69f10a7719c65a7bf971f954a383084536c8f"
+    },
+    {
+      "cycle": 90,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 91,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1093.785,
+      "payloadHash": "ha-cycle-action:sha256:d524c5ce2dd6bcda8a0eec267f9fdeb53cabd7361483237a190c605fc3e143b7"
+    },
+    {
+      "cycle": 91,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 92,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1295.91,
+      "payloadHash": "ha-cycle-action:sha256:688423a89285bd1d76a38270936369abbf223720714613cda34b870de268165f"
+    },
+    {
+      "cycle": 92,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 93,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1232.818,
+      "payloadHash": "ha-cycle-action:sha256:45a15f303da4a144d732a61fab91c3386fdc9e5abc323d126640ea8ac9f89e6e"
+    },
+    {
+      "cycle": 93,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 94,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1033.206,
+      "payloadHash": "ha-cycle-action:sha256:ca262683dca6f5f3bbdc5713be0005ba12d0eebb94680624b7efee797eb6d7e1"
+    },
+    {
+      "cycle": 94,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 95,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 989.087,
+      "payloadHash": "ha-cycle-action:sha256:55ded2d8e3f247a71a9fd9f0ed1d0bc4cd004c86d15247e5381ddb8ef66618f3"
+    },
+    {
+      "cycle": 95,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 96,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1388.105,
+      "payloadHash": "ha-cycle-action:sha256:fdc2f5cde1b1eb0a43fcaa4b3c15234be9f6141bcdc6666e318583e42337c3c7"
+    },
+    {
+      "cycle": 96,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 97,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 1338.403,
+      "payloadHash": "ha-cycle-action:sha256:1fec95c9360f4112b580cd8244606aec59d2a8994c7a0eccbdaca7ddca0f7e3c"
+    },
+    {
+      "cycle": 97,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 98,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 853.361,
+      "payloadHash": "ha-cycle-action:sha256:362a663fd20f53fc9e11afe7abbfd5fcc21fac5a59eef152e99c5a505fda989a"
+    },
+    {
+      "cycle": 98,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 99,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 620.388,
+      "payloadHash": "ha-cycle-action:sha256:bb6cf592ba0f30990d707d8e15f4238ed914d776fba4b2f277c102d6d3b5d98a"
+    },
+    {
+      "cycle": 99,
+      "failedSite": "zone-a",
+      "promotedSite": "zone-b",
+      "epoch": 100,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 613.34,
+      "payloadHash": "ha-cycle-action:sha256:8b843cf4e5303f16961dbca4458b1bcbbb7e4bef329d6f82a79ec9620b7b2f18"
+    },
+    {
+      "cycle": 100,
+      "failedSite": "zone-b",
+      "promotedSite": "zone-a",
+      "epoch": 101,
+      "failedDomainRejected": true,
+      "staleWriteRejected": true,
+      "acknowledgedActionReplicated": true,
+      "durationMs": 674.475,
+      "payloadHash": "ha-cycle-action:sha256:6fe88d502c0aa0a25ba79f7658e344dd175c5f218697d2943d53c2e09c58a555"
+    }
+  ],
+  "summary": {
+    "cycles": 100,
+    "failedDomainRejections": 100,
+    "staleWritesRejected": 100,
+    "splitBrainWrites": 0,
+    "acknowledgedActionsLost": 0,
+    "duplicateActions": 0,
+    "rtoMs": {
+      "p50": 620.388,
+      "p95": 1232.818,
+      "maximum": 1388.105
+    },
+    "nodeCounts": [
+      {
+        "site": "zone-a",
+        "count": 100,
+        "minimum": 1,
+        "maximum": 100,
+        "hashes": 100
+      },
+      {
+        "site": "zone-b",
+        "count": 100,
+        "minimum": 1,
+        "maximum": 100,
+        "hashes": 100
+      },
+      {
+        "site": "region-b",
+        "count": 100,
+        "minimum": 1,
+        "maximum": 100,
+        "hashes": 100
+      }
+    ]
+  },
+  "rollingUpgrade": {
+    "strategy": "ONE_NODE_AT_A_TIME_SCHEMA_DEFAULT_REVISION",
+    "nodes": [
+      {
+        "site": "zone-a",
+        "peerHealth": [
+          100,
+          100
+        ],
+        "schemaRevision": 2,
+        "serviceMaintained": true
+      },
+      {
+        "site": "zone-b",
+        "peerHealth": [
+          100,
+          100
+        ],
+        "schemaRevision": 2,
+        "serviceMaintained": true
+      },
+      {
+        "site": "region-b",
+        "peerHealth": [
+          100,
+          100
+        ],
+        "schemaRevision": 2,
+        "serviceMaintained": true
+      }
+    ],
+    "serviceMaintained": true
+  },
+  "backupRestore": {
+    "method": "pg_dump_plain_to_fresh_database",
+    "restoredActions": 100,
+    "passed": true
+  },
+  "qualification": "Separate local Docker nodes and networks exercise engineering mechanics; this is not actual multi-region cloud evidence.",
+  "secretsRecorded": false,
+  "passed": true,
+  "fingerprint": "local-ha-certification:sha256:e1ed197528f1319e9df6d2acd734eb85b5eeeb5a70279f36c6f684a787bd8e8d",
+  "cleanup": {
+    "containers": [
+      "EPHEMERAL_PREFIX-zone-a-db",
+      "EPHEMERAL_PREFIX-zone-b-db",
+      "EPHEMERAL_PREFIX-region-b-db"
+    ],
+    "networks": [
+      "EPHEMERAL_PREFIX-zone-a-net",
+      "EPHEMERAL_PREFIX-zone-b-net",
+      "EPHEMERAL_PREFIX-region-b-net"
+    ],
+    "recoverability": "EPHEMERAL_TEST_OBJECTS_INTENTIONALLY_DESTROYED"
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "vigia.worldclass-doctor.v1",
+  "checks": {
+    "corpus": false,
+    "outcomes": false,
+    "doctrine": true,
+    "security": false,
+    "operator": false,
+    "partner": false,
+    "ha": false,
+    "cleanRoom": false,
+    "foundryMemory": true,
+    "foundryIncremental": true
+  },
+  "slos": {
+    "interactiveIncidentRead": {
+      "percentile": 0.95,
+      "targetMs": 250,
+      "objective": 0.995,
+      "windowDays": 28
+    },
+    "decisionPacketCompilation": {
+      "percentile": 0.95,
+      "targetMs": 1000,
+      "objective": 0.99,
+      "windowDays": 28
+    },
+    "operationalEventIngestion": {
+      "percentile": 0.99,
+      "targetMs": 500,
+      "objective": 0.995,
+      "windowDays": 28
+    },
+    "projectionLatency": {
+      "percentile": 0.99,
+      "targetMs": 2000,
+      "objective": 0.99,
+      "windowDays": 28
+    },
+    "providerIngestion": {
+      "percentile": 0.95,
+      "targetMs": 60000,
+      "objective": 0.98,
+      "windowDays": 28
+    },
+    "bulkCorpusProcessing": {
+      "percentile": 0.95,
+      "targetMs": 300000,
+      "objective": 0.95,
+      "windowDays": 28
+    },
+    "failover": {
+      "percentile": 1,
+      "targetMs": 300000,
+      "objective": 1,
+      "windowDays": 90
+    },
+    "replay": {
+      "percentile": 0.95,
+      "targetMs": 30000,
+      "objective": 0.99,
+      "windowDays": 28
+    }
+  },
+  "errorBudgets": {
+    "schemaVersion": "vigia.error-budget-report.v1",
+    "services": {
+      "interactiveIncidentRead": {
+        "percentile": 0.95,
+        "targetMs": 250,
+        "objective": 0.995,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "decisionPacketCompilation": {
+        "percentile": 0.95,
+        "targetMs": 1000,
+        "objective": 0.99,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "operationalEventIngestion": {
+        "percentile": 0.99,
+        "targetMs": 500,
+        "objective": 0.995,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "projectionLatency": {
+        "percentile": 0.99,
+        "targetMs": 2000,
+        "objective": 0.99,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "providerIngestion": {
+        "percentile": 0.95,
+        "targetMs": 60000,
+        "objective": 0.98,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "bulkCorpusProcessing": {
+        "percentile": 0.95,
+        "targetMs": 300000,
+        "objective": 0.95,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "failover": {
+        "percentile": 1,
+        "targetMs": 300000,
+        "objective": 1,
+        "windowDays": 90,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      },
+      "replay": {
+        "percentile": 0.95,
+        "targetMs": 30000,
+        "objective": 0.99,
+        "windowDays": 28,
+        "observations": 0,
+        "good": 0,
+        "consumedBad": 0,
+        "allowedBad": 0,
+        "remaining": 0,
+        "state": "NO_DATA"
+      }
+    },
+    "freezeNonRemediationChanges": false,
+    "freezePolicy": "Any exhausted service budget blocks non-remediation release promotion.",
+    "fingerprint": "error-budget-report:sha256:74671ed996e848f712509f9358a74689886c530653a553fa951509e513547608"
+  },
+  "state": "BLOCKED",
+  "passed": false,
+  "fingerprint": "worldclass-doctor:sha256:763b76e1868af38e5838cb517179904f2906a0604e50a0c54386f926f8231aac"
+}

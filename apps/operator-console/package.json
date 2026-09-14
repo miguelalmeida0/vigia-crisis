@@ -1,0 +1,32 @@
+{
+  "name": "vigia-mission-dark-realdata",
+  "version": "2.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Canonical repository-owned VIGIA operator console with fail-closed real-data rendering.",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "npm run build && VIGIA_OPERATOR_STATIC_ROOT=dist node server.mjs",
+    "test:syntax": "node tests/syntax.mjs && node tests/asset-integrity.mjs",
+    "test:smoke": "node tests/smoke.mjs",
+    "test:contract": "node tests/interaction-contract.mjs && node tests/planning-command-contract.mjs && node tests/vigia-api-retry-contract.mjs",
+    "test:persistence": "node tests/persistence.mjs",
+    "test:realdata": "node tests/realdata-contract.mjs",
+    "test:proxy": "node tests/proxy-contract.mjs",
+    "test:truth": "node tests/truth-integrity.mjs",
+    "test:browser-contract": "node tests/browser-live-contract.mjs",
+    "test:intelligence": "node tests/intelligence-contract.mjs",
+    "build": "node scripts/build.mjs",
+    "stop": "node ../../scripts/operator_console_runtime.mjs stop",
+    "verify:static": "npm run build && npm run test:syntax && npm run test:smoke && npm run test:contract && npm run test:persistence && npm run test:realdata && npm run test:proxy && node tests/admission-contract.mjs && node tests/map-contract.mjs && node tests/rejected-delivery-regression.mjs && npm run test:truth && npm run test:intelligence && npm run test:browser-contract && npm run test:ux && npm run test:operational-hardening",
+    "verify": "npm run verify:static && npm run test:browser:live",
+    "test:browser:fixture": "VIGIA_VQA_EXECUTION=local node ../../scripts/visual-qa/run.mjs golden",
+    "test:browser": "npm run test:browser:live",
+    "test:browser:live": "VIGIA_VQA_EXECUTION=local node ../../scripts/visual-qa/run.mjs canonical",
+    "test:ux": "node tests/ux-contract.mjs",
+    "test:operational-hardening": "node tests/operational-hardening-contract.mjs"
+  },
+  "dependencies": {
+    "maplibre-gl": "6.7.0"
+  }
+}

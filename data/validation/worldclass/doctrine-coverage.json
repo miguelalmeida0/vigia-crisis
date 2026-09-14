@@ -1,0 +1,3043 @@
+{
+  "schemaVersion": "vigia.doctrine-worldclass-coverage.v1",
+  "corpusFingerprint": "doctrine-scenario-corpus:sha256:409daa31aec0fbc0380c2309a737db011012f7aee083963c637c057f438c2073",
+  "doctrineFingerprint": "compiled-decision-doctrine:sha256:134cdf158887d4298c9ceb34dad57443d115cc4b906ed58445633a8059154f2d",
+  "scenarioCount": 100,
+  "categoryCount": 18,
+  "highConsequencePairs": {
+    "ABSTAIN_FROM_FORECAST": {
+      "positive": true,
+      "negative": true
+    },
+    "ESCALATE_DATA_QUALITY_FAILURE": {
+      "positive": true,
+      "negative": true
+    },
+    "MONITOR_CRITICAL_ASSET": {
+      "positive": true,
+      "negative": true
+    },
+    "OPEN_CONTRADICTION_REVIEW": {
+      "positive": true,
+      "negative": true
+    },
+    "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK": {
+      "positive": true,
+      "negative": true
+    },
+    "PREPARE_SOURCE_FAILOVER": {
+      "positive": true,
+      "negative": true
+    },
+    "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT": {
+      "positive": true,
+      "negative": true
+    },
+    "PROPOSE_OFFICIAL_WARNING": {
+      "positive": true,
+      "negative": true
+    },
+    "QUARANTINE_COMPROMISED_SOURCE": {
+      "positive": true,
+      "negative": true
+    },
+    "RECALCULATE_AFTER_REVOCATION": {
+      "positive": true,
+      "negative": true
+    }
+  },
+  "dependencyCycles": 0,
+  "uncoveredP0States": [],
+  "authorityFreeConsequentialPaths": [],
+  "failures": [],
+  "passed": true,
+  "coverage": {
+    "schemaVersion": "vigia.decision-doctrine-coverage.v1",
+    "doctrineFingerprint": "compiled-decision-doctrine:sha256:134cdf158887d4298c9ceb34dad57443d115cc4b906ed58445633a8059154f2d",
+    "supportedOperationalStates": 100,
+    "states": [
+      {
+        "stateId": "doctrine-01-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-01-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-01-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-01-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-01-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-01-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-02-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-02-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-02-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-02-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_CONTRADICTION_REVIEW"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-02-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_CONTRADICTION_REVIEW",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-02-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-03-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-03-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-03-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-03-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PREPARE_SOURCE_FAILOVER"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-03-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PREPARE_SOURCE_FAILOVER",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-03-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-04-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-04-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-04-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-04-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "QUARANTINE_COMPROMISED_SOURCE"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-04-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-04-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-05-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-05-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "REASSESS_INCIDENT_ASSOCIATION"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-05-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-05-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "REASSESS_INCIDENT_ASSOCIATION"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-05-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-05-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-06-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-06-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [],
+        "blockedDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-06-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-06-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-06-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-06-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-07-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-07-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-07-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-07-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "POLICY",
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-07-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "POLICY",
+          "TRUST"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-07-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-08-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-08-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-08-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-08-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "MONITOR_CRITICAL_ASSET"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-08-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "MONITOR_CRITICAL_ASSET",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-08-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-09-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-09-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-09-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-09-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-09-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-09-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-10-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-10-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-10-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-10-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-10-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-10-06",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-11-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-11-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-11-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-11-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "POLICY",
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-11-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "POLICY",
+          "TRUST"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-12-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-12-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [],
+        "blockedDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-12-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-12-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PREPARE_HANDOFF"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-12-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PREPARE_HANDOFF",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-13-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-13-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-13-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-13-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "ABSTAIN_FROM_FORECAST"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-13-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-14-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-14-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-14-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-14-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "ESCALATE_DATA_QUALITY_FAILURE"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-14-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-15-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-15-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "REFRESH_STALE_SOURCE"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-15-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-15-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "REFRESH_STALE_SOURCE"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-15-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-16-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-16-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-16-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-16-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PREPARE_SOURCE_FAILOVER"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-16-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PREPARE_SOURCE_FAILOVER",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-17-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-17-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-17-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-17-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-17-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-18-01",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [],
+        "blockerCategories": [],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-18-02",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "EVIDENCE",
+          "POLICY"
+        ],
+        "unreachableDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ]
+      },
+      {
+        "stateId": "doctrine-18-03",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "PROPOSE_OFFICIAL_WARNING"
+        ],
+        "blockerCategories": [
+          "AUTHORITY"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-18-04",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "RECALCULATE_AFTER_REVOCATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION"
+        ],
+        "blockerCategories": [
+          "SOURCE_HEALTH"
+        ],
+        "unreachableDecisions": []
+      },
+      {
+        "stateId": "doctrine-18-05",
+        "applicableDecisions": 18,
+        "readyDecisions": [
+          "ABSTAIN_FROM_FORECAST",
+          "ESCALATE_DATA_QUALITY_FAILURE",
+          "MATERIALIZE_AUDIT_PACKET",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_1H",
+          "MATERIALIZE_FORECAST_EVALUATION_PACKAGE_3H",
+          "MONITOR_CRITICAL_ASSET",
+          "OPEN_CONTRADICTION_REVIEW",
+          "OPEN_INDEPENDENT_PHYSICAL_EVIDENCE_WORK",
+          "PREPARE_HANDOFF",
+          "PREPARE_SOURCE_FAILOVER",
+          "RUN_INTERNAL_ASSET_IMPACT_ASSESSMENT",
+          "PROPOSE_OFFICIAL_WARNING",
+          "QUARANTINE_COMPROMISED_SOURCE",
+          "REASSESS_INCIDENT_ASSOCIATION",
+          "REFRESH_STALE_SOURCE",
+          "REQUEST_FORECAST_INPUT"
+        ],
+        "blockedDecisions": [
+          "CANCEL_OBSOLETE_ACQUISITION",
+          "RECALCULATE_AFTER_REVOCATION"
+        ],
+        "blockerCategories": [
+          "TRUST"
+        ],
+        "unreachableDecisions": []
+      }
+    ],
+    "uncoveredOperationalStates": [],
+    "fingerprint": "decision-doctrine-coverage:sha256:2d71ebf946de6bcf5ba84c5d09c87e3b14d1533f88bbacc2541b44c794a76e9d"
+  },
+  "fingerprint": "doctrine-worldclass-coverage:sha256:6ea4931e045798520b82b2e3ed3c2f6bbc454941cf78ad2ce7cb988bcb7b30f5"
+}

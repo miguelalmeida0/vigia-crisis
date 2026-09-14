@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+import { createHash } from 'node:crypto';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
+const filePath = path.join(root, 'data/validation/prevention/consensus-topology-evaluation-v1.json');
+const artifact = JSON.parse(await readFile(filePath, 'utf8'));
+const { evidenceHash, ...core } = artifact;
+const actual = `sha256:${createHash('sha256').update(JSON.stringify(core)).digest('hex')}`;
+const failures = [];
+if (artifact.schemaVersion !== 'vigia.consensus-topology-evaluation.v2') failures.push('schema');
+if (actual !== evidenceHash) failures.push('evidence_hash');
+if (!artifact.promotionContract?.policyHash || artifact.frozenEvaluation?.policyHash !== artifact.promotionContract.policyHash) failures.push('frozen_policy_binding');
+if (artifact.promotionContract?.calibrationSplit !== 'DEVELOPMENT_REVIEW_PARAMETER_REALIZATIONS_ONLY') failures.push('calibration_split');
+if (artifact.promotionContract?.finalEvaluationSplit !== 'UNTOUCHED_REPEAT_SCENE_REALIZATIONS') failures.push('final_split');
+if (artifact.assessments?.length !== 11 || artifact.zones?.length !== 11) failures.push('assessment_denominator');
+if (artifact.assessments?.some((assessment) => assessment.exact_breakpoint_emitted !== false || 'candidateBreakLocation' in assessment)) failures.push('exact_point_leak');
+if (artifact.assessments?.some((assessment) => !['ROBUST_INTERVENTION_ZONE', 'MIXED_INTERVENTION_ZONE', 'UNSTABLE_INTERVENTION_GEOMETRY', 'NO_DEFENSIBLE_INTERVENTION_ZONE', 'INSUFFICIENT_EVIDENCE'].includes(assessment.claim_state))) failures.push('claim_state');
+if (artifact.assessments?.some((assessment) => !assessment.counterfactual?.qualification?.includes('not wildfire risk'))) failures.push('counterfactual_claim_boundary');
+if (artifact.negativeControls?.falseRobustZoneRate === null && artifact.assessments?.some((assessment) => assessment.claim_state === 'ROBUST_INTERVENTION_ZONE')) failures.push('unguarded_robust_zone');
+if (artifact.assessments?.some((assessment) => !assessment.workflow || assessment.workflow.disposition !== 'MEASUREMENT_REQUIRED' || assessment.workflow.interventionReviewEligible !== false)) failures.push('workflow_disposition');
+if (artifact.assessments?.some((assessment) => assessment.geometry !== null || assessment.intervention_geometry !== null)) failures.push('nonpromoted_intervention_geometry');
+if (artifact.assessments?.some((assessment) => !assessment.evidence_debt?.id || !assessment.measurement_plan?.id)) failures.push('measurement_plan_linkage');
+if (artifact.assessments?.some((assessment) => assessment.measurement_support_geometry && assessment.workflow.geometryRole !== 'MEASUREMENT_SUPPORT_ONLY')) failures.push('measurement_geometry_role');
+if (artifact.assessments?.some((assessment) => assessment.claim_level?.level > 2)) failures.push('overstated_claim_level');
+if (artifact.consensusTopology?.interventionReviewCandidates !== 0 || artifact.consensusTopology?.measurementRequired !== 11) failures.push('critical_actionability_delta');
+if (artifact.criticalDelta?.before?.interventionReviewCandidates !== 11 || artifact.criticalDelta?.after?.interventionReviewCandidates !== 0 || artifact.criticalDelta?.after?.perFindingMeasurementPlans !== 11) failures.push('critical_delta');
+if (failures.length) throw new Error(`consensus_evidence_verification_failed:${failures.join(',')}`);
+console.log(JSON.stringify({ verdict: 'PASS', evidenceHash, findings: artifact.assessments.length, claimStates: artifact.consensusTopology.claimStates, workflowDispositions: artifact.consensusTopology.workflowDispositions, interventionReviewCandidates: artifact.consensusTopology.interventionReviewCandidates, measurementPlans: artifact.criticalDelta.after.perFindingMeasurementPlans, materialStabilityImprovement: artifact.frozenEvaluation.aggregate.material_stability_improvement }, null, 2));

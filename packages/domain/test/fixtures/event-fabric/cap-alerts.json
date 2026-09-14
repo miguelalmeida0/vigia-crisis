@@ -1,0 +1,29 @@
+[
+  {
+    "identifier": "PT-ANEPC-WILDFIRE-20260824-01",
+    "sender": "alerts@prociv.pt",
+    "sent": "2026-08-24T12:14:00Z",
+    "status": "Actual",
+    "msgType": "Alert",
+    "scope": "Public",
+    "correlationKeys": ["incident:wildfire-demo"],
+    "info": {
+      "category": "Fire",
+      "event": "Rural fire",
+      "eventCode": "WF",
+      "onset": "2026-08-24T12:10:00Z",
+      "headline": "Rural fire response active",
+      "severity": "Severe",
+      "certainty": "Observed",
+      "area": { "circle": "40.0000,-8.0000 5" }
+    }
+  },
+  {
+    "identifier": "PT-ANEPC-EXERCISE-01",
+    "sender": "alerts@prociv.pt",
+    "sent": "2026-08-24T12:15:00Z",
+    "status": "Exercise",
+    "msgType": "Alert",
+    "info": { "category": "Fire", "area": { "circle": "40.0000,-8.0000 5" } }
+  }
+]

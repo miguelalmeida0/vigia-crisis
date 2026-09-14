@@ -1,0 +1,648 @@
+{
+  "schemaVersion": "vigia.authoritative-truth-report.v1",
+  "generatedAt": "2026-08-25T16:09:09.374Z",
+  "campaignId": "authoritative-truth-20260825153724",
+  "passed": false,
+  "decision": "AUTHORITATIVE_CRISIS_TRUTH_GATE_NOT_PASSED",
+  "preciseRemainingBlocker": "TIME_ACCUMULATION_REQUIRED",
+  "sections": {
+    "A": {
+      "title": "Executive verdict",
+      "decision": "AUTHORITATIVE_CRISIS_TRUTH_GATE_NOT_PASSED"
+    },
+    "B": {
+      "title": "Providers activated",
+      "providers": [
+        {
+          "providerId": "bc-wildfire-service",
+          "region": "CA-BC",
+          "authorityClass": "AUTHORITATIVE_OPERATIONAL_PERIMETER",
+          "status": "READY",
+          "capabilities": {
+            "stableObjectIds": true,
+            "stableGlobalIds": true,
+            "editorTracking": true,
+            "lastEditTimestamps": true,
+            "serviceGeneration": 12,
+            "serviceItemId": "6ed3ec9b90f844fcaf9fea499bacae8e",
+            "etag": "1670501386",
+            "changeTracking": false,
+            "sync": false,
+            "replicaGeneration": false,
+            "historicMoment": false,
+            "archivedSnapshots": false,
+            "queryByModificationTime": false,
+            "queryByIncident": true,
+            "pagination": true,
+            "deletedFeatureTracking": false,
+            "maxRecordCount": 1000,
+            "providerFields": [
+              "FEATURE_AREA_SQM",
+              "FEATURE_CODE",
+              "FEATURE_LENGTH_M",
+              "FIRE_NUMBER",
+              "FIRE_SIZE_HECTARES",
+              "FIRE_STATUS",
+              "FIRE_URL",
+              "FIRE_YEAR",
+              "GlobalID",
+              "LOAD_DATE",
+              "OBJECTID",
+              "SOURCE",
+              "Shape__Area",
+              "Shape__Length",
+              "TRACK_DATE",
+              "VERSION_NUMBER"
+            ],
+            "rawMetadata": [
+              "raw:bc-wildfire-service:b8ad55c2199524cba3ee4dad2b26f56a20991d079e13a53d2220eb71cb70eafd",
+              "raw:bc-wildfire-service:219a12c189acff4fcf0eee67977976d02686098f527fbf19652e2f0f7f22ab12"
+            ],
+            "assumptionsMade": false
+          },
+          "capabilityFingerprint": "provider-change-capability:sha256:fc01739479a23228884ff424c39d7b6cdbe042f37fa44d8e64e5c07dc3e176d4"
+        },
+        {
+          "providerId": "alberta-wildfire",
+          "region": "CA-AB",
+          "authorityClass": "AUTHORITATIVE_OPERATIONAL_PERIMETER",
+          "status": "READY",
+          "capabilities": {
+            "stableObjectIds": true,
+            "stableGlobalIds": false,
+            "editorTracking": false,
+            "lastEditTimestamps": false,
+            "serviceGeneration": 11.3,
+            "serviceItemId": "9d41ad27790b4a8388846f484787c0fe",
+            "etag": "\"55571b9e\"",
+            "changeTracking": false,
+            "sync": false,
+            "replicaGeneration": false,
+            "historicMoment": false,
+            "archivedSnapshots": false,
+            "queryByModificationTime": true,
+            "queryByIncident": true,
+            "pagination": true,
+            "deletedFeatureTracking": false,
+            "maxRecordCount": 1000,
+            "providerFields": [
+              "AREA_ESTIMATE",
+              "ASSESSMENT_ASSISTANCE_DATE",
+              "CO_FLAG",
+              "CaptreDate",
+              "CreatMethd",
+              "DataSource",
+              "FIRE_STATUS",
+              "FIRE_STATUS_DATE",
+              "FIRE_TYPE",
+              "FireNumber",
+              "FireNumber_Short",
+              "GENERAL_CAUSE",
+              "GISFeatureLastUpdated",
+              "GISFeatureLastUpdated_MT",
+              "INCIDENT_TYPE",
+              "IncdtName",
+              "OBJECTID",
+              "RESPONSE_TYPE",
+              "RESP_AREA",
+              "SIZE_CLASS",
+              "SourceKeys"
+            ],
+            "rawMetadata": [
+              "raw:alberta-wildfire:bd75cce930ed919f760c47e17d421ecf825ddc044c52a70a0cffdc08f346d77d",
+              "raw:alberta-wildfire:6603d041ceec772f75ea95713613fac862b7b4914762c6a9f04f972723fe8cba"
+            ],
+            "assumptionsMade": false
+          },
+          "capabilityFingerprint": "provider-change-capability:sha256:98ea3450724d5c5d7ec8d6dfd823e9d146b441dd06ad0c4ac2532ec1f014a73f"
+        },
+        {
+          "providerId": "nifc-wfigs",
+          "region": "US-WEST",
+          "authorityClass": "AUTHORITATIVE_OPERATIONAL_PERIMETER",
+          "status": "READY",
+          "capabilities": {
+            "stableObjectIds": true,
+            "stableGlobalIds": true,
+            "editorTracking": true,
+            "lastEditTimestamps": true,
+            "serviceGeneration": 12,
+            "serviceItemId": "d1c32af3212341869b3c810f1a215824",
+            "etag": "-953994062",
+            "changeTracking": false,
+            "sync": false,
+            "replicaGeneration": false,
+            "historicMoment": false,
+            "archivedSnapshots": false,
+            "queryByModificationTime": true,
+            "queryByIncident": true,
+            "pagination": true,
+            "deletedFeatureTracking": false,
+            "maxRecordCount": 2000,
+            "providerFields": [
+              "GlobalID",
+              "OBJECTID",
+              "Shape__Area",
+              "Shape__Length",
+              "attr_ABCDMisc",
+              "attr_ADSPermissionState",
+              "attr_ActiveFireCandidate",
+              "attr_CalculatedAcres",
+              "attr_ContainmentDateTime",
+              "attr_ControlDateTime",
+              "attr_CpxID",
+              "attr_CpxName",
+              "attr_CreatedBySystem",
+              "attr_CreatedOnDateTime_dt",
+              "attr_DiscoveryAcres",
+              "attr_DispatchCenterID",
+              "attr_EstimatedCostToDate",
+              "attr_EstimatedFinalCost",
+              "attr_FFReportApprovedByTitle",
+              "attr_FFReportApprovedByUnit",
+              "attr_FFReportApprovedDate",
+              "attr_FORID",
+              "attr_FSJobCode",
+              "attr_FSOverrideCode",
+              "attr_FinalAcres",
+              "attr_FireBehaviorGeneral",
+              "attr_FireBehaviorGeneral1",
+              "attr_FireBehaviorGeneral2",
+              "attr_FireBehaviorGeneral3",
+              "attr_FireCause",
+              "attr_FireCauseGeneral",
+              "attr_FireCauseSpecific",
+              "attr_FireCode",
+              "attr_FireDepartmentID",
+              "attr_FireDiscoveryDateTime",
+              "attr_FireMgmtComplexity",
+              "attr_FireOutDateTime",
+              "attr_FireStrategyConfinePercent",
+              "attr_FireStrategyFullSuppPrcnt",
+              "attr_FireStrategyMonitorPercent",
+              "attr_FireStrategyPointZonePrcnt",
+              "attr_GACC",
+              "attr_ICS209ReportDateTime",
+              "attr_ICS209ReportStatus",
+              "attr_ICS209RptForTimePeriodFrom",
+              "attr_ICS209RptForTimePeriodTo",
+              "attr_IncidentComplexityLevel",
+              "attr_IncidentManagementOrg",
+              "attr_IncidentName",
+              "attr_IncidentShortDescription",
+              "attr_IncidentSize",
+              "attr_IncidentTypeCategory",
+              "attr_IncidentTypeKind",
+              "attr_InitialLatitude",
+              "attr_InitialLongitude",
+              "attr_InitialResponseAcres",
+              "attr_InitialResponseDateTime",
+              "attr_IrwinID",
+              "attr_IsCpxChild",
+              "attr_IsFSAssisted",
+              "attr_IsFireCauseInvestigated",
+              "attr_IsFireCodeRequested",
+              "attr_IsMultiJurisdictional",
+              "attr_IsReimbursable",
+              "attr_IsTrespass",
+              "attr_IsUnifiedCommand",
+              "attr_LocalIncidentIdentifier",
+              "attr_ModifiedBySystem",
+              "attr_ModifiedOnDateTime_dt",
+              "attr_OrganizationalAssessment",
+              "attr_POOCity",
+              "attr_POOCounty",
+              "attr_POODispatchCenterID",
+              "attr_POOFips",
+              "attr_POOJurisdictUnitParentUnit",
+              "attr_POOJurisdictionalAgency",
+              "attr_POOJurisdictionalUnit",
+              "attr_POOLandownerCategory",
+              "attr_POOLandownerKind",
+              "attr_POOLegalDescPrincipalMerid",
+              "attr_POOLegalDescQtr",
+              "attr_POOLegalDescQtrQtr",
+              "attr_POOLegalDescRange",
+              "attr_POOLegalDescSection",
+              "attr_POOLegalDescTownship",
+              "attr_POOPredictiveServiceAreaID",
+              "attr_POOProtectingAgency",
+              "attr_POOProtectingUnit",
+              "attr_POOState",
+              "attr_PercentContained",
+              "attr_PercentPerimToBeContained",
+              "attr_PredominantFuelGroup",
+              "attr_PredominantFuelModel",
+              "attr_PrimaryFuelModel",
+              "attr_SecondaryFuelModel",
+              "attr_Source",
+              "attr_SourceGlobalID",
+              "attr_SourceOID",
+              "attr_StratDecisionPublishDate",
+              "attr_TotalIncidentPersonnel",
+              "attr_UniqueFireIdentifier",
+              "attr_WFDSSDecisionStatus",
+              "poly_Acres_AutoCalc",
+              "poly_CreateDate",
+              "poly_DateCurrent",
+              "poly_DeleteThis",
+              "poly_FORID",
+              "poly_FeatureAccess",
+              "poly_FeatureCategory",
+              "poly_FeatureStatus",
+              "poly_GISAcres",
+              "poly_IRWINID",
+              "poly_IncidentName",
+              "poly_IsVisible",
+              "poly_MapMethod",
+              "poly_PolygonDateTime",
+              "poly_Source",
+              "poly_SourceGlobalID",
+              "poly_SourceOID"
+            ],
+            "rawMetadata": [
+              "raw:nifc-wfigs:bc8c55ac48a6d7bcbaa174f24ee9e118a31df81adf2863e8d5795f6d0a1b7956",
+              "raw:nifc-wfigs:230fd30870427ffd0c58877e17ef6d08808efb60c1c57a1fd77e10a25e310c6c"
+            ],
+            "assumptionsMade": false
+          },
+          "capabilityFingerprint": "provider-change-capability:sha256:a55e652e4d388861eb98b4d2b74c4d055f164398b4f5c6b1c602fbc3a7c05e19"
+        },
+        {
+          "providerId": "cwfis-nrcan",
+          "region": "CA",
+          "authorityClass": "OFFICIAL_REFERENCE_PERIMETER",
+          "status": "READY",
+          "capabilities": {
+            "stableObjectIds": false,
+            "stableGlobalIds": false,
+            "editorTracking": false,
+            "lastEditTimestamps": true,
+            "serviceGeneration": "1.0",
+            "serviceItemId": null,
+            "etag": null,
+            "changeTracking": false,
+            "sync": false,
+            "replicaGeneration": false,
+            "historicMoment": false,
+            "archivedSnapshots": true,
+            "queryByModificationTime": false,
+            "queryByIncident": false,
+            "pagination": true,
+            "deletedFeatureTracking": false,
+            "products": [
+              "activefires.csv",
+              "m3_polygons_current",
+              "hotspots_last24hrs",
+              "perimeters shapefile components",
+              "progression shapefile components"
+            ],
+            "rawMetadata": [
+              "raw:cwfis-nrcan:f7d9715b568302d5ea77f6e80a7c17bf9e3d0db3769930c92d29e65254cec627"
+            ],
+            "assumptionsMade": false
+          },
+          "capabilityFingerprint": "provider-change-capability:sha256:1b6bcb3a9537c334e2bd423dd87e00b7966cedec0c71387988ba5e1bc87bfaaf"
+        }
+      ]
+    },
+    "C": {
+      "title": "Active incidents watched",
+      "count": 474,
+      "regions": [
+        "CA-AB",
+        "CA-BC",
+        "US-WEST"
+      ]
+    },
+    "D": {
+      "title": "Raw objects",
+      "count": 22,
+      "bytes": 173438387
+    },
+    "E": {
+      "title": "Provider publications",
+      "count": 265
+    },
+    "F": {
+      "title": "Meaningful revisions",
+      "total": 2,
+      "byProvider": {
+        "nifc-wfigs": 2
+      },
+      "byRegion": {
+        "US-WEST": 2
+      },
+      "byIncident": {
+        "US-WEST:2026-FLEVP-002565": 1,
+        "US-WEST:2026-UTUOA-100254": 1
+      },
+      "byRevisionClass": {
+        "GEOMETRY_REFINEMENT": 1,
+        "NORMAL_PROGRESSION": 1
+      }
+    },
+    "G": {
+      "title": "Authoritative sequences",
+      "count": 585,
+      "historicalIdentityBranchesRetained": 367
+    },
+    "H": {
+      "title": "Source conflicts",
+      "total": 0,
+      "states": {}
+    },
+    "I": {
+      "title": "Official labels",
+      "horizons": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0,
+        "12h": 0,
+        "24h": 0
+      },
+      "incidentCounts": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0,
+        "12h": 0,
+        "24h": 0
+      },
+      "authorityClass": "AUTHORITATIVE_OPERATIONAL_PERIMETER"
+    },
+    "J": {
+      "title": "Sensor-derived labels",
+      "horizons": {
+        "1h": 1,
+        "3h": 1,
+        "6h": 0,
+        "12h": 0,
+        "24h": 0
+      },
+      "classes": {
+        "AUTHORITATIVE_OPERATIONAL_PERIMETER": 0,
+        "OFFICIAL_REFERENCE_PERIMETER": 0,
+        "DERIVED_SENSOR_PROGRESSION": 2,
+        "RETROSPECTIVE_FINAL_PERIMETER": 0,
+        "UNUSABLE": 0
+      },
+      "countedAsOfficial": false
+    },
+    "K": {
+      "title": "Forecasts scored",
+      "evaluationExecuted": false,
+      "forecastsScored": 0,
+      "comparisons": 0
+    },
+    "L": {
+      "title": "Baseline results",
+      "results": []
+    },
+    "M": {
+      "title": "Truth latency",
+      "stratified": {
+        "nifc-wfigs:US-WEST": {
+          "examples": 2,
+          "publicationToReceiptP50Ms": 132007285,
+          "publicationToReceiptP95Ms": 159398095,
+          "receiptToTwinP95Ms": 228,
+          "sourceChangeToOperatorVisibleP95Ms": 159380279
+        }
+      }
+    },
+    "N": {
+      "title": "Decision Deltas",
+      "count": 2,
+      "retainedButExcluded": 262,
+      "externalConsequentialActions": 0
+    },
+    "O": {
+      "title": "Realized Information Value",
+      "outcomes": 16,
+      "sourceSuccessCalibration": 1,
+      "actualRevisionUnlocks": 2,
+      "priorClaimsReconciledAgainstRevisionAdjudications": true,
+      "automaticDoctrineModification": false
+    },
+    "P": {
+      "title": "Prospective archive progress",
+      "immutableSnapshots": 3877,
+      "providerPublications": 265,
+      "meaningfulRevisions": 2,
+      "officialLabels": {
+        "1h": 0,
+        "3h": 0,
+        "6h": 0,
+        "12h": 0,
+        "24h": 0
+      },
+      "priorSnapshotsRewritten": 0
+    },
+    "Q": {
+      "title": "Watcher reliability",
+      "campaignId": "authoritative-truth-20260825153724",
+      "providerHealth": {
+        "alberta-wildfire": {
+          "health": "LIVE",
+          "lastCompletedAt": "2026-08-25T15:53:35.982Z",
+          "records": 112,
+          "failures": 0,
+          "recoveries": 0
+        },
+        "bc-wildfire-service": {
+          "health": "LIVE",
+          "lastCompletedAt": "2026-08-25T15:53:35.982Z",
+          "records": 255,
+          "failures": 0,
+          "recoveries": 0
+        },
+        "nifc-wfigs": {
+          "health": "LIVE",
+          "lastCompletedAt": "2026-08-25T15:53:35.982Z",
+          "records": 218,
+          "failures": 0,
+          "recoveries": 0
+        },
+        "cwfis-nrcan": {
+          "health": "LIVE",
+          "lastCompletedAt": "2026-08-25T15:53:35.982Z",
+          "records": 0,
+          "failures": 0,
+          "recoveries": 0
+        }
+      },
+      "restartRecovery": {
+        "durableState": true,
+        "cursorCount": 4,
+        "checkpoints": 4,
+        "shutdownClean": true
+      }
+    },
+    "R": {
+      "title": "Replay",
+      "replay": {
+        "schemaVersion": "vigia.authoritative-truth-replay.v1",
+        "generatedAt": "2026-08-25T16:07:45.147Z",
+        "campaignId": "authoritative-truth-20260825153724",
+        "exactFingerprint": "authoritative-truth-replay-state:sha256:c5fb3bc545d1941cb8e099e6b027355c47a71606d9eb6f207bd05c66a71f2973",
+        "revisionChainsVerified": true,
+        "rawObjectsVerified": true,
+        "labelReplayVerified": true,
+        "backupRestorePassed": true,
+        "restartRecoveryPassed": true,
+        "priorSnapshotsRewritten": 0,
+        "failures": [],
+        "durationMs": 4516.09,
+        "passed": true,
+        "fingerprint": "authoritative-truth-replay:sha256:568173948dfb9325dc0c38ac6839bfb05c61b221305c44eb9e84f5ea4e4e84f3"
+      }
+    },
+    "S": {
+      "title": "Security",
+      "rightsRestrictedObjectsAdmitted": 0,
+      "secretsRecorded": false,
+      "consequentialExternalActions": 0,
+      "protectedFrontendModified": false
+    },
+    "T": {
+      "title": "Performance",
+      "performance": {
+        "schemaVersion": "vigia.authoritative-truth-performance.v1",
+        "generatedAt": "2026-08-25T16:07:40.174Z",
+        "stages": {
+          "providerDiscovery": {
+            "p95Ms": null
+          },
+          "pollCycle": {
+            "p95Ms": 18004.952292
+          },
+          "rawPersistenceAndFetch": {
+            "p95Ms": 14337.216416000001
+          },
+          "geometryHashing": {
+            "p95Ms": 13.712
+          },
+          "revisionClassification": {
+            "p95Ms": 0.17954199999985576
+          },
+          "incidentAssociation": {
+            "p95Ms": 1.6124159999999392
+          },
+          "sequenceUpdate": {
+            "p95Ms": 430.219
+          },
+          "labelGeneration": {
+            "p95Ms": 22.989165999999386
+          },
+          "forecastScoreUpdate": {
+            "p95Ms": null
+          },
+          "decisionPacketUpdate": {
+            "p95Ms": 10.321625000000495
+          },
+          "largeCampaignReplay": {
+            "p95Ms": 7913.768
+          }
+        },
+        "changedPerimeterProcessingP95Ms": 13.712,
+        "targets": {
+          "unchangedPollPerIncidentP95Ms": 50,
+          "changedPerimeterP95Ms": 250,
+          "incrementalLabelP95Ms": 100,
+          "decisionPacketP95Ms": 50
+        },
+        "checks": {
+          "unchangedPoll": true,
+          "changedPerimeter": true,
+          "incrementalLabel": true,
+          "decisionPacket": true
+        },
+        "boundedMemory": true,
+        "singleIncidentChangeRequiresGlobalRebuild": false,
+        "providerBatchSequenceUpdateExcludedFromPerIncidentTarget": true,
+        "fingerprint": "authoritative-truth-performance:sha256:4f6db131693df9b651386a2ae305ffa568216623c0e41c52abe2f521a7efbad8"
+      }
+    },
+    "U": {
+      "title": "Test results",
+      "targeted": {
+        "exitCode": 0,
+        "tests": 14,
+        "pass": 14,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 152,
+        "tail": "✔ unchanged polling creates availability evidence but no new semantic revision (3.583958ms)\n✔ genuine growth and bounded high-overlap refinement are classified separately (0.426958ms)\n✔ correction, shrink, merge and split fail closed for official growth labels (0.188083ms)\n✔ deleted perimeter, incident reassociation, clock anomaly, invalid geometry and duplicate are explicit (0.233333ms)\n✔ provider outage and recovery are retained without a negative perimeter claim (0.26825ms)\n✔ durable cursors survive restart and Alberta incident aliases crosswalk deterministically (0.537209ms)\n✔ schema drift and late provider publication do not become progression (0.154833ms)\n✔ simultaneous independent provider changes remain separate sequences (0.262625ms)\n✔ inside-tolerance authoritative revisions create labels; outside tolerance does not (0.747208ms)\n✔ sensor-derived and rights-restricted states cannot satisfy the official gate (0.420666ms)\n✔ future-data leakage invalidates a forecast comparison (0.158958ms)\n✔ conflicting in-jurisdiction official sources are represented and out-of-jurisdiction sources cannot override (0.321833ms)\n✔ replay verifies chains, labels, backup/restore and fingerprints (5.906167ms)\n✔ metamorphic geometry rotation, duplicate capture and ledger ordering preserve semantics (3.252459ms)\nℹ tests 14\nℹ suites 0\nℹ pass 14\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 152.588291\n"
+      },
+      "full": {
+        "exitCode": 1,
+        "tests": 762,
+        "pass": 760,
+        "fail": 1,
+        "skipped": 1,
+        "durationMs": 47061,
+        "tail": "    '  results.forEach((result,index)=>{\\n' +\n    \"    if(result.status!=='rejected')return;\\n\" +\n    \"    const component=['web','api','fieldnode'][index],message=`${component}_release_unavailable:${result.reason.message}`;\\n\" +\n    \"    if(component==='fieldnode')degraded.push(message);else failures.push(message);\\n\" +\n    '  });\\n' +\n    \"  if(web&&api&&web.releaseId!==api.releaseId)failures.push('web_api_release_id_mismatch');\\n\" +\n    \"  if(web&&fieldNode&&web.releaseId!==fieldNode.releaseId)failures.push('web_fieldnode_release_id_mismatch');\\n\" +\n    \"  if(web&&api&&web.codeStateHash!==api.codeStateHash)failures.push('web_api_code_state_mismatch');\\n\" +\n    \"  if(web&&fieldNode&&web.codeStateHash!==fieldNode.codeStateHash)failures.push('web_fieldnode_code_state_mismatch');\\n\" +\n    '  for(const [key,required] of Object.entries(REQUIRED)){\\n' +\n    '    if(api?.contracts?.[key]!==required)failures.push(`api_${key}_requires_${required}`);\\n' +\n    \"    if(key==='fieldNodeContractVersion'&&fieldNode&&fieldNode.contracts?.[key]!==required)failures.push(`fieldnode_${key}_requires_${required}`);\\n\" +\n    '  }\\n' +\n    \"  if(api?.schema?.certification?.state!=='PASS')failures.push('database_schema_not_certified');\\n\" +\n    \"  if(api?.routeCertification?.state!=='PASS')failures.push('primary_routes_not_certified');\\n\" +\n    \"  if(api?.sessionCertification?.state!=='PASS')failures.push('session_not_certified');\\n\" +\n    \"  return{schemaVersion:'vigia.browser-release-handshake.v2',compatible:failures.length===0,failures,degraded,web,api,fieldNode,checkedAt:new Date().toISOString()};\\n\" +\n    '}\\n' +\n    '\\n' +\n    'export function renderReleaseFailure(root,result){\\n' +\n    \"  root.dataset.ready='false';root.dataset.releaseState='incompatible';\\n\" +\n    '  root.innerHTML=`<main class=\"release-integrity-stop\" role=\"alert\"><span>RELEASE INTEGRITY STOP</span><h1>INCOMPATIBLE RELEASE</h1><p>VIGIA will not mix browser, API, database, or FieldNode contracts.</p><dl><div><dt>Browser</dt><dd>${result.web?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>API</dt><dd>${result.api?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>FieldNode</dt><dd>${result.fieldNode?.releaseId??\\'Unavailable\\'}</dd></div></dl><details><summary>Compatibility failures</summary><ul>${result.failures.map((item)=>`<li>${String(item).replaceAll(\\'_\\',\\' \\')}</li>`).join(\\'\\')}</ul></details><strong>Run the governed local release command before making decisions.</strong></main>`;\\n' +\n    '}\\n'\n  \n      at TestContext.<anonymous> (file:///Users/malmeida/Documents/Development/vigia-intelligence/apps/api/test/release-contract-governance.test.mjs:14:136)\n      at async Test.run (node:internal/test_runner/test:1208:7)\n      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {\n    generatedMessage: true,\n    code: 'ERR_ASSERTION',\n    actual: 'const REQUIRED=Object.freeze({\\n  apiContractVersion:\\'vigia-api-v10.4\\',operationsApiVersion:\\'operations-api-v6\\',validationApiVersion:\\'validation-api-v8\\',\\n  fieldNodeContractVersion:\\'fieldnet-api-v5\\',databaseSchemaVersion:\\'vigia-postgis-014\\',domainSchemaVersion:\\'vigia-domain-v10.4\\'\\n});\\nconst timeout=(ms)=>AbortSignal.timeout?AbortSignal.timeout(ms):undefined;\\nasync function json(url,options={}){const response=await fetch(url,{cache:\\'no-store\\',credentials:url.startsWith(\\'/\\')?\\'same-origin\\':\\'omit\\',signal:timeout(8_000),...options});if(!response.ok)throw new Error(`${url}:HTTP_${response.status}`);return response.json();}\\nfunction fieldNodeBase(){const value=new URLSearchParams(location.search).get(\\'fieldnetNode\\');if(!value)return\\'http://127.0.0.1:4188\\';try{const parsed=new URL(value);return parsed.protocol===\\'http:\\'&&[\\'127.0.0.1\\',\\'localhost\\'].includes(parsed.hostname)?parsed.origin:\\'http://127.0.0.1:4188\\';}catch{return\\'http://127.0.0.1:4188\\';}}\\nexport async function certifyBrowserRelease(){\\n  const failures=[],degraded=[];let web=null,api=null,fieldNode=null;\\n  const results=await Promise.allSettled([json(\\'/data/release-identity.json\\'),json(\\'/api/v10/release\\'),json(`${fieldNodeBase()}/api/fieldnet/release`)]);\\n  [web,api,fieldNode]=results.map((result)=>result.status===\\'fulfilled\\'?result.value:null);\\n  results.forEach((result,index)=>{\\n    if(result.status!==\\'rejected\\')return;\\n    const component=[\\'web\\',\\'api\\',\\'fieldnode\\'][index],message=`${component}_release_unavailable:${result.reason.message}`;\\n    if(component===\\'fieldnode\\')degraded.push(message);else failures.push(message);\\n  });\\n  if(web&&api&&web.releaseId!==api.releaseId)failures.push(\\'web_api_release_id_mismatch\\');\\n  if(web&&fieldNode&&web.releaseId!==fieldNode.releaseId)failures.push(\\'web_fieldnode_release_id_mismatch\\');\\n  if(web&&api&&web.codeStateHash!==api.codeStateHash)failures.push(\\'web_api_code_state_mismatch\\');\\n  if(web&&fieldNode&&web.codeStateHash!==fieldNode.codeStateHash)failures.push(\\'web_fieldnode_code_state_mismatch\\');\\n  for(const [key,required] of Object.entries(REQUIRED)){\\n    if(api?.contracts?.[key]!==required)failures.push(`api_${key}_requires_${required}`);\\n    if(key===\\'fieldNodeContractVersion\\'&&fieldNode&&fieldNode.contracts?.[key]!==required)failures.push(`fieldnode_${key}_requires_${required}`);\\n  }\\n  if(api?.schema?.certification?.state!==\\'PASS\\')failures.push(\\'database_schema_not_certified\\');\\n  if(api?.routeCertification?.state!==\\'PASS\\')failures.push(\\'primary_routes_not_certified\\');\\n  if(api?.sessionCertification?.state!==\\'PASS\\')failures.push(\\'session_not_certified\\');\\n  return{schemaVersion:\\'vigia.browser-release-handshake.v2\\',compatible:failures.length===0,failures,degraded,web,api,fieldNode,checkedAt:new Date().toISOString()};\\n}\\n\\nexport function renderReleaseFailure(root,result){\\n  root.dataset.ready=\\'false\\';root.dataset.releaseState=\\'incompatible\\';\\n  root.innerHTML=`<main class=\"release-integrity-stop\" role=\"alert\"><span>RELEASE INTEGRITY STOP</span><h1>INCOMPATIBLE RELEASE</h1><p>VIGIA will not mix browser, API, database, or FieldNode contracts.</p><dl><div><dt>Browser</dt><dd>${result.web?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>API</dt><dd>${result.api?.releaseId??\\'Unavailable\\'}</dd></div><div><dt>FieldNode</dt><dd>${result.fieldNode?.releaseId??\\'Unavailable\\'}</dd></div></dl><details><summary>Compatibility failures</summary><ul>${result.failures.map((item)=>`<li>${String(item).replaceAll(\\'_\\',\\' \\')}</li>`).join(\\'\\')}</ul></details><strong>Run the governed local release command before making decisions.</strong></main>`;\\n}\\n',\n    expected: /vigia-postgis-\\d{3}/,\n    operator: 'doesNotMatch',\n    diff: 'simple'\n  }\n",
+        "knownProtectedFrontendFailure": true
+      },
+      "database": {
+        "exitCode": 0,
+        "tail": "    \"atomicDecisionOutcomeRollback\": true,\n    \"atomicArchiveRollback\": true,\n    \"decisionMemoryPersistence\": true,\n    \"informationValuePersistence\": true,\n    \"restartReconstruction\": true,\n    \"fileDatabaseSemanticEquivalence\": true,\n    \"backupRestore\": true\n  },\n  \"recovery\": {\n    \"state\": \"PASS\",\n    \"rpoEvents\": 0,\n    \"rtoMs\": 1570.8910839999999,\n    \"dataLossRecords\": 0,\n    \"projectionRecoveryMs\": 11.16424999999981,\n    \"replayVerificationMs\": 1.4634580000001733,\n    \"migrationHead\": \"017\",\n    \"migrationIdempotentAfterRestore\": true,\n    \"decisionPacketVerified\": true,\n    \"lineageVerified\": true,\n    \"receiptsVerified\": true,\n    \"prospectiveArchiveVerified\": true,\n    \"decisionMemoryVerified\": true,\n    \"informationValueVerified\": true,\n    \"projectionRebuilt\": true,\n    \"replayVerified\": true\n  },\n  \"durationMs\": 3093.767917,\n  \"failed\": []\n}\n"
+      }
+    },
+    "V": {
+      "title": "New regressions",
+      "count": 0
+    },
+    "W": {
+      "title": "Scientific-truth gate",
+      "authoritativeGate": {
+        "schemaVersion": "vigia.authoritative-crisis-truth-gate.v1",
+        "generatedAt": "2026-08-25T16:09:08.603Z",
+        "checks": {
+          "legitimateOfficialOneHourLabel": false,
+          "legitimateOfficialThreeHourLabel": false,
+          "completeChronology": false,
+          "validAuthorityClass": false,
+          "forecastEvaluationExecuted": false,
+          "decisionPacketUpdated": false,
+          "fullReplayPassed": true,
+          "zeroNewRegressions": true
+        },
+        "officialLabels": {
+          "oneHour": 0,
+          "threeHour": 0
+        },
+        "passed": false,
+        "decision": "AUTHORITATIVE_CRISIS_TRUTH_GATE_NOT_PASSED",
+        "preciseRemainingBlocker": "TIME_ACCUMULATION_REQUIRED",
+        "strongerScientificPromotionGate": {
+          "separate": true,
+          "oneHourLabels": 10,
+          "threeHourLabels": 10,
+          "independentDevelopmentCalibrationHeldOutRequired": true
+        },
+        "fingerprint": "authoritative-crisis-truth-gate:sha256:0435622730d3386dc2f820d26a452462d458c546480ff4a38c80ba9d0d9ad1b7"
+      },
+      "taskSpecificScience": "NONVACUOUS_SCIENTIFIC_EVALUATION_COMPLETE"
+    },
+    "X": {
+      "title": "Precise remaining blocker",
+      "blocker": "TIME_ACCUMULATION_REQUIRED"
+    },
+    "Y": {
+      "title": "Running/resumable campaign status",
+      "running": false,
+      "shutdownClean": true,
+      "campaignId": "authoritative-truth-20260825153724",
+      "resumeCommand": "npm run truth-network:watch -- --resume=authoritative-truth-20260825153724 --all-active"
+    },
+    "Z": {
+      "title": "Next measured target",
+      "target": "Capture the next provider-published authoritative geometry revision that yields the first missing legitimate 1h or 3h label."
+    }
+  },
+  "gateFingerprint": "authoritative-crisis-truth-gate:sha256:0435622730d3386dc2f820d26a452462d458c546480ff4a38c80ba9d0d9ad1b7",
+  "replayFingerprint": "authoritative-truth-replay:sha256:568173948dfb9325dc0c38ac6839bfb05c61b221305c44eb9e84f5ea4e4e84f3",
+  "verificationFingerprint": "authoritative-truth-verification:sha256:7c831709d3b43127ffbe52e4b467b2853d88b35ea6e5cf1662aee8dfa16fc1ea",
+  "fingerprint": "authoritative-truth-report:sha256:6d3d954c90ab63d48a3b47d96362a11ede350a3487fe3b2606fc7b1a1bacf02a"
+}

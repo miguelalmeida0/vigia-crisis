@@ -1,0 +1,28 @@
+{
+  "sprint": "Mega Intelligence VI",
+  "status": "implementation_delivered_release_blocked",
+  "release": "vigia-intelligence-fabric-72114bc137e142a7",
+  "report": "docs/handoffs/mega-vi/report.md",
+  "verification": {
+    "backend_domain_passed": 87,
+    "backend_domain_failed": 0,
+    "frontend_static": "passed",
+    "canonical_captures": 43,
+    "retained_snapshots_unchanged": "30/30",
+    "persisted_scenario_snapshots": 0,
+    "six_route_pixel_certification": "not_claimed",
+    "git": "no_commit_or_push_read_only_metadata"
+  },
+  "phases": {
+    "performance": "20_before_and_20_after_per_journey; all_7_gates_failed; API_p95_regressed; final_build_not_retimed",
+    "readiness": "HTTP_503; legacy_audit_972_failures_preserved; physical_families_0_of_2; current_boot_event_store_memory_only",
+    "support_dependencies": "real_Evora_health_fire_reception_and_12_EM527_relationships_verified",
+    "multi_failure": "controlled_pass; real_retained_EM527_and_hospital_scenario_verified; no_operational_writes",
+    "communities_population": "57_INE_settlements; 55_complete_2021_population_values; current_qualified_routes_verified",
+    "coverage": "real_retained_paths; 1672_390_320_rendered_checks_pass; gaps_explicit",
+    "causal_history_analogs": "real_causal_comparison_verified; ETA_only_changes_tested; insufficient_comparable_history",
+    "notices_ask_ui": "deterministic_tools_and_max_3_notices_verified; mobile_timeout_retained_and_retry_completed",
+    "model": "GPU_runtimes_failed; CPU_sentinels_20_of_20; corpus_14_completed_90_timeouts; rejected_disabled",
+    "canonical_visual_restart_proof": "43_captures; 5_diagnostic_reference_comparisons; 30_of_30_snapshots_unchanged"
+  }
+}

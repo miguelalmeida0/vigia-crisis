@@ -1,0 +1,51 @@
+{
+  "schemaVersion": "vigia-detector-validation.v1",
+  "detectorVersion": "fuel_continuity_change_screen_v1",
+  "evaluationState": "UNMEASURED",
+  "operational": false,
+  "calibrated": false,
+  "qualification": "SCREENING_CANDIDATE",
+  "executionEvidence": {
+    "runId": "detector-run:7a3c11c6d6fbf6ca03b83d1f",
+    "currentObservationId": "S2A_29SNB_20260808_1_L2A",
+    "comparisonObservationId": "S2B_29SNB_20250806_0_L2A",
+    "outputCount": 2,
+    "pixelGeographicBinding": "PIXEL_VERIFIED",
+    "persistedThroughPhysicalTruthTransaction": true,
+    "findingIds": [
+      "fuel-continuity:8b28272d53d24d529ee584c7c7d9",
+      "fuel-continuity:e2186d3a096e3b5dc86ecaaae967"
+    ]
+  },
+  "efficacyEvidence": {
+    "expertLabelCount": 0,
+    "precision": null,
+    "recall": null,
+    "falsePositiveRate": null,
+    "falseNegativeRate": null
+  },
+  "reviewEvidence": {
+    "developerReviewCount": 1,
+    "domainExpertReviewCount": 0,
+    "abstentionRate": 1,
+    "reviewIds": [
+      "prevention-review:a3f9297fd8a84ffced8b8c33e011"
+    ],
+    "reviewedFindingIds": [
+      "fuel-continuity:8b28272d53d24d529ee584c7c7d9"
+    ],
+    "reasonCounts": {
+      "INSUFFICIENT_RESOLUTION": 1
+    },
+    "limitation": "Developer review is execution and workload evidence only. It is not an expert efficacy label."
+  },
+  "knownErrorTaxonomy": [
+    "seasonal vegetation change",
+    "agricultural land management",
+    "forestry operations",
+    "co-registration artifacts",
+    "incomplete or stale OpenStreetMap structure coverage"
+  ],
+  "requiredNextEvidence": "Prospective expert adjudication of detector outputs on a governed Portuguese evaluation set.",
+  "limitation": "Successful execution on real native pixels proves implementation and persistence only. It does not prove detector efficacy, hazard existence, or operational fitness."
+}

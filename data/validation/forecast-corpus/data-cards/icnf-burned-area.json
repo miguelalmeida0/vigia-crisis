@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.corpus-provider-data-card.v1",
+  "id": "icnf-burned-area",
+  "purpose": "official annual burned-area geography; occurrence records",
+  "coverage": [
+    "portugal"
+  ],
+  "period": "1975-2024 published annual layers",
+  "resolution": "annual national layers",
+  "collectionProcess": "public ArcGIS/download layers",
+  "knowledgeTimeSemantics": "RETROSPECTIVE_LABEL_ONLY",
+  "labelConstruction": "Retrospective label only.",
+  "negativeConstruction": "Source emptiness is never a negative without a separate valid observation opportunity.",
+  "knownBias": [
+    "No historical issue-time geometry revision timestamps are exposed."
+  ],
+  "knownMissingness": [
+    "No historical issue-time geometry revision timestamps are exposed."
+  ],
+  "licence": "ICNF-ATTRIBUTION",
+  "appropriateUse": "FINAL_ONLY",
+  "inappropriateUse": "Issue-time progression feature."
+}

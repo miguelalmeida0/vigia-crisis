@@ -1,0 +1,516 @@
+{
+  "schemaVersion": "vigia.forecast-quality-report.v1",
+  "generatedAt": "2026-08-24T14:36:33.903Z",
+  "sourceMaterial": {
+    "regions": [
+      "Portugal",
+      "Western US current shadow only"
+    ],
+    "seasons": [
+      "2024",
+      "2026 current shadow only"
+    ],
+    "officialIncidentCount": 35,
+    "forecastEligibleHistoricalCases": 0,
+    "forecastLabelCount": 0,
+    "thermalContextCandidates": 12677,
+    "qualification": "Current US state is not a historical label; Portugal incidents have no issue-time perimeter progression labels."
+  },
+  "corpus": {
+    "schemaVersion": "vigia.forecast-corpus-summary.v1",
+    "incidents": 0,
+    "positiveCases": 0,
+    "negativeControls": 0,
+    "excludedControls": 100,
+    "hardNegatives": 0,
+    "regions": [],
+    "seasons": [],
+    "splits": {},
+    "semanticHash": "forecast-corpus-summary:sha256:78bee4febce4143b9bdbaa786740f3e7f53ff5b4506cbaade9474b61548c9472"
+  },
+  "negativeControls": {
+    "valid": 0,
+    "excluded": 100,
+    "diagnosticCandidates": 100,
+    "reason": "Context locations lack a pinned physical observation opportunity and authoritative no-incident doctrine."
+  },
+  "leakage": {
+    "schemaVersion": "vigia.forecast-leakage-report.v1",
+    "passed": true,
+    "rowsInspected": 0,
+    "incidentsInspected": 0,
+    "upstreamObservationsInspected": 0,
+    "violations": [],
+    "reportHash": "forecast-leakage-report:sha256:5659c8cd34f350845db53e504c681526d773c3cbb08471667876c45bc5957837"
+  },
+  "forecastTasks": {
+    "existingFirePerimeterProgression": "IMPLEMENTED_RESEARCH_SHADOW_WITH_ABSTENTION",
+    "timeToExposure": "IMPLEMENTED_FROM_CONTOUR_INTERSECTION_UNCALIBRATED",
+    "largeFireGrowthProbability": "SCHEMA_ONLY_NOT_TRAINED",
+    "ignitionProbability": "RESEARCH_SCOPE_NOT_IMPLEMENTED"
+  },
+  "models": [
+    {
+      "modelId": "FARSITE_FLAMMAP_PHYSICAL_PORT",
+      "version": "1.0.0",
+      "promotionState": "EXPERIMENTAL",
+      "fingerprint": "forecast-model:sha256:09227e22d03a767b6a0a5a90a3672af220e6a846c72962f6488b55549e70d9e9"
+    },
+    {
+      "modelId": "NO_GROWTH_PERSISTENCE",
+      "version": "1.0.0",
+      "promotionState": "RESEARCH",
+      "fingerprint": "forecast-model:sha256:d512b2e17c48344437fec63050008972cd4333db63bce3067b91496f182a3681"
+    },
+    {
+      "modelId": "OBSERVATION_KINEMATIC_PROGRESSION",
+      "version": "1.0.0",
+      "promotionState": "RESEARCH",
+      "fingerprint": "forecast-model:sha256:e6e02c7f5034fd4462bc454df660e22d5f61499cc08714f49921b67bbee855b2"
+    },
+    {
+      "modelId": "RECENT_GROWTH_PERSISTENCE",
+      "version": "1.0.0",
+      "promotionState": "RESEARCH",
+      "fingerprint": "forecast-model:sha256:54d587a9fa433a81a889266a14d6061cfd2dc2141a678e3a3ca47d11eb3e69e1"
+    },
+    {
+      "modelId": "VIGIA_TRANSPARENT_SPREAD_ENSEMBLE",
+      "version": "1.0.0",
+      "promotionState": "RESEARCH",
+      "fingerprint": "forecast-model:sha256:6bc63a745a1643c3c0ee77572375433ef817b133a99e520d649d340501e76678"
+    },
+    {
+      "modelId": "WIND_ALIGNED_PROGRESSION",
+      "version": "1.0.0",
+      "promotionState": "RESEARCH",
+      "fingerprint": "forecast-model:sha256:aa7f0c26427809f4739ecb936d518c6da6ee1131c092c5b947917c06972973d2"
+    },
+    {
+      "modelId": "WINDNINJA_PHYSICAL_PORT",
+      "version": "1.0.0",
+      "promotionState": "EXPERIMENTAL",
+      "fingerprint": "forecast-model:sha256:b4d90dc2d18696021de64bd222981f980e7ebced4650b9f0a7f8e71b8d9609dd"
+    }
+  ],
+  "evaluation": {
+    "incidentSplitIsolation": false,
+    "upstreamObservationSplitIsolation": false,
+    "horizons": {},
+    "baselineWins": [],
+    "tailUnderpredictionRatioVsBestBaseline": null,
+    "meanAbsoluteCalibrationError": null,
+    "stratifiedComplete": false
+  },
+  "baselines": {
+    "implemented": [
+      "NO_GROWTH_PERSISTENCE",
+      "RECENT_GROWTH_PERSISTENCE",
+      "WIND_ALIGNED_PROGRESSION",
+      "OBSERVATION_KINEMATIC_PROGRESSION"
+    ],
+    "historicallyEvaluated": false
+  },
+  "physicalModel": {
+    "actuallyRan": false,
+    "doctor": {
+      "schemaVersion": "vigia.physical-runner-doctor.v1",
+      "models": [
+        {
+          "commandId": "farsite",
+          "modelId": "FARSITE_FLAMMAP_PHYSICAL_PORT",
+          "version": "1.0.0",
+          "status": "NOT_INSTALLED",
+          "executableConfigured": false,
+          "artifactHashConfigured": false,
+          "artifactVerified": false,
+          "executablePath": null
+        },
+        {
+          "commandId": "windninja",
+          "modelId": "WINDNINJA_PHYSICAL_PORT",
+          "version": "1.0.0",
+          "status": "NOT_INSTALLED",
+          "executableConfigured": false,
+          "artifactHashConfigured": false,
+          "artifactVerified": false,
+          "executablePath": null
+        }
+      ],
+      "memoryLimit": "HOST_NOT_ENFORCED",
+      "subprocessShell": false
+    }
+  },
+  "weatherEnsembles": {
+    "available": false,
+    "currentMemberCount": 1,
+    "qualification": "A deterministic control member is context, not an ensemble."
+  },
+  "fuelAndTerrain": {
+    "issueTimePackAvailable": false
+  },
+  "statisticalModel": {
+    "state": "NOT_TRAINED_DATA_GATE_FAILED"
+  },
+  "hybridEnsemble": {
+    "state": "IMPLEMENTED_NOT_CALIBRATED",
+    "current": null
+  },
+  "probabilisticOutput": {
+    "state": "WITHHELD",
+    "thresholds": [
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9
+    ],
+    "probabilityRasterGenerated": false
+  },
+  "calibration": {
+    "state": "UNAVAILABLE",
+    "sampleCount": 0
+  },
+  "spreadMetrics": {
+    "state": "UNMEASURED",
+    "horizons": {
+      "1": null,
+      "3": null,
+      "6": null,
+      "12": null,
+      "24": null
+    }
+  },
+  "tailRisk": {
+    "state": "UNMEASURED"
+  },
+  "impactMetrics": {
+    "state": "UNMEASURED"
+  },
+  "abstention": {
+    "latestState": "ABSTAINED",
+    "latestReasons": [
+      "CALIBRATION_UNAVAILABLE",
+      "FUEL_DATA_UNAVAILABLE",
+      "GEOMETRY_INVALID",
+      "INPUT_DATA_STALE",
+      "INSUFFICIENT_PERIMETER_HISTORY",
+      "OUTSIDE_MODEL_FUEL_DOMAIN",
+      "TERRAIN_DATA_UNAVAILABLE",
+      "WEATHER_ENSEMBLE_UNAVAILABLE"
+    ]
+  },
+  "assimilation": {
+    "state": "READY",
+    "revisionCount": 1,
+    "latestObservedAt": "2026-08-24T02:56:45.270Z",
+    "latestKnowledgeTime": "2026-08-24T11:57:57.284Z",
+    "observedProgression": null,
+    "physicalObservationCount": 6,
+    "contradictionCount": 0,
+    "assimilationHash": "forecast-assimilation-state:sha256:35aebefdaf1e5314d9614ba88c9e6b80a020ab230e27b0639c91d0fdad9629ef"
+  },
+  "scoring": {
+    "storedScoreCount": 0,
+    "currentUpdate": {
+      "schemaVersion": "vigia.forecast-scoring-update.v1",
+      "incidentId": "incident:2026-WAOWF-260420",
+      "observationId": "official-perimeter:2026-08-24T02:56:45.270Z",
+      "eligibleForecasts": 0,
+      "scores": [],
+      "excluded": []
+    }
+  },
+  "policyBoundary": {
+    "schemaVersion": "vigia.forecast-shadow-policy-input.v1",
+    "forecastId": "fire-forecast:sha256:58eedf10afa379c9f02d9857f5e3ffe26a138be25a091904633936f5034063bd",
+    "incidentId": "incident:2026-WAOWF-260420",
+    "epistemicType": "FORECAST",
+    "evidenceEligible": false,
+    "authorityEligible": false,
+    "forecastState": "ABSTAINED",
+    "qualityState": "UNAVAILABLE",
+    "possibleExposureCount": 0,
+    "consequentialExecution": "DISABLED",
+    "allowedActions": [
+      "RECORD_ABSTENTION",
+      "REQUEST_MISSING_INPUTS"
+    ],
+    "blockedActions": [],
+    "policyInputHash": "forecast-shadow-policy-input:sha256:1e11a7467ab9e55c1b4245eb6dec3bbc959d591be565591687bbc8b52e797f96"
+  },
+  "ablations": {
+    "schemaVersion": "vigia.forecast-ablation-report.v1",
+    "complete": false,
+    "entries": {
+      "FULL": null,
+      "WITHOUT_WEATHER": null,
+      "WITHOUT_TERRAIN": null,
+      "WITHOUT_FUEL": null,
+      "WITHOUT_OBSERVED_PROGRESSION": null
+    },
+    "ablationHash": "forecast-ablation-report:sha256:395febf0c126d1b20230f9b25d831de69e62c2c6172fe90dc0dbeb460cd48286"
+  },
+  "flagshipHistoricalScenario": {
+    "state": "BLOCKED",
+    "candidate": {
+      "incidentId": "PT-2024-ICNF-59214",
+      "burnedAreaHa": 19996.02,
+      "municipality": "Vila Nova de Paiva",
+      "district": "Viseu",
+      "alertAt": "2024-09-16T17:18:00.000Z"
+    },
+    "selectionRationale": "Largest retained 2024 Portugal official incident; not a trivial cherry-pick.",
+    "available": [
+      "official incident report",
+      "final burned area",
+      "archival thermal matches"
+    ],
+    "missing": [
+      "official issue-time initial perimeter series",
+      "issue-time weather archive",
+      "future perimeter labels",
+      "fuel and terrain pack",
+      "asset outcome labels"
+    ],
+    "forecastIssued": false
+  },
+  "shadow": {
+    "runId": "1188045d-29e0-4d13-86cf-4474a5b0ea24",
+    "state": "COMPLETED",
+    "forecastState": "ABSTAINED",
+    "replay": {
+      "schemaVersion": "vigia.forecast-replay-verification.v1",
+      "valid": true,
+      "identical": true,
+      "reasons": [],
+      "forecastId": "fire-forecast:sha256:58eedf10afa379c9f02d9857f5e3ffe26a138be25a091904633936f5034063bd",
+      "verificationHash": "forecast-replay-verification:sha256:789b64a7a3c7a57181831bd6c7b60c07f8519b19f954303a3b568548db0b6d42"
+    },
+    "externalActionsExecuted": 0
+  },
+  "dataQualityLimitations": [
+    "No historical issue-time spread labels.",
+    "No valid negative opportunity controls.",
+    "Current state cannot substitute for a historical target.",
+    "No physical-model executable or verified artifact.",
+    "No issue-time fuel/terrain pack."
+  ],
+  "promotion": {
+    "schemaVersion": "vigia.forecast-promotion-decision.v1",
+    "policy": {
+      "id": "fire-spread-shadow-v1",
+      "version": "1.0.0",
+      "minimumRegions": 2,
+      "minimumSeasons": 2,
+      "minimumNegativeControls": 20,
+      "requiredHorizonsHours": [
+        1,
+        3,
+        6,
+        12,
+        24
+      ],
+      "maximumCalibrationError": 0.1,
+      "maximumTailUnderpredictionRatioVsBestBaseline": 1.05,
+      "requiredBaselineWins": [
+        "NO_GROWTH_PERSISTENCE",
+        "RECENT_GROWTH_PERSISTENCE"
+      ]
+    },
+    "decision": "DO_NOT_ADVANCE",
+    "gates": [
+      {
+        "id": "ZERO_FUTURE_INFORMATION_LEAKAGE",
+        "pass": true,
+        "value": 0
+      },
+      {
+        "id": "NEGATIVE_CONTROLS_PRESENT",
+        "pass": false,
+        "value": 0,
+        "required": 20
+      },
+      {
+        "id": "TWO_REGIONS_PRESENT",
+        "pass": false,
+        "value": 0,
+        "required": 2
+      },
+      {
+        "id": "TWO_SEASONS_PRESENT",
+        "pass": false,
+        "value": 0,
+        "required": 2
+      },
+      {
+        "id": "INCIDENT_SPLIT_ISOLATION",
+        "pass": false,
+        "value": false
+      },
+      {
+        "id": "UPSTREAM_OBSERVATION_SPLIT_ISOLATION",
+        "pass": false,
+        "value": false
+      },
+      {
+        "id": "ALL_HORIZONS_EVALUATED",
+        "pass": false,
+        "value": {
+          "1": 0,
+          "3": 0,
+          "6": 0,
+          "12": 0,
+          "24": 0
+        }
+      },
+      {
+        "id": "BEATS_STRONG_BASELINES",
+        "pass": false,
+        "value": []
+      },
+      {
+        "id": "EXTREME_UNDERPREDICTION_NOT_WORSE",
+        "pass": false,
+        "value": null
+      },
+      {
+        "id": "PROBABILITY_CALIBRATED",
+        "pass": false,
+        "value": null
+      },
+      {
+        "id": "SOURCE_ABLATION_COMPLETE",
+        "pass": false,
+        "value": false
+      },
+      {
+        "id": "STRATIFIED_PERFORMANCE_COMPLETE",
+        "pass": false,
+        "value": false
+      },
+      {
+        "id": "SHADOW_REPLAY_DETERMINISTIC",
+        "pass": true,
+        "value": {
+          "valid": true,
+          "identical": true
+        }
+      }
+    ],
+    "failedGates": [
+      "NEGATIVE_CONTROLS_PRESENT",
+      "TWO_REGIONS_PRESENT",
+      "TWO_SEASONS_PRESENT",
+      "INCIDENT_SPLIT_ISOLATION",
+      "UPSTREAM_OBSERVATION_SPLIT_ISOLATION",
+      "ALL_HORIZONS_EVALUATED",
+      "BEATS_STRONG_BASELINES",
+      "EXTREME_UNDERPREDICTION_NOT_WORSE",
+      "PROBABILITY_CALIBRATED",
+      "SOURCE_ABLATION_COMPLETE",
+      "STRATIFIED_PERFORMANCE_COMPLETE"
+    ],
+    "shortestCorrectivePath": [
+      {
+        "gate": "NEGATIVE_CONTROLS_PRESENT",
+        "current": 0,
+        "required": 20
+      },
+      {
+        "gate": "TWO_REGIONS_PRESENT",
+        "current": 0,
+        "required": 2
+      },
+      {
+        "gate": "TWO_SEASONS_PRESENT",
+        "current": 0,
+        "required": 2
+      },
+      {
+        "gate": "INCIDENT_SPLIT_ISOLATION",
+        "current": false,
+        "required": true
+      },
+      {
+        "gate": "UPSTREAM_OBSERVATION_SPLIT_ISOLATION",
+        "current": false,
+        "required": true
+      },
+      {
+        "gate": "ALL_HORIZONS_EVALUATED",
+        "current": {
+          "1": 0,
+          "3": 0,
+          "6": 0,
+          "12": 0,
+          "24": 0
+        },
+        "required": true
+      },
+      {
+        "gate": "BEATS_STRONG_BASELINES",
+        "current": [],
+        "required": true
+      },
+      {
+        "gate": "EXTREME_UNDERPREDICTION_NOT_WORSE",
+        "current": null,
+        "required": true
+      },
+      {
+        "gate": "PROBABILITY_CALIBRATED",
+        "current": null,
+        "required": true
+      },
+      {
+        "gate": "SOURCE_ABLATION_COMPLETE",
+        "current": false,
+        "required": true
+      },
+      {
+        "gate": "STRATIFIED_PERFORMANCE_COMPLETE",
+        "current": false,
+        "required": true
+      }
+    ],
+    "decisionHash": "forecast-promotion-decision:sha256:0be58c6b81667dc07955c95b5ee25f9286d270d13d18716d22551220a0b8d0c2"
+  },
+  "doctor": {
+    "physicalRunner": {
+      "schemaVersion": "vigia.physical-runner-doctor.v1",
+      "models": [
+        {
+          "commandId": "farsite",
+          "modelId": "FARSITE_FLAMMAP_PHYSICAL_PORT",
+          "version": "1.0.0",
+          "status": "NOT_INSTALLED",
+          "executableConfigured": false,
+          "artifactHashConfigured": false,
+          "artifactVerified": false,
+          "executablePath": null
+        },
+        {
+          "commandId": "windninja",
+          "modelId": "WINDNINJA_PHYSICAL_PORT",
+          "version": "1.0.0",
+          "status": "NOT_INSTALLED",
+          "executableConfigured": false,
+          "artifactHashConfigured": false,
+          "artifactVerified": false,
+          "executablePath": null
+        }
+      ],
+      "memoryLimit": "HOST_NOT_ENFORCED",
+      "subprocessShell": false
+    },
+    "store": {
+      "schemaVersion": "vigia.forecast-store.v1",
+      "forecastCount": 4,
+      "receiptCount": 4,
+      "eventCount": 4,
+      "reportCount": 4,
+      "scoreCount": 0
+    }
+  }
+}

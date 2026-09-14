@@ -1,0 +1,11 @@
+import {readFile} from 'node:fs/promises';
+import pg from 'pg';
+import {resolveLocalDatabaseUrl} from './local_database_secret.mjs';
+import {WorldKnowledgeStore} from '../apps/api/src/modules/intelligence/world-knowledge-store.mjs';
+const command=process.argv[2]??'facilities';
+if(command==='facilities'){const report=JSON.parse(await readFile('data/reference/facility-intelligence/acceleration/pilot-review.json','utf8'));console.log(JSON.stringify({...report.metrics,resolution:report.pilot.reduce((counts,row)=>(counts[row.entity.resolutionState]=(counts[row.entity.resolutionState]??0)+1,counts),{}),incorrect: "Not independently established"},null,2));}
+else if(command==='ai'){console.log(JSON.stringify({directCli:JSON.parse(await readFile('docs/handoffs/acceleration/qwen-cli.json','utf8')),normalRuntime:JSON.parse(await readFile('docs/handoffs/acceleration/no-ai-runtime.json','utf8'))},null,2));}
+else if(command==='performance'){console.log(JSON.stringify({map:JSON.parse(await readFile('docs/handoffs/acceleration/map-performance.json','utf8')),knowledge:await Promise.all(['before','after'].map(async phase=>({phase,...JSON.parse(await readFile('docs/handoffs/acceleration/'+phase+'-knowledge-performance.json','utf8'))})))},null,2));}
+else if(['sources','gaps','relationships'].includes(command)){
+ const pool=new pg.Pool({connectionString:await resolveLocalDatabaseUrl(),max:1});try{const s=await new WorldKnowledgeStore({pool}).read(),rows=command==='sources'?s.sources.map(({url,provider,authority,municipality,category,adapter,pollIntervalMs,status,lastFetch,contentHash,nextFetch,lastError})=>({url,provider,authority,municipality,category,adapter,pollIntervalMs,status,lastFetch,contentHash,nextFetch,lastError})):command==='gaps'?s.jobs.filter(j=>j.type==='ENRICH_FACILITY').map(({subject,state,priority,payload,lastAttempt,resolutionResult,nextEligibleAttempt,attemptedSources,error})=>({subject,state,priority,missing:payload?.missing,incidentId:payload?.incidentId,distanceKm:payload?.distanceKm,lastAttempt,resolutionResult,nextEligibleAttempt,attemptedSources,error})):s.relations.filter(r=>r.state==='CURRENT').reduce((a,r)=>(a[r.kind]=(a[r.kind]??0)+1,a),{});console.log(JSON.stringify(rows,null,2));}finally{await pool.end();}
+}else throw new Error('Use facilities, performance, sources, gaps, relationships or ai');

@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "vigia.sub-75-worldclass-report.v2",
+  "generatedAt": "2026-08-25T12:11:07.141Z",
+  "scoringRule": "FINAL_DEFENSIBLE_SCORE=min(ENGINEERING_READINESS, REAL_WORLD_EVIDENCE); weakest critical sub-gate caps the category.",
+  "categories": [
+    {
+      "category": "scientific corpus",
+      "baseline": 3.5,
+      "engineeringReadiness": 7,
+      "realWorldEvidence": 4.5,
+      "finalDefensibleScore": 4.5,
+      "exitGateEvidence": "100 forecast-eligible incidents, 100 valid negatives, 25 hard negatives, valid near-term horizons",
+      "remainingBlockerClass": "CREDENTIAL_REQUIRED",
+      "remainingBlocker": "12322 incidents discovered; 0 eligible, 0 valid negatives, 0 near-term labels.",
+      "evidenceFingerprint": "canadian-evidence-catalogue:sha256:9620a31eb5da254304aa824019042986fc356be059c3f045a88df4982b829f5d"
+    },
+    {
+      "category": "predictive validity",
+      "baseline": 2,
+      "engineeringReadiness": 8,
+      "realWorldEvidence": 2,
+      "finalDefensibleScore": 2,
+      "exitGateEvidence": "Preregistered ladder on held-out scoreable rows",
+      "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+      "remainingBlocker": "Training/evaluation remains blocked because legitimate 1h/3h labels are not yet accumulated.",
+      "evidenceFingerprint": "near-term-label-factory-report:sha256:eb932beb71af7d00a470c5e1bf01a554a0418c2b7ed88fab05f22c57fb39a844"
+    },
+    {
+      "category": "decision learning",
+      "baseline": 0,
+      "engineeringReadiness": 8,
+      "realWorldEvidence": 7.5,
+      "finalDefensibleScore": 7.5,
+      "exitGateEvidence": "At least 25 real paired acquisition and decision outcomes",
+      "remainingBlockerClass": null,
+      "remainingBlocker": "100 historical shadow episodes and 25 realized information-value outcomes.",
+      "evidenceFingerprint": "historical-shadow-decision-memory:sha256:1928b92c68ff9db8c74f03c015e2030226cd695ec4e7524673fc9bf00a29d05f"
+    },
+    {
+      "category": "prospective history",
+      "baseline": 1,
+      "engineeringReadiness": 8,
+      "realWorldEvidence": 4.5,
+      "finalDefensibleScore": 4.5,
+      "exitGateEvidence": "Seven days, 25 incidents, 3 source classes, 1,000 immutable snapshots",
+      "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+      "remainingBlocker": "227 snapshots across 108 incidents and 3 source classes; seven days/1,000 not yet reached.",
+      "evidenceFingerprint": "public-evidence-prospective-campaign:sha256:68718c9cef747afd3f079d6a0407f29f2d7311d834ad29c5081e5f353e961624"
+    },
+    {
+      "category": "multi-region resilience",
+      "baseline": 0,
+      "engineeringReadiness": 7.5,
+      "realWorldEvidence": 2.5,
+      "finalDefensibleScore": 2.5,
+      "exitGateEvidence": "100 failovers on an authorized real multi-region cloud deployment",
+      "remainingBlockerClass": "CREDENTIAL_REQUIRED",
+      "remainingBlocker": "100 local three-failure-domain cycles pass; no repository-scoped cloud credential was discovered.",
+      "evidenceFingerprint": "local-ha-certification:sha256:e1ed197528f1319e9df6d2acd734eb85b5eeeb5a70279f36c6f684a787bd8e8d"
+    },
+    {
+      "category": "security compartmentation",
+      "baseline": 1.5,
+      "engineeringReadiness": 7,
+      "realWorldEvidence": 4.5,
+      "finalDefensibleScore": 4.5,
+      "exitGateEvidence": "Merged RLS migration, live cloud KMS/HSM, independent adversarial assessment",
+      "remainingBlockerClass": "CROSS_BRANCH_INTEGRATION_REQUIRED",
+      "remainingBlocker": "SoftHSM lifecycle passes; migration 018/019 integration, live cloud KMS, and independent assessment remain.",
+      "evidenceFingerprint": "local-softhsm-certification:sha256:42203137b051b4e16abd999086855453bd3bb5b03ec32842bbc98b0cfa920f9e"
+    },
+    {
+      "category": "release cleanliness",
+      "baseline": 5,
+      "engineeringReadiness": 7,
+      "realWorldEvidence": 5,
+      "finalDefensibleScore": 5,
+      "exitGateEvidence": "One merged migration DAG, signed image digests, canary/rollback receipts",
+      "remainingBlockerClass": "CROSS_BRANCH_INTEGRATION_REQUIRED",
+      "remainingBlocker": "Migration 018 and the protected frontend release must be integrated without changing this branch; image digests/deployment receipts are absent.",
+      "evidenceFingerprint": "clean-room-certification:sha256:6c5ec6fc81a3133814a9e68dad7c1e52b9194609195a63235ceb55534f86f28a"
+    },
+    {
+      "category": "doctrine coverage",
+      "baseline": 2,
+      "engineeringReadiness": 9,
+      "realWorldEvidence": 6.5,
+      "finalDefensibleScore": 6.5,
+      "exitGateEvidence": "100-state engineering suite plus practitioner/agency operational review",
+      "remainingBlockerClass": "REAL_HUMAN_REQUIRED",
+      "remainingBlocker": "Engineering doctrine coverage passes; high-consequence operational review requires real practitioners.",
+      "evidenceFingerprint": null
+    },
+    {
+      "category": "Data Foundry efficiency",
+      "baseline": 4.5,
+      "engineeringReadiness": 9,
+      "realWorldEvidence": 6.5,
+      "finalDefensibleScore": 6.5,
+      "exitGateEvidence": "<512 MiB representative build plus sustained production history",
+      "remainingBlockerClass": "TIME_ACCUMULATION_REQUIRED",
+      "remainingBlocker": "Measured retained workload passes; sustained production-scale history must accumulate.",
+      "evidenceFingerprint": null
+    },
+    {
+      "category": "operator validation",
+      "baseline": 0,
+      "engineeringReadiness": 8,
+      "realWorldEvidence": 0,
+      "finalDefensibleScore": 0,
+      "exitGateEvidence": "10 real sessions, 5 practitioners, 3 perspectives, all thresholds",
+      "remainingBlockerClass": "REAL_HUMAN_REQUIRED",
+      "remainingBlocker": "Study kit and runner ready; 0 real sessions recorded.",
+      "evidenceFingerprint": "operator-evaluation-package:sha256:161c80b45b3de7793955085a24dfdf9a38b8564f16b5675fe539f01381c14bc2"
+    },
+    {
+      "category": "agency integration",
+      "baseline": 2,
+      "engineeringReadiness": 8,
+      "realWorldEvidence": 7.5,
+      "finalDefensibleScore": 7.5,
+      "exitGateEvidence": "Real official CAP ingestion, lifecycle, Twin effect, outage recovery, and replay",
+      "remainingBlockerClass": null,
+      "remainingBlocker": "287 NWS/ECCC messages, 151 reference chains, 12 cancellations, replay verified.",
+      "evidenceFingerprint": "government-cap-integration:sha256:3ff466c0d0a14c213d41106be2b9f4fe47be3cc3d7f578c85998bffed8edf751"
+    },
+    {
+      "category": "independent assurance",
+      "baseline": 0,
+      "engineeringReadiness": 8,
+      "realWorldEvidence": 2.5,
+      "finalDefensibleScore": 2.5,
+      "exitGateEvidence": "Different reviewer reproduces the bundle against signed image digests",
+      "remainingBlockerClass": "REAL_HUMAN_REQUIRED",
+      "remainingBlocker": "Immutable reviewer bundle exists; different-agent attestation and image digests are absent.",
+      "evidenceFingerprint": "clean-room-certification:sha256:6c5ec6fc81a3133814a9e68dad7c1e52b9194609195a63235ceb55534f86f28a"
+    }
+  ],
+  "movements": [
+    {
+      "category": "scientific corpus",
+      "baseline": 3.5,
+      "revised": 4.5,
+      "delta": 1
+    },
+    {
+      "category": "predictive validity",
+      "baseline": 2,
+      "revised": 2,
+      "delta": 0
+    },
+    {
+      "category": "decision learning",
+      "baseline": 0,
+      "revised": 7.5,
+      "delta": 7.5
+    },
+    {
+      "category": "prospective history",
+      "baseline": 1,
+      "revised": 4.5,
+      "delta": 3.5
+    },
+    {
+      "category": "multi-region resilience",
+      "baseline": 0,
+      "revised": 2.5,
+      "delta": 2.5
+    },
+    {
+      "category": "security compartmentation",
+      "baseline": 1.5,
+      "revised": 4.5,
+      "delta": 3
+    },
+    {
+      "category": "release cleanliness",
+      "baseline": 5,
+      "revised": 5,
+      "delta": 0
+    },
+    {
+      "category": "doctrine coverage",
+      "baseline": 2,
+      "revised": 6.5,
+      "delta": 4.5
+    },
+    {
+      "category": "Data Foundry efficiency",
+      "baseline": 4.5,
+      "revised": 6.5,
+      "delta": 2
+    },
+    {
+      "category": "operator validation",
+      "baseline": 0,
+      "revised": 0,
+      "delta": 0
+    },
+    {
+      "category": "agency integration",
+      "baseline": 2,
+      "revised": 7.5,
+      "delta": 5.5
+    },
+    {
+      "category": "independent assurance",
+      "baseline": 0,
+      "revised": 2.5,
+      "delta": 2.5
+    }
+  ],
+  "passed": false,
+  "decision": "WORLD_CLASS_BACKEND_GATE_NOT_PASSED",
+  "fingerprint": "sub-75-scorecard:sha256:bad95ed08204a3ef5e210abf3adb093fefeaab8fe1b03769106473a9d59b31ec"
+}

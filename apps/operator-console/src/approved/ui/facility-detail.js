@@ -1,0 +1,46 @@
+import {e,badge} from './html.js';
+import {DetailRows,TechnicalDetails} from './measurement-panel.js';
+import {measured} from '../data/field.js';
+
+const types={SHELTER:'Shelter',HOSPITAL:'Hospital',FIRE_STATION:'Fire station',POLICE:'Police station',PUBLIC_INSTITUTION:'Public institution',WATER_POINT:'Water point',CIVIL_PROTECTION:'Civil protection',AIR_SUPPORT_BASE:'Air support base',EMS_BASE:'Medical base'};
+const canonicalTypes={hospital:'Hospital',health_center:'Health centre',fire_station:'Fire station',police_station:'Police station',public_prosecutor:'Public prosecution service',civil_protection:'Civil protection',official_wildfire_refuge:'Official wildfire refuge',emergency_assembly_point:'Emergency assembly point',temporary_reception_center:'Temporary reception centre',shelter_generic:'Shelter',school:'School',municipal_building:'Municipal building',water_point:'Water point',other_public_facility:'Public institution'};
+const currentStates=new Set(['LIVE_CONFIRMED','DISPATCH_CONFIRMED','PARTNER_REPORTED','FIELD_REPORTED']);
+export const facilityTypeLabel=f=>canonicalTypes[f.canonicalType]??types[f.kind]??'Facility';
+export const facilityTitle=f=>f.name&&!/^Mapped\s/i.test(f.name)?`${canonicalTypes[f.canonicalType]??types[f.kind]??'Facility'} · ${f.name}`:canonicalTypes[f.canonicalType]??types[f.kind]??'Facility';
+export const humanDistance=km=>!Number.isFinite(km)?'Distance unavailable':km<1?`${Math.round(km*1000)} m`:`${Number(km.toFixed(2))} km`;
+export function FacilityDetail(f) {
+ if(!f)return '<p>Select a facility to see its details.</p>';
+ const knowledge=f.canonicalIntelligence,showCapacity=f.presentation?.showCapacity===true,showOpening=f.presentation?.showPublicAccess===true||f.presentation?.showEmergencyShelterStatus===true,showContact=f.presentation?.showPublicContact===true,official=knowledge?.provenance?.canonicalName?.find(p=>['OWNER','GOVERNMENT','MUNICIPAL'].includes(p.authority));
+ const website=/^https?:\/\//.test(f.contact?.website??'')?f.contact.website:null;
+ const capabilities=knowledge?.capabilities??{},designation=knowledge?.designation??{},activation=knowledge?.activation??{};
+ const relevantFacts=DetailRows([
+  ['Operator / authority',knowledge?.operator??knowledge?.authority],
+  ['Institution type',knowledge?.subtype],
+  ...(f.presentation?.showEmergencyDepartment&&typeof capabilities.emergencyDepartment==='boolean'?[['Emergency department',capabilities.emergencyDepartment?'Verified by the published source':'Not provided by this facility']]:[]),
+  ...(f.presentation?.showOfficialDesignation?[
+   ['Official designation',designation.kind?.replaceAll('_',' ')],['Designating authority',designation.authority],
+   ['Historical designation',designation.historicalKind?.replaceAll('_',' ')],
+   ['Current activation',activation.state?.replaceAll('_',' ')],['Previously reported activation',activation.lastReported],
+   ['Historical report date',activation.observedAt],
+   ['Activation valid from',knowledge?.provenance?.['activation.state']?.[0]?.validFrom],
+   ['Activation valid until',knowledge?.provenance?.['activation.state']?.[0]?.validUntil],
+  ]:[]),
+ ]);
+ const fieldLabels={canonicalName:'Name',canonicalType:'Facility type','address.street':'Street address','address.postcode':'Postal code','address.locality':'Locality','contact.phone':'Phone','contact.website':'Website','location.geometry':'Location','location.locationQuality':'Location quality'};
+ const fieldSources=knowledge?Object.entries(knowledge.provenance).filter(([,sources])=>sources.length).map(([field,sources])=>TechnicalDetails(fieldLabels[field]??field,sources.map(source=>DetailRows([['Provider',source.provider],['Source page',source.url],['Retrieved',measured(source.retrievedAt)],['Supporting passage',source.sourceText],['Valid from',source.validFrom],['Valid until',source.validUntil]])).join(''))).join(''):'';
+ const r=f.reachability,routed=r?.state==='ROUTED'&&Number.isFinite(r.travelTimeMinutes)&&Number.isFinite(r.routeDistanceKm),capacity=f.dynamicCapacity,current=currentStates.has(capacity?.state),fields=current?capacity.fields??{}:{},accepting=fields.acceptingPeople??fields.acceptingPatients;
+ const status=typeof accepting==='boolean'?(accepting?'Receiving '+(f.kind==='HOSPITAL'?'patients':'people'):'Not receiving '+(f.kind==='HOSPITAL'?'patients':'people')):fields.emergencyDepartmentStatus==='CLOSED'?'Emergency department closed':'Opening status not confirmed';
+ const spaces=fields.spacesAvailable??fields.bedsAvailable,capacityLabel=Number.isFinite(spaces)?`${spaces} ${f.kind==='HOSPITAL'?'beds':'places'} reported available`:f.kind==='SHELTER'?'Available places not confirmed':'Capacity not confirmed';
+ const locality=[...new Set([f.locality,f.municipality,f.district].filter(Boolean))].join(' · '),address=f.addressPrecision==='LOCALITY'?null:f.address,phone=f.contact?.phone,phoneHref=phone?String(phone).replace(/[^+\d*#;,]/g,''):'';
+ const point=f.coordinate,hasPoint=Array.isArray(point)&&point.length===2&&point.every(Number.isFinite)&&Math.abs(point[0])<=180&&Math.abs(point[1])<=90,map=hasPoint?`https://www.openstreetmap.org/?mlat=${point[1]}&mlon=${point[0]}#map=17/${point[1]}/${point[0]}`:null;
+ const technical=DetailRows([['Map source',f.provenance?.provider],['Map updated',measured(f.freshness?.retrievedAt??f.provenance?.retrievedAt)],['Coordinates · longitude, latitude',point?.join(', ')],['Source record',f.provenance?.sourceRecordId??f.id],['Address precision',f.addressPrecision],['Route direction',routed?'Facility to incident':null],['Route calculated',routed?measured(r.checkedAt):null],['Route source',routed?r.source?.provider:null],...(showOpening||showCapacity?[['Availability report',capacity?.state],['Availability reported',capacity?.lastUpdatedAt],['Availability source',capacity?.source?.name],['Report reference',capacity?.source?.reference],['Capacity fields',capacity?.fields],['Report limitation',capacity?.reason]]:[])]);
+ return `<div class="facility-sheet" data-vqa="facility-sheet" data-canonical-id="${e(f.canonicalId??knowledge?.id??f.id)}"><div class="facility-place"><p>${e(address||'Exact street address is not available.')}</p>${locality&&locality!==address?`<strong>${e(locality)}</strong>`:''}</div>
+ <dl class="facility-facts"><div class="facility-near"><dt>Straight-line distance from the reported incident point</dt><dd>${e(humanDistance(f.distanceKm))}${Number.isFinite(f.distanceKm)?' <span>away</span>':''}</dd></div>${routed?`<div><dt>Estimated drive to the incident</dt><dd>${e(r.travelTimeMinutes)} <span>min</span></dd></div><div><dt>Road distance</dt><dd>${e(r.routeDistanceKm)} <span>km</span></dd></div>`:'<div><dt>Estimated drive</dt><dd class="facility-unconfirmed">Not available</dd></div>'}</dl>
+ ${routed?'<p class="facility-route-note">From this facility to the incident. Traffic and road closures are not included.</p>':''}
+ ${showOpening||showCapacity?`<section class="facility-use"><h3>Can I use this place?</h3><ul>${showOpening?`<li><span>Status</span>${badge(status,typeof accepting==='boolean'?(accepting?'green':'red'):'amber')}</li>`:''}${showCapacity?`<li><span>${f.kind==='SHELTER'?'Places':'Capacity'}</span>${badge(capacityLabel,Number.isFinite(spaces)?spaces>0?'green':'amber':'amber')}</li>`:''}</ul>${current?`<small>Reported ${e(measured(capacity.lastUpdatedAt))} · ${e(capacity.source?.name)}</small>`:''}</section>`:''}
+ ${relevantFacts}${f.presentation?.showOfficialDesignation&&!activation.state?'<p>Designation or a past activation does not establish that this place is receiving people now.</p>':''}
+ ${official?`<p>Official facility information · ${e(official.provider)}</p>`:''}
+ ${showContact?`<section class="facility-next"><h3>${showOpening?'Before you travel':'Contact this institution'}</h3><p>${phone?'Call to confirm access and availability.':'Confirm access and availability with the facility or local response team.'}</p><div class="facility-actions">${phoneHref?`<a class="btn primary" href="tel:${e(phoneHref)}">Call ${e(phone)}</a>`:'<span class="facility-contact-missing">Phone number not available</span>'}${map?`<a class="btn" href="${e(map)}" target="_blank" rel="noopener noreferrer">View location on map</a>`:''}</div><small>A map location is not confirmation that the facility is open or reachable.</small></section>`:map?`<a class="btn" href="${e(map)}" target="_blank" rel="noopener noreferrer">View location on map</a>`:""}
+ ${website?`<a class="btn" href="${e(website)}" target="_blank" rel="noopener noreferrer">${official?'Official website':'Facility website'}</a>`:''}
+ ${TechnicalDetails('Source and location details',(knowledge?TechnicalDetails('Resolved fields and source conflicts',DetailRows([['Canonical identity',knowledge.id],['Resolution',knowledge.resolutionState],['Location quality',knowledge.location?.locationQuality]])+fieldSources+knowledge.conflicts.map(c=>TechnicalDetails(`Source disagreement · ${fieldLabels[c.field]??c.field}`,DetailRows(c.values.map(v=>[v.source.provider,typeof v.value==='string'?v.value:JSON.stringify(v.value)])))).join('')):'')+technical+(showCapacity?'<p>Mapped presence does not confirm staffing or capacity. Road estimates also exclude emergency-vehicle restrictions.</p>':'<p>Published identity and location do not confirm current public access.</p>'))}</div>`;
+}

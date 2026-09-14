@@ -1,0 +1,13 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const directory='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vi';
+const limits={cold:2500,'detail-to-fire':1000,'fire-to-response':1000,'cached-revisit':400,'incident-switch':1500,overview:2500,national:2500};
+const percentile=(values,p)=>{const rows=values.filter(Number.isFinite).sort((a,b)=>a-b);return rows.length?Math.round(rows[Math.ceil(rows.length*p)-1]):null;};
+const report={capturedAt:new Date().toISOString(),lanes:{},definition:'Same 20-context harness in each lane; fresh browser HTTP cache for each context, retained renderer for route transitions. Timeouts are failures, never zero. p95 is reported among measured useful frames; any missing frame fails the gate.'};
+for(const lane of ['before','after']){let raw;try{raw=JSON.parse(await readFile(directory+'/'+lane+'-map.json','utf8'));}catch{continue;}
+ const cases=Object.entries(limits).map(([name,limit])=>{const rows=raw.results.filter(r=>r.case===name),measured=rows.map(r=>r.firstUsefulFrameMs),failed=rows.filter(r=>!Number.isFinite(r.firstUsefulFrameMs)).length,navigationFailures=name==='cold'?(raw.interruptedAttempts?.length??0):0,projectionFailures=rows.filter(r=>!Number.isFinite(r.interactiveMs)).length,p95=percentile(measured,.95);
+ return {case:name,n:rows.length,failed,navigationFailures,projectionFailures,medianMs:percentile(measured,.5),p95Ms:p95,limitMs:limit,passed:rows.length>=20&&!failed&&!projectionFailures&&!navigationFailures&&p95<=limit,interactiveP95Ms:percentile(rows.map(r=>r.interactiveMs),.95),requestsP95:percentile(rows.map(r=>r.requests),.95),bytesP95:percentile(rows.map(r=>r.bytes),.95),mainThreadBlockingP95Ms:percentile(rows.map(r=>(r.mainThread??[]).reduce((n,t)=>n+t.duration,0)),.95)};});
+ const families={};for(const r of raw.results)for(const item of r.waterfall??[]){const group=item.url.includes('/basemap/imagery/')?'imagery':item.url.includes('/basemap/labels/')?'labels':item.url.includes('/backend/')?'api':item.url.endsWith('.js')||item.url.includes('.mjs')?'javascript':'other';(families[group]??=[]).push(item);}
+ report.lanes[lane]={browser:raw.browser,viewport:raw.viewport,cache:raw.cache,cases,passed:cases.every(r=>r.passed)&&!raw.errors.length,pageErrors:raw.errors,failedRequests:raw.failedRequests.length,waterfall:Object.fromEntries(Object.entries(families).map(([k,v])=>[k,{requests:v.length,p95Ms:percentile(v.map(x=>x.duration),.95),ttfbP95Ms:percentile(v.map(x=>x.ttfb),.95),downloadP95Ms:percentile(v.map(x=>x.download),.95)}]))};
+}
+await writeFile('docs/handoffs/mega-vi/map-performance.json',JSON.stringify(report,null,2));
+console.log(JSON.stringify(report,null,2));

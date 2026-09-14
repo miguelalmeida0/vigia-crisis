@@ -1,0 +1,23 @@
+{
+  "schemaVersion": "vigia.second-region-access-adjudication.v1",
+  "adjudicatedAt": "2026-08-25T00:00:00.000Z",
+  "regions": {
+    "canada": {
+      "historicalQualification": "PARTNER_REQUIRED",
+      "prospectiveQualification": "CONDITIONALLY_QUALIFIED_SHADOW_ONLY",
+      "captureState": "BLOCKED_RIGHTS_ACCEPTANCE_REQUIRED",
+      "publicationTime": "NOT_EXPOSED_BY_CURRENT_FIRE_M3_PRODUCT",
+      "products": ["public:m3_polygons_current", "public:cwfif_national_activefires"],
+      "rawVault": "REQUIRED",
+      "consequentialActions": "DISABLED"
+    },
+    "portugal": {
+      "historicalQualification": "FINAL_ONLY",
+      "prospectiveQualification": "PARTNER_REQUIRED",
+      "captureState": "BLOCKED_RIGHTS_AND_PUBLICATION_TIMESTAMP_REVIEW_REQUIRED",
+      "officialFinalReference": "https://sigservices.icnf.pt/server/rest/services/BDG/areas_ardidas/MapServer",
+      "scraping": "PROHIBITED",
+      "consequentialActions": "DISABLED"
+    }
+  }
+}

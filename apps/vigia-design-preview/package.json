@@ -1,0 +1,17 @@
+{
+  "name": "vigia-design-preview",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Vigia approved-reference frontend; isolated demonstration, no live emergency data.",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

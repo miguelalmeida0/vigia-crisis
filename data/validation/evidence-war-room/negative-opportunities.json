@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "vigia.public-evidence-negative-report.v1",
+  "generatedAt": "2026-08-25T12:09:19.701Z",
+  "candidateControlsInspected": 100,
+  "validNegatives": 0,
+  "hardNegatives": 0,
+  "targets": {
+    "first": 25,
+    "full": 100,
+    "hard": 25
+  },
+  "checks": {
+    "first": false,
+    "full": false,
+    "hard": false
+  },
+  "exclusionDoctrine": [
+    "observation opportunity required",
+    "provider health required",
+    "cloud/coverage quality required",
+    "no physical wildfire required",
+    "no official wildfire required",
+    "persistent thermal anomaly excluded",
+    "prescribed/agricultural ambiguity resolved",
+    "rights and knowledge time required"
+  ],
+  "searchedEvidence": [
+    {
+      "provider": "CWFIS",
+      "evidence": "2024/2025 hotspot archives plus seven dated current-season CSV products acquired",
+      "limitation": "Detection archives do not prove cloud-free observation opportunity where no detection is present."
+    },
+    {
+      "provider": "Alberta/CWFIS/BCWS",
+      "evidence": "12322 official incidents checked into the discovery corpus",
+      "limitation": "Official absence alone is not a negative."
+    },
+    {
+      "provider": "existing NASA FIRMS/US corpus",
+      "evidence": "Existing archive and candidate atlas inspected",
+      "limitation": "No case-level cloud/coverage opportunity ledger is present."
+    }
+  ],
+  "blocker": {
+    "class": "CREDENTIAL_REQUIRED",
+    "requirement": "Historical sensor coverage/cloud-mask products or an equivalent authoritative observation-opportunity product must be acquired and bound before UNKNOWN controls can become negatives.",
+    "autoDiscovery": "No reusable historical cloud/opportunity credential was found in the current evidence stores; public detection-only archives were acquired instead."
+  },
+  "unknownPromotedToNegative": 0,
+  "evidencePackets": [],
+  "fingerprint": "public-evidence-negative-report:sha256:3f8ed82c944fbe15e5444a3cec31ca3748d022f2225a6d906321a3b9f7ae3f7f"
+}

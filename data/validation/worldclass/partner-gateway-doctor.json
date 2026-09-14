@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "vigia.partner-gateway-doctor.v1",
+  "integration": "OFFICIAL_PUBLIC_GOVERNMENT_CAP",
+  "state": "PASS",
+  "providers": [
+    "NOAA/NWS",
+    "ECCC/MSC"
+  ],
+  "authentication": "PUBLIC",
+  "rawMessages": 287,
+  "lifecycleChains": 151,
+  "cancellations": 12,
+  "twinIncidents": 42,
+  "replayVerified": true,
+  "ingestionFingerprint": "government-cap-integration:sha256:3ff466c0d0a14c213d41106be2b9f4fe47be3cc3d7f578c85998bffed8edf751",
+  "secretsRecorded": false,
+  "passed": true,
+  "fingerprint": "partner-gateway-doctor:sha256:c3a36a660f0359c959f499e932dccb10fbc0c2e9444a5b8496d4ebed864b0b89"
+}

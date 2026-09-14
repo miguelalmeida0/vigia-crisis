@@ -1,0 +1,28 @@
+{
+  "lane": "REAL_RETAINED_HISTORICAL_AND_SCENARIO_BROWSER",
+  "screens": [
+    {
+      "name": "fresh-session-discovery",
+      "width": 1672,
+      "overflow": false,
+      "mode": "OPERATIONAL",
+      "text": "Community intelligence\nOperational Picture\n\nRetained at 13 Sept, 11:07 UTC \u00b7 evaluated 13 Sept, 11:08 UTC\n\nSupport\nCommunities\nWhat changed\nReplay incident\nStress test\n5 gaps\nAll support\nHealthcare\nFire response\nReception\nShow support network\nTest access loss\nShow coverage\nLouredo\nFrom reported incident point\n0.7 km\nMunicipality\n\u00c9vora\nPopulation context\n112 residents \u00b7 Census 2021\n\nCensus population is not the number of people currently present.\n\nSupport for this community\n\nNo current qualified support route is retained for this community.\n\nFacility-to-community calculated routes. No evacuation need is inferred from proximity.\n\nDesignated reception within 8 km\nEscola B\u00e1sica de Canaviais\n\n2.2 km straight line \u00b7 No current activation confirmed\n\nEscola B\u00e1sica Conde de Vilalva\n\n4.0 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Gabriel Pereira\n\n5.4 km straight line \u00b7 No current activation confirmed\n\nEscola B\u00e1sica Andr\u00e9 de Resende\n\n5.7 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Andr\u00e9 de Gouveia\n\n5.7 km straight line \u00b7 No current activation confirmed\n\nEscola Secund\u00e1ria Severim de Faria\n\n6.0 km straight line \u00b7 No current activation confirmed\n\nLocation and population sources\nSupport resilience\nNearby reception activation is unconfirmed\nNo current qualified healthcare route retained\nNo current qualified fire-response route retained\nAsk the map\nAsk\n\nNo current significant access road is retained for this community."
+    }
+  ],
+  "errors": [],
+  "checks": [],
+  "discovery": {
+    "secondsFromNavigation": 9.26,
+    "checks": {
+      "qualifiedHospital": true,
+      "qualifiedFireResponse": true,
+      "sharedRoad": true,
+      "communitySupport": true,
+      "scenarioConsequence": false
+    },
+    "allFive": false,
+    "independentHumanTest": false,
+    "method": "Fresh session; visible primary controls only; scripted discoverability, not human comprehension",
+    "within30Seconds": false
+  }
+}

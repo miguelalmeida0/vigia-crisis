@@ -1,0 +1,44 @@
+[
+  {
+    "route": "command-overview",
+    "reference": "/Users/malmeida/Documents/ChatGPT/VIGIA Integration/DESIGN_SOURCE_OF_TRUTH/01-command-overview.png",
+    "sameNativeViewport": true,
+    "meanAbsoluteRgbDifference": 64.68094912433243,
+    "comparisonPurpose": "Diagnostic visual-language comparison. Later approved route recomposition supersedes earlier page anatomy. Not a pixel-parity certification."
+  },
+  {
+    "route": "incidents",
+    "reference": "/Users/malmeida/Documents/ChatGPT/VIGIA Integration/DESIGN_SOURCE_OF_TRUTH/02-incidents.png",
+    "sameNativeViewport": true,
+    "meanAbsoluteRgbDifference": 42.82525694610403,
+    "comparisonPurpose": "Diagnostic visual-language comparison. Later approved route recomposition supersedes earlier page anatomy. Not a pixel-parity certification."
+  },
+  {
+    "route": "incident-detail",
+    "reference": "/Users/malmeida/Documents/ChatGPT/VIGIA Integration/DESIGN_SOURCE_OF_TRUTH/06-incident-detail.png",
+    "sameNativeViewport": true,
+    "meanAbsoluteRgbDifference": 75.2344696757835,
+    "comparisonPurpose": "Diagnostic visual-language comparison. Later approved route recomposition supersedes earlier page anatomy. Not a pixel-parity certification."
+  },
+  {
+    "route": "fire-activity",
+    "reference": "/Users/malmeida/Downloads/ChatGPT Image Sep 8, 2026, 05_53_32 PM (1).png",
+    "sameNativeViewport": true,
+    "meanAbsoluteRgbDifference": 45.9722933371977,
+    "comparisonPurpose": "Diagnostic visual-language comparison. Later approved route recomposition supersedes earlier page anatomy. Not a pixel-parity certification."
+  },
+  {
+    "route": "response-access",
+    "reference": "/Users/malmeida/Downloads/ChatGPT Image Sep 8, 2026, 05_53_50 PM.png",
+    "sameNativeViewport": true,
+    "meanAbsoluteRgbDifference": 34.058168165801426,
+    "comparisonPurpose": "Diagnostic visual-language comparison. Later approved route recomposition supersedes earlier page anatomy. Not a pixel-parity certification."
+  },
+  {
+    "route": "national-awareness",
+    "runtime": "national-awareness-1672.png",
+    "reference": ".impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
+    "state": "TEXT_COMPOSITION_CONTRACT_ONLY",
+    "reason": "The retained six-raster pack contains an old Evidence view, not the current National Awareness anatomy. No matching approved national raster was fabricated."
+  }
+]

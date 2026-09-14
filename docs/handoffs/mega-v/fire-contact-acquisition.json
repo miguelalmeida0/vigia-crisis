@@ -1,0 +1,1581 @@
+{
+  "at": "2026-09-12T22:18:32.385Z",
+  "source": {
+    "url": "https://centraldecompras.cimac.pt/entidade/view?id=29",
+    "provider": "Comunidade Intermunicipal do Alentejo Central",
+    "authority": "MUNICIPAL",
+    "format": "HTML",
+    "adapter": "CIMAC_FIRE_CONTACT",
+    "family": "FIRE_PUBLIC_CONTACT",
+    "pollIntervalMs": 86400000
+  },
+  "bytes": 17709,
+  "contentHash": "21c83b084a31ef6985b5d83ff9af892c754ddb0257a56eceb36dbe0ac6a5f95c",
+  "result": {
+    "state": "INGESTED",
+    "documentId": "doc:e86330e2d6036bead753c29e5d6b7fa53f59756cfb1a0432126c055c0fe36c22",
+    "accepted": 2,
+    "rejected": [],
+    "matches": [
+      {
+        "state": "resolved",
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "candidates": [
+          {
+            "entityId": "entity:482e79003d29f1bfab2f25de",
+            "score": 100,
+            "hardConflict": false,
+            "basis": {
+              "external": true,
+              "nameSimilarity": 0,
+              "phone": false,
+              "address": false,
+              "distanceKm": null,
+              "municipalityMatch": false
+            }
+          }
+        ],
+        "subject": "osm:way:481130645",
+        "canonicalEntityId": "entity:482e79003d29f1bfab2f25de"
+      }
+    ],
+    "changedEntities": [
+      "entity:482e79003d29f1bfab2f25de"
+    ],
+    "modelCalled": false,
+    "model": null
+  },
+  "entity": {
+    "id": "entity:482e79003d29f1bfab2f25de",
+    "schemaVersion": "vigia.canonical-facility.v1",
+    "canonicalName": "Bombeiros Voluntários de Évora",
+    "canonicalType": "fire_station",
+    "aliases": [
+      "Bombeiros Voluntários de Évora",
+      "osm:way:481130645"
+    ],
+    "externalIds": [
+      "osm:way:481130645"
+    ],
+    "address": {
+      "street": "Avenida dos Bombeiros",
+      "locality": "Évora"
+    },
+    "contact": {
+      "phone": "+351266702122",
+      "email": "secretaria@ahbvevora.pt"
+    },
+    "location": {
+      "locationQuality": "MAP_POINT",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.902044,
+          38.5673919
+        ]
+      }
+    },
+    "capabilities": {
+      "fireResponse": true
+    },
+    "fields": {
+      "canonicalName": {
+        "value": "Bombeiros Voluntários de Évora",
+        "state": "RESOLVED",
+        "provenance": [
+          "fact:0641cf42ab5b3fc3845ca241f05cc954b095dd60ab2d45d68bc04f86bfc41542"
+        ],
+        "authority": "MUNICIPAL"
+      },
+      "canonicalType": {
+        "value": "fire_station",
+        "state": "PROBABLE",
+        "provenance": [
+          "fact:d00b1f1fb437ad2e9c052ae13bad330ce460072fff227e4deb57a01e64e9b2e0"
+        ],
+        "authority": "OSM"
+      },
+      "location.geometry": {
+        "value": {
+          "type": "Point",
+          "coordinates": [
+            -7.902044,
+            38.5673919
+          ]
+        },
+        "state": "PROBABLE",
+        "provenance": [
+          "fact:f9f4833a43e4276a821eb2ab547158304aef449dddf837c03dc9017454de181a"
+        ],
+        "authority": "OSM"
+      },
+      "location.locationQuality": {
+        "value": "MAP_POINT",
+        "state": "PROBABLE",
+        "provenance": [
+          "fact:c7f69bde9a3c334d121685aad3ff5e4345f3255b5bbddcaa2bb19fd97b88dd86"
+        ],
+        "authority": "OSM"
+      },
+      "address.street": {
+        "value": "Avenida dos Bombeiros",
+        "state": "PROBABLE",
+        "provenance": [
+          "fact:e21bbb65a70ac68b312b7e28c66a4875865d1100da363d2e70566192a3988db4"
+        ],
+        "authority": "OSM"
+      },
+      "address.locality": {
+        "value": "Évora",
+        "state": "PROBABLE",
+        "provenance": [
+          "fact:f506264aca5e7800992ae9142c8f76edfda316c24499dcc5f6f1f782d3864aac"
+        ],
+        "authority": "OSM"
+      },
+      "subtype": {
+        "value": "fire_corporation",
+        "state": "RESOLVED",
+        "provenance": [
+          "fact:1376580d9d20606ad97135b349783eb47cbb98c34342376b68f7310c6a619bfe"
+        ],
+        "authority": "MUNICIPAL"
+      },
+      "authority": {
+        "value": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+        "state": "RESOLVED",
+        "provenance": [
+          "fact:a04b39b65fbb0978463fc7adcc6ff57595f8664e120ff7fca74c0646c14b69e9"
+        ],
+        "authority": "MUNICIPAL"
+      },
+      "capabilities.fireResponse": {
+        "value": true,
+        "state": "RESOLVED",
+        "provenance": [
+          "fact:5e2e282cc2da06b3305b4d6ac653366cad1de4a86e94eb68960c9cd796f6a91b"
+        ],
+        "authority": "MUNICIPAL"
+      },
+      "contact.phone": {
+        "value": "+351266702122",
+        "state": "RESOLVED",
+        "provenance": [
+          "fact:4299af1c0dcc6afa6521319273e6b68f916ed572ab90339ff2382e191d588d26"
+        ],
+        "authority": "MUNICIPAL"
+      },
+      "contact.email": {
+        "value": "secretaria@ahbvevora.pt",
+        "state": "RESOLVED",
+        "provenance": [
+          "fact:7ac2a4fbaeeeedc255565bb0886e21dec9c460c463e906fded3723cdb6b0b6ac"
+        ],
+        "authority": "MUNICIPAL"
+      },
+      "address.postcode": {
+        "value": null,
+        "state": "NOT_RESOLVED_YET",
+        "provenance": []
+      },
+      "address.municipality": {
+        "value": null,
+        "state": "NOT_RESOLVED_YET",
+        "provenance": []
+      },
+      "contact.website": {
+        "value": null,
+        "state": "NOT_RESOLVED_YET",
+        "provenance": []
+      },
+      "operator": {
+        "value": null,
+        "state": "NOT_RESOLVED_YET",
+        "provenance": []
+      }
+    },
+    "conflicts": [],
+    "updatedAt": "2026-09-12T22:18:32.398Z",
+    "matchResolution": {
+      "state": "unresolved",
+      "entityId": null,
+      "candidates": []
+    },
+    "subtype": "fire_corporation",
+    "authority": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+    "presentation": {
+      "showPublicContact": true,
+      "showPublicAccess": false,
+      "showEmergencyDepartment": false,
+      "showEmergencyShelterStatus": false,
+      "showCapacity": false,
+      "showOfficialDesignation": false,
+      "showResponseCapability": true,
+      "showWaterAvailability": false,
+      "showRouting": true,
+      "capacity": "NOT_APPLICABLE",
+      "openingStatus": "NOT_APPLICABLE",
+      "distanceReference": "REPORTED_INCIDENT_POINT"
+    },
+    "resolutionState": "probable",
+    "provenance": {
+      "canonicalName": [
+        {
+          "factId": "fact:0641cf42ab5b3fc3845ca241f05cc954b095dd60ab2d45d68bc04f86bfc41542",
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z",
+          "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+          "sourceLocator": "PDF page 85 / Quadro 19",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "canonicalType": [
+        {
+          "factId": "fact:d00b1f1fb437ad2e9c052ae13bad330ce460072fff227e4deb57a01e64e9b2e0",
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6",
+          "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+          "sourceLocator": "osm:way:481130645",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "location.geometry": [
+        {
+          "factId": "fact:f9f4833a43e4276a821eb2ab547158304aef449dddf837c03dc9017454de181a",
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6",
+          "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+          "sourceLocator": "osm:way:481130645",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "location.locationQuality": [
+        {
+          "factId": "fact:c7f69bde9a3c334d121685aad3ff5e4345f3255b5bbddcaa2bb19fd97b88dd86",
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6",
+          "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+          "sourceLocator": "osm:way:481130645",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "address.street": [
+        {
+          "factId": "fact:e21bbb65a70ac68b312b7e28c66a4875865d1100da363d2e70566192a3988db4",
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6",
+          "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+          "sourceLocator": "osm:way:481130645",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "address.locality": [
+        {
+          "factId": "fact:f506264aca5e7800992ae9142c8f76edfda316c24499dcc5f6f1f782d3864aac",
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6",
+          "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+          "sourceLocator": "osm:way:481130645",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "subtype": [
+        {
+          "factId": "fact:1376580d9d20606ad97135b349783eb47cbb98c34342376b68f7310c6a619bfe",
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z",
+          "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+          "sourceLocator": "PDF page 85 / Quadro 19",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "authority": [
+        {
+          "factId": "fact:a04b39b65fbb0978463fc7adcc6ff57595f8664e120ff7fca74c0646c14b69e9",
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z",
+          "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+          "sourceLocator": "PDF page 85 / Quadro 19",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "capabilities.fireResponse": [
+        {
+          "factId": "fact:5e2e282cc2da06b3305b4d6ac653366cad1de4a86e94eb68960c9cd796f6a91b",
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z",
+          "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+          "sourceLocator": "PDF page 85 / Quadro 19",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "contact.phone": [
+        {
+          "factId": "fact:4299af1c0dcc6afa6521319273e6b68f916ed572ab90339ff2382e191d588d26",
+          "url": "https://centraldecompras.cimac.pt/entidade/view?id=29",
+          "family": "FIRE_PUBLIC_CONTACT",
+          "format": "HTML",
+          "adapter": "CIMAC_FIRE_CONTACT",
+          "provider": "Comunidade Intermunicipal do Alentejo Central",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T22:18:30.091Z",
+          "pollIntervalMs": 86400000,
+          "sourceText": "Contactos 266702122 secretaria@ahbvevora.pt Associação Humanitária dos Bombeiros Voluntários de Évora Contactos Últimas Negociações Últimos Acordos Quadro Fornecimento de Seguros 17 de Setembro de 2026 Ver mais Serviços de Inspeção de Espaços de Jogo e Recreio 2 de Julho de 2026 Ver mais Fornecimento de Eletricidade em Regime de Mercado Livre 10 de",
+          "sourceLocator": "Entity 29 / Contactos",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "contact.email": [
+        {
+          "factId": "fact:7ac2a4fbaeeeedc255565bb0886e21dec9c460c463e906fded3723cdb6b0b6ac",
+          "url": "https://centraldecompras.cimac.pt/entidade/view?id=29",
+          "family": "FIRE_PUBLIC_CONTACT",
+          "format": "HTML",
+          "adapter": "CIMAC_FIRE_CONTACT",
+          "provider": "Comunidade Intermunicipal do Alentejo Central",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T22:18:30.091Z",
+          "pollIntervalMs": 86400000,
+          "sourceText": "Contactos 266702122 secretaria@ahbvevora.pt Associação Humanitária dos Bombeiros Voluntários de Évora Contactos Últimas Negociações Últimos Acordos Quadro Fornecimento de Seguros 17 de Setembro de 2026 Ver mais Serviços de Inspeção de Espaços de Jogo e Recreio 2 de Julho de 2026 Ver mais Fornecimento de Eletricidade em Regime de Mercado Livre 10 de",
+          "sourceLocator": "Entity 29 / Contactos",
+          "resolutionMethod": "DETERMINISTIC_ADAPTER",
+          "validFrom": null,
+          "validUntil": null
+        }
+      ],
+      "address.postcode": [],
+      "address.municipality": [],
+      "contact.website": [],
+      "operator": []
+    },
+    "revisionHash": "1ce34e381b4ec886f587c615687f138f10de719fdc7484214c72bfe8bd5204fc",
+    "facts": [
+      {
+        "id": "fact:0a7bc8d3debacc3b1b72d08bfe65fbb91bbf674c68fada33ad6449d3824b2da4",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:06:01.788Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:08:19.304Z",
+        "firstSeen": "2026-09-12T13:06:01.788Z",
+        "predicate": "canonicalName",
+        "documentId": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "ingestedAt": "2026-09-12T13:06:01.788Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:63788943ba354f7e0ba5bd0154d4b7721dabb00eef97318a96ffb53f9febe6b7",
+        "state": "ACCEPTED",
+        "value": "fire_station",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:06:01.788Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:08:19.304Z",
+        "firstSeen": "2026-09-12T13:06:01.788Z",
+        "predicate": "canonicalType",
+        "documentId": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "ingestedAt": "2026-09-12T13:06:01.788Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:03812efe305d5d1a480251902a2fb4e20f684bf43043591ace7c8864c3da2053",
+        "state": "ACCEPTED",
+        "value": {
+          "type": "Point",
+          "coordinates": [
+            -7.902044,
+            38.5673919
+          ]
+        },
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:06:01.788Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:08:19.304Z",
+        "firstSeen": "2026-09-12T13:06:01.788Z",
+        "predicate": "location.geometry",
+        "documentId": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "ingestedAt": "2026-09-12T13:06:01.788Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:9aa1c0618cbab42934af6d79b86a9a12c795e9bbf17f67319799289964545874",
+        "state": "ACCEPTED",
+        "value": "MAP_POINT",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:06:01.788Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:08:19.304Z",
+        "firstSeen": "2026-09-12T13:06:01.788Z",
+        "predicate": "location.locationQuality",
+        "documentId": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "ingestedAt": "2026-09-12T13:06:01.788Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:bbd743a167937aadedd04a5e9005499c2f49bed15de20776b1fa879894425ed4",
+        "state": "ACCEPTED",
+        "value": "Avenida dos Bombeiros",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:06:01.788Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:08:19.304Z",
+        "firstSeen": "2026-09-12T13:06:01.788Z",
+        "predicate": "address.street",
+        "documentId": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "ingestedAt": "2026-09-12T13:06:01.788Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:0862d19c4a3cd49c30b13627370d0b56c104d70baaa1c51d05583d1fb2f77f9c",
+        "state": "ACCEPTED",
+        "value": "Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:06:01.788Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:08:19.304Z",
+        "firstSeen": "2026-09-12T13:06:01.788Z",
+        "predicate": "address.locality",
+        "documentId": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "ingestedAt": "2026-09-12T13:06:01.788Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:78d44f6a7129f91cdf8d544c607147e45a26b5a4bc924542980c95344915005d",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:08:19.304Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:08:19.304Z",
+        "predicate": "canonicalName",
+        "documentId": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "ingestedAt": "2026-09-12T13:08:19.304Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:eee0fce14a653346ac8a9863b5dd56e48fae57bacc6976ab846b3a340af6cf7c",
+        "state": "ACCEPTED",
+        "value": "fire_station",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:08:19.304Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:08:19.304Z",
+        "predicate": "canonicalType",
+        "documentId": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "ingestedAt": "2026-09-12T13:08:19.304Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:6b6edc18d05cb8239bbd10c81ad3b8e74b0ddcd92b18ea1ff300e3363f7aa5b9",
+        "state": "ACCEPTED",
+        "value": {
+          "type": "Point",
+          "coordinates": [
+            -7.902044,
+            38.5673919
+          ]
+        },
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:08:19.304Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:08:19.304Z",
+        "predicate": "location.geometry",
+        "documentId": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "ingestedAt": "2026-09-12T13:08:19.304Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:6e6fbc488adb293afe8cc8331a4a87208affc0e8d38d7c7edf002d47a8bfb12a",
+        "state": "ACCEPTED",
+        "value": "MAP_POINT",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:08:19.304Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:08:19.304Z",
+        "predicate": "location.locationQuality",
+        "documentId": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "ingestedAt": "2026-09-12T13:08:19.304Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:cde99282a2978ac70eda2706320c7f494c44e3cdd91c2f0fb37a2398ab97d1e4",
+        "state": "ACCEPTED",
+        "value": "Avenida dos Bombeiros",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:08:19.304Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:08:19.304Z",
+        "predicate": "address.street",
+        "documentId": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "ingestedAt": "2026-09-12T13:08:19.304Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:cd32a4edef7e239aec0ecfe7d499dc29b5b6539a2a14cba68034a01f8b2a579d",
+        "state": "ACCEPTED",
+        "value": "Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:08:19.304Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:08:19.304Z",
+        "predicate": "address.locality",
+        "documentId": "doc:d502886333b47f6f7c6c3b9f983be6b15001d591f248c5f96100b94de46f3afc",
+        "ingestedAt": "2026-09-12T13:08:19.304Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:a61a4a9e17488d89d3f157a5663830fd6d98e0f76963d7694e4ee2e631e73150",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:20:23.657Z",
+        "predicate": "canonicalName",
+        "documentId": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "ingestedAt": "2026-09-12T13:20:23.657Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:d00b1f1fb437ad2e9c052ae13bad330ce460072fff227e4deb57a01e64e9b2e0",
+        "state": "ACCEPTED",
+        "value": "fire_station",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:20:23.657Z",
+        "predicate": "canonicalType",
+        "documentId": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "ingestedAt": "2026-09-12T13:20:23.657Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:f9f4833a43e4276a821eb2ab547158304aef449dddf837c03dc9017454de181a",
+        "state": "ACCEPTED",
+        "value": {
+          "type": "Point",
+          "coordinates": [
+            -7.902044,
+            38.5673919
+          ]
+        },
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:20:23.657Z",
+        "predicate": "location.geometry",
+        "documentId": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "ingestedAt": "2026-09-12T13:20:23.657Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:c7f69bde9a3c334d121685aad3ff5e4345f3255b5bbddcaa2bb19fd97b88dd86",
+        "state": "ACCEPTED",
+        "value": "MAP_POINT",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:20:23.657Z",
+        "predicate": "location.locationQuality",
+        "documentId": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "ingestedAt": "2026-09-12T13:20:23.657Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:e21bbb65a70ac68b312b7e28c66a4875865d1100da363d2e70566192a3988db4",
+        "state": "ACCEPTED",
+        "value": "Avenida dos Bombeiros",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:20:23.657Z",
+        "predicate": "address.street",
+        "documentId": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "ingestedAt": "2026-09-12T13:20:23.657Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:f506264aca5e7800992ae9142c8f76edfda316c24499dcc5f6f1f782d3864aac",
+        "state": "ACCEPTED",
+        "value": "Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:20:23.657Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:20:23.657Z",
+        "firstSeen": "2026-09-12T13:20:23.657Z",
+        "predicate": "address.locality",
+        "documentId": "doc:194c888bcb7b4cdcd9d3299fd9b7d08a7e1007adcf0357228328b75783057f81",
+        "ingestedAt": "2026-09-12T13:20:23.657Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:1cff5c897a0e8310aa821d115e328da6f9e3e10978f1a74f2043f68b78357a81",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:03:25.854Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:06:01.788Z",
+        "firstSeen": "2026-09-12T13:03:25.854Z",
+        "predicate": "canonicalName",
+        "documentId": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+        "ingestedAt": "2026-09-12T13:03:25.854Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:547ade34abbaf794410200467ddd87d6a7879855882897051171cb19d8514d03",
+        "state": "ACCEPTED",
+        "value": "fire_station",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:03:25.854Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:06:01.788Z",
+        "firstSeen": "2026-09-12T13:03:25.854Z",
+        "predicate": "canonicalType",
+        "documentId": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+        "ingestedAt": "2026-09-12T13:03:25.854Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:30b5b6cd479f7d802ffbf042313e6876793ec2db02a64433ba69befcf2d6839a",
+        "state": "ACCEPTED",
+        "value": {
+          "type": "Point",
+          "coordinates": [
+            -7.902044,
+            38.5673919
+          ]
+        },
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:03:25.854Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:06:01.788Z",
+        "firstSeen": "2026-09-12T13:03:25.854Z",
+        "predicate": "location.geometry",
+        "documentId": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+        "ingestedAt": "2026-09-12T13:03:25.854Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:44497ee259c2a5cc37d1fdfc6bc2a0fd7954a13ba3c6209401e8b4b28d8f5018",
+        "state": "ACCEPTED",
+        "value": "MAP_POINT",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:03:25.854Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:06:01.788Z",
+        "firstSeen": "2026-09-12T13:03:25.854Z",
+        "predicate": "location.locationQuality",
+        "documentId": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+        "ingestedAt": "2026-09-12T13:03:25.854Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:6f74717799b254549c27618f22f0f3731975de376f7cde7dd7745e506fc1033f",
+        "state": "ACCEPTED",
+        "value": "Avenida dos Bombeiros",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:03:25.854Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:06:01.788Z",
+        "firstSeen": "2026-09-12T13:03:25.854Z",
+        "predicate": "address.street",
+        "documentId": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+        "ingestedAt": "2026-09-12T13:03:25.854Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:7aa55188fdeb78870135336d06e1006bb76e1be78e309acae84088806d3855c6",
+        "state": "ACCEPTED",
+        "value": "Évora",
+        "source": {
+          "url": "https://www.openstreetmap.org/",
+          "watch": false,
+          "format": "JSON",
+          "adapter": "OSM_BASELINE",
+          "provider": "OpenStreetMap contributors",
+          "authority": "OSM",
+          "observedAt": "2026-09-04T19:22:24.963Z",
+          "archivePath": "data/reference/operational-proof/raw/osm-response-facilities-e379e41fc645afdc.json",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T13:03:25.854Z",
+          "archiveSha256": "sha256:153641c45b7d636b5d58658eee34d0e84c8d30e7db17050e36018dca85eb3de6"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T13:06:01.788Z",
+        "firstSeen": "2026-09-12T13:03:25.854Z",
+        "predicate": "address.locality",
+        "documentId": "doc:e02c39ddf89924304037dffb244c663484f59b591c52026c878b7abc099763db",
+        "ingestedAt": "2026-09-12T13:03:25.854Z",
+        "sourceText": "{\"id\":\"osm:way:481130645\",\"name\":\"Bombeiros Voluntários de Évora\",\"canonicalName\":\"Bombeiros Voluntários de Évora\",\"canonicalType\":\"fire_station\",\"coordinate\":[-7.902044,38.5673919],\"address\":{\"street\":\"Avenida dos Bombeiros\",\"locality\":\"Évora\"},\"upstreamType\":\"fire_station\",\"sourceTags\":{\"addr:city\":\"Évora\",\"addr:street\":\"Avenida dos Bombeiros\",\"amenity\":\"fire_station\",\"building\":\"yes\",\"name\":\"Bombeiros Voluntários de Évora\",\"wikidata\":\"Q91301851\"},\"pilotArea\":\"Évora\",\"pilotDistanceKm\":0.6550461691204624}",
+        "supersededBy": "doc:c73e4fada442b40a5053ef819914a90346a963d9ddd4c6b53aa0b86534290fa4",
+        "sourceLocator": "osm:way:481130645",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:89d40a4e7c2f9b8c42289808cff0fffbb348ec439a9dd73e1c2fb7dec01d216c",
+        "state": "ACCEPTED",
+        "value": "fire_corporation",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:18:32.477Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:20:20.343Z",
+        "firstSeen": "2026-09-12T21:18:32.477Z",
+        "predicate": "subtype",
+        "validFrom": null,
+        "documentId": "doc:2e253e7823eb06f953898ce280e2371179fec1a93fd54f25e932f836ae8605d0",
+        "ingestedAt": "2026-09-12T21:18:32.477Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:5678c3ba7117a270fdfe0c91a32ed55dd905c47832a93bfeee382b9068800d06",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:18:32.477Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:20:20.343Z",
+        "firstSeen": "2026-09-12T21:18:32.477Z",
+        "predicate": "canonicalName",
+        "validFrom": null,
+        "documentId": "doc:2e253e7823eb06f953898ce280e2371179fec1a93fd54f25e932f836ae8605d0",
+        "ingestedAt": "2026-09-12T21:18:32.477Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:76c88440cfc45b9bf5fd524e3f8f36193a94dcb35c28e3adc9981e8536f42dd9",
+        "state": "ACCEPTED",
+        "value": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:18:32.477Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:20:20.343Z",
+        "firstSeen": "2026-09-12T21:18:32.477Z",
+        "predicate": "authority",
+        "validFrom": null,
+        "documentId": "doc:2e253e7823eb06f953898ce280e2371179fec1a93fd54f25e932f836ae8605d0",
+        "ingestedAt": "2026-09-12T21:18:32.477Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:f57822dfcac89b057676488e26e4c65aed1f8c7134ef65e505c4e5210e3d842e",
+        "state": "ACCEPTED",
+        "value": true,
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:18:32.477Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:20:20.343Z",
+        "firstSeen": "2026-09-12T21:18:32.477Z",
+        "predicate": "capabilities.fireResponse",
+        "validFrom": null,
+        "documentId": "doc:2e253e7823eb06f953898ce280e2371179fec1a93fd54f25e932f836ae8605d0",
+        "ingestedAt": "2026-09-12T21:18:32.477Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:4299af1c0dcc6afa6521319273e6b68f916ed572ab90339ff2382e191d588d26",
+        "state": "ACCEPTED",
+        "value": "+351266702122",
+        "source": {
+          "url": "https://centraldecompras.cimac.pt/entidade/view?id=29",
+          "family": "FIRE_PUBLIC_CONTACT",
+          "format": "HTML",
+          "adapter": "CIMAC_FIRE_CONTACT",
+          "provider": "Comunidade Intermunicipal do Alentejo Central",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T22:18:30.091Z",
+          "pollIntervalMs": 86400000
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T22:18:30.091Z",
+        "firstSeen": "2026-09-12T22:18:30.091Z",
+        "predicate": "contact.phone",
+        "validFrom": null,
+        "documentId": "doc:e86330e2d6036bead753c29e5d6b7fa53f59756cfb1a0432126c055c0fe36c22",
+        "ingestedAt": "2026-09-12T22:18:30.091Z",
+        "sourceText": "Contactos 266702122 secretaria@ahbvevora.pt Associação Humanitária dos Bombeiros Voluntários de Évora Contactos Últimas Negociações Últimos Acordos Quadro Fornecimento de Seguros 17 de Setembro de 2026 Ver mais Serviços de Inspeção de Espaços de Jogo e Recreio 2 de Julho de 2026 Ver mais Fornecimento de Eletricidade em Regime de Mercado Livre 10 de",
+        "validUntil": null,
+        "sourceLocator": "Entity 29 / Contactos",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:985f131808171038d634fabdb7698ef330875bdddde42e18f61935184a7856ba",
+        "state": "ACCEPTED",
+        "value": "fire_corporation",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:20:20.343Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:20:20.343Z",
+        "predicate": "subtype",
+        "validFrom": null,
+        "documentId": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "ingestedAt": "2026-09-12T21:20:20.343Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:7aeb383a2047ccca10344d79bb2778a76d9a6b1f2aa2524ed42521fe602aae5a",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:20:20.343Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:20:20.343Z",
+        "predicate": "canonicalName",
+        "validFrom": null,
+        "documentId": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "ingestedAt": "2026-09-12T21:20:20.343Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:19718020f6815eb8892c4d996f75dbb3feb3e98dd763f0b0c70fd24b0d95666d",
+        "state": "ACCEPTED",
+        "value": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:20:20.343Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:20:20.343Z",
+        "predicate": "authority",
+        "validFrom": null,
+        "documentId": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "ingestedAt": "2026-09-12T21:20:20.343Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:ae5f43e09284d33c3f768369c9a9764f5b0e2043484ea9753402c57483debc4f",
+        "state": "ACCEPTED",
+        "value": true,
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:20:20.343Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:20:20.343Z",
+        "predicate": "capabilities.fireResponse",
+        "validFrom": null,
+        "documentId": "doc:b2fe05adda0e7c8c80310b79ce88fb589280a71356b81a17520d31b830de3c60",
+        "ingestedAt": "2026-09-12T21:20:20.343Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "supersededBy": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:7ac2a4fbaeeeedc255565bb0886e21dec9c460c463e906fded3723cdb6b0b6ac",
+        "state": "ACCEPTED",
+        "value": "secretaria@ahbvevora.pt",
+        "source": {
+          "url": "https://centraldecompras.cimac.pt/entidade/view?id=29",
+          "family": "FIRE_PUBLIC_CONTACT",
+          "format": "HTML",
+          "adapter": "CIMAC_FIRE_CONTACT",
+          "provider": "Comunidade Intermunicipal do Alentejo Central",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T22:18:30.091Z",
+          "pollIntervalMs": 86400000
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T22:18:30.091Z",
+        "firstSeen": "2026-09-12T22:18:30.091Z",
+        "predicate": "contact.email",
+        "validFrom": null,
+        "documentId": "doc:e86330e2d6036bead753c29e5d6b7fa53f59756cfb1a0432126c055c0fe36c22",
+        "ingestedAt": "2026-09-12T22:18:30.091Z",
+        "sourceText": "Contactos 266702122 secretaria@ahbvevora.pt Associação Humanitária dos Bombeiros Voluntários de Évora Contactos Últimas Negociações Últimos Acordos Quadro Fornecimento de Seguros 17 de Setembro de 2026 Ver mais Serviços de Inspeção de Espaços de Jogo e Recreio 2 de Julho de 2026 Ver mais Fornecimento de Eletricidade em Regime de Mercado Livre 10 de",
+        "validUntil": null,
+        "sourceLocator": "Entity 29 / Contactos",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:1376580d9d20606ad97135b349783eb47cbb98c34342376b68f7310c6a619bfe",
+        "state": "ACCEPTED",
+        "value": "fire_corporation",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:35:19.106Z",
+        "predicate": "subtype",
+        "validFrom": null,
+        "documentId": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "ingestedAt": "2026-09-12T21:35:19.106Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:0641cf42ab5b3fc3845ca241f05cc954b095dd60ab2d45d68bc04f86bfc41542",
+        "state": "ACCEPTED",
+        "value": "Bombeiros Voluntários de Évora",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:35:19.106Z",
+        "predicate": "canonicalName",
+        "validFrom": null,
+        "documentId": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "ingestedAt": "2026-09-12T21:35:19.106Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:a04b39b65fbb0978463fc7adcc6ff57595f8664e120ff7fca74c0646c14b69e9",
+        "state": "ACCEPTED",
+        "value": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:35:19.106Z",
+        "predicate": "authority",
+        "validFrom": null,
+        "documentId": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "ingestedAt": "2026-09-12T21:35:19.106Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      },
+      {
+        "id": "fact:5e2e282cc2da06b3305b4d6ac653366cad1de4a86e94eb68960c9cd796f6a91b",
+        "state": "ACCEPTED",
+        "value": true,
+        "source": {
+          "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+          "family": "CIVIL_PROTECTION_DESIGNATION",
+          "format": "PDF",
+          "adapter": "EVORA_EMERGENCY_PLAN",
+          "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+          "authority": "MUNICIPAL",
+          "publishedAt": null,
+          "retrievedAt": "2026-09-12T21:35:19.106Z",
+          "pollIntervalMs": 86400000,
+          "sourceUpdatedAt": "2024-06-14T07:17:25Z"
+        },
+        "entityId": "entity:482e79003d29f1bfab2f25de",
+        "lastSeen": "2026-09-12T21:35:19.106Z",
+        "firstSeen": "2026-09-12T21:35:19.106Z",
+        "predicate": "capabilities.fireResponse",
+        "validFrom": null,
+        "documentId": "doc:3464c8483493216433cffd6228881901e996c9b13cb9dd92daa0db61c6f4b064",
+        "ingestedAt": "2026-09-12T21:35:19.106Z",
+        "sourceText": "Quadro 19: Responsabilidades dos Bombeiros Voluntários de Évo ra \n \nENTIDADES  RESPONSABILIDADES  \nBVE – Bombeiros \nVoluntários de Évora  \n• Desenvolver ações de combate a incêndios, busca, sa lvamento e \ntransporte de pessoas, animais e bens; \n• Apoiar o socorro e transporte de acidentados e doen tes, incluindo a \nemergência pré-hospitalar, no âmbito do Sistema Integrado de Emergência \nMédica; \n• Participar na evacuação primária nas suas zonas de intervenção ou em \nreforço; \n• Colaborar nas ações de mortuária, nas suas zonas de  intervenção ou em \nreforço; \n• Colaborar na construção e/ou montagem de postos de triagem e/ou Postos \nMédicos Avançados6; \n• Apoiar os Teatros de Operações, envolvendo elemento s guia para \nreconhecimento e orientação no terreno das forças o peracionais em \nreforço da sua zona de atuação própria; \n• Colaborar na montagem de Postos de Comando; \n• Colaborar na desobstrução expedita de vias de comun icação e itinerários \nde socorro; \n• Apoiar no transporte de bens essenciais de sobreviv ência às populações \nisoladas; \n• Executar as ações de distribuição de água potável às populações; \n• Disponibilizar apoio logístico à população e a outr as forças operacionais; \n• Colaborar nas ações de informação e sensibilização pública; \n",
+        "validUntil": null,
+        "sourceLocator": "PDF page 85 / Quadro 19",
+        "extractionMethod": "DETERMINISTIC_ADAPTER",
+        "subjectCandidate": "osm:way:481130645"
+      }
+    ]
+  },
+  "modelCalls": 0
+}

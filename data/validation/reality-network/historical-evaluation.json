@@ -1,0 +1,1626 @@
+{
+  "schemaVersion": "vigia.reality-network-evaluation-report.v1",
+  "generatedAt": "2026-08-24T12:08:37.725Z",
+  "datasetManifest": {
+    "schemaVersion": "vigia.dataset-manifest.v1",
+    "datasetId": "vigia-portugal-2024-reality-evaluation",
+    "version": "1.0.0",
+    "sourceProducts": [
+      {
+        "providerId": "nasa-firms",
+        "productId": "VIIRS_ARCHIVAL_PORTUGAL_2024",
+        "version": "2024",
+        "rawObjectHashes": [
+          "9d79ef18573004337a31653c92e928708589dfa0f76dea15eb15d86df1cf9561"
+        ]
+      },
+      {
+        "providerId": "ptdata-icnf",
+        "productId": "ICNF_SGIF_2024",
+        "version": "2024",
+        "rawObjectHashes": [
+          "9d79ef18573004337a31653c92e928708589dfa0f76dea15eb15d86df1cf9561"
+        ]
+      }
+    ],
+    "queryRegions": [
+      {
+        "id": "PT",
+        "bbox": [
+          -9.6,
+          36.8,
+          -6,
+          42.2
+        ]
+      }
+    ],
+    "timeRanges": [
+      {
+        "from": "2024-01-01T00:00:00.000Z",
+        "to": "2024-12-31T23:59:59.000Z"
+      }
+    ],
+    "canonicalSchemaVersion": "vigia.reality-evaluation.v1",
+    "featureCodeVersion": "reality-network-v1",
+    "labelSources": [
+      "ICNF SGIF official archive"
+    ],
+    "splitDefinition": {
+      "unit": "incident",
+      "field": "evaluationSplit",
+      "partitions": [
+        "baseline_comparable",
+        "development",
+        "held_out"
+      ]
+    },
+    "exclusions": [],
+    "licenceIds": [
+      "NASA-FIRMS-TERMS"
+    ],
+    "knownBiases": [
+      "Arrival time is substituted with source event time because archival delivery time is unavailable.",
+      "Multiple VIIRS platforms remain one instrument family and are not treated as independent modalities.",
+      "Only fires >=500 ha are selected."
+    ],
+    "counts": {
+      "incidents": 35,
+      "records": 2523
+    },
+    "geographicCoverage": {
+      "regions": [
+        "Portugal"
+      ]
+    },
+    "temporalCoverage": {
+      "seasons": [
+        "2024"
+      ]
+    },
+    "creationTime": "2026-08-24T00:00:00.000Z",
+    "semanticHash": "dataset-manifest:sha256:9a0caad5cadc6ef011d6ac82f786724b70f969794656e68c8b1566b21ebe218a"
+  },
+  "evaluation": {
+    "schemaVersion": "vigia.reality-evaluation.v1",
+    "rows": [
+      {
+        "id": "PT-2024-ICNF-109",
+        "firstPhysicalAt": "2024-08-11T01:33:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-08-10T18:10:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -26580000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58116",
+        "firstPhysicalAt": "2024-09-02T01:20:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-01T16:21:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -32340000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58230",
+        "firstPhysicalAt": "2024-09-04T01:59:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-03T20:21:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -20280000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58591",
+        "firstPhysicalAt": "2024-09-11T12:50:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-11T12:52:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 120000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58715",
+        "firstPhysicalAt": "2024-09-13T12:37:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-13T12:35:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -120000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58921",
+        "firstPhysicalAt": "2024-09-15T01:53:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-15T02:17:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 1440000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58975",
+        "firstPhysicalAt": "2024-09-16T01:34:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-15T14:52:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -38520000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-58977",
+        "firstPhysicalAt": "2024-09-16T03:14:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-15T14:58:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -44160000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59033",
+        "firstPhysicalAt": "2024-09-16T01:34:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-15T20:16:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -19080000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59043",
+        "firstPhysicalAt": "2024-09-16T01:34:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-15T21:55:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -13140000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59063",
+        "firstPhysicalAt": "2024-09-16T01:34:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T00:15:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -4740000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59096",
+        "firstPhysicalAt": "2024-09-16T12:57:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T07:00:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -21420000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59099",
+        "firstPhysicalAt": "2024-09-16T13:21:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T07:36:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -20700000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59108",
+        "firstPhysicalAt": "2024-09-16T12:57:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T09:53:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -11040000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59127",
+        "firstPhysicalAt": "2024-09-16T12:57:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T11:34:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -4980000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59135",
+        "firstPhysicalAt": "2024-09-16T12:57:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T11:53:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -3840000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59158",
+        "firstPhysicalAt": "2024-09-16T13:21:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T14:02:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 2460000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59175",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T15:02:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -36780000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59191",
+        "firstPhysicalAt": "2024-09-16T12:57:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T15:28:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 9060000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59193",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T15:53:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -33720000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59194",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T15:57:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -33480000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59200",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T16:21:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -32040000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59206",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T16:52:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -30180000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59214",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T17:18:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -28620000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59221",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T17:46:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -26940000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59231",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T18:35:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -24000000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59259",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T20:59:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -15360000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59265",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T21:28:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -13620000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59294",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-16T23:38:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -5820000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59304",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-17T00:52:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -1380000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59306",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-17T01:06:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -540000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59325",
+        "firstPhysicalAt": "2024-09-17T01:15:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-17T02:55:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 6000000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59334",
+        "firstPhysicalAt": "2024-09-17T12:38:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-17T05:21:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": -26220000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59380",
+        "firstPhysicalAt": "2024-09-17T12:38:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-17T12:46:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 480000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      },
+      {
+        "id": "PT-2024-ICNF-59677",
+        "firstPhysicalAt": "2024-09-19T02:18:00.000Z",
+        "firstIndependentAt": null,
+        "firstOfficialAt": "2024-09-19T09:31:00.000Z",
+        "timeToFirstPhysicalMs": 0,
+        "timeToIndependentMs": null,
+        "leadVsOfficialMs": 25980000,
+        "detected": true,
+        "independentlyCorroborated": false,
+        "officiallyCorroborated": true,
+        "labelTier": "OFFICIAL_ARCHIVAL_REPORT",
+        "region": "Portugal",
+        "season": "2024",
+        "falseIncident": false,
+        "opportunityValid": true,
+        "associationState": "MATCHED"
+      }
+    ],
+    "metrics": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 0,
+        "p95": 0
+      },
+      "leadVsOfficialMs": {
+        "p50": -15360000,
+        "p95": 6917999.999999992
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "evaluationHash": "reality-evaluation:sha256:3059dda00b08ded9bb281c3b8f57cf97c093a21f037fd746e07995fbeb214c62"
+  },
+  "ablations": {
+    "ALL": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 0,
+        "p95": 0
+      },
+      "leadVsOfficialMs": {
+        "p50": -15360000,
+        "p95": 6917999.999999992
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "WITHOUT:official:icnf-sgif": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 0,
+        "p95": 0
+      },
+      "leadVsOfficialMs": {
+        "p50": null,
+        "p95": null
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "WITHOUT:firms:VIIRS S-NPP": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 1000,
+        "p95": 1000
+      },
+      "leadVsOfficialMs": {
+        "p50": -15361000,
+        "p95": 6916999.999999992
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "WITHOUT:firms:VIIRS NOAA-20": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 0,
+        "p95": 1000
+      },
+      "leadVsOfficialMs": {
+        "p50": -15360000,
+        "p95": 6917999.999999992
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "ONLY:official:icnf-sgif": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 0,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": null,
+        "p95": null
+      },
+      "leadVsOfficialMs": {
+        "p50": null,
+        "p95": null
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "ONLY:firms:VIIRS S-NPP": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 0,
+        "p95": 1000
+      },
+      "leadVsOfficialMs": {
+        "p50": null,
+        "p95": null
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    },
+    "ONLY:firms:VIIRS NOAA-20": {
+      "incidents": 35,
+      "validOpportunities": 35,
+      "positiveReferences": 35,
+      "negativeControls": 0,
+      "opportunityAdjustedRecall": 1,
+      "falseIncidentRate": null,
+      "independentCorroborationRate": 0,
+      "timeToFirstPhysicalMs": {
+        "p50": 1000,
+        "p95": 1000
+      },
+      "leadVsOfficialMs": {
+        "p50": null,
+        "p95": null
+      },
+      "associationFragmentation": 0,
+      "associationOverMerge": 0
+    }
+  },
+  "leakage": {
+    "schemaVersion": "vigia.dataset-leakage-report.v1",
+    "passed": true,
+    "violations": [],
+    "rowsInspected": 35
+  },
+  "replay": {
+    "identical": true,
+    "originalHash": "reality-evaluation:sha256:3059dda00b08ded9bb281c3b8f57cf97c093a21f037fd746e07995fbeb214c62",
+    "replayedHash": "reality-evaluation:sha256:3059dda00b08ded9bb281c3b8f57cf97c093a21f037fd746e07995fbeb214c62",
+    "arrivalCount": 2523,
+    "priorOperationalReplayPassed": true,
+    "priorProjectionMode": "final_governed_clock",
+    "priorFutureEvidenceViolations": 0
+  },
+  "priorValidatedAssociationMetrics": {
+    "schemaVersion": "vigia-official-archive-benchmark.v2",
+    "caseCount": 35,
+    "associatedCases": 35,
+    "associationRate": 1,
+    "reportJoinAccuracy": 1,
+    "fragmentedCases": 0,
+    "fragmentationRate": 0,
+    "falseMergedEvents": 0,
+    "falseMergeRate": 0,
+    "observationLevelAssociationAccuracy": 0.7556,
+    "labelledPhysicalObservations": 2488,
+    "correctlyAssociatedPhysicalObservations": 1880,
+    "ambiguityCount": 608,
+    "ambiguityRate": 0.2444,
+    "physicalFirstCases": 7,
+    "physicalFirstRate": 0.2,
+    "physicalFirstEventRetention": 1,
+    "physicalLeadMedianMinutes": 41,
+    "physicalLeadMaxMinutes": 433,
+    "cases": [
+      {
+        "id": "PT-2024-ICNF-59380",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support",
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-2BBA90926F",
+        "predictedEventIds": [
+          "PT-2024-2BBA90926F"
+        ],
+        "unresolvedObservationCount": 23,
+        "thermalObservationCount": 124,
+        "associatedPhysicalObservations": 101,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 8
+      },
+      {
+        "id": "PT-2024-ICNF-59191",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support",
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-F5561C021A",
+        "predictedEventIds": [
+          "PT-2024-F5561C021A"
+        ],
+        "unresolvedObservationCount": 31,
+        "thermalObservationCount": 84,
+        "associatedPhysicalObservations": 53,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 151
+      },
+      {
+        "id": "PT-2024-ICNF-59325",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support",
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-057B18C6A1",
+        "predictedEventIds": [
+          "PT-2024-057B18C6A1"
+        ],
+        "unresolvedObservationCount": 30,
+        "thermalObservationCount": 124,
+        "associatedPhysicalObservations": 94,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 100
+      },
+      {
+        "id": "PT-2024-ICNF-58921",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-6D58421AF1",
+        "predictedEventIds": [
+          "PT-2024-6D58421AF1"
+        ],
+        "unresolvedObservationCount": 9,
+        "thermalObservationCount": 27,
+        "associatedPhysicalObservations": 18,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 24
+      },
+      {
+        "id": "PT-2024-ICNF-59158",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-7AB912C531",
+        "predictedEventIds": [
+          "PT-2024-7AB912C531"
+        ],
+        "unresolvedObservationCount": 9,
+        "thermalObservationCount": 49,
+        "associatedPhysicalObservations": 40,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 41
+      },
+      {
+        "id": "PT-2024-ICNF-59677",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-EC4AC3A4E2",
+        "predictedEventIds": [
+          "PT-2024-EC4AC3A4E2"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 44,
+        "associatedPhysicalObservations": 44,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 433
+      },
+      {
+        "id": "PT-2024-ICNF-58591",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "physical_first_late_report"
+        ],
+        "reportEventId": "PT-2024-F0DE25B00C",
+        "predictedEventIds": [
+          "PT-2024-F0DE25B00C"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 25,
+        "associatedPhysicalObservations": 25,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": 2
+      },
+      {
+        "id": "PT-2024-ICNF-59214",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-36A30824A1",
+        "predictedEventIds": [
+          "PT-2024-36A30824A1"
+        ],
+        "unresolvedObservationCount": 98,
+        "thermalObservationCount": 118,
+        "associatedPhysicalObservations": 20,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-58977",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-BD59EA7693",
+        "predictedEventIds": [
+          "PT-2024-BD59EA7693"
+        ],
+        "unresolvedObservationCount": 25,
+        "thermalObservationCount": 139,
+        "associatedPhysicalObservations": 114,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59043",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-BD8AF820BA",
+        "predictedEventIds": [
+          "PT-2024-BD8AF820BA"
+        ],
+        "unresolvedObservationCount": 58,
+        "thermalObservationCount": 147,
+        "associatedPhysicalObservations": 89,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-58975",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-D3056E55A4",
+        "predictedEventIds": [
+          "PT-2024-D3056E55A4"
+        ],
+        "unresolvedObservationCount": 16,
+        "thermalObservationCount": 109,
+        "associatedPhysicalObservations": 93,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-58230",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [],
+        "reportEventId": "PT-2024-A70A1C33D7",
+        "predictedEventIds": [
+          "PT-2024-A70A1C33D7"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 43,
+        "associatedPhysicalObservations": 43,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-58715",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [],
+        "reportEventId": "PT-2024-DE3C3226FB",
+        "predictedEventIds": [
+          "PT-2024-DE3C3226FB"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 26,
+        "associatedPhysicalObservations": 26,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-109",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [],
+        "reportEventId": "PT-2024-ED6251995D",
+        "predictedEventIds": [
+          "PT-2024-ED6251995D"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 33,
+        "associatedPhysicalObservations": 33,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-58116",
+        "evaluationSplit": "baseline_comparable",
+        "difficultyTags": [],
+        "reportEventId": "PT-2024-9EF3892E4E",
+        "predictedEventIds": [
+          "PT-2024-9EF3892E4E"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 22,
+        "associatedPhysicalObservations": 22,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59206",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-7BEE6A09C4",
+        "predictedEventIds": [
+          "PT-2024-7BEE6A09C4"
+        ],
+        "unresolvedObservationCount": 17,
+        "thermalObservationCount": 87,
+        "associatedPhysicalObservations": 70,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59108",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-2D19E53100",
+        "predictedEventIds": [
+          "PT-2024-2D19E53100"
+        ],
+        "unresolvedObservationCount": 25,
+        "thermalObservationCount": 76,
+        "associatedPhysicalObservations": 51,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59063",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-9C57B65B14",
+        "predictedEventIds": [
+          "PT-2024-9C57B65B14"
+        ],
+        "unresolvedObservationCount": 21,
+        "thermalObservationCount": 108,
+        "associatedPhysicalObservations": 87,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59135",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-A7ED042B7A",
+        "predictedEventIds": [
+          "PT-2024-A7ED042B7A"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 60,
+        "associatedPhysicalObservations": 60,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59334",
+        "evaluationSplit": "development",
+        "difficultyTags": [],
+        "reportEventId": "PT-2024-B70177C931",
+        "predictedEventIds": [
+          "PT-2024-B70177C931"
+        ],
+        "unresolvedObservationCount": 47,
+        "thermalObservationCount": 63,
+        "associatedPhysicalObservations": 16,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59294",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-297FC08311",
+        "predictedEventIds": [
+          "PT-2024-297FC08311"
+        ],
+        "unresolvedObservationCount": 15,
+        "thermalObservationCount": 59,
+        "associatedPhysicalObservations": 44,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59127",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-B7774BDF15",
+        "predictedEventIds": [
+          "PT-2024-B7774BDF15"
+        ],
+        "unresolvedObservationCount": 49,
+        "thermalObservationCount": 86,
+        "associatedPhysicalObservations": 37,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59033",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-E8FB434AEA",
+        "predictedEventIds": [
+          "PT-2024-E8FB434AEA"
+        ],
+        "unresolvedObservationCount": 11,
+        "thermalObservationCount": 47,
+        "associatedPhysicalObservations": 36,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59194",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-DE4ECDF4F8",
+        "predictedEventIds": [
+          "PT-2024-DE4ECDF4F8"
+        ],
+        "unresolvedObservationCount": 22,
+        "thermalObservationCount": 58,
+        "associatedPhysicalObservations": 36,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59193",
+        "evaluationSplit": "development",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-6B6785C251",
+        "predictedEventIds": [
+          "PT-2024-6B6785C251"
+        ],
+        "unresolvedObservationCount": 29,
+        "thermalObservationCount": 74,
+        "associatedPhysicalObservations": 45,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59221",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-4421C8E8DD",
+        "predictedEventIds": [
+          "PT-2024-4421C8E8DD"
+        ],
+        "unresolvedObservationCount": 12,
+        "thermalObservationCount": 56,
+        "associatedPhysicalObservations": 44,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59096",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-B91F07B65C",
+        "predictedEventIds": [
+          "PT-2024-B91F07B65C"
+        ],
+        "unresolvedObservationCount": 12,
+        "thermalObservationCount": 69,
+        "associatedPhysicalObservations": 57,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59304",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-F0B2C5E59F",
+        "predictedEventIds": [
+          "PT-2024-F0B2C5E59F"
+        ],
+        "unresolvedObservationCount": 10,
+        "thermalObservationCount": 83,
+        "associatedPhysicalObservations": 73,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59265",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-6D94344444",
+        "predictedEventIds": [
+          "PT-2024-6D94344444"
+        ],
+        "unresolvedObservationCount": 12,
+        "thermalObservationCount": 65,
+        "associatedPhysicalObservations": 53,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59306",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-6A568357E8",
+        "predictedEventIds": [
+          "PT-2024-6A568357E8"
+        ],
+        "unresolvedObservationCount": 8,
+        "thermalObservationCount": 70,
+        "associatedPhysicalObservations": 62,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59231",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-E0B34772D8",
+        "predictedEventIds": [
+          "PT-2024-E0B34772D8"
+        ],
+        "unresolvedObservationCount": 16,
+        "thermalObservationCount": 78,
+        "associatedPhysicalObservations": 62,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59200",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-380C099EE0",
+        "predictedEventIds": [
+          "PT-2024-380C099EE0"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 61,
+        "associatedPhysicalObservations": 61,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59259",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire",
+          "large_evolving_support"
+        ],
+        "reportEventId": "PT-2024-8B60F44E01",
+        "predictedEventIds": [
+          "PT-2024-8B60F44E01"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 85,
+        "associatedPhysicalObservations": 85,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59175",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [],
+        "reportEventId": "PT-2024-6716FCA32C",
+        "predictedEventIds": [
+          "PT-2024-6716FCA32C"
+        ],
+        "unresolvedObservationCount": 3,
+        "thermalObservationCount": 59,
+        "associatedPhysicalObservations": 56,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      },
+      {
+        "id": "PT-2024-ICNF-59099",
+        "evaluationSplit": "held_out",
+        "difficultyTags": [
+          "nearby_concurrent_fire"
+        ],
+        "reportEventId": "PT-2024-ADC854E5CA",
+        "predictedEventIds": [
+          "PT-2024-ADC854E5CA"
+        ],
+        "unresolvedObservationCount": 0,
+        "thermalObservationCount": 30,
+        "associatedPhysicalObservations": 30,
+        "associated": true,
+        "fragmented": false,
+        "physicalLeadMinutes": null
+      }
+    ],
+    "splitMetrics": {
+      "baseline_comparable": {
+        "caseCount": 15,
+        "associatedCases": 15,
+        "associationRate": 1,
+        "reportJoinAccuracy": 1,
+        "fragmentedCases": 0,
+        "fragmentationRate": 0,
+        "falseMergedEvents": 0,
+        "falseMergeRate": 0,
+        "observationLevelAssociationAccuracy": 0.7316,
+        "labelledPhysicalObservations": 1114,
+        "correctlyAssociatedPhysicalObservations": 815,
+        "ambiguityCount": 299,
+        "ambiguityRate": 0.2684,
+        "physicalFirstCases": 7,
+        "physicalFirstRate": 0.4667,
+        "physicalFirstEventRetention": 1
+      },
+      "development": {
+        "caseCount": 10,
+        "associatedCases": 10,
+        "associationRate": 1,
+        "reportJoinAccuracy": 1,
+        "fragmentedCases": 0,
+        "fragmentationRate": 0,
+        "falseMergedEvents": 0,
+        "falseMergeRate": 0,
+        "observationLevelAssociationAccuracy": 0.6713,
+        "labelledPhysicalObservations": 718,
+        "correctlyAssociatedPhysicalObservations": 482,
+        "ambiguityCount": 236,
+        "ambiguityRate": 0.3287,
+        "physicalFirstCases": 0,
+        "physicalFirstRate": 0,
+        "physicalFirstEventRetention": null
+      },
+      "held_out": {
+        "caseCount": 10,
+        "associatedCases": 10,
+        "associationRate": 1,
+        "reportJoinAccuracy": 1,
+        "fragmentedCases": 0,
+        "fragmentationRate": 0,
+        "falseMergedEvents": 0,
+        "falseMergeRate": 0,
+        "observationLevelAssociationAccuracy": 0.8887,
+        "labelledPhysicalObservations": 656,
+        "correctlyAssociatedPhysicalObservations": 583,
+        "ambiguityCount": 73,
+        "ambiguityRate": 0.1113,
+        "physicalFirstCases": 0,
+        "physicalFirstRate": 0,
+        "physicalFirstEventRetention": null
+      }
+    },
+    "beforeAfter": {
+      "baselineComparable": {
+        "before": {
+          "caseCount": 15,
+          "associationRate": 0.1333,
+          "fragmentationRate": 0.6667,
+          "falseMergeRate": 0.2059,
+          "unjustifiedIdentityReassignments": 151
+        },
+        "after": {
+          "caseCount": 15,
+          "associatedCases": 15,
+          "associationRate": 1,
+          "reportJoinAccuracy": 1,
+          "fragmentedCases": 0,
+          "fragmentationRate": 0,
+          "falseMergedEvents": 0,
+          "falseMergeRate": 0,
+          "observationLevelAssociationAccuracy": 0.7316,
+          "labelledPhysicalObservations": 1114,
+          "correctlyAssociatedPhysicalObservations": 815,
+          "ambiguityCount": 299,
+          "ambiguityRate": 0.2684,
+          "physicalFirstCases": 7,
+          "physicalFirstRate": 0.4667,
+          "physicalFirstEventRetention": 1
+        }
+      }
+    },
+    "unmeasured": [
+      "provider delivery latency",
+      "exact ignition-time lead",
+      "authoritative perimeter accuracy",
+      "calibrated fire-existence probability",
+      "negative-case precision outside the governed incident corpus",
+      "ambiguous-to-correctly-abstained rate without authoritative pixel identity labels"
+    ]
+  },
+  "modelDecision": {
+    "state": "NOT_ADVANCED_TO_SHADOW_ML",
+    "reasons": [
+      "No negative opportunity-control corpus is present, so false-incident rate is not measurable.",
+      "The real historical corpus covers one region and one season; multi-region and cross-season generalization are not established.",
+      "VIIRS platform diversity is not independent physical-modality diversity."
+    ]
+  },
+  "releaseGates": {
+    "futureInformationLeakage": "PASS",
+    "deterministicReplay": "PASS",
+    "realHistoricalIncidentCount": 35,
+    "multiRegionHistorical": "NOT_MET",
+    "twoSeasonHistorical": "NOT_MET",
+    "falseIncidentRate": null,
+    "associationFragmentation": 0,
+    "associationOverMerge": 0
+  },
+  "limitations": [
+    "This evaluation does not claim ignition-time ground truth.",
+    "The current live US activation is recorded separately and is not promoted to a historical test label."
+  ]
+}

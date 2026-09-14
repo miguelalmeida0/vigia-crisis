@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "vigia.authoritative-orbit-elements.v1",
+  "fetchedAt": "2026-08-13T20:14:49.122Z",
+  "authority": "CelesTrak current GP element sets sourced from US Space Force 18th Space Defense Squadron data",
+  "calculationUse": "SGP4 event-specific prediction; never proof of acquisition, usable coverage, or signal",
+  "satellites": [
+    {
+      "platform": "Sentinel-3A",
+      "noradId": 41335,
+      "name": "SENTINEL-3A",
+      "line1": "1 41335U 16011A   26225.16198918  .00000030  00000+0  30587-4 0  9994",
+      "line2": "2 41335  98.6211 291.7159 0001062  88.0860 272.0442 14.26737028546183",
+      "sourceUrl": "https://celestrak.org/NORAD/elements/gp.php?CATNR=41335&FORMAT=TLE",
+      "tleEpochToken": "26225.16198918",
+      "checksumSha256": "fdebb5169e2effe0277cc60e5d4e640ef380e83f25d0d081cb84fd4113b5f8de"
+    },
+    {
+      "platform": "Sentinel-3B",
+      "noradId": 43437,
+      "name": "SENTINEL-3B",
+      "line1": "1 43437U 18039A   26225.13512697  .00000037  00000+0  33153-4 0  9991",
+      "line2": "2 43437  98.6211 291.8389 0001636 103.8595 256.2767 14.26737029432248",
+      "sourceUrl": "https://celestrak.org/NORAD/elements/gp.php?CATNR=43437&FORMAT=TLE",
+      "tleEpochToken": "26225.13512697",
+      "checksumSha256": "f5d6b18e7542c4209cd11975904be94ae7f9ffb96f8db9652d1c3ffbb963664e"
+    }
+  ],
+  "datasetHash": "sha256:b2cec7c0155df950521765eb89f433e2cc31b87605bba4572adb01da34684028"
+}

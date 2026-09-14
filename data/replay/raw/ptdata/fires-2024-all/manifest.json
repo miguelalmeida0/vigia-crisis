@@ -1,0 +1,645 @@
+{
+  "schema": "vigia.icnf-reference-archive.v1",
+  "acquiredAt": "2026-08-12T15:10:48.200Z",
+  "provider": "api.ptdata.org",
+  "upstreamAuthority": "Instituto da Conservacao da Natureza e das Florestas (ICNF) SGIF",
+  "year": 2024,
+  "selection": "All provider records returned for year=2024 and min_area=0, paginated without performance-based selection.",
+  "providerRows": 6255,
+  "uniqueRecords": 6253,
+  "duplicateRows": 2,
+  "duplicatePolicy": "Exact duplicate natural IDs are retained in the immutable page archive and de-duplicated by ID for evaluation. Conflicting duplicate payloads fail acquisition.",
+  "pageSize": 100,
+  "pages": [
+    {
+      "offset": 0,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=0",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00000.json",
+      "checksumSha256": "bd26e503cfc2b2437fc3c18a67757077922588d1707ff8d75394b49ded7495a8",
+      "providerTimestamp": "2026-08-12T15:06:35Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00100.json",
+      "checksumSha256": "ff6e04386aae8560f4eef6efceb313f54bb6c799144b76b70a0771c3a552116c",
+      "providerTimestamp": "2026-08-12T15:06:35Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 200,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00200.json",
+      "checksumSha256": "ce5636f7fc1a29f50ce800028df7ba8e299735f7302679b45f150bf330259979",
+      "providerTimestamp": "2026-08-12T15:06:35Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 300,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=300",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00300.json",
+      "checksumSha256": "106988eea58da7a4f33e413d6a87eb298f895bee2cb971c257dff115e11ac0fe",
+      "providerTimestamp": "2026-08-12T15:06:35Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 400,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=400",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00400.json",
+      "checksumSha256": "d1518889a5006b70b6b8a16ed7516eca483f4ff6f49532a0bf3b06f760748b00",
+      "providerTimestamp": "2026-08-12T15:06:35Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 500,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=500",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00500.json",
+      "checksumSha256": "cfd1790d2b9ae5118d17a1559274cdbc533fd5c3daf7559af04ff323e946c3f7",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 600,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=600",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00600.json",
+      "checksumSha256": "463f30e2892334e6a7e810b5a4884fc72910a1cf63c44e754f0fe7c2eb01e854",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 700,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=700",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00700.json",
+      "checksumSha256": "f376dcf05899ca298c6548a3b6d00b77695f206fddf27ceb7661b829c52bb2e8",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 800,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=800",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00800.json",
+      "checksumSha256": "a2e938a6e5d0f6dd872fa3ad0c8eca1b3cc0e60515b05280441dda12806a1023",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 900,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=900",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-00900.json",
+      "checksumSha256": "9016c5a12b4c0e4be3b6cdc59340e74d409f5a4db18c0a0f4d7cbd0695e599f1",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1000,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1000",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01000.json",
+      "checksumSha256": "6a842e8db4cef654fcec805547c2213bcb42a6ef7a9828d3f01f67f00851380f",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01100.json",
+      "checksumSha256": "98975af034bca682d77fc4cc0984d12f9d4ae3c64d86ab252994d1d2659d5f8f",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1200,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01200.json",
+      "checksumSha256": "f2b7ea4d2beeba714a126ef5498edf7aa23278a7a93c834e433b0a1a46d1f551",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1300,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1300",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01300.json",
+      "checksumSha256": "b52a7be0471e23e72098365ef5f5c8ea3625924379b8ae97625e82417e59a760",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1400,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1400",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01400.json",
+      "checksumSha256": "1ebae5ae00dd2605ee23351e05bf9c8a31b7a89eba42aa695498d2fcf582d09d",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1500,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1500",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01500.json",
+      "checksumSha256": "6f261bca76073930181dd53dd8fdd79efcfaefd40f24ea2655d58aa9a41df304",
+      "providerTimestamp": "2026-08-12T15:06:36Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1600,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1600",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01600.json",
+      "checksumSha256": "e686cd7a6b4660a33e085286a03aea18ed617e908918e57c176aac1255c15f3f",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1700,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1700",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01700.json",
+      "checksumSha256": "815f22b1fed34b6ad93df3fd015441ccd7e880f03f1b6ce6576187f555864cf0",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1800,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1800",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01800.json",
+      "checksumSha256": "b192b40a6c720d8db9788c829c9889c52116685fe310ce8590e73005cd438d72",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 1900,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=1900",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-01900.json",
+      "checksumSha256": "102893e6d8b04b9056a1eef174fbb7ffa62968697c92463fced24b33c4b82a96",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2000,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2000",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02000.json",
+      "checksumSha256": "86ac84b004cd9888491b45e190bd7cfc0770eb627454a7e54f44a1dd154fbcc8",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02100.json",
+      "checksumSha256": "e9b44921eef6b63e08087262528ad5ae3d93bd919a43ff34a33482ebff7719bc",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2200,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02200.json",
+      "checksumSha256": "9602775becefa06e7fb9f0e1c7281bb08179b8185cff7e896cdd26a5360747f7",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2300,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2300",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02300.json",
+      "checksumSha256": "580ba88d901c20ff6eb1752003d7b95af85df72aacc168c38f05383faa65432c",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2400,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2400",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02400.json",
+      "checksumSha256": "2268fcce4f9ca2ed03a1895d8bc1cfff8ebad39d0f9ed9f733b4ebbb86625c08",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2500,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2500",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02500.json",
+      "checksumSha256": "de94313cc0c786cc2fa15af918c96ef00ea9bb7fa76022928b0541f8aea6451d",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2600,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2600",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02600.json",
+      "checksumSha256": "03ceba353a8c7f9d285da05d9721c0315aed72fd5712bd0f7188dfb3a418edd4",
+      "providerTimestamp": "2026-08-12T15:06:37Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2700,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2700",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02700.json",
+      "checksumSha256": "2a4133f251acc67d80896721c39afffced46ef5d9fb81c9c5015dd7221d22b31",
+      "providerTimestamp": "2026-08-12T15:06:38Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2800,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2800",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02800.json",
+      "checksumSha256": "03d391a1d6c528ec7f077b798f6ff02307e1e798e46af408c3b361a9c4d15b03",
+      "providerTimestamp": "2026-08-12T15:06:38Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 2900,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=2900",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-02900.json",
+      "checksumSha256": "a365bd8783ce883f45b26a4b9dda8a9c93c7923591448b81f743528dd3119821",
+      "providerTimestamp": "2026-08-12T15:06:38Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3000,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3000",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03000.json",
+      "checksumSha256": "1f354f1d5d760ff8e655eb5e9e033d9c23ffe1deaae4555b0a57d75af05cac9b",
+      "providerTimestamp": "2026-08-12T15:06:38Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03100.json",
+      "checksumSha256": "f8fcedfa7a74d2ca6d1e7696085ab72f88e902a4d867e89687608074c29ab390",
+      "providerTimestamp": "2026-08-12T15:07:03Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3200,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03200.json",
+      "checksumSha256": "f4ead071ca79094b922d2c9fdf86c5c693b5542d8d474943af85d720913946c6",
+      "providerTimestamp": "2026-08-12T15:07:03Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3300,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3300",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03300.json",
+      "checksumSha256": "57a9aba5dbf993e1e36f3cf64a760386fb328e2598795c7b72e2c020f4988693",
+      "providerTimestamp": "2026-08-12T15:07:03Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3400,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3400",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03400.json",
+      "checksumSha256": "36f8f70076a1b2fe2d8d87b7ddceb04853eb8c0102b8e0db3b978e2c34d3ce25",
+      "providerTimestamp": "2026-08-12T15:07:03Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3500,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3500",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03500.json",
+      "checksumSha256": "8c531ecae7bc006ac975bcbf2a4b58d61dd5c44ef3253ea119b062cb450fb211",
+      "providerTimestamp": "2026-08-12T15:07:03Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3600,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3600",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03600.json",
+      "checksumSha256": "7d4b35f93e2255644508335d2983312486690623ad91355bc831c6c6da32a7ba",
+      "providerTimestamp": "2026-08-12T15:07:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3700,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3700",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03700.json",
+      "checksumSha256": "e273edac960ee46d346c42a02ad0ebe79d8feeaeac66379bd4b7061aca60490d",
+      "providerTimestamp": "2026-08-12T15:07:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3800,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3800",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03800.json",
+      "checksumSha256": "94dc6d873f27d2fbd6e77e7962b72f9d2dcbeb3e33998553899e39ff9debbbbe",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 3900,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=3900",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-03900.json",
+      "checksumSha256": "95f5ce521e2a1e3cf24e647ecddda1e05a30ddd186ea212d1cf403bf06b3216e",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4000,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4000",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04000.json",
+      "checksumSha256": "b8f3fc7b4a4e8efbd7a8585cb794ce36e2ef6314fb838baeed9835e44a169455",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04100.json",
+      "checksumSha256": "7f77ce81fbef1c6e7d20393942f297609259b6f3ae29defef022a93ce4401b21",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4200,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04200.json",
+      "checksumSha256": "7ff430ba6a775c448852626da7353b36d3de18de363d952a7007fece0192516b",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4300,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4300",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04300.json",
+      "checksumSha256": "3b5e65875084ed020bddfbc174c3014c9e9657db900a83655731e53e9a662369",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4400,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4400",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04400.json",
+      "checksumSha256": "bf512a2a57275c74f0b127082dd284d344def42fd26e19ced2769b17d6b7979e",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4500,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4500",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04500.json",
+      "checksumSha256": "aa394cae2eeb984b88c8eb7dcd846d25b2e67f2533fc98330c8ff339ed29676e",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4600,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4600",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04600.json",
+      "checksumSha256": "6a8f8a7b730d0c9f8767926b27226ebdf860889b007c2843f4a79860a9833608",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4700,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4700",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04700.json",
+      "checksumSha256": "61ad7dacdf240b36229d2ef7839b61cb489f8adf17c1ef4e985e704175c77432",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4800,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4800",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04800.json",
+      "checksumSha256": "e9d4d93b925b10916805b348db1b2a96faeb0dc400b05091872126a7ae8136c7",
+      "providerTimestamp": "2026-08-12T15:08:04Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 4900,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=4900",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-04900.json",
+      "checksumSha256": "e4d36c3708460f4b870e018cd370e1efd8bb936eac5bb82780f7ae835fb9b031",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5000,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5000",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05000.json",
+      "checksumSha256": "758c17bb18b8ab23caffe3ff911a280cee491f84950a34dacd73c68e0899665f",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05100.json",
+      "checksumSha256": "1e8d198f5ab96b38c362a9b8c0cb73c37f52aedc2bf3755da684ca8ace67f344",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5200,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05200.json",
+      "checksumSha256": "c291c82cad8ca6a0c494f22e13227630b6d6f1c03c032bf991de67f6bfeed1c5",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5300,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5300",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05300.json",
+      "checksumSha256": "98679c93244bf56c6b0ff671ce75b95aeafe2aa1b75d58b4827ca8a6be96fac9",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5400,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5400",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05400.json",
+      "checksumSha256": "6865bfb1c2ebfd4dadf8d1729bddf2e3a3573539fc2f967f0cba6da9d84c45d2",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5500,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5500",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05500.json",
+      "checksumSha256": "caf5020e7fae2fa0834e9bfbfcfd658a7279a84cd4dd2da205c30a3a81e583e0",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5600,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5600",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05600.json",
+      "checksumSha256": "5f3ff180d4e8a130253088e4d64dee74de58928baee7ca4f0358a7444a83ab47",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5700,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5700",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05700.json",
+      "checksumSha256": "2c877d0cf155cc499c32de3fb94ce34ac28ccce30e96e589fc619122d839970f",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5800,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5800",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05800.json",
+      "checksumSha256": "21e75afb7dffb474ea5d221388cd5fd433c746e8a5686facda1094196dc3e7c0",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 5900,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=5900",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-05900.json",
+      "checksumSha256": "48a9d03ffd27a7000d11b8736bbcf015cd726c023395e8a757cb6a3fbe40b023",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 6000,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=6000",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-06000.json",
+      "checksumSha256": "6e577694e5e024f785571d6f05779f0ee8a8a68476ca671301179e2d5359b351",
+      "providerTimestamp": "2026-08-12T15:08:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 6100,
+      "count": 100,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=6100",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-06100.json",
+      "checksumSha256": "6211c759dbd4065694cf22b572fbf687e179425d4db98595529f10600025fcf4",
+      "providerTimestamp": "2026-08-12T15:09:05Z",
+      "providerVersion": "0.1.2"
+    },
+    {
+      "offset": 6200,
+      "count": 55,
+      "total": 6255,
+      "url": "https://api.ptdata.org/v1/civil-protection/fires?year=2024&min_area=0&limit=100&offset=6200",
+      "file": "data/replay/raw/ptdata/fires-2024-all/offset-06200.json",
+      "checksumSha256": "8fe2144070c8518f110bc177929baafaf3b3225651ce39b384b462c036f8cf14",
+      "providerTimestamp": "2026-08-12T15:09:05Z",
+      "providerVersion": "0.1.2"
+    }
+  ]
+}

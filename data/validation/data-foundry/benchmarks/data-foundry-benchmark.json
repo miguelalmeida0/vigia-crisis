@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "vigia.data-foundry-benchmark.v3",
+  "boundedStageRelease": true,
+  "isolatedMemoryHeavyStages": true,
+  "memorySamples": [
+    {
+      "stage": "START",
+      "rssBytes": 65634304
+    },
+    {
+      "stage": "CATALOG_BUILT",
+      "rssBytes": 427196416
+    },
+    {
+      "stage": "WORKLOADS_COMPLETE",
+      "rssBytes": 395460608
+    },
+    {
+      "stage": "CATALOG_RELEASED",
+      "rssBytes": 255705088
+    },
+    {
+      "stage": "CORPUS_BENCHMARK_COMPLETE",
+      "rssBytes": 255737856
+    },
+    {
+      "stage": "FULL_REBUILD_COMPLETE",
+      "rssBytes": 255754240
+    },
+    {
+      "stage": "COMPLETE",
+      "rssBytes": 255803392
+    }
+  ],
+  "stageProcesses": [
+    {
+      "stage": "MATERIALIZE_HRRR",
+      "peakRssBytes": 496910336
+    },
+    {
+      "stage": "CORPUS_BENCHMARK",
+      "peakRssBytes": 453541888
+    },
+    {
+      "stage": "CATALOG_REBUILD",
+      "peakRssBytes": 424181760
+    }
+  ],
+  "workloads": {
+    "lineageTraversal": {
+      "operations": 100000,
+      "elapsedMs": 618.847,
+      "throughputPerSecond": 161590.938,
+      "p50Ms": 0.006089,
+      "p95Ms": 0.006453
+    },
+    "dataGapEvaluation": {
+      "operations": 10000,
+      "elapsedMs": 196.529,
+      "throughputPerSecond": 50883.119,
+      "p50Ms": 0.018811,
+      "p95Ms": 0.025806
+    },
+    "acquisitionPlanEvaluation": {
+      "operations": 1000,
+      "elapsedMs": 58.683,
+      "throughputPerSecond": 17040.601,
+      "p50Ms": 0.057004,
+      "p95Ms": 0.069372
+    },
+    "hrrrGribDecoding": {
+      "operations": 5,
+      "elapsedMs": 1006.295,
+      "throughputFieldsPerSecond": 4.969
+    },
+    "incidentLocalWeatherMaterialization": {
+      "elapsedMs": 1006.295,
+      "cells": 495
+    },
+    "fuelTerrainMaterialization": {
+      "p50Ms": 0.027,
+      "p95Ms": 0.089
+    },
+    "forecastExampleGeneration": {
+      "p50Ms": 255.355,
+      "p95Ms": 267.218
+    },
+    "leakageAudit": {
+      "p50Ms": 0.209,
+      "p95Ms": 0.485
+    },
+    "fullCorpusReplay": {
+      "p50Ms": 0.267,
+      "p95Ms": 0.499
+    },
+    "incrementalMaterialization": {
+      "elapsedMs": 0.1885,
+      "affectedProducts": 18
+    },
+    "sustainedIncrementalInvalidation": {
+      "operations": 10000,
+      "elapsedMs": 37.822,
+      "rssStartBytes": 255754240,
+      "rssEndBytes": 255770624,
+      "rssGrowthBytes": 16384,
+      "stableMemory": true
+    },
+    "fullFoundryRebuild": {
+      "elapsedMs": 246.694
+    }
+  },
+  "peakMemoryBytes": 496910336,
+  "downloadedBytes": 71333608,
+  "uniqueStoredBytes": 41947056,
+  "deduplicationSavingsBytes": 29386552,
+  "incrementalVsFullCostRatio": 0.000764105
+}

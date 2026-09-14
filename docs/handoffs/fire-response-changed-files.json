@@ -1,0 +1,200 @@
+[
+  {
+    "path": "apps/operator-console/index.html",
+    "change": "modified",
+    "beforeSha256": "db12527bcd977de64b3c61d20f5dc7646cd3604aa7d19124d8fdaf225c53912e",
+    "afterSha256": "52c9407e5b5fb36a931e3f1d675c61812b0a596aa9b8e98854aaea2baa108361"
+  },
+  {
+    "path": "apps/operator-console/src/app.js",
+    "change": "modified",
+    "beforeSha256": "2f82508489726f0069a5ab09799c25070863c39f2febfd23fd0c3f98508a3c93",
+    "afterSha256": "239570fbd256bcffb873f7acd4006ec4b88e6c20787c2b894faea5c00bb9834e"
+  },
+  {
+    "path": "apps/operator-console/src/approved/controller.js",
+    "change": "modified",
+    "beforeSha256": "e32e0fa3a6666c5951a03ded098b4c304443e48cc09b287143d558bb1b865a0c",
+    "afterSha256": "9442df54fe1c5f96680b64e38de11656fcf07df4b5cb2ca26044cd2bd75bdf0e"
+  },
+  {
+    "path": "apps/operator-console/src/approved/data/field.js",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "0aeb6f8582245722c25c666b35e1b2444f7b964065a1bd472ec6c2c9c08feb04"
+  },
+  {
+    "path": "apps/operator-console/src/approved/data/model.js",
+    "change": "modified",
+    "beforeSha256": "d0be2c7eb02165aff1c29e3ff859c2a44f8e4eebee979b0bb66dec1ebb33970d",
+    "afterSha256": "e8f8ca84ec42c7d89fdbc30c46bf3fc6956d2944644ad81cc38bd9fdd41f720d"
+  },
+  {
+    "path": "apps/operator-console/src/approved/index.js",
+    "change": "modified",
+    "beforeSha256": "f122f9e55f6354e83f618e1297b49bd603b11c5ff80fc1bdce9087f0961a089b",
+    "afterSha256": "69b7d056a24e3070d357d4311824dd04ab300b4655a9e0f1b26e701d0a4e796b"
+  },
+  {
+    "path": "apps/operator-console/src/approved/routes/detail.js",
+    "change": "modified",
+    "beforeSha256": "4dc7b22b63d9c6d3e36307166dc0831e4aafb40e1c8a82aee6fabd987904a6c8",
+    "afterSha256": "0920e85da509024271acd437f35d216998e2af2acfea1ca75e9927ca389d9bc1"
+  },
+  {
+    "path": "apps/operator-console/src/approved/routes/fire-activity.js",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "75e66007205d19e7ffedd6536a1c61fcf7a797ba7d244ddee3426e7477e86de1"
+  },
+  {
+    "path": "apps/operator-console/src/approved/routes/intelligence.js",
+    "change": "modified",
+    "beforeSha256": "50277a12e4c292662e12b6398bbf699690b92468f4e064d481d60a6197ea04c0",
+    "afterSha256": "ad7c63356652702f3e29c0644eac86a282a55988e29303a2d0963ec8cec23b3e"
+  },
+  {
+    "path": "apps/operator-console/src/approved/routes/operations.js",
+    "change": "modified",
+    "beforeSha256": "2e16fd73a24719e4244b30d420e20f00fa2441b663eb450302a45793a17ca1b4",
+    "afterSha256": "e48d67f4eade99b4e18143fe707f4db32811b73c011ec8b18fa0b19ed5d6f92f"
+  },
+  {
+    "path": "apps/operator-console/src/approved/routes/response-access.js",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "e5b3202d51de4446119d8963a10b1d8233623a02550acf1a606af42984a69022"
+  },
+  {
+    "path": "apps/operator-console/src/approved/ui/field.js",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "840bd72b2d9a4f92319cec2273b83e5bcb20ff3e44d18a0fe3806f38847b27bf"
+  },
+  {
+    "path": "apps/operator-console/src/approved/ui/map.js",
+    "change": "modified",
+    "beforeSha256": "d058f08efb7c22b05559267dc96d4797b1d11acc03f9de6484f1e13f2e26d89f",
+    "afterSha256": "be25aae16d282371513ab87b21a77c4aa4215fa939990de8d1db43f8957a431e"
+  },
+  {
+    "path": "apps/operator-console/src/approved/ui/shell.js",
+    "change": "modified",
+    "beforeSha256": "483589f1241d87a9815a1c03e9433dd3748f1d567d660ff24da2d7c66d1d3669",
+    "afterSha256": "b1cc9afc9f1b041e8f2ced56d8dbbbae0ea004f12a14ac424affe26319cfdd9d"
+  },
+  {
+    "path": "apps/operator-console/src/canonicalComponents.js",
+    "change": "modified",
+    "beforeSha256": "9ea153f664fde6e9557041ca5d93eda2dcf1183e56d7bfb432e5f56a462e5f0a",
+    "afterSha256": "04ab71cccb4cfa3957878494d70452206011fa377ddc59e8aee55fee540ad4a4"
+  },
+  {
+    "path": "apps/operator-console/src/data.js",
+    "change": "modified",
+    "beforeSha256": "b64ab3ed83416e1bd7ee5e11564957c8818799726a81d3859d25702dbbcc7d92",
+    "afterSha256": "786e1af11f98d3c4a5d4049e7fd2eb78ce58e63010ed5839673a0db9a09439c7"
+  },
+  {
+    "path": "apps/operator-console/src/routeState.js",
+    "change": "modified",
+    "beforeSha256": "29b18ece3d83a3e748bf2788ade325a8123931b48c94ed63dd747a5380c86039",
+    "afterSha256": "64494a49bf5b32ce744c8874123ac4929af6d40e89185c306aa66aee76f39ee1"
+  },
+  {
+    "path": "apps/operator-console/styles/approved/field.css",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "477504b70a6ce6f71d352605f92559ea8a80b28f2713582ca85873a1339125ce"
+  },
+  {
+    "path": "apps/operator-console/tests/fire-response.mjs",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "7c2bc8a39eba3261b4bf6834afdbd36984bf88d4509653c41b9c9ad9804cbe08"
+  },
+  {
+    "path": "apps/operator-console/tests/signal-composition.mjs",
+    "change": "modified",
+    "beforeSha256": "eb0901d42159044ff71bd43af9b91147d5f1ac825d389de354e783e6edd5441e",
+    "afterSha256": "98afd1f19ca9e9eb9f56a13baf293bbed617e9aad69af3a1f2b35a9d70c258bf"
+  },
+  {
+    "path": "apps/operator-console/tests/smoke.mjs",
+    "change": "modified",
+    "beforeSha256": "7f1b3e57ae3c514ad7b723c749e2e7b79b26f146d55e19708de6a4d177bbb0d5",
+    "afterSha256": "0e755bad3b388faa51476a504c30f0098b9115ad197f953d50e9cd49cae5ac8b"
+  },
+  {
+    "path": "apps/operator-console/tests/truth-integrity.mjs",
+    "change": "modified",
+    "beforeSha256": "e803990bdc613e1eb355b353459c22d39a49abfcfab9a24f29d94448b5b6b8d5",
+    "afterSha256": "a6b7766be1264e8a7053f478d4ae22af772027eef44da4af7a1b0178b7078852"
+  },
+  {
+    "path": "apps/operator-console/tests/ux-contract.mjs",
+    "change": "modified",
+    "beforeSha256": "652aa084d8ad5e23d17b198f10733060ac970f55e151912e45a1f0daf8cc4a9b",
+    "afterSha256": "988e0acff1b0d0a1ca161af3c56adf36cb8b94053df04abfa7282342daaf7362"
+  },
+  {
+    "path": "package.json",
+    "change": "modified",
+    "beforeSha256": "a9b887f6295127cb637163d82699110a2cfea77304e734b45b5c09a2a742f5b0",
+    "afterSha256": "17b70f1b05d1e05eaa1befc5eb0b5c135f1a956c659c205c24a21e18adf29cb5"
+  },
+  {
+    "path": "AGENTS.override.md",
+    "change": "modified",
+    "beforeSha256": null,
+    "afterSha256": "2d95472006d1181de08f5ac5459c13e2658b0d09e9a95d57427fba69f873692b",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": "PRODUCT.md",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "2b2085947e978e6b6befa81c9ff3b93d1ea60248bfac352a031d51a7734b7a26",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": "DESIGN.md",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "b7536a4d09c2edba763185b950c9b521de589b0f65ebe32d40feaa8fea75c4f4",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": ".impeccable/design.json",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "d0e90f9c2b9d9d982dab1b493252985c3306f7e59ca60c574cff3928d85d00b7",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": ".impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "38d291fd928cb6595ee4aac9c0beb73d151b73528f665d184becbdc91801d8b8",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": "docs/handoffs/FIRE_RESPONSE_DESIGN.md",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "a27505b2aa3cbeda0e4ff1d84ab0ad2b58bb8f331eb51f00fc4679a88a5c3183",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": "docs/handoffs/FIRE_RESPONSE_FINAL_REPORT.md",
+    "change": "added",
+    "beforeSha256": null,
+    "afterSha256": "b9ee4b0d8deb36df5f41569c8f6b8b67bc80d991121446aab66502070108ac3b",
+    "baselineNote": "Task-owned documentation; pre-task hash not captured."
+  },
+  {
+    "path": "docs/handoffs/fire-response-changed-files.json",
+    "change": "added",
+    "hashNote": "This manifest does not hash itself."
+  }
+]

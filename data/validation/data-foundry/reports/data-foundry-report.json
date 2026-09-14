@@ -1,0 +1,1590 @@
+{
+  "schemaVersion": "vigia.data-foundry-report.v1",
+  "registry": {
+    "fingerprint": "data-product-registry:sha256:57cd1f08b1894ad766ae5fae02a309e9873b5413eb6a5a0bca5b41947f95f1e0",
+    "products": 55,
+    "versions": 78
+  },
+  "lineage": {
+    "schemaVersion": "vigia.lineage-verification.v1",
+    "nodeCount": 100,
+    "edgeCount": 148,
+    "failures": [],
+    "passed": true,
+    "fingerprint": "lineage-verification:sha256:ae03a0cc327a90e1296f73d30f5372f851fd84bfe63d5172133f5407503ff439"
+  },
+  "pipeline": {
+    "tasks": 2,
+    "taskStates": {
+      "READY": 2
+    },
+    "eventChainValid": true
+  },
+  "acquisition": {
+    "rawProducts": 37,
+    "downloadedBytes": 71333608,
+    "uniqueStoredBytes": 41947056,
+    "deduplicationSavingsBytes": 29386552
+  },
+  "progression": {
+    "seasons": [
+      "2025",
+      "2026"
+    ],
+    "incidents": 2,
+    "revisions": 80,
+    "eligibleSequences": 1,
+    "quality": [
+      {
+        "schemaVersion": "vigia.progression-quality.v1",
+        "incidentId": "2025-AZGCP-000597",
+        "classification": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+        "revisionCount": 40,
+        "distinctRevisionCount": 40,
+        "duplicateSnapshots": 0,
+        "medianCadenceHours": 15.583333333333334,
+        "geometryValidityRate": 1,
+        "correctionEvents": 7,
+        "knowledgeTimeIntegrity": false,
+        "horizonCoverage": {
+          "1": false,
+          "3": false,
+          "6": true,
+          "12": true,
+          "24": true
+        },
+        "sourceComplete": true,
+        "states": [
+          {
+            "id": "wfigs-daily-state:sha256:d50a81052e1e45e7f538e07102411d01d3c69d20c463868db72087395eb0f73f",
+            "revision": 1,
+            "observedAt": "2025-07-05T11:26:41.000Z",
+            "availableToVigiaAt": "2025-07-05T19:41:41.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:a79a79dc237c849194f04c1871a561511ce95d083e42f3cfe516d1c59e2b99dc",
+            "cadenceHours": null,
+            "areaKm2": 0.0010600319402174958,
+            "areaRatio": null,
+            "centroidDisplacementKm": null,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:cd8e26248888b3a791b554dcc96572db9e879524659fe2ce90d7fc6638a51daa",
+            "revision": 2,
+            "observedAt": "2025-07-06T22:37:42.000Z",
+            "availableToVigiaAt": "2025-07-06T22:52:55.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:01103b5596b2a3804be1ff1dcd1700952b53d684ce0520a338510ccb6556ff1e",
+            "cadenceHours": 35.18361111111111,
+            "areaKm2": 0.03955501988790954,
+            "areaRatio": 37.314932114020735,
+            "centroidDisplacementKm": 0.045928570653309415,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:4cdcdfd73da799466c7fea4f60b3adddee519e048ed601d5efe764af64f12708",
+            "revision": 3,
+            "observedAt": "2025-07-07T14:32:37.000Z",
+            "availableToVigiaAt": "2025-07-07T22:47:37.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:361947144ca8263c332c0413a4de267ccaa3d0673bf470e09e3471e2469c1d88",
+            "cadenceHours": 15.915277777777778,
+            "areaKm2": 0.09097613036363322,
+            "areaRatio": 2.2999894987144516,
+            "centroidDisplacementKm": 0.07293834004212567,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:c15fd3d3828054c0184f9683179d00151094c985b0d7380a05348c4110f6e13d",
+            "revision": 4,
+            "observedAt": "2025-07-09T11:37:05.000Z",
+            "availableToVigiaAt": "2025-07-09T18:52:05.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:a4b587fa3b3ad9c728deda74df95089ac9d4e7b1483c1fc70d1e2d5896765350",
+            "cadenceHours": 45.074444444444445,
+            "areaKm2": 0.23804376100944216,
+            "areaRatio": 2.616551836816723,
+            "centroidDisplacementKm": 0.09680199440585076,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:3afbcb18dd9643b1b7879cc40ee97a91e2218a9f79241689e0f9eac270aad89c",
+            "revision": 5,
+            "observedAt": "2025-07-11T11:01:26.000Z",
+            "availableToVigiaAt": "2025-07-11T18:16:26.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:d4ae2d52c60e0f0af5dcd9965f574f4908391c1a9a7ce7db23de9b0807ca2462",
+            "cadenceHours": 47.405833333333334,
+            "areaKm2": 1.430869459621695,
+            "areaRatio": 6.010951320689891,
+            "centroidDisplacementKm": 0.12998269511856583,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:e3dff391fdd4693ae1df087ca8cbdbda8cd2f4fe12ff0464f97b7ac7ed4c9168",
+            "revision": 6,
+            "observedAt": "2025-07-11T15:40:50.000Z",
+            "availableToVigiaAt": "2025-07-11T23:55:50.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:4e1673436fe53629f6e68efa6b6914403d5fd22048bb783a8878a20567794848",
+            "cadenceHours": 4.656666666666666,
+            "areaKm2": 3.8173501878958995,
+            "areaRatio": 2.6678535642973062,
+            "centroidDisplacementKm": 0.8152895579897003,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:2bcbd26eaadd943adde29dfa93d7fedeaadb5a1451433e7ec388706d604e2bdd",
+            "revision": 7,
+            "observedAt": "2025-07-12T17:45:15.000Z",
+            "availableToVigiaAt": "2025-07-13T02:24:05.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:27bd70a09e06ed2a0d511b6e3f7a8f80f72aad71626c61275c62a6683d0c8866",
+            "cadenceHours": 26.073611111111113,
+            "areaKm2": 14.07627456284119,
+            "areaRatio": 3.6874464929820725,
+            "centroidDisplacementKm": 1.148166481624442,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:67337f6ea92bda731e0d4a680188d224b8c24fcd6fd394686eae843dfd3a619a",
+            "revision": 8,
+            "observedAt": "2025-07-13T17:30:00.000Z",
+            "availableToVigiaAt": "2025-07-14T01:17:36.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:f1480c5f601fb261b108dddcf65b14ffc2f513422e62c1aa2e42ef7ab836f16d",
+            "cadenceHours": 23.745833333333334,
+            "areaKm2": 18.692512534651232,
+            "areaRatio": 1.3279445815866702,
+            "centroidDisplacementKm": 0.868524873723735,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:d224c08f6d8cb6fc882b6ebd8f4ce5d1d5f42da4c7b2b057c23009a48ac6584f",
+            "revision": 9,
+            "observedAt": "2025-07-14T03:36:00.000Z",
+            "availableToVigiaAt": "2025-07-14T04:58:15.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:873645c6ca86f4ebc93d2b5fadd5184bda26f4de854ad78fe6c0453c1474f032",
+            "cadenceHours": 10.1,
+            "areaKm2": 23.183960314495092,
+            "areaRatio": 1.240280581410222,
+            "centroidDisplacementKm": 0.1809590840885207,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:ec6fc4521be685bcfa1d19d5befb6a893efa39db98687aecd65d50f4f42db991",
+            "revision": 10,
+            "observedAt": "2025-07-15T05:00:00.000Z",
+            "availableToVigiaAt": "2025-07-14T04:58:15.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:df27d6c73f8bd124e7248862eb2bb1779b4f71319f6054ccdff981f069cc1691",
+            "cadenceHours": 25.4,
+            "areaKm2": 35.482908409879826,
+            "areaRatio": 1.5304938383497482,
+            "centroidDisplacementKm": 0.5130892357149606,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:3dab71161c8b14c7c018495c32b24273ff0d8fbaf172bf04419165d3cf7b08bf",
+            "revision": 11,
+            "observedAt": "2025-07-15T21:30:00.000Z",
+            "availableToVigiaAt": "2025-07-15T21:42:30.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:80cc0b57ce8c5bf9fcca68962cbb0a9ef35af78c521d028a42016d81f59b59c9",
+            "cadenceHours": 16.5,
+            "areaKm2": 38.398775688291835,
+            "areaRatio": 1.082176670658714,
+            "centroidDisplacementKm": 0.07047861488574372,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:1c2f2a274b5ae7856f0eeb9d401cff08409cf12c22df2f136c89ffd7446c3a9c",
+            "revision": 12,
+            "observedAt": "2025-07-16T19:32:42.000Z",
+            "availableToVigiaAt": "2025-07-16T19:32:02.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:902bb3b4fca6fc828b62d95c23006c715f2384a1584f49c797984a365ce52625",
+            "cadenceHours": 22.045,
+            "areaKm2": 45.38195753637808,
+            "areaRatio": 1.1818594922081198,
+            "centroidDisplacementKm": 1.3480383998022245,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:e6295277955b2d06c667220cb2a312d929ca0855625934d61e06138914612ee4",
+            "revision": 13,
+            "observedAt": "2025-07-17T18:00:00.000Z",
+            "availableToVigiaAt": "2025-07-16T19:32:02.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:294ea15fdd26ef899f480eac50b05e0f789deb8c6c27f4c65a533324f7e31173",
+            "cadenceHours": 22.455,
+            "areaKm2": 46.72684670195159,
+            "areaRatio": 1.0296348866065428,
+            "centroidDisplacementKm": 0.09297226832860819,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:fb9d747e20a323a2adf607f61a7b7fce595848e0ed4f62ee91660620c081fdf0",
+            "revision": 14,
+            "observedAt": "2025-07-18T09:02:00.000Z",
+            "availableToVigiaAt": "2025-07-18T13:59:13.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:f45c01f6319343c3ceefe0fd864bedb669317449d1661ac4c76e55b3c1ae0d13",
+            "cadenceHours": 15.033333333333333,
+            "areaKm2": 51.024869187449674,
+            "areaRatio": 1.0919818645780472,
+            "centroidDisplacementKm": 0.00308200000006309,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:df2765434174291ff4fdf1b86ca6b017834e5dbc1ce28196d2641bda32f88314",
+            "revision": 15,
+            "observedAt": "2025-07-18T09:02:00.000Z",
+            "availableToVigiaAt": "2025-07-18T13:59:13.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:87f98e0e3a3ba58997aa441e21deca000f8b976fc3c14f8a6c20a25512cbac68",
+            "cadenceHours": 0,
+            "areaKm2": 51.46185058481506,
+            "areaRatio": 1.0085640865782537,
+            "centroidDisplacementKm": 0.7273829999996337,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:0ec6351ccb2da303fec508afb0b2a134d9fd4b3fc706132884f98e1167e64545",
+            "revision": 17,
+            "observedAt": "2025-07-19T00:00:00.000Z",
+            "availableToVigiaAt": "2025-07-20T00:17:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:94d0b06659787f92b9fa5df89a014c28cb830c4bd74e29a7622bec7768916711",
+            "cadenceHours": 14.966666666666667,
+            "areaKm2": 52.32634296272312,
+            "areaRatio": 1.0167987036626922,
+            "centroidDisplacementKm": 0.05243999999964899,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:02bda735bf65ddd9456ce18ef83cf5278b649a4dbfbae39119f5ab86d1f07492",
+            "revision": 18,
+            "observedAt": "2025-07-19T00:00:00.000Z",
+            "availableToVigiaAt": "2025-07-20T01:13:11.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:7a4debef186558d57636f6fb699c657eaf67aa35f15fee5e76bf37dfa72a80bf",
+            "cadenceHours": 0,
+            "areaKm2": 52.60854773067207,
+            "areaRatio": 1.0053931681820378,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:5016563c17983c8c41c2ddd24b8cc0102731b7050138852c45db286b61092baf",
+            "revision": 16,
+            "observedAt": "2025-07-19T22:38:39.000Z",
+            "availableToVigiaAt": "2025-07-19T21:21:13.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:3353ea66c78c5b3937bb6214e7dbf3bd5e62d66e6b1ee19fcbffde6cda37bace",
+            "cadenceHours": 22.644166666666667,
+            "areaKm2": 51.598825817628125,
+            "areaRatio": 0.980806884877089,
+            "centroidDisplacementKm": 0.0524400293689198,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:e0fff2b2404627316cfd66e30fbd140f969734dd43a049e8ed2c62f3bbf1bd7a",
+            "revision": 19,
+            "observedAt": "2025-07-20T12:38:29.000Z",
+            "availableToVigiaAt": "2025-07-20T12:51:30.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:184cb901d8374b1cad19063efc4c94a8d6c0205298533fa67f3bb1fc266b8d8a",
+            "cadenceHours": 13.997222222222222,
+            "areaKm2": 53.81484947783114,
+            "areaRatio": 1.042947172248364,
+            "centroidDisplacementKm": 0.06154802502333412,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:f216f626c453392d3fcc46c43249d92e39ac7f3facc091825739c0c34d8c49df",
+            "revision": 20,
+            "observedAt": "2025-07-20T23:55:07.000Z",
+            "availableToVigiaAt": "2025-07-20T12:51:30.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:c0cb2468e530ddc69faf8e1f909b5b06789afddfc06a63a662433493c319a78e",
+            "cadenceHours": 11.277222222222223,
+            "areaKm2": 54.15498337124073,
+            "areaRatio": 1.006320446804366,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:436227bd431ccf0fea5eb288fe11862662fc2b208bea5211cda7ba9dc124ab20",
+            "revision": 21,
+            "observedAt": "2025-07-21T00:01:00.000Z",
+            "availableToVigiaAt": "2025-07-20T12:51:30.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:2759b41d6ed07920e4de2f624baa67ade865cc8cdebe25a7357a82c5a4937595",
+            "cadenceHours": 0.09805555555555556,
+            "areaKm2": 54.154323671250125,
+            "areaRatio": 0.999987818295759,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:24f5f6a75f1bf38bbbf828e1893d65a3e31a748fd52aefb8467a616f47e85869",
+            "revision": 22,
+            "observedAt": "2025-07-22T03:41:00.000Z",
+            "availableToVigiaAt": "2025-07-22T13:26:44.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:627c700324d62cfb8c81f476aec17945e9978d41a33e9bf296fcfd2fcb9a6944",
+            "cadenceHours": 27.666666666666668,
+            "areaKm2": 57.4085277766354,
+            "areaRatio": 1.0600913073006006,
+            "centroidDisplacementKm": 2.6352044238883314,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:916805c0f8e349e99c4b7085d7413c3a72a1b586f72eb8c56d182c62fad6a1fe",
+            "revision": 23,
+            "observedAt": "2025-07-22T03:41:00.000Z",
+            "availableToVigiaAt": "2025-07-22T14:21:34.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:1d20752b5344d51549b17f9433ef8c4cb3e7f016a2ffc2e7270f295e4978e39b",
+            "cadenceHours": 0,
+            "areaKm2": 56.69649541583247,
+            "areaRatio": 0.9875970977069243,
+            "centroidDisplacementKm": 2.5975665000006245,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:7e49e91785a7a4def4db7e037d05cbc26a220e352f031a86fd35919a285e3399",
+            "revision": 24,
+            "observedAt": "2025-07-22T03:41:00.000Z",
+            "availableToVigiaAt": "2025-07-23T03:26:54.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:23032647d6d07e5c0486d5d49ab05b1af61bf0cbda42744a8b0f2eb352fa9faa",
+            "cadenceHours": 0,
+            "areaKm2": 57.40846505770295,
+            "areaRatio": 1.0125575599805356,
+            "centroidDisplacementKm": 2.5975665000006245,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:05d50840374b606a234f4d6e9a7eb6b687a973d70143d3b788c09833d04f03fa",
+            "revision": 25,
+            "observedAt": "2025-07-23T03:40:00.000Z",
+            "availableToVigiaAt": "2025-07-23T13:18:16.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:c4c37986a9169eaf281b21133f639ba6d49224aa3a1e47742918d020d47df144",
+            "cadenceHours": 23.983333333333334,
+            "areaKm2": 69.25980564184097,
+            "areaRatio": 1.2064389036046494,
+            "centroidDisplacementKm": 0.19559200000037436,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:129537ae5f02fc5dbe19b7d61a630a94e03263697b2341f81aa132691aa22ecf",
+            "revision": 26,
+            "observedAt": "2025-07-24T07:39:00.000Z",
+            "availableToVigiaAt": "2025-07-24T11:27:03.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:0d5da47ad52b57304c8e47ead34754e523a6022b9d5a06a6f6111cebbf073b02",
+            "cadenceHours": 27.983333333333334,
+            "areaKm2": 94.46636791390125,
+            "areaRatio": 1.3639421456423,
+            "centroidDisplacementKm": 2.0101946257951906,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a85b3a493722455e9d076ca121638e9784a75b1a96f17960a6503fa83f7bf3da",
+            "revision": 27,
+            "observedAt": "2025-07-25T02:46:00.000Z",
+            "availableToVigiaAt": "2025-07-25T11:26:05.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:b22dd704532a4b62aec879ed2f82bfcea5c52bdf918d9255c7996d989f2b2f38",
+            "cadenceHours": 19.116666666666667,
+            "areaKm2": 121.32864066783603,
+            "areaRatio": 1.2843580561752692,
+            "centroidDisplacementKm": 0.00883199999992712,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:ad99c61046c2c214775f41d58cb2340f6ffcd5ec49680329ad528d97101b228d",
+            "revision": 28,
+            "observedAt": "2025-07-26T06:33:00.000Z",
+            "availableToVigiaAt": "2025-07-26T11:29:08.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:984d0ae87fc879cc69191848ec2a42490d8a43e374e8a10408dd7eaf307d8b93",
+            "cadenceHours": 27.783333333333335,
+            "areaKm2": 145.67856319729768,
+            "areaRatio": 1.2006939366948397,
+            "centroidDisplacementKm": 1.441300295020505,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:03fd4be2e786decfc887fb422494e4754b1cc06aed34572b629c1cf4719aba47",
+            "revision": 29,
+            "observedAt": "2025-07-26T06:33:00.000Z",
+            "availableToVigiaAt": "2025-07-26T22:17:31.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:0a74839a4c6df791bee063d527527ad92652cc0497eb9017322a5d3b0af331f2",
+            "cadenceHours": 0,
+            "areaKm2": 145.67567336329986,
+            "areaRatio": 0.9999801629427529,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:adf84b6e476e1324e7b5308d1d5d889342fb954317157fb15a6284d1a03c8d2e",
+            "revision": 30,
+            "observedAt": "2025-07-27T03:42:00.000Z",
+            "availableToVigiaAt": "2025-07-27T11:32:53.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:02a4c93a5eb47d67094523dce3ecf6a3dd06296fe1f17868ac0ff8013045e3dc",
+            "cadenceHours": 21.15,
+            "areaKm2": 195.233707718768,
+            "areaRatio": 1.3401943043151452,
+            "centroidDisplacementKm": 2.217190020033062,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:d33db7de6167ba3cd3ad1d2c5373cba7d21df76236d54ea59cb9b0fa4dbd9002",
+            "revision": 31,
+            "observedAt": "2025-07-27T03:42:00.000Z",
+            "availableToVigiaAt": "2025-07-27T11:32:53.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:92411d707a66991c0ea07f29e588ed134cbf37dc060483465b06afca331207a1",
+            "cadenceHours": 0,
+            "areaKm2": 195.2371021034584,
+            "areaRatio": 1.0000173862635202,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:27a2e4f472884b7357bb5da64762c838de564cd69ac6775036ee21eb913f2f64",
+            "revision": 32,
+            "observedAt": "2025-07-27T03:42:00.000Z",
+            "availableToVigiaAt": "2025-07-27T11:32:53.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:4eb65ca39b00663be91aa4f1c371a5049750c557ffdf0c396c7cd6c95db9aad6",
+            "cadenceHours": 0,
+            "areaKm2": 195.2371006817989,
+            "areaRatio": 0.9999999927182923,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:05346943f17391f196c23f5062367dbbf6fd8523067b216f128e672506860e7f",
+            "revision": 33,
+            "observedAt": "2025-07-28T03:24:00.000Z",
+            "availableToVigiaAt": "2025-07-28T05:10:16.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:a588bbf5a98313dc468614ba2fa42c44c943c3df065b993baa3d731a57a9adb6",
+            "cadenceHours": 23.7,
+            "areaKm2": 216.26728431869614,
+            "areaRatio": 1.1077161234389188,
+            "centroidDisplacementKm": 0.4532119144110896,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:d3c4b2e22555563f1169246260282ec8156abd83cee4da96ae0fa9f51f0898db",
+            "revision": 34,
+            "observedAt": "2025-07-29T07:25:00.000Z",
+            "availableToVigiaAt": "2025-07-29T10:45:16.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:a506e3916327bf948732c1257026f9d624da1a12082014ece4d7b1cdd6340df5",
+            "cadenceHours": 28.016666666666666,
+            "areaKm2": 300.48991072385877,
+            "areaRatio": 1.389437665851717,
+            "centroidDisplacementKm": 4.978568498241819,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:89d62f01c2e0b553199a5c2c9d2612444c969edd5bfc45990a84bdee58c79a13",
+            "revision": 35,
+            "observedAt": "2025-07-29T07:25:00.000Z",
+            "availableToVigiaAt": "2025-07-29T10:45:16.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:a9de4d280e47d1739544fbcfe78c120d64c21c9cef929f03c1775cc41170f8a7",
+            "cadenceHours": 0,
+            "areaKm2": 300.48989779849563,
+            "areaRatio": 0.9999999569857001,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:1893a4086614750b98a46228300e2e60fca365405827e657c7ba189b43176c30",
+            "revision": 38,
+            "observedAt": "2025-07-29T23:00:00.000Z",
+            "availableToVigiaAt": "2025-07-30T06:50:58.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:a2db4d676b656c0a309ef60b6c61e270cdec297e6f94cdecb2605e18f01c2ea2",
+            "cadenceHours": 15.583333333333334,
+            "areaKm2": 395.1733908256939,
+            "areaRatio": 1.3150970921847487,
+            "centroidDisplacementKm": 1.9231376548685806,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:6eea216769e978cb6660f4d8327f8db32f0428b062b9f55a1b35c0bb2639e377",
+            "revision": 39,
+            "observedAt": "2025-07-29T23:00:00.000Z",
+            "availableToVigiaAt": "2025-07-31T10:37:57.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:78a47af2a693f79f29b5dcdbb50e1e33ffeb106baacc43b8c0165db46b5db3c7",
+            "cadenceHours": 0,
+            "areaKm2": 439.1954388735432,
+            "areaRatio": 1.1113993226008148,
+            "centroidDisplacementKm": 2.033223974410744,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:9d12e5dfc3bf7b3e56fa738daeaffc50d3f1310ae4581e196223a579f9bdede3",
+            "revision": 40,
+            "observedAt": "2025-07-29T23:00:00.000Z",
+            "availableToVigiaAt": "2025-07-31T10:37:57.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:b91e7ace6c9734319f3f592009afdbdf19cb925d2f83c46d9585d323b09002cd",
+            "cadenceHours": 0,
+            "areaKm2": 439.1954298281231,
+            "areaRatio": 0.9999999794045673,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:dfa89eeda45b6b943e604a4e340245ae945ccefb4fe5e59462f3a9e20b65100e",
+            "revision": 36,
+            "observedAt": "2025-07-29T23:12:56.000Z",
+            "availableToVigiaAt": "2025-07-29T23:20:24.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:0c1908b2feb94e699b93cf4096f50e01858ea1a3888c5de97670bc281ebddc5c",
+            "cadenceHours": 0.21555555555555556,
+            "areaKm2": 359.7656244829545,
+            "areaRatio": 0.8191470130364219,
+            "centroidDisplacementKm": 2.2256321011803912,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:ef71fa482c65eefd83b983eecf75a9986b4ef05a44d89f19a152f6e9349567d0",
+            "revision": 37,
+            "observedAt": "2025-07-30T04:43:54.000Z",
+            "availableToVigiaAt": "2025-07-29T23:20:24.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:f06a3d27e75e9a955c952e108b8a04082cced9fb38577802f4be41dd2120969f",
+            "cadenceHours": 5.516111111111111,
+            "areaKm2": 359.6644555023338,
+            "areaRatio": 0.9997187919752865,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          }
+        ],
+        "eligibleSequence": true,
+        "fingerprint": "progression-quality:sha256:b90944ed9656e361e75be6c5527730a1d265d4a8c1b9226bcc07008a9c949b47"
+      },
+      {
+        "schemaVersion": "vigia.progression-quality.v1",
+        "incidentId": "2026-WACOA-260140",
+        "classification": "ARCHIVED_OPERATIONAL_SNAPSHOT",
+        "revisionCount": 40,
+        "distinctRevisionCount": 39,
+        "duplicateSnapshots": 1,
+        "medianCadenceHours": 0.8755555555555555,
+        "geometryValidityRate": 0.75,
+        "correctionEvents": 19,
+        "knowledgeTimeIntegrity": false,
+        "horizonCoverage": {
+          "1": true,
+          "3": true,
+          "6": true,
+          "12": true,
+          "24": true
+        },
+        "sourceComplete": true,
+        "states": [
+          {
+            "id": "wfigs-daily-state:sha256:4392ce3f7c414e81a44ec396aef8786ee1b77a1649263a2093b40f3af6a530c6",
+            "revision": 2,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:7b9a01b66dffd197abbd001c01960f0dee26955f742dcaaa969854be67cdfffd",
+            "cadenceHours": null,
+            "areaKm2": 8.77460252766676,
+            "areaRatio": null,
+            "centroidDisplacementKm": null,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:c85b8c974be86de9e7ad6b2d05bc141a9aa20b37a8f6b93f24e89ecf00be68aa",
+            "revision": 3,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:b2abfe7d64bd0e12840af4bcf40fed22e9d6c42aa829c6b8a6ba15e9fa67b9b2",
+            "cadenceHours": 0,
+            "areaKm2": 50.522912163111585,
+            "areaRatio": 5.757857635580679,
+            "centroidDisplacementKm": 4.63321527512068,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:1e0c41b8fca348424cc66747af28032def3b5d2c47990f2fdcc6e733a359d521",
+            "revision": 4,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:dc4dc8d723e0836c8f14c0bf8cbb4756c101a614e45e1ddbb05de889eb62d072",
+            "cadenceHours": 0,
+            "areaKm2": 50.523019116525134,
+            "areaRatio": 1.0000021169289135,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:dd11272206428e86684ec0cc1132da1f02e3a936d61284f21df07351f46049ae",
+            "revision": 5,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:7d5a47ce01b61db1345a95c3586152db16be1cfd10f6b43ec8afdaaf00fc7a2a",
+            "cadenceHours": 0,
+            "areaKm2": 153.145391098458,
+            "areaRatio": 3.031200307828932,
+            "centroidDisplacementKm": 3.2695919335956107,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:2c869c2a27c9c19f6503f4c716ec8783fd10bdc712e9999d4fc8f0c550f1f350",
+            "revision": 6,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:5b544e96591500aab30859279fba23bbc0dd6a8f0fa8ff7cdbe3e8eb6459564d",
+            "cadenceHours": 0,
+            "areaKm2": 153.19907353984493,
+            "areaRatio": 1.0003505325299173,
+            "centroidDisplacementKm": 0.01632999999930007,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:546f74e955657582dea565bbeaa1971d67fee94704ef44e3bde1d8ebb57e7da0",
+            "revision": 7,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:2a94c14cd7c6429553bce51cb1a2744c1406c5b5c10f953a9e72cc85a1cabc88",
+            "cadenceHours": 0,
+            "areaKm2": 154.56413477964273,
+            "areaRatio": 1.0089103752931166,
+            "centroidDisplacementKm": 0.6549000000004455,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:bee20a93cc74e479ba5b306793f579291560312d16c78001aed7e5c3dd2f8516",
+            "revision": 8,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:155657f3e92d3ac474e70d27f2dacb07e5203acaef214983b8b9fb6a84926f6f",
+            "cadenceHours": 0,
+            "areaKm2": 154.52539966494163,
+            "areaRatio": 0.9997493913141213,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:448d40db981f93fcdf2a8b50a5acb3ea73cebf620a9f8b5b9360377e61ca72b1",
+            "revision": 9,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:999a7e57ee2d9690be68fdd0ffb1c3d23f1edd3225e1199aa99b617b727f0a67",
+            "cadenceHours": 0,
+            "areaKm2": 186.38324872716532,
+            "areaRatio": 1.2061657768321665,
+            "centroidDisplacementKm": 0.22492391069354484,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a35631bc0ba47b4c8a81bf747b4c9c648c7bbd3bfb362541b6a608c406ce5353",
+            "revision": 10,
+            "observedAt": "2026-07-16T20:44:00.000Z",
+            "availableToVigiaAt": "2026-07-17T03:57:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:fe042799a051ed25e7eff62c1aeaa4ad53a08283b8cdde3645a8d9463f8d1ece",
+            "cadenceHours": 0,
+            "areaKm2": 186.4403046601615,
+            "areaRatio": 1.0003061215714708,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a80f6824070aec8835279ef3e6d435df0ce853bb1894c7e7294a3da6fda546c3",
+            "revision": 1,
+            "observedAt": "2026-07-16T21:46:45.122Z",
+            "availableToVigiaAt": "2026-07-16T15:23:48.845Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:dda905021d6cad3c1de69d627bef1a1af369923802e5bc84360303c145188513",
+            "cadenceHours": 1.0458672222222223,
+            "areaKm2": 9.043476559485118,
+            "areaRatio": 0.04850601685064466,
+            "centroidDisplacementKm": 8.689394018925242,
+            "flags": [
+              "IMPOSSIBLE_AREA_COLLAPSE_OR_CORRECTION",
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:e58b30f5d176108920a12d500af4690df49f13b1b8ff14840632b4b3deabc865",
+            "revision": 11,
+            "observedAt": "2026-07-19T12:47:39.000Z",
+            "availableToVigiaAt": "2026-07-19T12:59:19.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:f6936196a6e5714889ba871008fb83273eff17c987c1b44680bb49e809e5f7fd",
+            "cadenceHours": 63.014966111111114,
+            "areaKm2": 215.64317660240764,
+            "areaRatio": 23.84516343731034,
+            "centroidDisplacementKm": 8.023871594494658,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:881d557eb91684bbf7917bac6d7a0ba2931fbaa7076857f34b3d18fabb65001c",
+            "revision": 12,
+            "observedAt": "2026-07-19T13:10:04.000Z",
+            "availableToVigiaAt": "2026-07-19T12:59:19.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:e9d1202d31118e7296ed5e5157643b1a730bb9ab2a2ce4a9d53fcab399ce2f67",
+            "cadenceHours": 0.3736111111111111,
+            "areaKm2": 215.6431853000696,
+            "areaRatio": 1.0000000403335831,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:695c18100aba65199aacaac4eb6b8e3cb79aa9820f7477fa6df835bf1e248f2d",
+            "revision": 13,
+            "observedAt": "2026-07-19T19:31:41.000Z",
+            "availableToVigiaAt": "2026-07-19T12:59:19.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:f6936196a6e5714889ba871008fb83273eff17c987c1b44680bb49e809e5f7fd",
+            "cadenceHours": 6.360277777777778,
+            "areaKm2": 215.64317660240764,
+            "areaRatio": 0.9999999596664186,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a5960874773bba2df5bcae0632f6c5cc80e56685f4cc4f1953f9f21aa0900cf4",
+            "revision": 14,
+            "observedAt": "2026-07-19T23:58:40.000Z",
+            "availableToVigiaAt": "2026-07-19T12:59:19.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:3b69e870bc0fe7478ef61b4215a79e21ce618ece417a18b8fe3855243c2752d5",
+            "cadenceHours": 4.449722222222222,
+            "areaKm2": 244.63325817452275,
+            "areaRatio": 1.1344354225757192,
+            "centroidDisplacementKm": 0.8173303952637995,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a358d130ae4c552732b87d8282dd8efe78a908b024fcb6b766b92a1f9548a64a",
+            "revision": 15,
+            "observedAt": "2026-07-20T01:43:42.000Z",
+            "availableToVigiaAt": "2026-07-19T12:59:19.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:bd5699d57b25c7d4f1b0ebe3c488cb579cedb61bc67801855daeaa4ad7019e8b",
+            "cadenceHours": 1.7505555555555556,
+            "areaKm2": 255.01291955087493,
+            "areaRatio": 1.0424294777161789,
+            "centroidDisplacementKm": 0.04889550000037701,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:fd5724286960fac046c4aa1471ab1d9c4e6fd1974899d72b499df7711657cfd0",
+            "revision": 16,
+            "observedAt": "2026-07-20T04:51:25.000Z",
+            "availableToVigiaAt": "2026-07-19T12:59:19.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:5d13d352a8ef1456d2a38fafbdd56e94187d1c0789c7a46d9fdae6d5a88f5f91",
+            "cadenceHours": 3.1286111111111112,
+            "areaKm2": 254.42477802261644,
+            "areaRatio": 0.9976936794837912,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:0439654689d482504bd2049b4f8764dd7f08d58752292ea2282980c6536932f4",
+            "revision": 17,
+            "observedAt": "2026-07-20T11:31:04.000Z",
+            "availableToVigiaAt": "2026-07-20T11:46:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:b2f5a2e6a03ab0febce8d3e74c6ebb87274310ede0c6552571515b1f1aa9c5d6",
+            "cadenceHours": 6.660833333333334,
+            "areaKm2": 250.50150093670467,
+            "areaRatio": 0.984579815234965,
+            "centroidDisplacementKm": 0.5346572523452997,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:cd1f0c5a8d75af13658011f76a8dc0c46bdb9d0dca2483644932e9c5266b5e19",
+            "revision": 18,
+            "observedAt": "2026-07-20T12:12:17.000Z",
+            "availableToVigiaAt": "2026-07-20T11:46:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:93d312e5d831b3b4437fab2ae6b9f96b67d42c25a84950d0a3d72aed78a3c270",
+            "cadenceHours": 0.6869444444444445,
+            "areaKm2": 250.78752825809346,
+            "areaRatio": 1.0011418187927787,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:1fd39cda79af3d7c18b45249046c6e1060f8809dbb36b2034f9a92b6598f5159",
+            "revision": 19,
+            "observedAt": "2026-07-20T13:24:17.000Z",
+            "availableToVigiaAt": "2026-07-20T11:46:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:ffe2d923a50d4899d3b31dcae4dd7549e17a5f706bc3fce58f6c3bc5babf333a",
+            "cadenceHours": 1.2,
+            "areaKm2": 250.8319822943325,
+            "areaRatio": 1.000177257762967,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:840512cdc803db0ea2def20ed45b85c049c13bb11d749e8bcffad92a8e5eb7ef",
+            "revision": 20,
+            "observedAt": "2026-07-20T21:27:03.000Z",
+            "availableToVigiaAt": "2026-07-20T11:46:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:654ad3da1e670e02e282b3cbe590f6e4198174999743f90dfe96cfbc411c1c45",
+            "cadenceHours": 8.046111111111111,
+            "areaKm2": 253.18949095153846,
+            "areaRatio": 1.009398756233723,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:eecb9551d39b01938b3db420a2b7683910a95979c404737a09361c68ac3ef09f",
+            "revision": 21,
+            "observedAt": "2026-07-20T22:19:35.000Z",
+            "availableToVigiaAt": "2026-07-20T11:46:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:cf65c434afa71764528b510e25c62ff7c76bffa0df3f3138ff0eedc4d72e84f1",
+            "cadenceHours": 0.8755555555555555,
+            "areaKm2": 253.9732485784803,
+            "areaRatio": 1.0030955377492026,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:0045996d6c54e6eec573c52c5dcb97a9a5b1c37d4569dfab1e77927765e082d3",
+            "revision": 22,
+            "observedAt": "2026-07-20T23:51:13.000Z",
+            "availableToVigiaAt": "2026-07-20T11:46:04.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:3e1232d0ffc66edd3fa31090de9ba3c0e20d25fe534635cc6382be91be2bd1d2",
+            "cadenceHours": 1.5272222222222223,
+            "areaKm2": 254.384119866462,
+            "areaRatio": 1.0016177738808374,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:01f024e67af0fe169a4de00c36b1f35b4e3e57f3aade1e328d63ff303b782849",
+            "revision": 23,
+            "observedAt": "2026-07-21T11:36:40.000Z",
+            "availableToVigiaAt": "2026-07-21T11:32:55.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:9de878cb79f7ad16cd6a14359daebf17c8ad2142820e119683677fb021c71d91",
+            "cadenceHours": 11.7575,
+            "areaKm2": 276.9985525956454,
+            "areaRatio": 1.0888987596437025,
+            "centroidDisplacementKm": 2.434637908019075,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a5f8d673712da941fabe6374622762e277b2d51af91a9e31fe8995a1354d1ac5",
+            "revision": 24,
+            "observedAt": "2026-07-21T22:43:51.000Z",
+            "availableToVigiaAt": "2026-07-21T11:32:55.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:796ffeb2e996071c2bb48bd2604935008457fa6e11d998c203099f15faab2785",
+            "cadenceHours": 11.119722222222222,
+            "areaKm2": 287.7485129707642,
+            "areaRatio": 1.038808723996516,
+            "centroidDisplacementKm": 0.10221199999949704,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:775d03dc46170efd810343c1b6f76d8ef4f64a5e9cb0679f05103bd20a59e3f0",
+            "revision": 25,
+            "observedAt": "2026-07-22T01:56:24.000Z",
+            "availableToVigiaAt": "2026-07-21T11:32:55.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:f21050f3aeef9bca24e4a21cc24f02841b0b8d31ad3d034babac30761d37531f",
+            "cadenceHours": 3.2091666666666665,
+            "areaKm2": 287.89453697740845,
+            "areaRatio": 1.0005074709340342,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:98b094da6c0da607dc2eb8383b27ae5adb3921da0e5172f477ad92507226b1ba",
+            "revision": 26,
+            "observedAt": "2026-07-22T02:39:54.000Z",
+            "availableToVigiaAt": "2026-07-21T11:32:55.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:3100f079f342e0d59549dc0488e5697c075c501c522b288afea9ca3062ff15d9",
+            "cadenceHours": 0.725,
+            "areaKm2": 291.4190388576689,
+            "areaRatio": 1.0122423367850744,
+            "centroidDisplacementKm": 0.44923600000061015,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:ac1040e8f30b51e04e8746148578239f3cf517147b731b05ebc48c2e53b51434",
+            "revision": 27,
+            "observedAt": "2026-07-22T11:31:36.000Z",
+            "availableToVigiaAt": "2026-07-22T11:25:09.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:4a0a100b1df835efe2f52b127aa6c8f413e4e99693bbb50c0d05e0c4196cab0c",
+            "cadenceHours": 8.861666666666666,
+            "areaKm2": 322.0928936458311,
+            "areaRatio": 1.105256866223979,
+            "centroidDisplacementKm": 0.5707393655596152,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:49501176d30232c17763c75df839f7a4edb425fe7089edaf29f1610ea8a336e9",
+            "revision": 28,
+            "observedAt": "2026-07-22T21:08:44.000Z",
+            "availableToVigiaAt": "2026-07-22T11:25:09.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:09e878946136402d7c52d145236ecf30f35509567db60385c28da75a8b088a2d",
+            "cadenceHours": 9.61888888888889,
+            "areaKm2": 322.07735170314186,
+            "areaRatio": 0.999951747017721,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:5887f42bce9a7e71b3adc9debf4af00a9a2a0605e493bfc40b444a596e990743",
+            "revision": 29,
+            "observedAt": "2026-07-22T23:03:24.000Z",
+            "availableToVigiaAt": "2026-07-22T11:25:09.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:12ab8b33d49f1b00aeea1326e4ec6f9ecc8d3ddda85d6122583ebc1bebafad3a",
+            "cadenceHours": 1.9111111111111112,
+            "areaKm2": 321.57874983220705,
+            "areaRatio": 0.9984519188688735,
+            "centroidDisplacementKm": 0,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:2cf8350ad1a44288b63b723ed6c51fc6a89496226541b360e3e3d58deefb9591",
+            "revision": 30,
+            "observedAt": "2026-07-23T02:59:06.000Z",
+            "availableToVigiaAt": "2026-07-22T11:25:09.000Z",
+            "geometryValid": true,
+            "geometryHash": "wfigs-native-geometry:sha256:5435a4acace4d996665745227081ca994ed349dc59c76bb1bdac2bd7c18ef874",
+            "cadenceHours": 3.9283333333333332,
+            "areaKm2": 329.6429518807258,
+            "areaRatio": 1.0250769121178762,
+            "centroidDisplacementKm": 1.2088340000007634,
+            "flags": [
+              "KNOWLEDGE_CLOCK_NONCAUSAL"
+            ]
+          },
+          {
+            "id": "wfigs-daily-state:sha256:a222a3e5475205a135f319227487cd8b4708172aaf7a091628c75c485dbf0629",
+            "revision": 31,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:c22a07db5e30840db6d576c9738756b9bd6ecb64e61b88287b416383f8949eec",
+            "cadenceHours": 0.8816666666666667,
+            "areaKm2": 350.45470336449995,
+            "areaRatio": 1.0631342225430152,
+            "centroidDisplacementKm": 0.5032612774781156,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:468e1eb2c8ab8025f5ba05c6cf5bad5d95cba46f3f685b5994088b4a7c3ba55c",
+            "revision": 32,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:39c60261cb5297e7fc13b07f8848aa514cab434db7dc66656f6d7ad6d0723fe8",
+            "cadenceHours": 0,
+            "areaKm2": 358.6315178301549,
+            "areaRatio": 1.023332015199552,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:8640f58747216f8d13d63471eff9d08c68579f1e5e47ba9a6d01ecc0b755c7d8",
+            "revision": 33,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:cbb6b306e2edf005d83b658e827473a616b8561f13d85d48bdefc8f74c7862f2",
+            "cadenceHours": 0,
+            "areaKm2": 358.64761352830834,
+            "areaRatio": 1.0000448808801046,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:961c4dfe86e649d667afff66b3883571b7b5a928b3d83f0eeae0591d898475c3",
+            "revision": 34,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:750904d996d17074c602fdbe3ba70780f652c34ba347adb5c74523c67af919b7",
+            "cadenceHours": 0,
+            "areaKm2": 358.6395380021095,
+            "areaRatio": 0.9999774833962524,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:ea0afa583b1662c576ecd5f692ef42e05d59c7f978d98433c3e47ec22f96293f",
+            "revision": 35,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:c515888c11200fceffea5931d0ca89d447b7ba2102216797f9ca0876e9a46c2d",
+            "cadenceHours": 0,
+            "areaKm2": 364.0830552849997,
+            "areaRatio": 1.01517824084097,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:b16cc0e4ce1d8c66dc716bd058a5236a126a32567c1102423a10967cc3f7569a",
+            "revision": 36,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:deae2ed5ba5bec82716c46e0bfb347d08b7ae270d161756a415dfd94200c3e4b",
+            "cadenceHours": 0,
+            "areaKm2": 370.8388802369191,
+            "areaRatio": 1.018555724727785,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:98f2a9815c60c9f081d5bb71e033b6b942cb896fc110eaf8e7a094bcaf0ebdd3",
+            "revision": 37,
+            "observedAt": "2026-07-23T03:52:00.000Z",
+            "availableToVigiaAt": "2026-07-23T11:19:21.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:18bca8096497081c0f92064fa4988774b8e955971fc3b5c6334f31515fb4914e",
+            "cadenceHours": 0,
+            "areaKm2": 370.81977638941584,
+            "areaRatio": 0.9999484847772945,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:35933ee83a5516fed65c34fa861026f001058ba9132d1d57da5fe7d50378921e",
+            "revision": 38,
+            "observedAt": "2026-07-24T07:17:00.000Z",
+            "availableToVigiaAt": "2026-07-24T11:33:03.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:806cedeae2c02d1694da70285ec359a0badfc51307636924aac5aa3fe68361f2",
+            "cadenceHours": 27.416666666666668,
+            "areaKm2": 443.81192473180585,
+            "areaRatio": 1.1968399556601248,
+            "centroidDisplacementKm": 1.8781463708994528,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:ace97baeacf213841b4b4ae656b358cc11a300fd2e741e3d0fbc8ee752d91b88",
+            "revision": 39,
+            "observedAt": "2026-07-24T07:17:00.000Z",
+            "availableToVigiaAt": "2026-07-24T11:33:03.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:0805ed40af84d2d232dd615f7796dd4151082bab064be4aa7eab3898d18601e4",
+            "cadenceHours": 0,
+            "areaKm2": 451.7381007980958,
+            "areaRatio": 1.0178593129760534,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          },
+          {
+            "id": "wfigs-daily-state:sha256:37dae208b42f6f58ddf31ee7fb33387479ea0f420223f11eb6f01453a0d36fab",
+            "revision": 40,
+            "observedAt": "2026-07-24T07:17:00.000Z",
+            "availableToVigiaAt": "2026-07-24T11:33:03.000Z",
+            "geometryValid": false,
+            "geometryHash": "wfigs-native-geometry:sha256:0dc59facd204dfc0871e0b9a99a395ea41e484e6ee8e145c3f283abe1a205433",
+            "cadenceHours": 0,
+            "areaKm2": 450.3638842234689,
+            "areaRatio": 0.9969579352013943,
+            "centroidDisplacementKm": 0,
+            "flags": []
+          }
+        ],
+        "eligibleSequence": false,
+        "fingerprint": "progression-quality:sha256:a41ab2da2ad0ed6abccddaf5b57bd181100bfe56d6017b5b6604020d9ee22ef6"
+      }
+    ]
+  },
+  "weather": {
+    "certifiedSlices": 2
+  },
+  "feds": {
+    "products": 2,
+    "states": 67,
+    "causalFamily": "VIIRS",
+    "independentPhysicalFamiliesAdded": 0
+  },
+  "firms": {
+    "retainedObservations": 9,
+    "causalFamilies": [
+      "VIIRS"
+    ]
+  },
+  "fuelPacks": 2,
+  "terrainPacks": 2,
+  "opportunityLedger": {
+    "VALID_OBSERVATION_OPPORTUNITY": 0,
+    "OBSERVED_POSITIVE": 0,
+    "OBSERVED_NEGATIVE": 0,
+    "NOT_COVERED": 0,
+    "PRODUCT_UNAVAILABLE": 0,
+    "PROVIDER_UNAVAILABLE": 0,
+    "QUALITY_INSUFFICIENT": 0,
+    "UNKNOWN": 100
+  },
+  "hardNegatives": {
+    "registered": 100,
+    "valid": 0
+  },
+  "gaps": {
+    "open": 881,
+    "eligibleActions": 6,
+    "highestImpact": {
+      "gapId": "data-gap:sha256:2093e9319086069e3e0cd32151bc16bf2a2ccc223c02b1626115af9433b96acb",
+      "incidentId": "2025-AZGCP-000597",
+      "requirement": "FUTURE_LABEL",
+      "horizonHours": 3,
+      "candidateExamplesUnlocked": 40,
+      "unlocks": [
+        "3H_FORECAST_EXAMPLE"
+      ]
+    }
+  },
+  "corpus": {
+    "examples": 11,
+    "rejections": 564,
+    "horizonCounts": {
+      "1": 0,
+      "3": 0,
+      "6": 1,
+      "12": 3,
+      "24": 7
+    },
+    "splits": {
+      "development": 1,
+      "calibration": 0,
+      "held-out-test": 10,
+      "geographic-stress-test": 0,
+      "seasonal-stress-test": 0
+    },
+    "leakage": {
+      "schemaVersion": "vigia.corpus-leakage-audit.v1",
+      "passed": true,
+      "rowsInspected": 11,
+      "negativesInspected": 100,
+      "violations": [],
+      "fingerprint": "corpus-leakage-audit:sha256:20152c207bb4cc63376eca4767d96b1063e213d8e07d3e8c41f50d92d5cf9f9a"
+    },
+    "baselines": {
+      "schemaVersion": "vigia.corpus-baseline-evaluation.v1",
+      "state": "MEASURED",
+      "caseCount": 11,
+      "models": {
+        "NO_GROWTH_PERSISTENCE": {
+          "schemaVersion": "vigia.spread-evaluation.v1",
+          "horizons": {
+            "6": {
+              "caseCount": 1,
+              "meanIou": 0.00043120014485590995,
+              "meanAbsoluteAreaErrorKm2": 2.3704226054251194,
+              "meanCentroidDisplacementKm": 0.6456811968914575,
+              "meanBoundaryDistanceKm": 0.37012159695627755,
+              "worstDecileUnderpredictionKm2": 3.7894575744867325,
+              "meanBrierScore": null
+            },
+            "12": {
+              "caseCount": 3,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 2.1807723144690194,
+              "meanCentroidDisplacementKm": 0.40639676801886476,
+              "meanBoundaryDistanceKm": 0.06548232957258276,
+              "worstDecileUnderpredictionKm2": 50.22012625262141,
+              "meanBrierScore": null
+            },
+            "24": {
+              "caseCount": 7,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 15.46533576771617,
+              "meanCentroidDisplacementKm": 1.339474530914186,
+              "meanBoundaryDistanceKm": 0.4844216823897073,
+              "worstDecileUnderpredictionKm2": 248.40664112567902,
+              "meanBrierScore": null
+            }
+          },
+          "evaluationHash": "spread-evaluation:sha256:a415e8a2081e953eb1dc017a7e1e6d0cb25bee86207e6c4c52070f190ee7a3db"
+        },
+        "RECENT_GROWTH_PERSISTENCE": {
+          "schemaVersion": "vigia.spread-evaluation.v1",
+          "horizons": {
+            "6": {
+              "caseCount": 1,
+              "meanIou": 0.00024218183362561082,
+              "meanAbsoluteAreaErrorKm2": 1.6964449360966682,
+              "meanCentroidDisplacementKm": 0.6456819539286889,
+              "meanBoundaryDistanceKm": 0.47563677379076913,
+              "worstDecileUnderpredictionKm2": 3.789457578212023,
+              "meanBrierScore": null
+            },
+            "12": {
+              "caseCount": 3,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 32601.185816104215,
+              "meanCentroidDisplacementKm": 0.5481523933442155,
+              "meanBoundaryDistanceKm": 60.211006157866514,
+              "worstDecileUnderpredictionKm2": 50.22012625262141,
+              "meanBrierScore": null
+            },
+            "24": {
+              "caseCount": 7,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 398.30948048084974,
+              "meanCentroidDisplacementKm": 1.342051527133567,
+              "meanBoundaryDistanceKm": 6.6982880097114395,
+              "worstDecileUnderpredictionKm2": 248.40664112567902,
+              "meanBrierScore": null
+            }
+          },
+          "evaluationHash": "spread-evaluation:sha256:d3767b38d4300b79006d3649a5f6e89bd8218c6a6b0efb3a1892fa7b626bb501"
+        },
+        "WIND_ALIGNED_PROGRESSION": {
+          "schemaVersion": "vigia.spread-evaluation.v1",
+          "horizons": {
+            "6": {
+              "caseCount": 1,
+              "meanIou": 0.00024218183362561082,
+              "meanAbsoluteAreaErrorKm2": 1.6964449360966682,
+              "meanCentroidDisplacementKm": 0.6456819539312258,
+              "meanBoundaryDistanceKm": 0.47563677379076913,
+              "worstDecileUnderpredictionKm2": 3.789457578212023,
+              "meanBrierScore": null
+            },
+            "12": {
+              "caseCount": 3,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 32601.185816105455,
+              "meanCentroidDisplacementKm": 0.5481523933434399,
+              "meanBoundaryDistanceKm": 60.2110061578665,
+              "worstDecileUnderpredictionKm2": 50.22012625262141,
+              "meanBrierScore": null
+            },
+            "24": {
+              "caseCount": 7,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 398.30948047978535,
+              "meanCentroidDisplacementKm": 1.342051527134247,
+              "meanBoundaryDistanceKm": 6.6982880097114395,
+              "worstDecileUnderpredictionKm2": 248.40664112567902,
+              "meanBrierScore": null
+            }
+          },
+          "evaluationHash": "spread-evaluation:sha256:0289c392a693061165e5311e45cfd0992bdea6a90aa099b8feb25a3202626885"
+        },
+        "OBSERVATION_KINEMATIC_PROGRESSION": {
+          "schemaVersion": "vigia.spread-evaluation.v1",
+          "horizons": {
+            "6": {
+              "caseCount": 1,
+              "meanIou": 0.00024304224236283706,
+              "meanAbsoluteAreaErrorKm2": 1.6636160425841808,
+              "meanCentroidDisplacementKm": 0.6669601536698573,
+              "meanBoundaryDistanceKm": 0.5083304594463316,
+              "worstDecileUnderpredictionKm2": 3.7894575744867325,
+              "meanBrierScore": null
+            },
+            "12": {
+              "caseCount": 3,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 32108.7773928456,
+              "meanCentroidDisplacementKm": 16.189577377458935,
+              "meanBoundaryDistanceKm": 50.2041960077053,
+              "worstDecileUnderpredictionKm2": 50.22012625262141,
+              "meanBrierScore": null
+            },
+            "24": {
+              "caseCount": 7,
+              "meanIou": 0,
+              "meanAbsoluteAreaErrorKm2": 393.92410631052087,
+              "meanCentroidDisplacementKm": 2.152391589364213,
+              "meanBoundaryDistanceKm": 6.306103453813425,
+              "worstDecileUnderpredictionKm2": 248.40664112567902,
+              "meanBrierScore": null
+            }
+          },
+          "evaluationHash": "spread-evaluation:sha256:c016ea211665b487ae01f28db3c5fa1f23ce4af39004680f88e4bf952f0c641c"
+        }
+      }
+    },
+    "readiness": {
+      "schemaVersion": "vigia.forecast-corpus-readiness.v1",
+      "decision": "CORPUS_NOT_READY",
+      "counts": {
+        "discoveredIncidents": 37,
+        "eligibleIncidents": 2,
+        "examples": 11,
+        "validNegatives": 0,
+        "hardNegatives": 0,
+        "regions": 1,
+        "seasons": 2,
+        "horizonCounts": {
+          "1": 0,
+          "3": 0,
+          "6": 1,
+          "12": 3,
+          "24": 7
+        },
+        "splitCounts": {
+          "development": 1,
+          "calibration": 0,
+          "held-out-test": 10,
+          "geographic-stress-test": 0,
+          "seasonal-stress-test": 0
+        }
+      },
+      "gates": [
+        {
+          "id": "TWO_REGIONS",
+          "value": 1,
+          "required": 2,
+          "pass": false
+        },
+        {
+          "id": "TWO_SEASONS",
+          "value": 2,
+          "required": 2,
+          "pass": true
+        },
+        {
+          "id": "ONE_HUNDRED_INCIDENTS",
+          "value": 2,
+          "required": 100,
+          "pass": false
+        },
+        {
+          "id": "ONE_HUNDRED_NEGATIVES",
+          "value": 0,
+          "required": 100,
+          "pass": false
+        },
+        {
+          "id": "PROMOTION_MINIMUM_NEGATIVES",
+          "value": 0,
+          "required": 20,
+          "pass": false
+        },
+        {
+          "id": "TWENTY_FIVE_HARD_NEGATIVES",
+          "value": 0,
+          "required": 25,
+          "pass": false
+        },
+        {
+          "id": "PROGRESSION_COMPLETENESS",
+          "value": 2,
+          "required": 100,
+          "pass": false
+        },
+        {
+          "id": "WEATHER_COMPLETENESS",
+          "value": 11,
+          "required": "ALL_ELIGIBLE_EXAMPLES",
+          "pass": true
+        },
+        {
+          "id": "FUEL_COMPLETENESS",
+          "value": 11,
+          "required": "ALL_ELIGIBLE_EXAMPLES",
+          "pass": true
+        },
+        {
+          "id": "TERRAIN_COMPLETENESS",
+          "value": 11,
+          "required": "ALL_ELIGIBLE_EXAMPLES",
+          "pass": true
+        },
+        {
+          "id": "FUTURE_LABEL_COMPLETENESS",
+          "value": 11,
+          "required": "ALL_ELIGIBLE_EXAMPLES",
+          "pass": true
+        },
+        {
+          "id": "BRONZE_SILVER_LINEAGE_COMPLETENESS",
+          "value": 11,
+          "required": "ALL_ELIGIBLE_EXAMPLES",
+          "pass": true
+        },
+        {
+          "id": "DEVELOPMENT_SPLIT_NONEMPTY",
+          "value": 1,
+          "required": 1,
+          "pass": true
+        },
+        {
+          "id": "CALIBRATION_SPLIT_NONEMPTY",
+          "value": 0,
+          "required": 1,
+          "pass": false
+        },
+        {
+          "id": "HELD_OUT_TEST_SPLIT_NONEMPTY",
+          "value": 10,
+          "required": 1,
+          "pass": true
+        },
+        {
+          "id": "INCIDENT_SPLIT_ISOLATION",
+          "value": true,
+          "required": true,
+          "pass": true
+        },
+        {
+          "id": "HORIZON_1H",
+          "value": 0,
+          "required": 1,
+          "pass": false
+        },
+        {
+          "id": "HORIZON_3H",
+          "value": 0,
+          "required": 1,
+          "pass": false
+        },
+        {
+          "id": "HORIZON_6H",
+          "value": 1,
+          "required": 1,
+          "pass": true
+        },
+        {
+          "id": "HORIZON_12H",
+          "value": 3,
+          "required": 1,
+          "pass": true
+        },
+        {
+          "id": "HORIZON_24H",
+          "value": 7,
+          "required": 1,
+          "pass": true
+        },
+        {
+          "id": "KNOWLEDGE_TIME_LEAKAGE_ZERO",
+          "value": 0,
+          "required": 0,
+          "pass": true
+        },
+        {
+          "id": "DATA_RIGHTS_EXPORTABLE",
+          "value": true,
+          "required": true,
+          "pass": true
+        },
+        {
+          "id": "REPLAY_IDENTICAL",
+          "value": true,
+          "required": true,
+          "pass": true
+        }
+      ],
+      "failedGates": [
+        "TWO_REGIONS",
+        "ONE_HUNDRED_INCIDENTS",
+        "ONE_HUNDRED_NEGATIVES",
+        "PROMOTION_MINIMUM_NEGATIVES",
+        "TWENTY_FIVE_HARD_NEGATIVES",
+        "PROGRESSION_COMPLETENESS",
+        "CALIBRATION_SPLIT_NONEMPTY",
+        "HORIZON_1H",
+        "HORIZON_3H"
+      ],
+      "decisionHash": "forecast-corpus-readiness:sha256:e8953744922cd58a97ee8c8b092351c65eb737583ea3f377e20d58d2f44b1e48"
+    },
+    "replay": {
+      "schemaVersion": "vigia.forecast-corpus-replay-verification.v1",
+      "valid": true,
+      "identical": true,
+      "expected": "forecast-corpus:sha256:105b3324e84ea72cfd1ff5ca6ea6374afc038f679edc3dcb6cbdc3671959e0b7",
+      "actual": "forecast-corpus:sha256:105b3324e84ea72cfd1ff5ca6ea6374afc038f679edc3dcb6cbdc3671959e0b7",
+      "reversedOrderingStable": true
+    }
+  },
+  "postgis": {
+    "state": "UNCERTIFIED",
+    "blocker": "Authenticated local PostGIS credentials are unavailable; authentication was not weakened.",
+    "adapterBoundary": "Existing pg/PostGIS integration remains the production adapter boundary."
+  },
+  "fingerprint": "data-foundry-report:sha256:c8287a3cff1eb45693facb4c7b6751b182e5c262b228438379dc91bb9755514b"
+}

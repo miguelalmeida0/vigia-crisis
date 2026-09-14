@@ -1,0 +1,57 @@
+{
+  "task": "reality-first-revival",
+  "implementation": "Complete within the available source contracts",
+  "validation": {
+    "regression": {
+      "passed": 233,
+      "failed": 0
+    },
+    "recovery": {
+      "passed": 49,
+      "failed": 0
+    },
+    "newSemanticAndApi": 21,
+    "productScenarios": 3,
+    "static": "PASS",
+    "canonicalApplicationErrors": [],
+    "canonicalNetworkFailures": [],
+    "horizontalOverflow": []
+  },
+  "completed": [
+    "bounded-trace",
+    "semantic-mapping",
+    "RealWorldValue",
+    "suitability-freshness",
+    "question-services",
+    "current-conditions",
+    "fire-activity",
+    "material-changes",
+    "overview",
+    "detail",
+    "intelligence",
+    "operations",
+    "national",
+    "activity",
+    "trust-drawer",
+    "Ask-Vigia",
+    "copy-review",
+    "source-failure-isolation",
+    "semantic-tests",
+    "question-tests",
+    "agent-usability-check",
+    "fresh-canonical-and-frozen-visual-artifacts"
+  ],
+  "externalValidationPending": [
+    "Human ten-second comprehension evaluation",
+    "Native-reference pixel-fidelity certification: hierarchy changed and individual exports absent"
+  ],
+  "externalDataGaps": [
+    "Current local gust",
+    "Observed AQ",
+    "Current attributable road status",
+    "Incident warning-area geometry association",
+    "Current official incident status and perimeter"
+  ],
+  "report": "/Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/REALITY_FIRST_FINAL_REPORT.md",
+  "runtimeRelease": "vigia-intelligence-fabric-6895fd76ad57b440"
+}

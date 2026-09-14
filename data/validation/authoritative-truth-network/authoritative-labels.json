@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "vigia.authoritative-perimeter-label-product.v1",
+  "generatedAt": "2026-08-25T16:07:40.174Z",
+  "horizons": {
+    "1h": 0,
+    "3h": 0,
+    "6h": 0,
+    "12h": 0,
+    "24h": 0
+  },
+  "incidentCounts": {
+    "1h": 0,
+    "3h": 0,
+    "6h": 0,
+    "12h": 0,
+    "24h": 0
+  },
+  "total": 0,
+  "strictAuthorityClass": "AUTHORITATIVE_OPERATIONAL_PERIMETER",
+  "sensorDerivedLabelsCounted": 0,
+  "doctrine": {
+    "schemaVersion": "vigia.official-truth-doctrine.v1",
+    "version": "2026-08-25.1",
+    "strictLabelAuthorityClass": "AUTHORITATIVE_OPERATIONAL_PERIMETER",
+    "officialReferenceMaySatisfyStrictGate": false,
+    "allowedRevisionClasses": [
+      "NORMAL_PROGRESSION",
+      "GEOMETRY_REFINEMENT"
+    ],
+    "minimumGeometryQuality": "VALID_NORMALIZED",
+    "chronologyRequirement": "PROVIDER_PUBLICATION_AND_VIGIA_AVAILABILITY_STRICTLY_AFTER_ISSUE",
+    "interpolationAllowed": false,
+    "correctionTreatment": "RETAIN_HISTORY_EXCLUDE_FROM_GROWTH_LABEL_UNLESS_REVIEWED",
+    "mergeSplitTreatment": "RETAIN_AND_REQUIRE_IDENTITY_REVIEW",
+    "conflictBehavior": "PRESERVE_ALL_ABSTAIN_WHEN_IN_SCOPE_AUTHORITY_UNRESOLVED",
+    "abstentionBehavior": "FAIL_CLOSED",
+    "authorityByJurisdiction": {
+      "CA-BC": [
+        "bc-wildfire-service",
+        "cwfis-nrcan"
+      ],
+      "CA-AB": [
+        "alberta-wildfire",
+        "cwfis-nrcan"
+      ],
+      "US": [
+        "nifc-wfigs"
+      ],
+      "CA": [
+        "jurisdictional-provincial-provider",
+        "cwfis-nrcan"
+      ]
+    },
+    "horizons": {
+      "1h": {
+        "targetMinutes": 60,
+        "minimumOffset": 45,
+        "maximumOffset": 90,
+        "preferredOffset": 60
+      },
+      "3h": {
+        "targetMinutes": 180,
+        "minimumOffset": 150,
+        "maximumOffset": 240,
+        "preferredOffset": 180
+      },
+      "6h": {
+        "targetMinutes": 360,
+        "minimumOffset": 300,
+        "maximumOffset": 450,
+        "preferredOffset": 360
+      },
+      "12h": {
+        "targetMinutes": 720,
+        "minimumOffset": 600,
+        "maximumOffset": 900,
+        "preferredOffset": 720
+      },
+      "24h": {
+        "targetMinutes": 1440,
+        "minimumOffset": 1200,
+        "maximumOffset": 1800,
+        "preferredOffset": 1440
+      }
+    }
+  },
+  "labels": [],
+  "fingerprint": "authoritative-perimeter-labels:sha256:8a7e7bf80997b16422959d75d51cdc37778af2db8ad22a24057a3643d91b65f1"
+}

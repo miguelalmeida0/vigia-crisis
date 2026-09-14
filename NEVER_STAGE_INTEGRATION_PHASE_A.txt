@@ -1,0 +1,24 @@
+# VIGIA Phase A paths and classes that must never be staged
+.env
+.env.*
+.tmp/
+.external-campaigns/
+node_modules/
+data/runtime/
+apps/operator-console/dist/
+apps/mission-dark/
+artifacts/mission-dark-acceptance/
+**/browser-profile/
+**/profiles/
+**/cookies*
+**/*.pid
+**/*.log
+**/*.pem
+**/*.key
+**/*.p12
+**/secrets/
+**/credentials/
+**/*.db-wal
+**/*.db-shm
+/Users/malmeida/Documents/Development/vigia/
+/Users/malmeida/Documents/Development/vigia-intelligence/

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "VIIRS-N20-20260824-1205-A",
+    "measurement_id": "VIIRS-N20-20260824-1205--8.0000-40.0000",
+    "latitude": "40.0000",
+    "longitude": "-8.0000",
+    "acq_date": "2026-08-24",
+    "acq_time": "1205",
+    "satellite": "N20",
+    "instrument": "VIIRS",
+    "confidence": "high",
+    "frp": "18.4",
+    "bright_ti4": "338.2",
+    "daynight": "D",
+    "published_at": "2026-08-24T12:08:00Z"
+  },
+  {
+    "id": "INVALID-NO-LOCATION",
+    "acq_date": "2026-08-24",
+    "acq_time": "1206",
+    "satellite": "N20"
+  }
+]

@@ -1,0 +1,600 @@
+{
+  "status": 200,
+  "latencyMs": 741.6785419999999,
+  "data": {
+    "storage": {
+      "snapshots": 291,
+      "dependencies": 246702,
+      "jobs": 4,
+      "documents": 0,
+      "admissions": 0
+    },
+    "history": {
+      "retentionDays": 30,
+      "continuityIntervalMinutes": 30,
+      "lastRetention": {
+        "days": 30,
+        "cutoff": "2026-08-13T22:25:11.992Z",
+        "removed": 0
+      }
+    },
+    "roadSource": {
+      "status": {
+        "id": "infraestruturas-portugal-traffic",
+        "provider": "Infraestruturas de Portugal",
+        "authority": "GOVERNMENT",
+        "url": "https://servicos.infraestruturasdeportugal.pt/viajar-na-estrada/transito-em-tempo-real",
+        "coverage": "Published occurrences on the IP traffic map. Incomplete road-network coverage; no road-clearance guarantee.",
+        "state": "AVAILABLE",
+        "lastCheck": "2026-09-12T22:27:00.881Z",
+        "lastSuccessfulCheck": "2026-09-12T22:27:00.881Z",
+        "nextCheck": "2026-09-12T22:32:00.881Z",
+        "count": 210,
+        "changed": true
+      },
+      "coverage": {
+        "connected": true,
+        "state": "PARTIAL",
+        "complete": false,
+        "checkedAt": "2026-09-12T22:27:00.881Z",
+        "validUntil": "2026-09-12T22:37:00.881Z",
+        "source": "Infraestruturas de Portugal",
+        "sourceUrl": "https://servicos.infraestruturasdeportugal.pt/viajar-na-estrada/transito-em-tempo-real",
+        "coveredRoads": [],
+        "lastAttemptAt": "2026-09-12T22:27:00.881Z",
+        "sourceAgeMs": 56635,
+        "reason": "Published occurrences on the IP traffic map. Incomplete road-network coverage; no road-clearance guarantee."
+      },
+      "retainedObservations": 210
+    },
+    "facilitySources": [
+      {
+        "provider": "OpenStreetMap contributors",
+        "url": "https://www.openstreetmap.org/",
+        "family": "OSM_BASELINE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T13:58:12.571Z",
+        "nextFetch": "2026-09-13T13:58:12.571Z"
+      },
+      {
+        "provider": "Ministério Público",
+        "url": "https://www.ministeriopublico.pt/contactos",
+        "family": "MP_CONTACT_DIRECTORY",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T13:58:15.527Z",
+        "nextFetch": "2026-09-13T13:58:15.527Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-quinta-da-prata/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:45.393Z",
+        "nextFetch": "2026-09-19T16:05:45.393Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-borba/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:47.621Z",
+        "nextFetch": "2026-09-19T16:05:47.621Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-batalha/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:35.803Z",
+        "nextFetch": "2026-09-19T16:06:35.803Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-matriz/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:43.164Z",
+        "nextFetch": "2026-09-19T16:05:43.164Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/17/unidade-de-cuidados-na-comunidade-ucc-arraiolos/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:44.213Z",
+        "nextFetch": "2026-09-19T16:05:44.213Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-alandroal/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:40.400Z",
+        "nextFetch": "2026-09-19T16:05:40.400Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/27/unidade-de-saude-familiar-usf-planicie/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:02.151Z",
+        "nextFetch": "2026-09-19T16:06:02.151Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-extremus/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:49.901Z",
+        "nextFetch": "2026-09-19T16:05:49.901Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-estremoz/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:50.870Z",
+        "nextFetch": "2026-09-19T16:05:50.870Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-salus/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:57.053Z",
+        "nextFetch": "2026-09-19T16:05:57.053Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-lusitania/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:59.266Z",
+        "nextFetch": "2026-09-19T16:05:59.266Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-evora/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:03.642Z",
+        "nextFetch": "2026-09-19T16:06:03.642Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-evora/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:04.584Z",
+        "nextFetch": "2026-09-19T16:06:04.584Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-cuidados-na-comunidade-ucc-mora/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:10.842Z",
+        "nextFetch": "2026-09-19T16:06:10.842Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-portel/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:13.591Z",
+        "nextFetch": "2026-09-19T16:06:13.591Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-redondo/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:14.643Z",
+        "nextFetch": "2026-09-19T16:06:14.643Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/17/unidade-de-cuidados-de-saude-primarios-ucsp-redondo/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:15.958Z",
+        "nextFetch": "2026-09-19T16:06:15.958Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-remo/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:16.908Z",
+        "nextFetch": "2026-09-19T16:06:16.908Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-famliar-usf-foral/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:06.957Z",
+        "nextFetch": "2026-09-19T16:06:06.957Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-mora/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:09.651Z",
+        "nextFetch": "2026-09-19T16:06:09.651Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-portel/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:12.227Z",
+        "nextFetch": "2026-09-19T16:06:12.227Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-vendas-novas/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:28.633Z",
+        "nextFetch": "2026-09-19T16:06:28.633Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-viana-do-alentejo/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:30.100Z",
+        "nextFetch": "2026-09-19T16:06:30.100Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-viana-do-alentejo/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:31.062Z",
+        "nextFetch": "2026-09-19T16:06:31.062Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-vila-vicosa/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:33.704Z",
+        "nextFetch": "2026-09-19T16:06:33.704Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-alcobaca-2/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:34.627Z",
+        "nextFetch": "2026-09-19T16:06:34.627Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-mourao/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:20.881Z",
+        "nextFetch": "2026-09-19T16:06:20.881Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-vendas-novas/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:23.924Z",
+        "nextFetch": "2026-09-19T16:06:23.924Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-vendas-novas/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:26.273Z",
+        "nextFetch": "2026-09-19T16:06:26.273Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-marinha-grande/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:40.498Z",
+        "nextFetch": "2026-09-19T16:06:40.498Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-nazare/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:41.948Z",
+        "nextFetch": "2026-09-19T16:06:41.948Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-ourem/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:43.698Z",
+        "nextFetch": "2026-09-19T16:06:43.698Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-pombal/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:49.151Z",
+        "nextFetch": "2026-09-19T16:06:49.151Z"
+      },
+      {
+        "provider": "ULS de Coimbra",
+        "url": "https://www.ulscoimbra.min-saude.pt/contactos/contactos-gerais-do-chuc/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:28.058Z",
+        "nextFetch": "2026-09-19T16:05:28.058Z"
+      },
+      {
+        "provider": "ULS Lisboa Ocidental",
+        "url": "https://www.ulslo.min-saude.pt/attachments/article/461/Contactos%20Cuidados%20de%20Sa%C3%BAde%20Prim%C3%A1rios.pdf",
+        "family": "ULSLO_PRIMARY_PDF",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:29.926Z",
+        "nextFetch": "2026-09-19T16:05:29.926Z"
+      },
+      {
+        "provider": "Federação de Bombeiros do Distrito de Coimbra",
+        "url": "https://www.bombeiroscoimbra.pt/federadas",
+        "family": "FIRE_FEDERATION_DIRECTORY",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:33.259Z",
+        "nextFetch": "2026-09-19T16:05:33.259Z"
+      },
+      {
+        "provider": "Bombeiros Voluntários de Leiria",
+        "url": "https://bvleiria.pt/contactos/",
+        "family": "BVLEIRIA_CONTACTS",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:35.992Z",
+        "nextFetch": "2026-09-19T16:05:35.992Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-dr-gorjao-henriques/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:38.302Z",
+        "nextFetch": "2026-09-19T16:06:38.302Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-fatima/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:39.290Z",
+        "nextFetch": "2026-09-19T16:06:39.290Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-porto-mos/",
+        "family": "ULSRL_CENTRE",
+        "status": "SOURCE_UNAVAILABLE",
+        "publishedAt": null,
+        "lastFetch": null,
+        "nextFetch": "2026-09-19T15:24:57.661Z"
+      },
+      {
+        "provider": "Guarda Nacional Republicana",
+        "url": "https://www.gnr.pt/contactos.aspx",
+        "family": "GNR_DIRECTORY",
+        "status": "SOURCE_UNAVAILABLE",
+        "publishedAt": null,
+        "lastFetch": null,
+        "nextFetch": "2026-09-19T15:24:57.661Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-estremoz/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:48.783Z",
+        "nextFetch": "2026-09-19T16:05:48.783Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-sol/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:52.603Z",
+        "nextFetch": "2026-09-19T16:05:52.603Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-eborae/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:54.361Z",
+        "nextFetch": "2026-09-19T16:05:54.361Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-monte-mor/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:05.941Z",
+        "nextFetch": "2026-09-19T16:06:05.941Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-almoreg/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:19.077Z",
+        "nextFetch": "2026-09-19T16:06:19.077Z"
+      },
+      {
+        "provider": "ULS da Região de Leiria",
+        "url": "https://www.ulsrl.min-saude.pt/cuidados-saude-primarios/centro-saude-dr-arnaldo-sampaio/",
+        "family": "ULSRL_CENTRE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:36.978Z",
+        "nextFetch": "2026-09-19T16:06:36.978Z"
+      },
+      {
+        "provider": "Câmara Municipal de Coimbra",
+        "url": "https://www.coimbra.pt/2026/02/160-pessoas-acolhidas-durante-a-noite-nas-zonas-de-apoio-ativadas-em-coimbra/",
+        "family": "COIMBRA_RECEPTION_HISTORY",
+        "status": "AVAILABLE",
+        "publishedAt": "2026-02-11T00:00:00Z",
+        "lastFetch": "2026-09-12T16:05:38.285Z",
+        "nextFetch": "2026-09-19T16:05:38.285Z"
+      },
+      {
+        "provider": "Câmara Municipal de Leiria",
+        "url": "https://www.cm-leiria.pt/cmleiria-migrate/uploads/document/file/42240/anexo_65_25.pdf",
+        "family": "MUNICIPAL_PLAN",
+        "status": "SOURCE_UNAVAILABLE",
+        "publishedAt": null,
+        "lastFetch": null,
+        "nextFetch": "2026-09-19T15:24:57.661Z"
+      },
+      {
+        "provider": "Câmara Municipal de Évora",
+        "url": "https://www.cm-evora.pt/municipe/areas-de-acao/protecao-civil/a-protecao-civil/",
+        "family": "EVORA_CIVIL_PROTECTION",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:37.128Z",
+        "nextFetch": "2026-09-19T16:05:37.128Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-na-comunidade-ucc-alandroal/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:05:41.669Z",
+        "nextFetch": "2026-09-19T16:05:41.669Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-saude-familiar-usf-alcaides/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:08.081Z",
+        "nextFetch": "2026-09-19T16:06:08.081Z"
+      },
+      {
+        "provider": "ULS do Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/10/20/unidade-de-cuidados-de-saude-primarios-ucsp-vila-vicosa/",
+        "family": "ULS_CONTACT_TABLE",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:32.327Z",
+        "nextFetch": "2026-09-19T16:06:32.327Z"
+      },
+      {
+        "provider": "Câmara Municipal de Évora",
+        "url": "https://www.cm-evora.pt/municipe/agenda-e-noticias/contactos-uteis/",
+        "family": "MUNICIPAL_CONTACT_ACCORDION",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T16:06:42.571Z",
+        "nextFetch": "2026-09-19T16:06:42.571Z"
+      },
+      {
+        "provider": "Comunidade Intermunicipal do Alentejo Central",
+        "url": "https://centraldecompras.cimac.pt/entidade/view?id=29",
+        "family": "FIRE_PUBLIC_CONTACT",
+        "status": "AVAILABLE",
+        "publishedAt": null,
+        "lastFetch": "2026-09-12T22:18:30.091Z",
+        "nextFetch": "2026-09-13T22:18:30.091Z"
+      },
+      {
+        "provider": "ULS Alentejo Central",
+        "url": "https://www.ulsac.min-saude.pt/2025/11/28/areas-clinicas/",
+        "family": "HEALTH_CAPABILITY",
+        "status": "AVAILABLE",
+        "publishedAt": "2025-11-28T00:00:00Z",
+        "lastFetch": "2026-09-12T21:35:15.229Z",
+        "nextFetch": "2026-09-13T21:35:15.229Z"
+      },
+      {
+        "provider": "Câmara Municipal de Évora — Plano Municipal de Emergência 2024",
+        "url": "https://www.cm-evora.pt/wp-content/uploads/2020/07/Plano_Municipal_Emergencia_Protecao_Civil_Evora_2024-1.pdf",
+        "family": "CIVIL_PROTECTION_DESIGNATION",
+        "status": "AVAILABLE",
+        "publishedAt": "2024-06-14T07:17:25Z",
+        "lastFetch": "2026-09-12T21:35:19.106Z",
+        "nextFetch": "2026-09-13T21:35:19.106Z"
+      }
+    ],
+    "consequences": {
+      "captured": 7,
+      "unchanged": 4,
+      "recalculations": 7,
+      "routeRecalculations": 1,
+      "errors": 0
+    },
+    "ask": {
+      "successfulToolCalls": 19,
+      "abstentions": 0,
+      "unsupportedAnswerBlocks": 0
+    },
+    "model": {
+      "state": "disabled",
+      "model": "qwen3:0.6b"
+    }
+  }
+}

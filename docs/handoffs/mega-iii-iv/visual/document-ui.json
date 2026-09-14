@@ -1,0 +1,45 @@
+{
+  "lane": "CONTROLLED_DOCUMENT_UI_WITH_REAL_TEMPORARY_POSTGRES_EXTRACTION",
+  "screens": [
+    {
+      "name": "document-review-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "document-rejected-1672",
+      "width": 1672,
+      "height": 941,
+      "overflow": false,
+      "dialog": 1672,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "document-review-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    },
+    {
+      "name": "document-rejected-390",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "dialog": 390,
+      "map": "vigia-map-1"
+    }
+  ],
+  "errors": [],
+  "checks": [],
+  "operationalWrites": 0,
+  "reviewRequest": {
+    "candidateId": "candidate:ab4737dbeecd26e6bdc2e4454554fe827ff053d8dbb810c328852910559b3668",
+    "decision": "REJECT"
+  },
+  "browser": "139.0.7258.5"
+}

@@ -1,0 +1,1730 @@
+{
+  "lane": "DETERMINISTIC_CONTROLLED_CORPUS_NOT_MODEL_EVIDENCE",
+  "cases": 120,
+  "schemaValidPercent": 100,
+  "factCorrectPercent": 100,
+  "supportedByPassagePercent": 100,
+  "abstentionAccuracyPercent": 100,
+  "latencyMs": {
+    "p50": 0.011791000000002327,
+    "p95": 0.0609579999999994
+  },
+  "processRssBytes": 58343424,
+  "modelCorpusState": "NOT_RUN_MODELS_FAILED_SMOKE",
+  "modelSmoke": {
+    "selectedModel": null,
+    "fallback": "DETERMINISTIC_NO_PAID_INFERENCE",
+    "models": [
+      {
+        "model": "qwen3:0.6b",
+        "runtime": "Ollama",
+        "port": 11434,
+        "requiredConsecutiveSentinels": 20,
+        "attempts": [
+          {
+            "attempt": 1,
+            "success": false,
+            "exitCode": 1,
+            "error": "\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠸ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠼ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠼ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠴ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠦ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?25l\u001b[?2026h\u001b[?25l\u001b[1G\u001b[K\u001b[?25h\u001b[?2026l\u001b[2K\u001b[1G\u001b[?25hError: 500 Internal Server Error: llama-server reported out-of-memory during startup: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\nerror: failed to allocate buffer, size =     0.02 MiB\n",
+            "latencyMs": 932
+          }
+        ],
+        "ramBytes": null,
+        "corpusState": "NOT_RUN",
+        "state": "REJECTED_STARTUP",
+        "unexecutedSentinels": 19,
+        "successPercent": 0
+      },
+      {
+        "model": "llama3.2:3b",
+        "runtime": "Ollama",
+        "port": 11434,
+        "requiredConsecutiveSentinels": 20,
+        "attempts": [
+          {
+            "attempt": 1,
+            "success": false,
+            "exitCode": 1,
+            "error": "\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠹ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠼ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠴ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠦ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠦ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠧ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠏ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?25l\u001b[?2026h\u001b[?25l\u001b[1G\u001b[K\u001b[?25h\u001b[?2026l\u001b[2K\u001b[1G\u001b[?25hError: 500 Internal Server Error: llama-server reported out-of-memory during startup: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\n",
+            "latencyMs": 1123
+          }
+        ],
+        "ramBytes": null,
+        "corpusState": "NOT_RUN",
+        "state": "REJECTED_STARTUP",
+        "unexecutedSentinels": 19,
+        "successPercent": 0
+      },
+      {
+        "model": "qwen3.5:4b",
+        "runtime": "Ollama",
+        "port": 11435,
+        "requiredConsecutiveSentinels": 20,
+        "attempts": [
+          {
+            "attempt": 1,
+            "success": false,
+            "exitCode": 1,
+            "error": "?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠹ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠸ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠴ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠦ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠧ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠋ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠋ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠸ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠼ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠴ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠦ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠧ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠋ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠹ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠸ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠼ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠼ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠴ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠧ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠧ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠏ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠋ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠙ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠹ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠸ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠴ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠦ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠧ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠇ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠏ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?2026h\u001b[?25l\u001b[1G⠋ \u001b[K\u001b[?25h\u001b[?2026l\u001b[?25l\u001b[?2026h\u001b[?25l\u001b[1G\u001b[K\u001b[?25h\u001b[?2026l\u001b[2K\u001b[1G\u001b[?25hError: 500 Internal Server Error: llama-server startup failed after projector CPU offload retry: llama-server process has terminated: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend: error: failed to create command queue\nerror: failed to allocate context\nllama_init_from_model: failed to initialize the context: failed to initialize  backend\n",
+            "latencyMs": 5155
+          }
+        ],
+        "ramBytes": null,
+        "corpusState": "NOT_RUN",
+        "state": "REJECTED_STARTUP",
+        "unexecutedSentinels": 19,
+        "successPercent": 0
+      }
+    ]
+  },
+  "rows": [
+    {
+      "id": "address-1",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 1.2846249999999912
+    },
+    {
+      "id": "phone-1",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.19566700000000026
+    },
+    {
+      "id": "road-1",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 1.3146250000000066
+    },
+    {
+      "id": "municipality-1",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.043707999999995195
+    },
+    {
+      "id": "dates-1",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0309999999999917
+    },
+    {
+      "id": "date-range-1",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.0609579999999994
+    },
+    {
+      "id": "negation-1",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.025707999999994513
+    },
+    {
+      "id": "historical-1",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.01829099999999073
+    },
+    {
+      "id": "expired-1",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.027874999999994543
+    },
+    {
+      "id": "multiple-facilities-1",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.022542000000001394
+    },
+    {
+      "id": "multiple-roads-1",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.038916000000000395
+    },
+    {
+      "id": "ambiguous-branches-1",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.021041999999994232
+    },
+    {
+      "id": "not-present-1",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.028874999999999318
+    },
+    {
+      "id": "prompt-injection-1",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.004333000000002585
+    },
+    {
+      "id": "malformed-1",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.011583000000001675
+    },
+    {
+      "id": "address-2",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.024375000000006253
+    },
+    {
+      "id": "phone-2",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.11233299999999247
+    },
+    {
+      "id": "road-2",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.056167000000002076
+    },
+    {
+      "id": "municipality-2",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.017583000000001903
+    },
+    {
+      "id": "dates-2",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.010167000000009807
+    },
+    {
+      "id": "date-range-2",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.023957999999993262
+    },
+    {
+      "id": "negation-2",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.014708000000013044
+    },
+    {
+      "id": "historical-2",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.010750000000001592
+    },
+    {
+      "id": "expired-2",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.017749999999992383
+    },
+    {
+      "id": "multiple-facilities-2",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.009333999999995513
+    },
+    {
+      "id": "multiple-roads-2",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.020792000000000144
+    },
+    {
+      "id": "ambiguous-branches-2",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.009457999999995081
+    },
+    {
+      "id": "not-present-2",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.01187500000000341
+    },
+    {
+      "id": "prompt-injection-2",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0049169999999918446
+    },
+    {
+      "id": "malformed-2",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.010249999999999204
+    },
+    {
+      "id": "address-3",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.02420800000000156
+    },
+    {
+      "id": "phone-3",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.014249999999989882
+    },
+    {
+      "id": "road-3",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.01645900000001177
+    },
+    {
+      "id": "municipality-3",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.009042000000007988
+    },
+    {
+      "id": "dates-3",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007125000000002046
+    },
+    {
+      "id": "date-range-3",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.014875000000003524
+    },
+    {
+      "id": "negation-3",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.027250000000009322
+    },
+    {
+      "id": "historical-3",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008624999999994998
+    },
+    {
+      "id": "expired-3",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.013708000000008269
+    },
+    {
+      "id": "multiple-facilities-3",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008332999999993262
+    },
+    {
+      "id": "multiple-roads-3",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.016833000000005427
+    },
+    {
+      "id": "ambiguous-branches-3",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007917000000006169
+    },
+    {
+      "id": "not-present-3",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008207999999996218
+    },
+    {
+      "id": "prompt-injection-3",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.00304199999999355
+    },
+    {
+      "id": "malformed-3",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.009124999999997385
+    },
+    {
+      "id": "address-4",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.012958999999995058
+    },
+    {
+      "id": "phone-4",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.018749999999997158
+    },
+    {
+      "id": "road-4",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.01391599999999471
+    },
+    {
+      "id": "municipality-4",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.01104099999999164
+    },
+    {
+      "id": "dates-4",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.00837500000000091
+    },
+    {
+      "id": "date-range-4",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.013582999999997014
+    },
+    {
+      "id": "negation-4",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.00941699999999912
+    },
+    {
+      "id": "historical-4",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007790999999997439
+    },
+    {
+      "id": "expired-4",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.013541000000003578
+    },
+    {
+      "id": "multiple-facilities-4",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008875000000003297
+    },
+    {
+      "id": "multiple-roads-4",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.016582999999997128
+    },
+    {
+      "id": "ambiguous-branches-4",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007915999999994483
+    },
+    {
+      "id": "not-present-4",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.00883299999999565
+    },
+    {
+      "id": "prompt-injection-4",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0029170000000107166
+    },
+    {
+      "id": "malformed-4",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008583000000001562
+    },
+    {
+      "id": "address-5",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.026708999999996763
+    },
+    {
+      "id": "phone-5",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.012666999999993322
+    },
+    {
+      "id": "road-5",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.031999999999996476
+    },
+    {
+      "id": "municipality-5",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008667000000002645
+    },
+    {
+      "id": "dates-5",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.006833000000000311
+    },
+    {
+      "id": "date-range-5",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.013125000000002274
+    },
+    {
+      "id": "negation-5",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.009333999999995513
+    },
+    {
+      "id": "historical-5",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007832999999990875
+    },
+    {
+      "id": "expired-5",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.012458000000009406
+    },
+    {
+      "id": "multiple-facilities-5",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008207999999996218
+    },
+    {
+      "id": "multiple-roads-5",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.01754200000000594
+    },
+    {
+      "id": "ambiguous-branches-5",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.02204100000000153
+    },
+    {
+      "id": "not-present-5",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.022999999999996135
+    },
+    {
+      "id": "prompt-injection-5",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.004958000000002016
+    },
+    {
+      "id": "malformed-5",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.011667000000002758
+    },
+    {
+      "id": "address-6",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.023417000000009125
+    },
+    {
+      "id": "phone-6",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.014250000000004093
+    },
+    {
+      "id": "road-6",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.021041999999994232
+    },
+    {
+      "id": "municipality-6",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.010041000000001077
+    },
+    {
+      "id": "dates-6",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008042000000003213
+    },
+    {
+      "id": "date-range-6",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.01633300000000304
+    },
+    {
+      "id": "negation-6",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.02049999999999841
+    },
+    {
+      "id": "historical-6",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.00924999999999443
+    },
+    {
+      "id": "expired-6",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.015458999999992784
+    },
+    {
+      "id": "multiple-facilities-6",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.44220800000000793
+    },
+    {
+      "id": "multiple-roads-6",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.026833999999993807
+    },
+    {
+      "id": "ambiguous-branches-6",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008290999999999826
+    },
+    {
+      "id": "not-present-6",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007250000000013301
+    },
+    {
+      "id": "prompt-injection-6",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.003333999999995285
+    },
+    {
+      "id": "malformed-6",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.006957999999997355
+    },
+    {
+      "id": "address-7",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.012584000000003925
+    },
+    {
+      "id": "phone-7",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.010625000000004547
+    },
+    {
+      "id": "road-7",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.012375000000005798
+    },
+    {
+      "id": "municipality-7",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008915999999999258
+    },
+    {
+      "id": "dates-7",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0061670000000049185
+    },
+    {
+      "id": "date-range-7",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.05854200000000276
+    },
+    {
+      "id": "negation-7",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.021833999999998355
+    },
+    {
+      "id": "historical-7",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007833000000005086
+    },
+    {
+      "id": "expired-7",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.012917000000001622
+    },
+    {
+      "id": "multiple-facilities-7",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007166000000012218
+    },
+    {
+      "id": "multiple-roads-7",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.013791999999995141
+    },
+    {
+      "id": "ambiguous-branches-7",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007457999999999743
+    },
+    {
+      "id": "not-present-7",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.006208999999998355
+    },
+    {
+      "id": "prompt-injection-7",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0029159999999990305
+    },
+    {
+      "id": "malformed-7",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007000000000005002
+    },
+    {
+      "id": "address-8",
+      "category": "address",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "address.street"
+      ],
+      "actual": [
+        "address.street"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.011791000000002327
+    },
+    {
+      "id": "phone-8",
+      "category": "phone",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "contact.phone"
+      ],
+      "actual": [
+        "contact.phone"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.009541999999996165
+    },
+    {
+      "id": "road-8",
+      "category": "road",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.011082999999999288
+    },
+    {
+      "id": "municipality-8",
+      "category": "municipality",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008125000000006821
+    },
+    {
+      "id": "dates-8",
+      "category": "dates",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008042000000003213
+    },
+    {
+      "id": "date-range-8",
+      "category": "date-range",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.010917000000006283
+    },
+    {
+      "id": "negation-8",
+      "category": "negation",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007999999999995566
+    },
+    {
+      "id": "historical-8",
+      "category": "historical",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0085420000000056
+    },
+    {
+      "id": "expired-8",
+      "category": "expired",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.010790999999997553
+    },
+    {
+      "id": "multiple-facilities-8",
+      "category": "multiple-facilities",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.04050000000000864
+    },
+    {
+      "id": "multiple-roads-8",
+      "category": "multiple-roads",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "actual": [
+        "ROAD_RESTRICTION",
+        "ROAD_RESTRICTION"
+      ],
+      "abstentionExpected": false,
+      "abstentionCorrect": null,
+      "latencyMs": 0.03783299999999201
+    },
+    {
+      "id": "ambiguous-branches-8",
+      "category": "ambiguous-branches",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.008667000000002645
+    },
+    {
+      "id": "not-present-8",
+      "category": "not-present",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.0062500000000085265
+    },
+    {
+      "id": "prompt-injection-8",
+      "category": "prompt-injection",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.004166999999995369
+    },
+    {
+      "id": "malformed-8",
+      "category": "malformed",
+      "schemaValid": true,
+      "supported": true,
+      "correct": true,
+      "expected": [],
+      "actual": [],
+      "abstentionExpected": true,
+      "abstentionCorrect": true,
+      "latencyMs": 0.007000000000005002
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "lane": "ACTUAL_LOCAL_RUNTIME_OUTSIDE_VIGIA",
+  "startedAt": "2026-09-12T21:52:17Z",
+  "diagnostics": {
+    "version": {
+      "exitCode": 0,
+      "stdout": "ollama version is 0.30.7\n",
+      "stderr": ""
+    },
+    "architecture": {
+      "exitCode": 0,
+      "stdout": "arm64\n",
+      "stderr": ""
+    },
+    "memory": {
+      "exitCode": 0,
+      "stdout": "The system has 17179869184 (1048576 pages with a page size of 16384).\n\nStats: \nPages free: 81342 \nPages purgeable: 122 \nPages purged: 43044463 \n\nSwap I/O:\nSwapins: 38931448 \nSwapouts: 42398190 \n\nPage Q counts:\nPages active: 187934 \nPages inactive: 157474 \nPages speculative: 29566 \nPages throttled: 0 \nPages wired down: 225686 \n\nCompressor Stats:\nPages used by compressor: 327435 \nPages decompressed: 1445025955 \nPages compressed: 1614046458 \n\nFile I/O:\nPageins: 52061725 \nPageouts: 732781 \n\nSystem-wide memory free percentage: 45%\n",
+      "stderr": ""
+    },
+    "hardwareMemory": {
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "sysctl: sysctl fmt -1 1024 1: Operation not permitted\n"
+    },
+    "processOwnership": {
+      "exitCode": 0,
+      "stdout": "COMMAND   PID     USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME\nollama  79382 malmeida    3u  IPv4 0xa4e6437ea26aa658      0t0  TCP 127.0.0.1:11434 (LISTEN)\nollama  79511 malmeida    3u  IPv4 0xf9d680828acf6956      0t0  TCP 127.0.0.1:11435 (LISTEN)\n",
+      "stderr": ""
+    },
+    "processList": {
+      "error": "[Errno 1] Operation not permitted: 'ps'"
+    },
+    "11434/version": {
+      "version": "0.30.7"
+    },
+    "11434/ps": {
+      "models": []
+    },
+    "11434/tags": {
+      "models": [
+        {
+          "name": "qwen3:0.6b",
+          "size": 522653767,
+          "digest": "7df6b6e09427a769808717c0a93cadc4ae99ed4eb8bf5ca557c90846becea435"
+        },
+        {
+          "name": "qwen3-vl:2b-instruct-q4_K_M",
+          "size": 1889519783,
+          "digest": "ea422f1e73652a95479954d8572d3c8c6022f628ce2d38a1a04aae1b7f2d5300"
+        },
+        {
+          "name": "llama3.2:3b",
+          "size": 2019393189,
+          "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72"
+        },
+        {
+          "name": "llama3.2-vision:latest",
+          "size": 7816589186,
+          "digest": "6f2f9757ae97e8a3f8ea33d6adb2b11d93d9a35bef277cd2c0b1b5af8e8d0b1e"
+        },
+        {
+          "name": "llama3.1:8b",
+          "size": 4920753328,
+          "digest": "46e0c10c039e019119339687c3c1757cc81b9da49709a3b3924863ba87ca666e"
+        }
+      ]
+    },
+    "11435/version": {
+      "version": "0.30.7"
+    },
+    "11435/ps": {
+      "models": []
+    },
+    "11435/tags": {
+      "models": [
+        {
+          "name": "qwen3.5:4b",
+          "size": 3389983735,
+          "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd"
+        }
+      ]
+    },
+    "environment": {
+      "OLLAMA_HOST": null,
+      "OLLAMA_MODELS": null,
+      "OLLAMA_LLM_LIBRARY": null,
+      "OLLAMA_CONTEXT_LENGTH": null,
+      "OLLAMA_NUM_PARALLEL": null
+    }
+  },
+  "attempts": [
+    {
+      "model": "qwen3:0.6b",
+      "runtime": "clean-ollama",
+      "requiredConsecutive": 20,
+      "attempts": [
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 2183
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 171
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 167
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 171
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 240
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 204
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 452
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 258
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 203
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 533
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 214
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 323
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 375
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 274
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 208
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 174
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 306
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 265
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 189
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 184
+        }
+      ],
+      "passed": true
+    },
+    {
+      "model": "qwen3:0.6b",
+      "runtime": "native-cpu",
+      "requiredConsecutive": 20,
+      "attempts": [
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 742
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 98
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 73
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 92
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 82
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 69
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 186
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 122
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 87
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 100
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 155
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 114
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 84
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 77
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 93
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 378
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 334
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 277
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 247
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 94
+        }
+      ],
+      "passed": true
+    },
+    {
+      "model": "llama3.2:3b",
+      "runtime": "native-cpu",
+      "requiredConsecutive": 20,
+      "attempts": [
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 6248
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 941
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 788
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 1224
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 1624
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 292
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 334
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 2484
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 4176
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 3833
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 1224
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 858
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 488
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 390
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 912
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 2323
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 7737
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 658
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 652
+        },
+        {
+          "success": true,
+          "answer": "VIGIA_OK",
+          "latencyMs": 315
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "selectedModel": null,
+  "corpusState": "REJECTED_FOR_OPERATIONAL_USE",
+  "mandatoryMonthlyCostEUR": 0,
+  "completedAt": "2026-09-12T22:01:28Z",
+  "corpusReport": "model-evaluation.json"
+}

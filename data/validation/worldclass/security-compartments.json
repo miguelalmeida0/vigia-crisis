@@ -1,0 +1,146 @@
+{
+  "schemaVersion": "vigia.security-compartment-certification.v1",
+  "abac": {
+    "passed": true,
+    "dimensions": [
+      "organization",
+      "region",
+      "incident",
+      "resource",
+      "classification",
+      "rights",
+      "actionClass",
+      "principal",
+      "device",
+      "session"
+    ],
+    "cases": [
+      {
+        "id": "authorized-read",
+        "expected": true,
+        "actual": true,
+        "passed": true,
+        "reasons": []
+      },
+      {
+        "id": "cross-organization",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "ORGANIZATION_SCOPE_MISMATCH"
+        ]
+      },
+      {
+        "id": "cross-incident",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "INCIDENT_SCOPE_MISMATCH"
+        ]
+      },
+      {
+        "id": "rights-bypass",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "RIGHTS_MARKING_DENIED"
+        ]
+      },
+      {
+        "id": "property-clearance",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "CLASSIFICATION_CLEARANCE_INSUFFICIENT",
+          "RIGHTS_MARKING_DENIED"
+        ]
+      },
+      {
+        "id": "privilege-laundering",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "RIGHTS_MARKING_DENIED"
+        ]
+      },
+      {
+        "id": "stale-authority",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "SESSION_OUTSIDE_VALIDITY"
+        ]
+      },
+      {
+        "id": "revoked-authority",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "AUTHORITY_REVOKED"
+        ]
+      },
+      {
+        "id": "export-leakage",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "RIGHTS_MARKING_DENIED"
+        ]
+      },
+      {
+        "id": "lineage-leakage",
+        "expected": false,
+        "actual": false,
+        "passed": true,
+        "reasons": [
+          "RIGHTS_MARKING_DENIED"
+        ]
+      }
+    ]
+  },
+  "enforcement": {
+    "api": "READY",
+    "queryService": "READY",
+    "ontologyObjects": "READY",
+    "propertyAccess": "READY",
+    "actions": "READY",
+    "exports": "READY",
+    "lineage": "READY",
+    "postgresRls": {
+      "state": "BLOCKED_PENDING_AGENT1_MIGRATION_018",
+      "proposedMigration": "docs/architecture/migration-019-security-compartments.sql.proposed",
+      "reason": "Migration 019 cannot become the active DAG head until Agent 1 migration 018 is integrated and checksummed."
+    }
+  },
+  "kms": {
+    "abstraction": "READY",
+    "adapterContract": "packages/domain/src/worldclass/key-management.mjs",
+    "externalProvider": "NOT_CONFIGURED",
+    "keyMaterialRecorded": false
+  },
+  "supplyChain": {
+    "sbom": "READY_IN_CLEAN_ROOM_MANIFEST",
+    "containerSigning": "BLOCKED_IMAGE_DIGESTS_AND_EXTERNAL_SIGNER",
+    "containerScanning": "NOT_EXECUTED_AGAINST_RELEASE_IMAGES",
+    "secretScanning": "REQUIRES_INDEPENDENT_RELEASE_SCAN",
+    "externalAuditAnchoring": "NOT_CONFIGURED"
+  },
+  "externalAssurance": {
+    "state": "NOT_EXECUTED",
+    "requirement": "Independent security assessor must run cross-tenant, RLS-bypass, privilege-laundering, stale-authority, and export-leakage tests against the deployed canonical stack."
+  },
+  "unresolvedHigh": null,
+  "unresolvedMediumCanonical": null,
+  "vulnerabilityQualification": "No independent deployed-stack assessment has run; zero unresolved findings is not claimed.",
+  "passed": false,
+  "state": "BLOCKED",
+  "fingerprint": "security-compartments:sha256:065f6e509a4a4df2c0a947404463c76db136e4e2a8d8f20769b23a9da31ec8e3"
+}
