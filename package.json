@@ -10,7 +10,7 @@
     "dev": "node apps/api/src/server.mjs",
     "dev:random": "PORT=0 OPEN_BROWSER=1 node apps/api/src/server.mjs",
     "start": "node apps/api/src/server.mjs",
-    "test": "mkdir -p .tmp/test && TMPDIR=$PWD/.tmp/test node --test --test-concurrency=1 packages/domain/test/*.test.mjs packages/domain/test/intelligence/*.test.mjs packages/domain/test/incident-command/*.test.mjs apps/api/test/*.test.mjs apps/field-node/test/*.test.mjs",
+    "test": "mkdir -p .tmp/test && TMPDIR=$PWD/.tmp/test node --test --test-concurrency=1 packages/domain/test/*.test.mjs packages/domain/test/intelligence/*.test.mjs packages/domain/test/consequences/*.test.mjs packages/domain/test/incident-command/*.test.mjs apps/api/test/*.test.mjs apps/field-node/test/*.test.mjs",
     "test:intelligence": "mkdir -p .tmp/test && TMPDIR=$PWD/.tmp/test node --test --test-concurrency=1 packages/domain/test/intelligence/*.test.mjs",
     "test:event-fabric": "mkdir -p .tmp/test && TMPDIR=$PWD/.tmp/test node --test --test-concurrency=1 packages/domain/test/intelligence/event-fabric-and-twin.test.mjs apps/api/test/operational-intelligence-service.test.mjs",
     "test:control-plane": "mkdir -p .tmp/test && TMPDIR=$PWD/.tmp/test node --test --test-concurrency=1 packages/domain/test/intelligence/policy-control-plane.test.mjs apps/api/test/control-plane-service.test.mjs",

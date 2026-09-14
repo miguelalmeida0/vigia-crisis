@@ -2,6 +2,7 @@ import { randomUUID } from 'node:crypto';
 import { assertCan, assertIncidentScope, canonicalIncidentId, can } from '../../../../../packages/domain/src/authorization.mjs';
 import { canonical, groupKey, verify, open, digest, delivery } from '../../../../../packages/domain/src/fieldnet/team-protocol.mjs';
 import { SERVICES, REPORT_TYPES, validPoint, missionCatalog, evaluateMission, importantReports,reportMatches } from '../../../../../packages/domain/src/fieldnet/mission-command.mjs';
+import { operationalConsequences } from '../../../../../packages/domain/src/consequences/operational-consequences.mjs';
 import {controlledFieldContext} from './controlled-field-exercise.mjs';
 const fail=(text,statusCode=400)=>{throw Object.assign(Error(text),{statusCode});};
 const text=(v,max=240)=>typeof v==='string'&&v.trim()&&v.length<=max?v.trim():fail('Enter a valid name or short description.');
@@ -69,7 +70,11 @@ export class TeamService {
       return next;
     });
     this.stats.evaluations+=recalculated;this.stats.lastEvaluationMs=performance.now()-started;
-    return {missions,reports:importantReports(reports,missions,confirmations).map(r=>({...r,routeUses:context.catalog.flatMap(p=>p.services.flatMap(s=>s.routes.filter(route=>r.facilityId===route.facilityId||reportMatches(r,route)).map(route=>({place:p.name,service:SERVICES[s.id],facility:route.name,roads:route.roads,minutes:route.minutes,direction:route.direction}))))})),confirmations};
+    // Derived, never stored: consequences are reconstructed from the same
+    // canonical records on every evaluation, so they cannot drift from them.
+    const consequences=operationalConsequences({catalog:context.catalog,missions,reports,confirmations,restrictions:context.restrictions??[],sourceValidUntil:context.sourceValidUntil,at,incidentId:group.incidentId,snapshotId:context.snapshotId??null});
+    this.stats.lastConsequenceMs=consequences.generationMs;
+    return {missions,consequences,reports:importantReports(reports,missions,confirmations).map(r=>({...r,routeUses:context.catalog.flatMap(p=>p.services.flatMap(s=>s.routes.filter(route=>r.facilityId===route.facilityId||reportMatches(r,route)).map(route=>({place:p.name,service:SERVICES[s.id],facility:route.name,roads:route.roads,minutes:route.minutes,direction:route.direction}))))})),confirmations};
   }
   async snapshot(actor,groupId){
     const group=this.group(actor,groupId),context=await this.context(group),data=this.evaluate(group,context),receipts=this.records('receipt',group),messages=this.records('message',group).filter(m=>m.senderId===actor.id||m.recipients.includes(actor.id));

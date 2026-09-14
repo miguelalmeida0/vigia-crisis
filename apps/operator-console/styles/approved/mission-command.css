@@ -60,3 +60,13 @@
 .mission-command .btn { white-space:normal; text-align:center; }
 @media(max-width:1200px) { .mc-chat { max-height:360px; } }
 @media(max-width:760px) { .mission-command { padding:16px; } .mission-command .btn,.mission-command input,.mission-command select { min-height:44px; } .mc-heading { flex-wrap:wrap; } .mc-route>strong { font-size:24px; } .mc-coordinate { grid-template-columns:minmax(0,1fr); } .mc-timeline,.mc-recent { grid-template-columns:minmax(0,1fr); gap:4px; } .mc-message>div { flex-wrap:wrap; gap:4px; } }
+
+/* Derived operational consequence — leads Important Now. */
+.mc-consequence { padding:0 0 16px; margin:0 0 16px; border-bottom:1px solid var(--vg-line); }
+.mc-consequence h3 { margin:0 0 8px; font-size:1rem; letter-spacing:.04em; }
+.mc-consequence p { margin:0 0 6px; }
+.mc-consequence[data-expired="true"] h3::after { content:' · NEEDS A NEW CHECK'; font-weight:400; }
+.mc-checks { margin:8px 0 6px; padding-left:18px; }
+.mc-checks li { margin-bottom:4px; }
+.mc-why summary { cursor:pointer; margin:4px 0; }
+@media (max-width:600px) { .mc-consequence .mc-actions { display:flex; flex-wrap:wrap; gap:8px; } }

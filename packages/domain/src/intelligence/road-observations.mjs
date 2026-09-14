@@ -1,5 +1,11 @@
 import {hash,validPoint} from './world-knowledge.mjs';
-const key=v=>String(v??'').toUpperCase().replace(/^EN\s*/,'N').replace(/\s+/g,'');
+// Canonical road identity. `EN 527`, `en527` and `EM 527` normalise to one key so
+// that road identity is compared by meaning rather than by spelling. Exported
+// because consequence reasoning must use exactly the same identity rule as
+// restriction matching: two subsystems disagreeing on road identity would let a
+// shared dependency go unseen.
+export const roadKey=v=>String(v??'').toUpperCase().replace(/^EN\s*/,'N').replace(/\s+/g,'');
+const key=roadKey;
 const iso=v=>typeof v==='number'&&Number.isFinite(v)?new Date(v).toISOString():null;
 export function ipRoadObservations(data,source,knownAt){
  if(data.error||!Array.isArray(data.features)||data.exceededTransferLimit)throw new Error('road_source_incomplete_response');
