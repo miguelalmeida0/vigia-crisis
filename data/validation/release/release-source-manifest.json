@@ -1,8 +1,8 @@
 {
   "schemaVersion": "vigia.release-source-manifest.v2",
-  "generatedAt": "2026-09-14T15:12:33.043Z",
-  "releaseId": "vigia-intelligence-fabric-d0e03143e023ae21",
-  "codeStateHash": "sha256:becb44cdf09778562d0e0752c695461bd15a24debc67b963c007e743fbe5c948",
+  "generatedAt": "2026-09-14T18:45:24.646Z",
+  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
+  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
   "entries": [
     {
@@ -360,6 +360,12 @@
       "mode": "0644"
     },
     {
+      "path": ".impeccable/config.local.json",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:1de4a5ea082e026eaac1046cf5e487030b3a3df3cfb24ed9e836b08a4de01d41",
+      "mode": "0644"
+    },
+    {
       "path": ".impeccable/critique/2026-09-08T19-40-14Z__apps-operator-console.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:fb87cd4fbff3da90b08eb12a04b54a5f970ee416a545495674548a84b0b59315",
@@ -393,6 +399,12 @@
       "path": "AGENTS.override.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:5c883dd3136a0d4981c9215358273be2b6fa26977f877ce187bc4c74c45c97d9",
+      "mode": "0644"
+    },
+    {
+      "path": "CLAUDE_HANDOFF.md",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:734cd011f54593561d832a2f5ea8f406c31c4d61d79f93b3b3f1f865593b976c",
       "mode": "0644"
     },
     {
@@ -542,7 +554,7 @@
     {
       "path": "apps/api/src/application/register-routes.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:317f428e0eb5076c9bfff8f13f387f6faf30fb6d1de269cd5dfb95016bbbe8c7",
+      "sha256": "sha256:cc61e3163a4231a015c25ac325b3db358975c5df835acb22253623d850817663",
       "mode": "0644"
     },
     {
@@ -1455,6 +1467,18 @@
       "path": "apps/api/src/modules/intelligence/canonical-twin-startup.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:f53695566f32121bad555f8922d07e30ab4e69f970f52148c2ca28a2c5ae2ba7",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/collection-intelligence-routes.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:d1c6e0c8c4757489916a1f0aaa1edb1dbb49265be00dd49fb9fffbac787f5926",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/collection-intelligence-service.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:cbf76051898d4d2801fa2527864136d649adb17e4be357ba5f697d46a880b6dc",
       "mode": "0644"
     },
     {
@@ -3282,6 +3306,48 @@
       "mode": "0644"
     },
     {
+      "path": "apps/api/test/collection-epistemic-impact.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:7be66401776c8262fcc2553d6dc702c9232845084802d2ae6fef3cd6d767f5e8",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/collection-intelligence-api.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:e891eb2321571c4f35c4a7e048f9a5da3490f908f5fb18a8157ed05ce26d66e7",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/collection-intelligence-fixture.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:0924ab7b1a74a77c53e72d96ff7488fadc3f3cd9f4f41cf37cc68617dd3bd27e",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/collection-intelligence-reads.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:c620c5950df38f2c8d3cf4f027ef917e867bc434cda9d88eaa80e780e89bb9fe",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/collection-lifecycle.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:8f240130c78afe5f4dfbf5233d56d6975d7587e0938a35ec8cd173cb6e96cbcc",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/collection-requirements.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:0bd7c2929a4d4d4f05c38356944a861b47323b0e4c5a23e6226c3a4f6dc9ed4a",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/collection-tasking.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:834749af1717f2c4d0d7a32daf5f3d7d440aa33ee45349de65f54e2af2a8ed07",
+      "mode": "0644"
+    },
+    {
       "path": "apps/api/test/command-core-ui.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:bd0d8f350ff12f9199914b90ecd70fe394abe9677cd3ea185fe11ec92f7c3d03",
@@ -4728,30 +4794,6 @@
       "mode": "0644"
     },
     {
-      "path": "apps/mission-dark/AGENTS.md",
-      "classification": "SOURCE — release code",
-      "sha256": "sha256:a4f4d3fc0a4dbd1bc09698387ff0474e7cba7ffb7b308c5883c23c73bb2e8982",
-      "mode": "0644"
-    },
-    {
-      "path": "apps/mission-dark/QUARANTINED.md",
-      "classification": "SOURCE — release code",
-      "sha256": "sha256:112e810a9f442ad0f7a7ad0e18a21dd3acdacac714a8b58ae304cabbe4a5faed",
-      "mode": "0644"
-    },
-    {
-      "path": "apps/mission-dark/package.json",
-      "classification": "SOURCE — release code",
-      "sha256": "sha256:f58be9ea048b657412be9f67b89557cf67ccda895e571f27458188ee6639e2ea",
-      "mode": "0644"
-    },
-    {
-      "path": "apps/mission-dark/scripts/quarantined.mjs",
-      "classification": "SOURCE — release code",
-      "sha256": "sha256:73ea23d4f3ca784ad45ba799c29a6ef0c15bdefad3b1cfc1c71232d6ce0ec4f9",
-      "mode": "0644"
-    },
-    {
       "path": "apps/operator-console/README.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:bfe80f55e119b0e86a8df939086d54ec4ea577f83912fbf3ecf67a0e3a894bbf",
@@ -5016,6 +5058,12 @@
       "mode": "0644"
     },
     {
+      "path": "apps/operator-console/src/approved/ui/collection-intelligence.js",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ba6479782c9f3c97943381b3013fcaf36acf69900ed85cad54ee0b1e8cd46b67",
+      "mode": "0644"
+    },
+    {
       "path": "apps/operator-console/src/approved/ui/decision-intelligence.js",
       "classification": "SOURCE — release code",
       "sha256": "sha256:c70c25c86af30654a514cc03f66ace2414144f84fa13bf3e74083ee8620b167f",
@@ -5078,13 +5126,13 @@
     {
       "path": "apps/operator-console/src/approved/ui/mission-command.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:4506e4da2d03032808ad4fe63362854341fbf8b2ff7b2858feb8fb8820276134",
+      "sha256": "sha256:2e989856a6b676a8a4ce0639c29d7e9649b0594fca0fc5a42db10187ca02375c",
       "mode": "0644"
     },
     {
       "path": "apps/operator-console/src/approved/ui/operational-picture.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:400f96d8536a545766d78d45d97e0c8e631802966cc038f22b11e5f22b5287f5",
+      "sha256": "sha256:b40be1f71f761edcbc06e753ae72e4a84e1eb966dee78ea26825cd209141004b",
       "mode": "0644"
     },
     {
@@ -5222,7 +5270,7 @@
     {
       "path": "apps/operator-console/src/field-team-offline.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:8861216c8ae913f584c9a0d5ba42d0b182da3f9f7ce688d98ab06f47550f9c57",
+      "sha256": "sha256:02035d14678a345e1c2e42ed907d810e2de710da0b255522e26fe13fe1679e96",
       "mode": "0644"
     },
     {
@@ -5558,7 +5606,7 @@
     {
       "path": "apps/operator-console/src/vigiaApi.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:f054cd320eba27d56b008c1a88fe6c2093e0eb1838fca0dd36b0115183b8ddad",
+      "sha256": "sha256:a55d620cd6fd3dbe6a89b5a3a4cd2b108075d6d2f7639353283a71dfafea74c8",
       "mode": "0644"
     },
     {
@@ -5636,7 +5684,7 @@
     {
       "path": "apps/operator-console/styles/approved/situation.css",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:43abd5e04c5877c8f7fb00063356462ed5775bdc33e833cad989bf2dab385aa2",
+      "sha256": "sha256:d0998d804c3328d907709b9b55976fc4a216edcfd9aa1f2bd49c8982e7b42c9f",
       "mode": "0644"
     },
     {
@@ -8688,6 +8736,30 @@
       "mode": "0644"
     },
     {
+      "path": "packages/domain/src/intelligence/collection-lifecycle.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:dd4d3f1e395643ff4930006a9b83524bc63a7899c2f610ed958d566b05e27351",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/collection-sources.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:da3d8d56eb9b1244f8673eda24e092272b72b06ccac5138b5e1bf1ff1c1b6217",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/collection-tasking.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:50a7fb55c61aaf81b273ff710930d45ec13fc4d74c7b19214ba3f7f5eb55232e",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/context-requirements.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:a33d83b1dad5b90c266a9ffdd3d0710c3f1053412d5ff44e68c9c03c1098e88e",
+      "mode": "0644"
+    },
+    {
       "path": "packages/domain/src/intelligence/contract.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:af462c961e4f2f37370512fe5ba2aa25879a87528d67ec13fb56bc08a3e4f4ce",
@@ -8715,6 +8787,12 @@
       "path": "packages/domain/src/intelligence/delta.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:7a7a5b9255c1371d4d6a358a0a753c0d034dcd13632586bad0ec1b56c884df90",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/epistemic-impact.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:a4e460f92e5c754ebeef211d4aa1f388b5e8d52777f2a778e8de25fdef274bf0",
       "mode": "0644"
     },
     {
@@ -8748,15 +8826,45 @@
       "mode": "0644"
     },
     {
+      "path": "packages/domain/src/intelligence/facility-requirements.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ba55b7417225c104e23deabf451fd57a1aea34994f58eaaae6f5480e51b53a50",
+      "mode": "0644"
+    },
+    {
       "path": "packages/domain/src/intelligence/index.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:24d2da659b1dd4a4905b1a8ee2d08de46812c9a343ad1b512e383411eaf10c9e",
       "mode": "0644"
     },
     {
+      "path": "packages/domain/src/intelligence/information-requirements.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ef1249c358d401958c956d900005b6baa87ca387ee06186c153b4b2b3bfb5973",
+      "mode": "0644"
+    },
+    {
       "path": "packages/domain/src/intelligence/kernel.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:1f900af0fa4c3c87aea1dcdba96b78c22a4b50cee115977cd2b9667e575f92f3",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/knowledge-branch.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:3593e30a9e20f3d6c832a8f3dc4990e7365db4222ca40108fa8fac995c01ff4a",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/knowledge-events.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:bb3d7114b74dcad27610b1859bae2a0331681e24154bcb3245f4367f22c67ff1",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/knowledge-state.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ab47493cc24c18a05fb40888bd53a1a3b3bbd920388588e3930b4d7e012f3212",
       "mode": "0644"
     },
     {
@@ -8805,6 +8913,12 @@
       "path": "packages/domain/src/intelligence/replay/evidence-replay.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:dbaa69881bad4cf8cb133ab38e13205069e537fa67685fff4c56c85595e7cc39",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/intelligence/requirement-record.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:7293fad7ab6cdb7037c508d018f21a9cf1cf0d515cab151ec68688e124766231",
       "mode": "0644"
     },
     {
@@ -10848,6 +10962,12 @@
       "mode": "0644"
     },
     {
+      "path": "scripts/collection_intelligence_acceptance.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:f09111552c8cde7b64faa0d63290f2eb2c792e46f8c0d5f750f37cd7ff1e7395",
+      "mode": "0644"
+    },
+    {
       "path": "scripts/command-survival/run_controlled_exercise.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:e61a578b1acf8100deb07f5fd09c3e775c9244ebe829dcbaf57ead93b907c44c",
@@ -11306,7 +11426,7 @@
     {
       "path": "scripts/mega_ix_local_acceptance.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:be299bd08485607e0a596642d3eb8f8b37a45d9125a46f2c03b7ebed0cf0de14",
+      "sha256": "sha256:d258328419c31d63dd1d96b047888c42d425584d34cab9b1598728915dbbc36c",
       "mode": "0644"
     },
     {

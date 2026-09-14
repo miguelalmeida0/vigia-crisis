@@ -1,15 +1,15 @@
 {
   "schemaVersion": "vigia.current-release-manifest.v2",
-  "releaseId": "vigia-intelligence-fabric-d0e03143e023ae21",
-  "codeStateHash": "sha256:becb44cdf09778562d0e0752c695461bd15a24debc67b963c007e743fbe5c948",
+  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
+  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
-  "buildTimestamp": "2026-09-14T15:12:33.043Z",
+  "buildTimestamp": "2026-09-14T18:45:24.646Z",
   "runtimeProfile": "local_shadow",
   "canonicalOperatorConsole": {
     "path": "apps/operator-console",
     "origin": "http://127.0.0.1:4190",
     "backendOrigin": "http://127.0.0.1:4177",
-    "sourceHash": "sha256:069990c591825c1f7fce733db86538a1cdae2d9f42440939f45c3a3a415be4ad"
+    "sourceHash": "sha256:2bdb2fc788c4f497f60303efb627a0246723af75d82613a8275175c99e7393bd"
   },
   "canonicalBrowserContract": {
     "path": "apps/web/src/v2/release-compatibility.js",
@@ -41,7 +41,7 @@
     "ontologyContractVersion": "vigia.crisis-ontology.v1",
     "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
   },
-  "webBuildVersion": "decision-os-web-v1+d0e03143",
+  "webBuildVersion": "decision-os-web-v1+96381a9f",
   "requiredRoutes": {
     "central": [
       {
@@ -293,12 +293,10 @@
     "entries": []
   },
   "worktree": {
-    "dirtyPaths": 124,
+    "dirtyPaths": 12,
     "classifications": {
-      "GOVERNED EVIDENCE": 33,
-      "REFERENCE DATA": 1,
-      "SOURCE — release code": 77,
-      "TEST": 13
+      "GOVERNED EVIDENCE": 9,
+      "SOURCE — release code": 3
     },
     "unknownCount": 0,
     "gitWritable": false,
@@ -307,14 +305,8 @@
       {
         "id": "physical-sensing",
         "title": "Physical sensing and provider truth",
-        "pathCount": 11,
+        "pathCount": 1,
         "commitMessage": "checkpoint(physical-sensing): physical sensing and provider truth"
-      },
-      {
-        "id": "truth-autopilot",
-        "title": "Physical truth autopilot and incident evidence",
-        "pathCount": 5,
-        "commitMessage": "checkpoint(truth-autopilot): physical truth autopilot and incident evidence"
       },
       {
         "id": "measurement-science",
@@ -323,27 +315,15 @@
         "commitMessage": "checkpoint(measurement-science): validation and measurement science"
       },
       {
-        "id": "fieldnet",
-        "title": "FieldNet and Field Node",
-        "pathCount": 4,
-        "commitMessage": "checkpoint(fieldnet): fieldnet and field node"
-      },
-      {
         "id": "command-product",
         "title": "Command and Decision OS product",
-        "pathCount": 45,
+        "pathCount": 2,
         "commitMessage": "checkpoint(command-product): command and decision os product"
-      },
-      {
-        "id": "release-certification",
-        "title": "Release integrity and schema certification",
-        "pathCount": 1,
-        "commitMessage": "checkpoint(release-certification): release integrity and schema certification"
       },
       {
         "id": "governed-evidence",
         "title": "Remaining governed evidence and documentation",
-        "pathCount": 50,
+        "pathCount": 1,
         "commitMessage": "checkpoint(governed-evidence): remaining governed evidence and documentation"
       }
     ],
@@ -387,6 +367,6 @@
       "reason": "Canonical operator browser certification has not been executed for this release identity."
     }
   },
-  "manifestEvidenceHash": "sha256:6b09e5dc9c5bd114778a82e508dbf5af943316bafcb163963395fecdae18950f",
-  "releaseStatementHash": "sha256:cd7dfe94ce604ff6acb459651c74ce0bb0d126d32060b5ea5a97fcaa4a447482"
+  "manifestEvidenceHash": "sha256:f55c3cf0d2f077bacfe797f8616e13db61a94b010209f7497a8e0819f7118e5c",
+  "releaseStatementHash": "sha256:387abfc92b7b4242c6e443cf99a636d34771e3a5ee23e71334b02d74cfd6bc75"
 }

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vigia.ignored-runtime-manifest.v1",
-  "generatedAt": "2026-09-14T15:12:33.043Z",
-  "releaseId": "vigia-intelligence-fabric-d0e03143e023ae21",
+  "generatedAt": "2026-09-14T18:45:24.646Z",
+  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
   "entries": [
     {
       "path": "_RECOVERY_SNAPSHOTS/",
@@ -16,10 +16,6 @@
       "classification": "RUNTIME CACHE"
     },
     {
-      "path": ".impeccable/config.local.json",
-      "classification": "SOURCE — release code"
-    },
-    {
       "path": ".tmp/",
       "classification": "TEMPORARY"
     },
@@ -28,16 +24,16 @@
       "classification": "RUNTIME CACHE"
     },
     {
+      "path": "apps/mission-dark/",
+      "classification": "QUARANTINED PROTOTYPE / NON-RELEASE"
+    },
+    {
       "path": "apps/operator-console/dist/",
       "classification": "TEMPORARY"
     },
     {
       "path": "apps/operator-console/node_modules/",
       "classification": "RUNTIME CACHE"
-    },
-    {
-      "path": "apps/vigia-design-preview/dist/",
-      "classification": "TEMPORARY"
     },
     {
       "path": "apps/vigia-design-preview/preview.html",

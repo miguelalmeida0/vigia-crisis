@@ -6,8 +6,8 @@ export function datedTeamView(saved,now=Date.now()) {
     const ended=expired(m.endAt),stale=ended||expired(view.context.sourceValidUntil)||expired(m.currentRoute?.validUntil)||(m.relevantReports??[]).some(r=>expired(r.validUntil));
     const dated={...m,fallback:expired(m.fallback?.validUntil)?null:m.fallback};return stale?{...dated,lifecycle:ended?'ENDED':m.lifecycle,state:'UNKNOWN',reason:ended?'This mission’s time window has ended.':'Stored information needs a new check. Connect to local VIGIA.'}:dated;
   });
-  view.people=view.people.map(p=>({...p,online:false}));view.hub.localPeople=0;
-  view.reports=view.reports.map(r=>({...r,missions:expired(r.validUntil)?[]:r.missions.map(m=>({...m,alternativeMinutes:view.missions.find(v=>v.id===m.id)?.fallback?.minutes??null}))}));
+  view.people=(view.people??[]).map(p=>({...p,online:false}));view.hub.localPeople=0;
+  view.reports=(view.reports??[]).map(r=>({...r,missions:expired(r.validUntil)?[]:(r.missions??[]).map(m=>({...m,alternativeMinutes:(view.missions??[]).find(v=>v.id===m.id)?.fallback?.minutes??null}))}));
   return view;
 }
 

@@ -17,6 +17,49 @@ const route=r=>r?`<div class="mc-route"><div><h3>${e(r.name)}</h3><p>${e(r.roads
 const verification=r=>r.verification?.state==='FIELD_CONFIRMED'?'Confirmed by two or more responders':r.verification?.state==='CONFLICTING_REPORTS'?'Conflicting reports — check required':'Not yet confirmed';
 export function MissionSlot(){return '<section class="mission-command" data-mission-command aria-label="Missions and field team"><h2>Watching</h2><p role="status">Reading team objectives…</p></section>';}
 export function commandMarkup(view,{section='home',selected=null,offline=false,pending=[],senderId='',canManage=false}={}){
+  view={
+    ...(view??{}),
+    group:{
+      ...(view?.group??{}),
+      members:Array.isArray(view?.group?.members)?view.group.members:[]
+    },
+    missions:(Array.isArray(view?.missions)?view.missions:[]).map(m=>({
+      ...m,
+      watchers:Array.isArray(m?.watchers)?m.watchers:[],
+      relevantReports:Array.isArray(m?.relevantReports)?m.relevantReports:[]
+    })),
+    reports:(Array.isArray(view?.reports)?view.reports:[]).map(r=>({
+      ...r,
+      missions:Array.isArray(r?.missions)?r.missions:[],
+      media:Array.isArray(r?.media)?r.media:[],
+      routeUses:Array.isArray(r?.routeUses)?r.routeUses:[],
+      verification:{
+        ...(r?.verification??{}),
+        responses:Array.isArray(r?.verification?.responses)?r.verification.responses:[]
+      }
+    })),
+    messages:(Array.isArray(view?.messages)?view.messages:[]).map(m=>({
+      ...m,
+      relayedBy:Array.isArray(m?.relayedBy)?m.relayedBy:[],
+      delivery:{
+        ...(m?.delivery??{}),
+        label:m?.delivery?.label??'Delivery pending',
+        received:Array.isArray(m?.delivery?.received)?m.delivery.received:[],
+        waiting:Array.isArray(m?.delivery?.waiting)?m.delivery.waiting:[]
+      }
+    })),
+    receipts:Array.isArray(view?.receipts)?view.receipts:[],
+    requests:Array.isArray(view?.requests)?view.requests:[],
+    timeline:Array.isArray(view?.timeline)?view.timeline:[],
+    people:Array.isArray(view?.people)?view.people:[],
+    envelopes:Array.isArray(view?.envelopes)?view.envelopes:[],
+    context:{
+      ...(view?.context??{}),
+      catalog:Array.isArray(view?.context?.catalog)?view.context.catalog:[]
+    },
+    hub:view?.hub??{}
+  };
+  pending=Array.isArray(pending)?pending:[];
   const g=view.group,m=view.missions.find(m=>m.id===selected),r=view.reports.find(r=>r.id===selected);
   const header=`${g.lane==='CONTROLLED_FIELD_TEST'?'<p class="mc-test">CONTROLLED FIELD TEST · separate from operational history</p>':''}<header class="mc-heading"><div><h2>${e(section==='home'?'Important now':section==='mission'?'Watched objective':section==='report'?'Field report':section==='chat'?g.name:section==='timeline'?'What changed':section==='people'?'People and team':'New '+section)}</h2><p>${e(g.name)}</p></div>${section==='home'?btn('Team','chat'):btn('Back','home')}</header><div class="mc-connection" role="status"><strong>${offline?'WAITING FOR CONNECTION':view.hub.state==='INTERNET_OFFLINE'?'INTERNET OFFLINE · LOCAL VIGIA ACTIVE':'LOCAL VIGIA ACTIVE'}</strong><span>${offline?'Saved on this device. Delivery waits for a connection.':view.hub.localPeople+' people active locally · '+(view.hub.lastCentralSync?'last central sync '+date(view.hub.lastCentralSync):view.hub.centralConfigured?'central sync pending':'central sync not configured')}</span></div>`;
   let body='';

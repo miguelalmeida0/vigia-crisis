@@ -43,11 +43,14 @@ try{
     const text=JSON.stringify(live);assert.ok(text.includes(release.releaseId),'Existing API release mismatch: restart it with this baseline; runner never kills an existing listener');return {releaseId:release.releaseId};
   });
   const signedGet=async part=>{const r=await fetch(new URL(part,api),{headers:{origin:consoleURL.origin,'sec-fetch-site':'same-origin','x-vigia-ui-proxy':'mission-dark-realdata-2.0',...signOperatorProxyRequest({key:apiKey,releaseId:release.releaseId,method:'GET',path:part})},signal:AbortSignal.timeout(60000)});assert.equal(r.status,200,'Backend projection '+part);return r.json();};
-  const overview=await step('real retained overview',()=>signedGet('/api/v10/operator/command-overview'));
+  const overview=await step('real retained overview',()=>eventually(async()=>{
+    try { return await signedGet('/api/v10/operator/command-overview'); }
+    catch { return null; }
+  },180000));
   const rows=overview.data?.incidents?.value?.incidents??[];
   const incidentId=env.MEGA_IX_INCIDENT_ID??rows.map(r=>r.incident?.id??r.incidentId??r.id).find(Boolean);assert.ok(incidentId,'No retained incident returned; provide MEGA_IX_INCIDENT_ID');result.incidentId=incidentId;
   await step('start or check production console',async()=>{
-    if(!await probe(new URL('/__operator/ready',consoleURL))){const child=await command(['apps/operator-console/server.mjs'],'console',{...common,HOST:consoleURL.hostname,PORT:consoleURL.port,VIGIA_BACKEND_URL:api.origin,VIGIA_OPERATOR_PUBLIC_AUTHORITY:consoleURL.host,VIGIA_OPERATOR_STATIC_ROOT:path.join(root,'apps/operator-console/dist'),VIGIA_OPERATOR_PROXY_KEY:apiKey,VIGIA_OPERATOR_ACCESS_TOKEN:accessKey});children.push(child);}
+    if(!await probe(new URL('/__operator/ready',consoleURL))){const child=await command(['apps/operator-console/server.mjs'],'console',{...common,HOST:consoleURL.hostname,PORT:consoleURL.port,VIGIA_BACKEND_URL:api.origin,VIGIA_OPERATOR_PUBLIC_AUTHORITY:consoleURL.host,VIGIA_OPERATOR_STATIC_ROOT:'dist',VIGIA_OPERATOR_PROXY_KEY:apiKey,VIGIA_OPERATOR_ACCESS_TOKEN:accessKey});children.push(child);}
     const live=await eventually(async()=>{const r=await probe(new URL('/__operator/ready',consoleURL));return r?.ok?await r.json():null;},60000);assert.ok(JSON.stringify(live).includes(release.releaseId),'Existing console release mismatch');return {releaseId:release.releaseId};
   });
   const {chromium}=await import(env.MEGA_IX_PLAYWRIGHT_MODULE??'playwright');

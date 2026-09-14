@@ -1,15 +1,10 @@
 {
   "schemaVersion": "vigia.evidence-manifest.v2",
-  "generatedAt": "2026-09-14T15:12:33.043Z",
-  "releaseId": "vigia-intelligence-fabric-d0e03143e023ae21",
-  "codeStateHash": "sha256:becb44cdf09778562d0e0752c695461bd15a24debc67b963c007e743fbe5c948",
+  "generatedAt": "2026-09-14T18:45:24.646Z",
+  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
+  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
   "entries": [
-    {
-      "path": ".gitignore",
-      "status": " M",
-      "classification": "REFERENCE DATA"
-    },
     {
       "path": "data/validation/release/checkpoint-commands.sh",
       "status": " M",
@@ -53,126 +48,6 @@
     {
       "path": "data/validation/release/unknown-path-report.json",
       "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/acceptance-regression-tests.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/acceptance-static-verification.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/ACCEPTANCE.json",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/CAPTURE_LEDGER.json",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/controlled-api-evidence.json",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/DESIGN_AND_ACCEPTANCE.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/DESIGN_RECORD.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/design-detector.json",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/focused-tests.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/MEGA-IX-APPLY.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/MEGA-IX-PORTABLE-HANDOFF.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/PERFORMANCE_ACCEPTANCE.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/performance-evidence.json",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/portable-regression-tests.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/portable-runner-checks.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/portable-static-verification.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/recovery-tests.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/REPORT.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/restart-evidence.json",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/retained-tests.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/mega-ix/static-verification.txt",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/operational-reality/FINAL_REPORT.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/operational-reality/INTEGRATION.md",
-      "status": "??",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "docs/handoffs/operational-reality/SOURCE_COVERAGE.md",
-      "status": "??",
       "classification": "GOVERNED EVIDENCE"
     }
   ],
