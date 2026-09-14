@@ -71,6 +71,35 @@ export function comparePriority(left, right) {
 }
 
 /**
+ * Full comparison rationale: every factor on which two impacts differ, not only
+ * the one that decided the order. Answers "why is A above B?" with all of it.
+ *
+ * Ordering itself is untouched — this reads the same factors and reports them.
+ */
+export function explainComparison(left, right) {
+  const decision = comparePriority(left, right);
+  if (decision.order === 0) return {ahead: null, behind: null, decidedBy: null, differences: [], text: null};
+  const ahead = decision.order < 0 ? left : right;
+  const behind = decision.order < 0 ? right : left;
+  const differences = [];
+  for (const factor of PRIORITY_FACTORS) {
+    if (factor.direction === 'STABLE_ID') continue;
+    if (compareFactor(factor, ahead, behind) === 0) continue;
+    const aheadText = factor.explain(ahead);
+    const behindText = factor.explain(behind);
+    if (!aheadText || !behindText) continue;
+    differences.push({factor: factor.key, decisive: factor.key === decision.factor, ahead: aheadText, behind: behindText});
+  }
+  return {
+    ahead: ahead.id ?? null,
+    behind: behind.id ?? null,
+    decidedBy: decision.factor,
+    differences,
+    text: differences.map((row) => `${ahead.label ?? 'A'}: ${row.ahead}; ${behind.label ?? 'B'}: ${row.behind}.`)
+  };
+}
+
+/**
  * Orders impacts most urgent first and, for each one after the first, records
  * why it sits behind the one above it.
  */

@@ -21,6 +21,18 @@ export {orderOperationalPriorities, comparePriority, PRIORITY_TIERS, PRIORITY_FA
 export {explainOperationalConsequence, describeTrigger} from './explanation.mjs';
 export {sharedRoadDependencies, describeSharedDependency, geometriesShareCorridor} from './shared-dependency.mjs';
 
+// VIGIA XI — causal resilience and decision intelligence. Each layer extends the
+// pipeline above rather than replacing any part of it.
+export {evidenceStrength, relianceGuidance, EVIDENCE_STATES} from './evidence-strength.mjs';
+export {factFreshness, routeSupportingFacts, classifyStaleness, explainStaleness, describeAge, STALENESS_CLASSES, FRESHNESS_STATES} from './freshness.mjs';
+export {minimalCutSets, describeCutSets, MAX_CUT_SIZE} from './dependency-sets.mjs';
+export {resilienceQuery, ASSUMPTION_KINDS, SUPPORT_STATES, ADMISSIBLE_HOPS} from './resilience-query.mjs';
+export {causalTransition, CAUSAL_RELATIONS} from './causal-transition.mjs';
+export {knowledgeLoss, LOSS_KINDS} from './knowledge-loss.mjs';
+export {verificationNeeds, asRequirementsResult, operatorWording} from './verification-need.mjs';
+export {compressDecision, compareConsequences} from './decision-compression.mjs';
+export {explainComparison} from './priority-ordering.mjs';
+
 /**
  * Derives every operational consequence for one incident from the canonical
  * records the product already holds, ordered most urgent first.
@@ -56,5 +68,20 @@ export function operationalConsequences({catalog = [], missions = [], reports = 
       missionsConsidered: inputs.missions.length
     },
     generationMs: Number((performance.now() - startedAt).toFixed(3))
+  };
+}
+
+/**
+ * One projection of an incident: the consequences plus the inputs a later
+ * transition needs to compare against. Projections are values, not state — two
+ * of them are all `causalTransition()` requires.
+ */
+export function operationalProjection(input) {
+  return {
+    at: input.at,
+    incidentId: input.incidentId,
+    snapshotId: input.snapshotId ?? null,
+    missions: input.missions ?? [],
+    consequences: operationalConsequences(input)
   };
 }

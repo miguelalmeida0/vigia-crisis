@@ -78,6 +78,46 @@ export function withinBoundingBox(point, box) {
 
 export {MATCH_TOLERANCE_M};
 
+// Coarse spatial index. Route bounding boxes are stamped into ~1 km cells once,
+// so a report tests only the routes whose cells its coordinate falls in, instead
+// of every route in the incident.
+//
+// The index is a PREFILTER over the geometric basis only. It may never gate
+// FACILITY_MATCH or NAMED_ROAD, which do not depend on geometry, and because the
+// boxes it indexes are already padded beyond matching tolerance it can only skip
+// routes that could not have matched. Results are identical with and without it.
+const CELL_DEGREES = 0.01;
+const cellKey = (x, y) => `${Math.floor(x / CELL_DEGREES)}:${Math.floor(y / CELL_DEGREES)}`;
+
+function indexCells(box, routeRow, index) {
+  const minX = Math.floor(box.minX / CELL_DEGREES);
+  const maxX = Math.floor(box.maxX / CELL_DEGREES);
+  const minY = Math.floor(box.minY / CELL_DEGREES);
+  const maxY = Math.floor(box.maxY / CELL_DEGREES);
+  // A route spanning an implausible span is left unindexed rather than stamped
+  // into a huge number of cells; the caller falls back to the full scan for it.
+  if ((maxX - minX + 1) * (maxY - minY + 1) > 4096) return false;
+  for (let x = minX; x <= maxX; x += 1) {
+    for (let y = minY; y <= maxY; y += 1) {
+      const key = `${x}:${y}`;
+      if (!index.has(key)) index.set(key, []);
+      index.get(key).push(routeRow);
+    }
+  }
+  return true;
+}
+
+/**
+ * Candidate routes for one coordinate: those sharing its cell, plus any route
+ * too large to index. Returns null when no index was built, meaning the caller
+ * must scan everything.
+ */
+export function spatialCandidates(point, spatial) {
+  if (!spatial || !Array.isArray(point) || !Number.isFinite(point[0]) || !Number.isFinite(point[1])) return null;
+  const inCell = spatial.cells.get(cellKey(point[0], point[1])) ?? [];
+  return spatial.unindexed.length ? [...inCell, ...spatial.unindexed] : inCell;
+}
+
 /**
  * Flattens the mission catalog into one addressable route table and the indexes
  * the relationship layer needs. `catalog` is the existing missionCatalog()
@@ -135,10 +175,19 @@ export function extractCanonicalInputs({catalog = [], missions = [], reports = [
     confirmationsByReport.get(confirmation.reportId).push(confirmation);
   }
 
+  // Build the spatial index in the same single pass budget as the rest.
+  const cells = new Map();
+  const unindexed = [];
+  for (const row of routes) {
+    if (!row.bbox) continue;
+    if (!indexCells(row.bbox, row, cells)) unindexed.push(row);
+  }
+
   return {
     at,
     sourceValidUntil,
     routes,
+    spatial: {cells, unindexed},
     routesByRoad,
     routesByServiceSubject,
     missions,

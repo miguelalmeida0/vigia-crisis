@@ -1,6 +1,6 @@
 import {reportMatches} from '../fieldnet/mission-command.mjs';
 import {roadObservationApplies} from '../intelligence/road-observations.mjs';
-import {namedRoadKeys, withinBoundingBox} from './canonical-inputs.mjs';
+import {namedRoadKeys, spatialCandidates, withinBoundingBox} from './canonical-inputs.mjs';
 
 // Layer 2: OPERATIONAL RELATIONSHIPS.
 //
@@ -25,8 +25,8 @@ const rank = (basis) => ROUTE_LINK_BASES.indexOf(basis);
  * it changes cost and never changes the result. The facility and named-road
  * bases do not depend on geometry and are always evaluated.
  */
-function reportRouteLink(report, row, reportRoads) {
-  if (row.bbox && withinBoundingBox(report.coordinate, row.bbox) && reportMatches(report, row.route)) return 'GEOMETRY_PROXIMITY';
+function reportRouteLink(report, row, reportRoads, geometricCandidate = true) {
+  if (geometricCandidate && row.bbox && withinBoundingBox(report.coordinate, row.bbox) && reportMatches(report, row.route)) return 'GEOMETRY_PROXIMITY';
   if (report.facilityId && report.facilityId === row.facilityId) return 'FACILITY_MATCH';
   if (reportRoads.some((road) => row.roadKeys.includes(road))) return 'NAMED_ROAD';
   return null;
@@ -84,9 +84,13 @@ export function buildOperationalRelationships(inputs) {
     if (Date.parse(report.observedAt) > Date.parse(inputs.at)) continue;
     const reportRoads = namedRoadKeys(report.locationName);
     const links = [];
+    // Geometric candidates come from the spatial index; the non-geometric bases
+    // still consider every route, because neither depends on where the report is.
+    const geometric = new Set(spatialCandidates(report.coordinate, inputs.spatial) ?? inputs.routes);
+    const seen = new Set();
     for (const row of inputs.routes) {
-      const basis = reportRouteLink(report, row, reportRoads);
-      if (basis) links.push({row, routeId: row.routeId, basis});
+      const basis = reportRouteLink(report, row, reportRoads, geometric.has(row));
+      if (basis && !seen.has(row.routeId)) { seen.add(row.routeId); links.push({row, routeId: row.routeId, basis}); }
     }
     if (!links.length) continue;
     links.sort((left, right) => rank(left.basis) - rank(right.basis) || left.routeId.localeCompare(right.routeId));
