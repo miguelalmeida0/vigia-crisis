@@ -170,3 +170,15 @@ export function thermalOverlayUrl({ bbox, time = 'latest', width = 1200, height 
 export function basemapTileUrl(kind, z, x, y) {
   return `${BASE}/api/v1/basemap/${kind}/${z}/${x}/${y}`;
 }
+
+// Read-only collection intelligence. Same operator boundary as the situation
+// reads above; nothing here mutates state or triggers acquisition.
+export function collectionRequest(incidentId,part='',params={},options={}) {
+  return request(
+    query(
+      `/api/v10/operator/incidents/${encodeURIComponent(incidentId)}/collection${part?'/'+part:''}`,
+      params
+    ),
+    {timeoutMs:15000,...options}
+  );
+}

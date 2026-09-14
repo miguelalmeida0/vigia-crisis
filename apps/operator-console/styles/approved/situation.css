@@ -57,6 +57,20 @@
 .op-name {font:700 16px/1.35 Arial,Helvetica,sans-serif;color:var(--vg-blue);border:0;background:transparent;text-align:left;padding:0;min-height:40px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 .op-corridor {display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:8px 0}
 .op-corridor span {flex:1;min-width:130px;font-size:14px}
+/* Information requirements reuse the existing dependency article anatomy: a
+   definition list of retained facts, and the preview marked unmistakably as a
+   preview. No new visual pattern is introduced. */
+.op-requirement {margin:8px 0 0;display:grid;gap:4px}
+.op-requirement>div {display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.op-requirement dt {flex:0 0 150px;font-size:12px;line-height:1.5;color:var(--vg-muted)}
+.op-requirement dd {flex:1;min-width:160px;margin:0;font-size:14px;line-height:1.5;color:var(--vg-ink);font-variant-numeric:tabular-nums}
+.op-dependency h4 {font-size:14px;margin:12px 0 4px;color:var(--vg-ink)}
+.op-dependency ul {margin:4px 0;padding-left:18px}
+.op-dependency li {font-size:14px;line-height:1.5;color:var(--vg-muted)}
+.op-preview {border-left:3px solid var(--vg-amber,#965006);padding-left:12px}
+.op-preview-label {color:var(--vg-amber,#965006);margin:0 0 8px}
+.op-preview-label strong {font-size:12px;letter-spacing:.02em}
+@media (max-width:600px){.op-requirement dt {flex-basis:100%}}
 .op-notice {padding:12px 0}
 .op-notice strong {display:block;color:var(--vg-ink)}
 .op-assumption {background:var(--vg-amber-soft,#fff7e9);padding:12px;margin:12px 0;color:var(--vg-amber,#965006)}

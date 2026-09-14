@@ -1,0 +1,331 @@
+{
+  "schemaVersion": "vigia.collection-intelligence-acceptance.v1",
+  "ranAt": "2026-09-14T10:23:57.476Z",
+  "corpus": "docs/handoffs/mega-vii/live-proof.json",
+  "corpusNature": "REAL_RETAINED_OPERATIONAL_CAPTURE",
+  "corpusBoundary": "Real Operational Picture responses captured from the running product during Mega VII for incident PT-2026-01F7E2E21A (Évora). They are retained knowledge states, not live observations, and nothing here re-contacts a source.",
+  "knowledgeImpactPreview": {
+    "state": "DEMONSTRATED_ON_CONTROLLED_DATA_ONLY",
+    "universe": "CONTROLLED_TEST",
+    "reason": "A knowledge-impact preview needs a full situation snapshot with facility fields and provenance. The retained Operational Picture is a compacted projection without them, and data/runtime/ is excluded from this repository. Run this script on the machine holding data/runtime/ to demonstrate the preview on real retained data.",
+    "label": "KNOWLEDGE IMPACT PREVIEW — NOT OBSERVED REALITY",
+    "performance": {
+      "p50Ms": 3.71,
+      "p95Ms": 5.64
+    },
+    "operationalWrites": 0,
+    "snapshotUnchanged": true,
+    "assumption": {
+      "kind": "FACILITY_CAPABILITY_CONFIRMED",
+      "entityId": "h-x",
+      "capability": "emergencyDepartment",
+      "subjectName": "Hospital X"
+    },
+    "unresolvedBranch": {
+      "state": "CURRENT_RETAINED_KNOWLEDGE",
+      "primary": {
+        "facilityId": "h-a",
+        "name": "Hospital A",
+        "minutes": 22
+      },
+      "qualifiedCount": 1,
+      "optionCount": 1,
+      "redundancy": "NO_RETAINED_ALTERNATIVE"
+    },
+    "confirmedBranch": {
+      "state": "ASSUMED_RESOLVED_KNOWLEDGE",
+      "primary": {
+        "facilityId": "h-x",
+        "name": "Hospital X",
+        "minutes": 9
+      },
+      "qualifiedCount": 2,
+      "optionCount": 2,
+      "redundancy": "ONE_RETAINED_ALTERNATIVE"
+    },
+    "changes": {
+      "primaryChanged": true,
+      "affectedCommunityCount": 4,
+      "coverageClassificationChangeCount": 4,
+      "rankingChanges": [
+        {
+          "ranking": "nearestEmergencyHospital",
+          "previous": "h-a",
+          "preview": "h-x"
+        },
+        {
+          "ranking": "nearestCalculatedEmergencyOption",
+          "previous": "h-a",
+          "preview": "h-x"
+        }
+      ]
+    }
+  },
+  "lanes": [
+    {
+      "lane": "historical (support intact)",
+      "incidentId": "PT-2026-01F7E2E21A",
+      "incidentName": "Évora",
+      "knownAt": "2026-09-13T09:16:14.079Z",
+      "origin": "RETAINED_OPERATIONAL_PICTURE",
+      "requirementCount": 10,
+      "byClass": {
+        "FACILITY_CAPABILITY": 2,
+        "ROAD_INFORMATION": 7,
+        "RECEPTION_ACTIVATION": 1
+      },
+      "lifecycle": {
+        "open": 10,
+        "resolved": 0,
+        "expired": 0,
+        "openedEvents": 10
+      },
+      "performance": {
+        "requirements": {
+          "p50Ms": 0.19,
+          "p95Ms": 2.53
+        },
+        "tasking": {
+          "p50Ms": 0.03,
+          "p95Ms": 0.09
+        }
+      },
+      "tasks": [
+        {
+          "rank": 1,
+          "requirementClass": "FACILITY_CAPABILITY",
+          "subject": "Verified fire-response facility",
+          "question": "Which nearby mapped fire stations have verified fire-response capability?",
+          "currentKnownState": "SINGLE_QUALIFIED_OPTION",
+          "reasons": [
+            "Blocks the qualified fire response set for this incident.",
+            "No retained alternative exists for the affected support category.",
+            "Exactly one qualified facility is retained.",
+            "57 retained communities depend on the affected support.",
+            "10 retained support relationships use it.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "One fire response facility is qualified in the retained set. No second qualified option is retained.",
+            "Candidate facilities are not exposed by this projection, so no candidate is named here.",
+            "57 retained communities have their support affected by this unknown.",
+            "10 retained support relationships depend on it.",
+            "No retained alternative would absorb the loss of the current option."
+          ]
+        },
+        {
+          "rank": 2,
+          "requirementClass": "FACILITY_CAPABILITY",
+          "subject": "Verified emergency hospital",
+          "question": "Which nearby mapped hospitals have a verified emergency department?",
+          "currentKnownState": "SINGLE_QUALIFIED_OPTION",
+          "reasons": [
+            "Blocks the qualified emergency healthcare set for this incident.",
+            "No retained alternative exists for the affected support category.",
+            "Exactly one qualified facility is retained.",
+            "57 retained communities depend on the affected support.",
+            "10 retained support relationships use it.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "One emergency healthcare facility is qualified in the retained set. No second qualified option is retained.",
+            "Candidate facilities are not exposed by this projection, so no candidate is named here.",
+            "57 retained communities have their support affected by this unknown.",
+            "10 retained support relationships depend on it.",
+            "No retained alternative would absorb the loss of the current option."
+          ]
+        },
+        {
+          "rank": 3,
+          "requirementClass": "RECEPTION_ACTIVATION",
+          "subject": "Escola Básica de Canaviais",
+          "question": "Is reception activation confirmed for Escola Básica de Canaviais?",
+          "currentKnownState": "DESIGNATED_ACTIVATION_UNCONFIRMED",
+          "reasons": [
+            "30 retained communities depend on the affected support.",
+            "6 retained support relationships use it.",
+            "Shared across 2 support categories.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "Official designation is retained. Designation is not activation, and no current activation fact is retained.",
+            "30 retained communities have their support affected by this unknown.",
+            "6 retained support relationships depend on it."
+          ]
+        },
+        {
+          "rank": 4,
+          "requirementClass": "ROAD_INFORMATION",
+          "subject": "CM1087",
+          "question": "What is the current published road-information state for CM1087?",
+          "currentKnownState": "PARTIAL",
+          "reasons": [
+            "4 retained communities depend on the affected support.",
+            "9 retained support relationships use it.",
+            "Shared across 3 support categories.",
+            "Source coverage is partial; absence of a matched record is not confirmation.",
+            "Answered by the configured acquisition pipeline rather than a facility-directory source."
+          ],
+          "sourceState": "OWNED_BY_ACQUISITION_LANE",
+          "explanation": [
+            "No connected road-information coverage applies to these calculated routes.",
+            "4 retained communities have their support affected by this unknown.",
+            "9 retained support relationships depend on it."
+          ]
+        },
+        {
+          "rank": 5,
+          "requirementClass": "ROAD_INFORMATION",
+          "subject": "CM1087-1",
+          "question": "What is the current published road-information state for CM1087-1?",
+          "currentKnownState": "PARTIAL",
+          "reasons": [
+            "2 retained communities depend on the affected support.",
+            "6 retained support relationships use it.",
+            "Shared across 3 support categories.",
+            "Source coverage is partial; absence of a matched record is not confirmation.",
+            "Answered by the configured acquisition pipeline rather than a facility-directory source."
+          ],
+          "sourceState": "OWNED_BY_ACQUISITION_LANE",
+          "explanation": [
+            "No connected road-information coverage applies to these calculated routes.",
+            "2 retained communities have their support affected by this unknown.",
+            "6 retained support relationships depend on it."
+          ]
+        }
+      ]
+    },
+    {
+      "lane": "current (routes expired)",
+      "incidentId": "PT-2026-01F7E2E21A",
+      "incidentName": "Évora",
+      "knownAt": "2026-09-14T07:34:27.382Z",
+      "origin": "RETAINED_OPERATIONAL_PICTURE",
+      "requirementCount": 10,
+      "byClass": {
+        "FACILITY_CAPABILITY": 2,
+        "ROAD_INFORMATION": 4,
+        "RECEPTION_ACTIVATION": 1,
+        "ROUTE_MISSING": 3
+      },
+      "lifecycle": {
+        "open": 10,
+        "resolved": 0,
+        "expired": 0,
+        "openedEvents": 10
+      },
+      "performance": {
+        "requirements": {
+          "p50Ms": 0.14,
+          "p95Ms": 0.24
+        },
+        "tasking": {
+          "p50Ms": 0.03,
+          "p95Ms": 0.06
+        }
+      },
+      "tasks": [
+        {
+          "rank": 1,
+          "requirementClass": "FACILITY_CAPABILITY",
+          "subject": "Verified fire-response facility",
+          "question": "Which nearby mapped fire stations have verified fire-response capability?",
+          "currentKnownState": "SINGLE_QUALIFIED_OPTION",
+          "reasons": [
+            "Blocks the qualified fire response set for this incident.",
+            "No retained alternative exists for the affected support category.",
+            "Exactly one qualified facility is retained.",
+            "57 retained communities depend on the affected support.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "One fire response facility is qualified in the retained set. No second qualified option is retained.",
+            "Candidate facilities are not exposed by this projection, so no candidate is named here.",
+            "57 retained communities have their support affected by this unknown.",
+            "No retained alternative would absorb the loss of the current option."
+          ]
+        },
+        {
+          "rank": 2,
+          "requirementClass": "FACILITY_CAPABILITY",
+          "subject": "Verified emergency hospital",
+          "question": "Which nearby mapped hospitals have a verified emergency department?",
+          "currentKnownState": "SINGLE_QUALIFIED_OPTION",
+          "reasons": [
+            "Blocks the qualified emergency healthcare set for this incident.",
+            "No retained alternative exists for the affected support category.",
+            "Exactly one qualified facility is retained.",
+            "57 retained communities depend on the affected support.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "One emergency healthcare facility is qualified in the retained set. No second qualified option is retained.",
+            "Candidate facilities are not exposed by this projection, so no candidate is named here.",
+            "57 retained communities have their support affected by this unknown.",
+            "No retained alternative would absorb the loss of the current option."
+          ]
+        },
+        {
+          "rank": 3,
+          "requirementClass": "ROUTE_MISSING",
+          "subject": "Verified emergency hospital",
+          "question": "Is a current calculated route retained for any of the 1 qualified emergency healthcare options?",
+          "currentKnownState": "NOT_RETAINED",
+          "reasons": [
+            "Blocks the qualified emergency healthcare set for this incident.",
+            "Exactly one qualified facility is retained.",
+            "53 retained communities depend on the affected support.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "1 qualified emergency healthcare facilities are retained, but no calculated route to them is current at this evaluation time.",
+            "53 retained communities have their support affected by this unknown."
+          ]
+        },
+        {
+          "rank": 4,
+          "requirementClass": "ROUTE_MISSING",
+          "subject": "Verified fire-response facility",
+          "question": "Is a current calculated route retained for any of the 1 qualified fire response options?",
+          "currentKnownState": "NOT_RETAINED",
+          "reasons": [
+            "Blocks the qualified fire response set for this incident.",
+            "Exactly one qualified facility is retained.",
+            "53 retained communities depend on the affected support.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "1 qualified fire response facilities are retained, but no calculated route to them is current at this evaluation time.",
+            "53 retained communities have their support affected by this unknown."
+          ]
+        },
+        {
+          "rank": 5,
+          "requirementClass": "RECEPTION_ACTIVATION",
+          "subject": "Designated reception location",
+          "question": "Is reception activation confirmed for any designated reception location?",
+          "currentKnownState": "DESIGNATED_ACTIVATION_UNCONFIRMED",
+          "reasons": [
+            "No retained alternative exists for the affected support category.",
+            "30 retained communities depend on the affected support.",
+            "Shared across 2 support categories.",
+            "No approved registered source is currently linked to this subject."
+          ],
+          "sourceState": "NO_REGISTERED_SOURCE",
+          "explanation": [
+            "Official designation is retained. Designation is not activation, and no current activation fact is retained.",
+            "30 retained communities have their support affected by this unknown.",
+            "No retained alternative would absorb the loss of the current option."
+          ]
+        }
+      ]
+    }
+  ]
+}

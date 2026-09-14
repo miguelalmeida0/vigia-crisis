@@ -1,5 +1,6 @@
 import {registerTeamRoutes} from '../modules/mission/team-routes.mjs';
 import {registerSituationRoutes} from '../modules/intelligence/situation-routes.mjs';
+import {registerCollectionIntelligenceRoutes} from '../modules/intelligence/collection-intelligence-routes.mjs';
 import { registerWorldKnowledgeRoutes } from '../modules/intelligence/world-knowledge-routes.mjs';
 import { json, problem } from '../http/responses.mjs';
 import { registerWorldRoutes } from '../modules/world/world-routes.mjs';
@@ -71,6 +72,7 @@ export function registerRoutes(router, { services, hub, runtime, sessionService,
   registerCanonicalOperatorRoutes(router,services);
   registerDecisionIntelligenceRoutes(router,services);
   registerSituationRoutes(router,services);
+  registerCollectionIntelligenceRoutes(router,services);
   registerResponseCapabilityRoutes(router,services);
   registerShiftHandoffRoutes(router,services);
   registerHumanAttentionRoutes(router,services);
