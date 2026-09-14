@@ -4,6 +4,7 @@ import {
 import { evaluateEvidenceContract } from '../intelligence/evaluation/evaluate-evidence-contract.mjs';
 import { OPERATIONAL_WILDFIRE_CONTRACT_V1 } from './operational-contract.mjs';
 import { assessOperationalIncident } from './incident-assessment.mjs';
+import {deriveIncidentCurrentness,fireSignal} from './incident-currentness.mjs';
 
 function observedAt(event) { return event.clocks.observedAt ?? event.clocks.occurredAt; }
 function sourceKind(familyClass) { return ({ REPORT: 'PUBLISHER', PHYSICAL: 'SENSOR', OFFICIAL: 'OFFICIAL_SYSTEM', HUMAN: 'FIELD_TEAM', CONTEXT: 'PRODUCT' })[familyClass] ?? 'OTHER'; }
@@ -41,7 +42,7 @@ function graphComponents(activeEvents, incident, sourceHealth) {
   return { sourceFamilies: [...familyById.values()], sources: [...sourceById.values()], observations, evidence };
 }
 
-export function buildIncidentIntelligence({ incident, activeEvents, historicalEvents, sourceHealth, asOf, previousEvaluation = null }) {
+export function buildIncidentIntelligence({ incident, activeEvents, historicalEvents, sourceHealth, asOf, previousEvaluation = null, currentnessPolicy = {} }) {
   const contract = OPERATIONAL_WILDFIRE_CONTRACT_V1, times = historicalEvents.map(observedAt).filter(Boolean).sort();
   const validFrom = times[0] ?? incident.openedAt, validTo = times.at(-1) ?? validFrom;
   const canonicalIncident = createIncident({ id: incident.id, incidentType: incident.hazardType, openedAt: incident.openedAt, location: { coordinate: incident.location.coordinates }, claimIds: [`claim:${incident.id}:wildfire-presence`], status: activeEvents.length ? 'OPEN' : 'CANCELLED' });
@@ -52,7 +53,10 @@ export function buildIncidentIntelligence({ incident, activeEvents, historicalEv
   });
   const evidenceGraph = createEvidenceGraph(graphComponents(activeEvents, incident, sourceHealth));
   const evaluation = evaluateEvidenceContract({ claim, contract, evidenceGraph, evaluationTime: asOf, previousEvaluation });
+  const fireActivityEvents=activeEvents.filter(event=>fireSignal(event,asOf)).map(({id,eventType,hazardType,action,clocks,source,payload,provenance})=>({id,eventType,hazardType,action,clocks,source:{sourceId:source.sourceId,familyClass:source.familyClass},payload:{stance:payload?.stance,observationState:payload?.observationState,officialIncidentStatus:payload?.officialIncidentStatus,incidentStatus:payload?.incidentStatus,resolutionState:payload?.resolutionState,operatorResolution:payload?.operatorResolution},provenance:{synthetic:provenance?.synthetic,upstreamMeasurementId:provenance?.upstreamMeasurementId}}));
+  const currentness=deriveIncidentCurrentness({events:fireActivityEvents,asOf,policy:currentnessPolicy,reviewReasons:evaluation.contradictions?.some(c=>c.blocking)?['Unresolved incident-specific conflict']:[]});
   return {
+    currentness,fireActivityEvents,
     incident: canonicalIncident, claim, contract: { id: contract.id, version: contract.version, fingerprint: contract.fingerprint },
     evidenceGraph, evaluation, evidenceDebt: evaluation.evidenceDebt,
     assessment: assessOperationalIncident({ incident: canonicalIncident, evidenceGraph, evaluation, asOf }),

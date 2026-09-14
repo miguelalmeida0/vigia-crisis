@@ -121,6 +121,7 @@ export class SituationAsk{
   // A model can select existing claims by ID. Free-form model text never crosses this boundary.
   groundedSelection(proposal,claims){if(!proposal||Object.keys(proposal).some(k=>k!=='claimIds')||!Array.isArray(proposal.claimIds)||proposal.claimIds.some(id=>!claims.some(c=>c.id===id))){this.metrics.unsupportedAnswerBlocks++;throw error('unsupported_model_claim');}return proposal.claimIds.map(id=>claims.find(c=>c.id===id));}
   async answer(actor,{incidentId,question,asOf=null,entityId=null}={}){
+    if(this.reality){const answer=await this.reality.answer(actor,{incidentId,question,asOf,entityId});if(answer)return answer;}
     if(!asOf&&/know an hour ago|sabia ha uma hora/i.test(normalize(question)))asOf=new Date(this.service.clock().getTime()-3600000).toISOString();
     const historical=String(question??'').match(/(?:know at|knew at|sabia (?:as|às))\s+(\d{1,2}):(\d{2})/i);
     if(!asOf&&historical){if(+historical[1]>23||+historical[2]>59)throw error('historical_time_invalid');asOf=this.service.clock().toISOString().slice(0,10)+'T'+historical[1].padStart(2,'0')+':'+historical[2]+':00.000Z';}

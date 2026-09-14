@@ -55,22 +55,3 @@ VIGIA_PHASE_B_INTERACTION_AUDIT.md
 VIGIA_PHASE_B_RESPONSIVE_AUDIT.md
 VIGIA_PHASE_B_ROUTE_MATRIX.md
 VIGIA_PHASE_B_VISUAL_DIFF_REPORT.md
-
-# Local/runtime secrets
-.env
-.env.local
-.env.production
-.env.development
-.env.test
-.tmp/
-.cache/
-.artifacts/
-*.pem
-*.key
-*.p12
-*.pfx
-*.sqlite-wal
-*.sqlite-shm
-node_modules/
-dist/
-coverage/

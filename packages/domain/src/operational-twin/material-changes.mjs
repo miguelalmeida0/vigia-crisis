@@ -18,7 +18,9 @@ export function assessmentChanges(previous, current, at) {
   const priorIds = new Set(previous?.activeEventIds ?? []);
   const added = current.activeEventIds.filter(id => !priorIds.has(id));
   if (added.length) add('new_observation', null, added, 'New attributable observation received.', 'Review its qualification; an arrival alone does not prove a fire.', added.map(id => `evidence:${id}`));
+  for(const event of current.fireActivityEvents??[])if(added.includes(event.id))add(/thermal/i.test(event.eventType)?'thermal_observation':'official_or_field_update',null,event.id,/thermal/i.test(event.eventType)?'New thermal observation near this incident.':'New fire-related official or field observation.', 'Observation time and source remain attributable; this is not a fire perimeter.',[event.id]);
   if (!prior) return changes;
+  if(previous.currentness?.state!==current.currentness?.state&&current.currentness)add('incident_currentness_changed',previous.currentness?.state,current.currentness.state,current.currentness.reason,current.currentness.meaning,current.currentness.latestSignal?[current.currentness.latestSignal.id]:[]);
   if (prior.corroborationState !== next.corroborationState) add('corroboration_changed', prior.corroborationState, next.corroborationState,
     `Incident changed from ${prior.corroborationState} → ${next.corroborationState}.`, 'The independent evidence basis has changed.');
   if (prior.officialState !== next.officialState) add(next.officialState === 'QUALIFYING_OFFICIAL_EVIDENCE' ? 'official_confirmation_added' : 'official_confirmation_removed', prior.officialState, next.officialState,

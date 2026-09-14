@@ -46,10 +46,10 @@ export function OverviewSignals(vm) {
 }
 export function NationalSignalStrip(vm) {
   const cards=[
-    ['activeOfficial','Active official-feed records','activeOfficial'],['thermalHour','New detections (1h)','thermalHour'],
+    ['activeOfficial','Current incident records','activeOfficial'],['thermalHour','New detections (1h)','thermalHour'],
     ['national-temperature','Highest temperature','temperature'],['national-humidity','Lowest humidity','humidity'],
     ['activeWarnings','Official warnings','warnings'],['highDangerRegions','High fire-danger municipalities','municipalitiesRisk'],
-  ].map(([id,label,kind])=>{let metric=summaryMetric(vm,id,label);if(id==='activeOfficial'&&!primaryMetric(metric)){const verified=nationalCurrentMetric(vm);if(verified){metric=verified;label=verified.label;}}const place=metric.sourceLocation?.name??metric.location??(metric.id==='verifiedCurrent'?'Canonical verification policy':({activeOfficial:'ANEPC-derived public feed',thermalHour:'NASA FIRMS · returned detections',activeWarnings:'IPMA · Portugal warning areas',highDangerRegions:'IPMA · municipality bulletin'}[id]));return SignalMetricCard({...metric,location:place},{label,kind,compact:true,showLocation:true});}).filter(Boolean);
+  ].map(([id,label,kind])=>{let metric=summaryMetric(vm,id,label);if(id==='activeOfficial'&&!primaryMetric(metric)){const verified=nationalCurrentMetric(vm);if(verified){metric=verified;label=verified.label;}}const place=metric.sourceLocation?.name??metric.location??(metric.id==='verifiedCurrent'?'Canonical verification policy':({activeOfficial:'Fire-activity queue policy',thermalHour:'NASA FIRMS · returned detections',activeWarnings:'IPMA · Portugal warning areas',highDangerRegions:'IPMA · municipality bulletin'}[id]));return SignalMetricCard({...metric,location:place},{label,kind,compact:true,showLocation:true});}).filter(Boolean);
   return cards.length?`<section class="national-signals" aria-label="National situation"><div class="signal-grid dynamic-signals national-primary-signals" style="--signal-count:${cards.length}">${cards.slice(0,2).join('')}${cards.length>2?`<details class="national-extra-signals" data-responsive-disclosure="national-signals" open><summary>Weather and fire danger</summary><div class="national-extra-grid">${cards.slice(2).join('')}</div></details>`:''}</div></section>`:'';
 }
 export function OfficialNotices(vm) {

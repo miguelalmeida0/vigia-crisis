@@ -15,9 +15,10 @@ export class OperationalIntelligenceService {
   #acceptedEventHandler = null;
   #acceptedEventRetryIds = new Set();
   #metrics = { received: 0, accepted: 0, duplicates: 0, rejected: 0, lateEvents: 0, projectionFailures: 0, autopilotCoordinationFailures: 0, intelligenceRecalculations: 0, ambiguousAssociations: 0, sourceStaleTransitions: 0, replayRuns: 0, lastProjectionLatencyMs: null, lastReplayLatencyMs: null, lastSourceLatencyMs: null };
-  constructor({ journal, sourceRegistry = createSourceRegistry([]), adapters = [], clock = () => new Date(), proofPlane = null, currentTwinCacheMs = 30_000, onAcceptedEvent = null } = {}) {
+  constructor({ journal, sourceRegistry = createSourceRegistry([]), adapters = [], clock = () => new Date(), proofPlane = null, currentTwinCacheMs = 30_000, onAcceptedEvent = null, currentnessPolicy = {} } = {}) {
     if (!journal) throw new Error('operational_event_journal_required');
     this.#journal = journal; this.#sourceRegistry = sourceRegistry; this.#clock = clock; this.#proofPlane = proofPlane; this.currentTwinCacheMs = Math.max(0, Number(currentTwinCacheMs) || 0);
+    this.currentnessPolicy = currentnessPolicy;
     this.setAcceptedEventHandler(onAcceptedEvent);
     for (const adapter of adapters) this.registerAdapter(adapter);
   }
@@ -81,7 +82,7 @@ export class OperationalIntelligenceService {
   }
   async getTwinAsOf(asOf) {
     await this.initialize(); const recorded = await this.#journal.events(), events = this.#proofPlane ? this.#proofPlane.eventsForProjection(recorded, asOf) : recorded;
-    return projectOperationalTwin({ events, sourceRegistry: this.#sourceRegistry, asOf: instant(asOf) });
+    return projectOperationalTwin({ events, sourceRegistry: this.#sourceRegistry, asOf: instant(asOf), currentnessPolicy: this.currentnessPolicy });
   }
   async getIncident(incidentId, options = {}) { return twinIncident(await this.getCurrentTwin(options), incidentId); }
   async getIncidentState(incidentId, options = {}) { return this.getIncident(incidentId, options); }
@@ -114,7 +115,7 @@ export class OperationalIntelligenceService {
   async createReplay(asOf = this.#clock()) {
     await this.initialize(); const started = performance.now(), recorded = await this.#journal.events();
     const events = this.#proofPlane ? this.#proofPlane.eventsForProjection(recorded, asOf) : recorded;
-    const replay = createOperationalTwinReplay({ events, sourceRegistry: this.#sourceRegistry, asOf: instant(asOf) });
+    const replay = createOperationalTwinReplay({ events, sourceRegistry: this.#sourceRegistry, asOf: instant(asOf), currentnessPolicy: this.currentnessPolicy });
     this.#metrics.replayRuns += 1; this.#metrics.lastReplayLatencyMs = Number((performance.now() - started).toFixed(3)); return replay;
   }
   async replayIncident(incidentId, asOf = this.#clock()) { const replay = await this.createReplay(asOf); return { replay, incident: twinIncident(replay.twin, incidentId) }; }

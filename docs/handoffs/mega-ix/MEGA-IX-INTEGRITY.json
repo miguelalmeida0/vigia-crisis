@@ -1,0 +1,1126 @@
+{
+  "schemaVersion": "vigia.mega-ix.portable-handoff.v1",
+  "createdAt": "2026-09-14T15:15:30.056196+00:00",
+  "startingHEAD": "a1eef78350276e87add2d08e92b08d5c7ebc5c7b",
+  "branch": "vigia/operational-intelligence-v1",
+  "release": {
+    "releaseId": "vigia-intelligence-fabric-d0e03143e023ae21",
+    "codeStateHash": "sha256:becb44cdf09778562d0e0752c695461bd15a24debc67b963c007e743fbe5c948",
+    "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
+    "releaseStatementHash": "sha256:cd7dfe94ce604ff6acb459651c74ce0bb0d126d32060b5ea5a97fcaa4a447482"
+  },
+  "payloadFileCount": 76,
+  "createdFileCount": 43,
+  "modifiedFileCount": 33,
+  "controlFiles": [
+    "MEGA-IX-FILES.txt",
+    "MEGA-IX-APPLY.md",
+    "MEGA-IX-INTEGRITY.json"
+  ],
+  "files": [
+    {
+      "status": "M",
+      "path": "apps/api/src/application/create-services.mjs",
+      "purpose": "Initialize team store/service, optional central link and snapshot-change callback.",
+      "kind": "source",
+      "sha256": "9a4f621de0f9a0c3211f02353e7c6cd157f9110a70185a69a6bc50589ea6c147",
+      "bytes": 40432,
+      "mode": "0o644",
+      "headReferenceSha256": "c633c65e8d192f527c5d541536974589ac4b45694aabc59f97bfdb6a42e8c1c6",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/application/register-routes.mjs",
+      "purpose": "Register team endpoints in the existing API.",
+      "kind": "source",
+      "sha256": "317f428e0eb5076c9bfff8f13f387f6faf30fb6d1de269cd5dfb95016bbbe8c7",
+      "bytes": 9677,
+      "mode": "0o644",
+      "headReferenceSha256": "b5b10d56d991ba0bbedbdde58afb19e6c9e1c17a6f78784790f7e364c87da81e",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/http/route-security-policy.mjs",
+      "purpose": "Declare authenticated capabilities and incident scope for team endpoints.",
+      "kind": "source",
+      "sha256": "ffc79182e0a581d48bfdf1896b0b3f5d3bd28de22b94c07e02ab7a01e778d021",
+      "bytes": 9533,
+      "mode": "0o644",
+      "headReferenceSha256": "fcb265d0c0399dc167642f311fb8c51aa38fd52d507a996114d03d1475c462c3",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/modules/intelligence/situation-service.mjs",
+      "purpose": "Notify team mission recalculation after storing a changed situation snapshot.",
+      "kind": "source",
+      "sha256": "448384393f51efa1e604071f7314ba1abb06a844bdc85af7c390aec6e7610bd1",
+      "bytes": 23568,
+      "mode": "0o644",
+      "headReferenceSha256": "3f53174b3e2128412cd19b26a87a71100c033f1b0abc7fecfa50cb10348243ba",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/modules/mission/controlled-field-exercise.mjs",
+      "purpose": "Explicit synthetic Louredo/EM527 exercise context with 11/24-minute routes; separate from operational records.",
+      "kind": "source",
+      "sha256": "126d5df575beb21fb71bbfd9201b8af72d657afb122845965a59f2dbd6df88c5",
+      "bytes": 1507,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/modules/mission/team-central-link.mjs",
+      "purpose": "Configured HTTPS central transport and per-team synchronization lifecycle.",
+      "kind": "source",
+      "sha256": "41a7b9fd4df63bccfdb78176bc1282b9f02743a9b1f4436aefff73eff658f765",
+      "bytes": 1666,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/modules/mission/team-routes.mjs",
+      "purpose": "Authenticated incident-team HTTP reads, enrollment, mutations and synchronization endpoints.",
+      "kind": "source",
+      "sha256": "513938a483a6c899ebf04a39405906a08f5d0ad7b259068bbc045a468ffa97f4",
+      "bytes": 2003,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/modules/mission/team-service.mjs",
+      "purpose": "Authorized team membership, reports, missions, confirmations, receipts, cached context and recalculation.",
+      "kind": "source",
+      "sha256": "c25b38d351524af8f25b3b63b9fe702b593859536ccb2f984ae2582da24a112b",
+      "bytes": 19820,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/src/modules/mission/team-store.mjs",
+      "purpose": "Encrypted SQLite team records, transactions, per-group indexing and insertion-ordered pages.",
+      "kind": "source",
+      "sha256": "aa9757e073dfb5fb207e1e7a047a7fd1eaed392a3bcf220ff887f1c346a20f68",
+      "bytes": 3588,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/modules/operator/canonical-operator-crisis-projection.mjs",
+      "purpose": "Use portfolio-only aggregation on overview path.",
+      "kind": "source",
+      "sha256": "24b5cc4e34b434a9d0b5f6013f827fbdc859b63e61143973308d49ee13ea0b17",
+      "bytes": 35401,
+      "mode": "0o644",
+      "headReferenceSha256": "6799ba03b2caad5d28c8106225b9bb5d2395a226f6cf6903ea7f30c902d470bb",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/modules/operator/operational-period-service.mjs",
+      "purpose": "Read only operational period snapshot fields for its projection.",
+      "kind": "source",
+      "sha256": "063ffd49112e93643c7ce98e4ec34a6592864b10d45183dcb879d772a9a9a938",
+      "bytes": 26930,
+      "mode": "0o644",
+      "headReferenceSha256": "95a6a6081c7561ab936cd77444c7cba66f340b455b96a96685453c515b6a766f",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/api/src/modules/operator/operational-recovery-service.mjs",
+      "purpose": "Read only the five recovery collections used by its projection.",
+      "kind": "source",
+      "sha256": "06c4216348c7a8dba432c3554dbd94895d9e8e2dc7dc019bebc4da59c0276ecb",
+      "bytes": 60094,
+      "mode": "0o644",
+      "headReferenceSha256": "d1e7c9cfbb60fb6f7a4bfb4718d24d6d0a15e2b19e5e1b990d37581e70cd8b30",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/api/test/crisis-portfolio-equivalence.test.mjs",
+      "purpose": "Portfolio-only projection equivalence to full detail aggregation.",
+      "kind": "source",
+      "sha256": "74e98b880a49c300ee41b988b466b4dcbb0fffb9af396086fa1af284e62e15e2",
+      "bytes": 3214,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/api/test/mission-command.test.mjs",
+      "purpose": "Domain/service, cryptography, permissions, replay, transport, persistence and mission regression tests.",
+      "kind": "source",
+      "sha256": "2beace76de711ff22a037b16b299fd5accf8ffed09e7ed2f0ab2e322059529c7",
+      "bytes": 20903,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/api/test/operational-recovery-service.test.mjs",
+      "purpose": "Assert selective snapshot/full snapshot output equivalence.",
+      "kind": "source",
+      "sha256": "5a149a9ecddb67ac8340f6aff843e9d4152ef319a908b5ad315630b71fa1a181",
+      "bytes": 7717,
+      "mode": "0o644",
+      "headReferenceSha256": "667796ec06fc8d84cff7969571ff1c693048e2401f8c6a827b589e39266bb6f7",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/field-node/src/team-hub-sync.mjs",
+      "purpose": "Local hub upstream-loss recovery, bounded cursor paging and duplicate-safe central synchronization.",
+      "kind": "source",
+      "sha256": "c6208508851f2f54c040d44b598a175165e973f425477b1cabf2a8da178b028e",
+      "bytes": 2795,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/field-team-sw.js",
+      "purpose": "Cache/install explicit offline application shell.",
+      "kind": "source",
+      "sha256": "65cc0d0df2522650bce3cd60ad08f1ae8bcb05f1c6f482b2a65ab3f6f87e80b9",
+      "bytes": 1568,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/index.html",
+      "purpose": "Load mission command stylesheet.",
+      "kind": "source",
+      "sha256": "9705e529bd065c0d10ebf9c15a352a7439278433b6067c19587ebf9956517b5c",
+      "bytes": 1891,
+      "mode": "0o644",
+      "headReferenceSha256": "388ef1f05eb1576f1eb5bf6449a8fe29c3f74298df88409ceaac9d3fdb35ebf3",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/offline-team.html",
+      "purpose": "Offline workspace entry document.",
+      "kind": "source",
+      "sha256": "2b846a011fe5729c62d8688175b3d73069e0bb005611b0d06b9d44f29e6cf591",
+      "bytes": 1225,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/scripts/build.mjs",
+      "purpose": "Bundle offline entry, service worker, styles and required assets.",
+      "kind": "source",
+      "sha256": "702e492b8ae111e732b1b0a970a742901f7d10fc1c1de8d97145c197ef979cd8",
+      "bytes": 6975,
+      "mode": "0o644",
+      "headReferenceSha256": "cdae27d6e38a6f0ee52c979ed07ee4dbf1fd6d15dc75967bc9c25ebda4b7de9a",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/server.mjs",
+      "purpose": "Clear private origin storage/cache on explicit logout.",
+      "kind": "source",
+      "sha256": "b3fbbd5424e6887007293479eaefb7d0a8613084aa5a1ce8a7b96e4fb85e1767",
+      "bytes": 19784,
+      "mode": "0o644",
+      "headReferenceSha256": "f24f2e9285ee336f3b41d739c5904982a3a25d6256f2f66239801b63e5560096",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/src/approved/controller.js",
+      "purpose": "Install mission command lifecycle against selected incident and active map.",
+      "kind": "source",
+      "sha256": "13974bbdf7616cb53c36348edbf837b2c162f080fccacf46319cb0fd2bdd1194",
+      "bytes": 20502,
+      "mode": "0o644",
+      "headReferenceSha256": "026219bd04b21713c91716dcdef30bf8445224db656da1c6a1e7bee8c4eceed2",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/src/approved/routes/detail.js",
+      "purpose": "Compose mission command with existing detail analysis under disclosure.",
+      "kind": "source",
+      "sha256": "88155108e12d8add3d1b9de1dd05396d67ce5afbc2bf2d291eec41baedc80464",
+      "bytes": 2513,
+      "mode": "0o644",
+      "headReferenceSha256": "bdb6c25f121096ee7a2c59ca7ff83c553c9b98ba8a8ad78810b328983c6e3cd8",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/src/approved/routes/overview.js",
+      "purpose": "Compose mission command ahead of disclosed existing priorities.",
+      "kind": "source",
+      "sha256": "64e493be5bc88d68408721c589ea1d586f6772f48053916ab47036ea036233f1",
+      "bytes": 5219,
+      "mode": "0o644",
+      "headReferenceSha256": "c9019304be6e203cfcd38d31374392a55e74308ddf361c355ed361dbb980cf53",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/src/approved/routes/response-access.js",
+      "purpose": "Compose mission command with existing response tools under disclosure.",
+      "kind": "source",
+      "sha256": "a68c830cdc2e5b5ffd6db6f9aabe883274900d152b0cbae2ccd9f9d6e029212f",
+      "bytes": 1738,
+      "mode": "0o644",
+      "headReferenceSha256": "4e06a9c0222fac1114be9abde23cdfc7532fc76bdd160a8f8544baee6e91f9d1",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/src/approved/ui/mission-command.js",
+      "purpose": "Integrated mission, field report, confirmation, timeline, messaging, people and offline-preparation interactions.",
+      "kind": "source",
+      "sha256": "4506e4da2d03032808ad4fe63362854341fbf8b2ff7b2858feb8fb8820276134",
+      "bytes": 32965,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/src/field-team-offline.js",
+      "purpose": "Offline encryption and expiry-aware retained team view helpers.",
+      "kind": "source",
+      "sha256": "8861216c8ae913f584c9a0d5ba42d0b182da3f9f7ce688d98ab06f47550f9c57",
+      "bytes": 1970,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/src/field-team-store.js",
+      "purpose": "Account-scoped IndexedDB device state, encrypted views/drafts, outbox and passphrase-protected offline package.",
+      "kind": "source",
+      "sha256": "995833c64d6482d0a95c05188facc25431994ff9209b60082216d2dca0552763",
+      "bytes": 3363,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/src/mapRuntime.js",
+      "purpose": "Explicit map-point selection for field reports.",
+      "kind": "source",
+      "sha256": "eadb7b1c019b8d96250da3ea843f2b44fc1c696e9b64326e09fb43e193cb6d6b",
+      "bytes": 36423,
+      "mode": "0o644",
+      "headReferenceSha256": "f7bc0bd89de987bd7d79c1078a894ed4bdc0071384edbdcf5bc1a2198ef26f5e",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/src/offline-team.js",
+      "purpose": "Unlock and operate prepared private offline team workspace.",
+      "kind": "source",
+      "sha256": "21cc035f81cf6ae7f5cce763131beefd695a15f0288ac293f1b6e4ca0bae6476",
+      "bytes": 3431,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/src/vigiaApi.js",
+      "purpose": "Add authenticated teamRequest transport helper.",
+      "kind": "source",
+      "sha256": "f054cd320eba27d56b008c1a88fe6c2093e0eb1838fca0dd36b0115183b8ddad",
+      "bytes": 14463,
+      "mode": "0o644",
+      "headReferenceSha256": "1a6af6877bd26b35f5c6490ec9ab10247f685bb19857ea544b3aec070082760a",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/styles/approved/mission-command.css",
+      "purpose": "Connected command composition, mission semantics and responsive layouts.",
+      "kind": "source",
+      "sha256": "418eae5ba443dd3ab2d51805e66b3566549fe91cd9766e2286cf0cfdacb4a89f",
+      "bytes": 5581,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/styles/approved/offline-team.css",
+      "purpose": "Offline workspace presentation and responsive controls.",
+      "kind": "source",
+      "sha256": "1fa44ff33ee5c9ae3bd2bae87c63ba22734e3046be00b70e89b82f1fe75fa3a4",
+      "bytes": 1042,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "apps/operator-console/tests/mission-command.mjs",
+      "purpose": "UI markup, privacy, outgoing state and offline cryptography contracts; not browser acceptance.",
+      "kind": "source",
+      "sha256": "d01ad59103c9c86f7f540512a0bc309b295d9ee9762f9f2d1dff6397da39e437",
+      "bytes": 5933,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/tests/smoke.mjs",
+      "purpose": "Update canonical module/style and primary navigation expectations.",
+      "kind": "source",
+      "sha256": "7131a7babd45be4e30b15ba7d007b1e044db0725f51cd0fba4181bfa9d47480c",
+      "bytes": 2940,
+      "mode": "0o644",
+      "headReferenceSha256": "d741a2dd427d00a8cc6f3c1cb9c73fb84afdaad7f757c305c15d53ebcbd679c8",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "apps/operator-console/tests/ux-contract.mjs",
+      "purpose": "Check intentional mission/disclosure route composition.",
+      "kind": "source",
+      "sha256": "021adeacc04781e5f9a76a82f7209861676c655959fcc6120e74396f7cff6e24",
+      "bytes": 6247,
+      "mode": "0o644",
+      "headReferenceSha256": "03c9f02d6058f3cb4a3da1ea28add3660f98f44d470b8455b2e0b546ac3cc48e",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/checkpoint-commands.sh",
+      "purpose": "Generated checkpoint commands for original installation; regenerate before use.",
+      "kind": "generated",
+      "sha256": "424c9d5898899dc119878dde14e3b420574c9b5b7d5b23065a86020abe880fd7",
+      "bytes": 290,
+      "mode": "0o700",
+      "headReferenceSha256": "f0b5fb513e4a07cb30c23ef06340c27420ff9200f3b99c21af545818d4b2b41b",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/checkpoint-handoff.json",
+      "purpose": "Generated current checkpoint and staging metadata.",
+      "kind": "generated",
+      "sha256": "4527ef9c792219a32a7dbc7d1683dca2836b903d25e997dc3c3183f57db7a8df",
+      "bytes": 9571,
+      "mode": "0o600",
+      "headReferenceSha256": "7a99bbdf31253866efe46f8168bd82b76b0684fa6986194fa39875112765b104",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/current-release-manifest.json",
+      "purpose": "Frozen exact source/data release identity.",
+      "kind": "generated",
+      "sha256": "491401eb0bb9147079e47a33dfc62148ee413072372ad73af4d8bd968c5a9428",
+      "bytes": 11856,
+      "mode": "0o600",
+      "headReferenceSha256": "9e111d082469e5d8bc8c7836dca855f5f07c6573c99c5f839b996d80d73d0db1",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/dirty-tree-classification.json",
+      "purpose": "Generated whole-tree classification; not a Mega IX attribution list.",
+      "kind": "generated",
+      "sha256": "bac9e4cea17c849c5ad3590fab3f7b918f1857d9abf2b79b4f8421358f9d782b",
+      "bytes": 28234,
+      "mode": "0o600",
+      "headReferenceSha256": "f55fa184497aa40a65a25d8e44925f15e2f40591570089545b4c0f9a5f7bfff7",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/evidence-manifest.json",
+      "purpose": "Generated evidence inventory for original installation.",
+      "kind": "generated",
+      "sha256": "797e862b9b4053da1210dca472b67e622ea7a65159ca4ac5dfe91097d8c43cd8",
+      "bytes": 30355,
+      "mode": "0o600",
+      "headReferenceSha256": "d10f315583f10d9adb1a21e090ad07ef15b0949fbbb50ce8a14a100a82000340",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/ignored-runtime-manifest.json",
+      "purpose": "Generated ignored runtime path inventory; not backed-up runtime bytes.",
+      "kind": "generated",
+      "sha256": "1273f0e3e78dbc26c4d37d59cf5c5a642128b12430a6771173244d91080d3e19",
+      "bytes": 7330,
+      "mode": "0o600",
+      "headReferenceSha256": "da66ee358e5a22f0568c3f5bedc46a6512a73518dadff6e59f2e0fe437ab9468",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/release-source-manifest.json",
+      "purpose": "Exact full-baseline source hashes used by this release.",
+      "kind": "generated",
+      "sha256": "80462d19f166dc2aea3838799446514e3a79c6abd94fb62c1684435af01ed8fd",
+      "bytes": 492279,
+      "mode": "0o600",
+      "headReferenceSha256": "87e25d00a7624bddebc1a3cc84b1498e92d23a155c2a009b75f9c98e84d2d850",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/release-statement.json",
+      "purpose": "Release identity and certification boundaries.",
+      "kind": "generated",
+      "sha256": "0e7262cd6ec33182ace7d3360d06cd8814c6c1984e12ca7be63827d90f336920",
+      "bytes": 799,
+      "mode": "0o600",
+      "headReferenceSha256": "9b2805ad6caab5639847247dfdf8c31b2c18747ad2c063cf2250dbd54c20f8ca",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "M",
+      "path": "data/validation/release/unknown-path-report.json",
+      "purpose": "Generated unclassified-path report.",
+      "kind": "generated",
+      "sha256": "56172c3755495021c838a314c07da9dc32f16f7aad694eab3bcedec99d85f0cd",
+      "bytes": 523,
+      "mode": "0o600",
+      "headReferenceSha256": "4b45bd0d5ed2da5980b37d7dd4f07e1af0f8c5a7e2c20ac375c727865fd24ea2",
+      "reconciliation": "REGENERATE_ON_DESTINATION"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/ACCEPTANCE.json",
+      "purpose": "Historical implementation acceptance status, separate from local browser proof.",
+      "kind": "evidence",
+      "sha256": "f45ebe2db770a09311cfc731c9079fe4b55355549ea58611482fe033fc348f7f",
+      "bytes": 1654,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/CAPTURE_LEDGER.json",
+      "purpose": "Required captures and six-route evidence marked NOT_RUN.",
+      "kind": "evidence",
+      "sha256": "8af1fec7c2fc4c54a7202ba4e0c7657e77569f7c8c201035e59a4b2738e52bf7",
+      "bytes": 2972,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/DESIGN_AND_ACCEPTANCE.md",
+      "purpose": "Original Mega IX route integration design and acceptance contract.",
+      "kind": "evidence",
+      "sha256": "fa175eb9761a175e7751ab8ed0f7b0dd5751591bcadffcca0afa28fc826bb800",
+      "bytes": 3562,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/DESIGN_RECORD.md",
+      "purpose": "Design decisions and review record.",
+      "kind": "evidence",
+      "sha256": "8b138b69a0f2fcf2aa5f665e4e9f76d155776b28149d506ca15317c24dec426d",
+      "bytes": 9147,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/MEGA-IX-PORTABLE-HANDOFF.md",
+      "purpose": "Authoritative portable inventory, release, environment, persistence, evidence and limitations.",
+      "kind": "evidence",
+      "sha256": "407d7716e70f11078985512220306f43f9f72cbdc11d7dafc11c37d4e6b2937d",
+      "bytes": 26384,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/PERFORMANCE_ACCEPTANCE.md",
+      "purpose": "Profiling changes, benchmark method, measured results and blocked acceptance.",
+      "kind": "evidence",
+      "sha256": "ddc665b180d0146adb571de8b7af4159e87c59fde62ea9c51f1bc1face904329",
+      "bytes": 4938,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/REPORT.md",
+      "purpose": "Technical candidate report and explicit acceptance limitations.",
+      "kind": "evidence",
+      "sha256": "2b7adc6c85d854dcfdb7ad68dcf9701d77f4f058b19aabdb50ff528653b05127",
+      "bytes": 12510,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/acceptance-regression-tests.txt",
+      "purpose": "Prior 153-test acceptance follow-up output.",
+      "kind": "evidence",
+      "sha256": "bd20730366b6f4f1cb2738f6708f6bc048b52b499ff4ec69bb0e8c26d0809d1d",
+      "bytes": 14837,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/acceptance-static-verification.txt",
+      "purpose": "Prior acceptance follow-up build/static output.",
+      "kind": "evidence",
+      "sha256": "c0df30bfc737e7527f7bfbc16ae2258ef26c0ccf36538478e8289fb95d751508",
+      "bytes": 3753,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/controlled-api-evidence.json",
+      "purpose": "Controlled backend mission transition and report replay evidence.",
+      "kind": "evidence",
+      "sha256": "8c2955ebcd09057f645bea912c34c7a7eb40625d618f4c3fb7a90288a64dfeea",
+      "bytes": 1776,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/design-detector.json",
+      "purpose": "Source design-detector output, not rendered review.",
+      "kind": "evidence",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/focused-tests.txt",
+      "purpose": "Historical focused mission/security/UI contract test output.",
+      "kind": "evidence",
+      "sha256": "3805f2c8db4d26de23387befb23e8fa8d2c5e2ae10c88925c7bbc479abb73cff",
+      "bytes": 4055,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/performance-evidence.json",
+      "purpose": "Machine-readable previous performance samples and comparisons.",
+      "kind": "evidence",
+      "sha256": "4d525445032f80cb59e71920bfa0e3a46b40e950f8c9ddb5d27a2975fc7a2ed9",
+      "bytes": 24656,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/portable-regression-tests.txt",
+      "purpose": "Final portable freeze: exact 153-test command and complete output.",
+      "kind": "evidence",
+      "sha256": "b46fa538211822fbc4312c1ff355855d2fd46e59546e36e382495989025486e5",
+      "bytes": 14830,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/portable-runner-checks.txt",
+      "purpose": "Syntax/help-only validation of deferred local runner; no browser run.",
+      "kind": "evidence",
+      "sha256": "b9351252649ddb0fb1dda2353dad3f1c3dbfa77b808d4492d0617619b7548875",
+      "bytes": 424,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/portable-static-verification.txt",
+      "purpose": "Final portable freeze: production build and static verification output.",
+      "kind": "evidence",
+      "sha256": "c0df30bfc737e7527f7bfbc16ae2258ef26c0ccf36538478e8289fb95d751508",
+      "bytes": 3753,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/recovery-tests.txt",
+      "purpose": "Historical recovery regression output.",
+      "kind": "evidence",
+      "sha256": "3a23305035b6733554313c871e5ee03b54052eecbf522c665b44e527b6c99604",
+      "bytes": 638,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/restart-evidence.json",
+      "purpose": "Prior runtime persistence/restart evidence.",
+      "kind": "evidence",
+      "sha256": "abed151c7463e59b5ed70491cd50a0fe3acb318162bfc28188bdc31d33cc6a72",
+      "bytes": 418,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/retained-tests.txt",
+      "purpose": "Historical retained-product regression output.",
+      "kind": "evidence",
+      "sha256": "ff576c82ba2cbd1946ca1d4fdacb5c1864572ff9b16000978f5400e09a7da629",
+      "bytes": 10249,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "docs/handoffs/mega-ix/static-verification.txt",
+      "purpose": "Historical production/static verification output.",
+      "kind": "evidence",
+      "sha256": "c0df30bfc737e7527f7bfbc16ae2258ef26c0ccf36538478e8289fb95d751508",
+      "bytes": 3753,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/crisis-autopilot/project-crisis-autopilot.mjs",
+      "purpose": "Skip unused full detail construction/hashing for portfolio-only projection.",
+      "kind": "source",
+      "sha256": "7cc91677e003a205f5e08780ed676218d2ebd7975c27e7ec41de05c7c4fe08e3",
+      "bytes": 17942,
+      "mode": "0o644",
+      "headReferenceSha256": "6d1731d565f29bff9466a44c9da3abd54ece477d82005e220283e8739b84f82b",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/src/fieldnet/mission-command.mjs",
+      "purpose": "Mission catalog, route intersection, consequence evaluation, states, report verification and priority summaries.",
+      "kind": "source",
+      "sha256": "4660d3ed1f077f634f6ea3a76e5a4f1c5a34d03db234cc4594f08f384aa211c1",
+      "bytes": 7338,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/src/fieldnet/team-protocol.mjs",
+      "purpose": "Signed encrypted envelopes, identities, acknowledgements, durable outbox and duplicate-safe delivery semantics.",
+      "kind": "source",
+      "sha256": "8807b2d288ea5e7f37b317bf5b956c745cb25e54ad3262ffe6d41a46431b5098",
+      "bytes": 4154,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/src/fieldnet/team-transports.mjs",
+      "purpose": "Explicit local and unavailable hardware transport adapters and bounded relay behavior.",
+      "kind": "source",
+      "sha256": "81f5e3fcd7b50a2f576530d28dff42d11f6eb21f0dc332bc8afe51adb483339e",
+      "bytes": 3557,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/operational-twin/decision-analysis.mjs",
+      "purpose": "Build dependency lookup once per impact projection.",
+      "kind": "source",
+      "sha256": "b09b20e4ac21e280eaec482a4abc9ad00c64e16e27fd771dfa185722b59c6df5",
+      "bytes": 9464,
+      "mode": "0o644",
+      "headReferenceSha256": "05a6692eefe5e71a4c7e82694a002ae73655d851dc6e297b45a8b884d1750a55",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/operational-twin/physical-conditions.mjs",
+      "purpose": "Prepare station histories once and bind location/subject per weather query.",
+      "kind": "source",
+      "sha256": "ea89af1f99aaa2044c2d0a003d51cb6d13d4972e5c74aeda85ff7d9caf18a0f8",
+      "bytes": 14879,
+      "mode": "0o644",
+      "headReferenceSha256": "fe6b10294622b8fa35dd96a58f98c604b3a4f95fe7dcfafc129edd542460ae43",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/operational-twin/physical-metric.mjs",
+      "purpose": "Parse each measurement timestamp once.",
+      "kind": "source",
+      "sha256": "f29e5c37cb4c7c988b8385f6e5726ab00cd526cf66558c91d053ef78c7206522",
+      "bytes": 3209,
+      "mode": "0o644",
+      "headReferenceSha256": "2c86099d784358e220982e4ca97b4323f8ed89b53b01f9223fe82c70c5462d77",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "M",
+      "path": "packages/domain/src/operational-twin/physical-world.mjs",
+      "purpose": "Reuse weather preparation across incidents within one projection.",
+      "kind": "source",
+      "sha256": "3d7f5207b8eb6e4bce487a85c7a012bc960d7cd8d8d19ae17585fb755e36ba00",
+      "bytes": 18170,
+      "mode": "0o644",
+      "headReferenceSha256": "db45a2491d7d9243a7bc52a852d3642aaeb2bc75a89cad6313da7c228931e381",
+      "reconciliation": "RECONCILE_IF_DESTINATION_DIFFERS; HEAD is not the dirty pre-sprint ancestor."
+    },
+    {
+      "status": "A",
+      "path": "packages/domain/test/intelligence/weather-projection.test.mjs",
+      "purpose": "Prepared weather projection output equivalence, freshness, station/location and adversarial history tests.",
+      "kind": "source",
+      "sha256": "d39a7a183eb3f03ff6f5f1f4ca827438b9044cb40154b8b7eaa69bba1c9a6fab",
+      "bytes": 3205,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "scripts/mega_ix_acceptance_harness.mjs",
+      "purpose": "Local-only three-responder harness using actual TeamService and in-memory local/central stores.",
+      "kind": "source",
+      "sha256": "8a4e76bf97e3acf0f32d1ba242038302d06d6fbb54e1ceb78658124c8a1515ec",
+      "bytes": 3008,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    },
+    {
+      "status": "A",
+      "path": "scripts/mega_ix_local_acceptance.mjs",
+      "purpose": "Deferred Playwright localhost acceptance runner, production build/start checks, controlled journey, captures and JSON.",
+      "kind": "source",
+      "sha256": "be299bd08485607e0a596642d3eb8f8b37a45d9125a46f2c03b7ebed0cf0de14",
+      "bytes": 18904,
+      "mode": "0o644",
+      "reconciliation": "RECONCILE_IF_ALREADY_PRESENT_AND_DIFFERENT"
+    }
+  ],
+  "baselinePrerequisites": [
+    {
+      "path": ".gitignore",
+      "gitStatus": " M",
+      "sha256": "4bb216e3aa4b6f69a5fac0f7c5838de283393c2eb55e3adb839377f004a826f3",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "AGENTS.override.md",
+      "gitStatus": " M",
+      "sha256": "5c883dd3136a0d4981c9215358273be2b6fa26977f877ce187bc4c74c45c97d9",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "CLAUDE_HANDOFF.md",
+      "gitStatus": " D",
+      "sha256": null,
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/governed-reference-inventory.mjs",
+      "gitStatus": " M",
+      "sha256": "bd3367aebf22ff166d8c1d4afb796d6afb8bff1b5a5c7a2a89fd04d39105ae80",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/operational-intelligence-service.mjs",
+      "gitStatus": " M",
+      "sha256": "aa47bcdb23d429535ef6bf12c7c145dc2036fd9f264247a7960956c4318d293c",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/situation-ask.mjs",
+      "gitStatus": " M",
+      "sha256": "c1ed7565576672662ae358a32a4db021f0a213edf01769d251e50469f22e1fe8",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/situation-projection.mjs",
+      "gitStatus": " M",
+      "sha256": "9d7ab058b5bbb820e7325f4120c0ccff78a9352e8de0f1cb7e462182a009f00a",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/operator/canonical-operator-view-projection.mjs",
+      "gitStatus": " M",
+      "sha256": "f1bcf8f03bc622cf12cf6ac9745c71a27b04bd378a091c05479cfa385860e333",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/operator/canonical-operator-work-projection.mjs",
+      "gitStatus": " M",
+      "sha256": "73217290002e33685db790c615165b25c7f231082db9f4a6727978c71f8c0dc6",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/operator/incident-briefing-projection.mjs",
+      "gitStatus": " M",
+      "sha256": "352c80387bb8bea0e7d81aac866a753e057f74ef510ab7b6b7895e70f68c8b42",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/operator/operator-intelligence-projection.mjs",
+      "gitStatus": " M",
+      "sha256": "24d04f2f355e465ce38c9b0da3e1d375f2138105c0ad8fa8168ec2475b57ddee",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/world/firms-normalizer.mjs",
+      "gitStatus": " M",
+      "sha256": "3a74a675820abcdf24d4e2e81ef71d9d0df61fda1cd82d09b6688f352a3cdb22",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/test/canonical-operator-api.test.mjs",
+      "gitStatus": " M",
+      "sha256": "832701477d6e7e6dcbe5ccfb44d106e760238492b92bfeddb097a87433044b14",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/appActionController.js",
+      "gitStatus": " M",
+      "sha256": "662f1106af13385dc7392f2d16573a1440e43867f32015aca9a2453e6c0d0bdf",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/data/field.js",
+      "gitStatus": " M",
+      "sha256": "67be9a3520cea837e321337d1c7c99baf093e583f03f98a113619d313a68807a",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/data/hierarchy.js",
+      "gitStatus": " M",
+      "sha256": "2a22502602fd09f2f6193c36284b53b713f9259f0d1e8caeb9dec0e1d0b14054",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/data/model.js",
+      "gitStatus": " M",
+      "sha256": "194ca9fd424a20fd2897722cfb1dcc6a8ca1111e54dded41be1795688ec5c3e5",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/data/physical.js",
+      "gitStatus": " M",
+      "sha256": "0592df8ac875f6b8b0e1a2e92d8df7b98866875f90b2a1656914b9ec4c3181f9",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/field.js",
+      "gitStatus": " M",
+      "sha256": "e713c208b2ca8e936c4f164d06bf5f852d5964b9fd5382ddb6ac9e41be1382bd",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/signals.js",
+      "gitStatus": " M",
+      "sha256": "0fabc4dc4ce629775d48a8f2e6ffb2ff5f2c8bac1881b7919a5ad715183924de",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/situation-intelligence.js",
+      "gitStatus": " M",
+      "sha256": "e8e8b1bffcdcaafeadd9f3ac5d1f8fe07cea54913b2047deeffed57b916fa892",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/routeState.js",
+      "gitStatus": " M",
+      "sha256": "ce15109eee2d10fed40dc7aacb7abee12e2b1e3fc27e39ad2a34b36224a25385",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/src/storage.js",
+      "gitStatus": " M",
+      "sha256": "a7ca382f2314d4012da743d3d428a56752b91be4456d46187c40d49e76be567f",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/tests/hierarchy.mjs",
+      "gitStatus": " M",
+      "sha256": "7a6c2d2b58822cb6946394be9c986ab53a7ab7febc3f59d4b1b796276f7d7d24",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/tests/phase-b-fixture.mjs",
+      "gitStatus": " M",
+      "sha256": "64e44e4dfe6a3dfef09312ae2e8b34d3fb57c7ba805cb4acbaa609763622e6ee",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/operator-console/tests/physical-metrics.mjs",
+      "gitStatus": " M",
+      "sha256": "2c853b518feedab7feec59d3fe54d88a5e96f79527c7ddb7b04aa79d1a8f120a",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/event-fabric/adapters/firms-adapter.mjs",
+      "gitStatus": " M",
+      "sha256": "ca2dd56e402eb7d08cce438337b05a33dfd611e5c6aba945ce41ac27df7ef357",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/intelligence/situation-model.mjs",
+      "gitStatus": " M",
+      "sha256": "eb5f484d8fba509f8848e4ae3f7fa95fd437198a50e172657e4109fcf96b1ae1",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/decision-work.mjs",
+      "gitStatus": " M",
+      "sha256": "aab00f48a3dae9a445250b24732f673fef9c6054dbdc6546981d01544e73fe30",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/evidence-projection.mjs",
+      "gitStatus": " M",
+      "sha256": "13c09a567164a30cd7f5301861ca8ba4c13e67330d9d6262ce9ad193e3d38a3a",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/material-changes.mjs",
+      "gitStatus": " M",
+      "sha256": "a38a9e6f129a084b1409980e3bf47e650dda3fafb406072aeb7717d6a9a89bde",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/operator-questions.mjs",
+      "gitStatus": " M",
+      "sha256": "d2aeee8e4127617410805441aaf12843f4e532f64f0640927d3c5881789498f3",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/project-operational-twin.mjs",
+      "gitStatus": " M",
+      "sha256": "0ff1c9e9eb78d84dc81568faba9d875af8936981fb3eb2343f695d0f635e87d6",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/real-world-value.mjs",
+      "gitStatus": " M",
+      "sha256": "fbb26b00fdba3b8e0c26b4683e1d5fa8e31bc717e4101e8e7fd65cfdb35e726a",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "scripts/release/build_release_manifest.mjs",
+      "gitStatus": " M",
+      "sha256": "1720da1c3c259ca26fcf7b29d126999320072e6cd50f19f02f5f928f8b2ba4d2",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/reality-questions.mjs",
+      "gitStatus": "??",
+      "sha256": "557929c37003f2d103adb06985bdbb023043ecc673bed645a5f5c5ce74c558a5",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/retained-fire-observations.mjs",
+      "gitStatus": "??",
+      "sha256": "2ecd39c6f1fd99df58c0dbaf86127592b92e61582b2f728bb424f4721c54f2c2",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "apps/api/test/operational-reality.test.mjs",
+      "gitStatus": "??",
+      "sha256": "f5ba4e1e3231c16d15bf48f58a64ca392157ca455cf2a08c4d0f770d9afc3778",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "docs/handoffs/operational-reality/FINAL_REPORT.md",
+      "gitStatus": "??",
+      "sha256": "88d26b0e0b653e1001ab8a101fc72a3bbaea60f1a17e86a14971d13298586122",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "docs/handoffs/operational-reality/INTEGRATION.md",
+      "gitStatus": "??",
+      "sha256": "fbe3527369935f4adfed87bc1d767c8942fbe86099529aa19ddc18495a35f052",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "docs/handoffs/operational-reality/SOURCE_COVERAGE.md",
+      "gitStatus": "??",
+      "sha256": "9a70dac8a1aabe8d47d109c1ed1095769b6a5d225cfd3b27eb4db884ff7ae7e7",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/geographic-context.mjs",
+      "gitStatus": "??",
+      "sha256": "965632ea6745d3213bdd9366b574dc0e2c871ecbb36a67edcae338c8b87b53b0",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/incident-currentness.mjs",
+      "gitStatus": "??",
+      "sha256": "d38231785e90fa323d1c584865014c2c9548a70bfcb961e5e9f70861dc183c83",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/operational-materiality.mjs",
+      "gitStatus": "??",
+      "sha256": "dfeb995da07ab678cddc8b4d6e7a61c341cd3725e2c60eb6bd8e1b11dd828281",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/task-relevance.mjs",
+      "gitStatus": "??",
+      "sha256": "928d7b525bae6149b3dd84f711117e7921332db4df4982f4b2b5c23358915d54",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/src/operational-twin/warning-applicability.mjs",
+      "gitStatus": "??",
+      "sha256": "04ab4cd9ab87085f5f67029ed21aab64c19c41ec490748775f55bc61488f3488",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    },
+    {
+      "path": "packages/domain/test/intelligence/operational-reality.test.mjs",
+      "gitStatus": "??",
+      "sha256": "d45477c5d7251e03eb3c93ec74cd5d687dc86ca75c738775f0853951f420ab65",
+      "requirement": "Preserve separately as current baseline; not a Mega IX overlay change."
+    }
+  ],
+  "verification": {
+    "node": "v26.0.0",
+    "regression": {
+      "passed": 153,
+      "failed": 0,
+      "skipped": 0,
+      "log": "docs/handoffs/mega-ix/portable-regression-tests.txt"
+    },
+    "productionBuild": "PASS",
+    "staticVerification": "PASS",
+    "staticLog": "docs/handoffs/mega-ix/portable-static-verification.txt",
+    "runnerSyntaxAndHelp": "PASS",
+    "browserExecuted": false,
+    "productionFunctionalityChangedDuringPackaging": false,
+    "performance": {
+      "previousStartupMs": 9500,
+      "normalFirstRequestMs": 4305,
+      "uncachedP95Ms": 3904,
+      "targetMs": 2500,
+      "targetMet": false
+    }
+  },
+  "exclusions": [
+    "Unrelated earlier dirty files are separate baseline prerequisites, not overlay contents.",
+    "Git metadata, secrets, runtime databases/keys, browser profiles, dependencies and build caches are not copied.",
+    "The complete pre-sprint dirty ancestor was not captured; no hunk-isolation claim is made."
+  ]
+}

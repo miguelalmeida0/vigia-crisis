@@ -40,7 +40,7 @@ function sourceTransition(sourceId, from, to, at, causedByEventIds, reason, occu
   return { ...core, transitionId: semanticHash('operational-transition', core) };
 }
 
-export function projectOperationalTwin({ events = [], sourceRegistry, asOf }) {
+export function projectOperationalTwin({ events = [], sourceRegistry, asOf, currentnessPolicy = {} }) {
   const projectedAt = isoTime(asOf, 'twin_as_of_required'), visible = visibleEvents(events, projectedAt);
   const relations = createRelationState(), associations = createAssociationState(), healthEvents = [], intelligenceByIncident = new Map(), transitions = [], materialChanges = [];
   let healthClock = sourceRegistry.sources.map((source) => source.registeredAt).filter((at) => Date.parse(at) <= Date.parse(projectedAt)).sort()[0] ?? visible[0]?.clocks.ingestedAt ?? projectedAt;
@@ -59,7 +59,7 @@ export function projectOperationalTwin({ events = [], sourceRegistry, asOf }) {
     for (const incidentId of [...new Set(incidentIds)].sort()) {
       const incident = associations.incidents.get(incidentId); if (!incident) continue;
       const priorIntelligence = intelligenceByIncident.get(incidentId), prior = priorIntelligence?.evaluation ?? null;
-      const intelligence = buildIncidentIntelligence({ incident, activeEvents: activeIncidentEvents(incident, relations), historicalEvents: incidentEvents(incident, relations), sourceHealth: health, asOf: at, previousEvaluation: prior });
+      const intelligence = buildIncidentIntelligence({ incident, activeEvents: activeIncidentEvents(incident, relations), historicalEvents: incidentEvents(incident, relations), sourceHealth: health, asOf: at, previousEvaluation: prior, currentnessPolicy });
       const changes = assessmentChanges(priorIntelligence, intelligence, at);
       const timerBasis = { eventIds: intelligence.eventIds, health: health.sources.map(source => [source.sourceId,source.status,source.lastHealthEventId]) };
       materialChanges.push(...changes.map(change => causedByEventIds.length ? change : timerChange(change,timerBasis)));

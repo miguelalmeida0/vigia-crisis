@@ -21,7 +21,7 @@ export class GovernedReferenceInventory {
           const tags=element.tags??{},coordinate=[element.lon??element.center?.lon,element.lat??element.center?.lat];
           if(!validCoordinate(coordinate))continue;
           const facility=osmElementToResponseFacility(element,{provider:metadata.provider,retrievedAt:receivedAt});
-          const kind=facility?.kind??(tags.place&&/^(city|town|village|hamlet)$/.test(tags.place)?'SETTLEMENT':tags.highway?'ROAD_REFERENCE':tags.power?'POWER_INFRASTRUCTURE':null);
+          const kind=facility?.kind??(tags.place&&/^(city|town|village|hamlet)$/.test(tags.place)?'SETTLEMENT':/^(motorway|trunk|primary|secondary)$/.test(tags.highway)?'ROAD_REFERENCE':tags.power?'POWER_INFRASTRUCTURE':tags.landuse==='industrial'||tags.amenity==='fuel'?'INDUSTRIAL_FACILITY':null);
           if(!kind)continue;
           const item={id:`osm:${element.type}:${element.id}`,name:facility?.name??tags.name??tags.ref??`Mapped ${kind.toLowerCase().replaceAll('_',' ')}`,kind,
             geometry:{type:'Point',coordinates:coordinate},coordinate,geometryRole:element.type==='node'?'MAPPED_POINT':'FEATURE_CENTRE',

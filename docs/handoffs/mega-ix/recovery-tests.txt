@@ -1,0 +1,13 @@
+✔ operational truth has one governed classification and only verified-current counts as active (15.580958ms)
+✔ verified evidence without a governed location remains outside active truth (0.279417ms)
+✔ source resolver persists identified ownership and certified replay remains isolated (36.478125ms)
+✔ recovery synchronization preserves a protection workflow committed during provider acquisition (36.693875ms)
+✔ source resolver opens its circuit after bounded attempts and retains a scheduled probe (246.037375ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 578.31075

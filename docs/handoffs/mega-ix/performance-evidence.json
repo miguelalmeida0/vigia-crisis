@@ -1,0 +1,1035 @@
+{
+  "recordedAt": "2026-09-14T14:36:27.933Z",
+  "releaseId": "vigia-intelligence-fabric-878862be6a1edb84",
+  "previousReportedFirstRequestMs": 9500,
+  "profiledBefore": {
+    "releaseId": "vigia-intelligence-fabric-b013a99f9af35236",
+    "samples": [
+      {
+        "iteration": 1,
+        "ms": 10982,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 2,
+        "ms": 35,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 3,
+        "ms": 26,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 4,
+        "ms": 38,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 5,
+        "ms": 28,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 6,
+        "ms": 44,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 7,
+        "ms": 22,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 8,
+        "ms": 23,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 9,
+        "ms": 29,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 10,
+        "ms": 31,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 11,
+        "ms": 28,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 12,
+        "ms": 28,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 13,
+        "ms": 34,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 14,
+        "ms": 48,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 15,
+        "ms": 26,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 16,
+        "ms": 29,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 17,
+        "ms": 29,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 18,
+        "ms": 22,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 19,
+        "ms": 32,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 20,
+        "ms": 45,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:18:03.914Z",
+        "incidents": 96
+      }
+    ],
+    "p95Ms": 48,
+    "firstRequestMs": 10982
+  },
+  "profiledAfterIndex": {
+    "releaseId": "vigia-intelligence-fabric-5a12a2d206b1a7e3",
+    "samples": [
+      {
+        "iteration": 1,
+        "ms": 6810,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 2,
+        "ms": 65,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 3,
+        "ms": 22,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 4,
+        "ms": 20,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 5,
+        "ms": 19,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 6,
+        "ms": 28,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 7,
+        "ms": 18,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 8,
+        "ms": 17,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 9,
+        "ms": 16,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 10,
+        "ms": 16,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 11,
+        "ms": 19,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 12,
+        "ms": 17,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 13,
+        "ms": 17,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 14,
+        "ms": 14,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 15,
+        "ms": 16,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 16,
+        "ms": 13,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 17,
+        "ms": 15,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 18,
+        "ms": 13,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 19,
+        "ms": 17,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 20,
+        "ms": 16,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:24:51.679Z",
+        "incidents": 96
+      }
+    ],
+    "p95Ms": 65,
+    "firstRequestMs": 6810
+  },
+  "profiledAfterSummary": {
+    "releaseId": "vigia-intelligence-fabric-24e304f112b3d087",
+    "samples": [
+      {
+        "iteration": 1,
+        "ms": 4949,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 2,
+        "ms": 58,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 3,
+        "ms": 36,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 4,
+        "ms": 23,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 5,
+        "ms": 227,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 6,
+        "ms": 77,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 7,
+        "ms": 19,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 8,
+        "ms": 27,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 9,
+        "ms": 25,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 10,
+        "ms": 21,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 11,
+        "ms": 21,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 12,
+        "ms": 23,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 13,
+        "ms": 21,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 14,
+        "ms": 22,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 15,
+        "ms": 25,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 16,
+        "ms": 17,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 17,
+        "ms": 35,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 18,
+        "ms": 16,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 19,
+        "ms": 175,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 20,
+        "ms": 24,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:28:21.317Z",
+        "incidents": 96
+      }
+    ],
+    "p95Ms": 227,
+    "firstRequestMs": 4949
+  },
+  "coldAfterSummary": {
+    "releaseId": "vigia-intelligence-fabric-4f2e4f1986a8534d",
+    "samples": [
+      {
+        "iteration": 1,
+        "ms": 2205,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:41.095Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 2,
+        "ms": 2969,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:44.125Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 3,
+        "ms": 1801,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:45.926Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 4,
+        "ms": 3008,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:48.743Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 5,
+        "ms": 1980,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:50.923Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 6,
+        "ms": 1673,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:52.596Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 7,
+        "ms": 1618,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:54.216Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 8,
+        "ms": 1829,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:56.038Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 9,
+        "ms": 2662,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:30:58.701Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 10,
+        "ms": 4662,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:03.363Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 11,
+        "ms": 2610,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:05.906Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 12,
+        "ms": 1854,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:07.832Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 13,
+        "ms": 1838,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:09.670Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 14,
+        "ms": 1774,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:11.444Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 15,
+        "ms": 2692,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:14.136Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 16,
+        "ms": 2591,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:16.727Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 17,
+        "ms": 1716,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:18.442Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 18,
+        "ms": 1878,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:20.319Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 19,
+        "ms": 2625,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:22.947Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 20,
+        "ms": 1645,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:31:24.589Z",
+        "incidents": 96
+      }
+    ],
+    "p95Ms": 3008,
+    "firstRequestMs": 2205
+  },
+  "coldFinal": {
+    "releaseId": "vigia-intelligence-fabric-878862be6a1edb84",
+    "samples": [
+      {
+        "iteration": 1,
+        "ms": 3072,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:32:55.016Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 2,
+        "ms": 3919,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:32:58.974Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 3,
+        "ms": 2430,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:01.354Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 4,
+        "ms": 3046,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:04.454Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 5,
+        "ms": 2027,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:06.473Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 6,
+        "ms": 2256,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:08.727Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 7,
+        "ms": 2823,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:11.543Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 8,
+        "ms": 2049,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:13.591Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 9,
+        "ms": 2341,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:15.941Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 10,
+        "ms": 3904,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:19.849Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 11,
+        "ms": 2031,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:21.593Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 12,
+        "ms": 1897,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:23.785Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 13,
+        "ms": 2561,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:26.337Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 14,
+        "ms": 1560,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:27.908Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 15,
+        "ms": 2751,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:30.658Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 16,
+        "ms": 1986,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:32.644Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 17,
+        "ms": 1689,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:34.333Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 18,
+        "ms": 3041,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:37.376Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 19,
+        "ms": 1785,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:38.928Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 20,
+        "ms": 2515,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:33:41.675Z",
+        "incidents": 96
+      }
+    ],
+    "p95Ms": 3904,
+    "firstRequestMs": 3072
+  },
+  "normalFinal": {
+    "releaseId": "vigia-intelligence-fabric-878862be6a1edb84",
+    "samples": [
+      {
+        "iteration": 1,
+        "ms": 4305,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 2,
+        "ms": 34,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 3,
+        "ms": 21,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 4,
+        "ms": 28,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 5,
+        "ms": 17,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 6,
+        "ms": 106,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 7,
+        "ms": 15,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 8,
+        "ms": 232,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 9,
+        "ms": 22,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 10,
+        "ms": 277,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 11,
+        "ms": 60,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 12,
+        "ms": 44,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 13,
+        "ms": 50,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 14,
+        "ms": 27,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 15,
+        "ms": 21,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 16,
+        "ms": 34,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 17,
+        "ms": 26,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 18,
+        "ms": 18,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 19,
+        "ms": 41,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      },
+      {
+        "iteration": 20,
+        "ms": 20,
+        "status": 200,
+        "delivery": "FRESH",
+        "generatedAt": "2026-09-14T14:35:20.237Z",
+        "incidents": 96
+      }
+    ],
+    "p95Ms": 277,
+    "firstRequestMs": 4305
+  },
+  "weatherEquivalence": {
+    "retainedStationSamples": 3178,
+    "realLocationComparisons": 200,
+    "adversarialComparisons": 200,
+    "completeOutputsEqual": true,
+    "beforeMs": 1320,
+    "afterMs": 57,
+    "boundary": "Backend domain comparison on retained source data; not browser or user acceptance."
+  },
+  "portfolioEquivalence": {
+    "retainedIncidents": 326,
+    "completeOutputsEqual": true,
+    "beforeMs": 548,
+    "afterMs": 58,
+    "boundary": "Retained incident input; API/domain equivalence, not visual evidence."
+  },
+  "target": {
+    "p95Ms": 2500,
+    "result": "NOT_MET",
+    "finalColdP95Ms": 3904
+  },
+  "method": {
+    "profiled": "CPU inspector and output capture overhead included; diagnostic only",
+    "cold": "20 real signed API requests, empty CanonicalOperatorApiService caches per request, initialized services, no browser",
+    "normal": "Normal uninstrumented API process after restart: one cold request then 19 cached responses",
+    "warning": "p95 over the normal cached sample is not cold-start p95",
+    "browser": "NOT_RUN"
+  }
+}

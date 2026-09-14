@@ -58,7 +58,7 @@ export function ObservationContext(f) {
 export function ThermalPanel(f) {
  const time=f.metrics.thermalTime;
  if(!usable(time))return '';
- return panel('Latest thermal detection',`<dl class="field-facts">${['thermalTime','thermalDistance','thermalProduct','frp'].map(k=>f.metrics[k]).filter(usable).map(m=>`<div>${icon('flame')}<dt>${e(m.label)}</dt><dd><strong>${e(m.id==='thermalTime'?measured(m.value):m.value)} ${e(m.unit)}</strong><span>${e(m.sourceName??m.source)}</span></dd></div>`).join('')}</dl><p class="field-footnote">A thermal observation identifies heat at the acquisition time; it does not trace a fire perimeter.</p>`,{ico:'flame',iconTone:'red'});
+ return panel('Latest thermal detection',`<dl class="field-facts">${['thermalTime','thermalLatestDistance','thermalProduct','frp'].map(k=>f.metrics[k]).filter(usable).map(m=>`<div>${icon('flame')}<dt>${e(m.label)}</dt><dd><strong>${e(m.id==='thermalTime'?measured(m.value):m.value)} ${e(m.unit)}</strong><span>${e(m.sourceName??m.source)}</span></dd></div>`).join('')}</dl><p class="field-footnote">A thermal observation identifies heat at the acquisition time; it does not trace a fire perimeter.</p>`,{ico:'flame',iconTone:'red'});
 }
 
 export function OfficialNotices(f) {

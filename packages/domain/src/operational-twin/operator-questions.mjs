@@ -16,11 +16,11 @@ export function getCurrentConditions(c) {
   return {...answer(c,'conditions',values?`${values}. ${location} · ${age(m)}. ${w.suitability?.state==='HISTORICAL_CONTEXT'?'Last known conditions; current weather is unknown.':'Regional station context; conditions at the incident may differ.'}`:'Current weather is unknown. No suitable dated station observation was returned.',facts,w.limitations??[]),currentConditions:w};
 }
 export function getNearbyFireActivity(c) {
-  const t=c.thermal??{},last=metric(c,'thermalTime'),near=metric(c,'thermalDistance'),radius=c.thermalRadiusKm;
+  const t=c.thermal??{},last=metric(c,'thermalTime'),near=metric(c,'thermalLatestDistance'),radius=c.thermalRadiusKm;
   const counts=Object.fromEntries([30,60,180].map(n=>[n,metric(c,'thermal'+n)?.value??null]));
-  const primary=last?.value?`Latest ${t.latestThermalDetection?.product??'thermal'} detection: ${last.ageMinutes}m ago${near?.value!==null&&near?.value!==undefined?`; nearest returned detection ${near.value} km from the incident point`:''}${radius?` within the ${radius} km search`:''}.`:`No matching thermal detection returned${radius?' within '+radius+' km':''}.`;
+  const primary=last?.value?`Latest ${t.latestThermalDetection?.product??'thermal'} detection: ${last.ageMinutes}m ago${near?.value!==null&&near?.value!==undefined?`; latest detection ${near.value} km from the incident point`:''}${radius?` within the ${radius} km search`:''}.`:`No matching thermal detection returned${radius?' within '+radius+' km':''}.`;
   return {...answer(c,'fire',primary,rows(t.metrics),['Detection points and pixel footprints are not an exact fire location, fire front or official perimeter.',...(t.limitations??[])]),fireActivity:{
-    officialIncident:c.status,latestThermalDetection:t.latestThermalDetection??null,nearestThermalDistance:near??null,detectionAge:last?.ageMinutes??null,
+    officialIncident:c.status,latestThermalDetection:t.latestThermalDetection??null,nearestThermalDistance:metric(c,'thermalDistance')??null,latestThermalDistance:near??null,detectionAge:last?.ageMinutes??null,
     detectionCount30m:counts[30],detectionCount1h:counts[60],detectionCount3h:counts[180],independentObservationFamilies:t.independentObservationFamilies??[],
     observedGeometry:c.observedGeometry??null,modeledGeometry:c.modeledGeometry??null,limitations:['An absent detection is not evidence of no fire.']}};
 }

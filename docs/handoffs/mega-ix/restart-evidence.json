@@ -1,0 +1,12 @@
+{
+  "state": "PASS",
+  "releaseId": "vigia-intelligence-fabric-b013a99f9af35236",
+  "codeStateHash": "sha256:297620b26659f9dfbfe72ce06ce927ba8bbdf7d62f6538e22a2c1a3ac9baa20c",
+  "groupId": "0d30f070-5540-4f76-89d4-cdfc9b5cceea",
+  "missionState": "PROBLEM",
+  "alternativeMinutes": 24,
+  "reports": 1,
+  "observedAt": "2026-09-14T12:21:32.025Z",
+  "receivedAt": "2026-09-14T12:21:32.052Z",
+  "restartPreserved": true
+}

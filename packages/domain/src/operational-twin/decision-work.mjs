@@ -3,7 +3,7 @@ import { canonicalIncidentId, incidentInScope } from '../authorization.mjs';
 export const rows = value => Array.isArray(value) ? value : [];
 export const unique = values => [...new Set(values.filter(value => typeof value === 'string' && value))].sort();
 export const workId = item => item.id ?? item.taskId ?? item.attentionId ?? item.decisionId;
-export const activeWork = item => !['COMPLETED','RESOLVED','SATISFIED','CANCELLED','CLOSED','SUPERSEDED','TERMINAL_UNAVAILABLE','REJECTED'].includes(item.state ?? item.status);
+export const activeWork = item => !['SUSPENDED','NO_LONGER_REQUIRED','COMPLETED','SUPERSEDED'].includes(item.relevance?.state) && !['COMPLETED','RESOLVED','SATISFIED','CANCELLED','CLOSED','SUPERSEDED','TERMINAL_UNAVAILABLE','REJECTED'].includes(item.state ?? item.status);
 export const sourceRefs = item => unique([...rows(item.sourceIds), ...rows(item.dependsOnSourceIds), item.sourceId, typeof item.source === 'string' ? item.source : item.source?.sourceId]);
 const dedup = items => [...new Map(items.filter(workId).map(item => [workId(item),item])).values()];
 

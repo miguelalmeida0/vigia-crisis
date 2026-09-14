@@ -1,0 +1,2 @@
+Run outside the restricted sandbox: node scripts/mega_ix_local_acceptance.mjs --run-local
+Requires Playwright+Chromium, PostgreSQL, the current VIGIA baseline, MEGA_IX_API_KEY_FILE and MEGA_IX_ACCESS_KEY_FILE (or existing .tmp/release token files). Optional MEGA_IX_INCIDENT_ID, MEGA_IX_API_URL, MEGA_IX_CONSOLE_URL, MEGA_IX_OUTPUT, MEGA_IX_PLAYWRIGHT_MODULE, MEGA_IX_HEADED=1, MEGA_IX_KEEP_SERVERS=1. See MEGA-IX-APPLY.md.

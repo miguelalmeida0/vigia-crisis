@@ -59,9 +59,9 @@ test('nearest support chooses one closest returned location per category, indepe
  const html=NearestSupport(f);assert.match(html,/View all support points/);assert.doesNotMatch(html,/field-facility-tabs|data-kind=/);
 });
 test('national priority ranks current then recent, preserves area identity and avoids overlapping thermal totals',()=>{
- const vm={generatedAt:new Date(now).toISOString(),incidents:[{id:'1',region:'Earlier area',classification:'NEEDS_REVALIDATION',observedAt:'2026-08-01'},{id:'2',region:'Recent area',classification:'NEEDS_REVALIDATION',observedAt:'2026-09-08T12:00:00Z'},{id:'3',region:'Current area',classification:'VERIFIED_CURRENT',observedAt:'2026-09-08T11:00:00Z'}]};
- assert.deepEqual(regionalPriorities(vm).map(r=>r.name),['Current area','Recent area','Earlier area']);
- assert.equal(regionalPriorities(vm)[2].earlier,1);assert.equal(regionalPriorities(vm)[1].current,0);
+ const vm={generatedAt:new Date(now).toISOString(),incidents:[{id:'1',region:'Earlier area',classification:'NEEDS_REVALIDATION',currentness:{state:'HISTORICAL',inActiveQueue:false},observedAt:'2026-08-01'},{id:'2',region:'Recent area',currentness:{state:'MONITORING',inActiveQueue:true},classification:'NEEDS_REVALIDATION',observedAt:'2026-09-08T12:00:00Z'},{id:'3',region:'Current area',currentness:{state:'CURRENT',inActiveQueue:true,countsAsCurrent:true},classification:'VERIFIED_CURRENT',observedAt:'2026-09-08T11:00:00Z'}]};
+ assert.deepEqual(regionalPriorities(vm).map(r=>r.name),['Current area','Recent area']);
+ assert.equal(regionalPriorities(vm).some(r=>r.name==='Earlier area'),false);assert.equal(regionalPriorities(vm)[1].current,0);
  assert.equal(regionalPriorities(vm)[0].thermalCount,undefined);
 });
 test('national first-view strip omits unsupported metrics and retains a successful zero',()=>{
@@ -69,6 +69,7 @@ test('national first-view strip omits unsupported metrics and retains a successf
  const html=NationalSignalStrip(vm);assert.match(html,/--signal-count:2/);assert.doesNotMatch(html,/signal-unavailable|Unknown|Not reported/);
 });
 test('national selection delegates map focus; generic table and city chip clutter are removed',async()=>{
+ globalThis.MutationObserver=class{observe(){}};globalThis.window={addEventListener(){}};globalThis.document={body:{},addEventListener(){},querySelectorAll(){return[];},querySelector(){return null;},getElementById(){return null;}};
  const calls=[],state=phaseBFixture(),c=approvedController({state,onAction:async a=>calls.push(a)});
  await c.action({dataset:{action:'select-region',region:'Évora'}});
  assert.deepEqual(calls,['global-region-focus:'+encodeURIComponent('Évora')]);
@@ -80,15 +81,15 @@ test('Reports leaves both navigation definitions but direct internal route stays
  const html=renderApprovedRoute('reports-analytics',phaseBFixture());
  assert.match(html,/data-report-view=/);assert.doesNotMatch(html.slice(html.indexOf('<nav'),html.indexOf('</nav>')),/Reports &amp; Analytics|Reports & Analytics/);
 });
-test('national fallback retains a verified zero without claiming public-feed availability',()=>{
- const vm={generatedAt:new Date(now).toISOString(),source:{data:{operationalTruth:{state:'READY',value:{activeCount:0}}}},physicalSummary:[m('activeOfficial',null)]};
- const metric=nationalCurrentMetric(vm);assert.equal(metric.value,0);assert.equal(metric.label,'Verified current incidents');
- const html=NationalSignalStrip(vm);assert.match(html,/Verified current incidents/);assert.doesNotMatch(html,/Current official incidents|Unknown|Unavailable/);
+test('national fallback retains a measured current zero without claiming public-feed availability',()=>{
+ const vm={generatedAt:new Date(now).toISOString(),source:{data:{operationalTruth:{state:'READY',value:{currentCount:0}}}},physicalSummary:[m('activeOfficial',null)]};
+ const metric=nationalCurrentMetric(vm);assert.equal(metric.value,0);assert.equal(metric.label,'Current incident records');
+ const html=NationalSignalStrip(vm);assert.match(html,/Current incident records/);assert.doesNotMatch(html,/Current official incidents|Unknown|Unavailable/);
  vm.source.data.operationalTruth.state='UNAVAILABLE';assert.equal(nationalCurrentMetric(vm),null);
 });
 test('national area labels preserve source names without inventing regions from coordinates',()=>{
  assert.equal(namedArea('37.2558°N · 7.0468°W'),false);assert.equal(namedArea('Alentejo'),true);
- const ranked=regionalPriorities({generatedAt:new Date(now).toISOString(),incidents:[{id:'a',region:'37.2558°N · 7.0468°W',classification:'VERIFIED_CURRENT'},{id:'b',region:'Bragança',classification:'NEEDS_REVALIDATION'}]});
+ const ranked=regionalPriorities({generatedAt:new Date(now).toISOString(),incidents:[{id:'a',region:'37.2558°N · 7.0468°W',classification:'VERIFIED_CURRENT'},{id:'b',region:'Bragança',currentness:{state:'MONITORING',inActiveQueue:true},classification:'NEEDS_REVALIDATION'}]});
  assert.deepEqual(ranked.map(x=>x.name),['Bragança']);
 });
 test('support projection failure has a retry path without a weather-only response snapshot',()=>{

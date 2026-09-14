@@ -18,23 +18,23 @@ export function incidentVM(record) {
   const graph=record?.evidenceGraph??{}, sources=[...rows(graph.sources),...rows(graph.evidence),...rows(graph.observations)];
   const families=[...new Set(sources.map(x=>x.sourceFamily??x.provider??x.platform??x.source).filter(x=>typeof x==='string'))];
   return {raw:record,id:incidentId(record),name:incidentLabel(record),region:incidentLocation(record),classification,
-    status:classification??'UNKNOWN',statusLabel:text(classification),verified:classification==='VERIFIED_CURRENT',
+    currentness:truth.currentness??null,status:classification??'UNKNOWN',statusLabel:truth.currentness?.label??text(classification),verified:classification==='VERIFIED_CURRENT',
     priority:text(truth.priority?.level??truth.priority?.band??record?.incident?.priority?.level??record?.priority?.level??(typeof record?.priority==='string'?record.priority:null)),
     priorityScore:finite(truth.priority?.score??record?.priorityScore), type:text(record?.incident?.hazardType??record?.incident?.type??record?.incident?.incidentType??record?.type),
     observedAt:truth.lastObservedAt??record?.incident?.observedAt??record?.observedAt??null,
     coordinate,lon:coordinate?.[0],lat:coordinate?.[1],coverage:families.length?`${families.length} recorded source families`:'Source coverage not returned',
     verification:text(truth.axes?.verification?.state),freshness:text(truth.axes?.freshness?.state),
-    statement:(classification==='NEEDS_REVALIDATION'?'Earlier information needs revalidation. Current fire presence is not verified.':classification==='DETECTION_CANDIDATE'?'A candidate observation is recorded. A wildfire is not yet verified.':classification==='HISTORICAL_CLOSED'?'Historical record; not a current fire.':classification==='VERIFIED_CURRENT'?'Current source observations meet the incident verification policy.':'The current incident state was not returned. Fire presence is unknown.')};
+    statement:truth.currentness?.reason??(classification==='NEEDS_REVALIDATION'?'Earlier information needs revalidation. Current fire presence is not verified.':classification==='DETECTION_CANDIDATE'?'A candidate observation is recorded. A wildfire is not yet verified.':classification==='HISTORICAL_CLOSED'?'Historical record; not a current fire.':classification==='VERIFIED_CURRENT'?'Current source observations meet the incident verification policy.':'The current incident state was not returned. Fire presence is unknown.')};
 }
 export function incidentsFor(vm) {
- const rank={VERIFIED_CURRENT:0,DETECTION_CANDIDATE:1,NEEDS_REVALIDATION:2,HISTORICAL_CLOSED:3};
- return rows(vm.incidents).slice().sort((a,b)=>(rank[a.status]??4)-(rank[b.status]??4)||(Date.parse(b.observedAt)||0)-(Date.parse(a.observedAt)||0)||a.name.localeCompare(b.name));
+ const rank={REOPENED:0,NEW:1,CURRENT:1,MONITORING:2,STALE:3,HISTORICAL:4,RESOLVED:5,VERIFIED_CURRENT:1,DETECTION_CANDIDATE:1,NEEDS_REVALIDATION:3,HISTORICAL_CLOSED:5};
+ return rows(vm.incidents).slice().sort((a,b)=>(rank[a.currentness?.state??a.status]??4)-(rank[b.currentness?.state??b.status]??4)||(Date.parse(b.observedAt)||0)-(Date.parse(a.observedAt)||0)||a.name.localeCompare(b.name));
 }
 export function incidentFor(vm) {return vm.incident;}
 export function isLimited(vm) {return !vm.source||(['command-overview','incidents','global-awareness'].includes(vm.route)&&vm.incidents===null);}
 export function isReadonly(vm) {return !canManageWork(vm.runtime.runtime?.session,vm.selected);}
 export function incidentCounts(list) {if(!list)return null;return {total:list.length,candidate:list.filter(x=>x.status==='DETECTION_CANDIDATE').length,confirmed:list.filter(x=>x.status==='VERIFIED_CURRENT').length,monitored:list.filter(x=>x.status==='NEEDS_REVALIDATION').length,closed:list.filter(x=>x.status==='HISTORICAL_CLOSED').length};}
-export function filterIncidents(list,filters={}) {return rows(list).filter(i=>(!filters.search||`${i.name} ${i.region} ${i.id}`.toLowerCase().includes(filters.search.toLowerCase()))&&(!filters.status||filters.status==='ALL'||i.status===filters.status)&&(!filters.type||filters.type==='ALL'||i.type===filters.type)&&(!filters.priority||filters.priority==='ALL'||i.priority===filters.priority)&&(!filters.region||filters.region==='ALL'||i.region===filters.region));}
+export function filterIncidents(list,filters={}) {return rows(list).filter(i=>(!filters.search||`${i.name} ${i.region} ${i.id}`.toLowerCase().includes(filters.search.toLowerCase()))&&(!filters.status||filters.status==='ALL'||filters.status==='QUEUE'&&i.currentness?.inActiveQueue===true||filters.status==='CURRENT'&&i.currentness?.countsAsCurrent===true||filters.status==='REVIEW'&&(i.currentness?.actionableReview===true||i.currentness?.state==='REOPENED')||i.currentness?.state===filters.status||i.status===filters.status)&&(!filters.type||filters.type==='ALL'||i.type===filters.type)&&(!filters.priority||filters.priority==='ALL'||i.priority===filters.priority)&&(!filters.region||filters.region==='ALL'||i.region===filters.region));}
 export function routeURL(route,id) {const target=({'global-awareness':'national-awareness',intelligence:'fire-activity',operations:'response-access'})[route]??route;return `#/${target}${['incident-detail','fire-activity','response-access'].includes(target)&&id?`?id=${encodeURIComponent(id)}`:''}`;}
 export function activityVM(items) {return rows(items).filter(x=>Number.isFinite(Date.parse(stamp(x)))).sort((a,b)=>Date.parse(stamp(b))-Date.parse(stamp(a))).map(x=>({raw:x,time:timeLabel(stamp(x)),title:text(x.title??x.label??x.summary??x.reason??x.eventType??x.to),actor:text(x.actor?.name??x.actor??x.owner)}));}
 export function baseVM(runtime,route) {
@@ -45,14 +45,14 @@ export function baseVM(runtime,route) {
 }
 export function CommandOverviewViewModel(runtime) {
   const vm=baseVM(runtime,'command-overview'),presentation=value(vm.source,'commandPresentation'),metrics=presentation?.metrics??{},health=value(vm.source,'healthAxes')??{};
-  vm.presentation=presentation;
+  vm.presentation=presentation;vm.currentnessCounts=value(vm.source,'operationalTruth')?.currentnessCounts??null;
   const sources=value(vm.source,'sourceHealth')?.sources;vm.sourceStatuses=Array.isArray(sources)?sources.map(s=>({label:text(s.label),status:s.status})):null;
   vm.workload=[['Information to collect',finite(value(vm.source,'informationCollection')?.summary?.informationRequirements)],['Response actions',finite(value(vm.source,'responseOperations')?.summary?.count)],['Decisions to review',finite(value(vm.source,'humanAttention')?.count)]];
-  vm.metrics=[['Detection candidates',finite(metrics.detectionCandidates?.value),'Current detections awaiting corroboration','red'],['Verified current incidents',finite(metrics.activeIncidents?.value),'Governed current verification only','green'],['Human decisions',finite(metrics.needsAttention?.value),'Require operator authority or judgement','amber'],['Needs revalidation',finite(metrics.needsRevalidation?.value),'Earlier records, not active incidents','blue']];
-  const byId=new Map(rows(vm.incidents).map(i=>[i.id,i]));vm.priorities=rows(presentation?.priorityIncidents).map(i=>byId.get(i.incidentId)).filter(Boolean).slice(0,5);
+  vm.metrics=[['Detection candidates',finite(metrics.detectionCandidates?.value),'Current detections awaiting corroboration','red'],['Verified current incidents',finite(metrics.activeIncidents?.value),'Governed current verification only','green'],['Human decisions',finite(metrics.needsAttention?.value),'Require operator authority or judgement','amber'],['Historical records',finite(value(vm.source,'operationalTruth')?.historicalCount),'Retained history outside operational attention','blue']];
+  const byId=new Map(rows(vm.incidents).map(i=>[i.id,i]));vm.priorities=rows(presentation?.priorityIncidents).map(i=>byId.get(i.incidentId)).filter(i=>i&&i.currentness?.inActiveQueue===true).slice(0,5);
   vm.activity=activityVM(presentation?.activity);vm.health=Object.entries(health).filter(([,v])=>v&&typeof v==='object'&&v.state).map(([key,v])=>({label:text(key.replace(/Health$/,'').replace(/([a-z])([A-Z])/g,'$1 $2')),state:text(v.state),raw:v.state}));return vm;
 }
-export function IncidentsViewModel(runtime) {const vm=baseVM(runtime,'incidents');vm.ui={incidentFilters:{search:runtime.incidentSearchDraft??runtime.incidentSearch??'',status:runtime.incidentStateFilter??'ALL',type:runtime.incidentTypeFilter??'ALL',priority:runtime.incidentPriority??'ALL',region:runtime.incidentRegion??'ALL'},page:runtime.incidentPage??1};vm.statusOptions=[['ALL','All statuses'],...['VERIFIED_CURRENT','DETECTION_CANDIDATE','NEEDS_REVALIDATION','HISTORICAL_CLOSED'].map(x=>[x,text(x)])];vm.typeOptions=[['ALL','All types'],...[...new Set(rows(vm.incidents).map(i=>i.type))].map(x=>[x,x])];vm.priorityOptions=[['ALL','All priorities'],...[...new Set(rows(vm.incidents).map(i=>i.priority))].map(x=>[x,text(x)])];return vm;}
+export function IncidentsViewModel(runtime) {const vm=baseVM(runtime,'incidents');vm.ui={incidentFilters:{search:runtime.incidentSearchDraft??runtime.incidentSearch??'',status:runtime.incidentStateFilter??'QUEUE',type:runtime.incidentTypeFilter??'ALL',priority:runtime.incidentPriority??'ALL',region:runtime.incidentRegion??'ALL'},page:runtime.incidentPage??1};vm.statusOptions=[['QUEUE','Operational queue'],['CURRENT','Current'],['MONITORING','Monitoring'],['REVIEW','Needs review'],['HISTORICAL','Historical'],['STALE','Stale'],['RESOLVED','Resolved'],['ALL','All stored records']];vm.typeOptions=[['ALL','All types'],...[...new Set(rows(vm.incidents).map(i=>i.type))].map(x=>[x,x])];vm.priorityOptions=[['ALL','All priorities'],...[...new Set(rows(vm.incidents).map(i=>i.priority))].map(x=>[x,text(x)])];return vm;}
 export function IncidentDetailViewModel(runtime) {const vm=baseVM(runtime,'incident-detail');vm.timeline=activityVM(value(vm.source,'operationalTimeline')??vm.incident?.raw?.transitions);const intel=incidentEnvelope(runtime,'intelligence');vm.questions=rows(value(intel,'informationCollection')?.requirements).map(questionVM);vm.assets=rows(vm.scene?.layers?.contextAssets?.value);return vm;}
 export function IntelligenceViewModel(runtime) {
   const vm=baseVM(runtime,'intelligence'),collection=value(vm.source,'informationCollection');const seen=new Set();vm.questions=rows(collection?.requirements).filter(q=>{if(!q.id)return false;if(seen.has(q.id))return false;seen.add(q.id);return true;}).map(questionVM);
@@ -96,12 +96,12 @@ export function ReportsViewModel(runtime) {
 
 export function NationalAwarenessViewModel(runtime) {
   const vm=baseVM(runtime,'global-awareness'),region=runtime.globalRegion??'ALL',layer=runtime.approvedNationalLayer??'incidents';
-  const counts=new Map();for(const i of rows(vm.incidents))counts.set(i.region,(counts.get(i.region)??0)+1);
+  const counts=new Map();for(const i of rows(vm.incidents).filter(i=>i.currentness?.inActiveQueue===true))counts.set(i.region,(counts.get(i.region)??0)+1);
   vm.regions=[['ALL','All authorized regions'],...[...counts].filter(([r])=>namedArea(r)).sort(([a],[b])=>a.localeCompare(b)).map(([r])=>[r,r])];
   vm.pillRegions=[...counts].sort((a,b)=>b[1]-a[1]).slice(0,6).map(([r])=>r);if(region!=='ALL'&&!vm.pillRegions.includes(region))vm.pillRegions.push(region);
   vm.typeOptions=[['ALL','All types'],...[...new Set(rows(vm.incidents).map(i=>i.type))].filter(t=>t&&!/unknown|not reported/i.test(t)).sort().map(t=>[t,t])];
   vm.ui={region,nationalLayer:layer,nationalType:runtime.globalType??'ALL'};vm.regionLabel=region==='ALL'?'Portugal · authorized scope':region;
-  vm.regionIncidents=rows(vm.incidents).filter(i=>(region==='ALL'||i.region===region)&&(!runtime.globalType||runtime.globalType==='ALL'||i.type===runtime.globalType));
+  vm.regionIncidents=rows(vm.incidents).filter(i=>i.currentness?.inActiveQueue===true).filter(i=>(region==='ALL'||i.region===region)&&(!runtime.globalType||runtime.globalType==='ALL'||i.type===runtime.globalType));
   vm.incident=vm.regionIncidents.find(i=>i.id===runtime.globalSelectedIncidentId)??null;
   const ids=new Set(vm.regionIncidents.map(i=>i.id));vm.weather=rows(vm.scene?.layers?.weather?.value).filter(w=>region==='ALL'||ids.has(w.incidentId));
   vm.latest=vm.regionIncidents.map(i=>i.observedAt).filter(t=>Number.isFinite(Date.parse(t))).sort().at(-1)??null;

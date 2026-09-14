@@ -28,7 +28,9 @@ function boundedProjection(projection) {
 
 export async function physicalWorldContext(services) {try{return await services.worldService?.snapshot({preferCache:true})??null;}catch{return null;}}
 export function withOperatorIntelligence(data, twin, actor, incidentId, previous = null, world = null, asOf = twin?.asOf ?? world?.meta?.generatedAt) {
-  const physical=appendOperationalActivity(projectPhysicalWorld({twin:twin??{asOf,incidents:[]},actor,incidentId,world,asOf,scene:['READY','DEGRADED'].includes(data.mapScene?.state)?data.mapScene.value:null}),data,actor,incidentId);
+  const canonical=data.canonicalIncident?.value,identity=canonical?.incident?.operatorIdentity;
+  const physicalTwin=identity&&incidentId?{...twin,incidents:(twin?.incidents??[]).map(i=>i.incident.id===canonical.incident.id?{...i,incident:{...i.incident,operatorIdentity:identity}}:i)}:twin;
+  const physical=appendOperationalActivity(projectPhysicalWorld({twin:physicalTwin??{asOf,incidents:[]},actor,incidentId,world,asOf,scene:['READY','DEGRADED'].includes(data.mapScene?.state)?data.mapScene.value:null}),data,actor,incidentId);
   if (!twin) return { ...data, physicalWorld:{state:world?'DEGRADED':'UNAVAILABLE',value:world?physical:null,reason:'Incident reasoning is unavailable; independent national source context may still be returned.'},operationalIntelligence: { state: 'UNAVAILABLE', value: null, reason: 'Canonical event twin is unavailable.' },decisionIntelligence:{state:'UNAVAILABLE',value:null,reason:'Canonical event twin is unavailable.'} };
   // Portfolio rows need dated weather summaries; complete selected-incident
   // measurements remain on incident projections and coverage disclosures.

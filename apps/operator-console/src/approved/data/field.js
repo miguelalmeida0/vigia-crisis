@@ -9,7 +9,7 @@ export const day = at => dated(at)?new Date(at).toLocaleDateString('en-GB',{day:
 export const measured = at => dated(at)?`${day(at)} · ${clock(at)} UTC`:'';
 export const usable = m => m?.available&&m.value!==''&&m.validity!=='INVALID_VALUE'&&m.validity!=='NO_VALID_VALUE'&&dated(m.observedAt??m.calculatedAt)&&Boolean(m.sourceName??m.source);
 const text = v => typeof v==='string'?v:'';
-const allowedEvent = new Set(['Weather','Fire detection','Official update','Road','Field report','Air quality']);
+const allowedEvent = new Set(['Weather','Fire detection','Warning','Incident update','Official update','Road','Field report','Air quality']);
 
 // Formatting, filtering and ordering only: authority, routing and measurements
 // remain properties of their canonical projections.

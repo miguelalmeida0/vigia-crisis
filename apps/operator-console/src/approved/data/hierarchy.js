@@ -9,9 +9,9 @@ export function primaryMetric(metric) {
 }
 
 export function nationalCurrentMetric(vm) {
-  const count=value(vm.source,'operationalTruth')?.activeCount;
+  const count=value(vm.source,'operationalTruth')?.currentCount;
   if(!number(count)||count<0||!dated(vm.generatedAt))return null;
-  return displayMetric({id:'verifiedCurrent',label:'Verified current incidents',value:count,unit:'',measurementType:'DERIVED',source:'VIGIA canonical incident projection',calculatedAt:vm.generatedAt,receivedAt:vm.generatedAt,definition:{statistic:'Backend activeCount under the current verification policy'},limitations:['Verified-current count differs from membership in an active public incident feed. Detection candidates and earlier reports are not counted as verified-current incidents.']});
+  return displayMetric({id:'verifiedCurrent',label:'Current incident records',value:count,unit:'',measurementType:'DERIVED',source:'VIGIA canonical incident projection',calculatedAt:vm.generatedAt,receivedAt:vm.generatedAt,definition:{statistic:'Backend currentCount under the operational fire-activity window'},limitations:['Currentness includes recent fire signals; verification is separate. Weather refreshes do not keep an incident current.']});
 }
 
 export const namedArea=name=>Boolean(name)&&!/^[-+]?\d+(?:\.\d+)?°[NS]/i.test(name)&&!/unknown|not reported|unavailable/i.test(name);
@@ -59,12 +59,13 @@ export function nearestSupport(f) {
 export function regionalPriorities(vm) {
   const now=Date.parse(vm.generatedAt)||Date.now(),groups=new Map();
   for(const incident of vm.incidents??[]){
+    if(!incident.currentness?.inActiveQueue)continue;
     const name=incident.region;
     if(!namedArea(name))continue;
     if(!groups.has(name))groups.set(name,{name,incidents:[],current:0,recent:0,earlier:0,latest:null});
     const group=groups.get(name),at=Date.parse(incident.observedAt);
     group.incidents.push(incident);
-    if(['VERIFIED_CURRENT','DETECTION_CANDIDATE'].includes(incident.classification))group.current++;
+    if(incident.currentness?.countsAsCurrent)group.current++;
     else if(Number.isFinite(at)&&at<=now&&now-at<=24*3600000)group.recent++;
     else group.earlier++;
     if(Number.isFinite(at)&&at<=now&&(!group.latest||at>Date.parse(group.latest)))group.latest=incident.observedAt;

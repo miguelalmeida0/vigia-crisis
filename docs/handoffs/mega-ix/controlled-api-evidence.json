@@ -1,0 +1,80 @@
+{
+  "releaseId": "vigia-intelligence-fabric-bce0373e194085be",
+  "at": "2026-09-14T12:21:21.551Z",
+  "lane": "CONTROLLED_FIELD_TEST",
+  "requests": [
+    {
+      "path": "operator/command-overview",
+      "status": 200,
+      "ms": 9523
+    },
+    {
+      "path": "team/incidents/incident%3APT-2026-CA68414DF2/groups",
+      "status": 200,
+      "ms": 287
+    },
+    {
+      "path": "team/devices",
+      "status": 201,
+      "ms": 5
+    },
+    {
+      "path": "team/groups",
+      "status": 201,
+      "ms": 17
+    },
+    {
+      "path": "team/groups/0d30f070-5540-4f76-89d4-cdfc9b5cceea",
+      "status": 200,
+      "ms": 10
+    },
+    {
+      "path": "team/envelopes",
+      "status": 200,
+      "ms": 11
+    },
+    {
+      "path": "team/groups/0d30f070-5540-4f76-89d4-cdfc9b5cceea",
+      "status": 200,
+      "ms": 7
+    },
+    {
+      "path": "team/envelopes",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "path": "team/groups/0d30f070-5540-4f76-89d4-cdfc9b5cceea",
+      "status": 200,
+      "ms": 4
+    },
+    {
+      "path": "team/envelopes",
+      "status": 200,
+      "ms": 2
+    },
+    {
+      "path": "team/incidents/incident%3APT-2026-CA68414DF2/groups",
+      "status": 200,
+      "ms": 1
+    }
+  ],
+  "incident": {
+    "id": "incident:PT-2026-CA68414DF2",
+    "name": "Póvoa De Lanhoso · Esperança E Brunhais"
+  },
+  "operationalGroupsBefore": 0,
+  "groupId": "0d30f070-5540-4f76-89d4-cdfc9b5cceea",
+  "operationalGroupsAfter": 0,
+  "transition": {
+    "previous": "GOOD",
+    "current": "PROBLEM",
+    "previousMinutes": 11,
+    "alternativeMinutes": 24,
+    "reportObservedAt": "2026-09-14T12:21:32.025Z",
+    "reportReceivedAt": "2026-09-14T12:21:32.052Z",
+    "verification": "UNCONFIRMED",
+    "duplicateIgnored": true
+  },
+  "state": "PASS"
+}

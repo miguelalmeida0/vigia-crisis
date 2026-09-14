@@ -30,7 +30,7 @@ export const defaultState = {
   selectedEvidenceId: null,
   incidentSearch: '',
   incidentPage: 1,
-  incidentStateFilter: 'ALL',
+  incidentStateFilter: 'QUEUE',
   incidentTypeFilter: 'ALL',
   incidentSort: 'IDENTITY',
   incidentSavedFilter: 'ALL',

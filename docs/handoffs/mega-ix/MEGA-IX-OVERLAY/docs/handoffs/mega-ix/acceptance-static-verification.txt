@@ -1,0 +1,71 @@
+
+> vigia-mission-dark-realdata@2.1.0 verify:static
+> npm run build && npm run test:syntax && npm run test:smoke && npm run test:contract && npm run test:persistence && npm run test:realdata && npm run test:proxy && node tests/admission-contract.mjs && node tests/map-contract.mjs && node tests/rejected-delivery-regression.mjs && npm run test:truth && npm run test:intelligence && npm run test:browser-contract && npm run test:ux && npm run test:operational-hardening
+
+
+> vigia-mission-dark-realdata@2.1.0 build
+> node scripts/build.mjs
+
+Operator Console production build complete: dist
+
+> vigia-mission-dark-realdata@2.1.0 test:syntax
+> node tests/syntax.mjs && node tests/asset-integrity.mjs
+
+Syntax verification passed: 147 JavaScript modules.
+Operator asset tree and detached deployment-image attestation checks passed.
+
+> vigia-mission-dark-realdata@2.1.0 test:smoke
+> node tests/smoke.mjs
+
+Smoke verification passed: six approved primary routes and internal history and canonical endpoint clients are present.
+
+> vigia-mission-dark-realdata@2.1.0 test:contract
+> node tests/interaction-contract.mjs && node tests/planning-command-contract.mjs && node tests/vigia-api-retry-contract.mjs
+
+Interaction contract passed: 7 routes, 76 buttons, zero dead controls.
+Response-capability operator integrity contract passed.
+Planning and command-intent operator contract passed.
+VIGIA API retry contract passed: one exact-body retry only for idempotent transient or local-timeout mutations.
+
+> vigia-mission-dark-realdata@2.1.0 test:persistence
+> node tests/persistence.mjs
+
+Phase B persistent-state serialization passed.
+
+> vigia-mission-dark-realdata@2.1.0 test:realdata
+> node tests/realdata-contract.mjs
+
+Real-data contract passed: canonical backend projection only and zero bundled operational-image substitutes.
+
+> vigia-mission-dark-realdata@2.1.0 test:proxy
+> node tests/proxy-contract.mjs
+
+Proxy contract passed: canonical JSON/binary traversal, exact authority/origin, malformed-path survival, and bounded request bodies.
+One-time admission contract passed: signed, bounded, replay-resistant, and expiry-enforced.
+Map contract passed: MapLibre GL 6.7.0 native drag, persistent route instances including Operations, WebGL clustering, response-capability inspection, grouped controls, readable labels, and governed same-origin tiles are mandatory.
+Rejected-delivery regressions passed: route-scoped truth, active responsive CSS, readable evidence canvas labels, and non-scrolling dense surfaces are enforced.
+
+> vigia-mission-dark-realdata@2.1.0 test:truth
+> node tests/truth-integrity.mjs
+
+Truth-integrity contract passed: missing values stay unavailable, zero remains zero, and backend text is inert.
+
+> vigia-mission-dark-realdata@2.1.0 test:intelligence
+> node tests/intelligence-contract.mjs
+
+Intelligence and Evidence contracts passed: canonical scientific state, graph nodes/edges, qualification, lineage, contradictions, source families, unavailable truth, and no witness inflation.
+
+> vigia-mission-dark-realdata@2.1.0 test:browser-contract
+> node tests/browser-live-contract.mjs
+
+Browser QA contract passed: final seven-route white certification and legacy canonical scene safeguards remain mandatory.
+
+> vigia-mission-dark-realdata@2.1.0 test:ux
+> node tests/ux-contract.mjs
+
+UX contract passed: seven-route final white visual system, readable canvas/copy, reflowed dense surfaces, state-true status, and focus-contained mobile navigation are enforced.
+
+> vigia-mission-dark-realdata@2.1.0 test:operational-hardening
+> node tests/operational-hardening-contract.mjs
+
+Operational hardening contract passed: route-owned hash state, retained map runtime, last-good startup, lifecycle UX, outcome funnel, and responsive integrity are enforced.

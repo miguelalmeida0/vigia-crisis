@@ -2,7 +2,8 @@ import { createCanonicalOperationalEvent } from '../operational-event.mjs';
 
 const VERSION = 'vigia-firms-operational-adapter.v1';
 function text(value, code) { const result = String(value ?? '').trim(); if (!result) throw Object.assign(new Error(code), { code: 'INVALID_FIRMS_RECORD', details: [code] }); return result; }
-function number(value, code) { const result = Number(value); if (!Number.isFinite(result)) throw Object.assign(new Error(code), { code: 'INVALID_FIRMS_RECORD', details: [code] }); return result; }
+function optionalNumber(value) { if(value===null||value===undefined||String(value).trim()==='')return null;const result=Number(value);return Number.isFinite(result)?result:null; }
+function number(value, code) { const result = optionalNumber(value); if (result===null) throw Object.assign(new Error(code), { code: 'INVALID_FIRMS_RECORD', details: [code] }); return result; }
 function observedAt(row) {
   const date = text(row.acq_date, 'firms_acq_date_required'), time = text(row.acq_time, 'firms_acq_time_required').padStart(4, '0');
   const value = new Date(`${date}T${time.slice(0, 2)}:${time.slice(2)}:00Z`);
@@ -29,7 +30,7 @@ export class FirmsOperationalAdapter {
       subjectRefs: [`measurement:${measurementId}`, `platform:${platform}`], ingestionMetadata: { adapterRecordIndex: context.recordIndex },
       payload: {
         observationState: 'OBSERVED_POSITIVE', stance: 'SUPPORTING', confidence: row.confidence ?? null,
-        frpMw: Number.isFinite(Number(row.frp)) ? Number(row.frp) : null, brightnessK: Number.isFinite(Number(row.bright_ti4 ?? row.brightness)) ? Number(row.bright_ti4 ?? row.brightness) : null,
+        frpMw: optionalNumber(row.frp), brightnessK: optionalNumber(row.bright_ti4 ?? row.brightness),
         instrument, platform, dayNight: row.daynight ?? null
       },
       provenance: { strength: 'VERIFIED', upstreamMeasurementId: measurementId, rawPayloadHash: context.rawPayloadHash, rawObjectRef: context.rawObjectRef, authority: this.authority, proofStatus: 'PROVIDER_ATTRIBUTED', chain: [{ producer: this.producerId, platform, instrument }] },

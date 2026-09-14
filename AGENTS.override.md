@@ -205,3 +205,12 @@ and at least one responsive viewport. "Functionally working" is not sufficient
 for UI completion. Temperature and other ordinary weather readings are blue or
 neutral; red requires actual critical/fire meaning. Supporting operational text
 uses the readable metadata floor; never shrink it to fit a failing layout.
+
+
+## REALITY-FIRST INTELLIGENCE RULE
+
+Vigia is not an ML demonstration. Primary value comes from real observations, official information, geography, timestamps, operational relationships, deterministic transformations and explicit limitations. Model outputs may support a concrete operational question only when clearly distinguished from observation. No confidence-score theater, proof/evidence-first UX, generic AI summaries, model-centric dashboards, opaque severity scores or synthetic physical facts. A feature is valuable because a human can use the result.
+
+## DESIGN FREEZE — REALITY SPRINT
+
+The current approved six-route visual system is locked. New datasets and intelligence must reuse existing route compositions and component families. Backend availability never grants permission to add a new top-level card, section or dashboard block. New visible metrics must replace, enrich or fit an existing information role.

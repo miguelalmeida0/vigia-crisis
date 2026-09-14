@@ -1,0 +1,54 @@
+{
+  "sprint": "MEGA IX",
+  "releaseId": "vigia-intelligence-fabric-878862be6a1edb84",
+  "overall": "BROWSER_GIT_AND_PERFORMANCE_ACCEPTANCE_INCOMPLETE",
+  "tests": {
+    "focusedPassed": 50,
+    "retainedCombinedPassed": 111,
+    "recoveryPassed": 5,
+    "staticVerification": "PASS",
+    "controlledBackendLoop": "PASS",
+    "restartPersistence": "PASS",
+    "previousUniquePassed": 117,
+    "acceptanceRegressionPassed": 153,
+    "acceptanceStaticVerification": "PASS",
+    "acceptanceRegressionLog": "acceptance-regression-tests.txt",
+    "acceptanceStaticLog": "acceptance-static-verification.txt"
+  },
+  "browser": {
+    "state": "BLOCKED",
+    "reason": "Saved browser permission rejected local console access",
+    "workaroundAttempted": false,
+    "screenshots": 0,
+    "requiredCaptures": 15,
+    "freshUserJourney": "NOT_RUN",
+    "viewports": [
+      1672,
+      1440,
+      1280,
+      1024,
+      430,
+      390,
+      320
+    ]
+  },
+  "nativeRadio": "NOT_EXECUTED_ADAPTER_REQUIRED",
+  "externalCentral": "NOT_CONFIGURED_CONTROLLED_TEST_ONLY",
+  "git": {
+    "branch": "vigia/operational-intelligence-v1",
+    "requestedBranch": "vigia/mega-ix-mission-command-field-network",
+    "branchCreation": "BLOCKED_READ_ONLY_GIT_METADATA",
+    "committed": false,
+    "pushed": false,
+    "ownership": "malmeida:staff; no ownership mismatch",
+    "restriction": "Current session explicitly mounts Git metadata read-only"
+  },
+  "performance": {
+    "previousReportedFirstRequestMs": 9500,
+    "finalNormalFirstRequestMs": 4305,
+    "finalColdProjectionP95Ms": 3904,
+    "p95TargetMs": 2500,
+    "targetMet": false,
+    "browserMeasured": false
+  }
+}

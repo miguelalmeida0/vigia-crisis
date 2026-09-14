@@ -89,10 +89,11 @@ async function inventory(){
 }
 async function ignored(){const raw=await git(['status','--ignored','--porcelain=v1','-z']),records=raw.toString('utf8').split('\0').filter((item)=>item.startsWith('!! '));return records.map((record)=>{const file=statusPath(record);return{path:file,classification:classifyReleasePath(file)};}).sort((a,b)=>a.path.localeCompare(b.path));}
 export async function sourceState(){
-  const raw=await git(['ls-files','-co','--exclude-standard','-z']),files=[...new Set(raw.toString('utf8').split('\0').filter(Boolean))].sort(),entries=[];
+  const [raw,deleted]=await Promise.all([git(['ls-files','-co','--exclude-standard','-z']),git(['ls-files','--deleted','-z'])]),files=presentSourcePaths(raw,deleted),entries=[];
   for(const file of files){const classification=classifyReleasePath(file);if(!['SOURCE — release code','TEST','DEPLOYMENT DATA'].includes(classification))continue;const metadata=await fileMetadata(path.join(root,file));entries.push({path:file,classification,...metadata});}
   return{entries,...releaseSourceHashes(entries)};
 }
+export function presentSourcePaths(inventory,deleted){const removed=new Set(deleted.toString('utf8').split('\0').filter(Boolean));return [...new Set(inventory.toString('utf8').split('\0').filter(Boolean))].filter(file=>!removed.has(file)).sort();}
 export function releaseIdentityFromEntries(entries=[]){const hashes=releaseSourceHashes(entries),identityHash=hash(`${hashes.codeStateHash}\0${hashes.operationalDataHash}`);return{releaseId:`vigia-intelligence-fabric-${identityHash.slice(7,23)}`,...hashes};}
 export function sameReleaseSource(frozen,current){return frozen?.releaseId&&frozen.releaseId===current.releaseId&&frozen.codeStateHash===current.codeStateHash&&frozen.operationalDataHash===current.operationalDataHash&&Array.isArray(frozen.entries)&&frozen.entries.length===current.entries.length&&frozen.entries.every((item,index)=>{const candidate=current.entries[index];return candidate&&item.path===candidate.path&&item.classification===candidate.classification&&item.mode===candidate.mode&&item.sha256===candidate.sha256;});}
 const SAFE_STAGING_CATEGORIES=Object.freeze({

@@ -1,0 +1,146 @@
+{
+  "state": "BLOCKED",
+  "reason": "Saved browser permission rejected local console access. No workaround attempted.",
+  "canonicalRoutes": [
+    {
+      "name": "Command Overview",
+      "state": "NOT_RUN",
+      "reference": null,
+      "runtime": null,
+      "overlay": null,
+      "difference": null
+    },
+    {
+      "name": "Incidents",
+      "state": "NOT_RUN",
+      "reference": null,
+      "runtime": null,
+      "overlay": null,
+      "difference": null
+    },
+    {
+      "name": "Incident Detail",
+      "state": "NOT_RUN",
+      "reference": null,
+      "runtime": null,
+      "overlay": null,
+      "difference": null
+    },
+    {
+      "name": "Fire Activity",
+      "state": "NOT_RUN",
+      "reference": null,
+      "runtime": null,
+      "overlay": null,
+      "difference": null
+    },
+    {
+      "name": "Response & Access",
+      "state": "NOT_RUN",
+      "reference": null,
+      "runtime": null,
+      "overlay": null,
+      "difference": null
+    },
+    {
+      "name": "National Awareness",
+      "state": "NOT_RUN",
+      "reference": null,
+      "runtime": null,
+      "overlay": null,
+      "difference": null
+    }
+  ],
+  "states": [
+    {
+      "name": "Command Overview — important now",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Active mission GOOD",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Mission PROBLEM",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Road field report",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Confirmation request",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Alternative route",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Offline team chat",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Team chat online",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Confirmed report",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Partial group delivery",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "What Changed timeline",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Local VIGIA offline",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Restored central connection",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Mobile mission",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    },
+    {
+      "name": "Mobile chat",
+      "state": "NOT_RUN",
+      "desktop": null,
+      "mobile": null
+    }
+  ]
+}
