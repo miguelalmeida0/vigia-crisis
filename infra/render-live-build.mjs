@@ -9,10 +9,10 @@ function run(command, args) {
 }
 
 // Keep the deploy reproducible without altering the canonical product lockfiles.
-// The console build currently imports esbuild but its package does not declare it;
-// pin the same version used by the reviewed portfolio-demo build until that debt is
-// corrected in the main integration line.
+// The console build imports esbuild but its package does not declare it. Install
+// the exact reviewed version directly into the console package, where Node's ESM
+// resolver expects to find it, until that dependency debt is fixed upstream.
 await run('npm', ['ci', '--ignore-scripts']);
 await run('npm', ['--prefix', 'apps/operator-console', 'ci', '--ignore-scripts']);
-await run('npm', ['install', '--no-save', '--package-lock=false', '--ignore-scripts', 'esbuild@0.28.2']);
+await run('npm', ['--prefix', 'apps/operator-console', 'install', '--no-save', '--package-lock=false', '--ignore-scripts', 'esbuild@0.28.2']);
 await run('npm', ['--prefix', 'apps/operator-console', 'run', 'build']);
