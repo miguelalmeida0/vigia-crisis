@@ -85,10 +85,9 @@ services:
     pull_policy: never
     build:
       context: ..
-      dockerfile: infra/Dockerfile.operator
+      dockerfile: infra/Dockerfile.public-demo
       args:
         VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
-    command: ["node", "public-server.mjs"]
     init: true
     cap_drop: [ALL]
     security_opt: [no-new-privileges:true]
