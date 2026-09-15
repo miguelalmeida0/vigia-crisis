@@ -27,18 +27,18 @@ export const overlaps = (aFrom, aUntil, bFrom, bUntil) => {
  */
 export function capabilityState(resource, capability, at) {
   const record = resource?.capabilities?.[capability];
-  if (record === undefined || record === null) return {state: 'NOT_ESTABLISHED', reason: 'No capability record is retained for this resource.', factId: null};
+  if (record === undefined || record === null) return {state: 'NOT_ESTABLISHED', capability, reason: 'No capability record is retained for this resource.', factId: null};
   const value = typeof record === 'object' ? record.value : record;
   const validUntil = typeof record === 'object' ? record.validUntil : null;
   const factId = typeof record === 'object' ? record.factId ?? null : null;
   if (validUntil !== null && validUntil !== undefined) {
     const until = parse(validUntil);
-    if (until === null) return {state: 'NOT_ESTABLISHED', reason: 'The capability record has no readable validity.', factId};
-    if (until <= parse(at)) return {state: 'NOT_ESTABLISHED', reason: 'The capability record passed its validity window and has not been renewed.', factId, expired: true};
+    if (until === null) return {state: 'NOT_ESTABLISHED', capability, reason: 'The capability record has no readable validity.', factId};
+    if (until <= parse(at)) return {state: 'NOT_ESTABLISHED', capability, reason: 'The capability record passed its validity window and has not been renewed.', factId, expired: true};
   }
-  if (value === true) return {state: 'PRESENT', reason: 'A retained record establishes this capability.', factId};
-  if (value === false) return {state: 'ABSENT', reason: 'A retained record establishes that this resource does not have this capability.', factId};
-  return {state: 'NOT_ESTABLISHED', reason: 'The capability record does not state a value.', factId};
+  if (value === true) return {state: 'PRESENT', capability, reason: 'A retained record establishes this capability.', factId};
+  if (value === false) return {state: 'ABSENT', capability, reason: 'A retained record establishes that this resource does not have this capability.', factId};
+  return {state: 'NOT_ESTABLISHED', capability, reason: 'The capability record does not state a value.', factId};
 }
 
 /**
