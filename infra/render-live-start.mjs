@@ -7,11 +7,21 @@ import path from 'node:path';
 const root = process.cwd();
 const externalPort = String(process.env.PORT || '').trim();
 const authority = String(process.env.VIGIA_OPERATOR_PUBLIC_AUTHORITY || '').trim();
+const databaseUrl = String(process.env.VIGIA_DATABASE_URL || '').trim();
 if (!externalPort) throw new Error('Render PORT is required');
 if (!authority) throw new Error('VIGIA_OPERATOR_PUBLIC_AUTHORITY is required');
+if (!databaseUrl) throw new Error('VIGIA_DATABASE_URL is required for the backend-powered public deployment');
 
 const proxyKey = String(process.env.VIGIA_OPERATOR_PROXY_KEY || '').trim() || randomBytes(48).toString('base64url');
 const buildIdentity = JSON.parse(await readFile(path.join(root, 'apps/operator-console/dist/build-manifest.json'), 'utf8'));
+
+function run(command, args, { env = process.env } = {}) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(command, args, { cwd: root, env, stdio: 'inherit' });
+    child.once('error', reject);
+    child.once('exit', (code, signal) => code === 0 ? resolve() : reject(new Error(`${command} ${args.join(' ')} failed: ${signal || code}`)));
+  });
+}
 
 function requestJson(pathname, { timeoutMs = 3_000 } = {}) {
   return new Promise((resolve, reject) => {
@@ -54,15 +64,26 @@ async function waitForBackend({ timeoutMs = 150_000 } = {}) {
   throw new Error(`VIGIA backend did not become service-ready within ${timeoutMs}ms; lastStatus=${last?.status ?? 'unreachable'}`);
 }
 
-const apiEnv = {
+const sharedEnv = {
   ...process.env,
-  HOST: '127.0.0.1',
-  PORT: '4177',
-  OPEN_BROWSER: '0',
   NODE_ENV: 'production',
   VIGIA_UNIVERSE: 'production',
   VIGIA_RUNTIME_PROFILE: 'production',
   VIGIA_LOCAL_SECRETS_DISABLED: '1',
+  VIGIA_DATABASE_URL: databaseUrl
+};
+
+console.log(JSON.stringify({
+  level: 'info', component: 'render_live_start', event: 'migrating_managed_postgis',
+  releaseId: buildIdentity.releaseId, databaseConfigured: true, databaseMode: 'managed_postgis'
+}));
+await run(process.execPath, ['scripts/migrate_postgis.mjs'], { env: sharedEnv });
+
+const apiEnv = {
+  ...sharedEnv,
+  HOST: '127.0.0.1',
+  PORT: '4177',
+  OPEN_BROWSER: '0',
   VIGIA_OPERATOR_PROXY_KEY: proxyKey,
   VIGIA_OPERATOR_ACTOR_ID: 'portfolio-observer',
   VIGIA_OPERATOR_NAME: 'Portfolio observer',
@@ -72,9 +93,7 @@ const apiEnv = {
 
 console.log(JSON.stringify({
   level: 'info', component: 'render_live_start', event: 'starting_api',
-  releaseId: buildIdentity.releaseId,
-  databaseConfigured: Boolean(process.env.VIGIA_DATABASE_URL),
-  databaseMode: process.env.VIGIA_DATABASE_URL ? 'managed_postgis' : 'degraded_no_database_secret'
+  releaseId: buildIdentity.releaseId, databaseConfigured: true, databaseMode: 'managed_postgis'
 }));
 
 const api = spawn(process.execPath, ['apps/api/src/server.mjs'], { cwd: root, env: apiEnv, stdio: 'inherit' });
@@ -84,10 +103,9 @@ const release = await waitForBackend();
 console.log(JSON.stringify({ level: 'info', component: 'render_live_start', event: 'api_services_ready', releaseId: release.releaseId }));
 
 const webEnv = {
-  ...process.env,
+  ...sharedEnv,
   HOST: '0.0.0.0',
   PORT: externalPort,
-  NODE_ENV: 'production',
   VIGIA_BACKEND_URL: 'http://127.0.0.1:4177',
   VIGIA_OPERATOR_PROXY_KEY: proxyKey,
   VIGIA_OPERATOR_PUBLIC_AUTHORITY: authority,
