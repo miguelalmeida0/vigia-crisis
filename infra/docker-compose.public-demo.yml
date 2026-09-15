@@ -1,0 +1,170 @@
+services:
+  postgis:
+    image: postgis/postgis:17-3.5@sha256:0a23a2b5e4fbd9b4c6980d20ee80dd6b63dec52669379c75a506db58a4116708
+    environment:
+      POSTGRES_DB: vigia
+      POSTGRES_USER: vigia
+      POSTGRES_PASSWORD_FILE: /run/secrets/postgres_password
+    secrets: [postgres_password]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vigia -d vigia"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+    volumes: [vigia-public-postgis:/var/lib/postgresql/data]
+    networks: [database]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 2g
+    cpus: 2.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+
+  migration:
+    image: "${VIGIA_API_IMAGE_REFERENCE:?set VIGIA_API_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    command: ["node", "scripts/migrate_postgis.mjs"]
+    environment:
+      VIGIA_DATABASE_URL_FILE: /run/secrets/database_url
+      VIGIA_LOCAL_SECRETS_DISABLED: "1"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    secrets: [database_url]
+    networks: [database]
+    depends_on:
+      postgis: { condition: service_healthy }
+    restart: "no"
+
+  api:
+    image: "${VIGIA_API_IMAGE_REFERENCE:?set VIGIA_API_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.api
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4177
+      OPEN_BROWSER: "0"
+      VIGIA_UNIVERSE: production
+      VIGIA_RUNTIME_PROFILE: production
+      VIGIA_DATABASE_URL_FILE: /run/secrets/database_url
+      VIGIA_SECRETS_FILE: /run/secrets/provider_credentials
+      VIGIA_LOCAL_SECRETS_DISABLED: "1"
+      VIGIA_RELEASE_ID: "${VIGIA_RELEASE_ID:?set VIGIA_RELEASE_ID}"
+      VIGIA_CODE_STATE_HASH: "${VIGIA_CODE_STATE_HASH:?set VIGIA_CODE_STATE_HASH}"
+      VIGIA_OPERATIONAL_DATA_HASH: "${VIGIA_OPERATIONAL_DATA_HASH:?set VIGIA_OPERATIONAL_DATA_HASH}"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+      NASA_FIRMS_MAP_KEY: "${NASA_FIRMS_MAP_KEY:-}"
+      VIGIA_FIRMS_POLL_INTERVAL_MS: "${VIGIA_FIRMS_POLL_INTERVAL_MS:-300000}"
+    secrets: [database_url, provider_credentials]
+    networks: [database, app]
+    depends_on:
+      migration: { condition: service_completed_successfully }
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:4177/api/v10/release').then(async r=>{const b=await r.json();if(!r.ok||b.releaseId!==process.env.VIGIA_RELEASE_ID||b.codeStateHash!==process.env.VIGIA_CODE_STATE_HASH||b.operationalDataHash!==process.env.VIGIA_OPERATIONAL_DATA_HASH||b.releaseStatementHash!==process.env.VIGIA_APPROVED_RELEASE_STATEMENT_SHA256)process.exit(1)}).catch(()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 18
+    volumes: [vigia-public-runtime:/opt/vigia/data/runtime]
+    restart: unless-stopped
+    stop_grace_period: 30s
+    mem_limit: 2g
+    cpus: 2.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+
+  web:
+    image: "${VIGIA_OPERATOR_IMAGE_REFERENCE:?set VIGIA_OPERATOR_IMAGE_REFERENCE}"
+    pull_policy: never
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.operator
+      args:
+        VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    command: ["node", "public-server.mjs"]
+    init: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    environment:
+      HOST: 0.0.0.0
+      PORT: 4190
+      VIGIA_BACKEND_URL: http://api:4177
+      VIGIA_OPERATOR_PUBLIC_AUTHORITY: "${VIGIA_PUBLIC_AUTHORITY:?set VIGIA_PUBLIC_AUTHORITY}"
+      VIGIA_OPERATOR_PUBLIC_SCHEME: https
+      VIGIA_RELEASE_ID: "${VIGIA_RELEASE_ID:?set VIGIA_RELEASE_ID}"
+      VIGIA_OPERATIONAL_DATA_HASH: "${VIGIA_OPERATIONAL_DATA_HASH:?set VIGIA_OPERATIONAL_DATA_HASH}"
+      VIGIA_APPROVED_RELEASE_STATEMENT_SHA256: "${VIGIA_APPROVED_RELEASE_STATEMENT_SHA256:?set VIGIA_APPROVED_RELEASE_STATEMENT_SHA256}"
+    networks: [app]
+    depends_on:
+      api: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('node:http').get({hostname:'127.0.0.1',port:4190,path:'/__operator/ready',headers:{host:process.env.VIGIA_OPERATOR_PUBLIC_AUTHORITY}},r=>{let s='';r.on('data',c=>s+=c);r.on('end',()=>{try{const b=JSON.parse(s);if(r.statusCode!==200||b.publicDemo!==true||b.readOnly!==true||b.releaseId!==process.env.VIGIA_RELEASE_ID)process.exit(1)}catch{process.exit(1)}})}).on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+    stop_grace_period: 20s
+    mem_limit: 512m
+    cpus: 1.0
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+
+  gateway:
+    image: caddy:2.10.2-alpine
+    environment:
+      VIGIA_PUBLIC_AUTHORITY: "${VIGIA_PUBLIC_AUTHORITY:?set VIGIA_PUBLIC_AUTHORITY}"
+      VIGIA_PUBLIC_TLS_EMAIL: "${VIGIA_PUBLIC_TLS_EMAIL:?set VIGIA_PUBLIC_TLS_EMAIL}"
+    volumes:
+      - ./Caddyfile.public-demo:/etc/caddy/Caddyfile:ro
+      - vigia-public-caddy-data:/data
+      - vigia-public-caddy-config:/config
+    networks: [app]
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    depends_on:
+      web: { condition: service_healthy }
+    restart: unless-stopped
+    mem_limit: 256m
+    cpus: 0.5
+    logging: { driver: json-file, options: { max-size: "20m", max-file: "5" } }
+
+  backup:
+    image: postgis/postgis:17-3.5@sha256:0a23a2b5e4fbd9b4c6980d20ee80dd6b63dec52669379c75a506db58a4116708
+    profiles: [maintenance]
+    environment:
+      PGHOST: postgis
+      PGUSER: vigia
+      PGDATABASE: vigia
+    secrets: [postgres_password]
+    volumes: [vigia-public-backups:/backups]
+    command: ["sh", "-c", "export PGPASSWORD=$$(cat /run/secrets/postgres_password); exec pg_dump -Fc --no-owner --file=/backups/vigia-$$(date -u +%Y%m%dT%H%M%SZ).dump"]
+    depends_on:
+      postgis: { condition: service_healthy }
+    networks: [database]
+
+secrets:
+  postgres_password:
+    file: "${VIGIA_POSTGRES_PASSWORD_FILE:?set VIGIA_POSTGRES_PASSWORD_FILE}"
+  database_url:
+    file: "${VIGIA_DATABASE_URL_FILE:?set VIGIA_DATABASE_URL_FILE}"
+  provider_credentials:
+    file: "${VIGIA_PROVIDER_CREDENTIALS_FILE:?set VIGIA_PROVIDER_CREDENTIALS_FILE}"
+
+volumes:
+  vigia-public-postgis:
+  vigia-public-runtime:
+  vigia-public-backups:
+  vigia-public-caddy-data:
+  vigia-public-caddy-config:
+
+networks:
+  database: { internal: true }
+  app: {}
