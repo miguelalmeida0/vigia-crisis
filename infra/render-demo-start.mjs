@@ -10,12 +10,23 @@
 // It refuses to start unless the target database is explicitly confirmed as
 // an isolated demo database (VIGIA_DEMO_CONFIRM=SYNTHETIC_DEMO_ONLY) and its
 // connection string does not match a known production identifier.
+//
+// PORT BINDING: Render kills a web service that never opens its assigned
+// $PORT within its port-scan window. Earlier versions of this script bound
+// $PORT only after migration + seeding + API readiness — a slow or stuck
+// bootstrap step got the whole deploy killed with no diagnosis. This version
+// binds $PORT immediately via infra/demo-bootstrap-gateway.mjs, which reports
+// 503 with live phase/timing detail for every request until the real backend
+// is genuinely ready, then hands the port off to the real, unmodified
+// infra/public-demo-server.mjs.
 
 import { spawn } from 'node:child_process';
 import { randomBytes } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
+import { createInterface } from 'node:readline';
 import http from 'node:http';
 import path from 'node:path';
+import { startBootstrapGateway } from './demo-bootstrap-gateway.mjs';
 
 const root = process.cwd();
 const externalPort = String(process.env.PORT || '').trim();
@@ -32,9 +43,33 @@ for (const marker of ['vigia-public-demo-db', 'vigia-live']) {
 const proxyKey = String(process.env.VIGIA_OPERATOR_PROXY_KEY || '').trim() || randomBytes(48).toString('base64url');
 const buildIdentity = JSON.parse(await readFile(path.join(root, 'apps/operator-console/dist/build-manifest.json'), 'utf8'));
 
-function run(command, args, { env = process.env } = {}) {
+const gateway = startBootstrapGateway({ port: Number(externalPort) });
+await gateway.listen();
+console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'bootstrap_gateway_listening', port: externalPort }));
+
+function fatal(step, error) {
+  gateway.fail(error);
+  console.error(JSON.stringify({ level: 'error', component: 'render_demo_start', event: `${step}_failed`, error: String(error?.message ?? error) }));
+  process.exitCode = 1;
+  // Give Render's log pipeline a moment to flush before the process (and the
+  // bootstrap gateway's port) goes away; Render's restart policy takes over
+  // from here, and the seed script's own resumability makes the next attempt
+  // safe regardless of exactly how far this one got.
+  setTimeout(() => process.exit(1), 250);
+}
+
+// Runs a child process with stdout piped line-by-line back through our own
+// logger (so every line still reaches Render's log stream exactly as before)
+// while also updating the bootstrap gateway's live phase from structured
+// {"step":...} / {"phase":...} JSON lines the child emits. stderr is
+// inherited directly so nothing is ever silently swallowed.
+function run(command, args, { env = process.env, onLine = () => {} } = {}) {
   return new Promise((resolve, reject) => {
-    const child = spawn(command, args, { cwd: root, env, stdio: 'inherit' });
+    const child = spawn(command, args, { cwd: root, env, stdio: ['ignore', 'pipe', 'inherit'] });
+    createInterface({ input: child.stdout }).on('line', (line) => {
+      console.log(line);
+      try { onLine(JSON.parse(line)); } catch { /* not every line is JSON; that's fine */ }
+    });
     child.once('error', reject);
     child.once('exit', (code, signal) => code === 0 ? resolve() : reject(new Error(`${command} ${args.join(' ')} failed: ${signal || code}`)));
   });
@@ -64,6 +99,7 @@ async function waitForBackend({ timeoutMs = 150_000 } = {}) {
     try {
       const release = await requestJson('/api/v10/release');
       last = release;
+      gateway.setPhase('waiting_for_api_ready', { apiHttpStatus: release.status, apiStartupPhase: release.body?.process?.startup?.phase ?? null });
       if (release.status === 200 && release.body?.releaseId) {
         const sameIdentity = release.body.releaseId === buildIdentity.releaseId
           && release.body.codeStateHash === buildIdentity.codeStateHash
@@ -90,16 +126,20 @@ const sharedEnv = {
   VIGIA_DATABASE_URL: databaseUrl
 };
 
-console.log(JSON.stringify({
-  level: 'info', component: 'render_demo_start', event: 'migrating_demo_postgis',
-  releaseId: buildIdentity.releaseId, databaseMode: 'isolated_demo_postgis'
-}));
-await run(process.execPath, ['scripts/migrate_postgis.mjs'], { env: sharedEnv });
+try {
+  gateway.setPhase('migrating_postgis');
+  console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'migrating_demo_postgis', releaseId: buildIdentity.releaseId, databaseMode: 'isolated_demo_postgis' }));
+  await run(process.execPath, ['scripts/migrate_postgis.mjs'], { env: sharedEnv });
+} catch (error) { fatal('migrate', error); throw error; }
 
-console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'seeding_demo_scenario' }));
-await run(process.execPath, ['scripts/seed_demo_portfolio_scenario.mjs'], {
-  env: { ...sharedEnv, VIGIA_DEMO_CONFIRM: 'SYNTHETIC_DEMO_ONLY' }
-});
+try {
+  gateway.setPhase('seeding_demo_scenario');
+  console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'seeding_demo_scenario' }));
+  await run(process.execPath, ['scripts/seed_demo_portfolio_scenario.mjs'], {
+    env: { ...sharedEnv, VIGIA_DEMO_CONFIRM: 'SYNTHETIC_DEMO_ONLY' },
+    onLine: (event) => { if (event?.step) gateway.setPhase(`seed:${event.step}`, { phaseName: event.phase ?? event.subPhase ?? null }); }
+  });
+} catch (error) { fatal('seed', error); throw error; }
 
 const apiEnv = {
   ...sharedEnv,
@@ -113,16 +153,25 @@ const apiEnv = {
   VIGIA_OPERATOR_ROLE: 'supervisor'
 };
 
-console.log(JSON.stringify({
-  level: 'info', component: 'render_demo_start', event: 'starting_api',
-  releaseId: buildIdentity.releaseId, databaseMode: 'isolated_demo_postgis'
-}));
-
+gateway.setPhase('starting_api');
+console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'starting_api', releaseId: buildIdentity.releaseId, databaseMode: 'isolated_demo_postgis' }));
 const api = spawn(process.execPath, ['apps/api/src/server.mjs'], { cwd: root, env: apiEnv, stdio: 'inherit' });
-api.once('error', error => { console.error('[vigia-demo] API process error', error); process.exit(1); });
+api.once('error', error => fatal('api_process', error));
 
-const release = await waitForBackend();
+let release;
+try {
+  release = await waitForBackend();
+} catch (error) { fatal('api_ready_wait', error); throw error; }
 console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'api_services_ready', releaseId: release.releaseId }));
+
+// Hand the external port off from the bootstrap gateway to the real,
+// unmodified public gateway. There is a brief (sub-second) gap between
+// closing one HTTP server and opening the next on the same port; that is an
+// ordinary bind handoff, not a regression from the old always-late binding
+// (the port has already been open and answering 503 for the entire bootstrap
+// up to this point).
+gateway.setPhase('handing_off_to_public_gateway');
+await gateway.stop();
 
 const webEnv = {
   ...sharedEnv,

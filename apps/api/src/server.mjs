@@ -15,6 +15,9 @@ import { createLocalShadowSessionService } from './modules/session/local-shadow-
 import { ReleaseIdentityService } from './modules/release/release-identity-service.mjs';
 import './shared/runtime-profiler.mjs';
 import { createOperatorProxyAuthenticator,operatorProxyPublicFailure } from './http/operator-proxy-auth.mjs';
+import { withTimeout } from './shared/with-timeout.mjs';
+
+const CREATE_SERVICES_TIMEOUT_MS = Number(process.env.VIGIA_CREATE_SERVICES_TIMEOUT_MS) || 150_000;
 
 function openBrowser(url) {
   const command = process.platform === 'darwin' ? ['open', [url]] : process.platform === 'win32' ? ['cmd', ['/c', 'start', '', url]] : ['xdg-open', [url]];
@@ -81,7 +84,7 @@ console.log(`\nVIGIA 10.0 Physical Intelligence Core: ${url}`); console.log('Uni
 console.log(`HTTP LISTENER READY · ${startup.listenerMs}ms · services loading in background`);
 void (async()=>{
   try {
-    services = await createServices({ config, hub, releaseIdentity, onStartupPhase:recordStartupPhase }); runtime = createRuntime({ config, services, hub, startup }); router = new Router(); registerRoutes(router, { services, hub, runtime, sessionService,releaseIdentityService });
+    services = await withTimeout(() => createServices({ config, hub, releaseIdentity, onStartupPhase:recordStartupPhase }), { ms: CREATE_SERVICES_TIMEOUT_MS, label: 'createServices' }); runtime = createRuntime({ config, services, hub, startup }); router = new Router(); registerRoutes(router, { services, hub, runtime, sessionService,releaseIdentityService });
     startup.servicesReadyAt = new Date().toISOString(); startup.servicesReadyMs = Math.round(performance.now());
     startup.phase = 'services_ready'; startup.phaseStartedAt = startup.servicesReadyAt;
     console.log(`LOCAL SERVICES READY · ${startup.servicesReadyMs}ms · POSTGIS ${services.physicalTruthStore.status().state.toUpperCase()}`);
