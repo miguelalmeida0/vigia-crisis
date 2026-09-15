@@ -1,57 +1,16 @@
 {
   "schemaVersion": "vigia.checkpoint-handoff.v1",
-  "generatedAt": "2026-09-14T18:45:24.646Z",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
-  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
+  "generatedAt": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
+  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
   "gitWritable": false,
   "mode": "DETERMINISTIC_COMMAND_HANDOFF",
-  "eligiblePaths": 12,
+  "eligiblePaths": 0,
   "excluded": {
     "secret": 0,
     "temporary": 0,
     "runtimeCache": 0,
     "quarantinedPrototype": 0
   },
-  "checkpoints": [
-    {
-      "id": "physical-sensing",
-      "title": "Physical sensing and provider truth",
-      "paths": [
-        "data/validation/release/release-source-manifest.json"
-      ],
-      "commitMessage": "checkpoint(physical-sensing): physical sensing and provider truth"
-    },
-    {
-      "id": "measurement-science",
-      "title": "Validation and measurement science",
-      "paths": [
-        "data/validation/release/checkpoint-commands.sh",
-        "data/validation/release/checkpoint-handoff.json",
-        "data/validation/release/current-release-manifest.json",
-        "data/validation/release/dirty-tree-classification.json",
-        "data/validation/release/evidence-manifest.json",
-        "data/validation/release/ignored-runtime-manifest.json",
-        "data/validation/release/release-statement.json",
-        "data/validation/release/unknown-path-report.json"
-      ],
-      "commitMessage": "checkpoint(measurement-science): validation and measurement science"
-    },
-    {
-      "id": "command-product",
-      "title": "Command and Decision OS product",
-      "paths": [
-        "apps/operator-console/src/approved/ui/mission-command.js",
-        "apps/operator-console/src/field-team-offline.js"
-      ],
-      "commitMessage": "checkpoint(command-product): command and decision os product"
-    },
-    {
-      "id": "governed-evidence",
-      "title": "Remaining governed evidence and documentation",
-      "paths": [
-        "scripts/mega_ix_local_acceptance.mjs"
-      ],
-      "commitMessage": "checkpoint(governed-evidence): remaining governed evidence and documentation"
-    }
-  ]
+  "checkpoints": []
 }

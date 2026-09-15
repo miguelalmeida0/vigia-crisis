@@ -1,8 +1,8 @@
 {
   "schemaVersion": "vigia.release-source-manifest.v2",
-  "generatedAt": "2026-09-14T18:45:24.646Z",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
-  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
+  "generatedAt": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
+  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
   "entries": [
     {
@@ -1802,7 +1802,7 @@
     {
       "path": "apps/api/src/modules/mission/team-service.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:c25b38d351524af8f25b3b63b9fe702b593859536ccb2f984ae2582da24a112b",
+      "sha256": "sha256:9355ab86897991993b48eb62e5300f0b025ce5a4fa54e6ed802e49045a376081",
       "mode": "0644"
     },
     {
@@ -5126,7 +5126,13 @@
     {
       "path": "apps/operator-console/src/approved/ui/mission-command.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:2e989856a6b676a8a4ce0639c29d7e9649b0594fca0fc5a42db10187ca02375c",
+      "sha256": "sha256:179b4e8a2134876ec561d7b9654bb8b68962cfc12a1b63318ff199f84a03a94a",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/operator-console/src/approved/ui/operational-consequence.js",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:9315d2eff77e364ed4cbd6df5bab4638f576248494054420e6d5021ded779bb3",
       "mode": "0644"
     },
     {
@@ -5642,7 +5648,7 @@
     {
       "path": "apps/operator-console/styles/approved/mission-command.css",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:418eae5ba443dd3ab2d51805e66b3566549fe91cd9766e2286cf0cfdacb4a89f",
+      "sha256": "sha256:1dd156d0986dd726540f0c16d1a40b82aeaaf1c4b9680c8812fff4039e3901ee",
       "mode": "0644"
     },
     {
@@ -7712,7 +7718,7 @@
     {
       "path": "package.json",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:d7ab1a90bbf624ec4b6f105afcf4b4cf09f4bfc98f2a4ef32d2e883bc0e450e2",
+      "sha256": "sha256:efe9598c8ae47aaad1ee74276e8fca1462382d2d0ac1e0c809d9139e96dd4ef9",
       "mode": "0644"
     },
     {
@@ -7731,6 +7737,48 @@
       "path": "packages/domain/src/consequence-gate.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:c832d788cf43562c455e5049bc08e6a6a68958daa22db54618c04fe76b9a6847",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/canonical-inputs.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:725256d6168a15148dcfe271f39e18afbc1d0bac5e6ab15238ec7b918318d51e",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/consequence-derivation.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:e70ec2febc0f9be496a8731e049039c9a75a6c80fe21dcf5a9e7466c3c4e9e37",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/explanation.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ebd6b45b8e9ef3fbafb76318417d64e9799e7ddf396f2f33977208762da91b5b",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/operational-consequences.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:9e4c144ee656c443a396ebd1b18e3f8eddc1252ebf6003de15e656d60b4afffb",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/operational-relationships.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ccfc059269c3de9e02d0305e5e7830c4ee901d4bda0c9803e85a03bb85e8e567",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/priority-ordering.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:71aba9b922215251c2f7f910f096ad60fa7d8427653a167a8a7c7658b646f623",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/shared-dependency.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:c49b83f66ba4ebcc12729b233fbf80858e69c6ed3995f2863bd378ea1c219d96",
       "mode": "0644"
     },
     {
@@ -8378,7 +8426,7 @@
     {
       "path": "packages/domain/src/fieldnet/mission-command.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:4660d3ed1f077f634f6ea3a76e5a4f1c5a34d03db234cc4594f08f384aa211c1",
+      "sha256": "sha256:4a07e217f171f4ba4cc494ed1eb7a6ab1c5d75247ed0815c95217a82216b9225",
       "mode": "0644"
     },
     {
@@ -8924,7 +8972,7 @@
     {
       "path": "packages/domain/src/intelligence/road-observations.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:6dbf12726fd9fc016890f35bc6686b7e1610a1c1734809bb9fa0c95b91dd656f",
+      "sha256": "sha256:0052b24db7e19267b9c18476719faa008952067f41f816bfc1f4ead09e01c170",
       "mode": "0644"
     },
     {
@@ -9717,6 +9765,30 @@
       "path": "packages/domain/test/consequence-gate.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:a4af2de9f1ae557512fd874557c52f04a834baf475958d66b93b79a6e24f991a",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/consequence-fixture.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:5ce1d1a84da1e83ce691121de4a930c77aa9c5295e6d5bde564c2352c996f8ed",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/consequence-projection.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:c0b3b19b2d32b809bbc1a6b8bd1d0730869f4a8c0bc64e0ee8f4c7831c2adb55",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/consequence-truth-and-determinism.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:191c78e6ad08cbe475526e7a4feec906a9dc0f3a60bb86ec7f54065aa73bd419",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/operational-consequences.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:4f97279a0bce266399b8c44e0bb03c45a7e2a7eeeca817e632f2c8b3118a63f9",
       "mode": "0644"
     },
     {

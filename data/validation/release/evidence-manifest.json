@@ -1,56 +1,10 @@
 {
   "schemaVersion": "vigia.evidence-manifest.v2",
-  "generatedAt": "2026-09-14T18:45:24.646Z",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
-  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
+  "generatedAt": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
+  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
-  "entries": [
-    {
-      "path": "data/validation/release/checkpoint-commands.sh",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/checkpoint-handoff.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/current-release-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/dirty-tree-classification.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/evidence-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/ignored-runtime-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/release-source-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/release-statement.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    },
-    {
-      "path": "data/validation/release/unknown-path-report.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE"
-    }
-  ],
+  "entries": [],
   "deploymentEntries": [
     {
       "path": "data/reference/community-intelligence/C21_LUGF0705.zip",

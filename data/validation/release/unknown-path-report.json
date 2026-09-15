@@ -1,15 +1,12 @@
 {
   "schemaVersion": "vigia.unknown-path-report.v1",
-  "generatedAt": "2026-09-14T18:45:24.646Z",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
+  "generatedAt": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
   "unknownCount": 0,
   "entries": [],
   "ruleCoverage": {
-    "dirtyPaths": 12,
-    "classifications": {
-      "GOVERNED EVIDENCE": 9,
-      "SOURCE — release code": 3
-    },
+    "dirtyPaths": 0,
+    "classifications": {},
     "qualification": "Every dirty path is deterministically classified; the fallback class is REFERENCE DATA, never silent UNKNOWN."
   }
 }

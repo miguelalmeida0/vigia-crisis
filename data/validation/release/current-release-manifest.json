@@ -1,15 +1,15 @@
 {
   "schemaVersion": "vigia.current-release-manifest.v2",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
-  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
+  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
-  "buildTimestamp": "2026-09-14T18:45:24.646Z",
+  "buildTimestamp": "2026-09-15T06:32:45.725Z",
   "runtimeProfile": "local_shadow",
   "canonicalOperatorConsole": {
     "path": "apps/operator-console",
     "origin": "http://127.0.0.1:4190",
     "backendOrigin": "http://127.0.0.1:4177",
-    "sourceHash": "sha256:2bdb2fc788c4f497f60303efb627a0246723af75d82613a8275175c99e7393bd"
+    "sourceHash": "sha256:0928d65aab9c36527a049d2d5b2c7f4cbc53069771068ff1ca517ed06f1eb4c5"
   },
   "canonicalBrowserContract": {
     "path": "apps/web/src/v2/release-compatibility.js",
@@ -41,7 +41,7 @@
     "ontologyContractVersion": "vigia.crisis-ontology.v1",
     "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
   },
-  "webBuildVersion": "decision-os-web-v1+96381a9f",
+  "webBuildVersion": "decision-os-web-v1+b48a6a63",
   "requiredRoutes": {
     "central": [
       {
@@ -293,40 +293,12 @@
     "entries": []
   },
   "worktree": {
-    "dirtyPaths": 12,
-    "classifications": {
-      "GOVERNED EVIDENCE": 9,
-      "SOURCE — release code": 3
-    },
+    "dirtyPaths": 0,
+    "classifications": {},
     "unknownCount": 0,
     "gitWritable": false,
     "checkpointMode": "DETERMINISTIC_COMMAND_HANDOFF",
-    "checkpoints": [
-      {
-        "id": "physical-sensing",
-        "title": "Physical sensing and provider truth",
-        "pathCount": 1,
-        "commitMessage": "checkpoint(physical-sensing): physical sensing and provider truth"
-      },
-      {
-        "id": "measurement-science",
-        "title": "Validation and measurement science",
-        "pathCount": 8,
-        "commitMessage": "checkpoint(measurement-science): validation and measurement science"
-      },
-      {
-        "id": "command-product",
-        "title": "Command and Decision OS product",
-        "pathCount": 2,
-        "commitMessage": "checkpoint(command-product): command and decision os product"
-      },
-      {
-        "id": "governed-evidence",
-        "title": "Remaining governed evidence and documentation",
-        "pathCount": 1,
-        "commitMessage": "checkpoint(governed-evidence): remaining governed evidence and documentation"
-      }
-    ],
+    "checkpoints": [],
     "checkpointHandoff": "data/validation/release/checkpoint-handoff.json",
     "checkpointCommands": "data/validation/release/checkpoint-commands.sh"
   },
@@ -367,6 +339,6 @@
       "reason": "Canonical operator browser certification has not been executed for this release identity."
     }
   },
-  "manifestEvidenceHash": "sha256:f55c3cf0d2f077bacfe797f8616e13db61a94b010209f7497a8e0819f7118e5c",
-  "releaseStatementHash": "sha256:387abfc92b7b4242c6e443cf99a636d34771e3a5ee23e71334b02d74cfd6bc75"
+  "manifestEvidenceHash": "sha256:17a2285a07558521e80d6b171a71818cb3ac1112e31a846ae02d4948539f183c",
+  "releaseStatementHash": "sha256:7732dfb1a2b748faefbc5e4749091ef9cd3bd38b68d5653b9b41350fa8650fa1"
 }

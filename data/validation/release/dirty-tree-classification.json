@@ -1,103 +1,18 @@
 {
   "schemaVersion": "vigia.dirty-tree-classification.v1",
-  "generatedAt": "2026-09-14T18:45:24.646Z",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
-  "codeStateHash": "sha256:8cc08976e32d19f8fc77219afd100fc3b498cb47a81c226fe6a4f1fff6696595",
+  "generatedAt": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
+  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
   "groups": {
-    "A. application source": 2,
+    "A. application source": 0,
     "B. tests": 0,
-    "C. configuration/build/release scripts": 1,
+    "C. configuration/build/release scripts": 0,
     "D. governed/reference data": 0,
-    "E. generated validation evidence": 9,
+    "E. generated validation evidence": 0,
     "F. temp/cache/runtime junk": 0
   },
   "stagedNow": [],
-  "entries": [
-    {
-      "path": "apps/operator-console/src/approved/ui/mission-command.js",
-      "status": " M",
-      "classification": "SOURCE — release code",
-      "group": "A. application source",
-      "staged": false
-    },
-    {
-      "path": "apps/operator-console/src/field-team-offline.js",
-      "status": " M",
-      "classification": "SOURCE — release code",
-      "group": "A. application source",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/checkpoint-commands.sh",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/checkpoint-handoff.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/current-release-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/dirty-tree-classification.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/evidence-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/ignored-runtime-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/release-source-manifest.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/release-statement.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "data/validation/release/unknown-path-report.json",
-      "status": " M",
-      "classification": "GOVERNED EVIDENCE",
-      "group": "E. generated validation evidence",
-      "staged": false
-    },
-    {
-      "path": "scripts/mega_ix_local_acceptance.mjs",
-      "status": " M",
-      "classification": "SOURCE — release code",
-      "group": "C. configuration/build/release scripts",
-      "staged": false
-    }
-  ],
+  "entries": [],
   "largeSetReview": {
     "D": {
       "reproducible": "MIXED",

@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vigia.ignored-runtime-manifest.v1",
-  "generatedAt": "2026-09-14T18:45:24.646Z",
-  "releaseId": "vigia-intelligence-fabric-96381a9f758c6c3a",
+  "generatedAt": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
   "entries": [
     {
       "path": "_RECOVERY_SNAPSHOTS/",
