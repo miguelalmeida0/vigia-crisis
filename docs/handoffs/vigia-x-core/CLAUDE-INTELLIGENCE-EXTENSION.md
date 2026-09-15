@@ -2,7 +2,15 @@
 
 **Base** `integration/vigia-mega-ix-viii` @ `75b1eaa`
 **Branch** `claude/vigia-x-core-consequence-engine`
-**Commit** `c5891e7` — *VIGIA XI: causal resilience and decision intelligence*
+**Commits** `c5891e7` — *VIGIA XI: causal resilience and decision intelligence*
+`360b5f6` — *Close the stale-truth loop: expiry raises its own consequence*
+
+**Applying onto `integration/vigia-x-core`:** use `VIGIA-XI-ONLY.patch`, which is
+cut against the VIGIA X tree your baseline already contains. It touches only four
+pre-existing files, all of them VIGIA X modules (`canonical-inputs`,
+`operational-relationships`, `operational-consequences`, `priority-ordering`);
+everything else is new. The full four-commit patch also exists but would
+re-apply VIGIA X.
 
 Companion to `CODEX-HANDOFF.md`, which documents the VIGIA X consequence
 pipeline. **Read that first.** This extends it; nothing in it was redesigned,
@@ -164,6 +172,32 @@ score anywhere**:
 > Expired road information does not mean the road is blocked, and it does not
 > mean the road is open. It means the stored information can no longer support a
 > conclusion.
+
+### Expiry raises its own trigger
+
+Stale information is a third trigger source alongside field reports and official
+restrictions — because no report or restriction will ever arrive to announce that
+a fact aged out:
+
+```
+kind       STALE_DEPENDENCY
+authority  NO_CURRENT_INFORMATION     (neither observation nor official record)
+establishesOfficialClosure  false
+```
+
+It fires only for roads an **active** watched objective depends on; an expired
+fact with no dependent decision is not an operational event (test M4).
+`tierFor()` ranks it through `classifyStaleness`, so the sole support for fire
+response outranks a road whose service keeps an alternative — never by pretending
+the road was reported unusable.
+
+Wording, in every claim-bearing field:
+
+> EM527 NEEDS CHECKING
+> Road information for EM527 was last checked 2h 18m ago and can no longer support a conclusion.
+> Confirm EM527 before relying on this route.
+
+Never blocked. Never open. Test M3 scans every field except `truthBoundary`.
 
 **Mission state is not touched.** The existing `evaluateMission()` already moves
 a mission to `UNKNOWN` with *"Road information has not been checked recently."*
@@ -362,22 +396,23 @@ only candidate routes are visited. That change is contained to
 
 ## 12. Tests
 
-**72 consequence tests, all passing** (37 VIGIA X preserved + 35 new).
+**78 consequence tests, all passing** (37 VIGIA X preserved + 41 new).
 
 ```bash
 mkdir -p .tmp/test
 TMPDIR=$PWD/.tmp/test node --test --test-concurrency=1 packages/domain/test/consequences/*.test.mjs
-# expected: # tests 72 · # pass 72 · # fail 0
+# expected: # tests 78 · # pass 78 · # fail 0
 ```
 
 | File | Cases |
 |---|---|
 | `causal-resilience.test.mjs` | A causal chain · B stale critical · C stale noncritical · G knowledge loss · J confirmation |
 | `resilience-cutsets.test.mjs` | D common mode · E multi-dependency cut · F what still works · H Intelligence VIII · I priority explanation · K compression · L index equality |
+| `stale-dependency.test.mjs` | M expiry raises its own consequence |
 | `consequence-fixture-xi.mjs` | `staleRoadScenario`, `disjointRoutes`, `confirmation`, `officialRestriction`, `unusedWeatherFact` |
 
 Regression: full `npm test` — **87 failing before this work, 87 after**; added
-and removed failure sets both empty by sorted test name. Test count 1471 → 1543.
+and removed failure sets both empty by sorted test name. Test count 1471 → 1549.
 `scripts/check.mjs` shows the same two pre-existing violations as baseline and
 none from this work.
 
@@ -392,21 +427,25 @@ none from this work.
    previous projection to diff against — suggested: store the last projection's
    `{at, missions, consequences}` per group and call `causalTransition` on each
    evaluation. This is the last wiring step between the engine and the UI.
-2. **Wire freshness into consequence tiers.** `UNRESOLVED_OR_STALE_DEPENDENCY`
-   exists in `PRIORITY_TIERS` but `tierFor()` in `consequence-derivation.mjs`
-   does not yet consult `classifyStaleness`. Feed `routeSupportingFacts` results
-   in so a critical stale dependency ranks as a consequence, not only as a
-   verification need.
-3. **Emit verification needs from the service.** `verificationNeeds()` is pure
-   and tested; nothing calls it in `team-service.mjs` yet. Call it alongside
-   `operationalConsequences()` and pass the result to the existing collection
-   lifecycle.
-4. **Render "Needs checking" in Important Now** using `operatorWording()`. The
-   card module (`operational-consequence.js`) is the place; keep the vocabulary
-   rule from `CODEX-HANDOFF.md` §2.7.
-5. **Resilience query surface.** `resilienceQuery` has no route or UI. Suggested:
+2. **Pass `sourceLastCheckedAt` from the service.** `operationalConsequences()`
+   accepts it and the stale-dependency trigger depends on it; `team-service.mjs`
+   currently passes only `sourceValidUntil`, so expiry consequences will not fire
+   in the product until the road-coverage last-check time is threaded through.
+   One argument, one line — but without it the whole stale path stays dark.
+3. **Render "Needs checking" in Important Now.** `result.verificationNeeds` is
+   now produced by the pipeline; use `operatorWording()` for the text. Keep the
+   vocabulary rule from `CODEX-HANDOFF.md` §2.7.
+4. **Resilience query surface.** `resilienceQuery` has no route or UI. Suggested:
    a read-only GET under the operator namespace taking assumption kind + subject,
    rendering `services[]` with the `assumptionText` banner always visible.
+5. **Feed needs into the collection lifecycle.** The requirements are emitted and
+   tasking-ready; nothing yet reconciles them across evaluations with
+   `reconcileRequirements()`.
+
+**Closed since the first draft of this document:** `tierFor()` now consults
+`classifyStaleness`, and `operationalConsequences()` now emits
+`verificationNeeds` itself. Both were listed here as open; both are done and
+tested (cases M1-M6).
 
 ### P1
 
