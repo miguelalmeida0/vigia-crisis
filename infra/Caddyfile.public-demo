@@ -1,0 +1,31 @@
+{
+  admin off
+  email {$VIGIA_PUBLIC_TLS_EMAIL}
+}
+
+{$VIGIA_PUBLIC_AUTHORITY} {
+  encode zstd gzip
+
+  header {
+    Strict-Transport-Security "max-age=31536000; includeSubDomains"
+    X-Content-Type-Options "nosniff"
+    Referrer-Policy "no-referrer"
+    Permissions-Policy "camera=(), microphone=(), geolocation=()"
+    X-Frame-Options "DENY"
+    -Server
+  }
+
+  request_body {
+    max_size 2MB
+  }
+
+  reverse_proxy web:4190 {
+    header_up Host {host}
+    header_up X-Forwarded-Proto https
+  }
+
+  log {
+    output stdout
+    format json
+  }
+}
