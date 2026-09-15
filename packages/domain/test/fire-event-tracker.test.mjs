@@ -60,6 +60,27 @@ test('living-fire geometry emits one physical frame per acquisition instant', ()
   assert.deepEqual(event.geometryTimeline.map((frame)=>frame.at),['2026-08-08T14:10:00.000Z','2026-08-08T14:40:00.000Z']);
 });
 
+test('a second observation associated with an existing event never leaves a circular associationDecisions entry', () => {
+  // Regression for the isolated VIGIA Portfolio Demo failure: chooseEventHypothesis
+  // returns decision.target as a live reference to the in-progress event object.
+  // A prior bug spread that whole decision (including target) into the same
+  // event's own associationDecisions array, producing event.associationDecisions[i].target
+  // === event — a direct cycle that crashes JSON.stringify wherever the event is
+  // serialized (API responses, canonical-incident-index projection fingerprint).
+  const events = buildFireEvents({
+    fires: [],
+    thermalDetections: [
+      { id: 'circ-a', coordinate: [-8.15, 39.9167], observedAt: '2026-08-08T14:00:00Z', frpMw: 12, satellite: 'NOAA-20' },
+      { id: 'circ-b', coordinate: [-8.151, 39.9168], observedAt: '2026-08-08T14:20:00Z', frpMw: 16, satellite: 'NOAA-21' }
+    ]
+  }, { now });
+  assert.equal(events.length, 1);
+  assert.ok(events[0].associationDecisions.length >= 1);
+  assert.doesNotThrow(() => JSON.stringify(events[0]));
+  assert.doesNotThrow(() => JSON.stringify(events));
+  for (const decision of events[0].associationDecisions) assert.equal('target' in decision, false);
+});
+
 test('two nearby provider incidents remain separate and midpoint evidence abstains', () => {
   const events = buildFireEvents({
     fires: [

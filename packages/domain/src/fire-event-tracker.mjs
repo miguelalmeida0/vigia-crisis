@@ -51,7 +51,17 @@ function eligible(event, observation, options) {
   const sameIncident = observation.incidentId && event.incidentIds.has(observation.incidentId);
   return { score: (sameIncident ? -10 : 0) + (samePlace ? -1.2 : 0) + distanceKm + gapHours * .12, distanceKm, gapHours, sameIncident: Boolean(sameIncident), samePlace };
 }
-function temporaryEvent(observation, decision = null) { return { observations: [observation], incidentIds: new Set(observation.incidentId ? [observation.incidentId] : []), manualEventId: observation.manualEventId ?? null, associationDecisions: decision ? [{ observationId: observation.id, at: observation.at, ...decision }] : [] }; }
+// `decision.target` (see chooseEventHypothesis in event-association.mjs) is a
+// live reference to an in-progress event object, needed only so the tracker's
+// own loop knows which object to mutate. It must never be persisted into a
+// stored associationDecisions record: that record is serialized (API
+// responses, the projection fingerprint, replay export) and the same event
+// this decision is attached to can itself be that live target, producing a
+// direct self-reference (event.associationDecisions[i].target === event).
+// Nothing downstream reads associationDecisions[].target; decision.best already
+// carries the target event's id where relevant.
+function serializableAssociationDecision(decision) { const { target, ...rest } = decision ?? {}; return rest; }
+function temporaryEvent(observation, decision = null) { return { observations: [observation], incidentIds: new Set(observation.incidentId ? [observation.incidentId] : []), manualEventId: observation.manualEventId ?? null, associationDecisions: decision ? [{ observationId: observation.id, at: observation.at, ...serializableAssociationDecision(decision) }] : [] }; }
 function reportWindowContains(report,observation){const at=Date.parse(observation.at),start=Date.parse(report.reportedStartedAt??report.at)-12*3_600_000,end=Number.isFinite(Date.parse(report.extinctionAt??''))?Date.parse(report.extinctionAt)+24*3_600_000:Date.parse(report.at)+7*24*3_600_000;return at>=start&&at<=end;}
 function reconcileWithVisibleReportAnchors(events,options){
   const all=events.flatMap((event)=>event.observations),reports=all.filter((item)=>item.type==='report');
@@ -151,7 +161,7 @@ export function trackFireEvents(observations, { now = new Date(), ...overrides }
     const target = decision.target ?? temporaryEvent(observation, decision);
     if (!decision.target) events.push(target); else {
       target.observations.push(observation); if (observation.incidentId) target.incidentIds.add(observation.incidentId);
-      target.associationDecisions ??= []; target.associationDecisions.push({ observationId: observation.id, at: observation.at, ...decision });
+      target.associationDecisions ??= []; target.associationDecisions.push({ observationId: observation.id, at: observation.at, ...serializableAssociationDecision(decision) });
     }
   }
   events=reconcileWithVisibleReportAnchors(events,options);
