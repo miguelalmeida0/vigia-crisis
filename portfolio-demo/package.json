@@ -1,0 +1,14 @@
+{
+  "name": "vigia-portfolio-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test scenario.test.mjs browser-build.test.mjs"
+  },
+  "dependencies": {
+    "@noble/hashes": "2.4.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

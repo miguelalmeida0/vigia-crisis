@@ -1,0 +1,10 @@
+/* Public scenario chrome inherits the approved operational design system. */
+.demo-orientation{border-left:3px solid #987020;padding:14px 18px;background:#faf8ef;margin-bottom:20px;font-size:13px;line-height:1.5}
+.demo-orientation p{margin:8px 0;max-width:90ch}.demo-orientation .btn{min-height:44px;white-space:normal}
+.demo-mission{padding:16px 0;border-bottom:1px solid #d9dfe1}.demo-mission h3{margin:0 0 6px}.demo-mission p{margin:8px 0;line-height:1.5}
+.demo-planning{margin-top:20px}.demo-planning summary{cursor:pointer;padding:12px 0;min-height:44px}.demo-planning article{padding:12px 0;border-bottom:1px solid #d9dfe1}.demo-wide{margin-top:20px;max-width:100%}
+#demo-map{height:100%;min-height:300px;width:100%}.demo-map-note{position:absolute;bottom:8px;left:8px;right:48px;background:#ffffffed;font-size:11px;line-height:1.5;padding:5px 8px;pointer-events:none}
+.demo-map-marker{background:#9a3835;color:white;border:2px solid white;padding:9px;border-radius:4px;min-height:44px;cursor:pointer}.demo-road-label{background:white;color:#253f3c;padding:4px;font-size:12px}
+.demo-dialog{max-width:560px;width:calc(100% - 32px);max-height:85vh;padding:24px;border:1px solid #bcc7ca;border-radius:8px;color:#24363b;background:white}.demo-dialog::backdrop{background:#10232988}.demo-dialog h2{margin:16px 0}.demo-dialog article{padding:16px 0;border-top:1px solid #d9dfe1}.demo-dialog p{line-height:1.6}
+.demo-nav-open .vg-sidebar{transform:translateX(0)!important;visibility:visible!important}.demo-nav-open .mobile-shade{display:block!important}
+@media(max-width:600px){.demo-orientation{padding:12px}.demo-orientation .mc-actions{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.demo-orientation strong{font-size:11px}.demo-map-note{font-size:10px}.demo-planning p{overflow-wrap:anywhere}.maplibregl-ctrl button{min-height:44px;min-width:44px}}
