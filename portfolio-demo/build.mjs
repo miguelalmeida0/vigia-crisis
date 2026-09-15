@@ -22,6 +22,19 @@ await writeFile(resolve(out,'demo.css'),css.join('\n'));
 html=html.replace(/  <link[^>]+>\n/g,'').replace('</head>','  <link rel="stylesheet" href="./demo.css" />\n</head>').replace('./src/app.js?v=3.1.0','./demo.js').replace('VIGIA — Operator Command','VIGIA — Synthetic Portfolio Scenario');
 await writeFile(resolve(out,'index.html'),html);
 for(const file of ['maplibre-gl-worker.mjs','maplibre-gl-shared.mjs'])await copyFile(resolve(root,'apps/operator-console/assets/vendor/maplibre-gl',file),resolve(out,file));
+
+// Publish a small, curated set of real VIGIA interface captures for the portfolio.
+// These remain presentation assets only; the public demo runtime still uses the
+// synthetic scenario and has no operational transport, storage, auth or dispatch.
+const portfolioMediaDir=resolve(out,'portfolio-media');
+await mkdir(portfolioMediaDir,{recursive:true});
+const portfolioMediaSource=resolve(root,'docs/handoffs/VIGIA_CRITICAL_OPERATIONAL_RECOVERY_2026-09-03/evidence/current-ui');
+for(const [source,target] of [
+ ['06-intelligence.png','intelligence.png'],
+ ['07-operations-action-1.png','operations.png'],
+ ['01-command-overview.png','command-overview.png']
+]) await copyFile(resolve(portfolioMediaSource,source),resolve(portfolioMediaDir,target));
+
 await writeFile(resolve(out,'_headers'),"/*\n  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'\n  Referrer-Policy: no-referrer\n  X-Content-Type-Options: nosniff\n");
 await writeFile(resolve(here,'build-inputs.json'),JSON.stringify(Object.keys(result.metafile.inputs),null,2));
 console.log('Static portfolio artifact:',out);
