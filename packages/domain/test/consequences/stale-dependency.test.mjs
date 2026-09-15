@@ -68,3 +68,20 @@ test('M6 · current road information raises nothing, so the path stays quiet whe
   assert.equal(operationalConsequences(em527Scenario({reports: []})).total, 0);
   assert.equal(operationalConsequences(em527Scenario()).consequences.every((row) => row.kind === 'FIELD_REPORT'), true);
 });
+
+// --- N. NO RAW IDENTIFIER REACHES AN OPERATOR SENTENCE ---------------------
+
+test('N1 · causal narratives use the service label, never the raw service id', async () => {
+  const {operationalProjection} = await import('../../src/consequences/operational-consequences.mjs');
+  const {causalTransition} = await import('../../src/consequences/causal-transition.mjs');
+  const {EARLIER_AT} = await import('./consequence-fixture-xi.mjs');
+  const transition = causalTransition({
+    previous: operationalProjection({...em527Scenario({reports: [], at: EARLIER_AT}), at: EARLIER_AT}),
+    current: operationalProjection(em527Scenario())
+  });
+  const narrative = [...transition.whyItChanged, ...transition.unexplainedChanges].join(' ');
+  assert.match(narrative, /healthcare moved GOOD → PROBLEM because/);
+  assert.match(narrative, /fire response moved GOOD → PROBLEM because/);
+  assert.doesNotMatch(narrative, /emergency_hospital|fire_response|designated_reception/,
+    'raw service identifiers must not appear in operator-facing sentences');
+});

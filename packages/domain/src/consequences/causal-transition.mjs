@@ -1,4 +1,5 @@
 import {hash} from '../intelligence/world-knowledge.mjs';
+import {SERVICE_LABELS} from './canonical-inputs.mjs';
 
 // TEMPORAL CAUSAL REASONING.
 //
@@ -96,6 +97,8 @@ export function causalTransition({previous, current}) {
       : null;
     const transition = {
       missionId: mission.id, objective: mission.objective, subjectName: mission.subjectName, service: mission.service,
+      // Operator-facing label. The raw service id must never reach a sentence.
+      serviceLabel: SERVICE_LABELS[mission.service] ?? mission.service,
       previousState, currentState: mission.state, changed,
       relation, connective: relationOf(relation).connective, evidenceStrength: relationOf(relation).strength,
       causedByConsequenceId: cause?.id ?? null,
@@ -127,9 +130,9 @@ export function causalTransition({previous, current}) {
     missionTransitions,
     whatChanged: consequencesAdded.map((id) => after.get(id).explanation?.whatChanged).filter(Boolean),
     // Only proven links are phrased as causes. Everything else says "after".
-    whyItChanged: caused.map((row) => `${row.subjectName} ${row.service} moved ${row.previousState} → ${row.currentState} ${row.connective} ${after.get(row.causedByConsequenceId)?.explanation?.whatChanged ?? 'a derived dependency changed.'}`),
+    whyItChanged: caused.map((row) => `${row.subjectName} ${row.serviceLabel} moved ${row.previousState} → ${row.currentState} ${row.connective} ${after.get(row.causedByConsequenceId)?.explanation?.whatChanged ?? 'a derived dependency changed.'}`),
     unexplainedChanges: missionTransitions.filter((row) => row.relation === 'FOLLOWED')
-      .map((row) => `${row.subjectName} ${row.service} moved ${row.previousState} → ${row.currentState} after this projection. No derived dependency links it to the reported change.`),
+      .map((row) => `${row.subjectName} ${row.serviceLabel} moved ${row.previousState} → ${row.currentState} after this projection. No derived dependency links it to the reported change.`),
     factsUsed: [...new Set(caused.flatMap((row) => [...(row.factsUsed?.reportIds ?? []), ...(row.factsUsed?.restrictionIds ?? [])]))].sort(),
     truthBoundary: 'A transition compares two projections of retained records. A change is stated as a cause only where the derivation established the dependency; everything else is reported as having changed after, not because.'
   };
