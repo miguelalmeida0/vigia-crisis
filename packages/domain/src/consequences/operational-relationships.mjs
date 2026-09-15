@@ -1,6 +1,7 @@
 import {reportMatches} from '../fieldnet/mission-command.mjs';
 import {roadObservationApplies} from '../intelligence/road-observations.mjs';
 import {namedRoadKeys, spatialCandidates, withinBoundingBox} from './canonical-inputs.mjs';
+import {factFreshness} from './freshness.mjs';
 
 // Layer 2: OPERATIONAL RELATIONSHIPS.
 //
@@ -144,5 +145,62 @@ export function buildOperationalRelationships(inputs) {
     });
   }
 
+  // A third trigger source, and the one that is easiest to leave out: nothing
+  // happened. Road information supporting a stored route simply aged past its
+  // validity, and no report or restriction will ever arrive to say so.
+  //
+  // Without this, an expired dependency is invisible at the consequence layer
+  // and only surfaces if something else independently draws attention to the
+  // road. That is exactly the failure mode stale-truth reasoning exists to
+  // prevent, so expiry raises its own trigger.
+  for (const trigger of staleDependencyTriggers(inputs)) triggers.push(trigger);
+
   return {at: inputs.at, triggers: triggers.sort((left, right) => left.triggerId.localeCompare(right.triggerId))};
+}
+
+/**
+ * Roads whose supporting information has expired AND which an active watched
+ * objective currently depends on. Roads nothing active depends on raise nothing:
+ * an expired fact with no dependent decision is not an operational event.
+ */
+function staleDependencyTriggers(inputs) {
+  const freshness = factFreshness({factId: 'road-information', kind: 'ROAD_INFORMATION',
+    lastCheckedAt: inputs.sourceLastCheckedAt, validUntil: inputs.sourceValidUntil}, inputs.at);
+  if (freshness.state !== 'EXPIRED') return [];
+
+  const byRoad = new Map();
+  for (const [key, rows] of inputs.routesByServiceSubject) {
+    const active = (inputs.missionsByServiceSubject.get(key) ?? []).filter((mission) => mission.lifecycle === 'ACTIVE');
+    if (!active.length) continue;
+    for (const row of rows) {
+      for (const road of row.roadKeys ?? []) {
+        if (!byRoad.has(road)) byRoad.set(road, []);
+        byRoad.get(road).push({row, routeId: row.routeId, basis: 'NAMED_ROAD'});
+      }
+    }
+  }
+
+  return [...byRoad.entries()].sort((left, right) => left[0].localeCompare(right[0])).map(([road, links]) => ({
+    triggerId: `stale:${road}`,
+    kind: 'STALE_DEPENDENCY',
+    // Neither an observation nor an official record: an absence of current
+    // information. The wording rules follow from this field.
+    authority: 'NO_CURRENT_INFORMATION',
+    establishesOfficialClosure: false,
+    reportId: null,
+    restrictionId: null,
+    reportType: null,
+    reporterName: null,
+    locationName: road,
+    observedAt: freshness.lastCheckedAt,
+    receivedAt: freshness.lastCheckedAt,
+    validUntil: freshness.validUntil,
+    expired: true,
+    blocking: false,
+    freshness,
+    confirmations: [],
+    roads: [{road, basis: 'CONFIRMED'}],
+    routeLinks: links,
+    services: serviceView(links, inputs)
+  }));
 }

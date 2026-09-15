@@ -123,7 +123,7 @@ export function spatialCandidates(point, spatial) {
  * the relationship layer needs. `catalog` is the existing missionCatalog()
  * output: subjects -> services -> routes.
  */
-export function extractCanonicalInputs({catalog = [], missions = [], reports = [], confirmations = [], restrictions = [], sourceValidUntil = null, at}) {
+export function extractCanonicalInputs({catalog = [], missions = [], reports = [], confirmations = [], restrictions = [], sourceValidUntil = null, sourceLastCheckedAt = null, at}) {
   if (!at) throw Object.assign(new Error('consequence_evaluation_time_required'), {statusCode: 400});
 
   const routes = [];
@@ -186,6 +186,7 @@ export function extractCanonicalInputs({catalog = [], missions = [], reports = [
   return {
     at,
     sourceValidUntil,
+    sourceLastCheckedAt,
     routes,
     spatial: {cells, unindexed},
     routesByRoad,

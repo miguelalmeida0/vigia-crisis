@@ -23,6 +23,11 @@ export function describeTrigger(consequence) {
   if (consequence.kind === 'OFFICIAL_RESTRICTION') {
     return `A published restriction ${consequence.establishesOfficialClosure ? 'closes' : 'restricts'} ${road}.`;
   }
+  if (consequence.kind === 'STALE_DEPENDENCY') {
+    // Says only that the information aged out. Never that the road changed.
+    const age = consequence.freshness?.age;
+    return `Road information for ${road} was last checked ${age ?? 'at an unrecorded time'} ago and can no longer support a conclusion.`;
+  }
   const what = {ROAD_BLOCKED: 'was blocked', ROAD_PARTIAL: 'was partially blocked', DAMAGE: 'was damaged', FACILITY_UNAVAILABLE: 'was unavailable'}[consequence.trigger.reportType] ?? 'was reported on';
   // "says" and not "is": the field report is the claim, not the conclusion.
   return `A field report says ${road} ${what}${at ? ` at ${at}` : ''}.`;
@@ -67,14 +72,18 @@ export function explainOperationalConsequence(consequence) {
     : first ? `${first.label} is shown first because ${tierText(first.tier)}.` : null;
 
   const checks = [];
+  if (consequence.kind === 'STALE_DEPENDENCY') checks.push(`Confirm ${road} before relying on this route.`);
   if (consequence.kind === 'FIELD_REPORT' && consequence.trigger.verification === 'UNCONFIRMED') checks.push(`This report has not been confirmed by a second responder.`);
   if (consequence.trigger.verification === 'CONFLICTING_REPORTS') checks.push('Responders disagree about this location.');
-  if (consequence.expired) checks.push('This observation is older than its check interval and needs a new check.');
+  // A stale dependency has no observation to be old; its own sentence covers it.
+  if (consequence.expired && consequence.kind !== 'STALE_DEPENDENCY') checks.push('This observation is older than its check interval and needs a new check.');
   for (const service of services) if (service.remainingOption) checks.push(`Condition of the ${service.serviceLabel} alternative is not confirmed.`);
   for (const shared of consequence.sharedDependencies) checks.push(shared.text + (shared.qualifier ? ` ${shared.qualifier}` : ''));
 
   return {
-    headline: first ? `${first.serviceLabel.toUpperCase()} ACCESS NEEDS ATTENTION` : `${road} NEEDS CHECKING`,
+    headline: consequence.kind === 'STALE_DEPENDENCY'
+      ? `${road} NEEDS CHECKING`
+      : first ? `${first.serviceLabel.toUpperCase()} ACCESS NEEDS ATTENTION` : `${road} NEEDS CHECKING`,
     summary: [whatChanged, whatElseIsAffected, ...perService, whatNeedsAttention].filter(Boolean).join(' '),
     whatChanged,
     whyItMatters: whyFirst,
@@ -98,6 +107,8 @@ export function explainOperationalConsequence(consequence) {
     ],
     truthBoundary: consequence.kind === 'FIELD_REPORT'
       ? 'This is a field observation reported by a responder. It is not an official restriction, and VIGIA has not established that the road is closed. Stored routes are calculated, not confirmed safe.'
-      : 'This is an official published restriction. Stored routes are calculated, not confirmed safe.'
+      : consequence.kind === 'STALE_DEPENDENCY'
+        ? 'Nothing was reported about this road. Its stored information passed its validity window, which does not mean the road is blocked and does not mean it is open. Stored routes are calculated, not confirmed safe.'
+        : 'This is an official published restriction. Stored routes are calculated, not confirmed safe.'
   };
 }

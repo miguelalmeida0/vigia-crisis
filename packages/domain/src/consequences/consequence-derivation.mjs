@@ -2,6 +2,7 @@ import {hash} from '../intelligence/world-knowledge.mjs';
 import {verification} from '../fieldnet/mission-command.mjs';
 import {describeSharedDependency, sharedRoadDependencies} from './shared-dependency.mjs';
 import {orderOperationalPriorities} from './priority-ordering.mjs';
+import {classifyStaleness} from './freshness.mjs';
 
 // Layers 3 and 4: CONSEQUENCE DERIVATION and MISSION IMPACT.
 //
@@ -47,6 +48,21 @@ function missionImpact(mission, affectedRouteIds, trigger) {
 
 function tierFor(missionImpacts, serviceCount, trigger) {
   const active = missionImpacts.filter((row) => row.lifecycle === 'ACTIVE');
+  // Expired information removes the ability to rely on a route; it does not
+  // remove the route. So a stale dependency is ranked by what depends on it,
+  // through the same staleness classification the verification layer uses, and
+  // never by pretending the road was reported unusable.
+  if (trigger.kind === 'STALE_DEPENDENCY') {
+    const classification = classifyStaleness(trigger.freshness, {
+      activeMissionCount: active.length,
+      missionsWithoutAlternative: active.filter((row) => row.remainingOptionCount === 0).length,
+      serviceCount,
+      routeIds: []
+    });
+    return classification.class === 'CRITICAL_SOLE_SUPPORT' ? 'ACTIVE_MISSION_NO_REMAINING_OPTION'
+      : classification.class === 'ELEVATED_SHARED_DEPENDENCY' ? 'SHARED_DEPENDENCY_ACROSS_SERVICES'
+        : 'UNRESOLVED_OR_STALE_DEPENDENCY';
+  }
   const lost = active.filter((row) => ['PROBLEM', 'UNKNOWN'].includes(row.state) && row.primaryAffected);
   if (lost.some((row) => row.remainingOptionCount === 0)) return 'ACTIVE_MISSION_NO_REMAINING_OPTION';
   if (lost.length) return 'ACTIVE_MISSION_ALTERNATIVE_RETAINED';
@@ -133,6 +149,7 @@ export function deriveConsequences(relationships, {incidentId, snapshotId = null
         locationName: trigger.locationName ?? null,
         verification: trigger.reportId ? verification({id: trigger.reportId, senderId: null}, trigger.confirmations).state : 'OFFICIAL_SOURCE'
       },
+      freshness: trigger.freshness ?? null,
       observedAt: trigger.observedAt,
       receivedAt: trigger.receivedAt,
       knownAt: relationships.at,

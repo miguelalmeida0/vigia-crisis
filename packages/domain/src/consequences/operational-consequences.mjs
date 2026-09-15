@@ -3,6 +3,7 @@ import {buildOperationalRelationships} from './operational-relationships.mjs';
 import {deriveConsequences} from './consequence-derivation.mjs';
 import {orderOperationalPriorities} from './priority-ordering.mjs';
 import {explainOperationalConsequence} from './explanation.mjs';
+import {verificationNeeds} from './verification-need.mjs';
 
 // Public entry point for the operational consequence engine.
 //
@@ -40,14 +41,26 @@ export {explainComparison} from './priority-ordering.mjs';
  * `missions` must be the output of evaluateMission(); this engine reads mission
  * state, it never decides it.
  */
-export function operationalConsequences({catalog = [], missions = [], reports = [], confirmations = [], restrictions = [], sourceValidUntil = null, at, incidentId, snapshotId = null, limit = 20}) {
+export function operationalConsequences({catalog = [], missions = [], reports = [], confirmations = [], restrictions = [], sourceValidUntil = null, sourceLastCheckedAt = null, at, incidentId, snapshotId = null, limit = 20}) {
   const startedAt = performance.now();
-  const inputs = extractCanonicalInputs({catalog, missions, reports, confirmations, restrictions, sourceValidUntil, at});
+  const inputs = extractCanonicalInputs({catalog, missions, reports, confirmations, restrictions, sourceValidUntil, sourceLastCheckedAt, at});
   const relationships = buildOperationalRelationships(inputs);
   const derived = deriveConsequences(relationships, {incidentId, snapshotId, generatedAt: at});
   const ordered = orderOperationalPriorities(derived.filter((consequence) => consequence.state !== 'NO_OPERATIONAL_LINK'));
 
   const consequences = ordered.slice(0, limit).map((consequence) => ({...consequence, explanation: explainOperationalConsequence(consequence)}));
+
+  // Priority #9, closed in the domain rather than left to a caller: whatever the
+  // engine concluded an operational decision now rests on is raised as an
+  // Intelligence VIII requirement, in that subsystem's own contract.
+  const freshnessByRoad = new Map();
+  for (const consequence of consequences) {
+    if (!consequence.freshness) continue;
+    for (const road of consequence.roads) freshnessByRoad.set(road.road, consequence.freshness);
+  }
+  const needs = consequences.flatMap((consequence) => verificationNeeds(consequence, {freshnessByRoad, at}));
+  const uniqueNeeds = [...new Map(needs.map((need) => [need.id, need])).values()]
+    .sort((left, right) => left.stalenessRank - right.stalenessRank || left.id.localeCompare(right.id));
 
   return {
     schemaVersion: 'vigia.operational-consequences.v1',
@@ -61,6 +74,8 @@ export function operationalConsequences({catalog = [], missions = [], reports = 
     total: ordered.length,
     returned: consequences.length,
     consequences,
+    // Consumable directly by nextVerificationTasks(); no second tasking system.
+    verificationNeeds: uniqueNeeds,
     counts: {
       triggers: relationships.triggers.length,
       routesIndexed: inputs.routes.length,
