@@ -1,4 +1,8 @@
 /* Public scenario chrome inherits the approved operational design system. */
+html{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto}
+body{height:auto;min-height:100%;overflow-x:hidden!important;overflow-y:auto!important}
+#app{height:auto;min-height:100vh;overflow:visible}
+.vg-main{min-height:100vh;overflow:visible}
 .demo-orientation{border-left:3px solid #987020;padding:14px 18px;background:#faf8ef;margin-bottom:20px;font-size:13px;line-height:1.5}
 .demo-orientation p{margin:8px 0;max-width:90ch}.demo-orientation .btn{min-height:44px;white-space:normal}
 .demo-mission{padding:16px 0;border-bottom:1px solid #d9dfe1}.demo-mission h3{margin:0 0 6px}.demo-mission p{margin:8px 0;line-height:1.5}
