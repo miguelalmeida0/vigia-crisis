@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: vigia-live
+    runtime: node
+    plan: free
+    region: frankfurt
+    repo: https://github.com/miguelalmeida0/vigia-crisis-os-claude.git
+    branch: deploy/vigia-xiii-backend-public-2026-09-15
+    buildCommand: node infra/render-live-build.mjs
+    startCommand: node infra/render-live-start.mjs
+    autoDeployTrigger: off
+    healthCheckPath: /__operator/ready
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VIGIA_LOCAL_SECRETS_DISABLED
+        value: "1"
+      - key: VIGIA_OPERATOR_PUBLIC_AUTHORITY
+        value: vigia-live.onrender.com
+      - key: VIGIA_DATABASE_URL
+        fromDatabase:
+          name: vigia-public-demo-db
+          property: connectionString
