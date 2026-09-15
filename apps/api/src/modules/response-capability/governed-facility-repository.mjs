@@ -6,6 +6,7 @@ import { retrieveFacilityCandidates } from './facility-retrieval.mjs';
 
 const DEFAULT_ARCHIVE_PATH = 'data/reference/operational-proof/raw/osm-community-medical-fire-protected.json';
 const DEFAULT_CONTEXT_PATH = 'data/reference/operational-proof/governed-incident-context.json';
+const DEFAULT_PUBLIC_FALLBACK_PATH = 'data/reference/facility-intelligence/pilot-baseline.json';
 
 const text = (value) => typeof value === 'string' && value.trim() ? value.trim() : null;
 const number = (value) => {
@@ -115,21 +116,80 @@ export function osmElementToResponseFacility(element, provenance) {
   };
 }
 
+function pilotRecordToOsmElement(record) {
+  const match = /^osm:(node|way|relation):(\d+)$/.exec(String(record?.id ?? ''));
+  const coordinate = Array.isArray(record?.coordinate) ? record.coordinate : [];
+  if (!match || coordinate.length !== 2 || !coordinate.every(Number.isFinite)) return null;
+  const address = record?.address ?? {};
+  const tags = {
+    ...(record?.sourceTags ?? {}),
+    name: record?.sourceTags?.name ?? record?.canonicalName ?? record?.name,
+    operator: record?.sourceTags?.operator ?? record?.operator,
+    phone: record?.sourceTags?.phone ?? record?.phone,
+    website: record?.sourceTags?.website ?? record?.website,
+    'addr:street': record?.sourceTags?.['addr:street'] ?? address.street,
+    'addr:housenumber': record?.sourceTags?.['addr:housenumber'] ?? address.houseNumber,
+    'addr:postcode': record?.sourceTags?.['addr:postcode'] ?? address.postcode,
+    'addr:city': record?.sourceTags?.['addr:city'] ?? address.locality
+  };
+  return { type: match[1], id: match[2], lon: coordinate[0], lat: coordinate[1], tags: Object.fromEntries(Object.entries(tags).filter(([, value]) => value !== undefined && value !== null && value !== '')) };
+}
+
 export class GovernedResponseFacilityRepository {
   #facilities = [];
   #source = null;
   #initialized = false;
 
-  constructor({ projectRoot = process.cwd(), archivePath = null, contextPath = DEFAULT_CONTEXT_PATH } = {}) {
+  constructor({ projectRoot = process.cwd(), archivePath = null, contextPath = DEFAULT_CONTEXT_PATH, publicFallbackPath = DEFAULT_PUBLIC_FALLBACK_PATH } = {}) {
     this.projectRoot = projectRoot;
     this.explicitArchivePath = archivePath;
     this.archivePath = archivePath ? path.resolve(projectRoot, archivePath) : null;
     this.contextPath = path.resolve(projectRoot, contextPath);
+    this.publicFallbackPath = path.resolve(projectRoot, publicFallbackPath);
     this.archiveReference = this.archivePath ? path.relative(projectRoot, this.archivePath) : null;
   }
 
+  async #initializeFromCommittedPilotBaseline(reason) {
+    const bytes = await readFile(this.publicFallbackPath);
+    const baseline = JSON.parse(bytes.toString('utf8'));
+    const archive = baseline?.sourceArchive ?? {};
+    const provenance = {
+      provider: archive.provider ?? 'OpenStreetMap contributors via Overpass API',
+      licence: archive.license ?? 'ODbL 1.0; attribution required',
+      retrievedAt: archive.retrievedAt ?? null,
+      archivePath: path.relative(this.projectRoot, this.publicFallbackPath),
+      archiveSha256: `sha256:${createHash('sha256').update(bytes).digest('hex')}`,
+      derivedFromArchivePath: archive.path ?? null,
+      derivedFromArchiveSha256: archive.sha256 ?? null,
+      query: null,
+      purpose: 'PILOT_BASELINE_FALLBACK',
+      fallbackReason: reason,
+      limitation: 'The local governed operational-proof archive is intentionally excluded from Git. This public deployment uses the committed reviewed pilot baseline only; it does not represent exhaustive Portugal-wide facility coverage.'
+    };
+    this.#facilities = (baseline?.records ?? [])
+      .map(pilotRecordToOsmElement)
+      .filter(Boolean)
+      .map((element) => osmElementToResponseFacility(element, provenance))
+      .filter(Boolean);
+    this.#source = {
+      ...provenance,
+      records: this.#facilities.length,
+      selection: baseline?.selection ?? null,
+      localAcquisitionAvailable: false,
+      degraded: true
+    };
+    this.#initialized = true;
+    return this.status();
+  }
+
   async initialize() {
-    const contextBytes = await readFile(this.contextPath);
+    let contextBytes;
+    try {
+      contextBytes = await readFile(this.contextPath);
+    } catch (error) {
+      if (error?.code === 'ENOENT') return this.#initializeFromCommittedPilotBaseline('LOCAL_GOVERNED_CONTEXT_NOT_DEPLOYED');
+      throw error;
+    }
     const context = JSON.parse(contextBytes.toString('utf8'));
     const metadata = context?.sources?.openStreetMap;
     const preferredArchive = [...(metadata?.archives ?? [])].filter((entry) => entry.purpose === 'RESPONSE_FACILITIES')
@@ -139,7 +199,13 @@ export class GovernedResponseFacilityRepository {
       this.archiveReference = preferredArchive?.path ?? DEFAULT_ARCHIVE_PATH;
       this.archivePath = path.resolve(this.projectRoot, this.archiveReference);
     }
-    const archiveBytes = await readFile(this.archivePath);
+    let archiveBytes;
+    try {
+      archiveBytes = await readFile(this.archivePath);
+    } catch (error) {
+      if (error?.code === 'ENOENT') return this.#initializeFromCommittedPilotBaseline('LOCAL_GOVERNED_ARCHIVE_NOT_DEPLOYED');
+      throw error;
+    }
     const checksum = `sha256:${createHash('sha256').update(archiveBytes).digest('hex')}`;
     const archive = JSON.parse(archiveBytes.toString('utf8'));
     const registered = metadata?.archives?.find((entry) => entry.path === this.archiveReference);
@@ -190,17 +256,19 @@ export class GovernedResponseFacilityRepository {
     if(this.knowledgeService)for(const kind of RESPONSE_FACILITY_KINDS)byKind[kind]=byKind[kind].map(f=>this.knowledgeService.decorate(f,{observe:true}));
     const counts=Object.fromEntries(RESPONSE_FACILITY_KINDS.map(kind=>[kind,facilities.filter(f=>f.kind===kind).length]));
     const sourceCoverage = Object.fromEntries(RESPONSE_FACILITY_KINDS.map((kind) => [kind, {
-      state: !covered ? 'OUTSIDE_GOVERNED_COVERAGE' : counts[kind] > 0 ? 'GOVERNED_ARCHIVE_AVAILABLE' : this.#source?.purpose === 'RESPONSE_FACILITIES' ? 'GOVERNED_ARCHIVE_QUERY_NO_MATCH' : 'NOT_INCLUDED_IN_GOVERNED_ARCHIVE_QUERY',
+      state: !covered ? 'OUTSIDE_GOVERNED_COVERAGE' : counts[kind] > 0 ? (this.#source?.degraded ? 'COMMITTED_PILOT_BASELINE_AVAILABLE' : 'GOVERNED_ARCHIVE_AVAILABLE') : this.#source?.purpose === 'RESPONSE_FACILITIES' ? 'GOVERNED_ARCHIVE_QUERY_NO_MATCH' : 'NOT_INCLUDED_IN_GOVERNED_ARCHIVE_QUERY',
       sourceRecordCount: counts[kind],
       returnedCandidateCount: byKind[kind].length,
       retrieval: retrieval[kind],
       source: this.#source,
       canonicalSources: [...new Set(facilities.filter(f=>f.kind===kind&&f.canonicalId).map(f=>f.canonicalIntelligence.provenance.canonicalName?.[0]?.provider).filter(Boolean))],
-      limitation: counts[kind] > 0
-        ? 'OpenStreetMap completeness varies; mapped presence is static context and mapped absence is not real-world absence.'
-        : this.#source?.purpose === 'RESPONSE_FACILITIES'
-          ? 'The governed response-facility query returned no retained match for this class. This does not prove real-world absence or zero capacity.'
-          : 'This facility class is not present in the governed archive query. No absence or zero-capacity conclusion is permitted.'
+      limitation: this.#source?.degraded
+        ? 'The public deployment uses the committed reviewed pilot baseline because the governed local acquisition archive is intentionally not shipped. Results are a pilot subset and cannot support absence claims.'
+        : counts[kind] > 0
+          ? 'OpenStreetMap completeness varies; mapped presence is static context and mapped absence is not real-world absence.'
+          : this.#source?.purpose === 'RESPONSE_FACILITIES'
+            ? 'The governed response-facility query returned no retained match for this class. This does not prove real-world absence or zero capacity.'
+            : 'This facility class is not present in the governed archive query. No absence or zero-capacity conclusion is permitted.'
     }]));
     return {
       byKind,
@@ -211,7 +279,9 @@ export class GovernedResponseFacilityRepository {
         maximumDistanceKm,
         covered,
         byKind: retrieval,
-        truthBoundary: 'The denominator is every governed archive record within the distance bound. The routed cohort retains the distance prefilter plus any current attributable-capacity report in bounds; truncation never implies absence.'
+        truthBoundary: this.#source?.degraded
+          ? 'The public deployment routes only the committed reviewed pilot baseline. The local governed archive is intentionally absent, so missing facilities never imply real-world absence.'
+          : 'The denominator is every governed archive record within the distance bound. The routed cohort retains the distance prefilter plus any current attributable-capacity report in bounds; truncation never implies absence.'
       }
     };
   }
