@@ -60,17 +60,30 @@ test('TEST D — provider identity collision cannot overwrite and its durable re
   const events=await state.service.getOperationalEvents(),rejections=await state.service.rejectionLog();assert.equal(events.length,1);assert.equal(events[0].id,accepted.id);assert.equal(rejections.length,1);assert.equal(rejections[0].code,'PROVIDER_EVENT_IDENTITY_CONFLICT');
 });
 
-test('TEST E — thousands of historical rejections initialize without deletion and accepted events alone project READY',async(t)=>{
+test('TEST E — thousands of historical rejections are compacted to a bounded tail and accepted events alone project READY',async(t)=>{
+  // A provider adapter that keeps resubmitting a conflicting event every
+  // refresh cycle produces a distinct rejection identity per attempt (its raw
+  // payload — and therefore rejection.id — differs each time even though the
+  // underlying conflict is unchanged). Unbounded retention of these turned a
+  // real deployment's journal into a multi-hundred-MB file that OOM'd the
+  // process on every restart replay. Only the diagnostic REJECTION tail is
+  // capped; EVENT records (authoritative canonical history) are never pruned.
   const directory=await mkdtemp(path.join(tmpdir(),'vigia-polluted-journal-')),filePath=path.join(directory,'operational-event-fabric.jsonl');t.after(()=>rm(directory,{recursive:true,force:true}));
   const adapter=new Agent1OperationalProjectionAdapter(),event=commitOperationalEvent(adapter.adaptOne(compatibilityRecord(),{receivedAt:NOW}),NOW),records=[];
   const push=(kind,value,sequence)=>{const core={schemaVersion:'vigia.operational-event-journal-record.v1',sequence,kind,recordedAt:NOW,value};records.push({...core,checksumSha256:semanticHash('journal-record',core)});};
   push('EVENT',event,1);
   for(let index=0;index<2_500;index++)push('REJECTION',createIngestionRejection({adapterId:'historical-adapter',adapterVersion:'v1',providerEventId:`historical-${index}`,providerRevision:'1',receivedAt:NOW,code:'EVENT_IDENTITY_CONFLICT',reasons:['historical_forensic_record'],rawPayloadHash:`historical:sha256:${String(index).padStart(8,'0')}`}),index+2);
   await writeFile(filePath,`${records.map(stableStringify).join('\n')}\n`,{encoding:'utf8',mode:0o600});
-  const journal=new AppendOnlyOperationalEventJournal({filePath,clock:()=>new Date(NOW)}),state=await harness({journal}),phases=[],started=performance.now();
+  const journal=new AppendOnlyOperationalEventJournal({filePath,clock:()=>new Date(NOW),maxRetainedRejections:500}),state=await harness({journal}),phases=[],started=performance.now();
   const startup=await initializeCanonicalTwin({service:state.service,journal,reconciler:state.reconciler,snapshotEvents:[compatibilityRecord()],clock:state.clock,canonicalBudgetMs:2_000,compatibilityBudgetMs:2_000,onPhase:(entry)=>phases.push(entry)});
-  assert.equal(startup.state,'READY');assert.equal(journal.status().eventCount,1);assert.equal(journal.status().rejectionCount,2_500);assert.equal(startup.reconciliation.duplicates,1);assert.equal(performance.now()-started<2_000,true);
+  assert.equal(startup.state,'READY');assert.equal(journal.status().eventCount,1);assert.equal(journal.status().rejectionCount,500);assert.equal(startup.reconciliation.duplicates,1);assert.equal(performance.now()-started<2_000,true);
   assert.equal((await state.service.getCurrentTwin({asOf:NOW})).eventCount,1);assert.deepEqual([...new Set(phases.map((item)=>item.subphase))],['journal_initialize','durable_twin_projection','compatibility_diff','compatibility_persist','post_reconcile_projection']);
+  // Compaction keeps the most recent rejections, not an arbitrary subset.
+  const rejections=await state.service.rejectionLog();
+  assert.deepEqual(rejections.map((item)=>item.providerEventId).sort(),Array.from({length:500},(_,index)=>`historical-${2_000+index}`).sort());
+  // The on-disk file itself shrinks — the fix must bound bytes read on the next restart, not just in-memory retention.
+  const reopened=new AppendOnlyOperationalEventJournal({filePath,clock:()=>new Date(NOW),maxRetainedRejections:500});
+  assert.equal((await reopened.initialize()).recordCount,501);
 });
 
 test('TEST F — Agent1 compatibility remains SYSTEM/CONTEXT and cannot satisfy authoritative truth',async()=>{

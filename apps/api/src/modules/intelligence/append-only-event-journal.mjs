@@ -1,4 +1,4 @@
-import { appendFile, chmod, mkdir, open, readFile, stat, unlink } from 'node:fs/promises';
+import { appendFile, chmod, mkdir, open, readFile, rename, stat, unlink } from 'node:fs/promises';
 import path from 'node:path';
 import { commitOperationalEvent, operationalEventBindingHash, validateCanonicalOperationalEvent } from '../../../../../packages/domain/src/event-fabric/index.mjs';
 import { immutable, semanticHash, stableStringify } from '../../../../../packages/domain/src/intelligence/shared.mjs';
@@ -23,16 +23,23 @@ function parseJournal(body) {
 
 export class AppendOnlyOperationalEventJournal {
   #filePath; #lockPath; #clock; #chain = Promise.resolve(); #records = []; #diagnostics = []; #initialized = false; #knownSize = 0; #eventById = new Map(); #eventByProviderKey = new Map(); #rejectionById = new Map();
-  constructor({ filePath, clock = () => new Date(), lockTimeoutMs = 5_000, staleLockMs = 30_000 } = {}) {
+  constructor({ filePath, clock = () => new Date(), lockTimeoutMs = 5_000, staleLockMs = 30_000, maxRetainedRejections = 500 } = {}) {
     if (!filePath) throw new Error('operational_event_journal_path_required');
     this.#filePath = filePath; this.#lockPath = `${filePath}.lock`; this.#clock = clock;
     this.lockTimeoutMs = lockTimeoutMs; this.staleLockMs = staleLockMs;
+    // Rejections are diagnostic, not authoritative state: an adapter that keeps
+    // resubmitting a conflicting provider event every refresh cycle (each
+    // attempt hashing to a distinct rejection identity because its raw
+    // payload legitimately changes) would otherwise append one permanent
+    // record per attempt forever. EVENT records (the authoritative canonical
+    // history) are never pruned; only the diagnostic REJECTION tail is capped.
+    this.maxRetainedRejections = Math.max(1, Number(maxRetainedRejections) || 500);
   }
   async initialize() {
     if (this.#initialized) return this.status();
     await mkdir(path.dirname(this.#filePath), { recursive: true, mode: 0o700 }); await chmod(path.dirname(this.#filePath), 0o700);
     const handle = await open(this.#filePath, 'a', 0o600); await handle.close(); await chmod(this.#filePath, 0o600);
-    await this.#reload(); this.#initialized = true; return this.status();
+    await this.#reload(); await this.#withLock(() => this.#compactIfNeeded()); this.#initialized = true; return this.status();
   }
   status() {
     return immutable({
@@ -69,6 +76,7 @@ export class AppendOnlyOperationalEventJournal {
       const duplicate = this.#rejectionById.get(rejection.id);
       if (duplicate) return immutable({ state: 'DUPLICATE_REJECTION', rejection: duplicate.value, sequence: duplicate.sequence, persisted: true });
       const record = this.#record('REJECTION', rejection, recordedAt); await this.#append(record); this.#records.push(record); this.#rejectionById.set(rejection.id, record);
+      await this.#compactIfNeeded();
       return immutable({ state: 'REJECTED', rejection, sequence: record.sequence, persisted: true });
     }));
   }
@@ -87,6 +95,30 @@ export class AppendOnlyOperationalEventJournal {
   async #append(record) {
     const line = `${stableStringify(record)}\n`, handle = await open(this.#filePath, 'a', 0o600);
     try { await handle.write(line, null, 'utf8'); await handle.sync(); this.#knownSize += Buffer.byteLength(line); } finally { await handle.close(); }
+  }
+  // A provider adapter that keeps resubmitting a conflicting event every
+  // refresh cycle produces one legitimately-distinct rejection identity per
+  // attempt (its raw payload, and therefore rejection.id, differs each time
+  // even though the underlying conflict is unchanged). Left unchecked this
+  // append-only log — and the full in-memory replay every initialize()/reload
+  // performs over it — grows without bound. Rejections are diagnostic, not
+  // authoritative history, so only the most recent are worth retaining;
+  // EVENT records are never touched. Caller must already hold the file lock.
+  async #compactIfNeeded() {
+    const rejections = this.#records.filter((item) => item.kind === 'REJECTION');
+    if (rejections.length <= this.maxRetainedRejections) return;
+    const events = this.#records.filter((item) => item.kind === 'EVENT');
+    const retainedRejections = rejections.slice(-this.maxRetainedRejections);
+    const droppedCount = rejections.length - retainedRejections.length;
+    const kept = [...events, ...retainedRejections].sort((left, right) => left.sequence - right.sequence);
+    const body = kept.map((record) => stableStringify(record)).join('\n') + (kept.length ? '\n' : '');
+    const temporary = `${this.#filePath}.${process.pid}.${Date.now()}.compact.tmp`;
+    const handle = await open(temporary, 'wx', 0o600);
+    try { await handle.write(body, null, 'utf8'); await handle.sync(); } finally { await handle.close(); }
+    await rename(temporary, this.#filePath); await chmod(this.#filePath, 0o600);
+    this.#records = kept; this.#knownSize = Buffer.byteLength(body);
+    this.#rejectionById = new Map(retainedRejections.map((item) => [item.value.id, item]));
+    this.#diagnostics.push({ code: 'REJECTION_LOG_COMPACTED', droppedCount, retainedRejectionCount: retainedRejections.length, at: this.#clock().toISOString() });
   }
   async #reload() {
     let body = '';
