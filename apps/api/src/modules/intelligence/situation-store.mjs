@@ -15,6 +15,10 @@ const empty=()=>({snapshots:[],jobs:[],documents:[],admissions:[]});
 // without dedup) rather than legitimate compact history, so this fails
 // loudly instead of silently writing megabytes again.
 const MAX_SNAPSHOT_PAYLOAD_BYTES=250_000;
+const MAX_JOB_PAYLOAD_BYTES=250_000;
+const queuedFacility=f=>Object.fromEntries(['id','canonicalId','canonicalName','name','canonicalType','kind','coordinate','canonicalRevision','address','addressPrecision','locality','municipality','district','contact','capabilities','designation','authority','operator','presentation','distanceKm','distanceReference','staticCapability','freshness'].filter(k=>f?.[k]!==undefined).map(k=>[k,f[k]]));
+const queuedRoute=r=>{if(!r||typeof r!=='object')return r;const{geometry:_geometry,alternatives:_alternatives,...rest}=r;return{...rest,retryAfter:r.retryAfter??r.calculatedAt??r.validUntil,alternatives:[]};};
+const compactJobInput=input=>{if(!input||typeof input!=='object')return input;const result={...input};if(Array.isArray(result.facilities))result.facilities=result.facilities.map(queuedFacility);if(Array.isArray(result.routes))result.routes=result.routes.map(queuedRoute);if(Array.isArray(result.communityRoutes))result.communityRoutes=result.communityRoutes.map(queuedRoute);return result;};
 export class SituationStore{
   constructor({pool=null,filePath=null}){if(!pool&&!filePath)throw new Error('situation_storage_required');Object.assign(this,{pool,filePath});this.tail=Promise.resolve();}
   // Batched: collects every routeArtifactHash referenced across all given
@@ -69,18 +73,20 @@ export class SituationStore{
     }catch(error){await client.query('ROLLBACK').catch(()=>{});throw error;}finally{client.release();}
   }
   async enqueue(incidentId,input,dueAt=new Date().toISOString()){
+    input=compactJobInput(input);
     const revision=randomUUID(),payload={input,reason:input.reason??'OBSERVED_PROJECTION'};
     if(this.pool){await this.pool.query("INSERT INTO incident_situation_job(incident_id,revision,payload,due_at) VALUES($1,$2,$3,$4) ON CONFLICT(incident_id) DO UPDATE SET revision=excluded.revision,payload=jsonb_build_object('reason',excluded.payload->'reason','input',(incident_situation_job.payload->'input') || (excluded.payload->'input') || jsonb_build_object('incident',COALESCE(incident_situation_job.payload->'input'->'incident','{}'::jsonb) || COALESCE(excluded.payload->'input'->'incident','{}'::jsonb))),due_at=LEAST(incident_situation_job.due_at,excluded.due_at)",[incidentId,revision,JSON.stringify(payload),dueAt]);return;}
     return this.local(s=>{const existing=s.jobs.find(j=>j.incidentId===incidentId),row={incidentId,revision,...payload,dueAt};if(existing){row.input={...existing.input,...input,incident:{...existing.input.incident,...input.incident}};row.dueAt=existing.dueAt<dueAt?existing.dueAt:dueAt;Object.assign(existing,row);}else s.jobs.push(row);});
   }
   async recent(){if(this.pool)return this.#hydrateRows((await this.pool.query('SELECT DISTINCT ON(incident_id) payload FROM incident_situation_snapshot ORDER BY incident_id,known_at DESC,capture_sequence DESC LIMIT 100')).rows.map(r=>r.payload));await this.tail;return [...new Map((await readJson(this.filePath,empty())).snapshots.map(s=>[s.incident.id,s])).values()].slice(0,100);}
   async jobs(at=new Date().toISOString()){
-    if(this.pool)return(await this.pool.query('SELECT incident_id,revision,payload,due_at,attempts FROM incident_situation_job WHERE due_at<=$1 ORDER BY due_at LIMIT 4',[at])).rows.map(r=>({incidentId:r.incident_id,revision:r.revision,...r.payload,dueAt:r.due_at.toISOString(),attempts:r.attempts}));
-    await this.tail;return(await readJson(this.filePath,empty())).jobs.filter(j=>j.dueAt<=at).slice(0,4);
+    if(this.pool)return(await this.pool.query("SELECT incident_id,revision,CASE WHEN pg_column_size(payload)>$2 THEN jsonb_build_object('reason','OVERSIZED_JOB_RECOVERY','input',jsonb_build_object('incident',COALESCE(payload->'input'->'incident','{}'::jsonb))) ELSE payload END payload,due_at,attempts FROM incident_situation_job WHERE due_at<=$1 ORDER BY (pg_column_size(payload)>$2) DESC,due_at LIMIT 1",[at,MAX_JOB_PAYLOAD_BYTES])).rows.map(r=>({incidentId:r.incident_id,revision:r.revision,...r.payload,dueAt:r.due_at.toISOString(),attempts:r.attempts}));
+    await this.tail;return(await readJson(this.filePath,empty())).jobs.filter(j=>j.dueAt<=at).slice(0,1).map(j=>({...j,input:compactJobInput(j.input)}));
   }
   async finish(job,error=null,at=new Date().toISOString()){
-    if(this.pool){if(!error)await this.pool.query('DELETE FROM incident_situation_job WHERE incident_id=$1 AND revision=$2',[job.incidentId,job.revision]);else await this.pool.query("UPDATE incident_situation_job SET attempts=attempts+1,last_error=$3,due_at=$4::timestamptz + interval '60 seconds' WHERE incident_id=$1 AND revision=$2",[job.incidentId,job.revision,String(error).slice(0,250),at]);return;}
-    return this.local(s=>{const i=s.jobs.findIndex(j=>j.incidentId===job.incidentId&&j.revision===job.revision);if(i<0)return;if(error)Object.assign(s.jobs[i],{attempts:(s.jobs[i].attempts??0)+1,lastError:String(error),dueAt:new Date(Date.parse(at)+60000).toISOString()});else s.jobs.splice(i,1);});
+    const terminalMissingLocation=String(error??'')==='situation_incident_location_unavailable'&&Number(job.attempts??0)>=2;
+    if(this.pool){if(!error||terminalMissingLocation)await this.pool.query('DELETE FROM incident_situation_job WHERE incident_id=$1 AND revision=$2',[job.incidentId,job.revision]);else await this.pool.query("UPDATE incident_situation_job SET attempts=attempts+1,last_error=$3,due_at=$4::timestamptz + interval '60 seconds' WHERE incident_id=$1 AND revision=$2",[job.incidentId,job.revision,String(error).slice(0,250),at]);return;}
+    return this.local(s=>{const i=s.jobs.findIndex(j=>j.incidentId===job.incidentId&&j.revision===job.revision);if(i<0)return;if(!error||terminalMissingLocation)s.jobs.splice(i,1);else Object.assign(s.jobs[i],{attempts:(s.jobs[i].attempts??0)+1,lastError:String(error),dueAt:new Date(Date.parse(at)+60000).toISOString()});});
   }
   async affected(dependencies){
     if(this.pool)return(await this.pool.query('SELECT DISTINCT d.incident_id FROM incident_situation_dependency d JOIN (SELECT DISTINCT ON(incident_id) id FROM incident_situation_snapshot ORDER BY incident_id,known_at DESC,capture_sequence DESC) s ON s.id=d.snapshot_id WHERE d.dependency_id=ANY($1::text[]) LIMIT 100',[dependencies])).rows.map(r=>r.incident_id);
