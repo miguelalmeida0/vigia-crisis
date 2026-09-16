@@ -89,6 +89,40 @@ const DEMO_INCIDENT_ID = 'incident:demo:pedrogao-grande-portfolio-exercise';
 // inside the sensor ingest service's Portugal bounding-box gate.
 const COORD = [-8.1503, 39.9167];
 
+// IncidentCommandService.importIncident() refuses to re-import an incidentId
+// whose already-persisted `incident.importHash` doesn't match the hash of
+// what's being submitted now (duplicate_incident_identity_conflict — enforced
+// both in the service and, independently, in the reducer itself). That hash
+// covers everything in the import payload, including canonicalEventIds and
+// incident.startedAt. Those two fields are the only ones this script cannot
+// hardcode: canonicalEventIds depends on whichever event the sensor-fusion
+// pipeline resolves, and startedAt is derived from that event's firstSeenAt.
+//
+// A prior seed attempt (any code version, including ones before this file's
+// own history of fixes) may have already durably committed an
+// INCIDENT_IMPORTED event for DEMO_INCIDENT_ID using whatever event/timestamp
+// were live *at that time*. If this run naively re-derives those two fields
+// fresh, they can come out different from what's already stored — even
+// though nothing is actually wrong — and importIncident() will legitimately
+// (and correctly) refuse the mismatched re-import forever after, since
+// nothing in this script's own retry logic ever changes them back.
+//
+// The fix: when an incident-command record already exists for this exact,
+// exclusively-owned demo incident id, treat its already-persisted
+// canonicalEventIds/startedAt as the source of truth and reuse them
+// byte-for-byte, rather than re-deriving them from whatever resolves this
+// run. This makes every retry converge on the same sourcePayloadHash the
+// first successful commit produced, so importIncident() sees a true replay
+// (idempotentReplay: true, or a resumed partial import) instead of a
+// (correctly rejected) conflicting re-import. It never weakens the
+// duplicate-identity guard itself — it just stops accidentally tripping it.
+export function resolveDemoImportIdentity({ existingIncident, matchedEvent, canonicalEventId }) {
+  const resumedFromExistingImport = Boolean(existingIncident?.canonicalEventIds?.length && existingIncident?.startedAt);
+  return resumedFromExistingImport
+    ? { canonicalEventIds: existingIncident.canonicalEventIds, startedAt: existingIncident.startedAt, resumedFromExistingImport: true }
+    : { canonicalEventIds: [canonicalEventId], startedAt: matchedEvent.firstSeenAt ?? matchedEvent.lastSeenAt, resumedFromExistingImport: false };
+}
+
 // --- phase instrumentation -------------------------------------------------
 const startedAt = Date.now();
 let lastPhase = 'process_starting';
@@ -210,23 +244,36 @@ async function main() {
   // mid-loop safely completes only the records that never landed, and calling
   // it again after a fully successful import is a cheap no-op
   // (receipt.idempotentReplay: true) rather than an error — as long as the
-  // payload is byte-for-byte identical across attempts, which is why
-  // incident.startedAt below is derived from the real, already-persisted
-  // event rather than a fresh now()-relative timestamp that would change
-  // sourcePayloadHash on every retry and trip the duplicate-identity guard.
+  // payload is byte-for-byte identical across attempts. See
+  // resolveDemoImportIdentity() above for why canonicalEventIds/startedAt are
+  // resolved from any already-persisted incident record first, rather than
+  // freshly every run.
   // This is deliberately NOT skipped when a prior partial attempt already
   // created the incident-command record: only importIncident() itself knows
   // exactly which of its own sub-records still need to land.
   {
+    const existingIncident = await phase('resolve_existing_incident_import', STEP_TIMEOUT_MS, async () => {
+      const state = await services.incidentCommandService.repository.state(DEMO_INCIDENT_ID);
+      return state?.incident ?? null;
+    });
+    const importIdentity = resolveDemoImportIdentity({ existingIncident, matchedEvent, canonicalEventId });
+    if (importIdentity.resumedFromExistingImport) {
+      log('resuming_from_existing_incident_import', {
+        incidentId: DEMO_INCIDENT_ID, existingImportId: existingIncident.importId ?? null,
+        canonicalEventIds: importIdentity.canonicalEventIds, startedAt: importIdentity.startedAt,
+        note: 'A prior attempt already committed this incident\'s import identity; reusing its exact canonicalEventIds/startedAt so this retry reproduces the same sourcePayloadHash instead of colliding with importIncident\'s duplicate-identity guard.'
+      });
+    }
+
     const actor = { id: 'vigia-demo-seed-script', role: 'administrator', incidentScopes: ['*'] };
     const importInput = {
       adapter: 'SHADOW_JSON', universe: 'SHADOW', sourceSystem: 'vigia-demo-portfolio-generator',
-      incidentId: DEMO_INCIDENT_ID, canonicalEventIds: [canonicalEventId], reportRecordIds: [],
+      incidentId: DEMO_INCIDENT_ID, canonicalEventIds: importIdentity.canonicalEventIds, reportRecordIds: [],
       sourcePayload: null,
       incident: {
         label: '[DEMO / SYNTHETIC SCENARIO] Portfolio exercise — Pedrógão Grande wildfire drill',
         type: 'WILDFIRE', district: 'Leiria', municipality: 'Pedrógão Grande', coordinate: COORD,
-        startedAt: matchedEvent.firstSeenAt ?? matchedEvent.lastSeenAt, note: 'Synthetic portfolio exercise. Not a real incident. No operational authority.'
+        startedAt: importIdentity.startedAt, note: 'Synthetic portfolio exercise. Not a real incident. No operational authority.'
       },
       organization: { name: '[DEMO] VIGIA Portfolio Exercise Command', agency: 'Exercise Bombeiros Voluntários (synthetic)', incidentCommander: 'personnel:demo:ic-1' },
       people: [
@@ -256,7 +303,8 @@ async function main() {
 
     const importResult = await phase('import_incident_command', STEP_TIMEOUT_MS, () => services.incidentCommandService.importIncident(importInput, actor.id, actor));
     log('incident_command_imported', {
-      incidentId: DEMO_INCIDENT_ID, canonicalEventId,
+      incidentId: DEMO_INCIDENT_ID, canonicalEventId: importIdentity.canonicalEventIds[0],
+      resumedFromExistingImport: importIdentity.resumedFromExistingImport,
       importStatus: importResult.validation?.status, acceptedRecords: importResult.validation?.acceptedRecords,
       receiptId: importResult.receipt?.receiptId, idempotentReplay: importResult.receipt?.idempotentReplay === true
     });
@@ -276,7 +324,13 @@ async function mkdirTemp() {
   return dir;
 }
 
-main().catch((error) => {
-  console.error(JSON.stringify({ step: 'seed_failed', lastPhase, elapsedMs: Date.now() - startedAt, error: String(error?.message ?? error), stack: error?.stack }));
-  process.exit(1);
-});
+// Only auto-run when executed directly (render-demo-start.mjs spawns this as
+// its own process). Guarding this means resolveDemoImportIdentity() above
+// can be imported by a regression test without also running the whole
+// database-touching seed flow as an import side effect.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch((error) => {
+    console.error(JSON.stringify({ step: 'seed_failed', lastPhase, elapsedMs: Date.now() - startedAt, error: String(error?.message ?? error), stack: error?.stack }));
+    process.exit(1);
+  });
+}
