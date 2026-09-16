@@ -96,6 +96,10 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
       void services.physicalTruthStore?.close?.().catch((error) => console.error(JSON.stringify({ level: 'error', component: 'postgres_shutdown', error: String(error.message ?? error) })));
       void services.intelligenceSnapshotRepository?.close?.().catch((error) => console.error(JSON.stringify({ level: 'error', component: 'intelligence_postgres_shutdown', error: String(error.message ?? error) })));
       void services.deploymentIdentityStore?.close?.().catch((error) => console.error(JSON.stringify({ level: 'error', component: 'deployment_identity_postgres_shutdown', error: String(error.message ?? error) })));
+      // The stores above no longer own their pool (they all share one — see
+      // createServices) so their close() calls above are now no-ops for the
+      // connection itself; this is the one place that actually ends it.
+      void services.sharedDatabasePool?.end?.().catch((error) => console.error(JSON.stringify({ level: 'error', component: 'shared_postgres_shutdown', error: String(error.message ?? error) })));
       hub.close();
     }
   };

@@ -14,7 +14,7 @@ export class PostgresPhysicalTruthStore {
   #initialization = null;
   #closed = false;
   constructor({ databaseUrl = '', clock = () => new Date(), pool = null, universe = 'production', connectionTimeoutMs = 3_000, statementTimeoutMs = 15_000, lockTimeoutMs = 3_000 } = {}) {
-    this.databaseUrl = databaseUrl; this.clock = clock; this.#pool = pool; this.universe = universe;
+    this.databaseUrl = databaseUrl; this.clock = clock; this.#pool = pool; this.ownsPool = !pool; this.universe = universe;
     this.timeouts = { connectionTimeoutMs, statementTimeoutMs, lockTimeoutMs };
     this.#status = { configured: Boolean(databaseUrl || pool), state: databaseUrl || pool ? 'initializing' : 'not_configured', postgis: false, lastCommitAt: null, lastError: databaseUrl || pool ? null : 'Set VIGIA_DATABASE_URL to enable transactional physical-truth persistence.' };
     this.#guardPool();
@@ -51,7 +51,7 @@ export class PostgresPhysicalTruthStore {
     return this.#initialization;
   }
   status() { return structuredClone(this.#status); }
-  async close() { this.#closed = true; await this.#pool?.end?.(); this.#status = { ...this.#status, state: 'closed', postgis: false }; }
+  async close() { this.#closed = true; if (this.ownsPool) await this.#pool?.end?.(); this.#status = { ...this.#status, state: 'closed', postgis: false }; }
   async #ensureReady() {
     if (this.#status.state === 'ready') return true;
     if (!this.#status.configured || this.#closed) return false;

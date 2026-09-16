@@ -150,7 +150,13 @@ const apiEnv = {
   VIGIA_OPERATOR_ACTOR_ID: 'portfolio-demo-observer',
   VIGIA_OPERATOR_NAME: 'Portfolio demo observer',
   VIGIA_OPERATOR_TITLE: 'Read-only VIGIA isolated demo',
-  VIGIA_OPERATOR_ROLE: 'supervisor'
+  VIGIA_OPERATOR_ROLE: 'supervisor',
+  // assertLocalVisualizationRequest() (route-security-policy.mjs) requires the
+  // request's Origin to equal this exactly. infra/public-demo-server.mjs always
+  // sends its own public origin (https://<authority>) as Origin on proxied
+  // requests — without this, the backend's default ('http://127.0.0.1:4190')
+  // never matches, and every basemap/imagery tile request 403s permanently.
+  VIGIA_OPERATOR_CONSOLE_ORIGIN: `https://${authority}`
 };
 
 gateway.setPhase('starting_api');

@@ -13,6 +13,7 @@ export class PostgresAlertStore {
     Object.assign(this, { databaseUrl, clock, poolMax:boundedPoolMax });
     this.runtimeInstanceId=`operations-runtime:${randomUUID()}`;this.monitoringStartedAt=clock().toISOString();
     this.pool = pool??(databaseUrl ? new pg.Pool({ connectionString: databaseUrl, application_name: 'vigia-live-operations', connectionTimeoutMillis: connectionTimeoutMs, query_timeout: statementTimeoutMs, statement_timeout: statementTimeoutMs, idle_in_transaction_session_timeout: statementTimeoutMs, max: boundedPoolMax }) : null);
+    this.ownsPool = !pool && Boolean(this.pool);
     this.ready = false;this.closed = false;this.initialization = null;
     this.lastRecoveryAttemptMs = 0;
     this.readPool={query:(...args)=>this.#query(...args)};
@@ -55,7 +56,7 @@ export class PostgresAlertStore {
     if (!this.ready) throw operationsPostgisUnavailable(this.health);
     return this.status();
   }
-  async close() { this.ready = false; this.closed = true; await this.pool?.end(); this.health = { ...this.health, state: 'closed', retryable: false }; }
+  async close() { this.ready = false; this.closed = true; if (this.ownsPool) await this.pool?.end(); this.health = { ...this.health, state: 'closed', retryable: false }; }
   #assertReady() { if (!this.ready) throw operationsPostgisUnavailable(this.health); }
   #rethrow(error){if(isPostgresAvailabilityError(error)){this.#markFailed(error);throw operationsPostgisUnavailable(this.health);}throw error;}
   async #query(sql,params){this.#assertReady();for(let attempt=0;attempt<2;attempt+=1){try{return await this.pool.query(sql,params);}catch(error){if(attempt===0&&poolAcquireTimedOut(error)){await new Promise((resolve)=>setTimeout(resolve,50));continue;}this.#rethrow(error);}}}

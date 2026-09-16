@@ -70,6 +70,11 @@ function signedHeaders(method, path, req) {
     accept: String(req.headers.accept || 'application/json'),
     origin: consoleOrigin,
     'sec-fetch-site': 'same-origin',
+    // Required by assertLocalVisualizationRequest() (route-security-policy.mjs)
+    // for basemap/imagery tile routes. apps/operator-console/server.mjs — the
+    // production console proxy this gateway parallels — has always sent this;
+    // its absence here made every proxied basemap tile request 403 permanently.
+    'x-vigia-ui-proxy': 'mission-dark-realdata-2.0',
     ...signOperatorProxyRequest({
       key: proxyKey,
       keyId: 'public-portfolio-demo-read',
