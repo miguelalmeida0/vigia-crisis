@@ -70,16 +70,31 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
     async initialize() {
       try {
         await services.worldService.loadCache?.();
+        // The isolated public demo is deterministically seeded before this API
+        // process starts. Re-running the full production background bootstrap
+        // here (initializeBackground + provider refresh + reconciliation) was
+        // rebuilding large operational graphs that the read-only portfolio
+        // surface does not need, and was the last path driving the constrained
+        // Render process back toward its heap ceiling even with recurring
+        // timers disabled. Serve the governed seeded read model directly.
+        if(isolatedSyntheticDemo){
+          runtime.refreshState = 'ready';
+          runtime.metrics.refreshSuccesses += 1;
+          runtime.metrics.lastSuccessAt = clock().toISOString();
+          runtime.metrics.lastError = null;
+          console.log(JSON.stringify({level:'info',component:'runtime_demo_initialize',at:runtime.metrics.lastSuccessAt,state:'seeded_read_model_ready',backgroundBootstrap:false,providerRefresh:false,replay:false}));
+          hub.publish('world.updated', { at: clock().toISOString(), reason: 'demo-seeded-read-model' });
+          return;
+        }
         // The listener and cached read plane are already available at this point.
         // Finish local reconciliation before the first provider transaction so
         // PostGIS writers cannot contend with one another during cold start.
         await services.initializeBackground?.();
         await refreshOperationalState(services, hub, clock,{forceIntelligence:true});
-        // Replay is lower-priority historical evidence. The isolated portfolio
-        // demo is already deterministically seeded before API startup, so replaying
-        // the historical pipeline adds memory pressure without changing its public
-        // read model. Production and normal local runtimes retain replay behavior.
-        if(!isolatedSyntheticDemo)void services.replayService?.initialize?.().catch((error)=>console.error(JSON.stringify({level:'error',component:'replay_background_initialize',at:clock().toISOString(),error:String(error.message??error)})));
+        // Replay is lower-priority historical evidence. Start it only after the
+        // first live provider→event transaction so the two background writers
+        // never contend during listener-first startup.
+        void services.replayService?.initialize?.().catch((error)=>console.error(JSON.stringify({level:'error',component:'replay_background_initialize',at:clock().toISOString(),error:String(error.message??error)})));
         runtime.refreshState = 'ready';
         runtime.metrics.refreshSuccesses += 1; runtime.metrics.lastSuccessAt = clock().toISOString(); runtime.metrics.lastError = null;
         hub.publish('world.updated', { at: clock().toISOString(), reason: 'initial-load' });
@@ -93,11 +108,11 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
     startTimers() {
       stopped = false;
       // The public portfolio service is a read-only, explicitly synthetic
-      // exercise. It performs one governed refresh during initialize(), then
-      // serves that deterministic state. Recurring provider/situation/knowledge
-      // workers belong to live operational runtimes and previously caused a
-      // useless background recomputation loop inside Render's constrained demo
-      // process. Keep heartbeat + telemetry so availability remains observable.
+      // exercise. It serves state seeded before API startup. Recurring
+      // provider/situation/knowledge workers belong to live operational runtimes
+      // and previously caused useless background recomputation inside Render's
+      // constrained demo process. Keep heartbeat + telemetry so availability
+      // remains observable.
       if(!isolatedSyntheticDemo){
         scheduleRefresh();
         scheduleKnowledge();
