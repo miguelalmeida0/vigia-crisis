@@ -6,6 +6,25 @@ VIGIA is a full-stack decision-support system built around one rule: **an operat
 
 > Live portfolio demo: https://vigia-portfolio-demo.onrender.com
 
+<p align="center">
+  <img src="./docs/readme/current/deep-00-current-home.png" alt="VIGIA current command overview" width="100%">
+</p>
+
+<table>
+  <tr>
+    <td><img src="./docs/readme/current/auto-02-incidents.png" alt="VIGIA incidents"></td>
+    <td><img src="./docs/readme/current/auto-03-incident-detail.png" alt="VIGIA incident detail"></td>
+  </tr>
+  <tr>
+    <td><img src="./docs/readme/current/auto-04-fire-activity.png" alt="VIGIA fire activity"></td>
+    <td><img src="./docs/readme/current/auto-05-response-access.png" alt="VIGIA response and access"></td>
+  </tr>
+</table>
+
+<p align="center">
+  <img src="./docs/readme/current/auto-06-national-awareness.png" alt="VIGIA national awareness" width="100%">
+</p>
+
 ## The product in 30 seconds
 
 ```mermaid
@@ -131,19 +150,33 @@ The system distinguishes:
 
 That distinction is carried from backend contracts into the operator UI.
 
-## Product surfaces
+## Current operator surfaces
 
-### Intelligence
+### Command Overview
 
-Understand incidents, evidence families, source freshness, facilities, dependencies, historical context, and unresolved questions.
+A national operational summary that keeps current incidents, source health, mapped records, and immediate actions in one place.
 
-### Operations
+### Incidents
 
-Move from understanding to action: routes, restrictions, reception locations, facilities, alerts, and evidence-acquisition work.
+Browse the current incident set without losing source identity or freshness context.
 
-### Reports & analysis
+### Incident Detail
 
-Retain situation history, compare prior states, and produce attributable briefs without erasing uncertainty.
+Inspect one incident deeply: observations, history, facilities, access, dependencies, and unresolved operational context.
+
+### Fire Activity
+
+Review current fire detections and updates as attributable records rather than flattening every signal into one confidence layer.
+
+### Response & Access
+
+Bring routes, restrictions, reception locations, facilities, and response context together for action-oriented inspection.
+
+### National Awareness
+
+Zoom back out to national situational context and compare activity across the country.
+
+Operational actions remain available contextually inside these surfaces rather than requiring a separate dashboard taxonomy.
 
 ## API surface
 
