@@ -89,6 +89,60 @@ const DEMO_INCIDENT_ID = 'incident:demo:pedrogao-grande-portfolio-exercise';
 // inside the sensor ingest service's Portugal bounding-box gate.
 const COORD = [-8.1503, 39.9167];
 
+// Fixed, deterministic domain content for the two synthetic observations —
+// NOT Date.now()-relative.
+//
+// SensorIngestService derives a sensor observation's canonicalObservationId
+// from [..., externalObservationId], and externalObservationId itself
+// defaults to a hash of [sensorId, type, observedAt] whenever none is
+// supplied. The canonical event's externally-visible id, in turn, comes not
+// from fire-event-tracker's stableId() but from
+// EventObservationRepository.reconcileEvents()'s generatedEventId(), which
+// hashes `physical-event:${id}` of whichever observation in the event has
+// the earliest receivedAt/observedAt. And critically,
+// EventObservationRepository (apps/api/src/application/create-services.mjs)
+// is backed by a *local file* on the container's own filesystem —
+// PostgresPhysicalTruthStore is wired in only as a write-through
+// `mirrorStore`, never read back from. On Render that local file does not
+// survive a container restart, so this repository — and therefore the
+// canonical event id — starts from a blank slate on *every* restart, not
+// just on a genuinely fresh database. Re-ingestion of these two
+// observations therefore actually runs on every single restart in
+// practice, so their identity must be reproducible from fixed inputs alone.
+//
+// A wall-clock-relative observedAt (the previous `Date.now() - 6min`) made
+// both the observation identity and the canonical event id different on
+// every restart, which is exactly what produced the live Neon failure: a
+// persisted incident import permanently referencing a canonical event id no
+// later boot could ever reproduce. Pinning both observedAt and
+// externalObservationId makes every restart's re-ingestion always
+// reconstruct the exact same observations and the exact same canonical
+// event id. This is the scenario's one-time "exercise start" moment; the
+// console honestly shows the scenario's true elapsed age from here rather
+// than a perpetually-refreshed fake "a few minutes ago".
+const SCENARIO_STARTED_AT = Date.parse('2026-09-16T08:00:00.000Z');
+const CAMERA_OBSERVED_AT = new Date(SCENARIO_STARTED_AT).toISOString();
+const GROUND_OBSERVED_AT = new Date(SCENARIO_STARTED_AT + 4 * 60_000).toISOString();
+
+// Exported so a regression test can assert on the exact bodies this script
+// actually sends, rather than a hand-copied stand-in that could drift.
+export function demoSensorBodies() {
+  return {
+    cameraBody: {
+      sensorId: 'demo-camera-01', incidentId: DEMO_INCIDENT_ID, coordinate: COORD, observedAt: CAMERA_OBSERVED_AT,
+      externalObservationId: 'demo-camera-01-portfolio-exercise-observation-1',
+      classification: 'smoke_visible', confidence: 0.78,
+      metadata: { demo: true, scenario: 'portfolio-exercise', label: '[DEMO / SYNTHETIC SCENARIO] Portfolio exercise — synthetic camera detection, not a real hazard.' }
+    },
+    groundBody: {
+      sensorId: 'demo-ground-01', incidentId: DEMO_INCIDENT_ID, coordinate: COORD, observedAt: GROUND_OBSERVED_AT,
+      externalObservationId: 'demo-ground-01-portfolio-exercise-observation-1',
+      classification: 'heat_signature', confidence: 0.71,
+      metadata: { demo: true, scenario: 'portfolio-exercise', label: '[DEMO / SYNTHETIC SCENARIO] Portfolio exercise — synthetic ground sensor reading, not a real hazard.' }
+    }
+  };
+}
+
 // IncidentCommandService.importIncident() refuses to re-import an incidentId
 // whose already-persisted `incident.importHash` doesn't match the hash of
 // what's being submitted now (duplicate_incident_identity_conflict — enforced
@@ -201,16 +255,7 @@ async function main() {
   if (matchedEvent) {
     log('sensor_observations_already_present', { canonicalEventId: matchedEvent.id, note: 'Resuming from a partially seeded database; skipping re-ingestion.' });
   } else {
-    const cameraBody = {
-      sensorId: 'demo-camera-01', incidentId: DEMO_INCIDENT_ID, coordinate: COORD, observedAt: new Date(Date.now() - 6 * 60_000).toISOString(),
-      classification: 'smoke_visible', confidence: 0.78,
-      metadata: { demo: true, scenario: 'portfolio-exercise', label: '[DEMO / SYNTHETIC SCENARIO] Portfolio exercise — synthetic camera detection, not a real hazard.' }
-    };
-    const groundBody = {
-      sensorId: 'demo-ground-01', incidentId: DEMO_INCIDENT_ID, coordinate: COORD, observedAt: new Date(Date.now() - 2 * 60_000).toISOString(),
-      classification: 'heat_signature', confidence: 0.71,
-      metadata: { demo: true, scenario: 'portfolio-exercise', label: '[DEMO / SYNTHETIC SCENARIO] Portfolio exercise — synthetic ground sensor reading, not a real hazard.' }
-    };
+    const { cameraBody, groundBody } = demoSensorBodies();
 
     await phase('ingest_sensor_observations', STEP_TIMEOUT_MS, async () => {
       for (const [asset, secret, body] of [['demo-camera-01', cameraSecret, cameraBody], ['demo-ground-01', groundSecret, groundBody]]) {
