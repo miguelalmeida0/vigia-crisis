@@ -39,7 +39,7 @@ export async function retryAutopilotNotification(coordinator, receiptId, { force
   return receipt;
 }
 
-export async function retryAutopilotReceipt(coordinator, receiptId, { force = false } = {}) {
+export async function retryAutopilotReceipt(coordinator, receiptId, { force = false, projectionRefresher = null } = {}) {
   const at = coordinator.clock().toISOString(), nowMs = Date.parse(at);
   let claimed = false, receipt = null;
   await coordinator.repository.mutate((state) => {
@@ -60,7 +60,8 @@ export async function retryAutopilotReceipt(coordinator, receiptId, { force = fa
     ? retryAutopilotNotification(coordinator, receiptId, { force }) : receipt;
   let projectionResult, failureReason = null;
   try {
-    projectionResult = typeof coordinator.projectionRefresher === 'function' ? await coordinator.projectionRefresher({ incidentId: receipt.incidentId, eventId: receipt.eventId, revision: receipt.revision, triggerType: receipt.triggerType, receiptId }) : null;
+    const refresher = projectionRefresher ?? coordinator.projectionRefresher;
+    projectionResult = typeof refresher === 'function' ? await refresher({ incidentId: receipt.incidentId, eventId: receipt.eventId, revision: receipt.revision, triggerType: receipt.triggerType, receiptId }) : null;
     if (!String(projectionResult?.projectionHash ?? '').trim()) failureReason = 'canonical_projection_refresher_did_not_return_projection_hash';
   } catch (error) { failureReason = errorReason(error); }
   const completedAt = coordinator.clock().toISOString();
@@ -96,11 +97,20 @@ export async function clearAutopilotCoordinationFailure(coordinator, trigger) {
 
 export async function retryAutopilotPending(coordinator, { force = false, limit = 100 } = {}) {
   const snapshot = coordinator.repository.snapshot(), atMs = Date.parse(coordinator.clock().toISOString()), results = [];
+  let sharedProjectionRefresh = null;
+  const refreshProjectionOnce = (payload) => {
+    if (!sharedProjectionRefresh) {
+      sharedProjectionRefresh = Promise.resolve().then(() => typeof coordinator.projectionRefresher === 'function'
+        ? coordinator.projectionRefresher(payload)
+        : null);
+    }
+    return sharedProjectionRefresh;
+  };
   for (const receipt of (snapshot.crisisAutopilotReceipts ?? []).slice(0, Math.max(1, limit))) {
     if (!receipt.safeMutationCount) continue;
     const projectionDue = receipt.canonicalProjection?.state !== 'REFRESHED' && Date.parse(receipt.canonicalProjection?.nextRetryAt ?? 0) <= atMs;
     const notificationDue = receipt.canonicalProjection?.state === 'REFRESHED' && receipt.notification?.state !== 'DELIVERED' && Date.parse(receipt.notification?.nextRetryAt ?? 0) <= atMs;
-    if (force || projectionDue) results.push(await retryAutopilotReceipt(coordinator, receipt.receiptId, { force }));
+    if (force || projectionDue) results.push(await retryAutopilotReceipt(coordinator, receipt.receiptId, { force, projectionRefresher: refreshProjectionOnce }));
     else if (notificationDue) results.push(await retryAutopilotNotification(coordinator, receipt.receiptId, { force }));
   }
   for (const failure of (snapshot.crisisAutopilotCoordinationFailures ?? []).slice(0, Math.max(1, limit))) {

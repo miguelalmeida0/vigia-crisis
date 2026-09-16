@@ -187,3 +187,43 @@ test('notification failure never repeats projection work and retains a separatel
   assert.equal(invalidations, 2);
   assert.equal(changes, 1);
 });
+
+test('one retry pass rebuilds the canonical projection once for multiple pending receipts', async () => {
+  const store = repository();
+  let current = new Date(now), refreshes = 0;
+  const secondEvent = {
+    ...event,
+    id: 'operational-event:thermal-two',
+    provider: { ...event.provider, providerRevision: 'revision-8' },
+    payloadHash: 'payload-hash-two',
+  };
+  const events = new Map([[event.id, event], [secondEvent.id, secondEvent]]);
+  const coordinator = new CrisisAutopilotCoordinator({
+    repository: store,
+    canonicalEventResolver: async ({ eventId }) => events.get(eventId) ?? null,
+    clock: () => current,
+    retryBaseMs: 1_000,
+    projectionRefresher: async () => { refreshes += 1; throw new Error('injected_projection_failure'); },
+  });
+
+  for (const sourceEvent of [event, secondEvent]) {
+    const [trigger] = canonicalAutopilotTriggersForOperationalEvent(sourceEvent);
+    const failed = await coordinator.consume(trigger);
+    assert.equal(failed.state, 'PERSISTED_REFRESH_PENDING');
+  }
+  assert.equal(refreshes, 2);
+
+  current = new Date('2026-09-04T12:00:02.000Z');
+  coordinator.setProjectionRefresher(async () => {
+    refreshes += 1;
+    return { projectionHash: `canonical-governed-operator-twin:sha256:${'e'.repeat(64)}` };
+  });
+  const retry = await coordinator.retryPending();
+  assert.equal(retry.attempted, 2);
+  assert.equal(refreshes, 3);
+  const snapshot = coordinator.snapshot('incident:one');
+  assert.equal(snapshot.receipts.length, 2);
+  assert.equal(snapshot.receipts.every((item) => item.state === 'APPLIED'), true);
+  assert.equal(snapshot.receipts.every((item) => item.canonicalProjection.state === 'REFRESHED'), true);
+  assert.equal(snapshot.receipts.every((item) => item.notification.state === 'DELIVERED'), true);
+});
