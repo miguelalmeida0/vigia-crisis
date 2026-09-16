@@ -1,5 +1,25 @@
 import { json } from './postgres-alert-store-support.mjs';
 
+const ASSET_BATCH_SIZE = 500;
+
+async function seedAssetsBatched(client, territoryId, assets) {
+  for (let offset = 0; offset < assets.length; offset += ASSET_BATCH_SIZE) {
+    const batch = assets.slice(offset, offset + ASSET_BATCH_SIZE);
+    const ids=[],groupIds=[],names=[],assetTypes=[],geometries=[],sources=[],sourceIds=[],provenances=[],metadatas=[],actives=[];
+    for (const asset of batch) {
+      ids.push(asset.id); groupIds.push(asset.groupId); names.push(asset.name); assetTypes.push(asset.assetType);
+      geometries.push(json(asset.geometry)); sources.push(asset.source); sourceIds.push(asset.sourceId);
+      provenances.push(json(asset.provenance)); metadatas.push(json(asset.metadata)); actives.push(asset.active !== false);
+    }
+    await client.query(`INSERT INTO monitored_asset(id,territory_id,group_id,name,asset_type,geometry,source,source_id,provenance,metadata,active)
+      SELECT t.id,$2::text,t.group_id,t.name,t.asset_type,ST_SetSRID(ST_GeomFromGeoJSON(t.geometry_geojson),4326),t.source,t.source_id,t.provenance,t.metadata,t.active
+      FROM UNNEST($1::text[],$3::text[],$4::text[],$5::text[],$6::text[],$7::text[],$8::text[],$9::jsonb[],$10::jsonb[],$11::boolean[])
+        AS t(id,group_id,name,asset_type,geometry_geojson,source,source_id,provenance,metadata,active)
+      ON CONFLICT(id) DO UPDATE SET group_id=excluded.group_id,name=excluded.name,asset_type=excluded.asset_type,geometry=excluded.geometry,source=excluded.source,source_id=excluded.source_id,provenance=excluded.provenance,metadata=excluded.metadata,active=excluded.active,updated_at=now()`,
+    [ids,territoryId,groupIds,names,assetTypes,geometries,sources,sourceIds,provenances,metadatas,actives]);
+  }
+}
+
 export async function seedTerritory({tx,audit}, { territory, zones = [],groups = [], assets = [], policies = [] }) {
   return tx(async (client) => {
     await client.query(`INSERT INTO monitored_territory(id,name,mode,geometry,administrative_reference,source,provenance,owner_actor_id,active)
@@ -9,8 +29,7 @@ export async function seedTerritory({tx,audit}, { territory, zones = [],groups =
     for(const zone of zones)await client.query(`INSERT INTO monitored_zone(id,territory_id,name,geometry,source,provenance,active) VALUES($1,$2,$3,ST_SetSRID(ST_GeomFromGeoJSON($4),4326),$5,$6::jsonb,$7)
       ON CONFLICT(id) DO UPDATE SET name=excluded.name,geometry=excluded.geometry,source=excluded.source,provenance=excluded.provenance,active=excluded.active,updated_at=now()`,[zone.id,territory.id,zone.name,json(zone.geometry),zone.source,json(zone.provenance),zone.active!==false]);
     for (const group of groups) await client.query(`INSERT INTO monitored_asset_group(id,territory_id,name,asset_type,active) VALUES($1,$2,$3,$4,$5) ON CONFLICT(id) DO UPDATE SET name=excluded.name,asset_type=excluded.asset_type,active=excluded.active,updated_at=now()`, [group.id, territory.id, group.name, group.assetType, group.active !== false]);
-    for (const asset of assets) await client.query(`INSERT INTO monitored_asset(id,territory_id,group_id,name,asset_type,geometry,source,source_id,provenance,metadata,active) VALUES($1,$2,$3,$4,$5,ST_SetSRID(ST_GeomFromGeoJSON($6),4326),$7,$8,$9::jsonb,$10::jsonb,$11)
-      ON CONFLICT(id) DO UPDATE SET group_id=excluded.group_id,name=excluded.name,asset_type=excluded.asset_type,geometry=excluded.geometry,source=excluded.source,source_id=excluded.source_id,provenance=excluded.provenance,metadata=excluded.metadata,active=excluded.active,updated_at=now()`,[asset.id,territory.id,asset.groupId,asset.name,asset.assetType,json(asset.geometry),asset.source,asset.sourceId,json(asset.provenance),json(asset.metadata),asset.active!==false]);
+    await seedAssetsBatched(client, territory.id, assets);
     for (const policy of policies) await client.query(`INSERT INTO territory_alert_policy(territory_id,policy_id,policy_version,enabled,radius_meters,channels) VALUES($1,$2,$3,$4,$5,$6::jsonb) ON CONFLICT(territory_id,policy_id) DO UPDATE SET policy_version=excluded.policy_version,enabled=excluded.enabled,radius_meters=excluded.radius_meters,channels=excluded.channels,updated_at=now()`,[territory.id,policy.id,policy.version,policy.enabled!==false,policy.radiusMeters,json(policy.channels)]);
     await audit(client,{aggregateType:'MONITORED_TERRITORY',aggregateId:territory.id,action:'TERRITORY_REGISTRY_SYNCED',actorId:'vigia-system',payload:{source:territory.source,zoneCount:zones.length,assetCount:assets.length,policyCount:policies.length}});
     return{territoryId:territory.id,zoneCount:zones.length,assetCount:assets.length,policyCount:policies.length};
