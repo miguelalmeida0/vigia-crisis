@@ -28,6 +28,7 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
   let knowledgeTimer = null;
   let situationTimer = null;
   let telemetryTimer = null;
+  const isolatedSyntheticDemo = process.env.VIGIA_DEMO_CONFIRM === 'SYNTHETIC_DEMO_ONLY';
   // Bounded, low-frequency operational telemetry: a single small JSON line per
   // tick, not a growing log. This is what lets a live memory/pool incident be
   // diagnosed from Render logs alone, without attaching a profiler.
@@ -74,10 +75,11 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
         // PostGIS writers cannot contend with one another during cold start.
         await services.initializeBackground?.();
         await refreshOperationalState(services, hub, clock,{forceIntelligence:true});
-        // Replay is lower-priority historical evidence. Start it only after the
-        // first live provider→event transaction so the two background writers
-        // never contend during listener-first startup.
-        void services.replayService?.initialize?.().catch((error)=>console.error(JSON.stringify({level:'error',component:'replay_background_initialize',at:clock().toISOString(),error:String(error.message??error)})));
+        // Replay is lower-priority historical evidence. The isolated portfolio
+        // demo is already deterministically seeded before API startup, so replaying
+        // the historical pipeline adds memory pressure without changing its public
+        // read model. Production and normal local runtimes retain replay behavior.
+        if(!isolatedSyntheticDemo)void services.replayService?.initialize?.().catch((error)=>console.error(JSON.stringify({level:'error',component:'replay_background_initialize',at:clock().toISOString(),error:String(error.message??error)})));
         runtime.refreshState = 'ready';
         runtime.metrics.refreshSuccesses += 1; runtime.metrics.lastSuccessAt = clock().toISOString(); runtime.metrics.lastError = null;
         hub.publish('world.updated', { at: clock().toISOString(), reason: 'initial-load' });
@@ -90,9 +92,19 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
     },
     startTimers() {
       stopped = false;
-      scheduleRefresh();
-      scheduleKnowledge();
-      scheduleSituation();
+      // The public portfolio service is a read-only, explicitly synthetic
+      // exercise. It performs one governed refresh during initialize(), then
+      // serves that deterministic state. Recurring provider/situation/knowledge
+      // workers belong to live operational runtimes and previously caused a
+      // useless background recomputation loop inside Render's constrained demo
+      // process. Keep heartbeat + telemetry so availability remains observable.
+      if(!isolatedSyntheticDemo){
+        scheduleRefresh();
+        scheduleKnowledge();
+        scheduleSituation();
+      }else{
+        console.log(JSON.stringify({level:'info',component:'runtime_demo_mode',at:clock().toISOString(),state:'bounded_read_plane',recurringOperationalWorkers:false}));
+      }
       heartbeatTimer = setInterval(() => hub.publish('heartbeat', { at: clock().toISOString() }), 25_000);
       heartbeatTimer.unref?.();
       logTelemetry();
