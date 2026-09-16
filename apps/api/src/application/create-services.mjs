@@ -14,6 +14,8 @@ import { SituationStore } from '../modules/intelligence/situation-store.mjs';
 import { SituationService } from '../modules/intelligence/situation-service.mjs';
 import { WorldKnowledgeService } from '../modules/intelligence/world-knowledge-service.mjs';
 import { IncidentContextService } from '../modules/intelligence/incident-context-service.mjs';
+import { GovernedReferenceInventory } from '../modules/intelligence/governed-reference-inventory.mjs';
+import { GovernedArchiveCache } from '../shared/governed-archive-cache.mjs';
 
 const {
   PtDataGateway, IpmaGateway, CopernicusGateway, Sentinel1Gateway, FirmsGateway, LiveSourceGateway, ThermalWmsAdapter, WorldService,
@@ -54,7 +56,13 @@ export async function createServices({ config, hub, releaseIdentity, fetchImpl =
   // "connection terminated" errors under completely ordinary load. A single
   // bounded pool, sized for this service's real concurrency, removes that
   // ceiling entirely instead of tuning around it.
-  const sharedDatabasePool=config.databaseUrl?new pg.Pool({connectionString:config.databaseUrl,application_name:'vigia-api',max:10,connectionTimeoutMillis:config.databaseConnectionTimeoutMs,statement_timeout:config.databaseStatementTimeoutMs,query_timeout:config.databaseStatementTimeoutMs,idle_in_transaction_session_timeout:config.databaseStatementTimeoutMs}):null;
+  // lock_timeout matters as much as statement_timeout on a shared pool: without
+  // it, a session blocked acquiring a row/advisory lock (e.g. WorldKnowledgeStore's
+  // global advisory lock) occupies one of the 10 shared connections for the full
+  // statement_timeout instead of failing fast, which is what let world-knowledge
+  // lock contention starve unrelated queries (operational_refresh, runtime_refresh)
+  // sharing this same pool.
+  const sharedDatabasePool=config.databaseUrl?new pg.Pool({connectionString:config.databaseUrl,application_name:'vigia-api',max:10,connectionTimeoutMillis:config.databaseConnectionTimeoutMs,statement_timeout:config.databaseStatementTimeoutMs,query_timeout:config.databaseStatementTimeoutMs,lock_timeout:config.databaseLockTimeoutMs,idle_in_transaction_session_timeout:config.databaseStatementTimeoutMs}):null;
   const physicalTruthStore=new PostgresPhysicalTruthStore({pool:sharedDatabasePool,clock,connectionTimeoutMs:config.databaseConnectionTimeoutMs,statementTimeoutMs:config.databaseStatementTimeoutMs,lockTimeoutMs:config.databaseLockTimeoutMs}),physicalTruthStatus=await physicalTruthStore.initialize();
   const deploymentIdentityStore=new PostgresReleaseDeploymentIdentityStore({pool:sharedDatabasePool,releaseIdentity,clock,connectionTimeoutMs:config.databaseConnectionTimeoutMs,statementTimeoutMs:config.databaseStatementTimeoutMs});await deploymentIdentityStore.initialize();
   const operationsStore=new PostgresAlertStore({pool:sharedDatabasePool,clock,connectionTimeoutMs:config.databaseConnectionTimeoutMs,statementTimeoutMs:config.databaseStatementTimeoutMs});await operationsStore.initialize();
@@ -116,7 +124,16 @@ export async function createServices({ config, hub, releaseIdentity, fetchImpl =
   const screeningSpreadProvider = new ScreeningSpreadProvider();
   const externalSpreadProvider = new ExternalSpreadProvider({ endpoint: config.spreadProviderUrl, apiKey: config.spreadProviderApiKey, fetchImpl:pinnedProviderFetch, timeoutMs: config.requestTimeoutMs });
   const responseService = new ResponseService({ worldService, detectionService, exposureService, screeningSpreadProvider, externalSpreadProvider });
-  const responseFacilityRepository = new GovernedResponseFacilityRepository({ projectRoot: runtimeProjectRoot });
+  // Shared for the process lifetime by every consumer that resolves governed
+  // reference archives — GovernedResponseFacilityRepository here and
+  // GovernedReferenceInventory (constructed below, inside IncidentContextService)
+  // both parse governed-incident-context.json and the same OSM
+  // response-facilities archive; without this they each read and JSON.parse
+  // that ~5MB file independently. createServices is the lifecycle owner for
+  // both, so it owns this cache too rather than either class defaulting to a
+  // private one.
+  const governedArchiveCache = new GovernedArchiveCache();
+  const responseFacilityRepository = new GovernedResponseFacilityRepository({ projectRoot: runtimeProjectRoot, archiveCache: governedArchiveCache });
   await responseFacilityRepository.initialize();
   const responseRoutingAdapter = new OsrmRoutingAdapter({ fetchImpl:pinnedProviderFetch, timeoutMs:Math.min(config.requestTimeoutMs,6_000), clock });
   const outcomeService = new OutcomeService({ repository,clock });
@@ -159,7 +176,21 @@ export async function createServices({ config, hub, releaseIdentity, fetchImpl =
   const incidentCommandRepository=new PostgresIncidentCommandRepository({pool:sharedDatabasePool,clock});
   const incidentCommandService=new IncidentCommandService({repository:incidentCommandRepository,releaseId:verifiedReleaseId,canonicalEventResolver:(eventId)=>operationalEventService.operatorEvent(eventId),clock});await incidentCommandService.initialize();
   const operationalIntelligenceRepository=sharedDatabasePool?new PostgresOperationalIntelligenceRepository({pool:sharedDatabasePool,clock}):null;
-  const incidentContextService=new IncidentContextService({pool:operationalIntelligenceRepository?.pool,repository:operationalIntelligenceRepository,projectRoot:runtimeProjectRoot,clock});await incidentContextService.initialize();
+  // GovernedReferenceInventory.initialize() reads all 13 governed road-band
+  // archives (plus the response-facilities archive shared with
+  // responseFacilityRepository above via governedArchiveCache) and builds a
+  // nationwide spatial `cells` index — measured in isolation at ~62MB
+  // heapUsed, even after archive-sharing removed the one duplicate read. On
+  // a 256MB ceiling that is too large to pay unconditionally at boot for a
+  // service only IncidentContextService.project() calls (governed
+  // perimeter/spatial-relationship context for one incident at a time).
+  // Deliberately NOT initialized here at all — unlike replayService below
+  // ("start once, in the background, right away"), this is genuinely lazy:
+  // IncidentContextService.project() triggers and single-flights it itself,
+  // on first real demand, and its existing graceful-degradation contract
+  // (`inventory.state !== 'CACHED'` → UNAVAILABLE) already covers "not ready
+  // yet" for any caller that arrives before that first load settles.
+  const incidentContextService=new IncidentContextService({pool:operationalIntelligenceRepository?.pool,repository:operationalIntelligenceRepository,projectRoot:runtimeProjectRoot,clock,inventory:new GovernedReferenceInventory({projectRoot:runtimeProjectRoot,archiveCache:governedArchiveCache})});
   const operationalIntelligenceQueryService=new OperationalIntelligenceQueryServiceV2({projectRoot:runtimeProjectRoot,repository:operationalIntelligenceRepository,clock});await operationalIntelligenceQueryService.initialize();
   const centralFieldNetService=new CentralFieldNetService({filePath:config.fieldnetCentralStateFile,operationalEventService,incidentCommandService,nodeRegistry:config.fieldNetNodeRegistry,clock,onChanging:changing,onChanged:async(event,lease)=>{hub.publish('world.updated',publicHubEvent(event,'fieldnet.reconciled'));await finishAffected(event,true,lease);},onChangeFailed:changeFailed});await centralFieldNetService.initialize();
   const fieldCapacityAdmissionService=new FieldCapacityAdmissionService({filePath:config.fieldCapacityAdmissionFile??path.join(path.dirname(config.stateFile),'field-capacity-admissions.json'),snapshotForIncident:(incidentId,options)=>centralFieldNetService.snapshot(incidentId,options),authorizeAdmission:({actor,scope,action,incidentId,truthEnvironment})=>{assertCan(actor,'fieldnet:capacity-admit');assertIncidentScope(actor,incidentId);return{authorized:true,scope,action,incidentId,truthEnvironment,principalId:String(actor.id),authorityReference:`operator-session:${String(actor.id)}:${String(actor.role)}`};},clock});await fieldCapacityAdmissionService.initialize();

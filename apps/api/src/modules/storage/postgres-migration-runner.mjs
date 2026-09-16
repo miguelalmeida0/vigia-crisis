@@ -28,7 +28,8 @@ const definitions = Object.freeze([
   ['022', 'intelligence-convergence', new URL('./migrations/022-intelligence-convergence.sql', import.meta.url)],
   ['023', 'world-knowledge', new URL('./migrations/023-world-knowledge.sql', import.meta.url)],
   ['024', 'incident-situation', new URL('./migrations/024-incident-situation.sql', import.meta.url)],
-  ['025', 'road-source-history', new URL('./migrations/025-road-source-history.sql', import.meta.url)]
+  ['025', 'road-source-history', new URL('./migrations/025-road-source-history.sql', import.meta.url)],
+  ['026', 'situation-route-artifact', new URL('./migrations/026-situation-route-artifact.sql', import.meta.url)]
 ].map(([version, name, url]) => Object.freeze({ version, name, url })));
 
 function checksum(sql) { return `sha256:${createHash('sha256').update(sql).digest('hex')}`; }

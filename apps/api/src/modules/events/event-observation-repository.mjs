@@ -180,8 +180,15 @@ export class EventObservationRepository {
   }
   #idsForEvent(eventId) { return Object.entries(this.#observationEvents).filter(([, id]) => id === eventId).map(([id]) => id); }
   #recordCorrection(input, now) { const seed = `${now.toISOString()}:${input.kind}:${input.sourceEventId}:${input.targetEventId ?? ''}:${(input.observationIds ?? []).join('|')}`; const correction = { id: `correction:${digest(seed, 16).toLowerCase()}`, at: now.toISOString(), ...input }; this.#corrections = [correction, ...this.#corrections].slice(0, 1000); return correction; }
-  #state() { return structuredClone({ observations: this.#observations, observationEvents: this.#observationEvents, eventRecords: this.#eventRecords, manualObservationEvents: this.#manualObservationEvents, corrections: this.#corrections, derivedStates: this.#derivedStates }); }
-  #assertCapacity(){const state=this.#state(),{maxObservations,maxStateBytes,maxPrincipalObservations,maxPrincipalBytes}=this.#capacity;if(state.observations.length>maxObservations)throw Object.assign(new Error('observation_repository_capacity_exceeded'),{statusCode:507});const stateBytes=Buffer.byteLength(JSON.stringify(state));if(stateBytes>maxStateBytes)throw Object.assign(new Error('observation_repository_capacity_exceeded'),{statusCode:507});const principals=new Map();for(const observation of state.observations){const principal=String(observation?.metadata?.ingestPrincipal??'');if(!principal)continue;const row=principals.get(principal)??{count:0,bytes:0};row.count+=1;row.bytes+=Buffer.byteLength(JSON.stringify(observation));principals.set(principal,row);}for(const row of principals.values())if(row.count>maxPrincipalObservations||row.bytes>maxPrincipalBytes)throw Object.assign(new Error('sensor_principal_capacity_exceeded'),{statusCode:429});}
+  // Read-only view over the live fields, with no clone. JSON.stringify and
+  // property reads never mutate their input, so callers that only measure or
+  // serialize (capacity accounting, persistence) can use this directly instead
+  // of paying a full structuredClone on every transaction; #state() below
+  // remains the clone used wherever a caller might hold onto or mutate the
+  // result (transaction rollback snapshots, externally returned snapshots).
+  #liveState() { return { observations: this.#observations, observationEvents: this.#observationEvents, eventRecords: this.#eventRecords, manualObservationEvents: this.#manualObservationEvents, corrections: this.#corrections, derivedStates: this.#derivedStates }; }
+  #state() { return structuredClone(this.#liveState()); }
+  #assertCapacity(){const state=this.#liveState(),{maxObservations,maxStateBytes,maxPrincipalObservations,maxPrincipalBytes}=this.#capacity;if(state.observations.length>maxObservations)throw Object.assign(new Error('observation_repository_capacity_exceeded'),{statusCode:507});const stateBytes=Buffer.byteLength(JSON.stringify(state));if(stateBytes>maxStateBytes)throw Object.assign(new Error('observation_repository_capacity_exceeded'),{statusCode:507});const principals=new Map();for(const observation of state.observations){const principal=String(observation?.metadata?.ingestPrincipal??'');if(!principal)continue;const row=principals.get(principal)??{count:0,bytes:0};row.count+=1;row.bytes+=Buffer.byteLength(JSON.stringify(observation));principals.set(principal,row);}for(const row of principals.values())if(row.count>maxPrincipalObservations||row.bytes>maxPrincipalBytes)throw Object.assign(new Error('sensor_principal_capacity_exceeded'),{statusCode:429});}
   #restore(value) { this.#observations = value.observations; this.#observationEvents = value.observationEvents; this.#eventRecords = value.eventRecords; this.#manualObservationEvents = value.manualObservationEvents; this.#corrections = value.corrections; this.#derivedStates = value.derivedStates; }
   async #transaction(mutator,{beforeSave=null}={}) {
     const operation = this.#operationChain.then(async () => {
@@ -193,7 +200,7 @@ export class EventObservationRepository {
   }
   async #save() {
     if (!this.#filePath) return;
-    try { await this.#writer(this.#filePath, this.#state()); this.#persistence = { state: 'ready', lastPersistedAt: new Date().toISOString(), lastError: null }; }
+    try { await this.#writer(this.#filePath, this.#liveState()); this.#persistence = { state: 'ready', lastPersistedAt: new Date().toISOString(), lastError: null }; }
     catch (error) { this.#persistence = { ...this.#persistence, state: 'failed', lastError: String(error.message ?? error) }; throw error; }
   }
   async #load() {

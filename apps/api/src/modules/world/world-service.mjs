@@ -83,6 +83,22 @@ export class WorldService {
   #snapshot;
   #lastRefreshMs = 0;
   #refreshPromise = null;
+  #readCache = null;
+  #readCacheAtMs = 0;
+  #readCacheSource = null;
+  // A single page load fans out to several screens concurrently (command
+  // overview, incident detail, intelligence, operations, map context, ...),
+  // each independently calling snapshot({preferCache:true}). Without this
+  // cache, every one of those requests paid its own full structuredClone of
+  // the entire world snapshot (weatherHistory alone can hold up to
+  // OBSERVATION_LIMITS.historyRecords=12,000 records) — reproduced locally as
+  // an actual `--max-old-space-size=256` OOM crash within ~10s of a handful
+  // of concurrent multi-screen requests, matching the live incident. The TTL
+  // is invalidated the instant #snapshot itself is replaced by a real
+  // refresh (reference check below), so it never serves data older than one
+  // refresh cycle; within a cycle it just collapses a request burst into one
+  // clone instead of N concurrently-live ones.
+  static #READ_CACHE_TTL_MS = 3_000;
 
   constructor({ sourceGateway, acquisitionStore = null, clock = () => new Date(), refreshMs = 120_000, stateFile }) {
     this.#sourceGateway = sourceGateway;
@@ -117,9 +133,12 @@ export class WorldService {
     // Runtime scheduling owns remote acquisition. Read-plane callers that ask
     // for the cache must never start provider work or inherit its latency.
     if (!preferCache) await this.refresh();
-    const snapshot=clone(this.#snapshot),now=this.#clock();
+    const now=this.#clock(),nowMs=now.getTime();
+    if(this.#readCache&&this.#readCacheSource===this.#snapshot&&nowMs-this.#readCacheAtMs<WorldService.#READ_CACHE_TTL_MS)return this.#readCache;
+    const snapshot=clone(this.#snapshot);
     snapshot.sources=Object.fromEntries(Object.entries(snapshot.sources).map(([id,state])=>[id,stateWithFreshness(state,now)]));
     snapshot.sourceRegistry=operationalSourceRegistry(snapshot,now.toISOString());
+    this.#readCache=snapshot;this.#readCacheAtMs=nowMs;this.#readCacheSource=this.#snapshot;
     return snapshot;
   }
 

@@ -89,7 +89,24 @@ export function situationHash(snapshot){
   for(const f of semantic.facilities??[]){delete f.updatedAt;delete f.evaluatedAt;}
   for(const s of semantic.sources??[])delete s.evaluatedAt;
   if(semantic.roadCoverage)for(const key of ['sourceAgeMs','checkedAt','validUntil','lastAttemptAt'])delete semantic.roadCoverage[key];
-  for(const r of semantic.routes??[])if(r.roadInformation)for(const key of ['sourceAgeMs','checkedAt'])delete r.roadInformation[key];
+  // A route's own calculatedAt/validUntil/retryAfter are freshness bookkeeping
+  // (routes.mjs recomputes them on a rolling ~5-minute TTL regardless of
+  // whether the geometry, restrictions or anything operationally meaningful
+  // actually changed) — not stable route identity. Leaving them in the hash
+  // meant nearly every 5-minute tick produced a "changed" content hash and a
+  // full new historical snapshot even when nothing had. Strip them the same
+  // way roadInformation's own checkedAt/sourceAgeMs are already stripped
+  // below, recursing into the nested normalRoute/alternatives a route can
+  // carry when a restriction is active.
+  const stripRouteVolatility=route=>{
+    if(!route||typeof route!=='object')return;
+    delete route.calculatedAt;delete route.validUntil;delete route.retryAfter;
+    if(route.roadInformation)for(const key of ['sourceAgeMs','checkedAt'])delete route.roadInformation[key];
+    if(route.normalRoute)stripRouteVolatility(route.normalRoute);
+    for(const alternative of route.alternatives??[])stripRouteVolatility(alternative);
+  };
+  for(const r of semantic.routes??[])stripRouteVolatility(r);
+  for(const r of semantic.communityRoutes??[])stripRouteVolatility(r);
   for(const r of semantic.roadReports??[])if(r.admissionRule==='OFFICIAL_IP_PUBLISHED_OCCURRENCE'){
     delete r.knownAt;delete r.ingestedAt;
     if(Object.hasOwn(r,'publishedValidUntil'))r.validUntil=r.publishedValidUntil;

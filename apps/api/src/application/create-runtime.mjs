@@ -27,6 +27,19 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
   let heartbeatTimer = null;
   let knowledgeTimer = null;
   let situationTimer = null;
+  let telemetryTimer = null;
+  // Bounded, low-frequency operational telemetry: a single small JSON line per
+  // tick, not a growing log. This is what lets a live memory/pool incident be
+  // diagnosed from Render logs alone, without attaching a profiler.
+  const logTelemetry = () => {
+    const usage = process.memoryUsage();
+    const pool = services.sharedDatabasePool;
+    console.log(JSON.stringify({
+      level: 'info', component: 'runtime_telemetry', at: clock().toISOString(),
+      memory: { rssBytes: usage.rss, heapUsedBytes: usage.heapUsed, heapTotalBytes: usage.heapTotal, externalBytes: usage.external, arrayBuffersBytes: usage.arrayBuffers },
+      pool: pool ? { max: Number(pool.options?.max ?? 0), total: Number(pool.totalCount ?? 0), idle: Number(pool.idleCount ?? 0), waiting: Number(pool.waitingCount ?? 0) } : null
+    }));
+  };
   const scheduleSituation=()=>{if(stopped)return;situationTimer=setTimeout(async()=>{try{await services.situationService?.tick();}catch(error){console.error(JSON.stringify({component:'situation_worker',error:String(error.message)}));}finally{scheduleSituation();}},10000);situationTimer.unref?.();};
   const scheduleKnowledge=()=>{if(stopped)return;knowledgeTimer=setTimeout(async()=>{try{await services.roadStateService?.tick();await services.worldKnowledgeService?.tick();}catch(error){console.error(JSON.stringify({component:'world_knowledge_worker',error:String(error.message)}));}finally{scheduleKnowledge();}},15000);knowledgeTimer.unref?.();};
   let stopped = false;
@@ -82,6 +95,9 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
       scheduleSituation();
       heartbeatTimer = setInterval(() => hub.publish('heartbeat', { at: clock().toISOString() }), 25_000);
       heartbeatTimer.unref?.();
+      logTelemetry();
+      telemetryTimer = setInterval(logTelemetry, 15_000);
+      telemetryTimer.unref?.();
     },
     stop() {
       stopped = true;
@@ -89,6 +105,7 @@ export function createRuntime({ config, services, hub, startup = null, clock = (
       clearTimeout(knowledgeTimer);
       clearTimeout(situationTimer);
       clearInterval(heartbeatTimer);
+      clearInterval(telemetryTimer);
       services.firmsGateway?.stop?.();
       services.sentinel3FrpGateway?.stop?.();
       services.replaySentinel3FrpGateway?.stop?.();

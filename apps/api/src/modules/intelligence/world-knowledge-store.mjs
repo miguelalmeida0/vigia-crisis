@@ -8,11 +8,21 @@ import { runPostgresMigrations } from '../storage/postgres-migration-runner.mjs'
 const empty=()=>({entities:[],documents:[],facts:[],jobs:[],relations:[],sources:[]});
 const tables={entities:'world_knowledge_entity',documents:'world_knowledge_document',facts:'world_knowledge_fact',jobs:'world_knowledge_job',relations:'world_knowledge_relation',sources:'world_knowledge_source'};
 export class WorldKnowledgeStore {
+ #chain=Promise.resolve();
  constructor({pool=null,filePath=null}){if(!pool&&!filePath)throw new Error('knowledge_storage_required');Object.assign(this,{pool,filePath});}
+ // mutate() takes a single GLOBAL advisory lock (not scoped per-entity, since
+ // writes can cross entities/facts/relations in one pass), so any concurrency
+ // here is fully serialized in Postgres regardless. Queuing it in-process too
+ // means a blocked mutate() parks behind a cheap in-memory promise instead of
+ // holding one of the shared pool's 10 connections idle while it waits on the
+ // DB-side advisory lock — that idle-but-checked-out connection is what let
+ // world-knowledge contention starve unrelated queries on the shared pool.
+ #enqueue(operation){const result=this.#chain.then(operation);this.#chain=result.catch(()=>undefined);return result;}
  async initialize(){if(this.pool)await runPostgresMigrations(this.pool);else{await mkdir(path.dirname(this.filePath),{recursive:true});if(!await readJson(this.filePath,null))await writeJsonAtomic(this.filePath,empty());}}
  async source(id){if(this.pool)return(await this.pool.query('SELECT payload FROM world_knowledge_source WHERE id=$1',[id])).rows[0]?.payload??null;return(await this.read()).sources.find(s=>s.id===id)??null;}
  async read(client=null,collections=Object.keys(tables)){if(!client&&this.pool){const snapshot=await this.pool.connect();try{await snapshot.query('BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY');const value=await this.read(snapshot,collections);await snapshot.query('COMMIT');return value;}catch(error){await snapshot.query('ROLLBACK').catch(()=>{});throw error;}finally{snapshot.release();}}if(!client)return readJson(this.filePath,empty());const state=empty();for(const [key,table]of Object.entries(tables).filter(([key])=>collections.includes(key)))state[key]=(await client.query(`SELECT payload FROM ${table}`)).rows.map(r=>r.payload);return state;}
- async mutate(operation,{collections=Object.keys(tables)}={}){
+ async mutate(operation,{collections=Object.keys(tables)}={}){return this.#enqueue(()=>this.#performMutate(operation,collections));}
+ async #performMutate(operation,collections){
   if(!this.pool){let lock;try{lock=await open(this.filePath+'.lock','wx');const state=await this.read(),result=await operation(state);await writeJsonAtomic(this.filePath,state);return result;}finally{if(lock){await lock.close();await unlink(this.filePath+'.lock');}}}
   const client=await this.pool.connect();try{await client.query('BEGIN');await client.query("SELECT pg_advisory_xact_lock(hashtext('vigia-world-knowledge'))");const state=await this.read(client,collections),before=Object.fromEntries(Object.entries(state).map(([k,rows])=>[k,new Map(rows.map(r=>[r.id,JSON.stringify(r)]))]));const result=await operation(state);
    for(const [key,table]of Object.entries(tables))for(const row of state[key])if(before[key].get(row.id)!==JSON.stringify(row)){

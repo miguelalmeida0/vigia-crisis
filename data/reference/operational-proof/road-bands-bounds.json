@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "vigia.road-band-spatial-index.v1",
+  "generatedAt": "2026-09-16T13:19:42.002Z",
+  "sourceRegistry": "data/reference/operational-proof/governed-incident-context.json",
+  "bands": [
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-1.json",
+      "sha256": "sha256:859e64c37cc33f509118a9ddc631e7161985eb254331711d168c1b51e2532474",
+      "elementCount": 17674,
+      "latMin": 36.6861811,
+      "latMax": 38.1143024,
+      "lonMin": -8.9952731,
+      "lonMax": -5.9871465
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-2.json",
+      "sha256": "sha256:c7783cf24e5a511dce6a1cf8a66471d66c1c6712acf75098e6782d0077360b04",
+      "elementCount": 16382,
+      "latMin": 38.0876632,
+      "latMax": 38.8325054,
+      "lonMin": -9.4848234,
+      "lonMax": -7.8555865
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-3.json",
+      "sha256": "sha256:064cb85050f6d00b8aa610c0745b10410bbff9f27eca12dfdfdef3120e14f745",
+      "elementCount": 2579,
+      "latMin": 38.0625917,
+      "latMax": 38.8160296,
+      "lonMin": -7.9257436,
+      "lonMax": -5.9560176
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-4.json",
+      "sha256": "sha256:321d3b19fa4e5a492d83af88fb8e5c88754d89e5f5a4079a09aff5da052e3778",
+      "elementCount": 10151,
+      "latMin": 38.7922788,
+      "latMax": 39.5277525,
+      "lonMin": -9.4574218,
+      "lonMax": -7.8452904
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-5.json",
+      "sha256": "sha256:a7a2d401944fdbb852f428685e217983144cdb573444951629ce7232c7fd912a",
+      "elementCount": 5811,
+      "latMin": 38.7629323,
+      "latMax": 39.5078097,
+      "lonMin": -7.9182791,
+      "lonMax": -5.9677127
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-6.json",
+      "sha256": "sha256:4b939d4db0c904398acd2abc657274946585bbda4e3a4b342a1ebd6f2d7739c3",
+      "elementCount": 12146,
+      "latMin": 39.4919855,
+      "latMax": 40.2192486,
+      "lonMin": -9.1329747,
+      "lonMax": -7.8708821
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-7.json",
+      "sha256": "sha256:3fc975180cc61fd6bf8b0a0fbcdc4d543931b8d6565a3030fd8891c9198a9b76",
+      "elementCount": 3598,
+      "latMin": 39.488107,
+      "latMax": 40.2192486,
+      "lonMin": -7.8963195,
+      "lonMax": -5.9662066
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-8.json",
+      "sha256": "sha256:076197ee5f385dbc669955749a4a747192ed5e0595a3591ef1982c44df4f160c",
+      "elementCount": 13213,
+      "latMin": 40.1880871,
+      "latMax": 40.9057204,
+      "lonMin": -8.8404584,
+      "lonMax": -7.8617694
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-9.json",
+      "sha256": "sha256:2abdeba623fe26eff3d8f8a9c15c524cc9e333d2bf4038720213ec85025ffe73",
+      "elementCount": 5956,
+      "latMin": 40.1787984,
+      "latMax": 40.9129997,
+      "lonMin": -7.8856959,
+      "lonMax": -5.9725071
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-10.json",
+      "sha256": "sha256:f2d4fcbc97c2d1f68fdd36f571e417d1dbc0f40564698b730a779fecb36a0ebf",
+      "elementCount": 24905,
+      "latMin": 40.8437507,
+      "latMax": 41.610105,
+      "lonMin": -8.7906134,
+      "lonMax": -7.8599971
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-11.json",
+      "sha256": "sha256:e608f207eb3d27087a638d731e1f41af27344efa48bd3072e64c2a042159b328",
+      "elementCount": 6288,
+      "latMin": 40.8725914,
+      "latMax": 41.6283852,
+      "lonMin": -7.9027904,
+      "lonMax": -5.9923487
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-12.json",
+      "sha256": "sha256:b8d7879234e2549ab7afbc428eb2ccd55a4eda0893b4e22c99799747d2810d22",
+      "elementCount": 8378,
+      "latMin": 41.5951115,
+      "latMax": 42.3089917,
+      "lonMin": -8.8974359,
+      "lonMax": -7.8684129
+    },
+    {
+      "path": "data/reference/operational-proof/raw/osm-major-roads-band-13.json",
+      "sha256": "sha256:a3abf6a6614af330e85422f66dab3c6436a3e71d40ec4db65b9f4da9b579602f",
+      "elementCount": 3818,
+      "latMin": 41.5784188,
+      "latMax": 42.3059771,
+      "lonMin": -7.8900344,
+      "lonMax": -5.9905134
+    }
+  ]
+}

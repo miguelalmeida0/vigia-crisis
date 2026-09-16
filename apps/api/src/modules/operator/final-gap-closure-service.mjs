@@ -176,7 +176,24 @@ function officialPositiveControls(corpus, benchmark) {
 }
 
 export class FinalGapClosureService {
+  #officialCorpusPromise = null;
   constructor({ worldService, repository, projectRoot, clock = () => new Date() } = {}) { Object.assign(this, { worldService, repository, projectRoot, clock, cache: null }); }
+
+  // The 2024 official corpus/benchmark are static historical reference data
+  // (~4.3MB on disk) — they never change at runtime, unlike everything else
+  // project()'s cacheKey is keyed on (world.meta.generatedAt changes every
+  // refresh cycle, ~30s by default). Reading this file through that same
+  // cache meant it was re-read and re-parsed on almost every governed-twin
+  // rebuild even though nothing in it ever changes, repeatedly allocating and
+  // discarding a multi-MB object graph over a long-running process. Loaded
+  // once per process lifetime instead, independent of the result cache above.
+  #officialCorpus() {
+    if (!this.#officialCorpusPromise) this.#officialCorpusPromise = Promise.all([
+      readJson(`${this.projectRoot}/data/replay/corpus/portugal-2024-official.json`, null),
+      readJson(`${this.projectRoot}/data/replay/results/portugal-2024-benchmark.json`, null)
+    ]).then(([corpus, benchmark]) => ({ corpus, benchmark })).catch((error) => { this.#officialCorpusPromise = null; throw error; });
+    return this.#officialCorpusPromise;
+  }
 
   async project(twin, recovery = null) {
     const at = this.clock().toISOString(), world = await this.worldService.snapshot({ preferCache: true }), jobs = recovery?.sourceResolution?.jobs ?? this.repository?.snapshot?.()?.sourceResolutionJobs ?? [], incidentRows = rows(twin?.incidents), cacheKey = digest('final-gap-input', { worldGeneratedAt: world?.meta?.generatedAt ?? null, incidents: incidentRows.map((incident) => [incidentId(incident), lastObservedAt(incident), observations(incident).map(eventLineageId)]), jobs: rows(jobs).map((job) => [job.jobId, job.state, job.attemptCount, job.lastAttemptAt, job.nextCheckAt]) });
@@ -185,7 +202,7 @@ export class FinalGapClosureService {
       const weather = weatherAssociation(incident, world, at), rawObservations = observations(incident), attributableByLineage = new Map(rawObservations.filter((item) => String(item?.source?.provider ?? item?.provider ?? item?.provenance?.provider ?? item?.sourceId ?? '')).map((item) => [eventLineageId(item), item])), independenceRecords = rawObservations.map((item) => independenceRecord(item, attributableByLineage.get(eventLineageId(item)) ?? item)), families = [...new Set(independenceRecords.map((item) => item.independenceClass))], location = geolocation(incident), spatial = geometryContract(incident);
       return { incidentId: incidentId(incident), geolocation: location, weather, spatial, independence: { records: independenceRecords, distinctFamilyCount: families.length, distinctFamilies: families }, coverage: coverageFor(incident, providers, jobs, weather) };
     });
-    const [corpus, benchmark] = await Promise.all([readJson(`${this.projectRoot}/data/replay/corpus/portugal-2024-official.json`, null), readJson(`${this.projectRoot}/data/replay/results/portugal-2024-benchmark.json`, null)]), controls = officialPositiveControls(corpus, benchmark), counts = { oneFamily: projectedIncidents.filter((item) => item.independence.distinctFamilyCount === 1).length, twoOrMore: projectedIncidents.filter((item) => item.independence.distinctFamilyCount >= 2).length, threeOrMore: projectedIncidents.filter((item) => item.independence.distinctFamilyCount >= 3).length, blockedOnlyByIndependence: projectedIncidents.filter((item) => item.independence.distinctFamilyCount < 2 && item.coverage.find((entry) => entry.sourceFamily === 'OFFICIAL INCIDENT')?.actualCoverage === 'AVAILABLE').length };
+    const { corpus, benchmark } = await this.#officialCorpus(), controls = officialPositiveControls(corpus, benchmark), counts ={ oneFamily: projectedIncidents.filter((item) => item.independence.distinctFamilyCount === 1).length, twoOrMore: projectedIncidents.filter((item) => item.independence.distinctFamilyCount >= 2).length, threeOrMore: projectedIncidents.filter((item) => item.independence.distinctFamilyCount >= 3).length, blockedOnlyByIndependence: projectedIncidents.filter((item) => item.independence.distinctFamilyCount < 2 && item.coverage.find((entry) => entry.sourceFamily === 'OFFICIAL INCIDENT')?.actualCoverage === 'AVAILABLE').length };
     const located = projectedIncidents.filter((item) => item.geolocation.state !== 'UNLOCATED').length;
     const coverageEntries = projectedIncidents.flatMap((item) => item.coverage), coverageAvailable = coverageEntries.filter((item) => item.actualCoverage === 'AVAILABLE').length;
     const result = {

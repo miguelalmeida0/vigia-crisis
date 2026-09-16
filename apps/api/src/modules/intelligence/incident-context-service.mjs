@@ -10,10 +10,27 @@ function admitted(record,asOf){
     /^(OFFICIAL_PERIMETER|SCIENTIFICALLY_ADMITTED_PERIMETER|ADMITTED_OFFICIAL_PERIMETER)$/.test(record.sourceAdmission??record.authority??'')&&record.synthetic===false&&!record.forecast&&!record.model?record:null;
 }
 export class IncidentContextService {
-  constructor({pool,repository=null,projectRoot,clock=()=>new Date(),inventory=null}){Object.assign(this,{pool,repository,clock});this.inventory=inventory??new GovernedReferenceInventory({projectRoot});this.cache=new Map();this.pending=new Map();}
-  initialize(){return this.inventory.initialize();}
+  constructor({pool,repository=null,projectRoot,clock=()=>new Date(),inventory=null}){Object.assign(this,{pool,repository,clock});this.inventory=inventory??new GovernedReferenceInventory({projectRoot});this.cache=new Map();this.pending=new Map();this.inventoryLoad=null;this.inventoryAttempted=false;}
+  // Single-flight, attempt-once lazy trigger for the governed reference
+  // inventory (~62MB to build; see createServices for why it is not started
+  // eagerly). Only the first caller — whether that is an explicit
+  // initialize() or the first real project() — starts the load; every
+  // concurrent or later caller shares that one promise or, once it has
+  // settled (success or failure), sees the inventory's own state directly.
+  // Deliberately does not retry a failed load: these are static deployment
+  // artifacts that either exist or don't, not something that becomes
+  // available later within one process's lifetime.
+  #loadInventory(){
+    if(this.inventoryLoad)return this.inventoryLoad;
+    if(this.inventoryAttempted||this.inventory.state!=='UNAVAILABLE')return Promise.resolve();
+    this.inventoryAttempted=true;
+    this.inventoryLoad=this.inventory.initialize().finally(()=>{this.inventoryLoad=null;});
+    return this.inventoryLoad;
+  }
+  initialize(){return this.#loadInventory();}
   sourceRecords(){return this.inventory.sources;}
   async project({physical,item}){
+    void this.#loadInventory();
     const asOf=this.clock().toISOString();let current=admitted(item?.spatialTruth?.officialPerimeter,asOf),history=null;
     if(current){try{history=await retainPerimeterObservation(this.repository,physical.incidentId,current);if(history.conflicting)current=null;}catch{history={state:'HISTORY_UNAVAILABLE'};}}
     const candidate=admitted(item?.spatialTruth?.previousOfficialPerimeter??history?.previous,asOf);
@@ -24,7 +41,7 @@ export class IncidentContextService {
     const work=(async()=>{
       const started=performance.now();
       if(!this.pool||this.inventory.state!=='CACHED')return{state:'UNAVAILABLE',relationships:[],reason:'Governed geographic inventory or PostGIS is unavailable.'};
-      const cohort=this.inventory.candidates(physical.location);
+      const cohort=await this.inventory.candidates(physical.location);
       if(this.knowledgeService)cohort.features=cohort.features.map(feature=>{
         const enriched=this.knowledgeService.decorate(feature);
         if(!enriched.canonicalId)return feature;

@@ -65,13 +65,33 @@ function collectionEffectiveness(ledger) {
 }
 
 export class OperationalProofService {
+  #referenceDataPromise = null;
   constructor({ projectRoot = process.cwd() } = {}) {
     this.contextFile = path.join(projectRoot, 'data/reference/operational-proof/governed-incident-context.json');
     this.ledgerFile = path.join(projectRoot, 'data/reference/operational-proof/information-requirement-ledger.json');
   }
 
+  // Both files are static governed reference data (the ledger alone is
+  // ~14.6MB on disk) that never changes at runtime, but project() re-read and
+  // re-parsed them on every call with no caching at all — and project() runs
+  // on every governed-twin rebuild (every canonical-operator screen request,
+  // rate-limited only by CanonicalOperatorApiService's ~60s governedTwinTtlMs).
+  // Under sustained traffic that is a multi-ten-MB allocate/parse/discard
+  // cycle roughly every minute, which is exactly the kind of repeated churn
+  // that plausibly explains a process that runs fine for several minutes and
+  // then OOMs rather than crashing immediately. Loaded once per process
+  // lifetime instead; the derived per-call projections below (which do
+  // legitimately depend on the caller's `recovery` argument) are unaffected.
+  #referenceData() {
+    if (!this.#referenceDataPromise) this.#referenceDataPromise = Promise.all([
+      readJson(this.contextFile, null),
+      readJson(this.ledgerFile, null)
+    ]).then(([contextPack, ledger]) => ({ contextPack, ledger })).catch((error) => { this.#referenceDataPromise = null; throw error; });
+    return this.#referenceDataPromise;
+  }
+
   async project(recovery) {
-    const [contextPack, ledger] = await Promise.all([readJson(this.contextFile, null), readJson(this.ledgerFile, null)]);
+    const { contextPack, ledger } = await this.#referenceData();
     if (!contextPack || !ledger) return { recovery, incidentContextById: new Map(), collectionEffectiveness: null, geometryAudit: null };
     const legacyRequirements = rows(recovery?.informationCollection?.requirements);
     const proofRequirements = rows(ledger.requirements);

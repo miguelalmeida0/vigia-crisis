@@ -35,7 +35,7 @@ function recordStartupPhase({phase,state,at,...details}){
   if(entry.subphase&&['subphase_completed','subphase_failed','subphase_skipped'].includes(entry.state))startup.subphase=entry.subphase;
   if(entry.state==='completed')startup.subphase=null;
   startup.phaseHistory.push(entry);if(startup.phaseHistory.length>64)startup.phaseHistory.splice(0,startup.phaseHistory.length-64);
-  console.log(JSON.stringify({level:'info',component:'service_startup_phase',...entry}));
+  console.log(JSON.stringify({level:'info',component:'service_startup_phase',...entry,heapUsedBytes:process.memoryUsage().heapUsed}));
 }
 function redactedStartupError(error){
   let value=String(error?.message??error??'unknown_startup_failure');
@@ -84,7 +84,8 @@ console.log(`\nVIGIA 10.0 Physical Intelligence Core: ${url}`); console.log('Uni
 console.log(`HTTP LISTENER READY · ${startup.listenerMs}ms · services loading in background`);
 void (async()=>{
   try {
-    services = await withTimeout(() => createServices({ config, hub, releaseIdentity, onStartupPhase:recordStartupPhase }), { ms: CREATE_SERVICES_TIMEOUT_MS, label: 'createServices' }); runtime = createRuntime({ config, services, hub, startup }); router = new Router(); registerRoutes(router, { services, hub, runtime, sessionService,releaseIdentityService });
+    services = await withTimeout(() => createServices({ config, hub, releaseIdentity, onStartupPhase:recordStartupPhase }), { ms: CREATE_SERVICES_TIMEOUT_MS, label: 'createServices' });
+    runtime = createRuntime({ config, services, hub, startup }); router = new Router(); registerRoutes(router, { services, hub, runtime, sessionService,releaseIdentityService });
     startup.servicesReadyAt = new Date().toISOString(); startup.servicesReadyMs = Math.round(performance.now());
     startup.phase = 'services_ready'; startup.phaseStartedAt = startup.servicesReadyAt;
     console.log(`LOCAL SERVICES READY · ${startup.servicesReadyMs}ms · POSTGIS ${services.physicalTruthStore.status().state.toUpperCase()}`);

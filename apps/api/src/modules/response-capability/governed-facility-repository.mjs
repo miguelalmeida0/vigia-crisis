@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { RESPONSE_FACILITY_KINDS } from '../../../../../packages/domain/src/response-capability/index.mjs';
 import { retrieveFacilityCandidates } from './facility-retrieval.mjs';
+import { GovernedArchiveCache } from '../../shared/governed-archive-cache.mjs';
 
 const DEFAULT_ARCHIVE_PATH = 'data/reference/operational-proof/raw/osm-community-medical-fire-protected.json';
 const DEFAULT_CONTEXT_PATH = 'data/reference/operational-proof/governed-incident-context.json';
@@ -140,13 +141,18 @@ export class GovernedResponseFacilityRepository {
   #source = null;
   #initialized = false;
 
-  constructor({ projectRoot = process.cwd(), archivePath = null, contextPath = DEFAULT_CONTEXT_PATH, publicFallbackPath = DEFAULT_PUBLIC_FALLBACK_PATH } = {}) {
+  constructor({ projectRoot = process.cwd(), archivePath = null, contextPath = DEFAULT_CONTEXT_PATH, publicFallbackPath = DEFAULT_PUBLIC_FALLBACK_PATH, archiveCache = null } = {}) {
     this.projectRoot = projectRoot;
     this.explicitArchivePath = archivePath;
     this.archivePath = archivePath ? path.resolve(projectRoot, archivePath) : null;
     this.contextPath = path.resolve(projectRoot, contextPath);
     this.publicFallbackPath = path.resolve(projectRoot, publicFallbackPath);
     this.archiveReference = this.archivePath ? path.relative(projectRoot, this.archivePath) : null;
+    // Defaults to a private cache (never shared) so this class still works
+    // standalone/in tests exactly as before; createServices passes a shared
+    // instance so this and GovernedReferenceInventory read the overlapping
+    // archive/context files only once between them.
+    this.archiveCache = archiveCache ?? new GovernedArchiveCache();
   }
 
   async #initializeFromCommittedPilotBaseline(reason) {
@@ -183,14 +189,13 @@ export class GovernedResponseFacilityRepository {
   }
 
   async initialize() {
-    let contextBytes;
+    let context;
     try {
-      contextBytes = await readFile(this.contextPath);
+      ({ parsed: context } = await this.archiveCache.load(this.contextPath));
     } catch (error) {
       if (error?.code === 'ENOENT') return this.#initializeFromCommittedPilotBaseline('LOCAL_GOVERNED_CONTEXT_NOT_DEPLOYED');
       throw error;
     }
-    const context = JSON.parse(contextBytes.toString('utf8'));
     const metadata = context?.sources?.openStreetMap;
     const preferredArchive = [...(metadata?.archives ?? [])].filter((entry) => entry.purpose === 'RESPONSE_FACILITIES')
       .sort((left, right) => (Date.parse(right.retrievedAt ?? '') || 0) - (Date.parse(left.retrievedAt ?? '') || 0))[0]
@@ -199,15 +204,13 @@ export class GovernedResponseFacilityRepository {
       this.archiveReference = preferredArchive?.path ?? DEFAULT_ARCHIVE_PATH;
       this.archivePath = path.resolve(this.projectRoot, this.archiveReference);
     }
-    let archiveBytes;
+    let checksum, archive;
     try {
-      archiveBytes = await readFile(this.archivePath);
+      ({ sha256: checksum, parsed: archive } = await this.archiveCache.load(this.archivePath));
     } catch (error) {
       if (error?.code === 'ENOENT') return this.#initializeFromCommittedPilotBaseline('LOCAL_GOVERNED_ARCHIVE_NOT_DEPLOYED');
       throw error;
     }
-    const checksum = `sha256:${createHash('sha256').update(archiveBytes).digest('hex')}`;
-    const archive = JSON.parse(archiveBytes.toString('utf8'));
     const registered = metadata?.archives?.find((entry) => entry.path === this.archiveReference);
     if (!registered || registered.sha256 !== checksum) throw new Error('response_facility_archive_checksum_mismatch');
     const provenance = {

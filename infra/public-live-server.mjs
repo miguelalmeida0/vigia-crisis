@@ -2,6 +2,7 @@ import http from 'node:http';
 import { createReadStream, existsSync, readFileSync, statSync } from 'node:fs';
 import { extname, join, normalize, resolve } from 'node:path';
 import { signOperatorProxyRequest } from '../packages/domain/src/operator-proxy/request-auth.mjs';
+import { RequestGate } from '../apps/api/src/shared/request-gate.mjs';
 
 const packageRoot = resolve(process.env.VIGIA_OPERATOR_PACKAGE_ROOT || 'apps/operator-console');
 const root = resolve(packageRoot, process.env.VIGIA_OPERATOR_STATIC_ROOT || 'dist');
@@ -30,6 +31,16 @@ const types = {
 };
 const consoleCsp = "default-src 'self'; base-uri 'none'; object-src 'none'; frame-ancestors 'none'; form-action 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self'; media-src 'self' blob:; worker-src 'self' blob:; manifest-src 'self'";
 const maxProxyResponseBytes = 32_000_000;
+// A map viewport pan/zoom can burst dozens of concurrent tile requests. This
+// gateway used to forward every one of them with no concurrency ceiling of
+// its own and a 25s timeout (5.5x the backend's own 4.5s upstream tile
+// timeout), so during any backend slowdown those requests piled up here,
+// each holding an open socket and buffered response for up to 25s — adding
+// gateway-side memory/socket pressure on top of whatever was already
+// degrading the backend, and only then surfacing to the browser as a 503 or
+// abort. Gate tile requests so a burst fails fast instead of queuing.
+const basemapGate = new RequestGate({ maxConcurrent: 16, maxConcurrentPerClient: 8, maxRequestsPerWindow: 600, windowMs: 60_000 });
+const basemapUpstreamTimeoutMs = 6_000;
 
 function securityHeaders(res, { document = false } = {}) {
   if (document) res.setHeader('Content-Security-Policy', consoleCsp);
@@ -69,7 +80,7 @@ function signedHeaders(method, path, req) {
   };
 }
 
-async function proxyBuffered(req, res, upstreamPath, { forceGet = false } = {}) {
+async function proxyBuffered(req, res, upstreamPath, { forceGet = false, timeoutMs = 25_000 } = {}) {
   if (!upstreamPath.startsWith('/') || upstreamPath.startsWith('//') || upstreamPath.includes('\\')) return writeJson(res, 400, { error: 'public_demo_path_invalid' });
   const target = new URL(`.${upstreamPath}`, `${backend}/`);
   if (target.origin !== backend) return writeJson(res, 400, { error: 'public_demo_target_invalid' });
@@ -77,7 +88,7 @@ async function proxyBuffered(req, res, upstreamPath, { forceGet = false } = {}) 
   if (!['GET', 'HEAD'].includes(method)) return writeJson(res, 405, { error: 'public_demo_read_only', message: 'This public VIGIA deployment is read-only.' }, { allow: 'GET, HEAD, OPTIONS' });
   const upstreamRequestPath = `${target.pathname}${target.search}`;
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 25_000);
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
   try {
     const headers = signedHeaders(method, upstreamRequestPath, req);
     for (const name of ['if-none-match', 'if-modified-since', 'user-agent']) if (req.headers[name]) headers[name] = String(req.headers[name]);
@@ -151,6 +162,11 @@ async function handle(req, res) {
     if (!['GET', 'HEAD'].includes(String(req.method || 'GET').toUpperCase())) return writeJson(res, 405, { error: 'public_demo_read_only', message: 'This public VIGIA deployment is read-only.' }, { allow: 'GET, HEAD, OPTIONS' });
     const upstreamPath = `${url.pathname.slice('/backend'.length)}${url.search}`;
     if (/\/stream$/.test(url.pathname)) return proxyStream(req, res, upstreamPath);
+    if (url.pathname.startsWith('/backend/api/v1/basemap/')) {
+      const clientKey = req.socket?.remoteAddress ?? 'unknown';
+      try { return await basemapGate.run(clientKey, () => proxyBuffered(req, res, upstreamPath, { timeoutMs: basemapUpstreamTimeoutMs })); }
+      catch (error) { return writeJson(res, error?.statusCode ?? 503, { error: error?.message ?? 'public_live_basemap_capacity_exhausted' }); }
+    }
     return proxyBuffered(req, res, upstreamPath);
   }
 
