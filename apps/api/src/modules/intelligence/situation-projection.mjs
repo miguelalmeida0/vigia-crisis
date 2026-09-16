@@ -2,13 +2,25 @@ import {canonicalIncidentId} from '../../../../../packages/domain/src/authorizat
 import {hash} from '../../../../../packages/domain/src/intelligence/world-knowledge.mjs';
 const rows=value=>Array.isArray(value)?value:Object.values(value??{});
 const measured=m=>m?Object.fromEntries(['id','label','value','unit','observedAt','receivedAt','sourceId','sourceName','sourceLocation','distanceToSubject','expiresAt','provenanceRef','validity','limitations'].filter(k=>m[k]!==undefined).map(k=>[k,m[k]])):null;
+const compactFacility=f=>Object.fromEntries(['id','canonicalId','canonicalName','name','canonicalType','kind','coordinate','canonicalRevision','address','addressPrecision','locality','municipality','district','contact','capabilities','designation','authority','operator','presentation','distanceKm','distanceReference','staticCapability','freshness'].filter(k=>f?.[k]!==undefined).map(k=>[k,f[k]]));
 export function responseSituationInput(projection){
   const incident=projection.incident??{},incidentId=incident.id??incident.incidentId??incident.incident?.id;
-  const facilities=rows(projection.facilities??projection.facilitiesByKind).flat().filter(f=>f.canonicalId).slice(0,200);
-  const routes=facilities.flatMap(f=>{
+  const sourceFacilities=rows(projection.facilities??projection.facilitiesByKind).flat().filter(f=>f.canonicalId).slice(0,200);
+  const routes=sourceFacilities.flatMap(f=>{
     const reach=f.reachability,r=reach?.currentRoute;if(!r?.geometry)return[];
-    return [{id:'facility-route:'+hash([incidentId,f.canonicalId,'FACILITY_TO_INCIDENT']).slice(0,32),facilityId:f.canonicalId,direction:'FACILITY_TO_INCIDENT',geometry:r.geometry,roads:r.roads??[],distanceKm:r.distanceKm??reach.routeDistanceKm,travelTimeMinutes:r.travelTimeMinutes??reach.travelTimeMinutes,calculatedAt:reach.checkedAt,validUntil:new Date(Date.parse(reach.checkedAt)+300000).toISOString(),source:reach.source,alternatives:reach.alternativeRoute?[reach.alternativeRoute]:[],facilityCoordinate:f.coordinate,incidentCoordinate:incident.coordinate,facilityRevision:f.canonicalRevision}];
+    // Situation jobs are durable coordination records, not a second route-geometry
+    // archive. Persisting currentRoute + alternativeRoute geometry in every job
+    // duplicated megabytes per incident and forced the 256 MB demo process to
+    // deserialize the same route shapes every 10 seconds. Keep only the compact
+    // route facts needed to schedule a bounded recalculation; the SituationStore
+    // persists resolved geometry in the content-addressed route-artifact table.
+    return [{id:'facility-route:'+hash([incidentId,f.canonicalId,'FACILITY_TO_INCIDENT']).slice(0,32),facilityId:f.canonicalId,direction:'FACILITY_TO_INCIDENT',roads:r.roads??[],distanceKm:r.distanceKm??reach.routeDistanceKm,travelTimeMinutes:r.travelTimeMinutes??reach.travelTimeMinutes,calculatedAt:reach.checkedAt,validUntil:new Date(Date.parse(reach.checkedAt)+300000).toISOString(),retryAfter:reach.checkedAt,source:reach.source,alternatives:[],facilityCoordinate:f.coordinate,incidentCoordinate:incident.coordinate,facilityRevision:f.canonicalRevision}];
   });
+  // reachability contains the same route geometry (and canonicalIntelligence can
+  // recursively carry large provenance payloads). SituationService re-decorates
+  // canonical facilities from WorldKnowledge on rebuild, so queue only stable
+  // identity/operational fields here instead of cloning the full response object.
+  const facilities=sourceFacilities.map(compactFacility);
   return {incidentId,patch:{incident:{id:incidentId,coordinate:incident.coordinate,name:incident.name??incident.incident?.name},facilities,routes}};
 }
 export function physicalSituationInput({physical,spatial,sources,asOf}){
