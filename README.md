@@ -2,6 +2,8 @@
 
 **Portugal-first crisis intelligence for turning fragmented wildfire signals into attributable, inspectable operational context.**
 
+[Live VIGIA ↗](https://vigia-portfolio-demo.onrender.com) *(external — leaves GitHub)*
+
 [Repository guide](./docs/START_HERE.md)
 
 <sub>Presentation captures showing unavailable data or maps are not used as product previews.</sub>
