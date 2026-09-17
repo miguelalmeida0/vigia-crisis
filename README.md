@@ -13,16 +13,30 @@ VIGIA is a full-stack decision-support system built around one rule: **an operat
 ## The product in 30 seconds
 
 ```mermaid
-flowchart LR
-    A[Physical observations] --> C[Canonical event]
-    B[Official reports] --> C
-    W[Weather + terrain + roads] --> D[Operational context]
-    C --> D
-    D --> E[Operator console]
-    E --> F[Evidence need]
-    F --> G[Acquire / verify]
-    G --> C
-    E --> H[Briefs + alerts + routes]
+flowchart TB
+  OBS(["Physical observations"]):::actor
+  REPORT(["Official reports"]):::actor
+  EVENT[["Canonical incident identity"]]:::system
+  CONTEXT["Operational context<br/>weather · terrain · roads · facilities"]:::data
+  OPS(["Operator console"]):::safe
+  GAP{"What is still unknown?"}:::decision
+  ACQUIRE["Acquire / verify"]:::guard
+  ACTION(["Briefs · routes · alerts"]):::safe
+
+  OBS --> EVENT
+  REPORT --> EVENT
+  EVENT --> CONTEXT --> OPS
+  OPS --> ACTION
+  OPS --> GAP --> ACQUIRE --> EVENT
+
+  classDef actor fill:#E8F1FF,stroke:#2563EB,color:#0F172A,stroke-width:1.6px;
+classDef system fill:#ECFEFF,stroke:#0891B2,color:#0F172A,stroke-width:1.6px;
+classDef decision fill:#FFFBEB,stroke:#D97706,color:#0F172A,stroke-width:1.6px;
+classDef guard fill:#FFF7ED,stroke:#EA580C,color:#0F172A,stroke-width:1.6px;
+classDef safe fill:#ECFDF5,stroke:#059669,color:#0F172A,stroke-width:1.6px;
+classDef private fill:#FFF1F2,stroke:#E11D48,color:#0F172A,stroke-width:1.6px;
+classDef data fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.6px;
+linkStyle default stroke:#94A3B8,stroke-width:1.5px;
 ```
 
 VIGIA is not a generic dashboard. It is designed around an operator’s sequence of questions:
@@ -36,24 +50,26 @@ VIGIA is not a generic dashboard. It is designed around an operator’s sequence
 
 ## Operator flow
 
-```text
-DETECT
-Physical thermal point / official report / field observation
-   ↓
-ATTRIBUTE
-source · timestamp · geometry · provenance
-   ↓
-ASSOCIATE
-link observations to a stable incident identity
-   ↓
-UNDERSTAND
-weather · facilities · roads · dependencies · history
-   ↓
-FIND THE GAP
-missing observation / stale source / unresolved route / unknown capability
-   ↓
-ACT
-brief · route · alert · acknowledgement · further acquisition
+```mermaid
+flowchart LR
+  DETECT(["01 · Detect<br/>thermal · report · field"]):::actor
+  ATTRIBUTE["02 · Attribute<br/>source · time · geometry"]:::data
+  ASSOCIATE[["03 · Associate<br/>stable incident identity"]]:::system
+  UNDERSTAND["04 · Understand<br/>weather · roads · facilities · history"]:::data
+  GAP{"05 · Find the gap<br/>stale · missing · unresolved"}:::decision
+  ACT(["06 · Act<br/>brief · route · alert · acknowledge"]):::safe
+
+  DETECT --> ATTRIBUTE --> ASSOCIATE --> UNDERSTAND --> GAP --> ACT
+  GAP -. "need more truth" .-> DETECT
+
+  classDef actor fill:#E8F1FF,stroke:#2563EB,color:#0F172A,stroke-width:1.6px;
+classDef system fill:#ECFEFF,stroke:#0891B2,color:#0F172A,stroke-width:1.6px;
+classDef decision fill:#FFFBEB,stroke:#D97706,color:#0F172A,stroke-width:1.6px;
+classDef guard fill:#FFF7ED,stroke:#EA580C,color:#0F172A,stroke-width:1.6px;
+classDef safe fill:#ECFDF5,stroke:#059669,color:#0F172A,stroke-width:1.6px;
+classDef private fill:#FFF1F2,stroke:#E11D48,color:#0F172A,stroke-width:1.6px;
+classDef data fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.6px;
+linkStyle default stroke:#94A3B8,stroke-width:1.5px;
 ```
 
 ## Why I built it
@@ -66,41 +82,47 @@ VIGIA treats **source identity, freshness, spatial integrity, and uncertainty as
 
 ```mermaid
 flowchart TB
-    subgraph Sources
-      FIRMS[NASA FIRMS / VIIRS]
-      S3[Sentinel-3]
-      MTG[MTG / thermal products]
-      REPORTS[Official reports]
-      ENV[Weather / risk / terrain]
-      FAC[Facilities / roads]
-    end
+  subgraph Sources["Sources"]
+    PHYSICAL["Physical sensing<br/>FIRMS · Sentinel · MTG"]:::actor
+    OFFICIAL["Official reports"]:::actor
+    ENV["Weather · risk · terrain"]:::data
+    FAC["Facilities · roads"]:::data
+  end
 
-    subgraph Core
-      INGEST[Ingestion + normalization]
-      PG[(PostgreSQL + PostGIS)]
-      EVENT[Canonical event engine]
-      LINEAGE[Lineage + source health]
-    end
+  subgraph Truth["Operational truth layer"]
+    INGEST[["Ingest + normalize"]]:::system
+    POSTGIS[("PostgreSQL + PostGIS")]:::data
+    EVENT[["Canonical event engine"]]:::system
+    LINEAGE["Lineage + source health"]:::guard
+  end
 
-    subgraph Product
-      API[Node API]
-      OPS[Operator console]
-      BRIEF[Briefs / routes / alerts]
-    end
+  subgraph Product["Decision-support product"]
+    API[["Node API"]]:::system
+    OPS(["Operator console"]):::safe
+    OUTPUT(["Briefs · routes · alerts"]):::safe
+  end
 
-    FIRMS --> INGEST
-    S3 --> INGEST
-    MTG --> INGEST
-    REPORTS --> INGEST
-    ENV --> INGEST
-    FAC --> INGEST
-    INGEST --> PG
-    PG --> EVENT
-    EVENT --> LINEAGE
-    EVENT --> API
-    LINEAGE --> API
-    API --> OPS
-    OPS --> BRIEF
+  PHYSICAL --> INGEST
+  OFFICIAL --> INGEST
+  ENV --> INGEST
+  FAC --> INGEST
+  INGEST --> POSTGIS --> EVENT
+  EVENT --> LINEAGE
+  EVENT --> API
+  LINEAGE --> API
+  API --> OPS --> OUTPUT
+
+  style Sources fill:#F8FAFC,stroke:#CBD5E1,stroke-width:1px
+  style Truth fill:#ECFEFF,stroke:#A5F3FC,stroke-width:1px
+  style Product fill:#ECFDF5,stroke:#A7F3D0,stroke-width:1px
+  classDef actor fill:#E8F1FF,stroke:#2563EB,color:#0F172A,stroke-width:1.6px;
+classDef system fill:#ECFEFF,stroke:#0891B2,color:#0F172A,stroke-width:1.6px;
+classDef decision fill:#FFFBEB,stroke:#D97706,color:#0F172A,stroke-width:1.6px;
+classDef guard fill:#FFF7ED,stroke:#EA580C,color:#0F172A,stroke-width:1.6px;
+classDef safe fill:#ECFDF5,stroke:#059669,color:#0F172A,stroke-width:1.6px;
+classDef private fill:#FFF1F2,stroke:#E11D48,color:#0F172A,stroke-width:1.6px;
+classDef data fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.6px;
+linkStyle default stroke:#94A3B8,stroke-width:1.5px;
 ```
 
 ## Engineering highlights

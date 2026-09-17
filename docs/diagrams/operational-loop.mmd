@@ -1,0 +1,24 @@
+flowchart TB
+  OBS(["Physical observations"]):::actor
+  REPORT(["Official reports"]):::actor
+  EVENT[["Canonical incident identity"]]:::system
+  CONTEXT["Operational context<br/>weather · terrain · roads · facilities"]:::data
+  OPS(["Operator console"]):::safe
+  GAP{"What is still unknown?"}:::decision
+  ACQUIRE["Acquire / verify"]:::guard
+  ACTION(["Briefs · routes · alerts"]):::safe
+
+  OBS --> EVENT
+  REPORT --> EVENT
+  EVENT --> CONTEXT --> OPS
+  OPS --> ACTION
+  OPS --> GAP --> ACQUIRE --> EVENT
+
+  classDef actor fill:#E8F1FF,stroke:#2563EB,color:#0F172A,stroke-width:1.6px;
+classDef system fill:#ECFEFF,stroke:#0891B2,color:#0F172A,stroke-width:1.6px;
+classDef decision fill:#FFFBEB,stroke:#D97706,color:#0F172A,stroke-width:1.6px;
+classDef guard fill:#FFF7ED,stroke:#EA580C,color:#0F172A,stroke-width:1.6px;
+classDef safe fill:#ECFDF5,stroke:#059669,color:#0F172A,stroke-width:1.6px;
+classDef private fill:#FFF1F2,stroke:#E11D48,color:#0F172A,stroke-width:1.6px;
+classDef data fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.6px;
+linkStyle default stroke:#94A3B8,stroke-width:1.5px;

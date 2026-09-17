@@ -1,0 +1,19 @@
+flowchart LR
+  DETECT(["01 · Detect<br/>thermal · report · field"]):::actor
+  ATTRIBUTE["02 · Attribute<br/>source · time · geometry"]:::data
+  ASSOCIATE[["03 · Associate<br/>stable incident identity"]]:::system
+  UNDERSTAND["04 · Understand<br/>weather · roads · facilities · history"]:::data
+  GAP{"05 · Find the gap<br/>stale · missing · unresolved"}:::decision
+  ACT(["06 · Act<br/>brief · route · alert · acknowledge"]):::safe
+
+  DETECT --> ATTRIBUTE --> ASSOCIATE --> UNDERSTAND --> GAP --> ACT
+  GAP -. "need more truth" .-> DETECT
+
+  classDef actor fill:#E8F1FF,stroke:#2563EB,color:#0F172A,stroke-width:1.6px;
+classDef system fill:#ECFEFF,stroke:#0891B2,color:#0F172A,stroke-width:1.6px;
+classDef decision fill:#FFFBEB,stroke:#D97706,color:#0F172A,stroke-width:1.6px;
+classDef guard fill:#FFF7ED,stroke:#EA580C,color:#0F172A,stroke-width:1.6px;
+classDef safe fill:#ECFDF5,stroke:#059669,color:#0F172A,stroke-width:1.6px;
+classDef private fill:#FFF1F2,stroke:#E11D48,color:#0F172A,stroke-width:1.6px;
+classDef data fill:#F8FAFC,stroke:#64748B,color:#0F172A,stroke-width:1.6px;
+linkStyle default stroke:#94A3B8,stroke-width:1.5px;
