@@ -8,7 +8,7 @@ const permanentErrors = new Set([
   'situation_job_input_invalid', 'situation_job_payload_invalid',
   'scenario_cannot_write_operational_history', 'situation_job_retry_budget_exhausted'
 ]);
-const facilityKeys = ['id','canonicalId','canonicalName','name','canonicalType','kind','coordinate','canonicalRevision','address','addressPrecision','locality','municipality','district','contact','capabilities','designation','authority','operator','presentation','distanceKm','distanceReference','staticCapability','freshness'];
+const facilityKeys = ['id','canonicalId','canonicalName','name','canonicalType','kind','coordinate','canonicalRevision','address','addressPrecision','locality','municipality','district','contact','capabilities','designation','authority','operator','presentation','distanceKm','distanceReference','staticCapability','freshness','fields','provenance'];
 const object = value => value !== null && typeof value === 'object' && !Array.isArray(value);
 const fail = (code, details = {}) => Object.assign(new Error(code), { statusCode: 422, ...details });
 
@@ -19,7 +19,7 @@ export function compactJobInput(input) {
   for (const key of ['routes', 'communityRoutes']) if (Array.isArray(result[key])) result[key] = result[key].map(route => {
     if (!object(route)) return route;
     const { geometry, alternatives, ...rest } = route;
-    return { ...rest, retryAfter: route.retryAfter ?? route.calculatedAt ?? route.validUntil, alternatives: [] };
+    return { ...rest, alternatives: [] };
   });
   return result;
 }

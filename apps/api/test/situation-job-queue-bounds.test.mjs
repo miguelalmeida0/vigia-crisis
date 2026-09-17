@@ -10,14 +10,21 @@ function localStore() {
   } };
 }
 
-test('payload compaction removes route geometry, preserves addresses, distance and roads without mutating caller', () => {
-  const input = { facilities: [{ id: 'hospital', address: 'Rua X', distanceKm: 8, ignored: true }], routes: [{ geometry: { coordinates: [1,2] }, roads: ['N114'], alternatives: [{ geometry: [] }], distanceKm: 9 }] };
+test('payload compaction removes route geometry while preserving decision-driving facility and route facts without mutating caller', () => {
+  const input = {
+    facilities: [{ id: 'hospital', address: 'Rua X', distanceKm: 8, capabilities: { emergencyDepartment: true }, fields: { 'capabilities.emergencyDepartment': { state: 'RESOLVED' } }, provenance: { capability: [{ factId: 'fact:1' }] }, ignored: true }],
+    routes: [{ geometry: { coordinates: [1,2] }, roads: ['N114'], alternatives: [{ geometry: [] }], distanceKm: 9, calculatedAt: '2026-09-17T07:00:00.000Z' }]
+  };
   const compacted = compactJobInput(input);
   assert.equal(compacted.facilities[0].address, 'Rua X');
   assert.equal(compacted.facilities[0].distanceKm, 8);
+  assert.equal(compacted.facilities[0].capabilities.emergencyDepartment, true);
+  assert.equal(compacted.facilities[0].fields['capabilities.emergencyDepartment'].state, 'RESOLVED');
+  assert.equal(compacted.facilities[0].provenance.capability[0].factId, 'fact:1');
   assert.equal(compacted.facilities[0].ignored, undefined);
   assert.equal(compacted.routes[0].geometry, undefined);
   assert.deepEqual(compacted.routes[0].roads, ['N114']);
+  assert.equal(compacted.routes[0].retryAfter, undefined);
   assert.ok(input.routes[0].geometry);
 });
 test('exact serialized UTF-8 byte boundary is enforced', () => {

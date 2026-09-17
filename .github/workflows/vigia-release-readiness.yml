@@ -23,17 +23,22 @@ jobs:
         with:
           node-version: '24'
           package-manager-cache: false
-      - name: Targeted regression and safety guards
-        run: |
-          node --test apps/api/test/situation-job-queue-bounds.test.mjs infra/test/demo-gateway-readiness.test.mjs infra/test/release-guards.test.mjs infra/test/demo-seed-contract.test.mjs
-          python3 infra/test/stability-gate.test.py
-          bash -n infra/demo/local-postgis-start.sh
-      - name: Existing backend and frontend contract suites
+      - name: Install Node dependencies
         run: |
           npm ci --include=dev --ignore-scripts
           npm --prefix apps/operator-console ci --include=dev --ignore-scripts
-          timeout 600 npm test
-          timeout 300 npm --prefix apps/operator-console run verify:static
+      - name: Changed-plane regression and safety guards
+        run: |
+          node --test --test-concurrency=1 \
+            apps/api/test/situation-intelligence.test.mjs \
+            apps/api/test/situation-job-queue-bounds.test.mjs \
+            infra/test/demo-gateway-readiness.test.mjs \
+            infra/test/release-guards.test.mjs \
+            infra/test/demo-seed-contract.test.mjs
+          python3 infra/test/stability-gate.test.py
+          bash -n infra/demo/local-postgis-start.sh
+      - name: Existing operator-console static contract
+        run: timeout 300 npm --prefix apps/operator-console run verify:static
       - name: Build isolated candidate, never deploy
         run: docker build -f infra/Dockerfile.demo -t vigia-release-candidate .
       - name: Real PostgreSQL queue integration in disposable container
