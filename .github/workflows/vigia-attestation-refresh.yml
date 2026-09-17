@@ -1,0 +1,37 @@
+name: VIGIA attestation refresh
+on:
+  push:
+    branches: [automation/vigia-attestation-refresh-2026-09-17]
+    paths: [.github/workflows/vigia-attestation-refresh.yml]
+permissions:
+  contents: write
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: fix/vigia-release-readiness-2026-09-17
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Install release tooling dependencies
+        run: |
+          npm ci --include=dev --ignore-scripts
+          npm --prefix apps/operator-console ci --include=dev --ignore-scripts
+      - name: Rebuild governed release identity
+        run: |
+          node scripts/release/build_release_manifest.mjs
+          npm --prefix apps/operator-console run build
+          git diff --check
+          git status --short
+      - name: Commit regenerated attestation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/validation/release
+          git commit -m "chore: refresh VIGIA release attestation after browser fix"
+          git push origin HEAD:fix/vigia-release-readiness-2026-09-17
