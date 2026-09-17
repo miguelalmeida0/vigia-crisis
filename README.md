@@ -2,28 +2,12 @@
 
 **Portugal-first crisis intelligence for turning fragmented wildfire signals into attributable, inspectable operational context.**
 
+[Repository guide](./docs/START_HERE.md)
+
+<sub>Presentation captures showing unavailable data or maps are not used as product previews.</sub>
+
 VIGIA is a full-stack decision-support system built around one rule: **an operational interface should distinguish what was observed, what was reported, what was inferred, and what is still unknown.**
 
-> Live portfolio demo: https://vigia-portfolio-demo.onrender.com
-
-<p align="center">
-  <img src="./docs/readme/current/deep-00-current-home.png" alt="VIGIA current command overview" width="100%">
-</p>
-
-<table>
-  <tr>
-    <td><img src="./docs/readme/current/auto-02-incidents.png" alt="VIGIA incidents"></td>
-    <td><img src="./docs/readme/current/auto-03-incident-detail.png" alt="VIGIA incident detail"></td>
-  </tr>
-  <tr>
-    <td><img src="./docs/readme/current/auto-04-fire-activity.png" alt="VIGIA fire activity"></td>
-    <td><img src="./docs/readme/current/auto-05-response-access.png" alt="VIGIA response and access"></td>
-  </tr>
-</table>
-
-<p align="center">
-  <img src="./docs/readme/current/auto-06-national-awareness.png" alt="VIGIA national awareness" width="100%">
-</p>
 
 ## The product in 30 seconds
 
@@ -229,3 +213,4 @@ VIGIA is a **portfolio/research decision-support system**, not operational certi
 ---
 
 Built by [Miguel Almeida](https://github.com/miguelalmeida0).
+<!-- repository-presentation-repair:1 -->
