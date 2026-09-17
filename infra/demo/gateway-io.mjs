@@ -6,7 +6,6 @@ const demoRequiredChecks = new Set([
   'demo_identities',
   'authenticated_operator_boundary',
   'operator_state_persistence',
-  'event_state_persistence',
   'postgres_physical_truth',
   'postgres_live_operations',
   'audit_chain',
@@ -26,7 +25,13 @@ const demoInactiveOperationalChecks = new Set([
   // runs. Requiring it here would make an intentionally inactive subsystem a
   // permanent false-negative. The persisted geo-proof store remains required;
   // live raster execution belongs to full operational-runtime certification.
-  'scientific_runtime'
+  'scientific_runtime',
+  // EventObservationRepository is a disposable file-backed seed/read cache in
+  // this deployment. The API process loads the seed but performs no write, so
+  // its production persistence state remains memory_only by design. Durable
+  // demo guarantees are instead the required local PostGIS stores plus the
+  // deterministic seed/restart acceptance gate.
+  'event_state_persistence'
 ]);
 
 async function readBoundedJson(response, maxBytes) {
