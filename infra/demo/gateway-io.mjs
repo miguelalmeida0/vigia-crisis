@@ -2,6 +2,27 @@ import { Readable, Transform } from 'node:stream';
 import { pipeline } from 'node:stream/promises';
 
 const identityKeys = ['releaseId', 'codeStateHash', 'operationalDataHash', 'releaseStatementHash'];
+const demoRequiredChecks = new Set([
+  'demo_identities',
+  'authenticated_operator_boundary',
+  'operator_state_persistence',
+  'event_state_persistence',
+  'postgres_physical_truth',
+  'postgres_live_operations',
+  'audit_chain',
+  'scientific_runtime',
+  'geo_proof_persistence'
+]);
+const demoProductionOnlyChecks = new Set([
+  // The portfolio deployment is deliberately a SHADOW/synthetic exercise, so
+  // it must not pretend to satisfy production fixture-purity.
+  'production_synthetic_observations',
+  // Recurring acquisition/operational workers are deliberately disabled on
+  // the bounded recruiter-facing read plane. Their continuously-refreshing
+  // production invariants are certified separately before full-runtime use.
+  'unknown_to_work_invariant',
+  'physical_source_families'
+]);
 
 async function readBoundedJson(response, maxBytes) {
   let total = 0;
@@ -14,9 +35,43 @@ async function readBoundedJson(response, maxBytes) {
   return JSON.parse(Buffer.concat(chunks, total).toString('utf8'));
 }
 
+function boundedDemoEnvironment() {
+  return process.env.VIGIA_DEMO_CONFIRM === 'SYNTHETIC_DEMO_ONLY'
+    && process.env.VIGIA_DEMO_DATABASE_MODE === 'ephemeral_local_postgis';
+}
+
+export function assessDependencyReadiness(status, body, { profile = 'operational' } = {}) {
+  if (status === 200 && body?.ready !== false && body?.ok !== false) {
+    return { ok: true, productionReady: body?.ready !== false, waivedChecks: [] };
+  }
+  if (profile !== 'bounded_demo') return { ok: false, error: 'api_dependencies_not_ready' };
+  if (body?.schemaVersion !== 'vigia.public-operational-readiness.v1' || !Array.isArray(body.checks)) {
+    return { ok: false, error: 'api_demo_readiness_contract_invalid' };
+  }
+  const byId = new Map(body.checks.map(check => [check?.id, check]));
+  const missingOrFailedRequired = [...demoRequiredChecks].filter(id => byId.get(id)?.ok !== true);
+  if (missingOrFailedRequired.length) {
+    return { ok: false, error: 'api_demo_required_dependency_not_ready', failedChecks: missingOrFailedRequired };
+  }
+  const unexpectedBlockingFailures = body.checks
+    .filter(check => check?.blocking !== false && check?.ok !== true && !demoProductionOnlyChecks.has(check?.id))
+    .map(check => check.id)
+    .filter(Boolean);
+  if (unexpectedBlockingFailures.length) {
+    return { ok: false, error: 'api_demo_unexpected_blocking_failure', failedChecks: unexpectedBlockingFailures };
+  }
+  const waivedChecks = body.checks
+    .filter(check => demoProductionOnlyChecks.has(check?.id) && check?.ok !== true)
+    .map(check => check.id);
+  return { ok: true, productionReady: false, boundedReadPlaneReady: true, waivedChecks };
+}
+
 // One in-flight probe and one small cached result. Never accumulate responses,
-// and never mark frontend-only availability as backend readiness.
-export function createReadinessProbe({ backend, identity, headers, timeoutMs = 3_000, ttlMs = 1_000, clock = Date.now }) {
+// and never mark frontend-only availability as backend readiness. The isolated
+// synthetic demo has its own deliberately narrower dependency gate; production
+// /api/v10/ready remains strict and unchanged.
+export function createReadinessProbe({ backend, identity, headers, timeoutMs = 3_000, ttlMs = 1_000, clock = Date.now, profile = null }) {
+  const readinessProfile = profile ?? (boundedDemoEnvironment() ? 'bounded_demo' : 'operational');
   let pending = null, cached = null, expiresAt = 0;
   async function probe() {
     const controller = new AbortController();
@@ -30,14 +85,26 @@ export function createReadinessProbe({ backend, identity, headers, timeoutMs = 3
       if (body.process?.servicesReady !== true || body.process?.startup?.state === 'failed') throw new Error('api_services_not_ready');
       const readyPath = '/api/v10/ready';
       const ready = await fetch(new URL(readyPath, backend), { headers: headers(readyPath), signal: controller.signal, redirect: 'manual' });
-      // The API owns the actual dependency/readiness checks. A cached release
-      // manifest alone is not enough, especially when the database is blocked.
       const readyBody = await readBoundedJson(ready, 256_000);
-      if (ready.status !== 200 || readyBody?.ok === false || readyBody?.ready === false) throw new Error('api_dependencies_not_ready');
-      return { ok: true, backendVerified: true, checkedAt: new Date(clock()).toISOString() };
+      const assessment = assessDependencyReadiness(ready.status, readyBody, { profile: readinessProfile });
+      if (!assessment.ok) {
+        const failure = new Error(assessment.error);
+        failure.failedChecks = assessment.failedChecks;
+        throw failure;
+      }
+      return {
+        ok: true,
+        backendVerified: true,
+        readinessProfile,
+        productionReady: assessment.productionReady,
+        boundedReadPlaneReady: assessment.boundedReadPlaneReady === true,
+        waivedChecks: assessment.waivedChecks,
+        checkedAt: new Date(clock()).toISOString()
+      };
     } catch (error) {
       return { ok: false, backendVerified: false,
         error: controller.signal.aborted ? 'api_readiness_timeout' : String(error.message ?? error).slice(0, 160),
+        failedChecks: Array.isArray(error.failedChecks) ? error.failedChecks.slice(0, 16) : undefined,
         checkedAt: new Date(clock()).toISOString() };
     } finally { clearTimeout(timer); }
   }
