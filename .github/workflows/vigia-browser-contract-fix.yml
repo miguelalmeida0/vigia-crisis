@@ -1,0 +1,65 @@
+name: VIGIA browser contract fix
+on:
+  push:
+    branches: [fix/vigia-release-readiness-2026-09-17]
+    paths: [.github/workflows/vigia-browser-contract-fix.yml]
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: fix/vigia-release-readiness-2026-09-17
+      - name: Patch read-only FieldNet hydration and browser diagnostics
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          mission = Path('apps/operator-console/src/approved/ui/mission-command.js')
+          text = mission.read_text()
+          old = "  const store=new FieldTeamStore();let root=null,incident=null,senderId=null,device=null,groups=[],view=null,section='home',selected=null,offline=false,canManage=false,busy=false,serial=0,pending=[],feedbackMessage='';"
+          new = "  const store=new FieldTeamStore();let root=null,incident=null,senderId=null,device=null,groups=[],view=null,section='home',selected=null,offline=false,canManage=false,busy=false,serial=0,pending=[],feedbackMessage='',portfolioReadOnly=null;"
+          if old not in text: raise SystemExit('mission state anchor missing')
+          text = text.replace(old,new,1)
+
+          old = "  const draftKey=()=>senderId+':draft:'+incident+':'+(view?.group.id??'new')+':'+section+':'+(selected??'');"
+          new = "  const draftKey=()=>senderId+':draft:'+incident+':'+(view?.group.id??'new')+':'+section+':'+(selected??'');\n  async function detectPortfolioReadOnly(){if(portfolioReadOnly!==null)return portfolioReadOnly;try{const response=await fetch('/__operator/ready',{credentials:'same-origin',cache:'no-store',headers:{accept:'application/json'}}),payload=await response.json().catch(()=>null);portfolioReadOnly=response.ok&&payload?.isolatedDemo===true&&payload?.readOnly===true;}catch{portfolioReadOnly=false;}return portfolioReadOnly;}"
+          if old not in text: raise SystemExit('draft anchor missing')
+          text = text.replace(old,new,1)
+
+          old = "    if(view)root.innerHTML=commandMarkup(view,{section,selected,offline,pending,senderId,canManage,feedbackMessage});\n    else root.innerHTML=`<header class=\"mc-heading\"><h2>Watching and field team</h2></header><p>Keep an objective in view and share reports with your incident team.</p>${groups.map(g=>btn(g.name,'group',g.id)).join('')}${canManage?`<details open><summary>Create a private team</summary><form data-team-form=\"group\">${field('name','Team name','text','','required maxlength=\"120\"')}${field('memberIds','Other members’ VIGIA account IDs','text','','placeholder=\"Comma-separated account IDs\"')}<p class=\"mc-meta\">Only these authenticated accounts can access this team. Leave blank to start with yourself.</p><label><input type=\"checkbox\" name=\"exercise\"> Controlled field exercise (synthetic routes and times)</label><button class=\"btn primary\" type=\"submit\">Create team</button></form></details>`:''}<p class=\"mc-feedback\" role=\"status\" aria-live=\"polite\">${e(feedbackMessage)}</p>${btn('Retry connection','retry')}`;"
+          new = "    if(portfolioReadOnly)root.innerHTML='<header class=\"mc-heading\"><h2>Watching and field team</h2></header><p>This public portfolio demo is read-only. Field-team registration, messaging and reports are disabled here.</p><p class=\"mc-meta\">The operational FieldNet workflow remains separate from this bounded demo and no device is registered by viewing this page.</p>';\n    else if(view)root.innerHTML=commandMarkup(view,{section,selected,offline,pending,senderId,canManage,feedbackMessage});\n    else root.innerHTML=`<header class=\"mc-heading\"><h2>Watching and field team</h2></header><p>Keep an objective in view and share reports with your incident team.</p>${groups.map(g=>btn(g.name,'group',g.id)).join('')}${canManage?`<details open><summary>Create a private team</summary><form data-team-form=\"group\">${field('name','Team name','text','','required maxlength=\"120\"')}${field('memberIds','Other members’ VIGIA account IDs','text','','placeholder=\"Comma-separated account IDs\"')}<p class=\"mc-meta\">Only these authenticated accounts can access this team. Leave blank to start with yourself.</p><label><input type=\"checkbox\" name=\"exercise\"> Controlled field exercise (synthetic routes and times)</label><button class=\"btn primary\" type=\"submit\">Create team</button></form></details>`:''}<p class=\"mc-feedback\" role=\"status\" aria-live=\"polite\">${e(feedbackMessage)}</p>${btn('Retry connection','retry')}`;"
+          if old not in text: raise SystemExit('paint anchor missing')
+          text = text.replace(old,new,1)
+
+          old = "    try{\n      if(senderId){const account=await teamRequest('incidents/'+encodeURIComponent(id)+'/groups');"
+          new = "    try{\n      if(await detectPortfolioReadOnly()){senderId=null;device=null;groups=[];view=null;canManage=false;offline=false;outbox=null;pending=[];if(n===serial)paint();return;}\n      if(senderId){const account=await teamRequest('incidents/'+encodeURIComponent(id)+'/groups');"
+          if old not in text: raise SystemExit('refresh anchor missing')
+          text = text.replace(old,new,1)
+          mission.write_text(text)
+
+          acceptance = Path('scripts/release/acceptance-gate.py')
+          text = acceptance.read_text()
+          anchor = "async def run(args):\n"
+          helper = '''async def wait_for_hydration(page, route, report, timeout=20000):\n    try:\n        await page.wait_for_function(\n            \"route => document.body.dataset.vigiaRoute === route && globalThis.__VIGIA_APP_RUNTIME__?.hydrationIdle === true\",\n            arg=route, timeout=timeout)\n    except Exception:\n        state = await page.evaluate(\"\"\"() => ({\n          bodyRoute: document.body.dataset.vigiaRoute ?? null,\n          bodyState: document.body.dataset.vigiaAppState ?? null,\n          resourceState: document.body.dataset.vigiaResourceState ?? null,\n          appGlobalRefreshPending: document.querySelector('#app')?.dataset.vigiaGlobalRefreshPending ?? null,\n          appIncidentLoadPending: document.querySelector('#app')?.dataset.vigiaIncidentLoadPending ?? null,\n          runtime: globalThis.__VIGIA_APP_RUNTIME__ ?? null,\n          hash: location.hash\n        })\"\"\")\n        report['errors'].append({'kind':'hydration','route':route,'state':state})\n        raise\n\n\n'''
+          if helper.strip() not in text:
+              if anchor not in text: raise SystemExit('acceptance run anchor missing')
+              text = text.replace(anchor, helper+anchor, 1)
+
+          old = "                target=page.locator(f'[data-route=\"{internal_route}\"], [data-route=\"{public_route}\"]').first\n                if internal_route not in ('incident-detail','reports-analytics') and await target.count() and await target.is_visible():\n                    await target.click(timeout=8000)\n                suffix='?id='+CANONICAL if internal_route in ('incidents','incident-detail','intelligence','operations') else ''\n                await page.goto(args.base_url.split('#')[0].rstrip('/')+'/#/'+public_route+suffix,wait_until='domcontentloaded',timeout=30000)\n                await page.wait_for_function(\"route => document.body.dataset.vigiaRoute === route && globalThis.__VIGIA_APP_RUNTIME__?.hydrationIdle === true\",arg=internal_route,timeout=20000)"
+          new = "                suffix='?id='+CANONICAL if internal_route in ('incidents','incident-detail','intelligence','operations') else ''\n                await page.goto(args.base_url.split('#')[0].rstrip('/')+'/#/'+public_route+suffix,wait_until='domcontentloaded',timeout=30000)\n                await wait_for_hydration(page, public_route, report)"
+          if old not in text: raise SystemExit('acceptance navigation anchor missing')
+          text = text.replace(old,new,1)
+          acceptance.write_text(text)
+          PY
+          git diff --check
+          git diff -- apps/operator-console/src/approved/ui/mission-command.js scripts/release/acceptance-gate.py
+      - name: Commit browser contract fix
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps/operator-console/src/approved/ui/mission-command.js scripts/release/acceptance-gate.py
+          git commit -m "fix: keep portfolio browser hydration strictly read-only"
+          git push origin HEAD:fix/vigia-release-readiness-2026-09-17
