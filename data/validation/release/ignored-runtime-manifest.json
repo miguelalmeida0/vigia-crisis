@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vigia.ignored-runtime-manifest.v1",
-  "generatedAt": "2026-09-17T10:12:46.645Z",
-  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
+  "generatedAt": "2026-09-17T10:20:02.180Z",
+  "releaseId": "vigia-intelligence-fabric-80ab2dd2ae3ce076",
   "entries": [
     {
       "path": "apps/operator-console/node_modules/",

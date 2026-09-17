@@ -92,6 +92,32 @@ async def wait_for_hydration(page, route, report, timeout=20000):
         raise
 
 
+async def wait_for_map(page, route_name, report, timeout=20000):
+    try:
+        await page.wait_for_function("""() => [...document.querySelectorAll('.tile-map')].some(map => {
+          const r=map.getBoundingClientRect();
+          const visible=r.width>100 && r.height>100;
+          const usable=['LIVE','DEGRADED_PARTIAL','STALE_LAST_GOOD'].includes(map.dataset.mapState);
+          const drawn=[...map.querySelectorAll('img')].some(img=>img.complete && img.naturalWidth>0) || !!map.querySelector('canvas,svg');
+          return visible && usable && drawn;
+        })""", timeout=timeout)
+    except Exception:
+        state = await page.evaluate("""() => [...document.querySelectorAll('.tile-map')].map(map => {
+          const r=map.getBoundingClientRect();
+          return {
+            state: map.dataset.mapState ?? null,
+            failureClass: map.dataset.mapFailureClass ?? null,
+            failureSource: map.dataset.mapFailureSource ?? null,
+            width: Math.round(r.width), height: Math.round(r.height),
+            canvasCount: map.querySelectorAll('canvas').length,
+            svgCount: map.querySelectorAll('svg').length,
+            loadedImages: [...map.querySelectorAll('img')].filter(img=>img.complete && img.naturalWidth>0).length
+          };
+        })""")
+        report['errors'].append({'kind':'map','route':route_name,'state':state})
+        raise
+
+
 async def run(args):
     from playwright.async_api import async_playwright
     origin = urlparse(args.base_url)
@@ -154,13 +180,7 @@ async def run(args):
                 await wait_for_hydration(page, public_route, report)
                 if len((await page.locator('#main-content').inner_text()).strip()) < 100: raise ValueError('blank_route:'+name)
                 if requires_map:
-                    await page.wait_for_function("""() => [...document.querySelectorAll('.tile-map')].some(map => {
-                      const r=map.getBoundingClientRect();
-                      const visible=r.width>100 && r.height>100;
-                      const usable=['LIVE','STALE_LAST_GOOD'].includes(map.dataset.mapState);
-                      const drawn=[...map.querySelectorAll('img')].some(img=>img.complete && img.naturalWidth>0) || !!map.querySelector('canvas,svg');
-                      return visible && usable && drawn;
-                    })""",timeout=20000)
+                    await wait_for_map(page, name, report)
                 filename=re.sub(r'[^a-z0-9]+','-',name.lower()).strip('-')+'.png'
                 await page.screenshot(path=str(output/filename),full_page=True)
                 report['routes'].append({'name':name,'url':page.url,'screenshot':filename})

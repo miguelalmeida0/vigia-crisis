@@ -1,8 +1,8 @@
 {
   "schemaVersion": "vigia.evidence-manifest.v2",
-  "generatedAt": "2026-09-17T10:12:46.645Z",
-  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
-  "codeStateHash": "sha256:0823c769ad616e0e6d2a82983b2fcd084f6f34e684cb8a8a6ec10f8f75a344c8",
+  "generatedAt": "2026-09-17T10:20:02.180Z",
+  "releaseId": "vigia-intelligence-fabric-80ab2dd2ae3ce076",
+  "codeStateHash": "sha256:8b59c5ab7308257d0128394e71b0022e89cb73d2576e7f1b6e091dbc42288278",
   "operationalDataHash": "sha256:5658dee8701ecdf8d78f84df13ef867329d4c0375443b88844c25e3cb4d65d41",
   "entries": [],
   "deploymentEntries": [
