@@ -1,24 +1,25 @@
+# yaml-language-server: $schema=https://render.com/schema/render.yaml.json
+# Release candidate blueprint. Applying this file is a separate deployment action.
+# It intentionally has no external database credential: the portfolio demo boots
+# its own loopback-only, ephemeral PostGIS instance inside the 512 MiB service.
 services:
   - type: web
     name: vigia-portfolio-demo
-    runtime: node
-    plan: free
+    runtime: docker
+    plan: 0.5c-512mb
     region: frankfurt
-    repo: https://github.com/miguelalmeida0/vigia-crisis-os-claude.git
-    branch: integration/vigia-xiii
-    buildCommand: node infra/render-live-build.mjs
-    startCommand: node infra/render-demo-start.mjs
+    repo: https://github.com/miguelalmeida0/vigia-crisis.git
+    branch: fix/vigia-release-readiness-2026-09-17
+    dockerfilePath: ./infra/Dockerfile.demo
+    dockerContext: .
     autoDeployTrigger: off
     healthCheckPath: /__operator/ready
     envVars:
-      - key: NODE_ENV
-        value: production
-      - key: VIGIA_LOCAL_SECRETS_DISABLED
-        value: "1"
       - key: VIGIA_DEMO_CONFIRM
         value: SYNTHETIC_DEMO_ONLY
+      - key: VIGIA_DEMO_DATABASE_MODE
+        value: ephemeral_local_postgis
+      - key: VIGIA_LOCAL_SECRETS_DISABLED
+        value: "1"
       - key: VIGIA_OPERATOR_PUBLIC_AUTHORITY
-        sync: false # set to this service's assigned *.onrender.com hostname after first deploy
-      - key: VIGIA_DATABASE_URL
-        sync: false # paste the connection string of a DEDICATED, ISOLATED demo Postgres/PostGIS instance here.
-                     # Never the production database. See docs/DEMO-DEPLOYMENT.md for how to get one at zero cost.
+        sync: false # set to this service's assigned *.onrender.com hostname

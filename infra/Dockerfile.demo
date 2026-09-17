@@ -1,0 +1,29 @@
+# Candidate only: run the full 512 MiB acceptance gate before deployment.
+FROM node:24-bookworm-slim AS build
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci --include=dev --ignore-scripts
+COPY apps/operator-console/package.json apps/operator-console/package-lock.json ./apps/operator-console/
+RUN npm --prefix apps/operator-console ci --include=dev --ignore-scripts
+COPY . .
+RUN npm --prefix apps/operator-console run build \
+ && npm prune --omit=dev --ignore-scripts \
+ && rm -rf apps/operator-console/node_modules
+
+FROM node:24-bookworm-slim AS demo
+RUN printf '#!/bin/sh\nexit 101\n' > /usr/sbin/policy-rc.d \
+ && chmod +x /usr/sbin/policy-rc.d \
+ && apt-get update \
+ && apt-get install -y --no-install-recommends postgresql-15 postgresql-15-postgis-3 postgresql-15-postgis-3-scripts tini util-linux ca-certificates \
+ && rm -rf /var/lib/apt/lists/* /var/lib/postgresql/15/main
+WORKDIR /app
+COPY --from=build --chown=node:node /app /app
+USER node
+ENV NODE_ENV=production PORT=10000 VIGIA_LOCAL_SECRETS_DISABLED=1
+# Confirmation and database mode must be supplied explicitly at launch. No
+# cloud database credentials, persistent volume or paid database dependency is required.
+EXPOSE 10000
+HEALTHCHECK --interval=20s --timeout=5s --start-period=300s --retries=3 \
+  CMD ["node", "infra/demo/local-healthcheck.mjs"]
+ENTRYPOINT ["/usr/bin/tini", "--"]
+CMD ["bash", "infra/demo/local-postgis-start.sh"]

@@ -27,10 +27,13 @@ import { createInterface } from 'node:readline';
 import http from 'node:http';
 import path from 'node:path';
 import { startBootstrapGateway } from './demo-bootstrap-gateway.mjs';
+import { demoPublicScheme } from './demo/public-origin.mjs';
+import { validateDemoSeedComplete, validateDemoReplayPair } from './demo/seed-contract.mjs';
 
 const root = process.cwd();
 const externalPort = String(process.env.PORT || '').trim();
 const authority = String(process.env.VIGIA_OPERATOR_PUBLIC_AUTHORITY || '').trim();
+const publicScheme = demoPublicScheme(process.env);
 const databaseUrl = String(process.env.VIGIA_DATABASE_URL || '').trim();
 if (!externalPort) throw new Error('Render PORT is required');
 if (!authority) throw new Error('VIGIA_OPERATOR_PUBLIC_AUTHORITY is required');
@@ -132,13 +135,31 @@ try {
   await run(process.execPath, ['scripts/migrate_postgis.mjs'], { env: sharedEnv });
 } catch (error) { fatal('migrate', error); throw error; }
 
-try {
-  gateway.setPhase('seeding_demo_scenario');
-  console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'seeding_demo_scenario' }));
+const seedEnv = { ...sharedEnv, VIGIA_DEMO_CONFIRM: 'SYNTHETIC_DEMO_ONLY' };
+async function runSeedPass({ phaseName, requireIdempotentReplay = false } = {}) {
+  let completed = null;
+  gateway.setPhase(phaseName);
   await run(process.execPath, ['scripts/seed_demo_portfolio_scenario.mjs'], {
-    env: { ...sharedEnv, VIGIA_DEMO_CONFIRM: 'SYNTHETIC_DEMO_ONLY' },
-    onLine: (event) => { if (event?.step) gateway.setPhase(`seed:${event.step}`, { phaseName: event.phase ?? event.subPhase ?? null }); }
+    env: seedEnv,
+    onLine: (event) => {
+      if (event?.step) gateway.setPhase(`seed:${event.step}`, { phaseName: event.phase ?? event.subPhase ?? null });
+      if (event?.step === 'seed_complete') completed = event;
+    }
   });
+  validateDemoSeedComplete(completed, { requireIdempotentReplay });
+  return completed;
+}
+
+try {
+  console.log(JSON.stringify({ level: 'info', component: 'render_demo_start', event: 'seeding_demo_scenario' }));
+  const initialSeed = await runSeedPass({ phaseName: 'seeding_demo_scenario' });
+  if (process.env.VIGIA_DEMO_DATABASE_MODE === 'ephemeral_local_postgis') {
+    const replaySeed = await runSeedPass({ phaseName: 'verifying_demo_seed_replay', requireIdempotentReplay: true });
+    const verified = validateDemoReplayPair(initialSeed, replaySeed);
+    console.log(JSON.stringify({ level:'info', component:'render_demo_start', event:'demo_seed_contract_verified', ...verified }));
+  } else {
+    console.log(JSON.stringify({ level:'info', component:'render_demo_start', event:'demo_seed_contract_verified', ...initialSeed, replayVerification:'not_required_for_legacy_external_demo_mode' }));
+  }
 } catch (error) { fatal('seed', error); throw error; }
 
 const apiEnv = {
@@ -153,10 +174,10 @@ const apiEnv = {
   VIGIA_OPERATOR_ROLE: 'supervisor',
   // assertLocalVisualizationRequest() (route-security-policy.mjs) requires the
   // request's Origin to equal this exactly. infra/public-demo-server.mjs always
-  // sends its own public origin (https://<authority>) as Origin on proxied
+  // sends its validated public origin as Origin on proxied
   // requests — without this, the backend's default ('http://127.0.0.1:4190')
   // never matches, and every basemap/imagery tile request 403s permanently.
-  VIGIA_OPERATOR_CONSOLE_ORIGIN: `https://${authority}`
+  VIGIA_OPERATOR_CONSOLE_ORIGIN: `${publicScheme}://${authority}`
 };
 
 gateway.setPhase('starting_api');
@@ -186,7 +207,7 @@ const webEnv = {
   VIGIA_BACKEND_URL: 'http://127.0.0.1:4178',
   VIGIA_OPERATOR_PROXY_KEY: proxyKey,
   VIGIA_OPERATOR_PUBLIC_AUTHORITY: authority,
-  VIGIA_OPERATOR_PUBLIC_SCHEME: 'https',
+  VIGIA_OPERATOR_PUBLIC_SCHEME: publicScheme,
   VIGIA_OPERATOR_PACKAGE_ROOT: path.join(root, 'apps/operator-console'),
   VIGIA_OPERATOR_STATIC_ROOT: 'dist'
 };

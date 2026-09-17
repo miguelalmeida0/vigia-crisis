@@ -1,0 +1,91 @@
+name: VIGIA release readiness
+on:
+  push:
+    branches: [fix/vigia-release-readiness-2026-09-17]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: vigia-readiness-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  candidate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    env:
+      VIGIA_LOCAL_SECRETS_DISABLED: '1'
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Targeted regression and safety guards
+        run: |
+          node --test apps/api/test/situation-job-queue-bounds.test.mjs infra/test/demo-gateway-readiness.test.mjs infra/test/release-guards.test.mjs infra/test/demo-seed-contract.test.mjs
+          python3 infra/test/stability-gate.test.py
+          bash -n infra/demo/local-postgis-start.sh
+      - name: Existing backend and frontend contract suites
+        run: |
+          npm ci --include=dev --ignore-scripts
+          npm --prefix apps/operator-console ci --include=dev --ignore-scripts
+          timeout 600 npm test
+          timeout 300 npm --prefix apps/operator-console run verify:static
+      - name: Build isolated candidate, never deploy
+        run: docker build -f infra/Dockerfile.demo -t vigia-release-candidate .
+      - name: Real PostgreSQL queue integration in disposable container
+        run: |
+          docker run --rm --memory=512m --memory-swap=512m --cpus=0.5 \
+            -e VIGIA_DEMO_CONFIRM=SYNTHETIC_DEMO_ONLY \
+            -e VIGIA_DEMO_DATABASE_MODE=ephemeral_local_postgis \
+            -e VIGIA_OPERATOR_PUBLIC_SCHEME=http \
+            -e VIGIA_OPERATOR_PUBLIC_AUTHORITY=127.0.0.1:10000 \
+            -e VIGIA_DEMO_QUEUE_TEST_ONLY=1 vigia-release-candidate
+      - name: Install isolated browser tooling
+        run: |
+          python3 -m pip install -r scripts/release/requirements.txt
+          python3 -m playwright install --with-deps chromium
+      - name: Boot under the target 512 MiB limit
+        run: |
+          docker run -d --name vigia-release-candidate --memory=512m --memory-swap=512m --cpus=0.5 \
+            -p 127.0.0.1:10000:10000 \
+            -e VIGIA_DEMO_CONFIRM=SYNTHETIC_DEMO_ONLY \
+            -e VIGIA_DEMO_DATABASE_MODE=ephemeral_local_postgis \
+            -e VIGIA_OPERATOR_PUBLIC_SCHEME=http \
+            -e VIGIA_OPERATOR_PUBLIC_AUTHORITY=127.0.0.1:10000 vigia-release-candidate
+          for attempt in $(seq 1 100); do
+            docker exec vigia-release-candidate node infra/demo/local-healthcheck.mjs && exit 0
+            test "$(docker inspect -f '{{.State.Running}}' vigia-release-candidate)" = true || exit 1
+            sleep 3
+          done
+          exit 1
+      - name: Real route, API, map and 20-minute activity/memory gate
+        run: python3 scripts/release/acceptance-gate.py --base-url http://127.0.0.1:10000 --container vigia-release-candidate --seconds 1200 --output .tmp/release-gate
+      - name: Restart and re-check deterministic incident and routes
+        run: |
+          docker restart vigia-release-candidate
+          ready=0
+          for attempt in $(seq 1 100); do
+            if docker exec vigia-release-candidate node infra/demo/local-healthcheck.mjs; then ready=1; break; fi
+            sleep 3
+          done
+          test "$ready" = 1
+          python3 scripts/release/acceptance-gate.py --base-url http://127.0.0.1:10000 --once --output .tmp/release-restart
+      - name: Capture bounded diagnostic log and remove test container
+        if: always()
+        run: |
+          mkdir -p .tmp/release-gate
+          docker logs --tail 2000 vigia-release-candidate > .tmp/release-gate/container.log 2>&1 || true
+          docker rm -f vigia-release-candidate || true
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: vigia-release-checks
+          path: |
+            .tmp/release-gate/
+            .tmp/release-restart/
+          retention-days: 3
+          if-no-files-found: warn
