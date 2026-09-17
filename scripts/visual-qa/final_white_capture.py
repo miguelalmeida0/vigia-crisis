@@ -26,7 +26,7 @@ from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeo
 
 
 ROOT = Path(os.environ.get("VIGIA_VQA_ROOT", Path(__file__).resolve().parents[2])).resolve()
-REFERENCE_ROOT = ROOT / "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01"
+REFERENCE_ROOT = ROOT / "docs/internal/handoffs/final-white-frontend-2026-09-01"
 OUTPUT_ROOT = ROOT / ".artifacts" / "final-white-vigia"
 VIEWPORT = {"width": 1672, "height": 941}
 OPERATOR_TIMEZONE = os.environ.get("VIGIA_VQA_TIMEZONE", "Europe/Berlin")

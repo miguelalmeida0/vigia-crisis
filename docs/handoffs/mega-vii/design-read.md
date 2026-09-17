@@ -2,7 +2,7 @@
 
 VIGIA is operational wildfire decision support for an operator under time pressure. The primary task is understanding qualified support, shared access and what remains under explicit failure assumptions. The existing dynamic incident map remains the dominant object.
 
-Direction: one map and an aligned operational rail, using DESIGN.md navy text, white surfaces, blue calculated paths, amber assumed loss, red incident/selection, hairline separators and existing buttons. Design variance 2/10; motion 1/10; density 7/10; operational risk. User-approved VII composition supersedes nearest-support anatomy only within its scope.
+Direction: one map and an aligned operational rail, using docs/product/DESIGN.md navy text, white surfaces, blue calculated paths, amber assumed loss, red incident/selection, hairline separators and existing buttons. Design variance 2/10; motion 1/10; density 7/10; operational risk. User-approved VII composition supersedes nearest-support anatomy only within its scope.
 
 P1: Operational Picture action and named qualified hospital/fire response. P2: shared road and community relationships with direct selection and Test unavailability. P3: causal change, replay, stress test and gaps through a compact mode row. Source details stay subordinate; consequences do not.
 

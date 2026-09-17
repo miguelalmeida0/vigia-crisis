@@ -7,7 +7,7 @@ related_targets: ["apps/operator-console/src/approved/routes/overview.js", "apps
 
 # Canonical full-product composition
 
-Operate mode. The explicit 8 September 2026 full-product audit/convergence brief supersedes older route anatomy. `DESIGN.md` is the shared type, color, spacing, control and responsive contract. Preserve six primary routes: Command Overview, Incidents, Incident Detail, Fire Activity, Response & Access, National Awareness. Reports stays internal. Intelligence/Operations remain backend and compatibility identities.
+Operate mode. The explicit 8 September 2026 full-product audit/convergence brief supersedes older route anatomy. `docs/product/DESIGN.md` is the shared type, color, spacing, control and responsive contract. Preserve six primary routes: Command Overview, Incidents, Incident Detail, Fire Activity, Response & Access, National Awareness. Reports stays internal. Intelligence/Operations remain backend and compatibility identities.
 
 P1 current fact/action; P2 decision support; P3 changes/next; P4 history/provenance. Preserve the light VIGIA language and real map geography. No new product concept, backend, dataset or workflow. Supplied images guide visual language; later explicit text authorizes recomposition and ordinary weather uses blue, including temperature.
 

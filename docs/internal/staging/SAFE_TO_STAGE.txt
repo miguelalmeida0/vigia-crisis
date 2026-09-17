@@ -5,9 +5,9 @@
 # authorized by this manifest.
 
 README.md
-VIGIA_RESUME_CHECKPOINT.md
-SAFE_TO_STAGE.txt
-NEVER_STAGE.txt
+docs/internal/history/VIGIA_RESUME_CHECKPOINT.md
+docs/internal/staging/SAFE_TO_STAGE.txt
+docs/internal/staging/NEVER_STAGE.txt
 .dockerignore
 package.json
 

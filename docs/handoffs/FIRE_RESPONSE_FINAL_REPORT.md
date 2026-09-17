@@ -86,4 +86,4 @@ Logs are under `.tmp/fire-response/`. Local startup logs may contain a one-time 
 
 ## Changed files
 
-The exact task-scoped list with SHA-256 values is in [fire-response-changed-files.json](fire-response-changed-files.json). It is based on a pre-task content snapshot, so unrelated pre-existing working-tree changes are not attributed to this work. Generated build and local release metadata are not UI source changes. Product and design decisions are recorded in [FIRE_RESPONSE_DESIGN.md](FIRE_RESPONSE_DESIGN.md), [PRODUCT.md](../../PRODUCT.md) and [DESIGN.md](../../DESIGN.md).
+The exact task-scoped list with SHA-256 values is in [fire-response-changed-files.json](fire-response-changed-files.json). It is based on a pre-task content snapshot, so unrelated pre-existing working-tree changes are not attributed to this work. Generated build and local release metadata are not UI source changes. Product and design decisions are recorded in [FIRE_RESPONSE_docs/product/DESIGN.md](FIRE_RESPONSE_docs/product/DESIGN.md), [docs/product/PRODUCT.md](../../docs/product/PRODUCT.md) and [docs/product/DESIGN.md](../../docs/product/DESIGN.md).

@@ -91,7 +91,7 @@
  M data/validation/release/release-source-manifest.json
  M data/validation/release/release-statement.json
  M data/validation/release/unknown-path-report.json
- M design-qa.md
+ M docs/quality/design-qa.md
  M infra/Dockerfile.operator
  M package-lock.json
  M package.json
@@ -108,11 +108,11 @@
 ?? .agents/skills/impeccable/
 ?? .codex/
 ?? .impeccable/
-?? DESIGN.md
-?? PRODUCT.md
-?? VIGIA_FINAL_FRONTEND_GOVERNED_STATE_MATRIX.md
-?? VIGIA_FINAL_FRONTEND_SCREENSHOT_MANIFEST.md
-?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/
+?? docs/product/DESIGN.md
+?? docs/product/PRODUCT.md
+?? docs/internal/history/VIGIA_FINAL_FRONTEND_GOVERNED_STATE_MATRIX.md
+?? docs/internal/history/VIGIA_FINAL_FRONTEND_SCREENSHOT_MANIFEST.md
+?? docs/internal/handoffs/final-white-frontend-2026-09-01/
 ?? apps/api/src/modules/audit/audit-chain.mjs
 ?? apps/api/src/modules/basemap/basemap-disk-cache.mjs
 ?? apps/api/src/modules/intelligence/community-support-service.mjs

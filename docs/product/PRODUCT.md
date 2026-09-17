@@ -41,7 +41,7 @@ Retain VIGIA's established identity and supplied reference authority. The produc
 
 ## Evidence on Hand
 
-The binding records are `AGENTS.md`, `AGENTS.override.md`, and `docs/handoffs/FIRE_RESPONSE_DESIGN.md`, plus the user's 8 September briefs and supplied reference images. The later hierarchy correction supersedes the earlier route order and four affected page compositions; its implemented anatomy is recorded in `.impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md`. This record is not a certification of every route or exact visual parity. Canonical capture and reference comparison evidence have separate purposes and must remain separate.
+The binding records are `AGENTS.md`, `AGENTS.override.md`, and `docs/handoffs/FIRE_RESPONSE_docs/product/DESIGN.md`, plus the user's 8 September briefs and supplied reference images. The later hierarchy correction supersedes the earlier route order and four affected page compositions; its implemented anatomy is recorded in `.impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md`. This record is not a certification of every route or exact visual parity. Canonical capture and reference comparison evidence have separate purposes and must remain separate.
 
 ## Product Principles
 

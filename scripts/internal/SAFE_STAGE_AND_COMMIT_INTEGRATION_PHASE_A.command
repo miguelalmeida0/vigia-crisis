@@ -5,7 +5,7 @@ PHASE_A_ROOT='/Users/malmeida/Documents/ChatGPT/VIGIA Integration'
 PHASE_A_BRANCH='integration/vigia-world-class-convergence'
 PHASE_A_HEAD='950910aa46772a6514da8219b7f7bdfe63bca506'
 PHASE_A_MERGE_HEAD='84bd727b88d3d3b218d78117248d8fc5c170164d'
-PHASE_A_MANIFEST="$PHASE_A_ROOT/SAFE_TO_STAGE_INTEGRATION_PHASE_A.txt"
+PHASE_A_MANIFEST="$PHASE_A_ROOT/docs/internal/staging/SAFE_TO_STAGE_INTEGRATION_PHASE_A.txt"
 
 cd "$PHASE_A_ROOT"
 test "$(pwd -P)" = "$PHASE_A_ROOT"

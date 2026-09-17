@@ -13,7 +13,7 @@ const references = Object.freeze([
 ]);
 
 export function assertVisualReferences(root) {
-  const referenceRoot = path.join(root, "VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01");
+  const referenceRoot = path.join(root, "docs/internal/handoffs/final-white-frontend-2026-09-01");
   for (const [name, expected] of references) {
     const file = path.join(referenceRoot, name);
     const metadata = statSync(file, { throwIfNoEntry: false });

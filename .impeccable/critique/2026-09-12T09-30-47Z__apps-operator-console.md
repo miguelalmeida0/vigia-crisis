@@ -134,7 +134,7 @@ Older minute-only ages would scan better as days/hours with exact source dates; 
 - [apps/operator-console/styles/approved/integration.css](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/apps/operator-console/styles/approved/integration.css>) — modified
 - [apps/operator-console/styles/approved/hierarchy.css](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/apps/operator-console/styles/approved/hierarchy.css>) — modified
 - [AGENTS.override.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/AGENTS.override.md>) — modified
-- [DESIGN.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/DESIGN.md>) — modified
+- [docs/product/DESIGN.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/product/DESIGN.md>) — modified
 - [.impeccable/design.json](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/.impeccable/design.json>) — modified
 - [.impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/.impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md>) — modified
 
@@ -163,7 +163,7 @@ npm run operator:verify:static
 node --test apps/operator-console/tests/hierarchy.mjs apps/operator-console/tests/fire-response.mjs apps/operator-console/tests/signal-composition.mjs apps/operator-console/tests/product-convergence.mjs
 ```
 
-Open the canonical console at [127.0.0.1:4190](http://127.0.0.1:4190/). DESIGN.md records the shared system and AGENTS.override.md permanently requires consistency and rendered review. No new app, backend dataset, route or workflow was introduced.
+Open the canonical console at [127.0.0.1:4190](http://127.0.0.1:4190/). docs/product/DESIGN.md records the shared system and AGENTS.override.md permanently requires consistency and rendered review. No new app, backend dataset, route or workflow was introduced.
 
 **Impeccable synthesis**
 

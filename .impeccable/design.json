@@ -76,7 +76,7 @@
   ],
   "narrative": {
     "northStar": "Operational wildfire intelligence",
-    "overview": "One canonical six-route light operational console. DESIGN.md records the complete shared hierarchy, 208px shell, 14px body/12px metadata, semantic weather blue and responsive disclosure contract. Real geography and attributable facts lead; history and provenance remain subordinate.",
+    "overview": "One canonical six-route light operational console. docs/product/DESIGN.md records the complete shared hierarchy, 208px shell, 14px body/12px metadata, semantic weather blue and responsive disclosure contract. Real geography and attributable facts lead; history and provenance remain subordinate.",
     "keyCharacteristics": [
       "Map-led operational workspaces.",
       "Compact, dated and attributable facts.",

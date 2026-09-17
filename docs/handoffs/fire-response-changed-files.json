@@ -151,14 +151,14 @@
     "baselineNote": "Task-owned documentation; pre-task hash not captured."
   },
   {
-    "path": "PRODUCT.md",
+    "path": "docs/product/PRODUCT.md",
     "change": "added",
     "beforeSha256": null,
     "afterSha256": "2b2085947e978e6b6befa81c9ff3b93d1ea60248bfac352a031d51a7734b7a26",
     "baselineNote": "Task-owned documentation; pre-task hash not captured."
   },
   {
-    "path": "DESIGN.md",
+    "path": "docs/product/DESIGN.md",
     "change": "added",
     "beforeSha256": null,
     "afterSha256": "b7536a4d09c2edba763185b950c9b521de589b0f65ebe32d40feaa8fea75c4f4",
@@ -179,7 +179,7 @@
     "baselineNote": "Task-owned documentation; pre-task hash not captured."
   },
   {
-    "path": "docs/handoffs/FIRE_RESPONSE_DESIGN.md",
+    "path": "docs/handoffs/FIRE_RESPONSE_docs/product/DESIGN.md",
     "change": "added",
     "beforeSha256": null,
     "afterSha256": "a27505b2aa3cbeda0e4ff1d84ab0ad2b58bb8f331eb51f00fc4679a88a5c3183",

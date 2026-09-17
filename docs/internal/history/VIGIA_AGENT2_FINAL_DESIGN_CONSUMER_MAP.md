@@ -22,4 +22,4 @@ This maps backend intelligence into the ten locked approved screens. It does not
 - An abstained, blocked, or missing forecast produces no forecast polygon.
 - A possibility envelope is not an expected perimeter; observed, official, sensor-derived, expected forecast, uncertainty and context layers require distinct text labels and non-color-only styling.
 - Every degraded/unavailable state must retain its backend reason. The UI must not replace it with empty success, a placeholder, a fixture, or inferred content.
-- The frontend prohibition in `VIGIA_AGENT2_CONSUMER_CONTRACTS.md` applies to every screen.
+- The frontend prohibition in `docs/internal/history/VIGIA_AGENT2_CONSUMER_CONTRACTS.md` applies to every screen.

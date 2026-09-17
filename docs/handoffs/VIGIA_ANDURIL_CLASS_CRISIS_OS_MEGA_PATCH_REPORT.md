@@ -234,7 +234,7 @@ Internal failed gates are not reclassified as external blockers:
 - ` M data/validation/release/release-source-manifest.json`
 - ` M data/validation/release/release-statement.json`
 - ` M data/validation/release/unknown-path-report.json`
-- ` M design-qa.md`
+- ` M docs/quality/design-qa.md`
 - ` M docs/integration/CAP_AGENCY_ADAPTER.md`
 - ` M package.json`
 - ` M packages/domain/src/authorization.mjs`
@@ -274,20 +274,20 @@ Internal failed gates are not reclassified as external blockers:
 - `?? .agents/skills/visual-qa/SKILL.md`
 - `?? AGENTS.md`
 - `?? AGENTS.override.md`
-- `?? VIGIA_FINAL_FRONTEND_GOVERNED_STATE_MATRIX.md`
-- `?? VIGIA_FINAL_FRONTEND_SCREENSHOT_MANIFEST.md`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/00_MASTER_WHITE_DIRECTION.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/01_COMMAND_OVERVIEW_VISUAL_BASE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/02_INCIDENTS_VISUAL_BASE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/03_INCIDENT_DETAIL_VISUAL_BASE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/04_INTELLIGENCE_FINAL_TARGET.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/05_OPERATIONS_VISUAL_BASE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/06_REPORTS_ANALYTICS_VISUAL_BASE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/07_GLOBAL_AWARENESS_VISUAL_BASE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/08_INTELLIGENCE_EXISTING_HYPOTHESES_REFERENCE.png`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/BINDING_DESIGN_RULES.md`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/CODEX_IMPLEMENTATION_PROMPT.md`
-- `?? VIGIA_FINAL_WHITE_FRONTEND_HANDOFF_2026-09-01/MANIFEST.md`
+- `?? docs/internal/history/VIGIA_FINAL_FRONTEND_GOVERNED_STATE_MATRIX.md`
+- `?? docs/internal/history/VIGIA_FINAL_FRONTEND_SCREENSHOT_MANIFEST.md`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/00_MASTER_WHITE_DIRECTION.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/01_COMMAND_OVERVIEW_VISUAL_BASE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/02_INCIDENTS_VISUAL_BASE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/03_INCIDENT_DETAIL_VISUAL_BASE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/04_INTELLIGENCE_FINAL_TARGET.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/05_OPERATIONS_VISUAL_BASE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/06_REPORTS_ANALYTICS_VISUAL_BASE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/07_GLOBAL_AWARENESS_VISUAL_BASE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/08_INTELLIGENCE_EXISTING_HYPOTHESES_REFERENCE.png`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/BINDING_DESIGN_RULES.md`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/CODEX_IMPLEMENTATION_PROMPT.md`
+- `?? docs/internal/handoffs/final-white-frontend-2026-09-01/MANIFEST.md`
 - `?? apps/api/src/application/service-dependencies.mjs`
 - `?? apps/api/src/modules/fieldnet/field-capacity-admission-ledger.mjs`
 - `?? apps/api/src/modules/fieldnet/field-capacity-admission-records.mjs`

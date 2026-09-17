@@ -89,7 +89,7 @@ Example one-rule-in-one-file exception, for a file that is still worth reviewing
 for everything else:
 
 ```bash
-.agents/skills/impeccable/scripts/impeccable hooks ignore-value design-system-font-size "*" --file "src/overlay/widget.js" --reason "Injected widget builds its own type scale; DESIGN.md's ramp describes the site"
+.agents/skills/impeccable/scripts/impeccable hooks ignore-value design-system-font-size "*" --file "src/overlay/widget.js" --reason "Injected widget builds its own type scale; docs/product/DESIGN.md's ramp describes the site"
 ```
 
 Example whole-file exception, for a file that is out of scope entirely:

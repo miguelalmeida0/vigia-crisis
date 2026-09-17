@@ -14,7 +14,7 @@ Access and National Awareness. Preserve the established visual language and
 source distinctions. The implemented anatomy is recorded in
 `.impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md`.
 The later text correction takes precedence over the earlier composition in
-`docs/handoffs/FIRE_RESPONSE_DESIGN.md` where they differ.
+`docs/handoffs/FIRE_RESPONSE_docs/product/DESIGN.md` where they differ.
 
 Primary navigation:
 
@@ -182,7 +182,7 @@ levels or additive thermal totals from overlapping nearby query radii.
 ## FULL PRODUCT DESIGN CONSISTENCY RULE
 
 Vigia is a reference-locked product. The latest explicit full-product convergence
-brief governs all six primary routes; `DESIGN.md` records the shared system.
+brief governs all six primary routes; `docs/product/DESIGN.md` records the shared system.
 
 Any frontend change must preserve:
 

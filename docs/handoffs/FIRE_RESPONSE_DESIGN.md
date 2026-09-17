@@ -37,12 +37,12 @@ Browser plugin not available; use the existing Docker Playwright canonical admis
 
 **FORM:** User-supplied locked compositions; no concept seed or alternate direction was selected. Preserve the existing product identity.
 
-**FINISH:** unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+**FINISH:** unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, docs/product/DESIGN.md, and every shipping raster carrying its provenance
 
 ## Recorded implementation and review boundary
 
 The settled CSS uses a 1.28:1 map/rail grid with 12px gaps and a 408px desktop live-map viewport inside its panel. The workspace stacks at 1100px, with three signal columns and an optional two-column supporting rail. At 760px signals use two columns, the rail and route estimates stack, tables become labeled rows, and the live-map viewport is 365px. These are extracted implementation values, not measured claims of reference equivalence. Weather history prints a visible date and UTC time for each sample.
 
-The replacement routes use real measurements, mapped facilities and qualified OSRM estimates in place of unsupported risk, perimeter and safe-route examples in the references. Existing typography is retained. Exact pixel parity is not established by this record. `PRODUCT.md`, `DESIGN.md` and `.impeccable/design.json` preserve product truth and the scoped visual system; they do not certify the other routes.
+The replacement routes use real measurements, mapped facilities and qualified OSRM estimates in place of unsupported risk, perimeter and safe-route examples in the references. Existing typography is retained. Exact pixel parity is not established by this record. `docs/product/PRODUCT.md`, `docs/product/DESIGN.md` and `.impeccable/design.json` preserve product truth and the scoped visual system; they do not certify the other routes.
 
 Canonical functional checks and the initial eight-size capture were reported successful by the implementation task, including zero page overflow, app errors and network failures in that capture. Final corrected screenshots, native comparisons and reviewer disposition belong to the final handoff; this documentation pass did not independently rerun those checks or certify their final result.
