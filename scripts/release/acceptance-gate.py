@@ -73,6 +73,25 @@ def sample_container(name, started):
             'identity':record['Id']+':'+state['StartedAt'], 'image':record['Image']}
 
 
+async def wait_for_hydration(page, route, report, timeout=20000):
+    try:
+        await page.wait_for_function(
+            "route => document.body.dataset.vigiaRoute === route && globalThis.__VIGIA_APP_RUNTIME__?.hydrationIdle === true",
+            arg=route, timeout=timeout)
+    except Exception:
+        state = await page.evaluate("""() => ({
+          bodyRoute: document.body.dataset.vigiaRoute ?? null,
+          bodyState: document.body.dataset.vigiaAppState ?? null,
+          resourceState: document.body.dataset.vigiaResourceState ?? null,
+          appGlobalRefreshPending: document.querySelector('#app')?.dataset.vigiaGlobalRefreshPending ?? null,
+          appIncidentLoadPending: document.querySelector('#app')?.dataset.vigiaIncidentLoadPending ?? null,
+          runtime: globalThis.__VIGIA_APP_RUNTIME__ ?? null,
+          hash: location.hash
+        })""")
+        report['errors'].append({'kind':'hydration','route':route,'state':state})
+        raise
+
+
 async def run(args):
     from playwright.async_api import async_playwright
     origin = urlparse(args.base_url)
@@ -130,12 +149,9 @@ async def run(args):
                 # URLs and body markers come from routeState.js/app.js. Incident
                 # Detail and Reports are contextual/compatibility routes, not
                 # fabricated extra items in the locked navigation.
-                target=page.locator(f'[data-route="{internal_route}"], [data-route="{public_route}"]').first
-                if internal_route not in ('incident-detail','reports-analytics') and await target.count() and await target.is_visible():
-                    await target.click(timeout=8000)
                 suffix='?id='+CANONICAL if internal_route in ('incidents','incident-detail','intelligence','operations') else ''
                 await page.goto(args.base_url.split('#')[0].rstrip('/')+'/#/'+public_route+suffix,wait_until='domcontentloaded',timeout=30000)
-                await page.wait_for_function("route => document.body.dataset.vigiaRoute === route && globalThis.__VIGIA_APP_RUNTIME__?.hydrationIdle === true",arg=internal_route,timeout=20000)
+                await wait_for_hydration(page, public_route, report)
                 if len((await page.locator('#main-content').inner_text()).strip()) < 100: raise ValueError('blank_route:'+name)
                 if requires_map:
                     await page.wait_for_function("""() => [...document.querySelectorAll('.tile-map')].some(map => {
