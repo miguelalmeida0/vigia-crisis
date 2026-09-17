@@ -1,0 +1,26 @@
+name: VIGIA release baseline audit
+on:
+  push:
+    branches: [audit/vigia-release-baseline-2026-09-17]
+permissions:
+  contents: read
+jobs:
+  situation-baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VIGIA_LOCAL_SECRETS_DISABLED: '1'
+      CI: 'true'
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - run: npm ci --include=dev --ignore-scripts
+      - name: Exact inherited situation suite
+        run: |
+          mkdir -p .tmp/test
+          node --test --test-concurrency=1 apps/api/test/situation-intelligence.test.mjs
