@@ -1,8 +1,16 @@
 {
   "schemaVersion": "vigia.ignored-runtime-manifest.v1",
-  "generatedAt": "2026-09-17T10:20:02.180Z",
-  "releaseId": "vigia-intelligence-fabric-80ab2dd2ae3ce076",
+  "generatedAt": "2026-09-17T21:34:45.680Z",
+  "releaseId": "vigia-intelligence-fabric-2df457be7dcc34f9",
   "entries": [
+    {
+      "path": ".tmp/",
+      "classification": "TEMPORARY"
+    },
+    {
+      "path": "apps/operator-console/dist/",
+      "classification": "TEMPORARY"
+    },
     {
       "path": "apps/operator-console/node_modules/",
       "classification": "RUNTIME CACHE"

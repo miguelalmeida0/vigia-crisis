@@ -177,7 +177,11 @@ async def run(args):
                 # fabricated extra items in the locked navigation.
                 suffix='?id='+CANONICAL if internal_route in ('incidents','incident-detail','intelligence','operations') else ''
                 await page.goto(args.base_url.split('#')[0].rstrip('/')+'/#/'+public_route+suffix,wait_until='domcontentloaded',timeout=30000)
-                await wait_for_hydration(page, public_route, report)
+                # app.js/routeState.js canonicalize navigation aliases (e.g. the locked
+                # "fire-activity" URL) to their internal route name (e.g. "intelligence")
+                # before stamping document.body.dataset.vigiaRoute, so hydration must be
+                # awaited against that internal identity, not the public URL segment.
+                await wait_for_hydration(page, internal_route, report)
                 if len((await page.locator('#main-content').inner_text()).strip()) < 100: raise ValueError('blank_route:'+name)
                 if requires_map:
                     await wait_for_map(page, name, report)

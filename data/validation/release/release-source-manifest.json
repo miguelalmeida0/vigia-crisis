@@ -1,8 +1,8 @@
 {
   "schemaVersion": "vigia.release-source-manifest.v2",
-  "generatedAt": "2026-09-17T10:20:02.180Z",
-  "releaseId": "vigia-intelligence-fabric-80ab2dd2ae3ce076",
-  "codeStateHash": "sha256:8b59c5ab7308257d0128394e71b0022e89cb73d2576e7f1b6e091dbc42288278",
+  "generatedAt": "2026-09-17T21:34:45.680Z",
+  "releaseId": "vigia-intelligence-fabric-2df457be7dcc34f9",
+  "codeStateHash": "sha256:73aa78d704d93504453215f83d203726a1f9a3b56b10b646ac051fca0f7c1de5",
   "operationalDataHash": "sha256:5658dee8701ecdf8d78f84df13ef867329d4c0375443b88844c25e3cb4d65d41",
   "entries": [
     {
@@ -5486,7 +5486,7 @@
     {
       "path": "apps/operator-console/src/routeState.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:ce15109eee2d10fed40dc7aacb7abee12e2b1e3fc27e39ad2a34b36224a25385",
+      "sha256": "sha256:36240f411d666ccc5cdb6d4223dd9e99dbe0589c74e664deb818c96a11bde752",
       "mode": "0644"
     },
     {
@@ -12446,7 +12446,7 @@
     {
       "path": "scripts/release/acceptance-gate.py",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:7429d8144d380563ab0e4a6a18af99e1b548e28044af6e2eb63ada8743a452e3",
+      "sha256": "sha256:403b2c105cbd73fbf61f61f9177f168898c3ed0feea0a33763ae3348aacccd06",
       "mode": "0644"
     },
     {

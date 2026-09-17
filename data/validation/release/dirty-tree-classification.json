@@ -1,18 +1,88 @@
 {
   "schemaVersion": "vigia.dirty-tree-classification.v1",
-  "generatedAt": "2026-09-17T10:20:02.180Z",
-  "releaseId": "vigia-intelligence-fabric-80ab2dd2ae3ce076",
-  "codeStateHash": "sha256:8b59c5ab7308257d0128394e71b0022e89cb73d2576e7f1b6e091dbc42288278",
+  "generatedAt": "2026-09-17T21:34:45.680Z",
+  "releaseId": "vigia-intelligence-fabric-2df457be7dcc34f9",
+  "codeStateHash": "sha256:73aa78d704d93504453215f83d203726a1f9a3b56b10b646ac051fca0f7c1de5",
   "groups": {
-    "A. application source": 0,
+    "A. application source": 1,
     "B. tests": 0,
     "C. configuration/build/release scripts": 1,
     "D. governed/reference data": 0,
-    "E. generated validation evidence": 0,
+    "E. generated validation evidence": 9,
     "F. temp/cache/runtime junk": 0
   },
   "stagedNow": [],
   "entries": [
+    {
+      "path": "apps/operator-console/src/routeState.js",
+      "status": " M",
+      "classification": "SOURCE — release code",
+      "group": "A. application source",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/checkpoint-commands.sh",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/checkpoint-handoff.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/current-release-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/dirty-tree-classification.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/evidence-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/ignored-runtime-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/release-source-manifest.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/release-statement.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
+    {
+      "path": "data/validation/release/unknown-path-report.json",
+      "status": " M",
+      "classification": "GOVERNED EVIDENCE",
+      "group": "E. generated validation evidence",
+      "staged": false
+    },
     {
       "path": "scripts/release/acceptance-gate.py",
       "status": " M",

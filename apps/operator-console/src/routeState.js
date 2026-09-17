@@ -33,10 +33,15 @@ export function routeParamsFromState(route,state){
   return params;
 }
 
+const INCIDENT_ID_KEYS=new Set(['selectedIncidentId','globalSelectedIncidentId']);
+// Deep links use the bare canonical incident id (e.g. "PT-2026-5440CF7B01"); every
+// other consumer of these state keys compares against the "incident:"-prefixed
+// entity id, so a bare id must be canonicalized here or it will never match.
+function canonicalIncidentIdParam(key,raw){return INCIDENT_ID_KEYS.has(key)&&raw&&!raw.startsWith('incident:')?`incident:${raw}`:raw;}
 export function applyRouteParams(state,route,params,{reset=true}={}){
   const fields=ROUTE_FIELDS[normalizedRoute(route)]??{};
   for(const [parameter,[key,allowed,fallback]] of Object.entries(fields)){
-    const raw=params.get(parameter),value=parameter==='page'&&raw!==null?Math.max(1,Number(raw)||1):raw;
+    const raw=params.get(parameter),value=parameter==='page'&&raw!==null?Math.max(1,Number(raw)||1):canonicalIncidentIdParam(key,raw);
     if(allowedValue(raw,allowed))state[key]=value;else if(reset)state[key]=fallback;
   }
   return state;

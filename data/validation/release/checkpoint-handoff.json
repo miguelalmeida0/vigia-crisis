@@ -1,11 +1,11 @@
 {
   "schemaVersion": "vigia.checkpoint-handoff.v1",
-  "generatedAt": "2026-09-17T10:20:02.180Z",
-  "releaseId": "vigia-intelligence-fabric-80ab2dd2ae3ce076",
-  "codeStateHash": "sha256:8b59c5ab7308257d0128394e71b0022e89cb73d2576e7f1b6e091dbc42288278",
+  "generatedAt": "2026-09-17T21:34:45.680Z",
+  "releaseId": "vigia-intelligence-fabric-2df457be7dcc34f9",
+  "codeStateHash": "sha256:73aa78d704d93504453215f83d203726a1f9a3b56b10b646ac051fca0f7c1de5",
   "gitWritable": false,
   "mode": "DETERMINISTIC_COMMAND_HANDOFF",
-  "eligiblePaths": 1,
+  "eligiblePaths": 11,
   "excluded": {
     "secret": 0,
     "temporary": 0,
@@ -13,6 +13,37 @@
     "quarantinedPrototype": 0
   },
   "checkpoints": [
+    {
+      "id": "physical-sensing",
+      "title": "Physical sensing and provider truth",
+      "paths": [
+        "data/validation/release/release-source-manifest.json"
+      ],
+      "commitMessage": "checkpoint(physical-sensing): physical sensing and provider truth"
+    },
+    {
+      "id": "measurement-science",
+      "title": "Validation and measurement science",
+      "paths": [
+        "data/validation/release/checkpoint-commands.sh",
+        "data/validation/release/checkpoint-handoff.json",
+        "data/validation/release/current-release-manifest.json",
+        "data/validation/release/dirty-tree-classification.json",
+        "data/validation/release/evidence-manifest.json",
+        "data/validation/release/ignored-runtime-manifest.json",
+        "data/validation/release/release-statement.json",
+        "data/validation/release/unknown-path-report.json"
+      ],
+      "commitMessage": "checkpoint(measurement-science): validation and measurement science"
+    },
+    {
+      "id": "command-product",
+      "title": "Command and Decision OS product",
+      "paths": [
+        "apps/operator-console/src/routeState.js"
+      ],
+      "commitMessage": "checkpoint(command-product): command and decision os product"
+    },
     {
       "id": "release-certification",
       "title": "Release integrity and schema certification",
