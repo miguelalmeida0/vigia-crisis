@@ -10,10 +10,9 @@ const demoRequiredChecks = new Set([
   'postgres_physical_truth',
   'postgres_live_operations',
   'audit_chain',
-  'scientific_runtime',
   'geo_proof_persistence'
 ]);
-const demoProductionOnlyChecks = new Set([
+const demoInactiveOperationalChecks = new Set([
   // The portfolio deployment is deliberately a SHADOW/synthetic exercise, so
   // it must not pretend to satisfy production fixture-purity.
   'production_synthetic_observations',
@@ -21,7 +20,13 @@ const demoProductionOnlyChecks = new Set([
   // the bounded recruiter-facing read plane. Their continuously-refreshing
   // production invariants are certified separately before full-runtime use.
   'unknown_to_work_invariant',
-  'physical_source_families'
+  'physical_source_families',
+  // createRuntime() deliberately skips refreshOperationalState() for the
+  // bounded demo. That function is where ScientificRuntimeService.refresh()
+  // runs. Requiring it here would make an intentionally inactive subsystem a
+  // permanent false-negative. The persisted geo-proof store remains required;
+  // live raster execution belongs to full operational-runtime certification.
+  'scientific_runtime'
 ]);
 
 async function readBoundedJson(response, maxBytes) {
@@ -54,14 +59,14 @@ export function assessDependencyReadiness(status, body, { profile = 'operational
     return { ok: false, error: 'api_demo_required_dependency_not_ready', failedChecks: missingOrFailedRequired };
   }
   const unexpectedBlockingFailures = body.checks
-    .filter(check => check?.blocking !== false && check?.ok !== true && !demoProductionOnlyChecks.has(check?.id))
+    .filter(check => check?.blocking !== false && check?.ok !== true && !demoInactiveOperationalChecks.has(check?.id))
     .map(check => check.id)
     .filter(Boolean);
   if (unexpectedBlockingFailures.length) {
     return { ok: false, error: 'api_demo_unexpected_blocking_failure', failedChecks: unexpectedBlockingFailures };
   }
   const waivedChecks = body.checks
-    .filter(check => demoProductionOnlyChecks.has(check?.id) && check?.ok !== true)
+    .filter(check => demoInactiveOperationalChecks.has(check?.id) && check?.ok !== true)
     .map(check => check.id);
   return { ok: true, productionReady: false, boundedReadPlaneReady: true, waivedChecks };
 }
