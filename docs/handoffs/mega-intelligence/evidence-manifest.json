@@ -10,242 +10,242 @@
   ],
   "artifacts": [
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/reference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/reference.png",
       "bytes": 678681,
       "sha256": "78745fa143862bf7d193e8874290e8f7fa3c1a7656015328acba623a3a4839c6"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/runtime.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/runtime.png",
       "bytes": 598111,
       "sha256": "5ddddc673528feefecfcb56eb6098aec774c057c70c4465c3c96d89ffa04d131"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/overlay-50.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/overlay-50.png",
       "bytes": 661914,
       "sha256": "4e68195eb8a4978a6433f3f9369a69996b75fa9a96afb0b3cddfad91bda81e87"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/difference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/difference.png",
       "bytes": 533320,
       "sha256": "49f1603b3e50f009aaf7db1188f49a194d9a7b0970c7c8b67d94610497f2f1b7"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/metrics.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/metrics.json",
       "bytes": 509,
       "sha256": "3da3fdd4dcefdce5440929ca032aabc00b1d5395852dcf5950694d0228452c5e"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/geometry-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/geometry-report.json",
       "bytes": 5988,
       "sha256": "acf72212f7600bde29d92fd34e75a8cff919a9d09aff83b04cefff03347df247"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/style-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/style-report.json",
       "bytes": 3785,
       "sha256": "71b20d8681c821b9dae871a589d794e5599a55fe04dc98dc439fbe635609b6b0"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/canonical.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/command-overview/canonical.png",
       "bytes": 615751,
       "sha256": "d78062b6a575e097c3bebf8493c562cb6c00f065b5809c995a96c5ec22cdca37"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/reference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/reference.png",
       "bytes": 625108,
       "sha256": "eeaa12de564c7d2cd8fd4d91eccbc4f22d628911992f83855cf73c3771fcf518"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/runtime.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/runtime.png",
       "bytes": 625108,
       "sha256": "eeaa12de564c7d2cd8fd4d91eccbc4f22d628911992f83855cf73c3771fcf518"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/overlay-50.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/overlay-50.png",
       "bytes": 625108,
       "sha256": "eeaa12de564c7d2cd8fd4d91eccbc4f22d628911992f83855cf73c3771fcf518"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/difference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/difference.png",
       "bytes": 4934,
       "sha256": "95bf36a5961dfadf3395a8ecd741a9067a99b7f8963ca41ebf2ffe3482d5f7cb"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/metrics.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/metrics.json",
       "bytes": 471,
       "sha256": "b158d678c35eab4f42365ea2fc34ed970bb646abb83526dc48ed8717a56252dd"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/geometry-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/geometry-report.json",
       "bytes": 1573,
       "sha256": "2d6d78624bfa6acdd84a3cb76309c3f3c8284ff2a198de3c1e870f380b740593"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/style-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/style-report.json",
       "bytes": 1029,
       "sha256": "394afc79da9b512b5838c0c7c7b40d46286b983cd2d9b02e213bc39545e85c74"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/canonical.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incidents/canonical.png",
       "bytes": 580749,
       "sha256": "b562dc59babf82e654ab8f86ef7d5902dc416d6375ee2d482dee4dcf008d9f5a"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/reference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/reference.png",
       "bytes": 777072,
       "sha256": "36189663ecab03ed40d2074185d6114d94e151fb6bf5719b5652f938a1a9d4e7"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/runtime.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/runtime.png",
       "bytes": 795362,
       "sha256": "8a84d29f96a277ddf370ffb3ab0efdf8d964c483571cb5bd2b21400d9a94f879"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/overlay-50.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/overlay-50.png",
       "bytes": 753828,
       "sha256": "0815a715d6e955c01a4f71c39523aafcd642cb6fef52a762a95ba0212aacad43"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/difference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/difference.png",
       "bytes": 689237,
       "sha256": "2fb7b6acadd8fd987e60c67f7756c0eea39412ec0500be735fc1b8084f3af718"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/metrics.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/metrics.json",
       "bytes": 507,
       "sha256": "53b50c53fa3d41e712b80786da7945afa4e246b9b529fed3d4a5e0930b52088d"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/geometry-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/geometry-report.json",
       "bytes": 4801,
       "sha256": "58515adfaf565c2519c3ef137f6a9d6624d48b28001cc396825f0b6eb1bb696e"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/style-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/style-report.json",
       "bytes": 3108,
       "sha256": "07c739c8bec813d4e163c372da2a7c8d2d463d6c2e44b506b09794f2865ade73"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/canonical.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/incident-detail/canonical.png",
       "bytes": 781359,
       "sha256": "b108940663463dfa5fe306d38d83651e42f2e938b45ae72b51e1c8d27d777bce"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/reference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/reference.png",
       "bytes": 1174630,
       "sha256": "45b2ba63ea8492a9512dd573c30a6de6148fc9bd81350631183a4569e9fc15e5"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/runtime.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/runtime.png",
       "bytes": 1174420,
       "sha256": "ee69a46fedb22969949f01b017a9628fa2bbaf75cee89f88af15b663524c45ce"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/overlay-50.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/overlay-50.png",
       "bytes": 1175965,
       "sha256": "804d4b96fcac752c2e7583fdf73059410a357a487c3bc8309e043ab7d96ab637"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/difference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/difference.png",
       "bytes": 9724,
       "sha256": "6357a305d71a074d05b2c9e13ea37db77907cae3d3592b1e7af85cd030c449cb"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/metrics.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/metrics.json",
       "bytes": 508,
       "sha256": "dbe137894e5beef9a73f2a718dcd5a119ac6caa8ebed515d1aaa1d4f283ec5f3"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/geometry-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/geometry-report.json",
       "bytes": 6543,
       "sha256": "3fac68114d1cef92d883ebcab6e9bbed1b72edde8b982b40e60a4d01183056da"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/style-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/style-report.json",
       "bytes": 4102,
       "sha256": "a8a51495df82cd6dfa0b6b1e46d8a8a6302e1535772db967c8319b0cbf3c4ad6"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/canonical.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/fire-activity/canonical.png",
       "bytes": 795666,
       "sha256": "6619d1c68e34fe16959abf2ec68073080ce475d295ad229a8ece966b800fc3ce"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/reference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/reference.png",
       "bytes": 227159,
       "sha256": "2abf7f12700abadb1da121fa42dfba19e0a2a2466ede739e9e1189bae4c6c57b"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/runtime.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/runtime.png",
       "bytes": 764436,
       "sha256": "39b8592903d833b9e4fbcdaabad5d920eb86afadd8d0605a82fe3c654f0c1c7a"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/overlay-50.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/overlay-50.png",
       "bytes": 693355,
       "sha256": "60e3627a83287acf8805e5796719bbd883672d1f5d754a355c4713d7b26da11d"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/difference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/difference.png",
       "bytes": 528329,
       "sha256": "f9b19158053d5559eef0ec462d1765fddd27b6a596dd409a5ccd3b7af9af6958"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/metrics.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/metrics.json",
       "bytes": 506,
       "sha256": "9b98608d15154bade94c9a89066f47ef653f4b3121726f8b355ad6644c072163"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/geometry-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/geometry-report.json",
       "bytes": 6481,
       "sha256": "ff25ec7c92b1d96882780798153367a99706f83fa067d7bc4886ea15ade3d385"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/style-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/style-report.json",
       "bytes": 4090,
       "sha256": "92bc7ef5f7fbd50678f9a97da0d144c25b08d3295970b15ce74c962ad9406f57"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/canonical.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/response-access/canonical.png",
       "bytes": 799847,
       "sha256": "a56039ee7cc804808ee138f0ca5565be2a6805a7592881cf955927042da67d1b"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/reference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/reference.png",
       "bytes": 747335,
       "sha256": "16bd55256a964a0ad3004c46b901488f5b72efbca4520feeb9f0a5794b4aa655"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/runtime.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/runtime.png",
       "bytes": 772323,
       "sha256": "6c8ebdcd516eaf3c065350d2d831ccf18c68be1d89082620a17199f6a7a91787"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/overlay-50.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/overlay-50.png",
       "bytes": 809120,
       "sha256": "a67eefd0029f16d3b3e9f52b6a4426152f07943623d8a0fd0e7e52993d40e969"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/difference.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/difference.png",
       "bytes": 728126,
       "sha256": "ef71b6838798a2faab3ec55245626e6b053f370c123fd6438d78498554a687fe"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/metrics.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/metrics.json",
       "bytes": 510,
       "sha256": "4f2f45443893f0f61611693a7b62ed177ab8c1c6e284f1b8253ce562294f8176"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/geometry-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/geometry-report.json",
       "bytes": 5384,
       "sha256": "429190296956ffa350d49fa753a62bb24bbbc4df278c70fa67b8ba82cabf211e"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/style-report.json",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/style-report.json",
       "bytes": 3447,
       "sha256": "f05ae3b29a4ef97f7fcde138db344b01dd94779012f422736d0c14ac2d45691c"
     },
     {
-      "path": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/canonical.png",
+      "path": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/national-awareness/canonical.png",
       "bytes": 777386,
       "sha256": "2797c04e6676093989cea296106d37580768ef999e229391f31cea0fa087196e"
     }

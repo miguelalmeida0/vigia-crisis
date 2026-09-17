@@ -105,9 +105,9 @@ Do not:
 
 Before changing code:
 
-1. Read `AGENTS.md`.
-2. Read `AGENTS.override.md`.
-3. Read all relevant `.agents/**/SKILL.md`.
+1. Read `docs/internal/automation/AGENTS.md`.
+2. Read `docs/internal/automation/AGENTS.override.md`.
+3. Read all relevant `docs/internal/automation/agents/**/SKILL.md`.
 4. Read the latest implementation report and certification.
 5. Read `VIGIA_FINAL_UNDER_7_ELIMINATION_AUDIT.md`.
 6. Read `VIGIA_COLLECTION_FUSION_TASKING_DECISION_RECOVERY.md`.

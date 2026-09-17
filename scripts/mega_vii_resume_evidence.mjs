@@ -1,5 +1,5 @@
 import {readFile,writeFile,copyFile,access} from 'node:fs/promises';
-const directory='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vii';
+const directory='/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vii';
 const original=directory+'/after-map-interrupted.json';
 try{await access(original);}catch{await copyFile(directory+'/after-map.json',original);}
 if(process.argv.includes('--preserve')){console.log('Interrupted raw benchmark preserved.');process.exit(0);}

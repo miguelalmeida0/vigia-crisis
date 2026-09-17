@@ -230,11 +230,11 @@ Full comparisons visibly include baseline map-loading/retained-map states versus
 
 Final frozen capture: no console errors or failed network requests; Docker Chromium software-WebGL/readback performance warnings remain recorded. Initial canonical capture encountered one labels-tile 503 on Command Overview. A fresh canonical recovery capture verified ready maps at all three sizes, zero app console/network failures; its teardown emitted a Playwright asyncio cancellation after successful capture. The expected authorization-negative 400 is retained separately. Earlier failures are retained in logs.
 
-Evidence root: `/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/`.
+Evidence root: `/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/`.
 
-- [Six-route comparison gallery](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/index.html)
-- [Real prosecutor — desktop](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/confirmation/canonical/prosecutor-1728.png)
-- [Real prosecutor — mobile](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/confirmation/canonical/prosecutor-390.png)
+- [Six-route comparison gallery](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/comparisons/index.html)
+- [Real prosecutor — desktop](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/confirmation/canonical/prosecutor-1728.png)
+- [Real prosecutor — mobile](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence/confirmation/canonical/prosecutor-390.png)
 
 Reproduce visual evidence with the existing `vigia-visual-qa:playwright-1.54.0` Docker image and the saved `confirm-golden.py`, `capture-final-golden.py`, `confirm-canonical.py`, `recover-command.py`, `compare.py` and `review-comparisons.py` harnesses in that evidence root. They use the real admission file without exposing its token. Do not run captures concurrently with frontend builds.
 

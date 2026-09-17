@@ -1,5 +1,5 @@
 import {readFile,writeFile,copyFile} from 'node:fs/promises';
-const root='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration';
+const root='/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration';
 const lanes=['before','after','optimized','compact'],data={};
 const navigationFailures=[];
 for(const lane of lanes){try{data[lane]=JSON.parse(await readFile(`${root}/mega-ii-${lane}-map.json`,'utf8'));await copyFile(`${root}/mega-ii-${lane}-map.json`,`docs/handoffs/mega-ii/map-${lane}.json`);}catch{}}

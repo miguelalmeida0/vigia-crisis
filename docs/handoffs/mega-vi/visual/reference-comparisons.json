@@ -37,7 +37,7 @@
   {
     "route": "national-awareness",
     "runtime": "national-awareness-1672.png",
-    "reference": ".impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
+    "reference": "docs/internal/automation/impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
     "state": "TEXT_COMPOSITION_CONTRACT_ONLY",
     "reason": "The retained six-raster pack contains an old Evidence view, not the current National Awareness anatomy. No matching approved national raster was fabricated."
   }

@@ -6,42 +6,42 @@
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
   "entries": [
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_asset_producer.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_asset_producer.toml",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_documenter.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_documenter.toml",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_finish_reviewer.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_finish_reviewer.toml",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_manual_edit_applier.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_manual_edit_applier.toml",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/bin/darwin-arm64/impeccable",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/bin/darwin-arm64/impeccable",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/impeccable",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/impeccable",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/impeccable.cmd",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/impeccable.cmd",
       "status": "??",
       "classification": "REFERENCE DATA"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/VERSION",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/VERSION",
       "status": "??",
       "classification": "REFERENCE DATA"
     },

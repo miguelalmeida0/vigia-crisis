@@ -17,7 +17,7 @@ Implementation and evidence captured on 8 September 2026. Incident answer clock:
 | Activity | Projection updates dominated the feed; physical changes lacked location/materiality discipline. Typed physical/work events now own the primary feed; duplicate aggregate thermal events are removed. |
 | Responsive facts | Inherited value ellipsis clipped units and missingness at 320 px. Fact values now wrap. |
 
-The bounded trace and composition specification were written before implementation: [REALITY_FIRST_REVIVAL.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/REALITY_FIRST_REVIVAL.md>). Complete final clocks, units, source locations, selection and API/VM paths: [source-to-screen-final.json](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/source-to-screen-final.json>).
+The bounded trace and composition specification were written before implementation: [REALITY_FIRST_REVIVAL.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/REALITY_FIRST_REVIVAL.md>). Complete final clocks, units, source locations, selection and API/VM paths: [source-to-screen-final.json](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/source-to-screen-final.json>).
 
 **2. Data-layer fixes**
 
@@ -78,7 +78,7 @@ The current-source copy inventory classifies every matching occurrence by identi
 
 **9. Trust/provenance interaction**
 
-“Why this?” opens a focus-contained drawer with original observation, receipt and calculation clocks, source name/reference, station coordinates, distance, freshness/expiry, definition, transformation, suitability, limitations, supporting sources/conflicts and version when supplied. Escape closes it and restores focus to the invoking fact. [Wind drawer](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/why-wind-desktop.png>).
+“Why this?” opens a focus-contained drawer with original observation, receipt and calculation clocks, source name/reference, station coordinates, distance, freshness/expiry, definition, transformation, suitability, limitations, supporting sources/conflicts and version when supplied. Escape closes it and restores focus to the invoking fact. [Wind drawer](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/why-wind-desktop.png>).
 
 **10. Ask Vigia improvements**
 
@@ -94,7 +94,7 @@ Provider groups run independently with allSettled, a 45-second outer deadline, n
 
 Existing source expiry policies remain: active feed 10 minutes; station observations 3 hours; warnings 6 hours; rural-fire danger 12 hours; archive 7 days; catalogue 48 hours. FIRMS acquisition state has its existing 6-hour policy, while current physical thermal metrics use the existing 90-minute evidence window. These are freshness policies, not safety thresholds.
 
-A real label-tile 503 was observed during a prior fresh pass. The Incidents map exposed DEGRADED_PARTIAL while the console and other routes continued. [Observed degradation record](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/canonical-degraded-qa.json>) and [Screenshot](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incidents-degraded-label-tile.png>). Final network results remain in qa.json. Existing database and basemap recovery were tested using fault-injected services; no destructive live-database outage was induced.
+A real label-tile 503 was observed during a prior fresh pass. The Incidents map exposed DEGRADED_PARTIAL while the console and other routes continued. [Observed degradation record](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/canonical-degraded-qa.json>) and [Screenshot](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incidents-degraded-label-tile.png>). Final network results remain in qa.json. Existing database and basemap recovery were tested using fault-injected services; no destructive live-database outage was induced.
 
 **12. Semantic and regression results**
 
@@ -108,29 +108,29 @@ Three deterministic incidents—current coverage, stale/failed coverage, and no 
 
 Agent-assisted screenshot/interaction review completed for nine questions. Browser retrieval for the unknowns answer took 2.573 seconds; this is not human comprehension time. Wind, age, station distance, fire signal, warning status, changes and next investigation are available in the 1672×941 desktop view. Exact fire-location limitations require answer inspection; the complete unknowns answer takes one drawer open and one query submission. Human answer time, correctness and mistaken-certainty rates remain unmeasured.
 
-[Manual tester worksheet](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/REALITY_FIRST_USABILITY.md>) · [Performed check and answers](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/usability-results.json>). At 320 px, facts and units wrap and the full incident workflow requires scrolling. The 200%/400% captures test equivalent reflow dimensions, not native browser zoom.
+[Manual tester worksheet](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/REALITY_FIRST_USABILITY.md>) · [Performed check and answers](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/usability-results.json>). At 320 px, facts and units wrap and the full incident workflow requires scrolling. The 200%/400% captures test equivalent reflow dimensions, not native browser zoom.
 
 **15. Final screenshots and visual evidence**
 
 | Surface | Desktop | Mobile |
 | --- | --- | --- |
-| Command Overview | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/command-overview-1672.png>) | [Mobile](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/command-overview-390.png>) |
-| Incidents | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incidents-1672.png>) | [Mobile](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incidents-390.png>) |
-| Incident Detail | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incident-detail-1672.png>) | [Mobile](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incident-detail-390.png>) |
-| Intelligence | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/intelligence-1672.png>) | [Mobile](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/intelligence-390.png>) |
-| Operations | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/operations-1672.png>) | [Mobile](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/operations-390.png>) |
-| National Awareness | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/national-awareness-1672.png>) | [Mobile](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/national-awareness-390.png>) |
-| Activity | [Desktop](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/activity-desktop.png>) | Responsive feed included in Overview captures |
+| Command Overview | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/command-overview-1672.png>) | [Mobile](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/command-overview-390.png>) |
+| Incidents | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incidents-1672.png>) | [Mobile](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incidents-390.png>) |
+| Incident Detail | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incident-detail-1672.png>) | [Mobile](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/incident-detail-390.png>) |
+| Intelligence | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/intelligence-1672.png>) | [Mobile](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/intelligence-390.png>) |
+| Operations | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/operations-1672.png>) | [Mobile](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/operations-390.png>) |
+| National Awareness | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/national-awareness-1672.png>) | [Mobile](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/national-awareness-390.png>) |
+| Activity | [Desktop](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/activity-desktop.png>) | Responsive feed included in Overview captures |
 
 Canonical captures cover eight CSS viewports from 320×568 to 1672×941. No document horizontal overflow was found; the driver warnings are software-WebGL diagnostics, separately recorded from application errors. All comparisons retain the supplied reference, runtime, 50% overlay, difference, measured geometry and styles.
 
-Frozen-source visual lane: [capture.json](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/golden/capture.json>). Reference comparisons: [index.json](</Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/comparisons/index.json>). **Pixel parity is not certified:** this request intentionally changes information hierarchy, and the five route references are composite-board crops rather than individual native exports. No references or baselines were replaced, and no mask hides missing content. Stable paired frozen screenshots were checked.
+Frozen-source visual lane: [capture.json](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/golden/capture.json>). Reference comparisons: [index.json](</Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/reality-first/comparisons/index.json>). **Pixel parity is not certified:** this request intentionally changes information hierarchy, and the five route references are composite-board crops rather than individual native exports. No references or baselines were replaced, and no mask hides missing content. Stable paired frozen screenshots were checked.
 
 **16. Exact changed files**
 
-[Machine-readable source/test inventory with hashes](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/reality-first-changed-files.json>) compares production files against the baseline taken before this request; it excludes earlier dirty work. The permanent Real-World Output Rule is appended to AGENTS.override.md.
+[Machine-readable source/test inventory with hashes](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/handoffs/reality-first-changed-files.json>) compares production files against the baseline taken before this request; it excludes earlier dirty work. The permanent Real-World Output Rule is appended to docs/internal/automation/AGENTS.override.md.
 
-- [AGENTS.override.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/AGENTS.override.md>)
+- [docs/internal/automation/AGENTS.override.md](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/docs/internal/automation/AGENTS.override.md>)
 - [apps/api/src/modules/operator/canonical-operator-api-service.mjs](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/apps/api/src/modules/operator/canonical-operator-api-service.mjs>)
 - [apps/api/src/modules/operator/decision-intelligence-service.mjs](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/apps/api/src/modules/operator/decision-intelligence-service.mjs>)
 - [apps/api/src/modules/operator/final-gap-closure-service.mjs](</Users/malmeida/Documents/ChatGPT/VIGIA Integration/apps/api/src/modules/operator/final-gap-closure-service.mjs>)

@@ -16,7 +16,7 @@
       "classification": "RUNTIME CACHE"
     },
     {
-      "path": ".impeccable/config.local.json",
+      "path": "docs/internal/automation/impeccable/config.local.json",
       "classification": "SOURCE — release code"
     },
     {

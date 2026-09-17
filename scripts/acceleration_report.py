@@ -13,7 +13,7 @@ sources = read(out / 'source-health.json')
 directories = read(root / 'data/reference/facility-intelligence/acceleration/directory-review.json')['sources']
 gaps = read(out / 'enrichment-gaps.json')
 relations = read(out / 'relationships.json')
-visual = Path('/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration')
+visual = Path('/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration')
 lines = ['# Operational Intelligence Acceleration — delivery and acceptance report', '',
 '12 September 2026. Implementation delivered with measured performance misses and remaining intelligence gaps. This is not an unqualified acceptance PASS.', '',
 'The application retains one map renderer across operational routes, progressively admits geography, isolates label failure, and reuses persisted canonical intelligence. The reviewed benchmark has 299 records, including all original 113. All overall field coverage targets pass. Cold, navigation and revisit latency targets still fail; one measured Fire Activity transition timed out. No current official wildfire refuge activation or verified emergency-department capability was acquired.', '',

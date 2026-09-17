@@ -144,7 +144,7 @@
     "afterSha256": "17b70f1b05d1e05eaa1befc5eb0b5c135f1a956c659c205c24a21e18adf29cb5"
   },
   {
-    "path": "AGENTS.override.md",
+    "path": "docs/internal/automation/AGENTS.override.md",
     "change": "modified",
     "beforeSha256": null,
     "afterSha256": "2d95472006d1181de08f5ac5459c13e2658b0d09e9a95d57427fba69f873692b",
@@ -165,14 +165,14 @@
     "baselineNote": "Task-owned documentation; pre-task hash not captured."
   },
   {
-    "path": ".impeccable/design.json",
+    "path": "docs/internal/automation/impeccable/design.json",
     "change": "added",
     "beforeSha256": null,
     "afterSha256": "d0e90f9c2b9d9d982dab1b493252985c3306f7e59ca60c574cff3928d85d00b7",
     "baselineNote": "Task-owned documentation; pre-task hash not captured."
   },
   {
-    "path": ".impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
+    "path": "docs/internal/automation/impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
     "change": "added",
     "beforeSha256": null,
     "afterSha256": "38d291fd928cb6595ee4aac9c0beb73d151b73528f665d184becbdc91801d8b8",

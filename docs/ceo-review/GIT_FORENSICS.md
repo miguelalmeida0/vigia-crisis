@@ -24,7 +24,7 @@ c6e28bd  baseline: VIGIA v10 physical intelligence core
 author/commit time: 2026-08-09 18:22:57 +0100
 ```
 
-There is no `AGENTS.md` in the working tree or baseline commit.
+There is no `docs/internal/automation/AGENTS.md` in the working tree or baseline commit.
 
 Before reviewer artifacts were added, the status snapshot contained 103 modified tracked files, 45 deleted tracked files, and 40 collapsed untracked status entries. The tracked delta was:
 

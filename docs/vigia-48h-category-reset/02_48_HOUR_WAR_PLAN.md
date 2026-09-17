@@ -10,7 +10,7 @@ The timeboxes are prioritization guides, not promises. **Release gates outrank t
 
 ## Objectives
 
-- Read current `AGENTS.md`, CEO review, reality docs, latest Git history.
+- Read current `docs/internal/automation/AGENTS.md`, CEO review, reality docs, latest Git history.
 - Capture current screenshot baseline.
 - Confirm current branches/services/database.
 - Create recovery branch/worktree.

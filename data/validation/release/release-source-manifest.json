@@ -6,343 +6,343 @@
   "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
   "entries": [
     {
-      "path": ".agents/skills/data-rich-ux/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/data-rich-ux/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:46abd6103342862634ce7435da7c5d507ac52091647a6cd8fc4a9104c6d8edb6",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/full-output/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/full-output/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:bd49b838273c1fc04fe8f1ea4b4ea6535fb3346fcbbd5421b2f38759f2371d1b",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:dec9c67007a5aeef6a459252a4323fcd419715295bb84b220ba002b29ce538e9",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/agents/openai.yaml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/openai.yaml",
       "classification": "SOURCE — release code",
       "sha256": "sha256:cbd8bd68fa00935dd0f179adb169252629cf7ee443ea9dc7db77e7ef2cf77446",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/adapt.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/adapt.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:bead87679caad7c537dd7c04c3bb78be56ac7eec279ad6aad7322f48ff2df2d9",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/adapt.native.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/adapt.native.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:6acc0bf221a4ddc6e5c6438348920b2ca2393b29c4314dbde2cdc23f2b1a9639",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/android.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/android.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:058f81f256134841875fd3183e06b37a023de0c877fd2b9eecd97011640791fe",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/animate.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/animate.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:d658c48ffbe0031e8e3b318996cad6ceafe29e40aa50d5bb25e4bf1d6839dc7c",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/audit.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/audit.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:910461b1c1f8216155165955c860a884a1e2f557cb38f21ef512ea90ef6503c2",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/audit.native.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/audit.native.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:960cb922bc934adbf9192e9428ff6bec1f382038166f02a785939c93b7391067",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/bolder.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/bolder.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:f964506c0fae87b3c2c1db7016ddc9be9ef970bbcf5548d684b997b5d5991586",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/clarify.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/clarify.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:173dd66abe65633910dcb04a51f40d6ff2a793f87088f022a02fc4cad24dd133",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/colorize.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/colorize.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:bc5f71f1129d0f2c310d913d07c8dc609a1d25644121bd78c308f42d52a0b9e9",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/craft-floor.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/craft-floor.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:e802e4f7bdc89050a9c0f2ca506e1d493a2316e6e810c0336c57aa073717ef3e",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/craft.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/craft.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:9205e222bc6565b37fb504ceec93233c2d2a456802b69d16e6b1c44723907c4c",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/critique.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/critique.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:cb8caddbb3919e5bf7f252143b519fb16db28a244642d937b186cb89962d9201",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/asset-producer.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/asset-producer.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:fadd4a57ec67175230191b4a6d7415580ca24caf2fbfb359496ffec0f6442f50",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/documenter.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/documenter.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:97a09e350c383cb2f6bba027b83bedffd12a23b1b439ad4a045a48953eb19365",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/finish-reviewer.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/finish-reviewer.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:5f24c5a97b4ffcabc7c432b064cfdd04c7a2ad52f52e765be648dc0aadab8f38",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/manual-edit-applier.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/manual-edit-applier.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:5fae7f8a2fc3ddd49ad0a413446dc44daedef5b6b7de5eb935bd2fbfad646d58",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/delight.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/delight.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:098a891028ce59c212b747d3c70468dd750aff7053a703d1336045ed31e0da7c",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/distill.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/distill.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:ea8432c90c30ecb0426662a681ead5c0941113079704e1a766cda09e85b15b4f",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/doctor.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/doctor.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:a98b397cedeeaa1da57f3395b3d9b6c1fc477f4247fb9dc13e4da3da588283ff",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/document.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/document.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:3673248740bcdd1122ccc610093ba2fe52f3943a61ce0b7170b74dc49e5b6098",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/extract.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/extract.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:31b90048c0b540daec46762a10c2b6b6434737a89af005054d8b848d829d003b",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/harden.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/harden.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:b31ff29c7a1ea979c6d039f7e8d17007410697ab49536690dca109f0af3f20f8",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/hooks.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/hooks.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:12fefe52d80d25014e5f7e2f9b278275a675653d3d99ae8f0ecf344cdb9abbe6",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/init.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/init.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:bb069b43c09109d7031b0374e31955749fec657b252d39782f11e8985aca2b51",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/ios.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/ios.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:40c87038b5f75147a5952a96237acf312a327bf70c1bcd8e0a5f064625ae9668",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/layout.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/layout.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:0bc7d7971b3edf2acd0580e847458dc6d84129d90715b452799ace3bed815c7c",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/live-setup.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/live-setup.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:6e20b51661edfae5a035ec10f532e63420591e0d13834ec93b4a1e196bc3aa45",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/live.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/live.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:69e767b667cff142683d11613ab1e30294dae48deca2653c2e65e6af3c8a9e97",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/new-work.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/new-work.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:0e26bc3f24067ccb5c08bce4a673fab96164c81b8794206dfdd124e566b2c45d",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/onboard.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/onboard.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:ef2dde00030580ed2765cbf7be9b2ea4a6f64cb915b804fd6f6abcf38051c7b9",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/operate.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/operate.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:a9d2203acd45ca33a13d5c68b02b23ed512425ac15f0e8438318ed124b43729d",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/optimize.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/optimize.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:f672ef8251a3ed4051a053d30819664951b17540b2899acd27d20e500c234abc",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/overdrive.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/overdrive.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:fce6688138d2ceb1e3d2cde5231f54b1d8dc8748b4c95a7919aa83b6f924cf96",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/polish.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/polish.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:81666fc7f783b4e3514db6554e713dc0479bd9cdedb06e93d15f8b579aae869a",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/quieter.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/quieter.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:190a4e642ca362d7499f3c3ab123e21f18f75457d11f072b545a183f296e6495",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/routing.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/routing.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:ef0b8eca20e1321cf7216fd0bda41ce54b0cca197cfd1b075eb51f3436f59059",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/shape.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/shape.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:a55f016c046cb6a27c55bd7f346375aeb506a755c4fbca19a5f92dbd42309c23",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/typeset.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/typeset.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:442749aed338f51c1a3ccfb182c6ade9b74b90590b67984062ac94a5b100e914",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/reference/visualize.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/visualize.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:2806ada0ec5b488409e57bdbf639626b77661aba6cfde9899df7291fdb7abfcc",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/command-metadata.json",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/command-metadata.json",
       "classification": "SOURCE — release code",
       "sha256": "sha256:6bdbc3f745ceee15e10b050f109ce42bbeb53ab3c3b5239257de1d596654dee7",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/data/font-index-failures.json",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/data/font-index-failures.json",
       "classification": "SOURCE — release code",
       "sha256": "sha256:835f19a0a3812f3652dd6979a2ce5597f654fd01f26e1b420b92d5f42b997ce4",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/data/font-index.json",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/data/font-index.json",
       "classification": "SOURCE — release code",
       "sha256": "sha256:47edbdfaf27073c47033d1ac7dfee881be49e2dcbda7671d1157300481dde6da",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser-dom.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser-dom.js",
       "classification": "SOURCE — release code",
       "sha256": "sha256:de1b7404f4cdfd7b515196afb17b74b1980f0bc88cb8681ae93a76ca48ec7bdb",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser-ignores.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser-ignores.js",
       "classification": "SOURCE — release code",
       "sha256": "sha256:c1cb6877ca99a0c1b38ba0c7d59f32702d3022f6821d8045f7133f7c40b6362f",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser-session.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser-session.js",
       "classification": "SOURCE — release code",
       "sha256": "sha256:edddeb3fad88adec9a055b1bf9d5c75418cbe97a13b1a7f6765e73249e482563",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser.js",
       "classification": "SOURCE — release code",
       "sha256": "sha256:7af0a8665057c83b39bca2c8c7427ef2343734f70d4128c377113a6726a1e3b1",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/impeccable/scripts/modern-screenshot.umd.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/modern-screenshot.umd.js",
       "classification": "SOURCE — release code",
       "sha256": "sha256:bb36665889124a0b6e15f16045265737449c3bdcf2712cdb08af3cfa01563e2b",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/mockup-to-code/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/mockup-to-code/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:8366b626e6af43cd932cee9f4c0dfa6d07f5dfec7fe4857c411412af4e42502a",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/product-ui-art-direction/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/product-ui-art-direction/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:6abad63aef6853d56cb007dd0a0eb6af7ead38e2aaf69aeb062e67b7618ec1d0",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/redesign-audit/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/redesign-audit/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:baf06b7a85c43778c170e2232efbc19655f564eb206ee822046996c287902b27",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/responsive-accessibility/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/responsive-accessibility/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:0a72ee0a728313477b1d08f7f6d52e0db622d571ec1e23b8147409bed4ae2a48",
       "mode": "0644"
     },
     {
-      "path": ".agents/skills/visual-qa/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/visual-qa/SKILL.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:185e54727a9a5ee64d5d67a88f598b7a312e0def2d6e849b64fd9d390f2d546d",
       "mode": "0644"
     },
     {
-      "path": ".codex/hooks.json",
+      "path": "docs/internal/automation/codex/hooks.json",
       "classification": "SOURCE — release code",
       "sha256": "sha256:b7a28b6ef3f4f6284c9c40d49fa72107c6b6dd3a9f8ebce1e70473cab7f5ff6f",
       "mode": "0644"
@@ -360,37 +360,37 @@
       "mode": "0644"
     },
     {
-      "path": ".impeccable/critique/2026-09-08T19-40-14Z__apps-operator-console.md",
+      "path": "docs/internal/automation/impeccable/critique/2026-09-08T19-40-14Z__apps-operator-console.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:fb87cd4fbff3da90b08eb12a04b54a5f970ee416a545495674548a84b0b59315",
       "mode": "0644"
     },
     {
-      "path": ".impeccable/critique/2026-09-12T09-30-47Z__apps-operator-console.md",
+      "path": "docs/internal/automation/impeccable/critique/2026-09-12T09-30-47Z__apps-operator-console.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:421e61224fd4f72b5c0d804db0e2a43d3a813c5f60135c6b5f67bbf5c983e8d2",
       "mode": "0644"
     },
     {
-      "path": ".impeccable/design.json",
+      "path": "docs/internal/automation/impeccable/design.json",
       "classification": "SOURCE — release code",
       "sha256": "sha256:da0cb25ee5f4bc5292fda785ba68f2667a0fb4dcea547aa00b40c425bebb2a57",
       "mode": "0644"
     },
     {
-      "path": ".impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
+      "path": "docs/internal/automation/impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:04b0517ce993610bcdaac1b0876e1e85b1253904630d5e3b60161dce1c6df189",
       "mode": "0644"
     },
     {
-      "path": "AGENTS.md",
+      "path": "docs/internal/automation/AGENTS.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:84d9ef244faff1119c172353861fac102764905211ddc3a67e6c595e1c02d927",
       "mode": "0644"
     },
     {
-      "path": "AGENTS.override.md",
+      "path": "docs/internal/automation/AGENTS.override.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:b69ede0a7dc5fba61692714b86300ef0e9539289aa67bcfd96bd771ab088e110",
       "mode": "0644"
@@ -4662,7 +4662,7 @@
       "mode": "0644"
     },
     {
-      "path": "apps/mission-dark/AGENTS.md",
+      "path": "apps/mission-dark/docs/internal/automation/AGENTS.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:a4f4d3fc0a4dbd1bc09698387ff0474e7cba7ffb7b308c5883c23c73bb2e8982",
       "mode": "0644"

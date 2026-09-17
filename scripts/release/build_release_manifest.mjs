@@ -18,7 +18,7 @@ export const CANONICAL_OPERATOR_RUNTIME_FILES=Object.freeze(['packages/domain/sr
 export const QUARANTINED_OPERATOR_PROTOTYPE='apps/mission-dark';
 export const LEGACY_NONCANONICAL_WEB='apps/web';
 export const CANONICAL_BROWSER_CONTRACT_FILE='apps/web/src/v2/release-compatibility.js';
-export const QUARANTINE_CONTROL_FILES=new Set(['apps/mission-dark/package.json','apps/mission-dark/AGENTS.md','apps/mission-dark/QUARANTINED.md','apps/mission-dark/scripts/quarantined.mjs']);
+export const QUARANTINE_CONTROL_FILES=new Set(['apps/mission-dark/package.json','apps/mission-dark/docs/internal/automation/AGENTS.md','apps/mission-dark/QUARANTINED.md','apps/mission-dark/scripts/quarantined.mjs']);
 const relative=(value)=>path.relative(root,value).replaceAll(path.sep,'/');
 const hash=(value)=>`sha256:${createHash('sha256').update(value).digest('hex')}`;
 const statusPath=(entry)=>entry.slice(3);

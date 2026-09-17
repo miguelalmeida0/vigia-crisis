@@ -1,5 +1,5 @@
 import {readFile,writeFile,stat} from 'node:fs/promises';
-const root='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vi';
+const root='/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vi';
 const read=async name=>JSON.parse(await readFile(`${root}/${name}-map.json`,'utf8'));
 const [before,a,b,c]=await Promise.all(['before','after-batch-a','after-batch-b','after-batch-c'].map(read));
 const offset=1+Math.max(...a.results.map(r=>r.sample));

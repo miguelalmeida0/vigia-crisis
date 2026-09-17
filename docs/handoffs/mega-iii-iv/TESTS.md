@@ -62,7 +62,7 @@ The pinned container is `vigia-visual-qa:playwright-1.54.0`, Chromium 139.0.7258
 ```sh
 docker run --rm --entrypoint python \
   -v '/Users/malmeida/Documents/ChatGPT/VIGIA Integration:/workspace:ro' \
-  -v '/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259:/output' \
+  -v '/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259:/output' \
   vigia-visual-qa:playwright-1.54.0 /workspace/scripts/mega_iii_iv_ui_qa.py
 ```
 

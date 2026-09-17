@@ -1,4 +1,4 @@
- M AGENTS.override.md
+ M docs/internal/automation/AGENTS.override.md
  M apps/api/src/application/create-runtime.mjs
  M apps/api/src/application/create-services.mjs
  M apps/api/src/application/register-routes.mjs
@@ -95,9 +95,9 @@
  M packages/domain/src/response-capability/resource-coverage-map.mjs
  M packages/domain/test/response-capability-optimizer.case.mjs
  M scripts/release/browser-certification-browser-lock.json
-?? .agents/skills/impeccable/
-?? .codex/
-?? .impeccable/
+?? docs/internal/automation/agents/skills/impeccable/
+?? docs/internal/automation/codex/
+?? docs/internal/automation/impeccable/
 ?? docs/product/DESIGN.md
 ?? docs/product/PRODUCT.md
 ?? docs/internal/history/VIGIA_FINAL_FRONTEND_GOVERNED_STATE_MATRIX.md

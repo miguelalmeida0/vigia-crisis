@@ -3,7 +3,7 @@ export const QUARANTINED_OPERATOR_PROTOTYPE = 'apps/mission-dark';
 export const LEGACY_NONCANONICAL_WEB = 'apps/web';
 export const QUARANTINE_CONTROL_FILES = new Set([
   'apps/mission-dark/package.json',
-  'apps/mission-dark/AGENTS.md',
+  'apps/mission-dark/docs/internal/automation/AGENTS.md',
   'apps/mission-dark/QUARANTINED.md',
   'apps/mission-dark/scripts/quarantined.mjs',
 ]);

@@ -12,9 +12,9 @@ The Canonical Twin startup recovery is COMPLETE and must not be regressed.
 
 Before changing code:
 
-1. Read `AGENTS.md`
-2. Read `AGENTS.override.md`
-3. Read every relevant `.agents/skills/*/SKILL.md`
+1. Read `docs/internal/automation/AGENTS.md`
+2. Read `docs/internal/automation/AGENTS.override.md`
+3. Read every relevant `docs/internal/automation/agents/skills/*/SKILL.md`
 4. Read this folder's `BINDING_DESIGN_RULES.md`
 5. Inspect the exact active operator-console CSS import order and route ownership.
 6. Run `git status --short` and record the existing dirty state.

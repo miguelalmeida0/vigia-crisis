@@ -2,7 +2,7 @@
   "capturedAt": "2026-09-12T22:43:55.616Z",
   "lanes": {
     "before": {
-      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-before-map.json",
+      "source": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-before-map.json",
       "cases": {
         "cold": {
           "samples": 20,
@@ -349,7 +349,7 @@
       "maxSourceUpdates": 8
     },
     "after": {
-      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-after-map.json",
+      "source": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-after-map.json",
       "cases": {
         "cold": {
           "samples": 20,
@@ -696,7 +696,7 @@
       "maxSourceUpdates": 8
     },
     "pre-resolver": {
-      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-pre-resolver-map.json",
+      "source": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-pre-resolver-map.json",
       "cases": {
         "cold": {
           "samples": 20,
@@ -1043,7 +1043,7 @@
       "maxSourceUpdates": 8
     },
     "final": {
-      "source": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-final-map.json",
+      "source": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/mega-v-final-map.json",
       "cases": {
         "cold": {
           "samples": 11,

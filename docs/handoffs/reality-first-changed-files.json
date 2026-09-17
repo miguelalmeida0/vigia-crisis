@@ -2,7 +2,7 @@
   "basis": "Production source hashes captured before this request, plus explicitly edited tests. Prior dirty changes excluded. Generated runtime and documentation artifacts are listed separately in the final report.",
   "files": [
     {
-      "path": "AGENTS.override.md",
+      "path": "docs/internal/automation/AGENTS.override.md",
       "change": "modified",
       "beforeSha256": "cf92b477f0cafd59984c68ffb0317cc16812b11d95d2dd8e3494391c5dc4f68f",
       "afterSha256": "3a12f992d849d4a0b7e3c9169d93d738dca8fe493cb89f431409151c7d37019e"

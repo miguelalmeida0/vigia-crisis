@@ -118,7 +118,7 @@ The final runtime check at **17:40 UTC** returned HTTP 200 for situation quality
 5. Continue legitimate source resolution for verified emergency departments, verified fire-response capability, official refuge designations, current reception activation and road-state coverage.
 6. Diagnose the audit-chain failure and insufficient physical source coverage before claiming production readiness. Neither was bypassed or repaired by modifying retained evidence.
 
-The UI gate comes directly from `AGENTS.override.md:139–141`: “design it first using the established design system and obtain approval before implementation.” No approval response was received during this work.
+The UI gate comes directly from `docs/internal/automation/AGENTS.override.md:139–141`: “design it first using the established design system and obtain approval before implementation.” No approval response was received during this work.
 
 ## Git
 

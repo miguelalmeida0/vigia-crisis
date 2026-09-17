@@ -14,441 +14,441 @@
   "stagedNow": [],
   "entries": [
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_asset_producer.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_asset_producer.toml",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_documenter.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_documenter.toml",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_finish_reviewer.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_finish_reviewer.toml",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/agents/impeccable_manual_edit_applier.toml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/impeccable_manual_edit_applier.toml",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/agents/openai.yaml",
+      "path": "docs/internal/automation/agents/skills/impeccable/agents/openai.yaml",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/adapt.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/adapt.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/adapt.native.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/adapt.native.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/android.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/android.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/animate.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/animate.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/audit.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/audit.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/audit.native.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/audit.native.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/bolder.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/bolder.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/clarify.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/clarify.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/colorize.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/colorize.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/craft-floor.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/craft-floor.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/craft.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/craft.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/critique.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/critique.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/asset-producer.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/asset-producer.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/documenter.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/documenter.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/finish-reviewer.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/finish-reviewer.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/degraded/manual-edit-applier.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/degraded/manual-edit-applier.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/delight.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/delight.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/distill.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/distill.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/doctor.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/doctor.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/document.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/document.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/extract.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/extract.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/harden.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/harden.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/hooks.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/hooks.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/init.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/init.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/ios.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/ios.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/layout.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/layout.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/live-setup.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/live-setup.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/live.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/live.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/new-work.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/new-work.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/onboard.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/onboard.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/operate.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/operate.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/optimize.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/optimize.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/overdrive.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/overdrive.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/polish.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/polish.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/quieter.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/quieter.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/routing.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/routing.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/shape.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/shape.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/typeset.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/typeset.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/reference/visualize.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/reference/visualize.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/bin/darwin-arm64/impeccable",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/bin/darwin-arm64/impeccable",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/command-metadata.json",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/command-metadata.json",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/data/font-index-failures.json",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/data/font-index-failures.json",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/data/font-index.json",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/data/font-index.json",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/impeccable",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/impeccable",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/impeccable.cmd",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/impeccable.cmd",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser-dom.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser-dom.js",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser-ignores.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser-ignores.js",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser-session.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser-session.js",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/live-browser.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/live-browser.js",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/modern-screenshot.umd.js",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/modern-screenshot.umd.js",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/scripts/VERSION",
+      "path": "docs/internal/automation/agents/skills/impeccable/scripts/VERSION",
       "status": "??",
       "classification": "REFERENCE DATA",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".agents/skills/impeccable/SKILL.md",
+      "path": "docs/internal/automation/agents/skills/impeccable/SKILL.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".codex/hooks.json",
+      "path": "docs/internal/automation/codex/hooks.json",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".impeccable/critique/2026-09-08T19-40-14Z__apps-operator-console.md",
+      "path": "docs/internal/automation/impeccable/critique/2026-09-08T19-40-14Z__apps-operator-console.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".impeccable/critique/2026-09-12T09-30-47Z__apps-operator-console.md",
+      "path": "docs/internal/automation/impeccable/critique/2026-09-12T09-30-47Z__apps-operator-console.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".impeccable/design.json",
+      "path": "docs/internal/automation/impeccable/design.json",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": ".impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
+      "path": "docs/internal/automation/impeccable/surfaces/rator-console-src-approved-routes-fire-activity-js.md",
       "status": "??",
       "classification": "SOURCE — release code",
       "group": "A. application source",
       "staged": false
     },
     {
-      "path": "AGENTS.override.md",
+      "path": "docs/internal/automation/AGENTS.override.md",
       "status": " M",
       "classification": "SOURCE — release code",
       "group": "A. application source",

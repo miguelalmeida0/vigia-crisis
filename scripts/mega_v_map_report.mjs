@@ -1,5 +1,5 @@
 import {readFile,writeFile} from 'node:fs/promises';
-const root='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/';
+const root='/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/acceleration/';
 const targets={cold:2500,'detail-to-fire':1000,'fire-to-response':1000,'cached-revisit':400,'incident-switch':1500,overview:2500,national:2500};
 const percentile=(xs,p)=>xs.length?[...xs].sort((a,b)=>a-b)[Math.max(0,Math.ceil(xs.length*p)-1)]:null;
 const describe=xs=>({p50:percentile(xs,.5),p95:percentile(xs,.95),max:xs.length?Math.max(...xs):null});

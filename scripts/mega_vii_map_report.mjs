@@ -1,5 +1,5 @@
 import {readFile,writeFile} from 'node:fs/promises';
-const directory='/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vii';
+const directory='/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-vii';
 const limits={cold:2500,'detail-to-fire':1000,'fire-to-response':1000,'cached-revisit':400,'incident-switch':1500,overview:2500,national:2500};
 const percentile=(values,p)=>{const rows=values.filter(Number.isFinite).sort((a,b)=>a-b);return rows.length?Math.round(rows[Math.ceil(rows.length*p)-1]):null;};
 const report={capturedAt:new Date().toISOString(),lanes:{},definition:'Same 20-context harness in each lane; fresh browser HTTP cache for each context, retained renderer for route transitions. Timeouts are failures, never zero. p95 is reported among measured useful frames; any missing frame fails the gate.'};

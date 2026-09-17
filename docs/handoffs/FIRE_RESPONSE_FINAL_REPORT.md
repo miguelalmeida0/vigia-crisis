@@ -35,10 +35,10 @@ The separate final frozen-canonical lane completed with **zero browser errors, z
 
 Browser: Chromium 139.0.7258.5, device scale 1, en-GB, UTC, reduced motion, with font readiness awaited. The capture scripts and JSON reports are retained alongside the screenshots for reproducibility.
 
-- [Final screenshot gallery](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/screenshots.html)
-- [Canonical browser report](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/qa.json)
-- [Frozen-canonical capture and stability report](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/golden/capture.json)
-- [Native comparison diagnostics](/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/comparisons/index.json)
+- [Final screenshot gallery](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/screenshots.html)
+- [Canonical browser report](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/qa.json)
+- [Frozen-canonical capture and stability report](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/golden/capture.json)
+- [Native comparison diagnostics](/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/comparisons/index.json)
 
 The reference comparisons are deliberately unmasked, native-size diagnostics. Exact pixel parity is not certified: the real geography, available measurements, facility names and content differ from the illustrative references. Four retained-route comparisons use the previous canonical screenshots as regression baselines, explicitly labelled as such; they are not presented as newly supplied approved designs.
 
@@ -68,7 +68,7 @@ Canonical browser capture:
 ```bash
 docker run --rm --init --add-host host.docker.internal:host-gateway \
   -v '/Users/malmeida/Documents/ChatGPT/VIGIA Integration:/workspace:ro' \
-  -v '/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259:/output:rw' \
+  -v '/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259:/output:rw' \
   --entrypoint python vigia-visual-qa:playwright-1.54.0 \
   /output/fire-response/capture.py
 ```
@@ -79,7 +79,7 @@ Generate native comparison artifacts:
 
 ```bash
 '/Users/malmeida/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3' \
-  '/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/compare.py'
+  '/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/fire-response/compare.py'
 ```
 
 Logs are under `.tmp/fire-response/`. Local startup logs may contain a one-time admission link and are intentionally not included in the visual gallery. This is the canonical local rehearsal runtime; no cloud deployment or release sealing is claimed.

@@ -9,6 +9,6 @@
   "external_gaps": ["Qwen3.5:4b installed but default GPU and CPU override runner attempts fail", "ANEPC directory rejects acquisition", "no live facility capacity or authoritative refuge activation feed acquired", "no current road-closure or traffic feed acquired"],
   "runtime": {"url":"http://127.0.0.1:4290/","apiPort":4177,"fieldnetPort":4188,"release":"vigia-intelligence-fabric-7e178737a58cd7f9","state":"LOCAL_REHEARSAL_UNSEALED","note":"Port 4190 is occupied by the unrelated Flow application; it was preserved."},
   "report": "docs/handoffs/mega-intelligence/FINAL_REPORT.md",
-  "evidenceRoot": "/Users/malmeida/.codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence",
+  "evidenceRoot": "/Users/malmeida/docs/internal/automation/codex/visualizations/2026/09/08/01a08086-9c18-7c51-b96e-12ccfed16259/mega-intelligence",
   "git": {"branch":"vigia/operational-intelligence-v1","head":"3e358715272e3f8f83e6d877f2297115f9230192","porcelainEntries":188,"commitCreated":false,"reason":"Git metadata is read-only; dirty tree includes substantial preexisting work."}
 }

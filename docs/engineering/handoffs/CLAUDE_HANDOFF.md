@@ -12,7 +12,7 @@ Do not weaken security/readiness checks to make them green.
 
 Before changing anything, read:
 
-- `AGENTS.override.md`
+- `docs/internal/automation/AGENTS.override.md`
 - `docs/handoffs/mega-vii/REPORT.md`
 
 ## CURRENT PRODUCT

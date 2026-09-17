@@ -265,15 +265,15 @@ Internal failed gates are not reclassified as external blockers:
 - ` M scripts/release/local_release.mjs`
 - ` M scripts/release/run_operator_certification.mjs`
 - ` M scripts/verify_operations_resilience.mjs`
-- `?? .agents/skills/data-rich-ux/SKILL.md`
-- `?? .agents/skills/full-output/SKILL.md`
-- `?? .agents/skills/mockup-to-code/SKILL.md`
-- `?? .agents/skills/product-ui-art-direction/SKILL.md`
-- `?? .agents/skills/redesign-audit/SKILL.md`
-- `?? .agents/skills/responsive-accessibility/SKILL.md`
-- `?? .agents/skills/visual-qa/SKILL.md`
-- `?? AGENTS.md`
-- `?? AGENTS.override.md`
+- `?? docs/internal/automation/agents/skills/data-rich-ux/SKILL.md`
+- `?? docs/internal/automation/agents/skills/full-output/SKILL.md`
+- `?? docs/internal/automation/agents/skills/mockup-to-code/SKILL.md`
+- `?? docs/internal/automation/agents/skills/product-ui-art-direction/SKILL.md`
+- `?? docs/internal/automation/agents/skills/redesign-audit/SKILL.md`
+- `?? docs/internal/automation/agents/skills/responsive-accessibility/SKILL.md`
+- `?? docs/internal/automation/agents/skills/visual-qa/SKILL.md`
+- `?? docs/internal/automation/AGENTS.md`
+- `?? docs/internal/automation/AGENTS.override.md`
 - `?? docs/internal/history/VIGIA_FINAL_FRONTEND_GOVERNED_STATE_MATRIX.md`
 - `?? docs/internal/history/VIGIA_FINAL_FRONTEND_SCREENSHOT_MANIFEST.md`
 - `?? docs/internal/handoffs/final-white-frontend-2026-09-01/00_MASTER_WHITE_DIRECTION.png`
