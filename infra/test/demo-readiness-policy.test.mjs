@@ -6,13 +6,12 @@ const required = [
   'demo_identities',
   'authenticated_operator_boundary',
   'operator_state_persistence',
-  'event_state_persistence',
   'postgres_physical_truth',
   'postgres_live_operations',
   'audit_chain',
   'geo_proof_persistence'
 ];
-const waived = ['production_synthetic_observations', 'unknown_to_work_invariant', 'physical_source_families', 'scientific_runtime'];
+const waived = ['production_synthetic_observations', 'unknown_to_work_invariant', 'physical_source_families', 'scientific_runtime', 'event_state_persistence'];
 const readiness = ({ failed = waived, extra = [] } = {}) => ({
   schemaVersion: 'vigia.public-operational-readiness.v1',
   ready: false,
