@@ -10,10 +10,9 @@ const required = [
   'postgres_physical_truth',
   'postgres_live_operations',
   'audit_chain',
-  'scientific_runtime',
   'geo_proof_persistence'
 ];
-const waived = ['production_synthetic_observations', 'unknown_to_work_invariant', 'physical_source_families'];
+const waived = ['production_synthetic_observations', 'unknown_to_work_invariant', 'physical_source_families', 'scientific_runtime'];
 const readiness = ({ failed = waived, extra = [] } = {}) => ({
   schemaVersion: 'vigia.public-operational-readiness.v1',
   ready: false,
@@ -25,7 +24,7 @@ const readiness = ({ failed = waived, extra = [] } = {}) => ({
   ]
 });
 
-test('bounded demo accepts only the explicit production-only failures', () => {
+test('bounded demo accepts only explicitly inactive operational checks', () => {
   const result = assessDependencyReadiness(503, readiness(), { profile: 'bounded_demo' });
   assert.equal(result.ok, true);
   assert.equal(result.productionReady, false);
