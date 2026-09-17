@@ -33,6 +33,7 @@ jobs:
           node --test --test-concurrency=1 \
             apps/api/test/situation-job-queue-bounds.test.mjs \
             infra/test/demo-gateway-readiness.test.mjs \
+            infra/test/demo-readiness-policy.test.mjs \
             infra/test/release-guards.test.mjs \
             infra/test/demo-seed-contract.test.mjs
           python3 infra/test/stability-gate.test.py
