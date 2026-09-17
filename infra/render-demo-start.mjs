@@ -137,15 +137,28 @@ try {
 
 const seedEnv = { ...sharedEnv, VIGIA_DEMO_CONFIRM: 'SYNTHETIC_DEMO_ONLY' };
 async function runSeedPass({ phaseName, requireIdempotentReplay = false } = {}) {
-  let completed = null;
+  let imported = null;
+  let seeded = null;
   gateway.setPhase(phaseName);
   await run(process.execPath, ['scripts/seed_demo_portfolio_scenario.mjs'], {
     env: seedEnv,
     onLine: (event) => {
       if (event?.step) gateway.setPhase(`seed:${event.step}`, { phaseName: event.phase ?? event.subPhase ?? null });
-      if (event?.step === 'seed_complete') completed = event;
+      if (event?.step === 'incident_command_imported') imported = event;
+      if (event?.step === 'demo_scenario_seeded') seeded = event;
     }
   });
+  // The seed process exposes two independently truthful completion receipts:
+  // the governed incident-command import result and the final scenario marker.
+  // Compose them only after the child exits cleanly, then validate the exact
+  // same strict contract as before. Nothing is inferred or defaulted.
+  const completed = imported && seeded ? {
+    ...seeded,
+    importStatus: imported.importStatus,
+    acceptedRecords: imported.acceptedRecords,
+    idempotentReplay: imported.idempotentReplay,
+    step: 'seed_complete'
+  } : null;
   validateDemoSeedComplete(completed, { requireIdempotentReplay });
   return completed;
 }
