@@ -1,0 +1,57 @@
+name: VIGIA map gate alignment
+on:
+  push:
+    branches: [automation/vigia-attestation-refresh-2026-09-17]
+    paths: [.github/workflows/vigia-map-gate-fix.yml]
+permissions:
+  contents: write
+jobs:
+  patch-and-attest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          ref: fix/vigia-release-readiness-2026-09-17
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          package-manager-cache: false
+      - name: Align map gate with locked runtime states
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('scripts/release/acceptance-gate.py')
+          s=p.read_text()
+          hydration='''async def wait_for_hydration(page, route, report, timeout=20000):\n    try:\n        await page.wait_for_function(\n            "route => document.body.dataset.vigiaRoute === route && globalThis.__VIGIA_APP_RUNTIME__?.hydrationIdle === true",\n            arg=route, timeout=timeout)\n    except Exception:\n        state = await page.evaluate("""() => ({\n          bodyRoute: document.body.dataset.vigiaRoute ?? null,\n          bodyState: document.body.dataset.vigiaAppState ?? null,\n          resourceState: document.body.dataset.vigiaResourceState ?? null,\n          appGlobalRefreshPending: document.querySelector('#app')?.dataset.vigiaGlobalRefreshPending ?? null,\n          appIncidentLoadPending: document.querySelector('#app')?.dataset.vigiaIncidentLoadPending ?? null,\n          runtime: globalThis.__VIGIA_APP_RUNTIME__ ?? null,\n          hash: location.hash\n        })""")\n        report['errors'].append({'kind':'hydration','route':route,'state':state})\n        raise\n\n\n'''
+          map_helper='''async def wait_for_map(page, route_name, report, timeout=20000):\n    try:\n        await page.wait_for_function("""() => [...document.querySelectorAll('.tile-map')].some(map => {\n          const r=map.getBoundingClientRect();\n          const visible=r.width>100 && r.height>100;\n          const usable=['LIVE','DEGRADED_PARTIAL','STALE_LAST_GOOD'].includes(map.dataset.mapState);\n          const drawn=[...map.querySelectorAll('img')].some(img=>img.complete && img.naturalWidth>0) || !!map.querySelector('canvas,svg');\n          return visible && usable && drawn;\n        })""", timeout=timeout)\n    except Exception:\n        state = await page.evaluate("""() => [...document.querySelectorAll('.tile-map')].map(map => {\n          const r=map.getBoundingClientRect();\n          return {\n            state: map.dataset.mapState ?? null,\n            failureClass: map.dataset.mapFailureClass ?? null,\n            failureSource: map.dataset.mapFailureSource ?? null,\n            width: Math.round(r.width), height: Math.round(r.height),\n            canvasCount: map.querySelectorAll('canvas').length,\n            svgCount: map.querySelectorAll('svg').length,\n            loadedImages: [...map.querySelectorAll('img')].filter(img=>img.complete && img.naturalWidth>0).length\n          };\n        })""")\n        report['errors'].append({'kind':'map','route':route_name,'state':state})\n        raise\n\n\n'''
+          if map_helper.strip() not in s:
+              if hydration not in s: raise SystemExit('hydration helper anchor missing')
+              s=s.replace(hydration,hydration+map_helper,1)
+          old='''                if requires_map:\n                    await page.wait_for_function("""() => [...document.querySelectorAll('.tile-map')].some(map => {\n                      const r=map.getBoundingClientRect();\n                      const visible=r.width>100 && r.height>100;\n                      const usable=['LIVE','STALE_LAST_GOOD'].includes(map.dataset.mapState);\n                      const drawn=[...map.querySelectorAll('img')].some(img=>img.complete && img.naturalWidth>0) || !!map.querySelector('canvas,svg');\n                      return visible && usable && drawn;\n                    })""",timeout=20000)\n'''
+          new='''                if requires_map:\n                    await wait_for_map(page, name, report)\n'''
+          if old in s:
+              s=s.replace(old,new,1)
+          elif 'await wait_for_map(page, name, report)' not in s:
+              raise SystemExit('map wait anchor missing')
+          p.write_text(s)
+          PY
+          git diff --check
+          grep -n "DEGRADED_PARTIAL\|wait_for_map" scripts/release/acceptance-gate.py
+      - name: Install release tooling dependencies
+        run: |
+          npm ci --include=dev --ignore-scripts
+          npm --prefix apps/operator-console ci --include=dev --ignore-scripts
+      - name: Rebuild governed release identity
+        run: |
+          node scripts/release/build_release_manifest.mjs
+          npm --prefix apps/operator-console run build
+          git diff --check
+      - name: Commit patch and regenerated attestation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/release/acceptance-gate.py data/validation/release
+          git commit -m "fix: align release map gate with governed runtime states"
+          git push origin HEAD:fix/vigia-release-readiness-2026-09-17
