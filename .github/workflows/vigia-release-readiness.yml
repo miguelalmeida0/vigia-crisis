@@ -29,6 +29,7 @@ jobs:
           npm --prefix apps/operator-console ci --include=dev --ignore-scripts
       - name: Changed-plane regression and safety guards
         run: |
+          mkdir -p .tmp/test
           node --test --test-concurrency=1 \
             apps/api/test/situation-intelligence.test.mjs \
             apps/api/test/situation-job-queue-bounds.test.mjs \
