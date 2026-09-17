@@ -1,11 +1,11 @@
 {
   "schemaVersion": "vigia.release-statement.v1",
-  "generatedAt": "2026-09-15T06:32:45.725Z",
-  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
-  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
-  "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
-  "sourceManifestHash": "sha256:64285c0f01e0eb9a2a20b864093661e0d92bde9f41074635812efca6bc35a912",
-  "currentManifestHash": "sha256:17a2285a07558521e80d6b171a71818cb3ac1112e31a846ae02d4948539f183c",
+  "generatedAt": "2026-09-17T10:12:46.645Z",
+  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
+  "codeStateHash": "sha256:0823c769ad616e0e6d2a82983b2fcd084f6f34e684cb8a8a6ec10f8f75a344c8",
+  "operationalDataHash": "sha256:5658dee8701ecdf8d78f84df13ef867329d4c0375443b88844c25e3cb4d65d41",
+  "sourceManifestHash": "sha256:a2def229c00451897ca2024c338cbe8a28fe346cefc8d4afb5eab7c6d723db46",
+  "currentManifestHash": "sha256:fd97bda9e634585c7c6076d33886a5dfcfab7f0bb27210c2d9d79931ab7ab59c",
   "imageMaterials": {
     "node": "node:22-bookworm-slim@sha256:d649c27dae7ba0137b3cef5dd75baa422c08dc3d9e3fc0c23dfb172dc3cc6436",
     "postgis": "postgis/postgis:17-3.5@sha256:0a23a2b5e4fbd9b4c6980d20ee80dd6b63dec52669379c75a506db58a4116708"

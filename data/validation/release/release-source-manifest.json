@@ -1,9 +1,9 @@
 {
   "schemaVersion": "vigia.release-source-manifest.v2",
-  "generatedAt": "2026-09-15T06:32:45.725Z",
-  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
-  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
-  "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
+  "generatedAt": "2026-09-17T10:12:46.645Z",
+  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
+  "codeStateHash": "sha256:0823c769ad616e0e6d2a82983b2fcd084f6f34e684cb8a8a6ec10f8f75a344c8",
+  "operationalDataHash": "sha256:5658dee8701ecdf8d78f84df13ef867329d4c0375443b88844c25e3cb4d65d41",
   "entries": [
     {
       "path": ".agents/skills/data-rich-ux/SKILL.md",
@@ -360,6 +360,12 @@
       "mode": "0644"
     },
     {
+      "path": ".github/workflows/vigia-release-readiness.yml",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:a5ede1f482a7c7d0ea3f6ae007426d7765ffee0345bd93f6586406fbf6cff188",
+      "mode": "0644"
+    },
+    {
       "path": ".impeccable/config.local.json",
       "classification": "SOURCE — release code",
       "sha256": "sha256:1de4a5ea082e026eaac1046cf5e487030b3a3df3cfb24ed9e836b08a4de01d41",
@@ -542,13 +548,13 @@
     {
       "path": "apps/api/src/application/create-runtime.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:95fa56aa5b57be290e6fa7fb0725f2ac68c5e9043e9bd96f4fa1c9aceeb8464a",
+      "sha256": "sha256:e571d5abf5b60ef72567fe8eb9c0403d99fc3d54c8409117aa921fae02eb8f55",
       "mode": "0644"
     },
     {
       "path": "apps/api/src/application/create-services.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:9a4f621de0f9a0c3211f02353e7c6cd157f9110a70185a69a6bc50589ea6c147",
+      "sha256": "sha256:57fd8f1e39b33ce78e0d337fdf4be5c45ea403862eb62e6ee1d1db1a173a961d",
       "mode": "0644"
     },
     {
@@ -662,7 +668,7 @@
     {
       "path": "apps/api/src/modules/alerts/postgres-alert-store.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:bad1f21a29532c843c65a244ec3d1c5c3815916907c88a4cbcbd3402cd139990",
+      "sha256": "sha256:7e8c3e6a70976bfb82443d927e9c57113eaceef553ea3f8cdf2c9d68331dbeb6",
       "mode": "0644"
     },
     {
@@ -680,7 +686,7 @@
     {
       "path": "apps/api/src/modules/alerts/postgres-territory-store.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:24f6789b0f2cc793069d1933a1944a072cbb63a38bb54c52d832320a3797e4e4",
+      "sha256": "sha256:2d1fd507c6e253b680aeca9009908d0482ef03fb5cd9187dccefd47e5505d09c",
       "mode": "0644"
     },
     {
@@ -1118,7 +1124,7 @@
     {
       "path": "apps/api/src/modules/events/event-observation-repository.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:700af87e9a3179c592a450b5c1ccee2e4e17973d9b9b7e9db7d3689cd4f7bee8",
+      "sha256": "sha256:76ae92a5074303cce926ebeff2af2f573a2f588f9e04bb2b733a7c1991ca708f",
       "mode": "0644"
     },
     {
@@ -1460,7 +1466,7 @@
     {
       "path": "apps/api/src/modules/intelligence/append-only-event-journal.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:7298faf4bb8339618ddc3c8425e74cf8b2461cb30c0c5c14029b7b55344d6b1f",
+      "sha256": "sha256:ee8eb66bba0506f0d765081a7ba40e5cbc66ebdd579e2fb9b0f47c1452d1693b",
       "mode": "0644"
     },
     {
@@ -1514,13 +1520,13 @@
     {
       "path": "apps/api/src/modules/intelligence/governed-reference-inventory.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:bd3367aebf22ff166d8c1d4afb796d6afb8bff1b5a5c7a2a89fd04d39105ae80",
+      "sha256": "sha256:6425c5c4c7ff1244baad1f8915d80332dc980a4b567555388bef0dcc2949c454",
       "mode": "0644"
     },
     {
       "path": "apps/api/src/modules/intelligence/incident-context-service.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:da82eb462ab7613835ce32813e9013bacdf06c316e817e974663b09143f0ae51",
+      "sha256": "sha256:6f20eb84a0c55d7dfbfccb1785edc4b3aa02c1bf0eddf0f25c5c77390ab376e7",
       "mode": "0644"
     },
     {
@@ -1604,7 +1610,7 @@
     {
       "path": "apps/api/src/modules/intelligence/reality-questions.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:557929c37003f2d103adb06985bdbb023043ecc673bed645a5f5c5ce74c558a5",
+      "sha256": "sha256:16f79025939e26b6084332715d6b47f4893857894a2d3f46bceb61b8d4f1f1b1",
       "mode": "0644"
     },
     {
@@ -1638,9 +1644,21 @@
       "mode": "0644"
     },
     {
+      "path": "apps/api/src/modules/intelligence/situation-job-queue.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:be8166da13eda832d6ff9c6c95f7b88757daebd40ee31fed55e1210f097f80d1",
+      "mode": "0644"
+    },
+    {
       "path": "apps/api/src/modules/intelligence/situation-projection.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:9d7ab058b5bbb820e7325f4120c0ccff78a9352e8de0f1cb7e462182a009f00a",
+      "sha256": "sha256:18a535093c57f9cee1ea004138cd20d182812fa3015260981c13a6d8bb96e09c",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/src/modules/intelligence/situation-route-artifact.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:032a49b81f9af08753e3618219208b663f62be423714de32eee9116245eeb60c",
       "mode": "0644"
     },
     {
@@ -1658,7 +1676,7 @@
     {
       "path": "apps/api/src/modules/intelligence/situation-store.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:cf55d699f4b00c1f8bdb5509d7f1ba504088723b18b2391d837cae0b86e918d0",
+      "sha256": "sha256:15b6d495f69a6dc1e74cd8cae3b1939be5a064f00fbdbdddc6906048b441adad",
       "mode": "0644"
     },
     {
@@ -1676,7 +1694,7 @@
     {
       "path": "apps/api/src/modules/intelligence/world-knowledge-store.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:45ddfda76d8c51abaf605bffd7f031097044c841c997ff5554f5d06a72f39fe5",
+      "sha256": "sha256:917a7a066cec472f4e392644d3541d52a1615dde15e5dbbf00c8e4815cac51e3",
       "mode": "0644"
     },
     {
@@ -1700,7 +1718,7 @@
     {
       "path": "apps/api/src/modules/interventions/operator-state-repository.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:fbbf4d82b35c5e28b6aea8c3174c0f8d2b032d81760c7fc744645fc58c1d8d24",
+      "sha256": "sha256:aa3548abbdb347a81b9da1b878ea67657ec22c3617997c0113ca3f7e5cb8ce2e",
       "mode": "0644"
     },
     {
@@ -1982,7 +2000,7 @@
     {
       "path": "apps/api/src/modules/operator/crisis-autopilot-retry.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:f6b018304bf45dff4215aaa48296213a045d5ef9ffc6c928ddfe4f8490f26dbc",
+      "sha256": "sha256:9f5221f41f3f87637c18acbe6bd41d836ae6497826361e5ab7275ba01d350c89",
       "mode": "0644"
     },
     {
@@ -2012,7 +2030,7 @@
     {
       "path": "apps/api/src/modules/operator/final-gap-closure-service.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:64b2ebeffad2efd642e64e6b2c950ec85e9611e240d3c00a1c08bcf26843ac57",
+      "sha256": "sha256:dbac1ee60c9f3d3ff1a2b1edc22b1eeca3570df1f7e5c212ac80d716eff61865",
       "mode": "0644"
     },
     {
@@ -2048,7 +2066,7 @@
     {
       "path": "apps/api/src/modules/operator/operational-proof-service.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:bc68d2f6303c1d720a01ceee494eb9176a68f7b28da01db7f5d72c5c8c8caaeb",
+      "sha256": "sha256:7d60dc39058f4e47f37750be7545dc819b3dda7a68244cdcfb2b08b36ac9d276",
       "mode": "0644"
     },
     {
@@ -2426,7 +2444,7 @@
     {
       "path": "apps/api/src/modules/response-capability/governed-facility-repository.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:e392d416b21fffaa29f0b1f2546bc84bc0c03c8abcc8ad7e9e2f86b3df27df26",
+      "sha256": "sha256:e667c0561a2ff7eb36a1fa4cd4804481c6190635e029b8fbab30fd89be3ac7fe",
       "mode": "0644"
     },
     {
@@ -2820,6 +2838,12 @@
       "mode": "0644"
     },
     {
+      "path": "apps/api/src/modules/storage/migrations/026-situation-route-artifact.sql",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:24eab2c329c1ff8eb0fb879d85910aa022b6664f4bb5dd87861c078a398fc9a3",
+      "mode": "0644"
+    },
+    {
       "path": "apps/api/src/modules/storage/postgres-capacity-counter.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:f243165f8958db5ac7104fab63db46e322212520ffdd6640c1d9f9d60688907a",
@@ -2834,13 +2858,13 @@
     {
       "path": "apps/api/src/modules/storage/postgres-migration-runner.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:4e95c62f53f3ffbd5f9d8e0a7c9bc949021700d8e3767a321bca3a781e303090",
+      "sha256": "sha256:fe5fcab720d1c49a2be601dbece981bb52c5784faf61facfdf9ff69614c85bf4",
       "mode": "0644"
     },
     {
       "path": "apps/api/src/modules/storage/postgres-physical-truth-store.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:8391019f82fdd9590058084077df9480777e91333673deb2b77a991fffe54686",
+      "sha256": "sha256:50462d7ea0f25208d58bb0b63e9407f3b2dbbbd86a206661c0989c2c1ad7de72",
       "mode": "0644"
     },
     {
@@ -3044,7 +3068,7 @@
     {
       "path": "apps/api/src/modules/world/world-service.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:01bf53482d93ba4f3b43982eac1e3fa06773c135d30c1c73100f5c300c2ddb56",
+      "sha256": "sha256:5491a1721365a35805cc22609d6c745c943df7e210baf615c61128b6f1dda11c",
       "mode": "0644"
     },
     {
@@ -3086,7 +3110,7 @@
     {
       "path": "apps/api/src/server.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:f70d7e5451007a19b11a826f8b4e5c5c56f8da85518e46076888ba0b12e8f3d3",
+      "sha256": "sha256:44284e146f98cfded3fe0c4e78205b1ab40776da94d59dd41d523e094e7daa0b",
       "mode": "0644"
     },
     {
@@ -3117,6 +3141,12 @@
       "path": "apps/api/src/shared/geo.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:9c082586f8cdb715401ec374cd116fce8064d74a54686c1f71bfa2ece562d0b3",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/src/shared/governed-archive-cache.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:c0052dcfc4fd66ee486cf4955609af00c9df1b3013b3abce61d713b24cbcef82",
       "mode": "0644"
     },
     {
@@ -3174,6 +3204,12 @@
       "mode": "0644"
     },
     {
+      "path": "apps/api/src/shared/with-timeout.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:d7f465a5b8b90b00e7fb53c6b9cb3ffedb9292561c264dae370fbd0ec70b695e",
+      "mode": "0644"
+    },
+    {
       "path": "apps/api/src/stream/sse-hub.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:a139bb48237e23eb236d2dace7b7052a37b7075d318fea97ad7aa5706039f324",
@@ -3224,7 +3260,7 @@
     {
       "path": "apps/api/test/agent1-compatibility-reconciliation.test.mjs",
       "classification": "TEST",
-      "sha256": "sha256:775d41ac99b4d2b9685a231f39f408b578b898487612b03ba843fc5773dae370",
+      "sha256": "sha256:b812ccf11a3e60ad809b7b6e13ed649dc47144bdb176620683e971e2f71a2e61",
       "mode": "0644"
     },
     {
@@ -3374,7 +3410,7 @@
     {
       "path": "apps/api/test/crisis-autopilot-coordinator.test.mjs",
       "classification": "TEST",
-      "sha256": "sha256:2b3a46185a335f081dca5a22a8c90115afb2d4c3e753aa610c1039186652da8a",
+      "sha256": "sha256:b49c8bef7d282b39e97ce62c018bc1594b10bbaa7ed1fc7b24e7a7dae85de3de",
       "mode": "0644"
     },
     {
@@ -3411,6 +3447,18 @@
       "path": "apps/api/test/decision-superiority-api.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:4eb9553bf14dd45ffda048082d5b6efa7a05ddaaccfec99b692bc92962e75cf3",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/demo-seed-import-resume.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:428d4ced42bba467bf5bd58e62127874a76d43629a635fc7c3006effaedc0f8f",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/demo-seed-observation-determinism.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:67c44f69385927641edfa241be7f56ccb3972f1ea4c9829df1b4e141bccbcb93",
       "mode": "0644"
     },
     {
@@ -4476,6 +4524,24 @@
       "mode": "0644"
     },
     {
+      "path": "apps/api/test/situation-job-queue-bounds.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:0efec7a91d1bc8c58333d4e072a0ee7594f7225a63405c4b268c4cfecf132dbd",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/situation-route-artifact-postgres.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:3f1a18ae73176bc0c2715aeef89799f0a025564f0483bab21537e82c71894114",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/situation-snapshot-size-acceptance.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:fd4df7c0fdea408cb2d4fb696d2fa878ebdeb2dac8e39a870017cc0f81331167",
+      "mode": "0644"
+    },
+    {
       "path": "apps/api/test/source-failure.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:5abef589830e3b4585d21c2ba1ce15a1e92781277483327a97b729024ddc9ef0",
@@ -4539,6 +4605,12 @@
       "path": "apps/api/test/web-loading-resilience.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:837da36f61aab6b40b0f68ba396b90f902e843a4db456a3931986befdd365212",
+      "mode": "0644"
+    },
+    {
+      "path": "apps/api/test/with-timeout.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:eb207e7dd19922c7ae3a19212a98236fe219a6e86be4f9437e408ee9637e1b7c",
       "mode": "0644"
     },
     {
@@ -5126,7 +5198,7 @@
     {
       "path": "apps/operator-console/src/approved/ui/mission-command.js",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:179b4e8a2134876ec561d7b9654bb8b68962cfc12a1b63318ff199f84a03a94a",
+      "sha256": "sha256:21663ba5604339c26865d20c1cc2fad4544f1fac704db1b40316b59a10266e6d",
       "mode": "0644"
     },
     {
@@ -6714,6 +6786,12 @@
       "mode": "0644"
     },
     {
+      "path": "data/reference/operational-proof/road-bands-bounds.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c96b3b56d67257af03f50907ead658dea0fca521487f59f9ba3671ad5a18a6b6",
+      "mode": "0644"
+    },
+    {
       "path": "data/reference/orbits/sentinel3-current.json",
       "classification": "DEPLOYMENT DATA",
       "sha256": "sha256:e2bf8483b6ba13396a5bbe0c1f953268f62551d9f2b868fba98ada0a9f636184",
@@ -6795,6 +6873,12 @@
       "path": "docs/DATA-SOURCES.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:6c2924049ff55d6540c5bd72c2b609a86a5e534dfb39ffff29a12c2337390f40",
+      "mode": "0644"
+    },
+    {
+      "path": "docs/DEMO-DEPLOYMENT.md",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:f94fca97b14ee8bbcf81e143d9572a300f1890ea43078b0a76c318f52d5b4be2",
       "mode": "0644"
     },
     {
@@ -7506,6 +7590,12 @@
       "mode": "0644"
     },
     {
+      "path": "docs/release/2026-09-17-readiness.md",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:70ed50ae5ecf42321c3166c948d49c3d044e88fb9badd641ce6dd906597b0a74",
+      "mode": "0644"
+    },
+    {
       "path": "docs/security/autonomous-decision-foundry-threat-model.md",
       "classification": "SOURCE — release code",
       "sha256": "sha256:c28c44cffeadea4ef28891a93584de77242f0eb0d03405aa970d4dff3e916f3b",
@@ -7668,6 +7758,18 @@
       "mode": "0644"
     },
     {
+      "path": "infra/Dockerfile.demo",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:1c897b15b05784ec45a85e167390cf89e7cc6ac4bd0739c5f9477bd293a630d6",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/Dockerfile.demo.dockerignore",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:4e5d0cf038501b92c2511206e2e042e03073d254fbf7c8f2e943427ed55a9891",
+      "mode": "0644"
+    },
+    {
       "path": "infra/Dockerfile.operator",
       "classification": "SOURCE — release code",
       "sha256": "sha256:d154a6edcc12ae9b0b45f0c8400770a323d6b16dc3b2004936fb4ea918ddc5eb",
@@ -7692,6 +7794,42 @@
       "mode": "0644"
     },
     {
+      "path": "infra/demo-bootstrap-gateway.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:c2e9561df419bf4d6fc8b50dd7f2f4373e73429b307bb38043e655422c34e0bd",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/demo/gateway-io.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:be6a3a11c8353ef76753ed61ed3c624815ac7ce8502fd1c37b1ca5baf0ef1136",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/demo/local-healthcheck.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:214403e17ac0f9d63bd77192e0ecf2824b3bfcc363be4cfc6cf699c7741982b4",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/demo/local-postgis-start.sh",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:76a93254170f60b0a45761690e17ea647f09a1406f25c4687ecac112b459261d",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/demo/public-origin.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:f5d17c5062db2256b6bb85d426c7012caed0f2819e5de6eed895c048994d5e16",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/demo/seed-contract.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:c05a76d6ee5a283c65bcc5ac763b9e7b601deeef9bacf7dc18903a7fedeb1914",
+      "mode": "0644"
+    },
+    {
       "path": "infra/docker-compose.remote-shadow.yml",
       "classification": "SOURCE — release code",
       "sha256": "sha256:7db7b6014ae0244f82f2390c7f9a3c6f00d272e6a26973eb70a937586ea50b6f",
@@ -7704,9 +7842,75 @@
       "mode": "0644"
     },
     {
+      "path": "infra/integration/situation-job-postgres.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:160e176d357877b43301dc2c77c73bce07694ce0b7a493e1f0de56fc58102313",
+      "mode": "0644"
+    },
+    {
       "path": "infra/nginx.shadow.conf",
       "classification": "SOURCE — release code",
       "sha256": "sha256:2341a8ff20b78cc8519f46283bd95cde4d9dc7ac005f45a8cd3c04cdd39b4e77",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/public-demo-server.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:d25142f60ca75766bac23f66be22113a5422b2997c139ca2f0d9aa67f57fb228",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/public-live-server.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:bcb6fd8ecaf158f197f39e6901f2f18d6633e59a08a59423436f87a07522281f",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/render-demo-start.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:19a732a77ea5678ebac1642ffd4a48e5038187b18c6c1925566297444a13c2ef",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/render-live-build.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:6c18c31cb43b19c307ca92eb8d7eb60849782afed3cecf2b490290d378d9da7d",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/render-live-start.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:79c1fab3c4e5773884408f08bced0e44f266ea46998f6a3f3075701390e17bfb",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/test/demo-gateway-readiness.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:0d13e661bff793bdd70fadfcf1074006ce77e4bebd987baffa8d4c58a8817be5",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/test/demo-readiness-policy.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:649856cc6a89b4140fff3fc300d55b997107c3ecc77decde208c4fe4e61ee1b1",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/test/demo-seed-contract.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:0a7e7c0852c477ca1071b81cebae8203c8d603355cbbfb6912f4800987b4b574",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/test/release-guards.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:1e97f4f9db5f7454ef781da2ea37517ca6be9a2ab522635639c608690c892bd7",
+      "mode": "0644"
+    },
+    {
+      "path": "infra/test/stability-gate.test.py",
+      "classification": "TEST",
+      "sha256": "sha256:4dc3f3b5cfef6b5edaba2ee6c74811207c86ef3efa89ad9281bbf88dc9b49017",
       "mode": "0644"
     },
     {
@@ -7718,7 +7922,7 @@
     {
       "path": "package.json",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:efe9598c8ae47aaad1ee74276e8fca1462382d2d0ac1e0c809d9139e96dd4ef9",
+      "sha256": "sha256:eba7921b2411bb772f95fa0d5c905f0c466c2853d15701d3220216d60407dc90",
       "mode": "0644"
     },
     {
@@ -7742,43 +7946,91 @@
     {
       "path": "packages/domain/src/consequences/canonical-inputs.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:725256d6168a15148dcfe271f39e18afbc1d0bac5e6ab15238ec7b918318d51e",
+      "sha256": "sha256:1454e9fd8b3a1184a8ba4008a3425dcffd8f1e142af1c2fa4da714700df290c2",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/causal-transition.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:81555a8274a71960aa10f018d172cb73ca9a5afb36b43e59ec69c3cee517cb1c",
       "mode": "0644"
     },
     {
       "path": "packages/domain/src/consequences/consequence-derivation.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:e70ec2febc0f9be496a8731e049039c9a75a6c80fe21dcf5a9e7466c3c4e9e37",
+      "sha256": "sha256:07b0f3b3406a152678ac59ed0eccc342bdac0dd8079a468995c99aed2f7f75e0",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/decision-compression.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:41723fad44b81f4e6394cd8ba50cd569734f3b1cbc8d7d3c29c6b26eb1243a38",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/dependency-sets.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:426ccada388cec193e3a531c3ec0cdf27bae849ba57f29311eee1ebdee7c9b25",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/evidence-strength.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:bb6a6a7f9225284f472f56d30da42a425532ea99e4e23680189fea7829c2377b",
       "mode": "0644"
     },
     {
       "path": "packages/domain/src/consequences/explanation.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:ebd6b45b8e9ef3fbafb76318417d64e9799e7ddf396f2f33977208762da91b5b",
+      "sha256": "sha256:4b47eb2fcc600994f56a7dd736c0613358ff02248f7f4fdfef91f77e52f2fff8",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/freshness.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ee022e22ee5874397e2c535395e55ef4b7bd57f92086042b99aee01e012e5089",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/knowledge-loss.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:974b81040c549569241a55618eb1b32052adfc103be75ae57b9e13b71ad67295",
       "mode": "0644"
     },
     {
       "path": "packages/domain/src/consequences/operational-consequences.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:9e4c144ee656c443a396ebd1b18e3f8eddc1252ebf6003de15e656d60b4afffb",
+      "sha256": "sha256:4e3a45f4664c88da7430c817eda445849d176f4374d4d3d937478a1e569e4433",
       "mode": "0644"
     },
     {
       "path": "packages/domain/src/consequences/operational-relationships.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:ccfc059269c3de9e02d0305e5e7830c4ee901d4bda0c9803e85a03bb85e8e567",
+      "sha256": "sha256:823504bf05b4ea587ade3bc80a9716aa1944642d7cb001606774167fe7e41a0d",
       "mode": "0644"
     },
     {
       "path": "packages/domain/src/consequences/priority-ordering.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:71aba9b922215251c2f7f910f096ad60fa7d8427653a167a8a7c7658b646f623",
+      "sha256": "sha256:06e9d6df4a61b33fb7ec98c1fb09078ee6f3968086f7fd7ad3d6079e70169cd2",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/resilience-query.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:8b93fe1c9a9983180004dc059dfabf37d6923f08bca71fe4821626af81510fd7",
       "mode": "0644"
     },
     {
       "path": "packages/domain/src/consequences/shared-dependency.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:c49b83f66ba4ebcc12729b233fbf80858e69c6ed3995f2863bd378ea1c219d96",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/consequences/verification-need.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:c6ac8370e52a8dea4cea46841acbc2eb915878215f2f1349755bde7cf6537cfb",
       "mode": "0644"
     },
     {
@@ -8474,7 +8726,7 @@
     {
       "path": "packages/domain/src/fire-event-tracker.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:6282bcf6e7733df317e83b2e78b5a4518a8d760971917a106badbc2160af7744",
+      "sha256": "sha256:9ceef98a7e0e1680abfe386854a756446a139d2b817c9130765eb30cc3902ae9",
       "mode": "0644"
     },
     {
@@ -8990,7 +9242,7 @@
     {
       "path": "packages/domain/src/intelligence/situation-model.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:eb5f484d8fba509f8848e4ae3f7fa95fd437198a50e172657e4109fcf96b1ae1",
+      "sha256": "sha256:f021944e9b11d5332de0ef302b00c067f5dfd80e437605be5e43b4f84447a07a",
       "mode": "0644"
     },
     {
@@ -9288,9 +9540,99 @@
       "mode": "0644"
     },
     {
+      "path": "packages/domain/src/period/assignment-window.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:7f9f9e515959f52f091600479b75e13112bb0cd51f968999964caf4bdd77f864",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/period/global-validation.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:b5ad185d073cb811bb26f3511373dd9bce2847c59812ac97517b8134162b3b28",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/period/operational-period.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:ddbb30dca688af1c2f16b6e78f5df328b8d3a2758e58381a204ab3e6f79a90e6",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/period/period-planning.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:686e088f5521ffc225f841aabca4ba557c41f6502998e88e4cbfbc9b40f41050",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/period/reserve-and-gaps.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:cf3d16dc67c46885cc536973ea75b6be8db43a1446b000d7fa42102ca52094ec",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/period/schedule-generation.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:fa6ac45042a19270656bc145c1abea08d9e17a89c14b5d0d1299548c2937c8ad",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/period/schedule-repair.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:0fdecdd935e93cfc49a08323a32bdc368ab26607139bdbd4411150c8f05b2e50",
+      "mode": "0644"
+    },
+    {
       "path": "packages/domain/src/physical-observation.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:5680995986c3a4c0b73f263f1b1b5d67a428b24c01c277e300a5ea1b654a4df1",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/access-intelligence.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:e107bd80d5a708e18601c51534c3385997a4f45b4c18b9c91baf467837d2e049",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/assignment-options.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:6294dddcb55f719d10d92254b42fb8bf7fe5fa220d243585aace5dc9e03c73e4",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/constraints.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:9f2faf552df9ef62afc2732c42341f6b19a91d03eb78c52918be201d209f586a",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/contention.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:de5c7e4135f0b33d3e165dfc83754130ba7384834024690a24c9f71c288120ee",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/feasibility.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:35a4ebe1dafdbbd246781795ef5807a33600107ac85892eafc7b3cb66ff8608c",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/mission-planning.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:cddc81308a08659408bf3afa29d308a891ec03cfb4cee0d57da8d81df53ad736",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/replan.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:fd9450d57ace0a4a270ed15ba1b3fecea87f1da9108fee79cb6cf0bf84193d5d",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/src/planning/resource-model.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:a3ab951358afe88bc54ea4d68f5a0edb0005eb85e7d6f6d6fe7f447768ef4308",
       "mode": "0644"
     },
     {
@@ -9494,7 +9836,7 @@
     {
       "path": "packages/domain/src/release-contract.mjs",
       "classification": "SOURCE — release code",
-      "sha256": "sha256:b215c1cb3d3f2cb641fbc0fcafec1b8e2ea57aa3e82370a59aa1b3333d9a18a4",
+      "sha256": "sha256:ef39ddd021d0e2f6868afc24a9a81d65f44386f0aeedc51efba508d8e551b3e7",
       "mode": "0644"
     },
     {
@@ -9756,6 +10098,12 @@
       "mode": "0644"
     },
     {
+      "path": "packages/domain/test/canonical-incident-index.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:a6c445d3da94bf934ddc4b090c95669c2eac6946db6aba04947bb5f8ec44f7d9",
+      "mode": "0644"
+    },
+    {
       "path": "packages/domain/test/consensus-intervention-zone.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:06bb05d5dfb1e996f1b85335393a6c4614b33aef5fc28646f9f2d16a098d2d45",
@@ -9765,6 +10113,18 @@
       "path": "packages/domain/test/consequence-gate.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:a4af2de9f1ae557512fd874557c52f04a834baf475958d66b93b79a6e24f991a",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/causal-resilience.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:ef168ee31da169faaa8f19be962fc4aada06545ff8f7a38e4482012cca1e1668",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/consequence-fixture-xi.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:27add49006394d8c64c1bb2dfbb66d6ca8b010aa6277170dc9d8b76fa2dbb93b",
       "mode": "0644"
     },
     {
@@ -9789,6 +10149,18 @@
       "path": "packages/domain/test/consequences/operational-consequences.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:4f97279a0bce266399b8c44e0bb03c45a7e2a7eeeca817e632f2c8b3118a63f9",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/resilience-cutsets.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:cc11cee193299ac9198fa21552a7d167ac82aaf8bdf4994eab63f73052ab4590",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/consequences/stale-dependency.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:2a3f1d85daafa41723a8355797a960a2a06a31b77be8be84124df80c1fac8e1d",
       "mode": "0644"
     },
     {
@@ -9908,7 +10280,7 @@
     {
       "path": "packages/domain/test/fire-event-tracker.test.mjs",
       "classification": "TEST",
-      "sha256": "sha256:ee34164a8476c5853d5746adc92bcdce67a1f534a4ee4d7ff82bc321f10af628",
+      "sha256": "sha256:73d2a0afb0bdbccb31212e1c112c7b11034de8fc886947a976b9ece75ba6bddc",
       "mode": "0644"
     },
     {
@@ -10140,6 +10512,36 @@
       "mode": "0644"
     },
     {
+      "path": "packages/domain/test/period/period-bounds.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:feaa16330bf106b0f962057d105763ef35a3261e2c0c970d549f48bb586f1539",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/period/period-feasibility.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:97269e83cd93ebb2092da3526fe6d272950d8e43d3f0db70d10257aa08fd8ea3",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/period/period-fixture.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:441d333dda1073ee965caf0055c0ce87bd11ae92e790a4acf1a60e81ade297e7",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/period/period-multi-incident.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:a8e851247a0ede07edb6142dafec8ae47617716c1e07d79196acaef6ed629f9d",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/period/period-schedule.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:6a5ad0e7322b0c407754c0e94c1c9ddd1f6f387cd1ed15706b166f4457553234",
+      "mode": "0644"
+    },
+    {
       "path": "packages/domain/test/physical-observation.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:43b093fda82b715c420443cbf61399ed6d97bfd6f6ee44f2bf8f4feb10f662c8",
@@ -10149,6 +10551,24 @@
       "path": "packages/domain/test/physical-truth-autopilot.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:92b7c2c66393c306abcdaf70ee5bb3bdfe869b9fb18b2440c5ba207011c56e17",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/planning/feasibility.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:00c341367ee7dd4b88f054e03d86d1121eb38006d58c7841a7deec3623e3f503",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/planning/planning-fixture.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:0f1e608c4532c48869682809ed1b83389c5ebfac7e6b82015301cfccba75abc5",
+      "mode": "0644"
+    },
+    {
+      "path": "packages/domain/test/planning/planning-options.test.mjs",
+      "classification": "TEST",
+      "sha256": "sha256:9a7aea3fbca826f70053884cb535af57bb6c1472dab5850585fd2e9b6fcba5d8",
       "mode": "0644"
     },
     {
@@ -10281,6 +10701,18 @@
       "path": "packages/domain/test/validation-metrics.test.mjs",
       "classification": "TEST",
       "sha256": "sha256:de5aedf07b9f49e91c22070eec328b49fbcf3cd694c519cc626fb46594bcd0be",
+      "mode": "0644"
+    },
+    {
+      "path": "render.demo.yaml",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:8e61773ba926621534a781f36586a1c1ed3ea2ad351e5e260970a59c7d8778e2",
+      "mode": "0644"
+    },
+    {
+      "path": "render.yaml",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:70444a48880e2ed03ff09413adbf1d8b2c544238bddcea7102fbdacb394fd250",
       "mode": "0644"
     },
     {
@@ -11007,6 +11439,12 @@
       "path": "scripts/certify_local_softhsm.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:122a2c5d00023c84f51eb4ab9e613693da9990b21ec6da29ba1945b0a8bf67f5",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/certify_memory_stability.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:361a535d626132fd97927f6e97a8ae81851993cdeb32561063327fef189d13fd",
       "mode": "0644"
     },
     {
@@ -12006,6 +12444,12 @@
       "mode": "0644"
     },
     {
+      "path": "scripts/release/acceptance-gate.py",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:a1e39806186e5ebde3a60c6493822e67ef546f021af6d98d6269bf5900c42cbf",
+      "mode": "0644"
+    },
+    {
       "path": "scripts/release/bounded-response.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:6a356fe038324b85e4a4d1961b5da48d1007d7c577bfd4821912e1a0e39e2a1c",
@@ -12120,9 +12564,21 @@
       "mode": "0644"
     },
     {
+      "path": "scripts/release/quarantine-situation-jobs.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:bb99f9076a8c1e7963a01f3f34c38c724d8ced1c30313e5a6643ac0240e5328e",
+      "mode": "0644"
+    },
+    {
       "path": "scripts/release/release_statement.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:026c17c33423a02dc8c8c950ff428277e3fd7e913200e350d620ec8c3abc6c4e",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/release/requirements.txt",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:852008c6c134845926625892a248563fe02a96a91e769e6735af1bad49ab2cef",
       "mode": "0644"
     },
     {
@@ -12210,6 +12666,12 @@
       "mode": "0644"
     },
     {
+      "path": "scripts/reset_demo_portfolio_database.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:1e75bbc1f12395495b2b9c4a46391f7e7b709d4daac5435ecf9997d1ec08b39e",
+      "mode": "0644"
+    },
+    {
       "path": "scripts/run_autonomous_evidence_proof.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:a9b2fff67b07aca08f57a37ec2b880241f4b057ea86fa81a0f2ec7b2ca1d7936",
@@ -12267,6 +12729,12 @@
       "path": "scripts/search_sentinel3_historical.mjs",
       "classification": "SOURCE — release code",
       "sha256": "sha256:e8ab9be924aae38565e2a11c30bf80d29645e0c03634d19b5c43213d881acf8e",
+      "mode": "0644"
+    },
+    {
+      "path": "scripts/seed_demo_portfolio_scenario.mjs",
+      "classification": "SOURCE — release code",
+      "sha256": "sha256:12d0dff58d9bbbe4d7460f9e5110041543dd7af02472335f22d782001dcde800",
       "mode": "0644"
     },
     {

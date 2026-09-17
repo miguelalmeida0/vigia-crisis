@@ -1,9 +1,9 @@
 {
   "schemaVersion": "vigia.evidence-manifest.v2",
-  "generatedAt": "2026-09-15T06:32:45.725Z",
-  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
-  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
-  "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
+  "generatedAt": "2026-09-17T10:12:46.645Z",
+  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
+  "codeStateHash": "sha256:0823c769ad616e0e6d2a82983b2fcd084f6f34e684cb8a8a6ec10f8f75a344c8",
+  "operationalDataHash": "sha256:5658dee8701ecdf8d78f84df13ef867329d4c0375443b88844c25e3cb4d65d41",
   "entries": [],
   "deploymentEntries": [
     {
@@ -508,6 +508,12 @@
       "path": "data/reference/operational-proof/acquisition-provenance.json",
       "classification": "DEPLOYMENT DATA",
       "sha256": "sha256:bc38e5145b63e125e18031b28c70737221c8a9589963e78478a1fc7d5a440e1b",
+      "mode": "0644"
+    },
+    {
+      "path": "data/reference/operational-proof/road-bands-bounds.json",
+      "classification": "DEPLOYMENT DATA",
+      "sha256": "sha256:c96b3b56d67257af03f50907ead658dea0fca521487f59f9ba3671ad5a18a6b6",
       "mode": "0644"
     },
     {

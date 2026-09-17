@@ -1,7 +1,7 @@
 {
   "schemaVersion": "vigia.unknown-path-report.v1",
-  "generatedAt": "2026-09-15T06:32:45.725Z",
-  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
+  "generatedAt": "2026-09-17T10:12:46.645Z",
+  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
   "unknownCount": 0,
   "entries": [],
   "ruleCoverage": {

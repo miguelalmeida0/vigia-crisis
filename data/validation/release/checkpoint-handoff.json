@@ -1,8 +1,8 @@
 {
   "schemaVersion": "vigia.checkpoint-handoff.v1",
-  "generatedAt": "2026-09-15T06:32:45.725Z",
-  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
-  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
+  "generatedAt": "2026-09-17T10:12:46.645Z",
+  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
+  "codeStateHash": "sha256:0823c769ad616e0e6d2a82983b2fcd084f6f34e684cb8a8a6ec10f8f75a344c8",
   "gitWritable": false,
   "mode": "DETERMINISTIC_COMMAND_HANDOFF",
   "eligiblePaths": 0,

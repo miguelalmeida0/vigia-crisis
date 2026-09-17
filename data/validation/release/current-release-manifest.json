@@ -1,15 +1,15 @@
 {
   "schemaVersion": "vigia.current-release-manifest.v2",
-  "releaseId": "vigia-intelligence-fabric-b48a6a63c87e4498",
-  "codeStateHash": "sha256:0654d38c9e56761484a594f55bea8836c737a81637d7450286152545448cde01",
-  "operationalDataHash": "sha256:0ee7f5dd8cf02d36e4e2b8f9b09f66adb743be05d9367367e1d131524f8f7351",
-  "buildTimestamp": "2026-09-15T06:32:45.725Z",
+  "releaseId": "vigia-intelligence-fabric-f0e0319acc2ec36f",
+  "codeStateHash": "sha256:0823c769ad616e0e6d2a82983b2fcd084f6f34e684cb8a8a6ec10f8f75a344c8",
+  "operationalDataHash": "sha256:5658dee8701ecdf8d78f84df13ef867329d4c0375443b88844c25e3cb4d65d41",
+  "buildTimestamp": "2026-09-17T10:12:46.645Z",
   "runtimeProfile": "local_shadow",
   "canonicalOperatorConsole": {
     "path": "apps/operator-console",
     "origin": "http://127.0.0.1:4190",
     "backendOrigin": "http://127.0.0.1:4177",
-    "sourceHash": "sha256:0928d65aab9c36527a049d2d5b2c7f4cbc53069771068ff1ca517ed06f1eb4c5"
+    "sourceHash": "sha256:f04beaeca90e8d2f0ccb9507b0376197de76770e0dd70692be86ce6aa8e139f3"
   },
   "canonicalBrowserContract": {
     "path": "apps/web/src/v2/release-compatibility.js",
@@ -24,8 +24,8 @@
     "operationsApiVersion": "operations-api-v6",
     "validationApiVersion": "validation-api-v8",
     "fieldNodeContractVersion": "fieldnet-api-v5",
-    "databaseSchemaVersion": "vigia-postgis-025",
-    "migrationHead": "025",
+    "databaseSchemaVersion": "vigia-postgis-026",
+    "migrationHead": "026",
     "domainSchemaVersion": "vigia-domain-v10.5",
     "webContractVersion": "decision-os-web-v1",
     "ontologyContractVersion": "vigia.crisis-ontology.v1",
@@ -36,12 +36,12 @@
     "operationsApiVersion": "operations-api-v6",
     "validationApiVersion": "validation-api-v8",
     "fieldNodeContractVersion": "fieldnet-api-v5",
-    "databaseSchemaVersion": "vigia-postgis-025",
+    "databaseSchemaVersion": "vigia-postgis-026",
     "domainSchemaVersion": "vigia-domain-v10.5",
     "ontologyContractVersion": "vigia.crisis-ontology.v1",
     "intelligenceRuleSetVersion": "vigia.intelligence-rules.v1:83ec995872f1245d"
   },
-  "webBuildVersion": "decision-os-web-v1+b48a6a63",
+  "webBuildVersion": "decision-os-web-v1+f0e0319a",
   "requiredRoutes": {
     "central": [
       {
@@ -277,7 +277,8 @@
     "022",
     "023",
     "024",
-    "025"
+    "025",
+    "026"
   ],
   "requiredArtifacts": [],
   "evidenceHashes": {},
@@ -339,6 +340,6 @@
       "reason": "Canonical operator browser certification has not been executed for this release identity."
     }
   },
-  "manifestEvidenceHash": "sha256:17a2285a07558521e80d6b171a71818cb3ac1112e31a846ae02d4948539f183c",
-  "releaseStatementHash": "sha256:7732dfb1a2b748faefbc5e4749091ef9cd3bd38b68d5653b9b41350fa8650fa1"
+  "manifestEvidenceHash": "sha256:fd97bda9e634585c7c6076d33886a5dfcfab7f0bb27210c2d9d79931ab7ab59c",
+  "releaseStatementHash": "sha256:91b2019091a3f460dea5b03fa43854d6e38280522f6cdb042f1a80c7e3aa6225"
 }
